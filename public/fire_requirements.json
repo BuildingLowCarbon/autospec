@@ -1,0 +1,533 @@
+{
+  "version": "1.0.0",
+  "module": "fire_requirements",
+  "i18n": {
+    "use": {
+      "residential": { "fr": "Résidentiel", "en": "Residential", "de": "Wohnen", "it": "Residenziale" }
+    },
+    "building_type": {
+      "single_family": {
+        "fr": "Maison individuelle",
+        "en": "Single-family",
+        "de": "Einfamilienhaus",
+        "it": "Monofamiliare"
+      },
+      "multi_family": {
+        "fr": "Habitat collectif",
+        "en": "Multi-family",
+        "de": "Mehrfamilienhaus",
+        "it": "Plurifamiliare"
+      }
+    },
+    "building_height": {
+      "lt_11": { "fr": "< 11 m", "en": "< 11 m", "de": "< 11 m", "it": "< 11 m" },
+      "btw_11_30": { "fr": "> 11 m et < 30 m", "en": "> 11 m & < 30 m", "de": "> 11 m & < 30 m", "it": "> 11 m e < 30 m" },
+      "gt_30": { "fr": "> 30 m", "en": "> 30 m", "de": "> 30 m", "it": "> 30 m" }
+    },
+    "neighbor_distance": {
+      "gt_10": { "fr": "> 10 m", "en": "> 10 m", "de": "> 10 m", "it": "> 10 m" },
+      "le_10": { "fr": "≤ 10 m", "en": "≤ 10 m", "de": "≤ 10 m", "it": "≤ 10 m" }
+    }
+  },
+
+  "dropdowns": {
+    "use": ["residential"],
+    "building_type": ["single_family", "multi_family"],
+    "building_height": {
+      "single_family": ["lt_11"],
+      "multi_family": ["lt_11", "btw_11_30", "gt_30"]
+    },
+    "neighbor_façade_distance": ["gt_10", "le_10"]
+  },
+
+  "filter_categories": {
+    "roof_flat_shed": "flat_roof_shed_roof",
+    "roof_steep": "steep_roof",
+    "floor": "floor_assembly",
+    "partition_double": "partition_wall_double_shell",
+    "partition_single": "partition_wall_single_shell",
+    "outer_wall": "outer_wall"
+  },
+
+  "elements": [
+    {
+      "id": "roof",
+      "label": { "fr": "Toiture", "en": "Roof", "de": "Dach", "it": "Tetto" },
+      "targets": [
+        { "categoryId": "flat_roof_shed_roof", "label": { "fr": "Toiture plate / à un pan", "en": "Flat / shed roof", "de": "Flachdach / Pultdach", "it": "Tetto piano / a falda unica" } },
+        { "categoryId": "steep_roof", "label": { "fr": "Toiture inclinée", "en": "Steep roof", "de": "Steildach", "it": "Tetto inclinato" } }
+      ],
+      "subtypes": [
+        { "id": "generic", "label": { "fr": "", "en": "", "de": "", "it": "" } }
+      ]
+    },
+
+    {
+      "id": "floor",
+      "label": { "fr": "Plancher", "en": "Floor assembly", "de": "Decke/Boden", "it": "Solaio" },
+      "targets": [{ "categoryId": "floor_assembly", "label": { "fr": "Plancher", "en": "Floor assembly", "de": "Deckenaufbau", "it": "Solaio" } }],
+      "subtypes": [
+        { "id": "same_unit", "label": { "fr": "(même unité)", "en": "(same unit)", "de": "(gleiche Nutzungseinheit)", "it": "(stessa unità)" } },
+        { "id": "between_units", "label": { "fr": "(entre unités)", "en": "(between units)", "de": "(zwischen Nutzungseinheiten)", "it": "(tra unità)" } },
+        { "id": "to_unheated_outside", "label": { "fr": "(contre extérieur / non chauffé)", "en": "(against exterior / unheated)", "de": "(gegen außen / unbeheizt)", "it": "(verso esterno / non riscaldato)" } },
+        { "id": "to_ground", "label": { "fr": "(contre terre)", "en": "(against ground)", "de": "(gegen Erdreich)", "it": "(contro terra)" } }
+      ]
+    },
+
+    {
+      "id": "partition",
+      "label": { "fr": "Paroi intérieure", "en": "Internal partition", "de": "Innenwand", "it": "Parete interna" },
+      "targets": [
+        { "categoryId": "partition_wall_double_shell", "label": { "fr": "Double coque", "en": "Double shell", "de": "Doppelschalig", "it": "Doppia parete" } },
+        { "categoryId": "partition_wall_single_shell", "label": { "fr": "Simple coque", "en": "Single shell", "de": "Einschalig", "it": "Parete semplice" } }
+      ],
+      "subtypes": [
+        { "id": "same_unit", "label": { "fr": "(même unité)", "en": "(same unit)", "de": "(gleiche Nutzungseinheit)", "it": "Stessa unità" } },
+        { "id": "between_units", "label": { "fr": "(entre unités)", "en": "(between units)", "de": "(zwischen Nutzungseinheiten)", "it": "(tra unità)" } }
+      ],
+      "bearing": [
+        { "id": "non_bearing", "label": { "fr": "(non-porteur)", "en": "(non load-bearing)", "de": "(nicht tragend)", "it": "(non portante)" } },
+        { "id": "bearing", "label": { "fr": "(porteur)", "en": "(load-bearing)", "de": "(tragen)", "it": "(portante)" } }
+      ]
+    },
+
+    {
+      "id": "outer_wall",
+      "label": { "fr": "Façade extérieure", "en": "External façade/wall", "de": "Außenwand/Fassade", "it": "Parete/facciata esterna" },
+      "targets": [{ "categoryId": "outer_wall", "label": { "fr": "Mur extérieur", "en": "Outer wall", "de": "Außenwand", "it": "Parete esterna" } }],
+      "subtypes": [
+        { "id": "neighbor_gt_10", "label": { "fr": "(façade voisine > 10 m)", "en": "(neighboring facade > 10 m)", "de": "(benachbarte Fassade > 10 m)", "it": "(facciata adiacente > 10 m)" } },
+        { "id": "neighbor_le_10", "label": { "fr": "(façade voisine ≤ 10 m)", "en": "(neighboring facade ≤ 10 m)", "de": "(benachbarte Fassade ≤ 10 m)", "it": "(facciata adiacente ≤ 10 m)" } }
+      ],
+      "bearing": [
+        { "id": "non_bearing", "label": { "fr": "(non-porteur)", "en": "(non load-bearing)", "de": "(nicht tragend)", "it": "(non portante)" } },
+        { "id": "bearing", "label": { "fr": "(porteur)", "en": "(load-bearing)", "de": "(tragen)", "it": "(portante)" } }
+      ]
+    }
+  ],
+
+  "rules": [
+    {
+      "id": "res_single_family_lt11",
+      "conditions": {
+        "use": "residential",
+        "building_type": "single_family",
+        "building_height": "lt_11"
+      },
+      "requirements": [
+        {
+          "element_id": "roof",
+          "subtype_id": "generic",
+          "applies_to": [{ "categoryId": "flat_roof_shed_roof" }, { "categoryId": "steep_roof" }],
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr) (certaines couches en RF1, selon AEAI 14-15)",
+            "en": "REI0 and ≥ RF3 (cr) (some layers in RF1, per AEAI 14-15)",
+            "de": "REI0 und ≥ RF3 (cr) (einige Schichten RF1, gemäss AEAI 14-15)",
+            "it": "REI0 e ≥ RF3 (cr) (alcuni strati in RF1, secondo AEAI 14-15)"
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "same_unit",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr).",
+            "en": "REI0 and ≥ RF3 (cr).",
+            "de": "REI0 und ≥ RF3 (cr).",
+            "it": "REI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "between_units",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "REI30 et ≥ RF3 (cr) (cr pour revêtements de sol).",
+            "en": "REI30 and ≥ RF3 (cr) (cr for floor coverings).",
+            "de": "REI30 und ≥ RF3 (cr) (cr für Bodenbeläge).",
+            "it": "REI30 e ≥ RF3 (cr) (cr per rivestimenti di pavimento)."
+          },
+          "filter": { "R": "R30", "EI": "EI30", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "same_unit",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr).",
+            "en": "REI0 and ≥ RF3 (cr).",
+            "de": "REI0 und ≥ RF3 (cr).",
+            "it": "REI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "REI30 et ≥ RF3.",
+            "en": "REI30 and ≥ RF3.",
+            "de": "REI30 und ≥ RF3.",
+            "it": "REI30 e ≥ RF3."
+          },
+          "filter": { "R": "R30", "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "EI30 et ≥ RF3.",
+            "en": "EI30 and ≥ RF3.",
+            "de": "EI30 und ≥ RF3.",
+            "it": "EI30 e ≥ RF3."
+          },
+          "filter": { "R": null, "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": ">10" },
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr).",
+            "en": "REI0 and ≥ RF3 (cr).",
+            "de": "REI0 und ≥ RF3 (cr).",
+            "it": "REI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_le_10",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": "<=10" },
+          "display": {
+            "fr": "Des exigences spécifique s'appliquent (voir AEAI 14-15).",
+            "en": "Specific requirements apply (see AEAI 14-15).",
+            "de": "Es gelten besondere Anforderungen (siehe VKF 14-15).",
+            "it": "Si applicano requisiti specifici (vedi AEAI 14-15)."
+          },
+          "filter": { "R": null, "EI": null, "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        }
+      ]
+    },
+
+    {
+      "id": "res_multi_family_lt11",
+      "conditions": {
+        "use": "residential",
+        "building_type": "multi_family",
+        "building_height": "lt_11"
+      },
+      "requirements": [
+        {
+          "element_id": "roof",
+          "subtype_id": "generic",
+          "applies_to": [{ "categoryId": "flat_roof_shed_roof" }, { "categoryId": "steep_roof" }],
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr) (certaines couches en RF1, selon AEAI 14-15).",
+            "en": "REI0 and ≥ RF3 (cr) (some layers in RF1, per AEAI 14-15).",
+            "de": "REI0 und ≥ RF3 (cr) (einige Schichten RF1, gemäss AEAI 14-15).",
+            "it": "REI0 e ≥ RF3 (cr) (alcuni strati in RF1, secondo AEAI 14-15)."
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "same_unit",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "R30 (si porteur) – EI0 et ≥ RF3 (cr).",
+            "en": "R30 (if load-bearing) – EI0 and ≥ RF3 (cr).",
+            "de": "R30 (falls tragend) – EI0 und ≥ RF3 (cr).",
+            "it": "R30 (se portante) – EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R30", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "between_units",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "REI30 et ≥ RF3 (cr) (cr pour revêtements de sol).",
+            "en": "REI30 and ≥ RF3 (cr) (cr for floor coverings).",
+            "de": "REI30 und ≥ RF3 (cr) (cr für Bodenbeläge).",
+            "it": "REI30 e ≥ RF3 (cr) (cr per rivestimenti di pavimento)."
+          },
+          "filter": { "R": "R30", "EI": "EI30", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "same_unit",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "R30, EI0 et ≥ RF3 (cr).",
+            "en": "R30, EI0 and ≥ RF3 (cr).",
+            "de": "R30, EI0 und ≥ RF3 (cr).",
+            "it": "R30, EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R30", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "same_unit",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "EI0 et ≥ RF3 (cr)",
+            "en": "EI0 and ≥ RF3 (cr)",
+            "de": "EI0 und ≥ RF3 (cr)",
+            "it": "EI0 e ≥ RF3 (cr)"
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "REI30 et ≥ RF3",
+            "en": "REI30 and ≥ RF3",
+            "de": "REI30 und ≥ RF3",
+            "it": "REI30 e ≥ RF3"
+          },
+          "filter": { "R": "R30", "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "EI30 et ≥ RF3.",
+            "en": "EI30 and ≥ RF3.",
+            "de": "EI30 und ≥ RF3.",
+            "it": "EI30 e ≥ RF3."
+          },
+          "filter": {"R": null, "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": ">10" },
+          "display": {
+            "fr": "R30, EI0 et ≥ RF3 (cr).",
+            "en": "R30, EI0 and ≥ RF3 (cr).",
+            "de": "R30, EI0 und ≥ RF3 (cr).",
+            "it": "R30, EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R30", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": ">10" },
+          "display": {
+            "fr": "EI0 et ≥ RF3 (cr).",
+            "en": "EI0 and ≥ RF3 (cr).",
+            "de": "EI0 und ≥ RF3 (cr).",
+            "it": "EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": "<=10" },
+          "display": {
+            "fr": "Des exigences spécifique s'appliquent (voir AEAI 14-15).",
+            "en": "Specific requirements apply (see AEAI 14-15).",
+            "de": "Es gelten besondere Anforderungen (siehe VKF 14-15).",
+            "it": "Si applicano requisiti specifici (vedi AEAI 14-15)."
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        }
+      ]
+    },
+
+    {
+      "id": "res_multi_family_11_30",
+      "conditions": {
+        "use": "residential",
+        "building_type": "multi_family",
+        "building_height": "btw_11_30"
+      },
+      "requirements": [
+        {
+          "element_id": "roof",
+          "subtype_id": "generic",
+          "applies_to": [{ "categoryId": "flat_roof_shed_roof" }, { "categoryId": "steep_roof" }],
+          "display": {
+            "fr": "REI0 et ≥ RF3 (cr) (certaines couches en RF1, selon AEAI 14-15).",
+            "en": "REI0 and ≥ RF3 (cr) (some layers in RF1, per AEAI 14-15).",
+            "de": "REI0 und ≥ RF3 (cr) (einige Schichten RF1, gemäss AEAI 14-15).",
+            "it": "REI0 e ≥ RF3 (cr) (alcuni strati in RF1, secondo AEAI 14-15)."
+          },
+          "filter": { "R": "R0", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "same_unit",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "R60 (si porteur) – EI0 et ≥ RF3 (cr).",
+            "en": "R60 (if load-bearing) – EI0 and ≥ RF3 (cr).",
+            "de": "R60 (falls tragend) – EI0 und ≥ RF3 (cr).",
+            "it": "R60 (se portante) – EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R60", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "floor",
+          "subtype_id": "between_units",
+          "applies_to": [{ "categoryId": "floor_assembly" }],
+          "display": {
+            "fr": "REI60 et RF1 (cr) pour revêtements de sol.",
+            "en": "REI60 and RF1 (cr) for floor coverings.",
+            "de": "REI60 und RF1 (cr) für Bodenbeläge.",
+            "it": "REI60 e RF1 (cr) per rivestimenti di pavimento."
+          },
+          "filter": { "R": "R60", "EI":"EI0", "RF": { "op": ">=", "value": "RF1", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "same_unit",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "R60 et ≥ RF3 (cr)",
+            "en": "R60 and ≥ RF3 (cr)",
+            "de": "R60 und ≥ RF3 (cr)",
+            "it": "R60 ≥ RF3 (cr)"
+          },
+          "filter": { "R": "R60", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "same_unit",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "EI0 et ≥ RF3 (cr)",
+            "en": "EI0 and ≥ RF3 (cr)",
+            "de": "EI0 und ≥ RF3 (cr)",
+            "it": "EI0 e ≥ RF3 (cr)"
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "R60, EI30 (EI60 en pratique) et ≥ RF3.",
+            "en": "R60, EI30 (EI60 in practice) and ≥ RF3.",
+            "de": "R60, EI30 (EI60 in der Praxis) und ≥ RF3.",
+            "it": "R60, EI30 (EI60 in pratica) e ≥ RF3."
+          },
+          "filter": { "R": "R60", "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "partition",
+          "subtype_id": "between_units",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }],
+          "display": {
+            "fr": "EI30 et ≥ RF3.",
+            "en": "EI30 and ≥ RF3.",
+            "de": "EI30 und ≥ RF3.",
+            "it": "EI30 e ≥ RF3."
+          },
+          "filter": { "R": null, "EI": "EI30", "RF": { "op": ">=", "value": "RF3" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": ">10" },
+          "display": {
+            "fr": "R60, EI0 et ≥ RF3 (cr).",
+            "en": "R60, EI0 and ≥ RF3 (cr).",
+            "de": "R60, EI0 und ≥ RF3 (cr).",
+            "it": "R60, EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": "R60", "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_gt_10",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": ">10" },
+          "display": {
+            "fr": "EI0 et ≥ RF3 (cr).",
+            "en": "EI0 and ≥ RF3 (cr).",
+            "de": "EI0 und ≥ RF3 (cr).",
+            "it": "EI0 e ≥ RF3 (cr)."
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF3", "suffix": "cr" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_le_10",
+          "bearing_id": "bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": "<=10" },
+          "display": {
+            "fr": "R60, EI0 et bardage extérieur RF1 ou couche interne RF1.",
+            "en": "R60, EI0 and external cladding RF1 or internal layer RF1.",
+            "de": "R60, EI0 und Außenbekleidung RF1 oder innere Schicht RF1.",
+            "it": "R60, EI0 e rivestimento esterno RF1 o strato interno RF1."
+          },
+          "filter": { "R": "R60", "EI": "EI0", "RF": { "op": ">=", "value": "RF1", "note": "cladding_or_inner_layer" } }
+        },
+        {
+          "element_id": "outer_wall",
+          "subtype_id": "neighbor_le_10",
+          "bearing_id": "non_bearing",
+          "applies_to": [{ "categoryId": "outer_wall" }],
+          "conditions_extra": { "neighbor_façade_distance_m": "<=10" },
+          "display": {
+            "fr": "EI0 et bardage extérieur RF1 ou couche interne RF1.",
+            "en": "EI0 and external cladding RF1 or internal layer RF1.",
+            "de": "EI0 und Außenbekleidung RF1 oder innere Schicht RF1.",
+            "it": "EI0 e rivestimento esterno RF1 o strato interno RF1."
+          },
+          "filter": { "R": null, "EI": "EI0", "RF": { "op": ">=", "value": "RF1", "note": "cladding_or_inner_layer" } }
+        }
+      ]
+    },
+
+    {
+      "id": "res_multi_family_gt30",
+      "conditions": {
+        "use": "residential",
+        "building_type": "multi_family",
+        "building_height": "gt_30"
+      },
+      "requirements": [],
+      "note": {
+        "fr": "À compléter (non fourni actuellement).",
+        "en": "To be completed (not provided currently).",
+        "de": "Noch zu ergänzen (im aktuellen Tableau nicht enthalten).",
+        "it": "Da completare (non fornito attualmente)."
+      }
+    }
+  ]
+}

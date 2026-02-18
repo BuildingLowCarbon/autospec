@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "1D277C05-5268-4F66-B977-295D5F6F624E",
+    "workingtitle": "Béton pour bâtiment, armature 60 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 60.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2342.420382165605,
+      "thermalConductivity_W_mK": 2.0195541401273887,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 986.3730693930825,
+      "gwp_kgco2e_m3": 277.62445859872616,
+      "gwp_kgco2e_kg": 0.11852033935175116
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "0D7A70A0-F1A2-4C2C-8BAD-97F3BE42DD3A",
+    "workingtitle": "Béton pour bâtiment, armature 75 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 75.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2353.0254777070063,
+      "thermalConductivity_W_mK": 2.1119426751592356,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 983.0431075319755,
+      "gwp_kgco2e_m3": 288.95557324840763,
+      "gwp_kgco2e_kg": 0.12280171888746023
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "59344C7A-9F39-4EDC-B4DE-5F126504D7D9",
+    "workingtitle": "Béton pour bâtiment, armature 80 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 80.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2356.56050955414,
+      "thermalConductivity_W_mK": 2.1427388535031846,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 981.9397805286771,
+      "gwp_kgco2e_m3": 292.73261146496816,
+      "gwp_kgco2e_kg": 0.124220282177415
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "F87A1354-ACEE-41FF-97F5-882104C87E06",
+    "workingtitle": "Béton pour bâtiment, armature 85 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 85.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2360.0955414012737,
+      "thermalConductivity_W_mK": 2.1735350318471336,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 980.8397587272457,
+      "gwp_kgco2e_m3": 296.5096496815287,
+      "gwp_kgco2e_kg": 0.12563459592211265
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "A7C4412A-07E0-49AA-9EEC-0913D2D8E132",
+    "workingtitle": "Béton pour bâtiment, armature 90 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 90.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2363.6305732484075,
+      "thermalConductivity_W_mK": 2.2043312101910826,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 979.74302729796,
+      "gwp_kgco2e_m3": 300.2866878980892,
+      "gwp_kgco2e_kg": 0.1270446791883371
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "32626704-DA3C-48CD-BE0F-117360C4E307",
+    "workingtitle": "Béton pour bâtiment, armature 100 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 100.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2370.7006369426754,
+      "thermalConductivity_W_mK": 2.265923566878981,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 977.5593766792047,
+      "gwp_kgco2e_m3": 307.84076433121027,
+      "gwp_kgco2e_kg": 0.12985222998387966
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "0091A9A4-7D8F-4BB4-9058-EB9E5B82EDF6",
+    "workingtitle": "Béton pour bâtiment, armature 105 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 105.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2374.235668789809,
+      "thermalConductivity_W_mK": 2.29671974522293,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 976.4724282705798,
+      "gwp_kgco2e_m3": 311.61780254777074,
+      "gwp_kgco2e_kg": 0.13124973508068302
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "D7630CA8-50FF-4C72-BE19-897AE5E9EC72",
+    "workingtitle": "Béton pour bâtiment, armature 110 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 110.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2377.770700636943,
+      "thermalConductivity_W_mK": 2.327515923566879,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 975.3887117944872,
+      "gwp_kgco2e_m3": 315.39484076433126,
+      "gwp_kgco2e_kg": 0.1326430848356594
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "995EF503-2AF1-4EF2-9F25-E92581AC54D9",
+    "workingtitle": "Béton pour bâtiment, armature 120 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 120.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2384.8407643312103,
+      "thermalConductivity_W_mK": 2.389108280254777,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 973.2309171518616,
+      "gwp_kgco2e_m3": 322.94891719745226,
+      "gwp_kgco2e_kg": 0.1354173922333209
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "2839B73F-3A66-4F9D-8121-FCB6277F05E1",
+    "workingtitle": "Béton pour bâtiment, armature 125 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 125.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2388.375796178344,
+      "thermalConductivity_W_mK": 2.419904458598726,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 972.1568104540304,
+      "gwp_kgco2e_m3": 326.7259554140128,
+      "gwp_kgco2e_kg": 0.13679838655910395
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "0F6810D3-554D-462C-89DA-B5262851127D",
+    "workingtitle": "Béton pour bâtiment, armature 130 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 130.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2391.9108280254777,
+      "thermalConductivity_W_mK": 2.450700636942675,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 971.085878624877,
+      "gwp_kgco2e_m3": 330.50299363057326,
+      "gwp_kgco2e_kg": 0.13817529891087263
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "45A3FC04-3A6A-42DC-81ED-A659CE4C9CAA",
+    "workingtitle": "Béton pour bâtiment, armature 150 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 150.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2406.0509554140126,
+      "thermalConductivity_W_mK": 2.5738853503184713,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 966.8336201191264,
+      "gwp_kgco2e_m3": 345.6111464968153,
+      "gwp_kgco2e_kg": 0.14364248841826607
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "F8BC184E-5846-47BB-A725-2E7D93623795",
+    "workingtitle": "Béton pour bâtiment, armature 170 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 170.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2420.191082802548,
+      "thermalConductivity_W_mK": 2.6970700636942677,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 962.6310498197226,
+      "gwp_kgco2e_m3": 360.7192993630574,
+      "gwp_kgco2e_kg": 0.1490457930889281
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "944A4E35-47A1-4C65-9539-B9579441BB27",
+    "workingtitle": "Béton pour bâtiment, armature 220 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
+          "workingtitle": "Hochbaubeton (ohne Bewehrung)",
+          "kbobId": "01.002"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 220.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2455.541401273885,
+      "thermalConductivity_W_mK": 3.005031847133758,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 952.3363768416684,
+      "gwp_kgco2e_m3": 398.48968152866246,
+      "gwp_kgco2e_kg": 0.16228180120356922
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+    "workingtitle": "Béton pour travaux de génie civil, armature 80 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "B22C3F09-0225-41DA-B3FD-2E4701E8FED3",
+          "workingtitle": "Tiefbaubeton (ohne Bewehrung)",
+          "kbobId": "01.003"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 80.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2406.0509554140126,
+      "thermalConductivity_W_mK": 2.984076433121019,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 982.311264063534,
+      "gwp_kgco2e_m3": 316.33955414012735,
+      "gwp_kgco2e_kg": 0.1314766644606221
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  },
+  {
+    "id": "0316D52D-9395-40AD-A1CC-B73CBD29D749",
+    "workingtitle": "Béton pour travaux de génie civil, armature 100 kg/m3",
+    "unit": "m3",
+    "siaId": null,
+    "kbobId": null,
+    "productTypeId": null,
+    "productCategoryId": null,
+    "functionId": null,
+    "dimensions": {
+      "thickness_mm": null,
+      "width_mm": null,
+      "length_mm": null
+    },
+    "declaredProperties": {
+      "density_kg_m3": null,
+      "thermalConductivity_W_mK": null,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": null,
+      "waterVaporDiffusionResistanceCoefficientDry": 130.0,
+      "waterVaporDiffusionResistanceCoefficientWet": 80.0,
+      "fireClassification": "A1",
+      "reactionToFire": "RF1"
+    },
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "composition": [
+      {
+        "material": {
+          "id": "B22C3F09-0225-41DA-B3FD-2E4701E8FED3",
+          "workingtitle": "Tiefbaubeton (ohne Bewehrung)",
+          "kbobId": "01.003"
+        },
+        "role": "matrix",
+        "quantity": {
+          "value": 1.0,
+          "unit": "m3"
+        },
+        "fill_strategy": "remainder_volume",
+        "note": ""
+      },
+      {
+        "material": {
+          "id": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
+          "workingtitle": "Armierungsstahl",
+          "kbobId": "06.003"
+        },
+        "role": "reinforcement",
+        "quantity": {
+          "value": 100.0,
+          "unit": "kg_m3"
+        },
+        "fill_strategy": "absolute",
+        "note": ""
+      }
+    ],
+    "calculatedProperties": {
+      "density_kg_m3": 2420.063694267516,
+      "thermalConductivity_W_mK": 3.1050955414012735,
+      "specificHeat_Wh_kgK": null,
+      "specificHeat_J_kgK": 978.0171075141466,
+      "gwp_kgco2e_m3": 331.3869426751593,
+      "gwp_kgco2e_kg": 0.1369331490985656
+    },
+    "metadata": {
+      "created_at": null,
+      "updated_at": null,
+      "version": 1
+    }
+  }
+]
