@@ -289,126 +289,133 @@ export default function FireRequirementModule({
   const noRule = !matchedRule;
 
   return (
-    <div style={boxStyle}>
-      <div style={titleStyle}>
-        {lang === "fr"
-          ? "Exigences feu"
-          : lang === "de"
-          ? "Brandschutzanforderungen"
-          : lang === "it"
-          ? "Requisiti antincendio"
-          : "Fire requirements"}
-      </div>
-
-      {/* Controls */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
-        {/* Use */}
-        <SelectField
-          label={lang === "fr" ? "Usage" : lang === "de" ? "Nutzung" : lang === "it" ? "Uso" : "Use"}
-          value={useVal}
-          onChange={setUseVal}
-          options={useOptions}
-          disabled={useOptions.length <= 1}
-        />
-
-        {/* Building type */}
-        <SelectField
-          label={lang === "fr" ? "Type de bâtiment" : lang === "de" ? "Gebäudetyp" : lang === "it" ? "Tipo edificio" : "Building type"}
-          value={buildingType}
-          onChange={setBuildingType}
-          options={buildingTypeOptions}
-          disabled={buildingTypeOptions.length <= 1}
-        />
-
-        {/* Building height */}
-        <SelectField
-          label={lang === "fr" ? "Hauteur" : lang === "de" ? "Gebäudehöhe" : lang === "it" ? "Altezza" : "Building height"}
-          value={buildingHeight}
-          onChange={setBuildingHeight}
-          options={buildingHeightOptions}
-          disabled={buildingHeightOptions.length <= 1}
-        />
-
-        {/* Neighbor facade distance */}
-        <SelectField
-          label={
-            lang === "fr"
-              ? "Distance façade voisine"
-              : lang === "de"
-              ? "Nachbarfassadenabstand"
-              : lang === "it"
-              ? "Distanza facciata vicina"
-              : "Neighbor façade distance"
-          }
-          value={neighborDistance}
-          onChange={setNeighborDistance}
-          options={neighborDistanceOptions}
-        />
-      </div>
-
-      {/* Requirements */}
-      <div style={{ marginTop: "14px" }}>
-        <div style={{ fontWeight: 700, marginBottom: "6px" }}>
-          {lang === "fr"
-            ? "Exigences applicables"
+    <>
+      <div 
+        style={{
+          border: '1px solid #b8b5da',
+          padding: '16px',
+          borderRadius: '12px',
+          marginBottom: '12px',
+          backgroundColor: '#d5d1ef',
+        }}>
+           <h2>{lang === "fr"
+            ? "Exigences feu"
             : lang === "de"
-            ? "Anwendbare Anforderungen"
+            ? "Brandschutzanforderungen"
             : lang === "it"
-            ? "Requisiti applicabili"
-            : "Applicable requirements"}
+            ? "Requisiti antincendio"
+            : "Fire requirements"}</h2>
+           
+        {/* Controls */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+          {/* Use */}
+          <SelectField
+            label={lang === "fr" ? "Usage" : lang === "de" ? "Nutzung" : lang === "it" ? "Uso" : "Use"}
+            value={useVal}
+            onChange={setUseVal}
+            options={useOptions}
+            disabled={useOptions.length <= 1}
+          />
+
+          {/* Building type */}
+          <SelectField
+            label={lang === "fr" ? "Type de bâtiment" : lang === "de" ? "Gebäudetyp" : lang === "it" ? "Tipo edificio" : "Building type"}
+            value={buildingType}
+            onChange={setBuildingType}
+            options={buildingTypeOptions}
+            disabled={buildingTypeOptions.length <= 1}
+          />
+
+          {/* Building height */}
+          <SelectField
+            label={lang === "fr" ? "Hauteur" : lang === "de" ? "Gebäudehöhe" : lang === "it" ? "Altezza" : "Building height"}
+            value={buildingHeight}
+            onChange={setBuildingHeight}
+            options={buildingHeightOptions}
+            disabled={buildingHeightOptions.length <= 1}
+          />
+
+          {/* Neighbor facade distance */}
+          <SelectField
+            label={
+              lang === "fr"
+                ? "Distance façade voisine"
+                : lang === "de"
+                ? "Nachbarfassadenabstand"
+                : lang === "it"
+                ? "Distanza facciata vicina"
+                : "Neighbor façade distance"
+            }
+            value={neighborDistance}
+            onChange={setNeighborDistance}
+            options={neighborDistanceOptions}
+          />
         </div>
 
-        {noRule ? (
-          <div style={{ opacity: 0.75 }}>
+        {/* Requirements */}
+        <div style={{ marginTop: "14px" }}>
+          <div style={{ fontWeight: 700, marginBottom: "6px" }}>
             {lang === "fr"
-              ? "Aucune règle trouvée pour cette combinaison."
+              ? "Exigences applicables"
               : lang === "de"
-              ? "Keine Regel für diese Kombination gefunden."
+              ? "Anwendbare Anforderungen"
               : lang === "it"
-              ? "Nessuna regola trovata per questa combinazione."
-              : "No rule found for this combination."}
+              ? "Requisiti applicabili"
+              : "Applicable requirements"}
           </div>
-        ) : resolvedRequirements.length === 0 ? (
-          <div style={{ opacity: 0.75 }}>
-            {lang === "fr"
-              ? "Aucune exigence (ou règles à compléter)."
-              : lang === "de"
-              ? "Keine Anforderungen (oder Regeln unvollständig)."
-              : lang === "it"
-              ? "Nessun requisito (o regole da completare)."
-              : "No requirements (or rules incomplete)."}
-          </div>
-        ) : (
-          <ul style={{ margin: 0, paddingLeft: "18px" }}>
-            {resolvedRequirements.map((r, idx) => (
-              <li key={`${r.element_id}-${idx}`} style={{ marginBottom: "8px" }}>
-                <div style={{ fontWeight: 600 }}>{formatRequirementLabel(r)}</div>
-                <div style={{ opacity: 0.9 }}>{r.displayText}</div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
 
-      {/* Apply to filters */}
-      <div style={{ marginTop: "14px", display: "flex", alignItems: "center", gap: "8px" }}>
-        <input
-          type="checkbox"
-          checked={applyToFilters}
-          onChange={(e) => setApplyToFilters(e.target.checked)}
-          disabled={noRule || resolvedRequirements.length === 0}
-        />
-        <div style={{ fontWeight: 600 }}>
-          {lang === "fr"
-            ? "Appliquer aux filtres"
-            : lang === "de"
-            ? "Auf Filter anwenden"
-            : lang === "it"
-            ? "Applica ai filtri"
-            : "Apply to filters"}
+          {noRule ? (
+            <div style={{ opacity: 0.75 }}>
+              {lang === "fr"
+                ? "Aucune règle trouvée pour cette combinaison."
+                : lang === "de"
+                ? "Keine Regel für diese Kombination gefunden."
+                : lang === "it"
+                ? "Nessuna regola trovata per questa combinazione."
+                : "No rule found for this combination."}
+            </div>
+          ) : resolvedRequirements.length === 0 ? (
+            <div style={{ opacity: 0.75 }}>
+              {lang === "fr"
+                ? "Aucune exigence (ou règles à compléter)."
+                : lang === "de"
+                ? "Keine Anforderungen (oder Regeln unvollständig)."
+                : lang === "it"
+                ? "Nessun requisito (o regole da completare)."
+                : "No requirements (or rules incomplete)."}
+            </div>
+          ) : (
+            <ul style={{ margin: 0, paddingLeft: "18px" }}>
+              {resolvedRequirements.map((r, idx) => (
+                <li key={`${r.element_id}-${idx}`} style={{ marginBottom: "8px" }}>
+                  <div style={{ fontWeight: 600 }}>{formatRequirementLabel(r)}</div>
+                  <div style={{ opacity: 0.9 }}>{r.displayText}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* Apply to filters */}
+        <div style={{ marginTop: "14px", display: "flex", alignItems: "center", gap: "8px" }}>
+          <input
+            type="checkbox"
+            checked={applyToFilters}
+            onChange={(e) => setApplyToFilters(e.target.checked)}
+            disabled={noRule || resolvedRequirements.length === 0}
+          />
+          <div style={{ fontWeight: 600 }}>
+            {lang === "fr"
+              ? "Appliquer aux filtres"
+              : lang === "de"
+              ? "Auf Filter anwenden"
+              : lang === "it"
+              ? "Applica ai filtri"
+              : "Apply to filters"}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

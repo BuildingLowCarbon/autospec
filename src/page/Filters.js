@@ -288,6 +288,19 @@ function App() {
     [selectedUValue, uValueRange]
   );
 
+  const handleApplyRecommendedUValue = useCallback(
+    (recommendedUValue) => {
+      if (!Number.isFinite(recommendedUValue)) return;
+      setSelectedUValue((prev) => {
+        const prevMin = Array.isArray(prev) && Number.isFinite(prev[0]) ? prev[0] : uValueRange[0];
+        const boundedMax = Math.max(uValueRange[0], Math.min(recommendedUValue, uValueRange[1]));
+        const boundedMin = Math.min(Math.max(prevMin, uValueRange[0]), boundedMax);
+        return [boundedMin, boundedMax];
+      });
+    },
+    [uValueRange]
+  );
+
   const handleCheckboxChange = (item) => {
     const isSelected = selectedItems.some((i) => i.id === item.id);
     if (isSelected) {
@@ -510,7 +523,7 @@ function App() {
             ))}
           </div>
 
-          <ENtebTool lang={lang} t={t} />
+          <ENtebTool lang={lang} t={t} onApplyRecommendedUValue={handleApplyRecommendedUValue} />
         
           <FireRequirementsModule
             lang={lang}

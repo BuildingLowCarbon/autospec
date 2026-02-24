@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import factorsData from './data/factors.json';
 import dataTable from './data/data.json';
 import SelectedFactorsContext from '../../context/SelectedFactorsContext';
@@ -15,6 +15,17 @@ const FACTOR_ORDER = [
   'windows_g_value',
   'windows_ratio',
   'window_ventilation',
+];
+
+const FACTOR_FIELDS = [
+  { key: 'building_type', labelKey: 'enteb_building_type', fallback: 'Building type' },
+  { key: 'station', labelKey: 'enteb_climate_station', fallback: 'Climate station' },
+  { key: 'heat_storage_capacity', labelKey: 'enteb_thermal_capacity', fallback: 'Thermal capacity' },
+  { key: 'wall_u_value', labelKey: 'enteb_wall_u_value', fallback: 'Wall U value' },
+  { key: 'windows_u_value', labelKey: 'enteb_windows_u_value', fallback: 'Windows U value' },
+  { key: 'windows_g_value', labelKey: 'enteb_windows_g_value', fallback: 'Windows g value' },
+  { key: 'windows_ratio', labelKey: 'enteb_glass_part', fallback: 'Glass part' },
+  { key: 'window_ventilation', labelKey: 'enteb_ventilation_type', fallback: 'Ventilation type' },
 ];
 
 const toInt = (value) => String(parseInt(value, 10));
@@ -84,12 +95,13 @@ const selectMaxWallUValue = (variables, envelopeFactor) => {
   return values[values.length - 1];
 };
 
-function ENtebTool({ lang, t }) {
+function ENtebTool({ lang, t, onApplyRecommendedUValue }) {
   const { selectedFactors, setSelectedFactors } = useContext(SelectedFactorsContext);
   const [envelopeFactor, setEnvelopeFactor] = useState('3.39');
+  const [applyToUFilter, setApplyToUFilter] = useState(false);
 
   const computed = useMemo(() => {
-    const allFilled = Object.keys(factorsData).every((key) => selectedFactors[key] !== undefined && selectedFactors[key] !== '');
+    const allFilled = FACTOR_FIELDS.every((field) => selectedFactors[field.key] !== undefined && selectedFactors[field.key] !== '');
     const envValue = Number.parseFloat(envelopeFactor);
     if (!allFilled || Number.isNaN(envValue)) {
       return { qh: null, qhli: null, uValue: null };
@@ -111,65 +123,72 @@ function ENtebTool({ lang, t }) {
     }
   };
 
+  const handleFactorChange = (factorKey, value) => {
+    setSelectedFactors({
+      ...selectedFactors,
+      [factorKey]: value,
+    });
+  };
+
+  useEffect(() => {
+    if (!applyToUFilter || !Number.isFinite(computed.uValue)) return;
+    if (typeof onApplyRecommendedUValue === 'function') {
+      onApplyRecommendedUValue(computed.uValue);
+    }
+  }, [applyToUFilter, computed.uValue, onApplyRecommendedUValue]);
+
   return (
     <>
-      <h2>{t.building}</h2>
+      
       <div
         style={{
-          border: '2px solid #007bff',
-          padding: '8px',
-          borderRadius: '6px',
+          border: '1px solid #b8b5da',
+          padding: '16px',
+          borderRadius: '12px',
           marginBottom: '12px',
-          backgroundColor: '#fff',
+          backgroundColor: '#d5d1ef',
         }}
       >
-        <div
-          style={{
-            border: '1px solid #ccc',
-            padding: '8px',
-            borderRadius: '6px',
-            marginBottom: '12px',
-            backgroundColor: '#fff',
-          }}
-        >
-          {Object.entries(factorsData).map(([factorKey, entries]) => (
-            <div key={factorKey} style={{ marginBottom: '12px' }}>
-              <label style={{ fontWeight: 'bold' }}>{factorKey}</label>
-              <select
-                style={{ width: '100%', marginTop: '4px' }}
-                value={selectedFactors[factorKey] ?? ''}
-                onChange={(e) =>
-                  setSelectedFactors({
-                    ...selectedFactors,
-                    [factorKey]: e.target.value,
-                  })
-                }
-              >
-                <option value="">-- {t.select} --</option>
-                {entries.map((item, index) => (
-                  <option key={index} value={item.id ?? item.value}>
-                    {item[`name_${lang}`] ?? item.name_fr ?? JSON.stringify(item)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          ))}
+        <h2>{t.enteb_thermal_assistance ?? 'Thermal assistance'}</h2>
+        <div style={{ marginBottom: '12px' }}>
+          {FACTOR_FIELDS.map(({ key, labelKey, fallback }) => {
+            const entries = factorsData[key] ?? [];
+            return (
+              <div key={key} style={{ marginBottom: '12px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'center' }}>
+                <label style={{ fontWeight: 'bold' }}>{t[labelKey] ?? fallback}</label>
+                <select
+                  style={{ width: '100%' }}
+                  value={selectedFactors[key] ?? ''}
+                  onChange={(e) => handleFactorChange(key, e.target.value)}
+                >
+                  <option value="">-- {t.select} --</option>
+                  {entries.map((item, index) => (
+                    <option key={index} value={item.id ?? item.value}>
+                      {item[`name_${lang}`] ?? item.name_fr ?? JSON.stringify(item)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            );
+          })}
 
           <div style={{ marginBottom: '12px' }}>
-            <label style={{ fontWeight: 'bold' }}>{t.envelope_factors ?? 'envelope factor'}</label>
-            <input
-              type="text"
-              inputMode="decimal"
-              pattern="^\\d*\\.?\\d*$"
-              value={envelopeFactor}
-              onChange={(e) => handleEnvelopeFactorChange(e.target.value)}
-              onBlur={(e) => handleEnvelopeFactorChange(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') e.target.blur();
-              }}
-              style={{ width: '100%', marginTop: '4px' }}
-              placeholder="ex: 3.39"
-            />
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'center' }}>
+              <label style={{ fontWeight: 'bold' }}>{t.envelope_factors ?? 'Envelope factor'}</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                pattern="^\\d*\\.?\\d*$"
+                value={envelopeFactor}
+                onChange={(e) => handleEnvelopeFactorChange(e.target.value)}
+                onBlur={(e) => handleEnvelopeFactorChange(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') e.target.blur();
+                }}
+                style={{ width: '100%' }}
+                placeholder="1.22"
+              />
+            </div>
           </div>
         </div>
 
@@ -180,28 +199,38 @@ function ENtebTool({ lang, t }) {
             borderRadius: '8px',
             marginTop: '20px',
             backgroundColor: '#fff',
-            fontSize: '18px',
+            fontSize: '16px',
           }}
         >
           <div>
             {t.qh_estimated ?? 'Estimated Qh'} :
             <span style={{ marginLeft: '8px' }}>
-              {computed.qh !== null ? `${computed.qh.toFixed(1)} kWh/m²` : t.not_calculated ?? 'not calculated'}
+              {computed.qh !== null ? `${computed.qh.toFixed(1)} kWh/m2` : t.not_calculated ?? 'not calculated'}
             </span>
           </div>
           <div>
             Qh,li :
             <span style={{ marginLeft: '8px' }}>
-              {computed.qhli !== null ? `${computed.qhli.toFixed(1)} kWh/m²` : t.not_calculated ?? 'not calculated'}
+              {computed.qhli !== null ? `${computed.qhli.toFixed(1)} kWh/m2` : t.not_calculated ?? 'not calculated'}
               <InfoTooltip text={t.info_qhli} link="https://ton-lien.com/details" lang={lang} />
             </span>
           </div>
           <div>
-            {t.uvalue_max ?? 'Max U value'} :
+            {t.enteb_max_recommended_wall_u ?? 'Max wall U value recommended'} :
             <span style={{ marginLeft: '8px' }}>
-              {computed.uValue !== null ? `${computed.uValue.toFixed(3)} W/m²K` : t.not_calculated ?? 'not calculated'}
+              {computed.uValue !== null ? `${computed.uValue.toFixed(3)} W/m2K` : t.not_calculated ?? 'not calculated'}
               <InfoTooltip2 text={t.info_qhli} link="https://ton-lien.com/details" lang={lang} />
             </span>
+          </div>
+          <div style={{ marginTop: '12px' }}>
+            <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+              <input
+                type="checkbox"
+                checked={applyToUFilter}
+                onChange={(e) => setApplyToUFilter(e.target.checked)}
+              />
+              <span>{t.enteb_apply_uvalue_filter ?? 'Use maximum wall U value in filters'}</span>
+            </label>
           </div>
         </div>
       </div>
