@@ -1,11 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
-import translations from '../language/translations';
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 // Mais le module utilise surtout les libellés du JSON de fire_requirements
 
 /**
  * Props:
  * - lang: "fr" | "en" | "de" | "it"
  * - onApplyChange: (payload) => void
+ * - initialSelection?: { use, building_type, building_height, neighbor_distance }
+ * - initialApplied?: boolean
  *    payload = {
  *      applied: boolean,
  *      selection: { use, building_type, building_height, neighbor_distance },
@@ -22,17 +23,23 @@ import translations from '../language/translations';
  *   filter,
  * }
  */
-export default function FireRequirementModule({ lang = "fr", onApplyChange, resetApplySignal = 0 }) {
+export default function FireRequirementModule({
+  lang = "fr",
+  onApplyChange,
+  resetApplySignal = 0,
+  initialSelection = null,
+  initialApplied = false,
+}) {
   const [db, setDb] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // Sélections
-  const [useVal, setUseVal] = useState("residential");
-  const [buildingType, setBuildingType] = useState("");
-  const [buildingHeight, setBuildingHeight] = useState("");
-  const [neighborDistance, setNeighborDistance] = useState("gt_10");
+  const [useVal, setUseVal] = useState(initialSelection?.use ?? "residential");
+  const [buildingType, setBuildingType] = useState(initialSelection?.building_type ?? "");
+  const [buildingHeight, setBuildingHeight] = useState(initialSelection?.building_height ?? "");
+  const [neighborDistance, setNeighborDistance] = useState(initialSelection?.neighbor_distance ?? "gt_10");
 
-  const [applyToFilters, setApplyToFilters] = useState(false);
+  const [applyToFilters, setApplyToFilters] = useState(Boolean(initialApplied));
 
   useEffect(() => {
     if (!resetApplySignal) return;
@@ -62,10 +69,10 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
   }, []);
 
   // Helpers i18n from db
-  const tr = (obj) => {
+  const tr = useCallback((obj) => {
     if (!obj) return "";
     return obj[lang] ?? obj.fr ?? obj.en ?? "";
-  };
+  }, [lang]);
 
   // Options (dépendent de db)
   const useOptions = useMemo(() => {
@@ -74,7 +81,7 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
       id,
       label: tr(db.i18n?.use?.[id]),
     }));
-  }, [db, lang]);
+  }, [db, tr]);
 
   const buildingTypeOptions = useMemo(() => {
     if (!db) return [];
@@ -82,7 +89,7 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
       id,
       label: tr(db.i18n?.building_type?.[id]),
     }));
-  }, [db, lang]);
+  }, [db, tr]);
 
   const buildingHeightOptions = useMemo(() => {
     if (!db || !buildingType) return [];
@@ -91,7 +98,7 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
       id,
       label: tr(db.i18n?.building_height?.[id]),
     }));
-  }, [db, lang, buildingType]);
+  }, [db, tr, buildingType]);
 
   const neighborDistanceOptions = useMemo(() => {
     if (!db) return [];
@@ -99,7 +106,7 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
       id,
       label: tr(db.i18n?.neighbor_distance?.[id]),
     }));
-  }, [db, lang]);
+  }, [db, tr]);
 
   const elementsById = useMemo(() => {
     if (!db?.elements) return new Map();
@@ -216,7 +223,7 @@ export default function FireRequirementModule({ lang = "fr", onApplyChange, rese
       });
 
     return resolved;
-  }, [db, matchedRule, neighborDistance, lang, elementsById]);
+  }, [db, matchedRule, neighborDistance, elementsById, tr]);
 
   // Notify parent when apply toggle or resolved requirements change
   useEffect(() => {

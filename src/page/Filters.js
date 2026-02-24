@@ -4,17 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import translations from '../language/translations';
 import LangContext from '../context/LangContext';
-import InfoTooltip from '../components/InfoTooltip';
-import InfoTooltip2 from '../components/InfoTooltip2';
 import DropDown from '../components/DropDown';
 import FireRequirementsModule from '../components/FireRequirements';
 import SelectedItemsContext from '../context/SelectedItemsContext';
-import SelectedFactorsContext from '../context/SelectedFactorsContext';
 import ComponentCard from '../components/ComponentCard';
 import FireFilter, { R_OPTIONS as FIRE_R_VALUES, EI_OPTIONS as FIRE_EI_VALUES } from '../components/FireFilter';
 import RangeSlider from '../components/RangeSlider';
 import loadComponents, { fetchDbFilesList } from '../utils/loadComponents';
 import SourceSelector from '../components/SourceSelector';
+import ENtebTool from '../components/ENteb/ENteb_tool';
 
 const valueSatisfies = (itemValue, selectedValue, scale) => {
   const selectedIdx = scale.indexOf(selectedValue);
@@ -107,16 +105,17 @@ function App() {
     Array.isArray(persistedFilters.selectedUValue) ? persistedFilters.selectedUValue : [0, 1]
   );
   const navigate = useNavigate();
-  const [factors, setFactors] = useState({});
-  const { selectedFactors, setSelectedFactors } = useContext(SelectedFactorsContext);
-  const [envelopeFactor, setEnvelopeFactor] = useState(3.39);
   const { lang, setLang } = useContext(LangContext);
   const t = translations[lang];
-  const [uValue, setUValue] = useState(null);
-  const [qh, setQh] = useState(null);
-  const [qhli, setQhli] = useState(null);
-  const [fireReqApplied, setFireReqApplied] = useState(false);
-  const [fireReqSelection, setFireReqSelection] = useState(null);
+  const [fireReqApplied, setFireReqApplied] = useState(Boolean(persistedFilters.fireReqApplied));
+  const [fireReqSelection, setFireReqSelection] = useState(
+    persistedFilters.fireReqSelection ?? {
+      use: 'residential',
+      building_type: '',
+      building_height: '',
+      neighbor_distance: 'gt_10',
+    }
+  );
   const [fireReqRequirements, setFireReqRequirements] = useState([]);
   const [fireRValue, setFireRValue] = useState(
     FIRE_R_VALUES.includes(persistedFilters.fireRValue) ? persistedFilters.fireRValue : FIRE_R_VALUES[0]
@@ -176,13 +175,6 @@ function App() {
   }, [persistedFilters]);
 
   useEffect(() => {
-    fetch('/factors.json')
-      .then((res) => res.json())
-      .then(setFactors)
-      .catch((err) => console.error('Erreur de chargement des facteurs :', err));
-  }, []);
-
-  useEffect(() => {
     if (typeof window === 'undefined') return;
     const payload = {
       page,
@@ -195,6 +187,8 @@ function App() {
       selectedUValue,
       fireRValue,
       fireEIValue,
+      fireReqApplied,
+      fireReqSelection,
     };
     window.sessionStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(payload));
   }, [
@@ -208,6 +202,8 @@ function App() {
     selectedUValue,
     fireRValue,
     fireEIValue,
+    fireReqApplied,
+    fireReqSelection,
   ]);
 
   const baseFilteredData = useMemo(() => {
@@ -323,52 +319,6 @@ function App() {
     });
   }, [filteredData, sortBy, sortOrder]);
 
-  const sendFactorsToApi = useCallback(
-    async (factorsOverride = selectedFactors, envelopeOverride = envelopeFactor) => {
-      const allFilled = Object.keys(factors).every((key) => factorsOverride[key]);
-      const envelopeValid = envelopeOverride !== '' && !isNaN(parseFloat(envelopeOverride));
-
-      if (!allFilled || !envelopeValid) {
-        return; // Do nothing if inputs are incomplete
-      }
-      try {
-        const response = await fetch('http://localhost:8000/api/calculate-uvalue', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            variables: factorsOverride,
-            envelope_factor: parseFloat(envelopeOverride),
-          }),
-        });
-
-        const data = await response.json();
-        setUValue(data.u_value ?? null);
-        setQh(data.qh ?? null);
-        setQhli(data.qhli ?? null);
-      } catch (error) {
-        console.error('Erreur API :', error);
-        setUValue(null);
-        setQh(null);
-        setQhli(null);
-      }
-    },
-    [selectedFactors, envelopeFactor, factors]
-  );
-
-  const handleEnvelopeFactorChange = (val) => {
-    if (/^\d*\.?\d*$/.test(val)) {
-      setEnvelopeFactor(val);
-      const floatVal = parseFloat(val);
-      if (!isNaN(floatVal)) {
-        sendFactorsToApi({ ...selectedFactors }, floatVal);
-      }
-    }
-  };
-
-  useEffect(() => {
-    sendFactorsToApi();
-  }, [selectedFactors, envelopeFactor, sendFactorsToApi]);
-
   useEffect(() => {
     if (!fireReqApplied || !fireReqRequirements.length) return;
     const targetCategory = selectedCategory || null;
@@ -401,7 +351,6 @@ function App() {
       setFireEIValue(val);
     }
   };
-
   const handleFireRequirementsChange = useCallback(
     ({ applied, selection, requirements }) => {
       setFireReqApplied(applied);
@@ -561,101 +510,13 @@ function App() {
             ))}
           </div>
 
-          <h2>{t.building}</h2>
-          <div
-            style={{
-              border: '2px solid #007bff',
-              padding: '8px',
-              borderRadius: '6px',
-              marginBottom: '12px',
-              backgroundColor: '#fff',
-            }}
-          >
-            <div
-              style={{
-                border: '1px solid #ccc',
-                padding: '8px',
-                borderRadius: '6px',
-                marginBottom: '12px',
-                backgroundColor: '#fff',
-              }}
-            >
-              {Object.entries(factors).map(([factorKey, entries]) => (
-                <div key={factorKey} style={{ marginBottom: '12px' }}>
-                  <label style={{ fontWeight: 'bold' }}>{factorKey}</label>
-                  <select
-                    style={{ width: '100%', marginTop: '4px' }}
-                    value={selectedFactors[factorKey] ?? ''}
-                    onChange={(e) =>
-                      setSelectedFactors({
-                        ...selectedFactors,
-                        [factorKey]: e.target.value,
-                      })
-                    }
-                  >
-                    <option value="">-- {t.select} --</option>
-                    {entries.map((item, index) => (
-                      <option key={index} value={item.id ?? item.value}>
-                        {item[`name_${lang}`] ?? item.name_fr ?? JSON.stringify(item)}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              ))}
-              {/* Envelope factor */}
-              <div style={{ marginBottom: '12px' }}>
-                <label style={{ fontWeight: 'bold' }}>{t.envelope_factors ?? 'envelope factor'}</label>
-                <input
-                  type="text"
-                  inputMode="decimal"
-                  pattern="^\d*\.?\d*$"
-                  value={envelopeFactor}
-                  onChange={(e) => handleEnvelopeFactorChange(e.target.value)}
-                  onBlur={(e) => handleEnvelopeFactorChange(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') e.target.blur();
-                  }}
-                  style={{ width: '100%', marginTop: '4px' }}
-                  placeholder="ex: 3.39"
-                />
-              </div>
-            </div>
-
-            <div
-              style={{
-                border: '1px solid #ccc',
-                padding: '12px',
-                borderRadius: '8px',
-                marginTop: '20px',
-                backgroundColor: '#fff',
-                fontSize: '18px',
-              }}
-            >
-              <div>
-                {t.qh_estimated ?? 'Estimated Qh'} :
-                <span style={{ marginLeft: '8px' }}>
-                  {qh !== null ? `${qh.toFixed(1)} kWh/m²` : t.not_calculated ?? 'not calculated'}
-                </span>
-              </div>
-              <div>
-                Qh,li :
-                <span style={{ marginLeft: '8px' }}>
-                  {qhli !== null ? `${qhli.toFixed(1)} kWh/m²` : t.not_calculated ?? 'not calculated'}
-                  <InfoTooltip text={t.info_qhli} link="https://ton-lien.com/details" lang={lang} />
-                </span>
-              </div>
-              <div>
-                {t.uvalue_max ?? 'Max U value'} :
-                <span style={{ marginLeft: '8px' }}>
-                  {uValue !== null ? `${uValue.toFixed(3)} W/m²K` : t.not_calculated ?? 'not calculated'}
-                  <InfoTooltip2 text={t.info_qhli} link="https://ton-lien.com/details" lang={lang} />
-                </span>
-              </div>
-            </div>
-          </div>
+          <ENtebTool lang={lang} t={t} />
+        
           <FireRequirementsModule
             lang={lang}
             resetApplySignal={fireApplyResetSignal}
+            initialSelection={fireReqSelection}
+            initialApplied={fireReqApplied}
             onApplyChange={handleFireRequirementsChange}
           />
         </div>

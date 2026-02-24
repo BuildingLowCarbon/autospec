@@ -1,0 +1,613 @@
+{
+    "building_type": [
+        {
+            "id": 1,
+            "name_de": "Wohnen MFH",
+            "name_fr": "Habitat collectif",
+            "name_it": "Abitazioni plurifamiliari",
+            "limit_value": 35,
+            "Qli0": 13.0,
+            "dQli": 15.0,
+            "Qww": 21.0,
+            "surcharge": 10.0
+        },
+        {
+            "id": 2,
+            "name_de": "Wohnen EFH",
+            "name_fr": "Habitat individuel",
+            "name_it": "Abitazioni monofamiliari",
+            "limit_value": 35,
+            "Qli0": 16.0,
+            "dQli": 15.0,
+            "Qww": 14.0,
+            "surcharge": 5.0
+        },
+        {
+            "id": 3,
+            "name_de": "Verwaltung",
+            "name_fr": "Administration",
+            "name_it": "Amministrazione",
+            "limit_value": 40,
+            "Qli0": 12.0,
+            "dQli": 14.0,
+            "Qww": 7.0
+        },
+        {
+            "id": 4,
+            "name_de": "Schule",
+            "name_fr": "Ecole",
+            "name_it": "Scuole",
+            "limit_value": 35,
+            "Qli0": 16.0,
+            "dQli": 14.0,
+            "Qww": 7.0
+        },
+        {
+            "id": 5,
+            "name_de": "Verkauf",
+            "name_fr": "Commerce",
+            "name_it": "Negozi",
+            "limit_value": 40,
+            "Qli0": 8.0,
+            "dQli": 13.0,
+            "Qww": 7.0
+        },
+        {
+            "id": 6,
+            "name_de": "Restaurant",
+            "name_fr": "Restauration",
+            "name_it": "Ristoranti",
+            "limit_value": 45,
+            "Qli0": 16.0,
+            "dQli": 14.0,
+            "Qww": 56.0
+        },
+        {
+            "id": 7,
+            "name_de": "Versammlungslokal",
+            "name_fr": "Lieu rassemblement",
+            "name_it": "Locali pubblici",
+            "limit_value": 40,
+            "Qli0": 18.0,
+            "dQli": 14.0,
+            "Qww": 14.0
+        },
+        {
+            "id": 8,
+            "name_de": "Spital",
+            "name_fr": "Hôpital",
+            "name_it": "Ospedali",
+            "limit_value": 70,
+            "Qli0": 19.0,
+            "dQli": 15.0,
+            "Qww": 28.0
+        },
+        {
+            "id": 9,
+            "name_de": "Industrie",
+            "name_fr": "Industrie",
+            "name_it": "Industrie",
+            "limit_value": 20,
+            "Qli0": 10.0,
+            "dQli": 13.0,
+            "Qww": 7.0
+        },
+        {
+            "id": 10,
+            "name_de": "Lager",
+            "name_fr": "Dépôt",
+            "name_it": "Magazzini",
+            "limit_value": 20,
+            "Qli0": 12.0,
+            "dQli": 13.0,
+            "Qww": 1.0
+        },
+        {
+            "id": 11,
+            "name_de": "Sportbaute",
+            "name_fr": "Installation sportive",
+            "name_it": "Impianti sportivi",
+            "limit_value": 25,
+            "Qli0": 16.0,
+            "dQli": 13.0,
+            "Qww": 83.0
+        },
+        {
+            "id": 12,
+            "name_de": "Hallenbad",
+            "name_fr": "Piscine couverte",
+            "name_it": "Piscine coperte",
+            "limit_value": "keine An­for­der­ung an Ehwlk",
+            "Qli0": 15.0,
+            "dQli": 16.0,
+            "Qww": 83.0
+        }
+    ],
+    "station": [
+        {
+            "id": 1,
+            "name_de": "Adelboden",
+            "name_fr": "Adelboden",
+            "name_it": "Adelboden",
+            "t_mean": 6.1,
+            "t_winter": 1.5
+        },
+        {
+            "id": 2,
+            "name_de": "Aigle",
+            "name_fr": "Aigle",
+            "name_it": "Aigle",
+            "t_mean": 10.1,
+            "t_winter": 4.6,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 3,
+            "name_de": "Altdorf",
+            "name_fr": "Altdorf",
+            "name_it": "Altdorf",
+            "t_mean": 9.9,
+            "t_winter": 4.6,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 4,
+            "name_de": "Basel-Binningen",
+            "name_fr": "Bâle-Binningen",
+            "name_it": "Basel-Binningen",
+            "t_mean": 10.5,
+            "t_winter": 5.1,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 5,
+            "name_de": "Bern-Liebefeld",
+            "name_fr": "Berne-Liebefeld",
+            "name_it": "Bern-Liebefeld",
+            "t_mean": 9.1,
+            "t_winter": 3.5,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 6,
+            "name_de": "Buchs-Aarau",
+            "name_fr": "Buchs-Aarau",
+            "name_it": "Buchs-Aarau",
+            "t_mean": 9.7,
+            "t_winter": 4.1,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 7,
+            "name_de": "Chur",
+            "name_fr": "Coire",
+            "name_it": "Chur",
+            "t_mean": 9.6,
+            "t_winter": 4.1,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 8,
+            "name_de": "Davos",
+            "name_fr": "Davos",
+            "name_it": "Davos",
+            "t_mean": 3.6,
+            "t_winter": -1.5,
+            "unknow_2": 4.0
+        },
+        {
+            "id": 9,
+            "name_de": "Disentis",
+            "name_fr": "Disentis",
+            "name_it": "Disentis",
+            "t_mean": 6.7,
+            "t_winter": 1.8,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 10,
+            "name_de": "Engelberg",
+            "name_fr": "Engelberg",
+            "name_it": "Engelberg",
+            "t_mean": 6.4,
+            "t_winter": 1.3,
+            "unknow_2": 2.0
+        },
+        {
+            "id": 11,
+            "name_de": "Genève Cointrin",
+            "name_fr": "Genève Cointrin",
+            "name_it": "Genève Cointrin",
+            "t_mean": 10.7,
+            "t_winter": 5.2,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 12,
+            "name_de": "Glarus",
+            "name_fr": "Glarus",
+            "name_it": "Glarus",
+            "t_mean": 8.8,
+            "t_winter": 3.2,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 13,
+            "name_de": "Grosser St. Bernhard",
+            "name_fr": "Grand St. Bernard",
+            "name_it": "Grand St. Bernard",
+            "t_mean": -0.5,
+            "t_winter": -4.8,
+            "unknow_2": 8.0
+        },
+        {
+            "id": 14,
+            "name_de": "Güttingen",
+            "name_fr": "Güttingen",
+            "name_it": "Güttingen",
+            "t_mean": 9.2,
+            "t_winter": 3.7,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 15,
+            "name_de": "Interlaken",
+            "name_fr": "Interlaken",
+            "name_it": "Interlaken",
+            "t_mean": 8.7,
+            "t_winter": 3.2,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 16,
+            "name_de": "La Chaux-de-Fonds",
+            "name_fr": "La Chaux-de-Fonds",
+            "name_it": "La Chaux-de-Fonds",
+            "t_mean": 6.5,
+            "t_winter": 1.7,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 17,
+            "name_de": "La Frêtaz",
+            "name_fr": "La Frêtaz",
+            "name_it": "La Frêtaz",
+            "t_mean": 6.0,
+            "t_winter": 1.5,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 18,
+            "name_de": "Locarno Monti",
+            "name_fr": "Locarno Monti",
+            "name_it": "Locarno Monti",
+            "t_mean": 12.3,
+            "t_winter": 6.9,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 19,
+            "name_de": "Lugano",
+            "name_fr": "Lugano",
+            "name_it": "Lugano",
+            "t_mean": 12.4,
+            "t_winter": 7.0,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 20,
+            "name_de": "Luzern",
+            "name_fr": "Lucerne",
+            "name_it": "Luzern",
+            "t_mean": 9.7,
+            "t_winter": 4.1,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 21,
+            "name_de": "Magadino",
+            "name_fr": "Magadino",
+            "name_it": "Magadino",
+            "t_mean": 11.7,
+            "t_winter": 5.5,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 22,
+            "name_de": "Montana",
+            "name_fr": "Montana",
+            "name_it": "Montana",
+            "t_mean": 5.9,
+            "t_winter": 1.1,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 23,
+            "name_de": "Neuchâtel",
+            "name_fr": "Neuchâtel",
+            "name_it": "Neuchâtel",
+            "t_mean": 10.3,
+            "t_winter": 4.8,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 24,
+            "name_de": "Payerne",
+            "name_fr": "Payerne",
+            "name_it": "Payerne",
+            "t_mean": 9.4,
+            "t_winter": 3.9,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 25,
+            "name_de": "Piotta",
+            "name_fr": "Piotta",
+            "name_it": "Piotta",
+            "t_mean": 7.8,
+            "t_winter": 2.3,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 26,
+            "name_de": "Pully",
+            "name_fr": "Pully",
+            "name_it": "Pully",
+            "t_mean": 10.9,
+            "t_winter": 5.6,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 27,
+            "name_de": "Robbia",
+            "name_fr": "Robbia",
+            "name_it": "Robbia",
+            "t_mean": 7.0,
+            "t_winter": 1.7,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 28,
+            "name_de": "Rünenberg",
+            "name_fr": "Rünenberg",
+            "name_it": "Rünenberg",
+            "t_mean": 9.1,
+            "t_winter": 3.8,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 29,
+            "name_de": "Samedan",
+            "name_fr": "Samedan",
+            "name_it": "Samedan",
+            "t_mean": 1.8,
+            "t_winter": -4.5,
+            "unknow_2": 8.0
+        },
+        {
+            "id": 30,
+            "name_de": "San Bernardino",
+            "name_fr": "San Bernardino",
+            "name_it": "San Bernardino",
+            "t_mean": 3.9,
+            "t_winter": -1.0,
+            "unknow_2": 8.0
+        },
+        {
+            "id": 31,
+            "name_de": "St.Gallen",
+            "name_fr": "St.Gall",
+            "name_it": "St.Gallen",
+            "t_mean": 8.2,
+            "t_winter": 3.0,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 32,
+            "name_de": "Schaffhausen",
+            "name_fr": "Schaffhouse",
+            "name_it": "Schaffhausen",
+            "t_mean": 9.4,
+            "t_winter": 3.7,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 33,
+            "name_de": "Scuol",
+            "name_fr": "Scuol",
+            "name_it": "Scuol",
+            "t_mean": 5.5,
+            "t_winter": -0.4,
+            "unknow_2": 2.0
+        },
+        {
+            "id": 34,
+            "name_de": "Sion",
+            "name_fr": "Sion",
+            "name_it": "Sion",
+            "t_mean": 10.1,
+            "t_winter": 4.0,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 35,
+            "name_de": "Ulrichen",
+            "name_fr": "Ulrichen",
+            "name_it": "Ulrichen",
+            "t_mean": 3.7,
+            "t_winter": -2.6,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 36,
+            "name_de": "Vaduz",
+            "name_fr": "Vaduz",
+            "name_it": "Vaduz",
+            "t_mean": 10.0,
+            "t_winter": 4.5,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 37,
+            "name_de": "Wynau",
+            "name_fr": "Wynau",
+            "name_it": "Wynau",
+            "t_mean": 9.0,
+            "t_winter": 3.5,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 38,
+            "name_de": "Zermatt",
+            "name_fr": "Zermatt",
+            "name_it": "Zermatt",
+            "t_mean": 4.3,
+            "t_winter": -0.9,
+            "unknow_2": 2.0
+        },
+        {
+            "id": 39,
+            "name_de": "Zürich-Kloten",
+            "name_fr": "Zürich-Kloten",
+            "name_it": "Zürich-Kloten",
+            "t_mean": 9.4,
+            "t_winter": 3.7,
+            "unknow_2": 0.0
+        },
+        {
+            "id": 40,
+            "name_de": "Zürich MeteoSchweiz",
+            "name_fr": "Zürich MeteoSchweiz",
+            "name_it": "Zürich MeteoSchweiz",
+            "t_mean": 9.4,
+            "t_winter": 3.9,
+            "unknow_2": 0.0
+        }
+    ],
+    "heat_storage_capacity": [
+        {
+            "id": 1,
+            "name_de": "schwer",
+            "name_fr": "lourde",
+            "name_it": "massiccio"
+        },
+        {
+            "id": 2,
+            "name_de": "mittel",
+            "name_fr": "moyenne",
+            "name_it": "medio"
+        },
+        {
+            "id": 3,
+            "name_de": "leicht",
+            "name_fr": "légère",
+            "name_it": "leggero"
+        }
+    ],
+    "wall_u_value": [
+        {
+            "name_de": "gegen aussen < 0.10",
+            "name_fr": "contre extérieur < 0.10",
+            "name_it": "verso esterno < 0.10",
+            "value": 0.1
+        },
+        {
+            "name_de": "gegen aussen < 0.12",
+            "name_fr": "contre extérieur < 0.12",
+            "name_it": "verso esterno < 0.12",
+            "value": 0.12
+        },
+        {
+            "name_de": "gegen aussen < 0.15",
+            "name_fr": "contre extérieur < 0.15",
+            "name_it": "verso esterno < 0.15",
+            "value": 0.15
+        },
+        {
+            "name_de": "gegen aussen < 0.17",
+            "name_fr": "contre extérieur < 0.17",
+            "name_it": "verso esterno < 0.17",
+            "value": 0.17
+        }
+    ],
+    "windows_u_value": [
+        {
+            "name_de": "U-Werte < 1.0",
+            "name_fr": "Valeur U < 1.0",
+            "name_it": "Valore U < 1.0",
+            "value": 1.0
+        },
+        {
+            "name_de": "U-Werte < 0.9",
+            "name_fr": "Valeur U < 0.9",
+            "name_it": "Valore U < 0.9",
+            "value": 0.9
+        },
+        {
+            "name_de": "U-Werte < 0.8",
+            "name_fr": "Valeur U < 0.8",
+            "name_it": "Valore U < 0.8",
+            "value": 0.8
+        }
+    ],
+    "windows_g_value": [
+        {
+            "name_de": "g-Werte > 0.40",
+            "name_fr": "Valeur g  > 0.40",
+            "name_it": "Valore g > 0.40",
+            "value": 0.4
+        },
+        {
+            "name_de": "g-Werte > 0.45",
+            "name_fr": "Valeur g  > 0.45",
+            "name_it": "Valore g > 0.45",
+            "value": 0.45
+        },
+        {
+            "name_de": "g-Werte > 0.50",
+            "name_fr": "Valeur g  > 0.50",
+            "name_it": "Valore g > 0.50",
+            "value": 0.5
+        }
+    ],
+    "windows_ratio": [
+        {
+            "name_de": "Anteil < 10%",
+            "name_fr": "Part vitrée < 10%",
+            "name_it": "Quota < 10%",
+            "value": 0.1
+        },
+        {
+            "name_de": "Anteil < 20%",
+            "name_fr": "Part vitrée < 20%",
+            "name_it": "Quota < 20%",
+            "value": 0.2
+        },
+        {
+            "name_de": "Anteil < 30%",
+            "name_fr": "Part vitrée < 30%",
+            "name_it": "Quota < 30%",
+            "value": 0.3
+        }
+    ],
+    "window_ventilation": [
+        {
+            "name_de": "Fensterlüftung",
+            "name_fr": "Aération par les fenêtres",
+            "name_it": "Ventilazione tramite finestra",
+            "value": 0.7
+        },
+        {
+            "name_de": "Komfortlüftungsanlage",
+            "name_fr": "Ventilation à double flux",
+            "name_it": "Ventilazione meccanica",
+            "value": 0.3
+        },
+        {
+            "name_de": "Abluftanlage",
+            "name_fr": "Installation simple d'air repris",
+            "name_it": "Semplice espulsione d'aria",
+            "value": 0.838
+        }
+    ]
+}
