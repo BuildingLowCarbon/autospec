@@ -1,4 +1,5 @@
 let cachedComponents = null;
+let cachedDbSources = null;
 
 const fetchJson = async (path) => {
   try {
@@ -15,19 +16,46 @@ const fetchJson = async (path) => {
   }
 };
 
-export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
+export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
+  if (cachedDbSources) return cachedDbSources;
   const manifestUrl = `${base}/db/db_files.json`;
-  const files = await fetchJson(manifestUrl);
-  if (Array.isArray(files) && files.length) {
-    return Array.from(
-      new Set(
-        files
-          .filter((f) => typeof f === 'string' && f.toLowerCase().endsWith('.json'))
-          .map((f) => f.trim())
-      )
-    );
+  const entries = await fetchJson(manifestUrl);
+  if (Array.isArray(entries) && entries.length) {
+    const seen = new Set();
+    const normalized = [];
+    entries.forEach((entry) => {
+      if (typeof entry === 'string') {
+        const file = entry.trim();
+        if (!file || !file.toLowerCase().endsWith('.json') || seen.has(file)) return;
+        seen.add(file);
+        normalized.push({
+          file,
+          label: file.replace('.json', '').replace(/_/g, ' '),
+        });
+        return;
+      }
+      if (!entry || typeof entry !== 'object') return;
+      const file = typeof entry.file === 'string' ? entry.file.trim() : '';
+      if (!file || !file.toLowerCase().endsWith('.json') || seen.has(file)) return;
+      seen.add(file);
+      const label = typeof entry.label === 'string' && entry.label.trim()
+        ? entry.label.trim()
+        : file.replace('.json', '').replace(/_/g, ' ');
+      normalized.push({ file, label });
+    });
+    cachedDbSources = normalized;
+    return cachedDbSources;
   }
   console.warn('Manifest db_files.json introuvable ou vide.');
+  cachedDbSources = [];
+  return cachedDbSources;
+};
+
+export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
+  const sources = await fetchDbSources(base);
+  if (Array.isArray(sources) && sources.length) {
+    return sources.map((source) => source.file);
+  }
   return [];
 };
 

@@ -16,7 +16,7 @@ function Header() {
       justifyContent: 'space-between',
       alignItems: 'center'
     }}>
-      <h1 style={{ margin: 0, fontSize: '20px' }}>AutoSpec</h1>
+      <h1 style={{ margin: 0, fontSize: '25px', fontWeight: 'bold' }}>AutoSpec</h1>
 
       <div>
         <label htmlFor="lang-select" style={{ marginRight: '8px' }}>Langue :</label>

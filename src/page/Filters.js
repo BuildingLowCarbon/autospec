@@ -10,7 +10,7 @@ import SelectedItemsContext from '../context/SelectedItemsContext';
 import ComponentCard from '../components/ComponentCard';
 import FireFilter, { R_OPTIONS as FIRE_R_VALUES, EI_OPTIONS as FIRE_EI_VALUES } from '../components/FireFilter';
 import RangeSlider from '../components/RangeSlider';
-import loadComponents, { fetchDbFilesList } from '../utils/loadComponents';
+import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import SourceSelector from '../components/SourceSelector';
 import ENtebTool from '../components/ENteb/ENteb_tool';
 
@@ -38,21 +38,30 @@ const pickLowestRequirementValue = (requirements, categoryId, key, scale) => {
   return Number.isFinite(bestIdx) ? scale[bestIdx] : null;
 };
 
-const buildHistogram = (items, accessor, min, max, buckets = 20) => {
+const buildHistogram = (items, accessor, min, max, buckets = 20, options = {}) => {
   if (!Number.isFinite(min) || !Number.isFinite(max) || min === max) return Array(buckets).fill(0);
+  const { capMax } = options;
+  const hasCap = Number.isFinite(capMax) && capMax > min && capMax < max && buckets > 1;
   const counts = Array(buckets).fill(0);
-  const span = max - min || 1;
+  const span = (hasCap ? capMax : max) - min || 1;
+  const normalBuckets = hasCap ? buckets - 1 : buckets;
   items.forEach((item) => {
     const val = accessor(item);
     if (val === null || val === undefined) return;
     const num = Number(val);
     if (Number.isNaN(num)) return;
-    const clamped = Math.max(min, Math.min(max, num));
-    const idx = Math.min(buckets - 1, Math.floor(((clamped - min) / span) * buckets));
+    if (hasCap && num > capMax) {
+      counts[buckets - 1] += 1;
+      return;
+    }
+    const clamped = Math.max(min, Math.min(hasCap ? capMax : max, num));
+    const idx = Math.min(normalBuckets - 1, Math.floor(((clamped - min) / span) * normalBuckets));
     counts[idx] += 1;
   });
   return counts;
 };
+
+const U_VALUE_FOCUS_MAX = 0.3;
 
 const FILTERS_STORAGE_KEY = 'autospec.filters.v1';
 
@@ -129,7 +138,7 @@ function App() {
     const fetchData = async () => {
       try {
         const base = process.env.PUBLIC_URL || '';
-        const [json, dbFiles] = await Promise.all([loadComponents(), fetchDbFilesList(base)]);
+        const [json, dbSources] = await Promise.all([loadComponents(), fetchDbSources(base)]);
         setData(json);
 
         const thicknessVals = json.map((item) => item.thickness_mm || 0);
@@ -155,9 +164,9 @@ function App() {
         setSelectedThickness(clampRange(persistedFilters.selectedThickness, minThickness, maxThickness) ?? [minThickness, maxThickness]);
         setSelectedGwp(clampRange(persistedFilters.selectedGwp, minGwp, maxGwp) ?? [minGwp, maxGwp]);
 
-        const sources = dbFiles.map((src) => ({
-          value: src,
-          label: src.replace('.json', '').replace(/_/g, ' '),
+        const sources = dbSources.map((src) => ({
+          value: src.file,
+          label: src.label,
         }));
         setSourceOptions(sources);
         // Par défaut toutes les sources sont sélectionnées
@@ -272,7 +281,10 @@ function App() {
     [histogramSource, gwpRange]
   );
   const uValueBars = useMemo(
-    () => buildHistogram(histogramSource, (item) => item.uValue_W_m2K, uValueRange[0], uValueRange[1], 24),
+    () =>
+      buildHistogram(histogramSource, (item) => item.uValue_W_m2K, uValueRange[0], uValueRange[1], 24, {
+        capMax: U_VALUE_FOCUS_MAX,
+      }),
     [histogramSource, uValueRange]
   );
   const safeThicknessValues = useMemo(
@@ -325,6 +337,9 @@ function App() {
       } else if (sortBy === 'gwp') {
         aVal = a.gwp_kgco2e_m2 || 0;
         bVal = b.gwp_kgco2e_m2 || 0;
+      } else if (sortBy === 'uValue') {
+        aVal = a.uValue_W_m2K || 0;
+        bVal = b.uValue_W_m2K || 0;
       } else {
         return 0;
       }
@@ -399,8 +414,10 @@ function App() {
               <option value="">-- {t.none} --</option>
               <option value="thickness">{t.thickness}</option>
               <option value="gwp">{t.gwp}</option>
+              <option value="uValue">{t.uValue}</option>
             </select>
 
+            {/*
             <DropDown
               title={t.criteria}
               lang={lang}
@@ -409,9 +426,10 @@ function App() {
               options={[
                 { value: 'thickness', label: t.thickness },
                 { value: 'gwp', label: t.gwp },
+                { value: 'uValue', label: t.uValue },
               ]}
             />
-
+            */}
             <label>{t.order}</label>
             <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} style={{ width: '100%' }}>
               <option value="asc">{t.ascending}</option>
@@ -459,6 +477,7 @@ function App() {
               values={safeThicknessValues}
               onChange={setSelectedThickness}
               bars={thicknessBars}
+              unit="mm"
               formatValue={(v) => `${Math.round(v)} mm`}
             />
 
@@ -470,6 +489,7 @@ function App() {
               values={safeGwpValues}
               onChange={setSelectedGwp}
               bars={gwpBars}
+              unit="kg CO₂-eq/m²"
               formatValue={(v) => `${Math.round(v)} kg CO₂-eq/m²`}
             />
 
@@ -481,6 +501,9 @@ function App() {
               values={safeUValueValues}
               onChange={setSelectedUValue}
               bars={uValueBars}
+              focusMax={U_VALUE_FOCUS_MAX}
+              tailRatio={0.15}
+              unit="W/m²K"
               formatValue={(v) => `${v.toFixed(3)} W/m²K`}
             />
             

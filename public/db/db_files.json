@@ -1,5 +1,5 @@
 [
-  "components_btk_enriched.json",
-  "components_minergie_enriched.json",
-  "components_lignum_selected.json"
+  { "file": "components_btk_enriched.json", "label": "BauTeilKatalog" },
+  { "file": "components_minergie_enriched.json", "label": "Minergie" },
+  { "file": "components_lignum_selected.json", "label": "Lignum" }
 ]

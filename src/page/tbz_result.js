@@ -4,7 +4,7 @@ import LangContext from '../context/LangContext';
 import translations from '../language/translations';
 import RangeSlider from '../components/RangeSlider';
 import SourceSelector from '../components/SourceSelector';
-import loadComponents, { fetchDbFilesList } from '../utils/loadComponents';
+import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import FireFilter, { R_OPTIONS as FIRE_R_VALUES, EI_OPTIONS as FIRE_EI_VALUES } from '../components/FireFilter';
 
 const formatCategoryLabel = (value) => {
@@ -65,20 +65,29 @@ const makeBoxStats = (values) => {
   };
 };
 
-const buildHistogram = (items, accessor, min, max, buckets = 20) => {
+const buildHistogram = (items, accessor, min, max, buckets = 20, options = {}) => {
   if (!Number.isFinite(min) || !Number.isFinite(max) || min === max) return Array(buckets).fill(0);
+  const { capMax } = options;
+  const hasCap = Number.isFinite(capMax) && capMax > min && capMax < max && buckets > 1;
   const counts = Array(buckets).fill(0);
-  const span = max - min || 1;
+  const span = (hasCap ? capMax : max) - min || 1;
+  const normalBuckets = hasCap ? buckets - 1 : buckets;
   items.forEach((item) => {
     const raw = accessor(item);
     const num = Number(raw);
     if (Number.isNaN(num)) return;
-    const clamped = Math.max(min, Math.min(max, num));
-    const idx = Math.min(buckets - 1, Math.floor(((clamped - min) / span) * buckets));
+    if (hasCap && num > capMax) {
+      counts[buckets - 1] += 1;
+      return;
+    }
+    const clamped = Math.max(min, Math.min(hasCap ? capMax : max, num));
+    const idx = Math.min(normalBuckets - 1, Math.floor(((clamped - min) / span) * normalBuckets));
     counts[idx] += 1;
   });
   return counts;
 };
+
+const U_VALUE_FOCUS_MAX = 0.3;
 
 function GwpBoxplot({ series, minValue, maxValue }) {
   const width = 980;
@@ -185,7 +194,7 @@ export default function TbzResult() {
   useEffect(() => {
     const fetchData = async () => {
       const base = process.env.PUBLIC_URL || '';
-      const [components, dbFiles] = await Promise.all([loadComponents(), fetchDbFilesList(base)]);
+      const [components, dbSources] = await Promise.all([loadComponents(), fetchDbSources(base)]);
       setData(components);
 
       const categories = Array.from(new Set(components.map((item) => item.categoryId).filter(Boolean))).sort();
@@ -207,9 +216,9 @@ export default function TbzResult() {
       setSelectedGwp([gwpMin, gwpMax]);
       setSelectedUValue([uValueMin, uValueMax]);
 
-      const sources = dbFiles.map((src) => ({
-        value: src,
-        label: src.replace('.json', '').replace(/_/g, ' '),
+      const sources = dbSources.map((src) => ({
+        value: src.file,
+        label: src.label,
       }));
       setSourceOptions(sources);
       setSelectedSources(sources.map((src) => src.value));
@@ -281,7 +290,10 @@ export default function TbzResult() {
     [filteredData, gwpRange]
   );
   const uValueBars = useMemo(
-    () => buildHistogram(filteredData, (item) => item.uValue_W_m2K, uValueRange[0], uValueRange[1], 24),
+    () =>
+      buildHistogram(filteredData, (item) => item.uValue_W_m2K, uValueRange[0], uValueRange[1], 24, {
+        capMax: U_VALUE_FOCUS_MAX,
+      }),
     [filteredData, uValueRange]
   );
 
@@ -359,6 +371,7 @@ export default function TbzResult() {
               values={safeThickness}
               onChange={setSelectedThickness}
               bars={thicknessBars}
+              unit="mm"
               formatValue={(v) => `${Math.round(v)} mm`}
             />
 
@@ -370,7 +383,8 @@ export default function TbzResult() {
               values={safeGwp}
               onChange={setSelectedGwp}
               bars={gwpBars}
-              formatValue={(v) => `${Math.round(v)} kg CO2-eq/m2`}
+              unit="kg CO₂-eq/m²"
+              formatValue={(v) => `${Math.round(v)} kg CO₂-eq/m²`}
             />
 
             <RangeSlider
@@ -381,7 +395,10 @@ export default function TbzResult() {
               values={safeUValue}
               onChange={setSelectedUValue}
               bars={uValueBars}
-              formatValue={(v) => `${v.toFixed(3)} W/m2K`}
+              focusMax={U_VALUE_FOCUS_MAX}
+              tailRatio={0.15}
+              unit="W/m²K"
+              formatValue={(v) => `${v.toFixed(3)} W/m²K`}
             />
 
             <div style={{ marginTop: '16px' }}>
