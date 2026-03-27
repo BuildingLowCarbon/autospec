@@ -1,6 +1,8 @@
 const translations = {
   fr: {
     acoustic_insulation: "Isolation acoustique",
+    acoustic_insulation_Rw: "isolation acoustique Rw (dB)",
+    acoustic_insulation_Lnw: "isolation acoustique Ln,w (dB)",
     airborne_noise: "bruit aérien",
     ascending: "croissant",
     all: "Tous",
@@ -66,6 +68,8 @@ const translations = {
   },
   de: {
     acoustic_insulation: "Schalldämmung",
+    acoustic_insulation_Rw: "Schalldämmung Rw (dB)",
+    acoustic_insulation_Lnw: "Schalldämmung Ln,w (dB)",
     airborne_noise: "Luftschall",
     ascending: "aufsteigend",
     all: "Alle",
@@ -131,6 +135,8 @@ const translations = {
   },
   it: {
     acoustic_insulation: "Isolamento acustico",
+    acoustic_insulation_Rw: "Isolamento acustico Rw (dB)",
+    acoustic_insulation_Lnw: "Isolamento acustico Ln,w (dB)",
     airborne_noise: "rumore aereo",
     ascending: "crescente",
     all: "Tutti",
@@ -196,6 +202,8 @@ const translations = {
   },
   en: {
     acoustic_insulation: "Acoustic insulation",
+    acoustic_insulation_Rw: "Acoustic insulation Rw (dB)",
+    acoustic_insulation_Lnw: "Acoustic insulation Ln,w (dB)",
     airborne_noise: "airborne noise",
     ascending: "ascending",
     all: "All",

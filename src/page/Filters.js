@@ -577,7 +577,7 @@ function App() {
             />
 
              <RangeSlider
-              label={"acoustic insulation Rw (dB)"}
+              label={t.acoustic_insulation_Rw}
               min={acousticRwRange[0]}
               max={acousticRwRange[1]}
               step={1}
@@ -588,7 +588,7 @@ function App() {
               formatValue={(v) => `${Math.round(v)} dB`}
             />
             <RangeSlider
-              label={"acoustic insulation Ln,w (dB)"}
+              label={t.acoustic_insulation_Lnw}
               min={acousticLnwRange[0]}
               max={acousticLnwRange[1]}
               step={1}
