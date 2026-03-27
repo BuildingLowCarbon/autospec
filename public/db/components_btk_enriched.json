@@ -100,7 +100,9 @@
       "typeId": null
     },
     "fire_resistance": {
-      "REI_min": null,
+      "R": "R30",
+      "EI": "EI30",
+      "REI_min": "null",
       "RF_internal_min": null,
       "RF_external_min": null
     },

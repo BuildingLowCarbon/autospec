@@ -4,7 +4,14 @@ const R_OPTIONS = ['R0', 'R30', 'R60'];
 const EI_OPTIONS = ['EI0', 'EI30', 'EI60'];
 
 function SliderWithBars({ title, value, options, counts = {}, onChange }) {
+  const thumbSize = 16;
+  const railInset = thumbSize / 2;
   const selectedIndex = options.indexOf(value);
+  const getTickLeft = (index) => {
+    if (options.length <= 1) return `${railInset}px`;
+    const ratio = index / (options.length - 1);
+    return `calc(${railInset}px + (100% - ${railInset * 2}px) * ${ratio})`;
+  };
 
   const maxCount = useMemo(() => {
     return options.reduce((max, opt) => Math.max(max, counts?.[opt] || 0), 0) || 1;
@@ -24,20 +31,21 @@ function SliderWithBars({ title, value, options, counts = {}, onChange }) {
       </div>
 
       <div style={{ position: 'relative', padding: '18px 8px 6px' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${options.length}, 1fr)`,
-            alignItems: 'flex-end',
-            gap: 10,
-            padding: '0 4px',
-          }}
-        >
-          {options.map((opt) => {
+        <div style={{ position: 'relative', height: 80 }}>
+          {options.map((opt, index) => {
             const count = counts?.[opt] || 0;
             const height = Math.round((count / maxCount) * 60);
             return (
-              <div key={opt} style={{ textAlign: 'center' }}>
+              <div
+                key={opt}
+                style={{
+                  position: 'absolute',
+                  left: getTickLeft(index),
+                  bottom: 0,
+                  transform: 'translateX(-50%)',
+                  textAlign: 'center',
+                }}
+              >
                 <div
                   style={{
                     height: `${height}px`,
@@ -62,21 +70,29 @@ function SliderWithBars({ title, value, options, counts = {}, onChange }) {
           step={1}
           value={selectedIndex < 0 ? 0 : selectedIndex}
           onChange={handleChange}
-          style={{ width: '100%', marginTop: 14 }}
+          style={{
+            width: `calc(100% - ${railInset * 2}px)`,
+            marginTop: 14,
+            marginLeft: railInset,
+            marginRight: railInset,
+          }}
         />
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: `repeat(${options.length}, 1fr)`,
-            textAlign: 'center',
-            fontWeight: 600,
-            fontSize: 12,
-            marginTop: 6,
-          }}
-        >
-          {options.map((opt) => (
-            <div key={opt}>{opt}</div>
+        <div style={{ position: 'relative', height: 18, marginTop: 6 }}>
+          {options.map((opt, index) => (
+            <div
+              key={opt}
+              style={{
+                position: 'absolute',
+                left: getTickLeft(index),
+                transform: 'translateX(-50%)',
+                fontWeight: 600,
+                fontSize: 12,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {opt}
+            </div>
           ))}
         </div>
       </div>

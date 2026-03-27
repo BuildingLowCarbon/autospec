@@ -17,8 +17,8 @@ import ENtebTool from '../components/ENteb/ENteb_tool';
 const valueSatisfies = (itemValue, selectedValue, scale) => {
   const selectedIdx = scale.indexOf(selectedValue);
   if (selectedIdx === -1) return true;
-  if (!itemValue) return true; // No data, keep item
-  const valueIdx = scale.indexOf(itemValue);
+  const normalizedItemValue = itemValue || scale[0];
+  const valueIdx = scale.indexOf(normalizedItemValue);
   if (valueIdx === -1) return true;
   return valueIdx >= selectedIdx;
 };
@@ -113,6 +113,14 @@ function App() {
   const [selectedUValue, setSelectedUValue] = useState(
     Array.isArray(persistedFilters.selectedUValue) ? persistedFilters.selectedUValue : [0, 1]
   );
+  const [acousticRwRange, setAcousticRwRange] = useState([0, 100]);
+  const [selectedAcousticRw, setSelectedAcousticRw] = useState(
+    Array.isArray(persistedFilters.selectedAcousticRw) ? persistedFilters.selectedAcousticRw : [0, 100]
+  );
+  const [acousticLnwRange, setAcousticLnwRange] = useState([0, 100]);
+  const [selectedAcousticLnw, setSelectedAcousticLnw] = useState(
+    Array.isArray(persistedFilters.selectedAcousticLnw) ? persistedFilters.selectedAcousticLnw : [0, 100]
+  );
   const navigate = useNavigate();
   const { lang, setLang } = useContext(LangContext);
   const t = translations[lang];
@@ -146,6 +154,12 @@ function App() {
         const uVals = json
           .map((item) => item.uValue_W_m2K)
           .filter((v) => typeof v === 'number' && !Number.isNaN(v));
+        const rwVals = json
+          .map((item) => item?.acoustic?.Rw_dB)
+          .filter((v) => typeof v === 'number' && !Number.isNaN(v));
+        const lnwVals = json
+          .map((item) => item?.acoustic?.Lnw_dB)
+          .filter((v) => typeof v === 'number' && !Number.isNaN(v));
         const categories = Array.from(new Set(json.map((item) => item.categoryId).filter(Boolean)));
         const minThickness = Math.min(...thicknessVals);
         const maxThickness = Math.max(...thicknessVals);
@@ -158,6 +172,18 @@ function App() {
           const uMax = Math.max(...uVals);
           setUValueRange([uMin, uMax]);
           setSelectedUValue(clampRange(persistedFilters.selectedUValue, uMin, uMax) ?? [uMin, uMax]);
+        }
+        if (rwVals.length) {
+          const rwMin = Math.min(...rwVals);
+          const rwMax = Math.max(...rwVals);
+          setAcousticRwRange([rwMin, rwMax]);
+          setSelectedAcousticRw(clampRange(persistedFilters.selectedAcousticRw, rwMin, rwMax) ?? [rwMin, rwMax]);
+        }
+        if (lnwVals.length) {
+          const lnwMin = Math.min(...lnwVals);
+          const lnwMax = Math.max(...lnwVals);
+          setAcousticLnwRange([lnwMin, lnwMax]);
+          setSelectedAcousticLnw(clampRange(persistedFilters.selectedAcousticLnw, lnwMin, lnwMax) ?? [lnwMin, lnwMax]);
         }
         setCategoryOptions(categories);
         setSelectedCategory((prev) => (prev && categories.includes(prev) ? prev : ''));
@@ -194,6 +220,8 @@ function App() {
       selectedThickness,
       selectedGwp,
       selectedUValue,
+      selectedAcousticRw,
+      selectedAcousticLnw,
       fireRValue,
       fireEIValue,
       fireReqApplied,
@@ -209,6 +237,8 @@ function App() {
     selectedThickness,
     selectedGwp,
     selectedUValue,
+    selectedAcousticRw,
+    selectedAcousticLnw,
     fireRValue,
     fireEIValue,
     fireReqApplied,
@@ -222,6 +252,14 @@ function App() {
       const uVal = item.uValue_W_m2K;
       const hasUVal = typeof uVal === 'number' && !Number.isNaN(uVal);
       const uValAllowed = !hasUVal || (uVal >= selectedUValue[0] && uVal <= selectedUValue[1]);
+      const rwVal = item?.acoustic?.Rw_dB;
+      const hasRwVal = typeof rwVal === 'number' && !Number.isNaN(rwVal);
+      const rwFilterActive = selectedAcousticRw[0] > acousticRwRange[0] || selectedAcousticRw[1] < acousticRwRange[1];
+      const rwAllowed = !rwFilterActive || (hasRwVal && rwVal >= selectedAcousticRw[0] && rwVal <= selectedAcousticRw[1]);
+      const lnwVal = item?.acoustic?.Lnw_dB;
+      const hasLnwVal = typeof lnwVal === 'number' && !Number.isNaN(lnwVal);
+      const lnwFilterActive = selectedAcousticLnw[0] > acousticLnwRange[0] || selectedAcousticLnw[1] < acousticLnwRange[1];
+      const lnwAllowed = !lnwFilterActive || (hasLnwVal && lnwVal >= selectedAcousticLnw[0] && lnwVal <= selectedAcousticLnw[1]);
       const category = item.categoryId || '';
       const sourceFile = item.__sourceFile || '';
       const sourceAllowed = selectedSources.length > 0 && selectedSources.includes(sourceFile);
@@ -231,11 +269,24 @@ function App() {
         gwp >= selectedGwp[0] &&
         gwp <= selectedGwp[1] &&
         uValAllowed &&
+        rwAllowed &&
+        lnwAllowed &&
         (selectedCategory === '' || category === selectedCategory) &&
         sourceAllowed
       );
     });
-  }, [data, selectedCategory, selectedSources, selectedThickness, selectedGwp, selectedUValue]);
+  }, [
+    data,
+    selectedCategory,
+    selectedSources,
+    selectedThickness,
+    selectedGwp,
+    selectedUValue,
+    selectedAcousticRw,
+    selectedAcousticLnw,
+    acousticRwRange,
+    acousticLnwRange,
+  ]);
 
   const histogramSource = useMemo(() => {
     return data.filter((item) => {
@@ -265,8 +316,10 @@ function App() {
 
     baseFilteredData.forEach((item) => {
       const fire = item?.fire_resistance || {};
-      if (fire.R && rCounts[fire.R] !== undefined) rCounts[fire.R] += 1;
-      if (fire.EI && eiCounts[fire.EI] !== undefined) eiCounts[fire.EI] += 1;
+      const normalizedR = fire.R || FIRE_R_VALUES[0];
+      const normalizedEI = fire.EI || FIRE_EI_VALUES[0];
+      if (rCounts[normalizedR] !== undefined) rCounts[normalizedR] += 1;
+      if (eiCounts[normalizedEI] !== undefined) eiCounts[normalizedEI] += 1;
     });
 
     return { rCounts, eiCounts };
@@ -287,6 +340,14 @@ function App() {
       }),
     [histogramSource, uValueRange]
   );
+  const acousticRwBars = useMemo(
+    () => buildHistogram(histogramSource, (item) => item?.acoustic?.Rw_dB, acousticRwRange[0], acousticRwRange[1], 24),
+    [histogramSource, acousticRwRange]
+  );
+  const acousticLnwBars = useMemo(
+    () => buildHistogram(histogramSource, (item) => item?.acoustic?.Lnw_dB, acousticLnwRange[0], acousticLnwRange[1], 24),
+    [histogramSource, acousticLnwRange]
+  );
   const safeThicknessValues = useMemo(
     () => clampRange(selectedThickness, thicknessRange[0], thicknessRange[1]) ?? [thicknessRange[0], thicknessRange[1]],
     [selectedThickness, thicknessRange]
@@ -298,6 +359,14 @@ function App() {
   const safeUValueValues = useMemo(
     () => clampRange(selectedUValue, uValueRange[0], uValueRange[1]) ?? [uValueRange[0], uValueRange[1]],
     [selectedUValue, uValueRange]
+  );
+  const safeAcousticRwValues = useMemo(
+    () => clampRange(selectedAcousticRw, acousticRwRange[0], acousticRwRange[1]) ?? [acousticRwRange[0], acousticRwRange[1]],
+    [selectedAcousticRw, acousticRwRange]
+  );
+  const safeAcousticLnwValues = useMemo(
+    () => clampRange(selectedAcousticLnw, acousticLnwRange[0], acousticLnwRange[1]) ?? [acousticLnwRange[0], acousticLnwRange[1]],
+    [selectedAcousticLnw, acousticLnwRange]
   );
 
   const handleApplyRecommendedUValue = useCallback(
@@ -506,6 +575,29 @@ function App() {
               unit="W/m²K"
               formatValue={(v) => `${v.toFixed(3)} W/m²K`}
             />
+
+             <RangeSlider
+              label={"acoustic insulation Rw (dB)"}
+              min={acousticRwRange[0]}
+              max={acousticRwRange[1]}
+              step={1}
+              values={safeAcousticRwValues}
+              onChange={setSelectedAcousticRw}
+              bars={acousticRwBars}
+              unit="dB"
+              formatValue={(v) => `${Math.round(v)} dB`}
+            />
+            <RangeSlider
+              label={"acoustic insulation Ln,w (dB)"}
+              min={acousticLnwRange[0]}
+              max={acousticLnwRange[1]}
+              step={1}
+              values={safeAcousticLnwValues}
+              onChange={setSelectedAcousticLnw}
+              bars={acousticLnwBars}
+              unit="dB"
+              formatValue={(v) => `${Math.round(v)} dB`}
+            />
             
 
             <div style={{ marginTop: '16px' }}>
@@ -598,5 +690,3 @@ function App() {
 }
 
 export default App;
-
-
