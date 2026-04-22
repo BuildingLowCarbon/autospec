@@ -1,0 +1,144 @@
+{
+  "layerTypes": [
+    {
+        "id": "adhesion",
+        "icon": "adhesion",
+        "order": 1,
+        "ecccId": ""
+        },
+    {
+        "id": "mass_addition",
+        "icon": "mass_addition",
+        "order": 2,
+        "ecccId": ""
+        },
+    {
+        "id": "cavity_damping",
+        "icon": "cavity_damping",
+        "order": 3,
+        "ecccId": ""
+        },
+    {
+        "id": "bracing",
+        "icon": "bracing",
+        "order": 4,
+        "ecccId": ""
+        },
+    {
+        "id": "drainage_layer",
+        "icon": "drainage_layer",
+        "order": 5,
+        "ecccId": ""
+        },
+    {
+        "id": "support_layer",
+        "icon": "support_layer",
+        "order": 6,
+        "ecccId": ""
+        },
+    {
+        "id": "covering",
+        "icon": "covering",
+        "order": 7,
+        "ecccId": ""
+    },
+    {
+        "id": "slab",
+        "icon": "slab",
+        "order": 8,
+        "ecccId": ""
+    },
+    {
+        "id": "wind_barrier",
+        "icon": "wind_barrier",
+        "order": 9,
+        "ecccId": ""
+    },
+    {
+        "id": "waterproofing",
+        "icon": "waterproofing",
+        "order": 10,
+        "ecccId": ""
+    },
+    {
+        "id": "air_gap",
+        "icon": "air_gap",
+        "order": 11,
+        "ecccId": ""
+    },
+    {
+        "id": "vapor_retarder",
+        "icon": "vapor_retarder",
+        "order": 12,
+        "ecccId": ""
+    },
+    {
+        "id": "insulation",
+        "icon": "insulation",
+        "order": 13,
+        "ecccId": ""
+    },
+    {
+        "id": "load_bearing_insulation",
+        "icon": "load_bearing_insulation",
+        "order": 14,
+        "ecccId": ""
+    },
+    {
+        "id": "impact_noise_isolation",
+        "icon": "impact_noise_isolation",
+        "order": 15,
+        "ecccId": ""
+    },
+    {
+        "id": "battens_profiles",
+        "icon": "battens_profiles",
+        "order": 16,
+        "ecccId": ""
+    },
+    {
+        "id": "vapor_barrier",
+        "icon": "vapor_barrier",
+        "order": 17,
+        "ecccId": ""
+    },
+    {
+        "id": "cladding_ceiling",
+        "icon": "cladding_ceiling",
+        "order": 18,
+        "ecccId": ""
+    },
+    {
+        "id": "interior_cladding",
+        "icon": "interior_cladding",
+        "order": 19,
+        "ecccId": ""
+    },
+    {
+        "id": "exterior_cladding",
+        "icon": "exterior_cladding",
+        "order": 20,
+        "ecccId": ""
+    },
+    {
+        "id": "flooring",
+        "icon": "flooring",
+        "order": 21,
+        "ecccId": ""
+    },
+    {
+        "id": "load_bearing_structure",
+        "icon": "load_bearing_structure",
+        "order": 22,
+        "ecccId": ""
+    },
+    {
+        "id": "surface_treatment",
+        "icon": "surface_treatment",
+        "order": 23,
+        "ecccId": ""
+    }
+
+  ]
+}
+

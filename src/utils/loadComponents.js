@@ -1,5 +1,11 @@
+import {
+  mergeById,
+  readLocalCustomComponents,
+  withCustomSource,
+} from './customComponentsStore';
 let cachedComponents = null;
 let cachedDbSources = null;
+let cachedFileCustomComponents = null;
 
 const fetchJson = async (path) => {
   try {
@@ -74,18 +80,19 @@ export const loadComponents = async () => {
     )
   );
 
-  const seen = new Set();
-  cachedComponents = results
-    .flat()
-    .filter((item) => {
-      const key = item?.id ?? item?.serialNo;
-      if (!key) return true;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+  if (cachedFileCustomComponents === null) {
+    const fileCustom = await fetchJson(`${base}/db/components_custom.json`);
+    cachedFileCustomComponents = fileCustom.map((item) => withCustomSource(item));
+  }
+
+  const localCustom = readLocalCustomComponents().map((item) => withCustomSource(item));
+  cachedComponents = mergeById([...results.flat(), ...cachedFileCustomComponents, ...localCustom]);
 
   return cachedComponents;
+};
+
+export const invalidateComponentsCache = () => {
+  cachedComponents = null;
 };
 
 export default loadComponents;

@@ -1,0 +1,395 @@
+{
+  "categories": [
+    {
+      "id": "foundation",
+      "type": "horizontal",
+      "icon": "foundation",
+      "order": 0,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Ajout de masse",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche support",
+        "Dalle",
+        "Etanchéité",
+        "Isolation",
+        "Isolation porteuse",
+        "Isolement aux bruits de choc",
+        "Lattes / profils",
+        "Pare-vapeur",
+        "Parement de plafond",
+        "Revêtement de sol",
+        "Structure porteuse",
+        "Traitement de surface"
+      ],
+      "eccc": [
+            {
+                "ecccId": "C01.01",
+                "description": "Supports de fondations, radiers, dalles de sol",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "C01.02",
+                "description": "Fondations",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "C01.03",
+                "description": "Dalles de sol, radiers",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "C01.04",
+                "description": "Escaliers ou rampes en contact avec le sol",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "C01.05",
+                "description": "Paliers en contact avec le sol",
+                "serviceLife": 60
+            }
+      ]
+    },
+    {
+      "id": "floor_assembly",
+      "type": "horizontal",
+      "icon": "floor",
+      "order": 1,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Ajout de masse",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche support",
+        "Dalle",
+        "Etanchéité",
+        "Isolation",
+        "Isolation porteuse",
+        "Isolement aux bruits de choc",
+        "Lattes / profils",
+        "Pare-vapeur",
+        "Parement de plafond",
+        "Revêtement de sol",
+        "Structure porteuse",
+        "Traitement de surface"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C04.01",
+                "description": "Plancher",
+                "serviceLife": 60
+            },
+             {
+                "ecccId": "G02.01",
+                "description": "Supports pour revêtements de sols",
+                "serviceLife": 30
+            },
+             {
+                "ecccId": "G02.02",
+                "description": "Revêtements de sols",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G04.01",
+                "description": "Supports pour faux-plafonds",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G04.02",
+                "description": "Faux-plafonds",
+                "serviceLife": 30
+            }
+        ]
+    },
+    {
+      "id": "outer_wall",
+      "type": "vertical",
+      "icon": "outer_wall",
+      "order": 2,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche de drainage",
+        "Couche support",
+        "Etanchéité au vent",
+        "Isolation",
+        "Lattes / profils",
+        "Pare-vapeur",
+        "Parement",
+        "Revêtement extérieur",
+        "Revêtement intérieur",
+        "Treillis d'armature"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C02.01",
+                "description": "Parois porteuses extérieures",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "E01.01",
+                "description": "Etanchéités contre terre",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "E01.02",
+                "description": "Isolations thermiques contre terre",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "E01.03",
+                "description": "Couches de protection contre terre",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "E02.01",
+                "description": "Crépis",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "E02.02",
+                "description": "Systèmes d'isolation thermique extérieure",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "E02.03",
+                "description": "Bardages",
+                "serviceLife": 40
+            },
+            {
+                "ecccId": "E02.04",
+                "description": "Systèmes de façade, façades légères",
+                "serviceLife": 40
+            },
+            {
+                "ecccId": "G03.01",
+                "description": "Supports pour revêtements de parois",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G03.02",
+                "description": "Revêtements de parois",
+                "serviceLife": 30
+            }
+
+        ]
+    },
+    {
+      "id": "inner_wall",
+      "type": "vertical",
+      "icon": "inner_wall",
+      "order": 3,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche support",
+        "Enduit intérieur",
+        "Espace d'air",
+        "Isolation",
+        "Lattes / profils"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C02.02",
+                "description": "Parois porteuses intérieures",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "G03.01",
+                "description": "Supports pour revêtements de parois",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G03.02",
+                "description": "Revêtements de parois",
+                "serviceLife": 30
+            }
+        ]
+    },
+    {
+      "id": "partition_wall_single_shell",
+      "type": "vertical",
+      "icon": "wall",
+      "order": 4,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche support",
+        "Enduit intérieur",
+        "Espace d'air",
+        "Isolation",
+        "Lattes / profils"
+      ]
+    },
+    {
+      "id": "partition_wall_double_shell",
+      "type": "vertical",
+      "icon": "wall",
+      "order": 5,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche support",
+        "Enduit intérieur",
+        "Espace d'air",
+        "Isolation",
+        "Lattes / profils"
+      ],
+        "eccc": [
+            {
+                "ecccId": "G01.01",
+                "description": "Cloisons fixes",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G03.01",
+                "description": "Supports pour revêtements de parois",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G03.02",
+                "description": "Revêtements de parois",
+                "serviceLife": 30
+            }
+        ]
+    },
+    {
+      "id": "flat_roof_shed_roof",
+      "type": "horizontal",
+      "icon": "roof",
+      "order": 6,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche de drainage",
+        "Couche support",
+        "Couverture",
+        "Etanchéité",
+        "Frein-vapeur",
+        "Isolation",
+        "Lattes / profils",
+        "Pare-vapeur",
+        "Revêtement",
+        "Structure porteuse"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C04.04",
+                "description": "Structures porteuses de toitures plates",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "F01.02",
+                "description": "Couverture (Toitures plates)",
+                "serviceLife": 30
+            }
+        ]
+    },
+    {
+      "id": "steep_roof",
+      "type": "horizontal",
+      "icon": "roof",
+      "order": 7,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche de drainage",
+        "Couche support",
+        "Couverture",
+        "Etanchéité",
+        "Frein-vapeur",
+        "Isolation",
+        "Lattes / profils",
+        "Revêtement",
+        "Structure porteuse"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C04.05",
+                "description": "Structures porteuses de toitures inclinées",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "F01.03",
+                "description": "Couverture (Toitures inclinées)",
+                "serviceLife": 40
+            }
+        ]
+    },
+    {
+      "id": "underground_roof",
+      "type": "horizontal",
+      "icon": "underground_roof",
+      "order": 7,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+        "Adhérence",
+        "Amortissement de la cavité",
+        "Contreventement",
+        "Couche de drainage",
+        "Couche support",
+        "Couverture",
+        "Etanchéité",
+        "Frein-vapeur",
+        "Isolation",
+        "Lattes / profils",
+        "Revêtement",
+        "Structure porteuse"
+      ],
+        "eccc": [
+            {
+                "ecccId": "C04.04",
+                "description": "Structures porteuses de toitures plates",
+                "serviceLife": 60
+            },
+            {
+                "ecccId": "F01.01",
+                "description": "Etanchéités enterrées",
+                "serviceLife": 60
+            }
+        ]
+    },
+    {
+      "id": "balcony",
+      "type": "horizontal",
+      "icon": "balcony",
+      "order": 8,
+      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "layerTypes": [
+
+      ],
+        "eccc": [
+            {
+                "ecccId": "C04.08",
+                "description": "Structures porteuses extérieures, avant-toits",
+                "serviceLife": 40
+            },
+            {
+                "ecccId": "E02.05",
+                "description": "Revêtements de plafonds extérieurs",
+                "serviceLife": 40
+            },
+            {
+                "ecccId": "E02.06",
+                "description": "Dispositifs antichute extérieurs",
+                "serviceLife": 40
+            }
+        ]
+    }
+  ]
+}

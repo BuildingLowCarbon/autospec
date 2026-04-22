@@ -72,6 +72,9 @@ function Element() {
       <div style={{ padding: '20px' }}>
         <h2>{t.component_details}</h2>
         <p>
+          <Link to={`/custom/${data.id}`}>Ouvrir la version custom</Link>
+        </p>
+        <p>
           <strong>{title} :</strong>
         </p>
         <p>
@@ -116,6 +119,7 @@ function Element() {
         >
           <thead>
             <tr style={{ backgroundColor: '#eee' }}>
+              <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.name}</th>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.thickness}</th>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.width}</th>
@@ -132,6 +136,9 @@ function Element() {
           <tbody>
             {data.structure?.layers?.map((layer, index) => (
               <tr key={index}>
+                <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                  {layer?.translations?.[lang]?.description}
+                </td>
                 <td style={{ border: '1px solid #ccc', padding: '8px' }}>{renderLayerName(layer)}</td>
                 <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                   {layer.thickness_mm != null ? `${formatNumber(layer.thickness_mm, 0)} mm` : 'N/A'}
