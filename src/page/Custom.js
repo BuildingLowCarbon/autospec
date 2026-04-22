@@ -391,17 +391,15 @@ function Custom() {
             <thead>
               <tr style={{ backgroundColor: '#eee' }}>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>ecccId</th>
-                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.description}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer_type}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.name}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.thickness}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.width}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.spacing}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.surface_mass}</th>
-                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.gwp}</th>
-                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.thermal_resistance}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.reactionToFire}</th>
-                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.kbobId}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>Actions</th>
               </tr>
             </thead>
@@ -488,6 +486,18 @@ function Custom() {
                     />
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    <select
+                      value={layer?.structure ?? ''}
+                      onChange={(event) => handleLayerTextChange(index, 'structure', event.target.value)}
+                      style={{ width: '120px' }}
+                    >
+                      <option value="">--</option>
+                      <option value="on-lying">on-lying</option>
+                      <option value="in-lying">in-lying</option>
+                      <option value="overlaying centered">overlaying centered</option>
+                    </select>
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
                       type="number"
                       value={layer?.weight_kg_m2 ?? ''}
@@ -497,34 +507,10 @@ function Custom() {
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
-                      type="number"
-                      value={layer?.gwp_kgco2e_m2 ?? ''}
-                      onChange={(event) => handleLayerNumberChange(index, 'gwp_kgco2e_m2', event.target.value)}
-                      style={{ width: '90px' }}
-                    />
-                  </td>
-                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <input
-                      type="number"
-                      value={layer?.thermalResistance_m2K_W ?? ''}
-                      onChange={(event) => handleLayerNumberChange(index, 'thermalResistance_m2K_W', event.target.value)}
-                      style={{ width: '90px' }}
-                    />
-                  </td>
-                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <input
                       type="text"
                       value={layer?.reactionToFire ?? ''}
                       onChange={(event) => handleLayerTextChange(index, 'reactionToFire', event.target.value)}
                       style={{ width: '90px' }}
-                    />
-                  </td>
-                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <input
-                      type="text"
-                      value={layer?.kbobId ?? ''}
-                      onChange={(event) => handleLayerTextChange(index, 'kbobId', event.target.value)}
-                      style={{ width: '110px' }}
                     />
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px', whiteSpace: 'nowrap' }}>
