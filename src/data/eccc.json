@@ -1,0 +1,451 @@
+[
+    {
+        "id": "C01.01",
+        "name": "Supports de fondations, radiers, dalles de sol",
+        "description": "Sont comprises dans l ' élément les étanchéités et isolations thermiques résistant à la compression, sous les radiers et les fondations (y compris terrassement exécuté par l ' entreprise de maçonnerie, lit de gravier, couche de propreté, couche de séparation, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément l ' amélioration du sol de fondation et les protections d ' ouvrages (B07), les fondations (C01.02), ainsi que les dalles de sol et radiers (C01.03).",
+        "illustration": ""
+    },
+    {
+        "id": "C01.02",
+        "name": "Fondations",
+        "description": "Sont compris dans l ' élément les massifs de fondation isolés, les semelles filantes et les semelles spéciales.",
+        "delimitation": "N ' est pas compris dans l ' élément le terrassement exécuté par l ' entreprise de maçonnerie (C01.01).",
+        "illustration": ""
+    },
+    {
+        "id": "C01.03",
+        "name": "dalles de sol, radiers",
+        "description": "Sont compris dans l ' élément les radiers (y compris les renforts de fondation, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément les éléments non porteurs servant de délimitation par rapport au terrain, tels que les améliorations du sol de fondation (B07.01), les couches de propreté, couches filtrantes et de séparation (C01.01), les fondations (C01.02) et les revêtements de sol (G02).",
+        "illustration": ""
+    },
+    {
+        "id": "C01.04",
+        "name": "Escaliers ou rampes en contact avec le sol",
+        "description": "Sont compris dans l ' élément les escaliers et rampes, intérieurs ou extérieurs (tels qu ' accès aux caves et entrées de garage souterrain).",
+        "delimitation": "Ne sont pas compris dans l ' élément les escaliers et les rampes d ' aménagement extérieurs (I02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "C01.05",
+        "name": "Paliers en contact avec le sol",
+        "description": "Sont compris dans l ' élément les paliers en contact avec le sol des escaliers et rampes intérieurs ou extérieurs (tels qu ' accès aux caves et entrées de garage souterrain).",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "C02.01",
+        "name": "Parois porteuses extérieures",
+        "description": "Sont comprises dans l ' élément les parois porteuses extérieures hors sol et contre terre (y compris ouvertures, sauts-de-loup, linteaux, allèges, parapets porteurs et joints).",
+        "delimitation": "Ne sont pas compris dans l ' élément les prestations complémentaires au gros oeuvre (C05) ainsi que les revêtements de façades et de murs contre terre (E).",
+        "illustration": ""
+    },
+    {
+        "id": "C02.02",
+        "name": "Parois porteuses intérieures",
+        "description": "Sont comprises dans l ' élément les parois porteuses intérieures (y compris ouvertures, linteaux, parapets porteurs et joints).",
+        "delimitation": "Ne sont pas compris dans l ' élément les prestations complémentaires au gros oeuvre (C05), les revêtements de parois et de piliers (G03) et les prestations complémentaires aux aménagements intérieurs (G06).",
+        "illustration": ""
+    },
+    {
+        "id": "C03.01",
+        "name": "Piliers extérieurs",
+        "description": "Sont comprises dans l ' élément les structures porteuses des piliers extérieurs, libres ou incorporés à une paroi extérieure (y compris appuis et armature de poinçonnement).",
+        "delimitation": "Ne sont pas compris dans l ' élément les revêtements de façades et de murs contre terre (E).",
+        "illustration": ""
+    },
+    {
+        "id": "C03.02",
+        "name": "Piliers intérieurs",
+        "description": "Sont comprises dans l ' élément les structures porteuses des piliers intérieurs (y compris appuis et armature de poinçonnement).",
+        "delimitation": "Ne sont pas compris dans l ' élément les revêtements de parois et de piliers (G03).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.01",
+        "name": "Planchers",
+        "description": "Sont comprises dans l ' élément les structures porteuses de planchers (y compris les sommiers, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément les prestations complémentaires au gros oeuvre (C05), les revêtements de sol (G02) et les prestations complémentaires aux aménagements intérieurs (G06).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.02",
+        "name": "Escaliers et rampes intérieurs",
+        "description": "Sont compris dans l ' élément les structures porteuses d ' escaliers et de rampes intérieurs.",
+        "delimitation": "Ne sont pas compris dans l ' élément les prestations complémentaires au gros oeuvre (C05), les revêtements de sols (G02), les dispositifs de protection tels que garde-corps et mains courantes (G05.05), ainsi que les prestations complémentaires aux aménagements intérieurs (G06).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.03",
+        "name": "Paliers intérieurs",
+        "description": "Sont comprises dans l ' élément les structures porteuses de paliers intérieurs",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "C04.04",
+        "name": "Structures porteuses de toitures plates",
+        "description": "Sont comprises dans l ' élément les structures porteuses de toitures plates (y compris les dalles supérieures d ' ouvrages souterrains).",
+        "delimitation": "Ne sont pas compris dans l ' élément les prestations complémentaires au gros oeuvre (C05), les toitures (F), les faux-plafonds (G04) ainsi que les prestations complémentaires aux aménagements intérieurs (G06).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.05",
+        "name": "Structures porteuses de toitures inclinées",
+        "description": "Sont comprises dans l ' élément les structures porteuses de toitures inclinées (telles que toitures à forte pente, toitures à un pan, toitures à deux pans).",
+        "delimitation": "Ne sont pas compris dans l ' élément les parois porteuses extérieures (C02.01), les prestations complémentaires au gros oeuvre (C05), les toitures (F), les faux-plafonds (G04) ainsi que les prestations complémentaires aux aménagements intérieurs (G06).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.06",
+        "name": "Escaliers et rampes extérieurs",
+        "description": "Sont comprises dans l ' élément les structures porteuses d ' escaliers et de rampes extérieurs.",
+        "delimitation": "Ne sont pas compris dans l ' élément les escaliers ou rampes en contact avec le sol (C01.04), ainsi que les escaliers et les rampes extérieurs (I02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.07",
+        "name": "Paliers extérieurs",
+        "description": "Sont comprises dans l ' élément les structures porteuses de paliers extérieurs.",
+        "delimitation": "Ne sont pas compris dans l ' élément les paliers en contact avec le sol (C01.05), ainsi que les escaliers et les rampes d ' aménagement extérieurs (I02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "C04.08",
+        "name": "Structures porteuses extérieures, avant-toitsa",
+        "description": "Sont compris dans l ' élément les auvents, les structures porteuses de balcons et de coursives en porte-à-faux (y compris consoles d ' attente, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément les couvertures (F01), les dispositifs antichute extérieurs (E02.06) ainsi que les prestations complémentaires au gros oeuvre (C05).",
+        "illustration": ""
+    },
+    {
+        "id": "D01",
+        "name": "Installations électriques",
+        "description": "Sont compris dans le groupe d ' éléments les installations et les appareils de production, de transformation, de mesure, d ' accumulation et de distribution d ' énergie électrique pour l ' alimentation des installations à courant fort et à courant faible (y compris systèmes porte-câbles et consommateurs).",
+        "delimitation": "Ne sont pas compris dans le groupe d ' éléments le raccordement du bâtiment jusqu ' au réseau électrique (B04.01 et B04.02) ainsi que les installations électriques à l ' extérieur (I05.01 et I05.02).",
+        "illustration": ""
+    },
+    {
+        "id": "D05",
+        "name": "Installations de chauffage",
+        "description": "Sont comprises dans le groupe d ' éléments les installations de stockage, de production, de distribution, d ' émission et de récupération de chaleur.",
+        "delimitation": "Ne sont pas comprises dans le groupe d ' éléments les installations de chauffage, à l ' extérieur (I05.03).",
+        "illustration": ""
+    },
+    {
+        "id": "D07",
+        "name": "Installations de ventilation et de conditionnement d ' air",
+        "description": "Sont comprises dans le groupe d ' éléments les installations de ventilation (pulsion et extraction) et de climatisation (y compris amenées et extractions d ' air extérieures, centrales de conditionnement d ' air, gaines de ventilation, diffuseurs ainsi que petits monoblocs de ventilation).",
+        "delimitation": "Ne sont pas mesurées la surface des espaces vides situés en dessous du dernier sous-sol accessible ainsi que les surfaces de référence énergétique exclusivement aérées naturellement.",
+        "illustration": ""
+    },
+    {
+        "id": "D08",
+        "name": "Installations de distribution d ' eau",
+        "description": "Sont comprises dans le groupe d ' éléments les installations de distribution d ' eau (telles que robinetterie, appareillages, systèmes de traitement, conduites de distribution, etc.).",
+        "delimitation": "Ne sont pas comprises dans le groupe d ' éléments les installations d ' extinction à l ' eau (D04.03), les installations pour eaux usées (D09), les installations de distribution de gaz (D10) et les installations sanitaires, à l ' extérieur (I05.05).",
+        "illustration": ""
+    },
+    {
+        "id": "D09",
+        "name": "Installations pour eaux usées",
+        "description": "Sont compris dans le groupe d ' éléments les écoulements, les colonnes de chute, les conduites de raccordement aux canalisations, les avaloirs situés à l ' intérieur du bâtiment (y compris raccords, ventilations, isolations, traitements de surface, etc.).",
+        "delimitation": "Ne sont pas compris dans le groupe d ' éléments les canalisations et les drains extérieurs (B04), l ' évacuation souterraine des eaux (I01.02) et les canalisations d ' évacuation des eaux de ruissellement (I05.06).",
+        "illustration": ""
+    },
+    {
+        "id": "D12",
+        "name": "Installations de transport",
+        "description": "Sont comprises dans le groupe d ' éléments les installations de transport de personnes et de charges.",
+        "delimitation": "Ne sont pas comprises dans le groupe d ' éléments les installations de transport, à l ' extérieur (I05.07).",
+        "illustration": ""
+    },
+    {
+        "id": "E01.01",
+        "name": "Etanchéités contre terre",
+        "description": "Sont compris dans l ' élément les étanchéités et les revêtements sur murs contre terre (y compris raccords et traversées).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les isolations thermiques contre terre (E01.02), les couches de protection contre terre (E01.03) et les étanchéités enterrées (F01.01).",
+        "illustration": ""
+    },
+    {
+        "id": "E01.02",
+        "name": "Isolations thermiques contre terre",
+        "description": "Sont comprises dans l ' élément les isolations thermiques sur murs contre terre, y compris une ou plusieurs couches de crépi calorifuge et de crépi étanche",
+        "delimitation": "Ne sont pas comprises dans l ' élément les isolations thermiques enterrées (F01.01).",
+        "illustration": ""
+    },
+    {
+        "id": "E01.03",
+        "name": "Couches de protection contre terre",
+        "description": "Sont comprises dans l ' élément les protections mécaniques des revêtements de murs contre terre par des panneaux, nattes de protection, drains, etc.",
+        "delimitation": "Ne sont pas comprises dans l ' élément les couches de protection sur toiture souterraine (F01.01).",
+        "illustration": ""
+    },
+     {
+        "id": "E02.01",
+        "name": "Crépis",
+        "description": "Sont compris dans l ' élément les revêtements de façade (tels que crépis et enduits appliqués directement sur la construction), y compris arêtes, embrasures et terminaisons, ainsi que les traitements de surface de la construction (tels que sablage, bouchardage, etc.).",
+        "delimitation": "Ne sont pas comptés dans l ' élément les revêtements de finition pour systèmes d ' isolation thermique extérieure (E02.02).",
+        "illustration": ""
+    },
+     {
+        "id": "E02.02",
+        "name": "Systèmes d ' isolation thermique extérieure",
+        "description": "Sont comprises dans l ' élément les isolations thermiques extérieures avec armatures textiles, sous-couches et couches de finition au crépi (y compris fixations, façon d ' angles, d ' embrasures, de terminaisons et enduits).",
+        "delimitation": "Ne sont pas compris dans l ' élément les crépis et enduits appliqués directement sur la construction (E02.01",
+        "illustration": ""
+    },
+     {
+        "id": "E02.03",
+        "name": "Bardages",
+        "description": "Sont compris dans l ' élément les bardages de façades ventilées (y compris isolations thermiques et ossatures) et les systèmes de végétalisation de façades.",
+        "delimitation": "Ne sont pas compris dans l ' élément les systèmes de façades légères (E02.04).",
+        "illustration": ""
+    },
+     {
+        "id": "E02.04",
+        "name": "Systèmes de façade, façades légères",
+        "description": "Sont compris dans l ' élément les systèmes de façades autoportantes (tels que façades rideaux, façades à double peau, sur un ou plusieurs étages, y compris éléments incorporés et dispositifs antichute).",
+        "delimitation": "Ne sont pas compris dans l ' élément les bardages (E02.03).",
+        "illustration": ""
+    },
+     {
+        "id": "E02.05",
+        "name": "Revêtements de plafonds extérieurs",
+        "description": "Sont compris dans l ' élément les revêtements, les traitements, les isolations thermiques, les crépis et les enduits de plafonds extérieurs (y compris ossature).",
+        "delimitation": "",
+        "illustration": ""
+    },
+     {
+        "id": "E02.06",
+        "name": "Dispositifs antichute extérieurs",
+        "description": "Sont compris dans l ' élément les dispositifs antichute et les garde-corps pour balcons, coursives, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les dispositifs antichute pour fenêtres (E03.05) et les parapets porteurs pour balcons, coursives, etc. (C02.01).",
+        "illustration": ""
+    },
+     {
+        "id": "E03.01",
+        "name": "Fenêtres",
+        "description": "Sont comprises dans l ' élément les fenêtres extérieures (y compris tablettes, cadres, raccords, joints, ferrements et quote-part au système de verrouillage). Sont compris les entraînements et commandes de fenêtres, depuis le point de raccordement de la ligne d ' alimentation.",
+        "delimitation": "Ne sont pas compris dans l ' élément les protections contre le soleil (E03.04), les dispositifs antichute (E03.05) ainsi que les fenêtres extérieures, incorporées aux façades légères (E02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "E03.02",
+        "name": "Portes extérieures pour personnes",
+        "description": "Sont compris dans l ' élément les portes intégrées à la façade (y compris raccords, joints, ferrements et quote-part au système de verrouillage), les entraînements et commandes des portes extérieures ainsi que les éléments de protection incorporés aux portes extérieures (tels que volets roulants, grilles à enroulement, etc.), depuis le point de raccordement de la ligne d ' alimentation.",
+        "delimitation": "Ne sont pas compris dans l ' élément les dispositifs de protection contre le soleil (E03.04) et les portes incorporées aux façades légères (E02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "E03.03",
+        "name": "Portes extérieures pour véhicules",
+        "description": "Sont compris dans l ' élément les portes pour véhicules intégrées à la façade (y compris raccords, joints, ferrements et quote-part au système de verrouillage), les entraînements et commandes ainsi que les éléments de protection incorporés (tels que volets roulants, grilles à enroulement, etc.), depuis le point de raccordement de la ligne d ' alimentation.",
+        "delimitation": "Ne sont pas comprises dans l ' élément les protections contre le soleil (E03.04), ainsi que les portes pour véhicules incorporées aux façades légères (E02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "E03.04",
+        "name": "Protections contre le soleil, contre les intempéries",
+        "description": "Sont compris dans l ' élément les équipements horizontaux et verticaux de protection contre le soleil et contre les intempéries (tels que stores à lamelles, stores en toiles, volets roulants, contrevents, etc.), y compris ferrements, entraînements et commandes depuis le point de raccordement de la ligne d ' alimentation.",
+        "delimitation": "Ne sont pas compris dans l ' élément les dispositifs intérieurs d ' obscurcissement (G05.04), les dispositifs de protection contre le soleil et les intempéries, incorporés aux façades légères (E02.04) ainsi que les dispositifs de protection contre le soleil, intégrés aux toitures légères (F01.04).",
+        "illustration": ""
+    },
+    {
+        "id": "E03.05",
+        "name": "Dispositifs antichute",
+        "description": "Sont compris dans l ' élément les garde-corps, les grilles, etc. pour fenêtres (y compris fixations).",
+        "delimitation": "Ne sont pas compris dans l ' élément les dispositifs antichute extérieurs (E02.06), les dispositifs antichute intérieurs (G05.05) et les dispositifs antichute intégrés aux façades légères (E02.04).",
+        "illustration": ""
+    },
+    {
+        "id": "F01.01",
+        "name": "Etanchéités enterrées",
+        "description": "Sont compris dans l ' élément les étanchéités, les revêtements et couches de protection de toitures enterrées (y compris couches d ' apprêt, couches de séparation, couches d ' égalisation, couches de pente, couches d ' étanchéité, couches d ' isolation thermique, protections de surface, raccords, traversées, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément les revêtements de murs contre terre (E01).",
+        "illustration": ""
+    },
+    {
+        "id": "F01.02",
+        "name": "Toitures plates",
+        "description": "Sont compris dans l ' élément les revêtements et couches sur toitures plates (tels que pare-vapeur, isolations thermiques, étanchéités, couches de lestage, raccords de ferblanterie, couches d ' usure, couches de finition, végétalisation, systèmes intégrés de production d ' énergie, évacuation des eaux de toiture jusqu ' au raccordement aux canalisations), ainsi que superstructures pour balcons, coursives, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les couvertures de toitures inclinées (F01.03) ainsi que les systèmes de production d ' énergie non intégrés à la couverture (D01.01 et D05.02).",
+        "illustration": ""
+    },
+    {
+        "id": "F01.03",
+        "name": "Toitures inclinées",
+        "description": "Sont comprises dans l ' élément les couches sur toitures inclinées (telles que pare-vapeur, isolations thermiques, étanchéités, sous-couvertures, contre-lattages, lattages, couvertures, raccords de ferblanterie, systèmes intégrés pour la production d ' énergie ainsi que l ' évacuation des eaux de toiture jusqu ' au raccordement aux canalisations).",
+        "delimitation": "Ne sont pas compris dans l ' élément les couvertures de toitures plates (F01.02) ainsi que les systèmes de production d ' énergie non intégrés dans la couverture (D01.01 et D05.02).",
+        "illustration": ""
+    },
+    {
+        "id": "F01.04",
+        "name": "Systèmes de toiture, toitures légères",
+        "description": "Sont compris dans l ' élément les structures porteuses, les revêtements, les vitrages, les protections contre le soleil, les dispositifs antichute intégrés, etc. (y compris raccords).",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "F02.01",
+        "name": "Eléments incorporés dans toitures plates",
+        "description": "Sont compris dans l ' élément les coupoles, les lanterneaux, les sorties, les dispositifs antichute intégrés, etc. pour toitures plates (y compris raccords, étanchéités, ferrements, entraînements, protections contre le soleil).",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "F02.02",
+        "name": "Eléments incorporés dans toitures inclinées",
+        "description": "Sont incorporés dans l ' élément les fenêtres de toit, les sorties de toit, les dispositifs antichute intégrés, etc. pour toitures inclinées (y compris raccords, étanchéités, ferrements, entraînements, protections contre le soleil).",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "F02.03",
+        "name": "Installations de protection incorporées dans toitures",
+        "description": "Sont compris dans l ' élément les installations de protection contre la foudre, y compris capteurs et conducteurs de descente (mise à la terre), les dispositifs antichute pour la maintenance du toit avec protections latérales permanentes et dispositifs d ' ancrage.",
+        "delimitation": "Ne sont pas comprises dans l ' élément les installations intérieures de protection contre la foudre (D01.04).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.01",
+        "name": "Cloisons fixes",
+        "description": "Sont compris dans l ' élément les cloisons fixes (telles que cloisons légères, vitrage intérieurs, etc.), y compris les portes et fenêtres intégrées, pour autant qu ' elles fassent partie du système de cloisons fixes.",
+        "delimitation": "Ne sont pas compris dans l ' élément les parois porteuses intérieures (C02.02), les doublages (G03.01), les cloisons mobiles (G01.02), les cloisons de gaines (G01.03), les fenêtres intérieures (G01.04), les portes intérieures pour personnes (G01.05) et les portes intérieures pour véhicules (G01.06).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.02",
+        "name": "Cloisons mobiles",
+        "description": "Sont comprises dans l ' élément les cloisons mobiles (telles que cloisons en éléments, y compris les portes et fenêtres intégrées, pour autant qu ' elles fassent partie du système de cloisons mobiles).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les cloisons de gaines (G01.03), les fenêtres intérieures (G01.04), les portes intérieures (G01.05), les portes intérieures pour véhicules (G01.06), ainsi que les cloisons mobiles faisant partie du mobilier (J01).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.03",
+        "name": "Cloisons de gaines",
+        "description": "Sont comprises dans l ' élément les cloisons visibles et non visibles de gaines.",
+        "delimitation": "Ne sont pas compris dans l ' élément les supports pour revêtements de paroi (G03.01), les revêtements de paroi (G03.02) et les éléments d ' installation (D08.06).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.04",
+        "name": "Fenêtres intérieures",
+        "description": "Sont comprises dans l ' élément les fenêtres intérieures (y compris tablettes, raccords, étanchéités, ferrements, entraînements, dispositifs antichute intégrés, etc.).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les fenêtres intérieures faisant partie d ' un système de parois fixes (G01.01) ou de parois mobiles (G01.02).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.05",
+        "name": "Portes intérieures pour personnes",
+        "description": "Sont comprises dans l ' élément les portes intérieures (y compris raccords, joints, ferrements, entraînements, éléments coupe-feu, etc.).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les portes intérieures faisant partie d ' un système de parois fixes (G01.01) ou de parois mobiles (G01.02), et les systèmes de verrouillage (D03.04).",
+        "illustration": ""
+    },
+    {
+        "id": "G01.06",
+        "name": "Portes intérieures pour véhicules",
+        "description": "Sont comprises dans l ' élément les portes intérieures pour véhicules (y compris raccords, joints, ferrements, entraînements, éléments coupe-feu, etc.).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les portes intérieures pour véhicules, faisant partie d ' un système de parois fixes (G01.01) ou de parois mobiles (G01.02).",
+        "illustration": ""
+    },
+    {
+        "id": "G02.01",
+        "name": "Supports pour revêtements de sols",
+        "description": "Sont compris dans l ' élément les supports destinés à recevoir des revêtements finis (tels que chapes, faux-planchers, etc.), y compris isolations, étanchéités et traitements de surface.",
+        "delimitation": "Ne sont pas compris dans l ' élément les revêtements de balcons (F01.02).",
+        "illustration": ""
+    },
+    {
+        "id": "G02.02",
+        "name": "Revêtements de sols",
+        "description": "Sont compris dans l ' élément les revêtements de sol finis, avec ou sans joints (tels que carrelages, revêtements en bois, en métal ou en matériaux synthétiques, textiles, enduits, etc.), y compris plinthes, traitements de surface et joints d ' étanchéité.",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "G03.01",
+        "name": "Supports pour revêtements de parois",
+        "description": "Sont compris dans l ' élément les supports destinés à recevoir des revêtements de parois et de piliers finis (tels qu ' enduits de fond, ossatures en bois et en métal pour doublages, etc., y compris isolations, étanchéités et fixations).",
+        "delimitation": "Ne sont pas compris dans l ' élément les ossatures de bardages (E02.03) et les châssis prémontés pour installations sanitaires (D08.06).",
+        "illustration": ""
+    },
+    {
+        "id": "G03.02",
+        "name": "Revêtements de parois",
+        "description": "Sont compris dans l ' élément les revêtements finis posés sur supports à l ' intérieur (couches de finition, carrelages, revêtements en bois, métal et matière synthétique, papiers peints, peinture, etc., y compris joints).",
+        "delimitation": "Ne sont pas comprises dans l ' élément les plinthes (G02.02).",
+        "illustration": ""
+    },
+    {
+        "id": "G04.01",
+        "name": "Supports pour faux-plafonds",
+        "description": "Sont compris dans l ' élément les supports destinés à recevoir un plafond fini (tels qu ' enduits de fond, ossatures de faux-plafonds, etc., y compris isolations et étanchéités).",
+        "delimitation": "Ne sont pas compris dans l ' élément les revêtements de plafonds extérieurs (E02.05).",
+        "illustration": ""
+    },
+    {
+        "id": "G04.02",
+        "name": "Faux-plafonds",
+        "description": "Sont compris dans l ' élément les revêtements de plafonds et les faux-plafonds sous dalles et sous toitures (tels que couches de finition, revêtements en bois, en métal ou en matière synthétique, peinture, etc., y compris traitements de surface et joints).",
+        "delimitation": "",
+        "illustration": ""
+    },
+    {
+        "id": "G05.01",
+        "name": "Placards, étagères, tablettes",
+        "description": "Sont compris dans l ' élément les agencements fixes (tels que placards, étagères, penderies, mobilier fixe, comptoirs, etc.).",
+        "delimitation": "Ne sont pas compris dans l ' élément le mobilier usuel (J01.01), le mobilier spécifique (J01.02) et les agencements spécifiques (H).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.02",
+        "name": "Agencements de cuisine",
+        "description": "Sont compris dans l ' élément les agencements de cuisine et de cuisinette (y compris appareils, robinetterie et accessoires).",
+        "delimitation": "Ne sont pas compris dans l ' élément les appareils et gaines de ventilation (D07) ainsi que les cuisines industrielles (H03).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.03",
+        "name": "Habillages intérieurs de fenêtres",
+        "description": "Sont compris dans l ' élément les tablettes de fenêtres, les habillages d ' embrasures, les galeries à rideaux, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les tablettes et encadrements de fenêtres extérieurs, raccords, étanchéités, ferrements, entraînement et commande pour fenêtres depuis le point de raccordement du câble d ' alimentation et éléments de protection intégrés (tels que volets roulants, grilles à enroulement, dispositifs antichute) (E03.01).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.04",
+        "name": "Habillages intérieurs de fenêtres",
+        "description": "Sont compris dans l ' élément les tablettes de fenêtres, les habillages d ' embrasures, les galeries à rideaux, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les tablettes et encadrements de fenêtres extérieurs, raccords, étanchéités, ferrements, entraînement et commande pour fenêtres depuis le point de raccordement du câble d ' alimentation et éléments de protection intégrés (tels que volets roulants, grilles à enroulement, dispositifs antichute) (E03.01).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.05",
+        "name": "Dispositifs intérieurs de fermeture",
+        "description": "Sont compris dans l ' élément les dispositifs intérieurs d ' obscurcissement et de protection contre l ' éblouissement (y compris entraînements et commandes depuis le point de raccordement du câble d ' alimentation).",
+        "delimitation": "Ne sont pas compris dans l ' élément les systèmes de protection contre le soleil et les intempéries (E03.04) intégrés aux façades légères (E02.04) et aux fenêtres (E03.01).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.06",
+        "name": "Dispositifs de protection antichute et contre les chocs",
+        "description": "Sont compris dans l ' élément les garde-corps, les mains courantes, les dispositifs antichocs, les escaliers escamotables (tels qu ' échelles et échelles fixes), les caillebottis, les traitements de surface, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les dispositifs antichute extérieurs (E02.06) (tels que garde-corps, grilles, etc.) pour fenêtres, balcons et éléments incorporés à la toiture.",
+        "illustration": ""
+    },
+    {
+        "id": "G05.07",
+        "name": "Composants spéciaux",
+        "description": "Sont compris dans l ' élément les poêles et cheminées, les bacs fixes à plantes, etc.",
+        "delimitation": "Ne sont pas compris dans l ' élément les gaines d ' amenée d ' air (D07) ainsi que les conduits d ' évacuation des gaz de combustion (D05.02).",
+        "illustration": ""
+    },
+    {
+        "id": "G05.08",
+        "name": "Accessoires, équipements d ' abri de protection civile",
+        "description": "Sont compris dans l ' élément les accessoires (tels que boîtes à lettres, armoires à pneus, râteliers à bicyclettes, étendages, etc.) ainsi que les équipements d ' abris de protection civile.",
+        "delimitation": "",
+        "illustration": ""
+    }
+
+]

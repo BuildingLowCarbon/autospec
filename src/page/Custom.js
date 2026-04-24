@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Header from '../components/Header';
+import { ViewSVG, DEFAULT_PX_PER_MM_X } from '../components/Graphic';
 import LangContext from '../context/LangContext';
 import translations from '../language/translations';
 import categoriesData from '../data/categories.json';
 import loadComponents, { invalidateComponentsCache } from '../utils/loadComponents';
 import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
+import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
 import {
   mergeById,
   readLocalCustomComponents,
@@ -23,6 +25,8 @@ const DEFAULT_LAYER = (order = 0) => ({
   spacing_mm: null,
   fiberDirection: null,
   reactionToFire: null,
+  time_burning_min: null,
+  time_fire_start_min: null,
   kbobId: null,
   ecccId: '',
   ecccDescription: '',
@@ -145,6 +149,10 @@ function Custom() {
 
   const ecccOptions = category?.eccc ?? [];
   const summary = useMemo(() => (component ? computeSummary(component) : null), [component]);
+  const componentWithFireTiming = useMemo(
+    () => (component ? applyCustomFireTimingToComponent(component, materials, products) : null),
+    [component, materials, products],
+  );
 
   const handleComponentFieldChange = (field, value) => {
     setComponent((prev) => {
@@ -254,30 +262,31 @@ function Custom() {
   };
 
   const saveCurrent = () => {
-    if (!component) return;
+    if (!componentWithFireTiming) return;
     const payload = {
-      ...component,
+      ...componentWithFireTiming,
       ...summary,
       source: {
-        ...(component.source ?? {}),
+        ...(componentWithFireTiming.source ?? {}),
         name: 'Custom',
         databaseId: 'custom',
       },
     };
     persistComponent(payload);
+    setComponent(cloneComponent(payload));
     setStatus('Modifications enregistrees dans components_custom.');
   };
 
   const createNew = () => {
-    if (!component) return;
+    if (!component || !componentWithFireTiming) return;
     const newId = makeUuid();
     const payload = {
-      ...component,
+      ...componentWithFireTiming,
       ...summary,
       id: newId,
       parent: component.id ?? null,
       source: {
-        ...(component.source ?? {}),
+        ...(componentWithFireTiming.source ?? {}),
         name: 'Custom',
         databaseId: 'custom',
       },
@@ -296,7 +305,10 @@ function Custom() {
     );
   }
 
-  const layers = component?.structure?.layers ?? [];
+  const layers = componentWithFireTiming?.structure?.layers ?? [];
+  const woodBeamSpanResult = componentWithFireTiming?.fire_resistance?.wood_beam_span ?? null;
+  const pxPerMmY = 1;
+  const pxPerMmX = DEFAULT_PX_PER_MM_X;
   const title = component?.translations?.[lang]?.name || component?.serialNo || component?.id || '';
   const description = component?.translations?.[lang]?.description || '';
 
@@ -398,8 +410,11 @@ function Custom() {
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.width}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.spacing}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.fiberDirection}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.surface_mass}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.reactionToFire}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_burning_min}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_fire_start_min}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>Actions</th>
               </tr>
             </thead>
@@ -498,6 +513,17 @@ function Custom() {
                     </select>
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    <select
+                      value={layer?.fiberDirection ?? ''}
+                      onChange={(event) => handleLayerTextChange(index, 'fiberDirection', event.target.value)}
+                      style={{ width: '120px' }}
+                    >
+                      <option value ="" >--</option>
+                      <option value="quer">quer</option>
+                      <option value="lengthwise">lengthwise</option>
+                    </select>
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
                       type="number"
                       value={layer?.weight_kg_m2 ?? ''}
@@ -513,6 +539,22 @@ function Custom() {
                       style={{ width: '90px' }}
                     />
                   </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    <input
+                      type="number"
+                      value={layer?.time_burning_min ?? ''}
+                      onChange={(event) => handleLayerNumberChange(index, 'time_burning_min', event.target.value)}
+                      style={{ width: '90px' }}
+                    />
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    <input
+                      type="number"
+                      value={layer?.time_fire_start_min ?? ''}
+                      onChange={(event) => handleLayerNumberChange(index, 'time_fire_start_min', event.target.value)}
+                      style={{ width: '90px' }}
+                    />
+                  </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px', whiteSpace: 'nowrap' }}>
                     <button type="button" onClick={() => moveLayer(index, -1)} disabled={index === 0}>Up</button>{' '}
                     <button type="button" onClick={() => moveLayer(index, 1)} disabled={index === layers.length - 1}>Down</button>{' '}
@@ -522,7 +564,40 @@ function Custom() {
               ))}
             </tbody>
           </table>
+          
         </div>
+        <div style={{ marginTop: '16px' }}>
+          <h3>Resultat calculateWoodBeamSpan</h3>
+          <pre
+            style={{
+              background: '#f6f6f6',
+              border: '1px solid #ddd',
+              padding: '10px',
+              overflowX: 'auto',
+              whiteSpace: 'pre-wrap',
+            }}
+          >
+            {woodBeamSpanResult ? JSON.stringify(woodBeamSpanResult, null, 2) : 'N/A'}
+          </pre>
+        </div>
+        {layers.length > 0 && (
+          <div style={{ marginTop: '32px', display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
+            <ViewSVG
+              title="Coupe transverse"
+              layers={layers}
+              view="transverse"
+              pxPerMmY={pxPerMmY}
+              pxPerMmX={pxPerMmX}
+            />
+            <ViewSVG
+              title="Coupe longitudinale"
+              layers={layers}
+              view="longitudinal"
+              pxPerMmY={pxPerMmY}
+              pxPerMmX={pxPerMmX}
+            />
+          </div>
+        )}
       </div>
     </>
   );

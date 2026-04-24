@@ -14,10 +14,25 @@ const dataTranslations = {
     mass_addition: { fr: "Ajout de masse", de: "Masseaddition", en: "Mass addition" },
     cavity_damping: { fr: "Amortissement de la cavité", de: "Hohlraumdämpfung", en: "Cavity damping" },
     bracing: { fr: "Contreventement", de: "Aussteifung", en: "Bracing" },
-    support_layer: { fr: "Couche support", de: "Tragschicht", en: "Support layer" },
     drainage_layer: { fr: "Couche de drainage", de: "Entwässerungsschicht", en: "Drainage layer" },
-    cladding: { fr: "Revêtement", de: "Verkleidung", en: "Cladding" },
+    covering: { fr: "Couverture", de: "Eindeckung", en: "Covering" },
+    slab: { fr: "Dalle", de: "Platte", en: "Slab" },
+    wind_barrier: { fr: "Etanchéité au vent", de: "Winddichtung", en: "Wind barrier" },
+    waterproofing: { fr: "Etanchéité", de: "Abdichtung", en: "Waterproofing" },
+    air_gap: { fr: "Espace d'air", de: "Luftschicht", en: "Air gap" },
+    vapor_retarder: { fr: "Frein-vapeur", de: "Dampfbremse", en: "Vapor retarder" },
     insulation: { fr: "Isolation", de: "Dämmung", en: "Insulation" },
+    load_bearing_insulation: { fr: "Isolation porteuse", de: "Tragende Dämmung", en: "Load-bearing insulation" },
+    impact_noise_isolation: { fr: "Isolement aux bruits de choc", de: "Trittschalldämmung", en: "Impact noise isolation" },
+    battens_profiles: { fr: "Lattes / profils", de: "Latten / Profile", en: "Battens / profiles" },
+    vapor_barrier: { fr: "Pare-vapeur", de: "Dampfsperre", en: "Vapor barrier" },
+    cladding_ceiling: { fr: "Parement de plafond", de: "Deckenverkleidung", en: "Cladding / ceiling" },
+    interior_cladding: { fr: "Revêtement intérieur", de: "Innenverkleidung", en: "Interior cladding" },
+    exterior_cladding: { fr: "Revêtement extérieur", de: "Aussenverkleidung", en: "Exterior cladding" },
+    flooring: { fr: "Revêtement de sol", de: "Bodenbelag", en: "Flooring" },
+    load_bearing_structure: { fr: "Structure porteuse", de: "Tragende Konstruktion", en: "Load-bearing structure" },
+    surface_treatment: { fr: "Traitement de surface", de: "Oberflächenbehandlung", en: "Surface treatment" },
+
 
   }
 };

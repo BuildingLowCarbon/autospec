@@ -27,27 +27,27 @@
       "eccc": [
             {
                 "ecccId": "C01.01",
-                "description": "Supports de fondations, radiers, dalles de sol",
+                "name": "Supports de fondations, radiers, dalles de sol",
                 "serviceLife": 60
             },
             {
                 "ecccId": "C01.02",
-                "description": "Fondations",
+                "name": "Fondations",
                 "serviceLife": 60
             },
             {
                 "ecccId": "C01.03",
-                "description": "Dalles de sol, radiers",
+                "name": "Dalles de sol, radiers",
                 "serviceLife": 60
             },
             {
                 "ecccId": "C01.04",
-                "description": "Escaliers ou rampes en contact avec le sol",
+                "name": "Escaliers ou rampes en contact avec le sol",
                 "serviceLife": 60
             },
             {
                 "ecccId": "C01.05",
-                "description": "Paliers en contact avec le sol",
+                "name": "Paliers en contact avec le sol",
                 "serviceLife": 60
             }
       ]
@@ -79,27 +79,27 @@
         "eccc": [
             {
                 "ecccId": "C04.01",
-                "description": "Plancher",
+                "name": "Plancher",
                 "serviceLife": 60
             },
              {
                 "ecccId": "G02.01",
-                "description": "Supports pour revêtements de sols",
+                "name": "Supports pour revêtements de sols",
                 "serviceLife": 30
             },
              {
                 "ecccId": "G02.02",
-                "description": "Revêtements de sols",
+                "name": "Revêtements de sols",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G04.01",
-                "description": "Supports pour faux-plafonds",
+                "name": "Supports pour faux-plafonds",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G04.02",
-                "description": "Faux-plafonds",
+                "name": "Faux-plafonds",
                 "serviceLife": 30
             }
         ]
@@ -128,52 +128,52 @@
         "eccc": [
             {
                 "ecccId": "C02.01",
-                "description": "Parois porteuses extérieures",
+                "name": "Parois porteuses extérieures",
                 "serviceLife": 60
             },
             {
                 "ecccId": "E01.01",
-                "description": "Etanchéités contre terre",
+                "name": "Etanchéités contre terre",
                 "serviceLife": 60
             },
             {
                 "ecccId": "E01.02",
-                "description": "Isolations thermiques contre terre",
+                "name": "Isolations thermiques contre terre",
                 "serviceLife": 60
             },
             {
                 "ecccId": "E01.03",
-                "description": "Couches de protection contre terre",
+                "name": "Couches de protection contre terre",
                 "serviceLife": 60
             },
             {
                 "ecccId": "E02.01",
-                "description": "Crépis",
+                "name": "Crépis",
                 "serviceLife": 30
             },
             {
                 "ecccId": "E02.02",
-                "description": "Systèmes d'isolation thermique extérieure",
+                "name": "Systèmes d'isolation thermique extérieure",
                 "serviceLife": 30
             },
             {
                 "ecccId": "E02.03",
-                "description": "Bardages",
+                "name": "Bardages",
                 "serviceLife": 40
             },
             {
                 "ecccId": "E02.04",
-                "description": "Systèmes de façade, façades légères",
+                "name": "Systèmes de façade, façades légères",
                 "serviceLife": 40
             },
             {
                 "ecccId": "G03.01",
-                "description": "Supports pour revêtements de parois",
+                "name": "Supports pour revêtements de parois",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G03.02",
-                "description": "Revêtements de parois",
+                "name": "Revêtements de parois",
                 "serviceLife": 30
             }
 
@@ -198,17 +198,17 @@
         "eccc": [
             {
                 "ecccId": "C02.02",
-                "description": "Parois porteuses intérieures",
+                "name": "Parois porteuses intérieures",
                 "serviceLife": 60
             },
             {
                 "ecccId": "G03.01",
-                "description": "Supports pour revêtements de parois",
+                "name": "Supports pour revêtements de parois",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G03.02",
-                "description": "Revêtements de parois",
+                "name": "Revêtements de parois",
                 "serviceLife": 30
             }
         ]
@@ -249,17 +249,17 @@
         "eccc": [
             {
                 "ecccId": "G01.01",
-                "description": "Cloisons fixes",
+                "name": "Cloisons fixes",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G03.01",
-                "description": "Supports pour revêtements de parois",
+                "name": "Supports pour revêtements de parois",
                 "serviceLife": 30
             },
             {
                 "ecccId": "G03.02",
-                "description": "Revêtements de parois",
+                "name": "Revêtements de parois",
                 "serviceLife": 30
             }
         ]
@@ -288,12 +288,12 @@
         "eccc": [
             {
                 "ecccId": "C04.04",
-                "description": "Structures porteuses de toitures plates",
+                "name": "Structures porteuses de toitures plates",
                 "serviceLife": 60
             },
             {
                 "ecccId": "F01.02",
-                "description": "Couverture (Toitures plates)",
+                "name": "Couverture (Toitures plates)",
                 "serviceLife": 30
             }
         ]
@@ -321,12 +321,12 @@
         "eccc": [
             {
                 "ecccId": "C04.05",
-                "description": "Structures porteuses de toitures inclinées",
+                "name": "Structures porteuses de toitures inclinées",
                 "serviceLife": 60
             },
             {
                 "ecccId": "F01.03",
-                "description": "Couverture (Toitures inclinées)",
+                "name": "Couverture (Toitures inclinées)",
                 "serviceLife": 40
             }
         ]
@@ -354,12 +354,12 @@
         "eccc": [
             {
                 "ecccId": "C04.04",
-                "description": "Structures porteuses de toitures plates",
+                "name": "Structures porteuses de toitures plates",
                 "serviceLife": 60
             },
             {
                 "ecccId": "F01.01",
-                "description": "Etanchéités enterrées",
+                "name": "Etanchéités enterrées",
                 "serviceLife": 60
             }
         ]
@@ -376,17 +376,17 @@
         "eccc": [
             {
                 "ecccId": "C04.08",
-                "description": "Structures porteuses extérieures, avant-toits",
+                "name": "Structures porteuses extérieures, avant-toits",
                 "serviceLife": 40
             },
             {
                 "ecccId": "E02.05",
-                "description": "Revêtements de plafonds extérieurs",
+                "name": "Revêtements de plafonds extérieurs",
                 "serviceLife": 40
             },
             {
                 "ecccId": "E02.06",
-                "description": "Dispositifs antichute extérieurs",
+                "name": "Dispositifs antichute extérieurs",
                 "serviceLife": 40
             }
         ]
