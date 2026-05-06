@@ -1,3 +1,5 @@
+import sia265Data from '../data/sia265.json' with { type: 'json' };
+
 /**
  * Calcul simplifié de portée pour poutre bois simplement appuyée (2 pivots)
  * selon une lecture opérationnelle de SIA 260 / 261 / 265.
@@ -132,128 +134,7 @@ const DEFLECTION_LIMITS = {
   }
 };
 
-/**
- * Propriétés mécaniques à température normale.
- *
- * Source :
- * - SIA 265:2021, tableau 8 pour bois massif / bois massif à entures multiples /
- *   bois massif reconstitué.
- *
- * Champs :
- * - fm_d      : résistance de dimensionnement en flexion [N/mm²]
- * - fv_d      : résistance de dimensionnement au cisaillement [N/mm²]
- * - Em_mean   : module moyen en flexion [N/mm²]
- */
-const WOOD_CLASSES = {
-  solid_softwood: {
-    // Bois massif résineux / bois massif à entures multiples / bois massif reconstitué
-    // Source : SIA 265:2021, tableau 8
-    C16: {
-      fm_d: 9.4,
-      fv_d: 1.5,
-      Em_mean: 8000,
-      source: "SIA 265:2021, tableau 8, C16"
-    },
-    C24: {
-      fm_d: 14.1,
-      fv_d: 1.5,
-      Em_mean: 11000,
-      source: "SIA 265:2021, tableau 8, C24"
-    },
-    C30: {
-      fm_d: 17.6,
-      fv_d: 1.5,
-      Em_mean: 12000,
-      source: "SIA 265:2021, tableau 8, C30"
-    }
-  },
-
-  solid_hardwood: {
-    // Feuillus visibles dans le tableau 8
-    // Source : SIA 265:2021, tableau 8
-    D30: {
-      fm_d: 17.6,
-      fv_d: 1.8,
-      Em_mean: 11000,
-      source: "SIA 265:2021, tableau 8, D30"
-    }
-  },
-
-  glulam: {
-    // Bois lamellé collé de résineux
-    // Source : SIA 265:2021, tableau 9
-    GL20h: {
-      fm_d: 13.3,
-      fv_d: 1.8,
-      Em_mean: 8400,
-      source: "SIA 265:2021, tableau 9, GL20h"
-    },
-    GL24c: {
-      fm_d: 16.0,
-      fv_d: 1.8,
-      Em_mean: 11000,
-      source: "SIA 265:2021, tableau 9, GL24c"
-    },
-    GL24h: {
-      fm_d: 16.0,
-      fv_d: 1.8,
-      Em_mean: 11500,
-      source: "SIA 265:2021, tableau 9, GL24h"
-    },
-    GL28c: {
-      fm_d: 18.7,
-      fv_d: 1.8,
-      Em_mean: 12500,
-      source: "SIA 265:2021, tableau 9, GL28c"
-    },
-    GL28h: {
-      fm_d: 18.7,
-      fv_d: 1.8,
-      Em_mean: 12600,
-      source: "SIA 265:2021, tableau 9, GL28h"
-    },
-    GL32c: {
-      fm_d: 21.3,
-      fv_d: 1.8,
-      Em_mean: 13500,
-      source: "SIA 265:2021, tableau 9, GL32c"
-    },
-    GL32h: {
-      fm_d: 21.3,
-      fv_d: 1.8,
-      Em_mean: 14200,
-      source: "SIA 265:2021, tableau 9, GL32h"
-    }
-  }
-};
-
-/**
- * Vitesse de combustion théorique βn
- * Source : SIA 265:2021, §4.5.2.3 et tableau 13
- *
- * ATTENTION :
- * - La valeur dépend du matériau / produit.
- * - Pour le calcul feu simplifié, cette table est centrale.
- */
-const CHARRING_RATES = {
-  solid_softwood: {
-    // Résineux ou hêtre, bois massif / BME / BMR
-    beta_n_mm_min: 0.8,
-    source: "SIA 265:2021, tableau 13"
-  },
-  glulam_softwood: {
-    beta_n_mm_min: 0.7,
-    source: "SIA 265:2021, tableau 13"
-  },
-  oak_or_robinia: {
-    beta_n_mm_min: 0.5,
-    source: "SIA 265:2021, tableau 13"
-  },
-  solid_wood_cladding: {
-    beta_n_mm_min: 0.9,
-    source: "SIA 265:2021, tableau 13"
-  }
-};
+/* Caracteristiques bois et vitesses de combustion centralisees dans src/data/sia265.json. */
 
 /* ========================================================================== */
 /* 2) OUTILS GÉNÉRAUX                                                         */
@@ -368,17 +249,17 @@ function designLineLoadFire_kN_m({
  * => Lmax = sqrt( 8 * fm,d * W / q )
  *
  * Unités :
- * - fm_d en N/mm²
+ * - fm_d_N_mm2 en N/mm²
  * - W en mm³
  * - q en kN/m = N/mm (numériquement identique)
  * - résultat en mm
  */
-function maxSpanByBendingAmbient_m({ fm_d, W_mm3, qd_kN_m }) {
-  assertPositive("fm_d", fm_d);
+function maxSpanByBendingAmbient_m({ fm_d_N_mm2, W_mm3, qd_kN_m }) {
+  assertPositive("fm_d_N_mm2", fm_d_N_mm2);
   assertPositive("W_mm3", W_mm3);
   assertPositive("qd_kN_m", qd_kN_m);
 
-  const L_mm = Math.sqrt((8 * fm_d * W_mm3) / qd_kN_m);
+  const L_mm = Math.sqrt((8 * fm_d_N_mm2 * W_mm3) / qd_kN_m);
   return L_mm / 1000;
 }
 
@@ -392,16 +273,16 @@ function maxSpanByBendingAmbient_m({ fm_d, W_mm3, qd_kN_m }) {
  *
  * Unités :
  * - A en mm²
- * - fv_d en N/mm²
+ * - fv_d_N_mm2 en N/mm²
  * - q en kN/m = N/mm
  * - résultat en mm
  */
-function maxSpanByShearAmbient_m({ fv_d, A_mm2, qd_kN_m }) {
-  assertPositive("fv_d", fv_d);
+function maxSpanByShearAmbient_m({ fv_d_N_mm2, A_mm2, qd_kN_m }) {
+  assertPositive("fv_d_N_mm2", fv_d_N_mm2);
   assertPositive("A_mm2", A_mm2);
   assertPositive("qd_kN_m", qd_kN_m);
 
-  const L_mm = (2 * A_mm2 * fv_d) / (1.5 * qd_kN_m);
+  const L_mm = (2 * A_mm2 * fv_d_N_mm2) / (1.5 * qd_kN_m);
   return L_mm / 1000;
 }
 
@@ -435,8 +316,8 @@ function maxSpanByDeflection_m({ E_N_mm2, I_mm4, qk_variableOnly_kN_m, ratio }) 
  *
  * Base normative :
  * - SIA 265:2021, §4.5.2.2 et §4.5.2.3 :
- *   d_char,n = beta_n * t
- * - Tableau 13 : vitesses de combustion théorique beta_n
+ *   d_char,n = beta_n_mm_min * t
+ * - Tableau 13 : vitesses de combustion théorique beta_n_mm_min
  *
  * ATTENTION :
  * - Cette fonction donne un temps simplifié de consommation d'épaisseur.
@@ -455,7 +336,9 @@ function calcBurnThroughTime_min({
     throw new Error(`thickness_mm doit être > 0. Reçu: ${thickness_mm}`);
   }
 
-  const beta_n_mm_min = CHARRING_RATES[woodFamily].beta_n_mm_min;
+  const beta_n_mm_min =
+    Object.values(sia265Data.woodClasses?.[woodFamily] ?? {})[0]?.beta_n_mm_min;
+  assertPositive("beta_n_mm_min", beta_n_mm_min);
   const burnThroughTime_min = thickness_mm / beta_n_mm_min;
 
   return {
@@ -474,7 +357,7 @@ function calcBurnThroughTime_min({
  * - SIA 265:2021, §4.5.2.2
  * - Figure 13
  * - Eq. (49) def = dchar,n + dred
- * - Eq. (50) dchar,n = beta_n * t
+ * - Eq. (50) dchar,n = beta_n_mm_min * t
  *
  * Exposition :
  * - 3 faces : côtés + dessous
@@ -569,8 +452,8 @@ function checkMinimumWidthForMultiFaceFire(b_mm, fireMinutes) {
  *
  * Source : SIA 265:2021, §4.5.2.5, Eq. (51)
  */
-function fireBendingResistance_kNm({ fm_d, W_residual_mm3 }) {
-  const M_Rd_normal_residual_Nmm = fm_d * W_residual_mm3;
+function fireBendingResistance_kNm({ fm_d_N_mm2, W_residual_mm3 }) {
+  const M_Rd_normal_residual_Nmm = fm_d_N_mm2 * W_residual_mm3;
   const M_Rd_fi_Nmm = 1.8 * M_Rd_normal_residual_Nmm;
   return M_Rd_fi_Nmm / 1e6; // kNm
 }
@@ -596,8 +479,8 @@ function maxSpanByBendingFire_m({ M_Rd_fi_kNm, qd_fi_kN_m }) {
  * => V_Rd,fi = 1.8 * fv,d * A / 1.5
  * => qL/2 <= V_Rd,fi
  */
-function maxSpanByShearFire_m({ fv_d, A_residual_mm2, qd_fi_kN_m }) {
-  const V_Rd_fi_N = 1.8 * (fv_d * A_residual_mm2 / 1.5);
+function maxSpanByShearFire_m({ fv_d_N_mm2, A_residual_mm2, qd_fi_kN_m }) {
+  const V_Rd_fi_N = 1.8 * (fv_d_N_mm2 * A_residual_mm2 / 1.5);
   const V_Rd_fi_kN = V_Rd_fi_N / 1000;
   return (2 * V_Rd_fi_kN) / qd_fi_kN_m;
 }
@@ -643,18 +526,23 @@ function calculateWoodBeamSpan(input) {
     .forEach(([name, value]) => assertPositive(name, value));
 
   // --- matériaux
-  const woodDb = WOOD_CLASSES[woodFamily];
+  const woodDb = sia265Data.woodClasses?.[woodFamily];
   if (!woodDb) throw new Error(`woodFamily inconnue: ${woodFamily}`);
 
   const wood = woodDb[woodClass];
   if (!wood) {
     throw new Error(
       `woodClass ${woodClass} non trouvée pour woodFamily ${woodFamily}. ` +
-      `Complète la base WOOD_CLASSES avec les valeurs du tableau normatif correspondant.`
+      `Complète src/data/sia265.json avec les valeurs du tableau normatif correspondant.`
     );
   }
 
-  const { fm_d, fv_d, Em_mean } = wood;
+  const {
+    fm_d_N_mm2,
+    fv_d_N_mm2,
+    Em_mean_N_mm2,
+    beta_n_mm_min: woodBeta_n_mm_min
+  } = wood;
 
   // --- charges d’exploitation
   const occ = OCCUPANCY[occupancyKey];
@@ -685,13 +573,13 @@ function calculateWoodBeamSpan(input) {
   });
 
   const L_bending_ambient_m = maxSpanByBendingAmbient_m({
-    fm_d,
+    fm_d_N_mm2,
     W_mm3,
     qd_kN_m: qdAmbient_kN_m
   });
 
   const L_shear_ambient_m = maxSpanByShearAmbient_m({
-    fv_d,
+    fv_d_N_mm2,
     A_mm2,
     qd_kN_m: qdAmbient_kN_m
   });
@@ -710,7 +598,7 @@ function calculateWoodBeamSpan(input) {
   // ici on applique le critère de flèche au chargement variable seul pour un usage
   // indicatif cohérent avec le tableau.
   const L_deflection_m = maxSpanByDeflection_m({
-    E_N_mm2: Em_mean,
+    E_N_mm2: Em_mean_N_mm2,
     I_mm4,
     qk_variableOnly_kN_m: qk_kN_m,
     ratio: deflectionRatio
@@ -727,7 +615,7 @@ function calculateWoodBeamSpan(input) {
   const beta_n_mm_min =
     beta_n_override_mm_min != null
       ? beta_n_override_mm_min
-      : (CHARRING_RATES[woodFamily]?.beta_n_mm_min ?? CHARRING_RATES.solid_softwood.beta_n_mm_min);
+      : woodBeta_n_mm_min;
 
   const qdFire_kN_m = designLineLoadFire_kN_m({
     qdAmbient_kN_m,
@@ -761,7 +649,7 @@ function calculateWoodBeamSpan(input) {
     const W_residual_mm3 = rectW(residual.bfi_mm, residual.hfi_mm);
 
     const M_Rd_fi_kNm = fireBendingResistance_kNm({
-      fm_d,
+      fm_d_N_mm2,
       W_residual_mm3
     });
 
@@ -771,7 +659,7 @@ function calculateWoodBeamSpan(input) {
     });
 
     const L_shear_fire_m = maxSpanByShearFire_m({
-      fv_d,
+      fv_d_N_mm2,
       A_residual_mm2,
       qd_fi_kN_m: qdFire_kN_m
     });
@@ -803,7 +691,7 @@ function calculateWoodBeamSpan(input) {
     references: {
       liveLoads: occ.source,
       deflection: defl.source,
-      wood: wood.source,
+      wood: wood.sources?.fm_d_N_mm2,
       fireSection: "SIA 265:2021, §4.5.2.2, figure 13, eq. (49)-(50)",
       fireResistance: "SIA 265:2021, §4.5.2.5, eq. (51)",
       fireLoads: (
@@ -823,9 +711,9 @@ function calculateWoodBeamSpan(input) {
     material: {
       woodFamily,
       woodClass,
-      fm_d,
-      fv_d,
-      Em_mean,
+      fm_d_N_mm2,
+      fv_d_N_mm2,
+      Em_mean_N_mm2,
       beta_n_mm_min
     },
     loads: {

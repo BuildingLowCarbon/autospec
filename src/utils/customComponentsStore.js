@@ -30,6 +30,22 @@ export const writeLocalCustomComponents = (components) => {
   window.localStorage.setItem(CUSTOM_COMPONENTS_STORAGE_KEY, JSON.stringify(normalizeArray(components)));
 };
 
+export const writeFileCustomComponent = async (component) => {
+  const response = await fetch('/api/components-custom', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ component }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Ecriture components_custom.json impossible (${response.status})`);
+  }
+
+  return response.json();
+};
+
 export const mergeById = (items) => {
   const map = new Map();
   normalizeArray(items).forEach((item) => {

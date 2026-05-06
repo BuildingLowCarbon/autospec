@@ -93,6 +93,7 @@ export const loadComponents = async () => {
 
 export const invalidateComponentsCache = () => {
   cachedComponents = null;
+  cachedFileCustomComponents = null;
 };
 
 export default loadComponents;

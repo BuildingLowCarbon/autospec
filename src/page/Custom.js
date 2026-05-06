@@ -5,13 +5,16 @@ import { ViewSVG, DEFAULT_PX_PER_MM_X } from '../components/Graphic';
 import LangContext from '../context/LangContext';
 import translations from '../language/translations';
 import categoriesData from '../data/categories.json';
+import kbobData from '../data/KBOB_mat_db.json';
 import loadComponents, { invalidateComponentsCache } from '../utils/loadComponents';
 import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
+import { calculateComponentProperties } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
 import {
   mergeById,
   readLocalCustomComponents,
+  writeFileCustomComponent,
   withCustomSource,
   writeLocalCustomComponents,
 } from '../utils/customComponentsStore';
@@ -67,6 +70,11 @@ const formatNumber = (value, decimals) => {
   return num.toFixed(decimals);
 };
 
+const formatCapacityCell = (cell) => {
+  if (!cell || cell.value === null || cell.value === undefined) return 'N/A';
+  return `${formatNumber(cell.value, 2)} ${cell.unit ?? ''}`.trim();
+};
+
 const ensureLangTranslations = (layer) => ({
   ...(layer ?? {}),
   translations: {
@@ -87,20 +95,6 @@ const cloneComponent = (component) => {
     databaseId: 'custom',
   };
   return clone;
-};
-
-const computeSummary = (component) => {
-  const layers = component?.structure?.layers ?? [];
-  const thickness = layers.reduce((acc, layer) => acc + (parseNullableNumber(layer?.thickness_mm) ?? 0), 0);
-  const weight = layers.reduce((acc, layer) => acc + (parseNullableNumber(layer?.weight_kg_m2) ?? 0), 0);
-  const gwp = layers.reduce((acc, layer) => acc + (parseNullableNumber(layer?.gwp_kgco2e_m2) ?? 0), 0);
-  const totalResistance = layers.reduce((acc, layer) => acc + (parseNullableNumber(layer?.thermalResistance_m2K_W) ?? 0), 0);
-  return {
-    thickness_mm: thickness,
-    weight_kg_m2: weight,
-    gwp_kgco2e_m2: gwp,
-    uValue_W_m2K: totalResistance > 0 ? 1 / totalResistance : null,
-  };
 };
 
 function Custom() {
@@ -148,10 +142,37 @@ function Custom() {
   }, [component?.categoryId]);
 
   const ecccOptions = category?.eccc ?? [];
-  const summary = useMemo(() => (component ? computeSummary(component) : null), [component]);
-  const componentWithFireTiming = useMemo(
-    () => (component ? applyCustomFireTimingToComponent(component, materials, products) : null),
+  const databaseSummary = useMemo(() => {
+    if (!component) return null;
+    return {
+      thickness_mm: parseNullableNumber(component.thickness_mm),
+      weight_kg_m2: parseNullableNumber(component.weight_kg_m2),
+      gwp_kgco2e_m2: parseNullableNumber(component.gwp_kgco2e_m2),
+      uValue_W_m2K: parseNullableNumber(component.uValue_W_m2K),
+    };
+  }, [component]);
+  const componentWithProperties = useMemo(
+    () =>
+      component
+        ? calculateComponentProperties(component, materials, products, kbobData, {
+            categories: categoriesData?.categories ?? [],
+            componentServiceLifeYears: 60,
+          })
+        : null,
     [component, materials, products],
+  );
+  const summary = useMemo(() => {
+    if (!componentWithProperties) return null;
+    return {
+      thickness_mm: componentWithProperties.thickness_mm,
+      weight_kg_m2: componentWithProperties.weight_kg_m2,
+      gwp_kgco2e_m2: componentWithProperties.gwp_kgco2e_m2,
+      uValue_W_m2K: componentWithProperties.uValue_W_m2K,
+    };
+  }, [componentWithProperties]);
+  const componentWithFireTiming = useMemo(
+    () => (componentWithProperties ? applyCustomFireTimingToComponent(componentWithProperties, materials, products) : null),
+    [componentWithProperties, materials, products],
   );
 
   const handleComponentFieldChange = (field, value) => {
@@ -254,15 +275,21 @@ function Custom() {
     });
   };
 
-  const persistComponent = (payload) => {
+  const persistComponent = async (payload) => {
     const existing = readLocalCustomComponents();
-    const merged = mergeById([...existing, withCustomSource(payload)]);
+    const customPayload = withCustomSource(payload);
+    const merged = mergeById([...existing, customPayload]);
     writeLocalCustomComponents(merged);
-    invalidateComponentsCache();
+    try {
+      await writeFileCustomComponent(customPayload);
+    } finally {
+      invalidateComponentsCache();
+    }
   };
 
-  const saveCurrent = () => {
+  const saveCurrent = async () => {
     if (!componentWithFireTiming) return;
+    setStatus('Enregistrement...');
     const payload = {
       ...componentWithFireTiming,
       ...summary,
@@ -272,13 +299,18 @@ function Custom() {
         databaseId: 'custom',
       },
     };
-    persistComponent(payload);
-    setComponent(cloneComponent(payload));
-    setStatus('Modifications enregistrees dans components_custom.');
+    try {
+      await persistComponent(payload);
+      setComponent(cloneComponent(payload));
+      setStatus('Modifications enregistrees dans components_custom.json.');
+    } catch (error) {
+      setStatus(`Sauvegarde fichier impossible. Copie locale conservee. ${error.message}`);
+    }
   };
 
-  const createNew = () => {
+  const createNew = async () => {
     if (!component || !componentWithFireTiming) return;
+    setStatus('Enregistrement...');
     const newId = makeUuid();
     const payload = {
       ...componentWithFireTiming,
@@ -291,9 +323,13 @@ function Custom() {
         databaseId: 'custom',
       },
     };
-    persistComponent(payload);
-    setComponent(cloneComponent(payload));
-    setStatus(`Nouveau composant cree (${newId}).`);
+    try {
+      await persistComponent(payload);
+      setComponent(cloneComponent(payload));
+      setStatus(`Nouveau composant cree dans components_custom.json (${newId}).`);
+    } catch (error) {
+      setStatus(`Sauvegarde fichier impossible. Copie locale conservee (${newId}). ${error.message}`);
+    }
   };
 
   if (!component) {
@@ -307,6 +343,8 @@ function Custom() {
 
   const layers = componentWithFireTiming?.structure?.layers ?? [];
   const woodBeamSpanResult = componentWithFireTiming?.fire_resistance?.wood_beam_span ?? null;
+  const woodStudCompressionResult = componentWithFireTiming?.fire_resistance?.wood_stud_compression ?? null;
+  const woodCapacityTable = componentWithFireTiming?.fire_resistance?.wood_capacity_table ?? null;
   const pxPerMmY = 1;
   const pxPerMmX = DEFAULT_PX_PER_MM_X;
   const title = component?.translations?.[lang]?.name || component?.serialNo || component?.id || '';
@@ -388,10 +426,20 @@ function Custom() {
         </div>
 
         <div style={{ marginBottom: '16px' }}>
-          <strong>{t.thickness}:</strong> {formatNumber(summary?.thickness_mm ?? 0, 0)} mm | <strong>{t.surface_mass}:</strong>{' '}
-          {formatNumber(summary?.weight_kg_m2 ?? 0, 1)} kg/m2 | <strong>{t.gwp}:</strong> {formatNumber(summary?.gwp_kgco2e_m2 ?? 0, 1)} kgCO2e/m2 |{' '}
-          <strong>{t.uValue}:</strong>{' '}
-          {summary?.uValue_W_m2K === null ? 'N/A' : `${formatNumber(summary?.uValue_W_m2K, 3)} W/m2K`}
+          <div>
+            <strong>Valeurs base:</strong>{' '}
+            {t.thickness}: {databaseSummary?.thickness_mm === null ? 'N/A' : `${formatNumber(databaseSummary?.thickness_mm, 0)} mm`} |{' '}
+            {t.surface_mass}: {databaseSummary?.weight_kg_m2 === null ? 'N/A' : `${formatNumber(databaseSummary?.weight_kg_m2, 1)} kg/m2`} |{' '}
+            {t.gwp}: {databaseSummary?.gwp_kgco2e_m2 === null ? 'N/A' : `${formatNumber(databaseSummary?.gwp_kgco2e_m2, 1)} kgCO2e/m2`} |{' '}
+            {t.uValue}: {databaseSummary?.uValue_W_m2K === null ? 'N/A' : `${formatNumber(databaseSummary?.uValue_W_m2K, 3)} W/m2K`}
+          </div>
+          <div>
+            <strong>Valeurs recalculees:</strong>{' '}
+            {t.thickness}: {formatNumber(summary?.thickness_mm ?? 0, 0)} mm |{' '}
+            {t.surface_mass}: {formatNumber(summary?.weight_kg_m2 ?? 0, 1)} kg/m2 |{' '}
+            {t.gwp}: {formatNumber(summary?.gwp_kgco2e_m2 ?? 0, 1)} kgCO2e/m2 |{' '}
+            {t.uValue}: {summary?.uValue_W_m2K === null ? 'N/A' : `${formatNumber(summary?.uValue_W_m2K, 3)} W/m2K`}
+          </div>
         </div>
 
         <h2>{t.structure}</h2>
@@ -412,6 +460,9 @@ function Custom() {
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.fiberDirection}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.surface_mass}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>Resistance thermique</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>GWP</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>Duree de vie</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.reactionToFire}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_burning_min}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_fire_start_min}</th>
@@ -524,12 +575,18 @@ function Custom() {
                     </select>
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <input
-                      type="number"
-                      value={layer?.weight_kg_m2 ?? ''}
-                      onChange={(event) => handleLayerNumberChange(index, 'weight_kg_m2', event.target.value)}
-                      style={{ width: '90px' }}
-                    />
+                    {layer?.weight_kg_m2 === null ? 'N/A' : formatNumber(layer?.weight_kg_m2, 2)}
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    {layer?.thermalResistance_m2K_W === null ? 'N/A' : formatNumber(layer?.thermalResistance_m2K_W, 3)}
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    {layer?.gwp_kgco2e_m2 === null ? 'N/A' : formatNumber(layer?.gwp_kgco2e_m2, 2)}
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    {layer?.serviceLife_years === null || layer?.serviceLife_years === undefined
+                      ? 'N/A'
+                      : `${formatNumber(layer.serviceLife_years, 0)} ans`}
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
@@ -567,18 +624,39 @@ function Custom() {
           
         </div>
         <div style={{ marginTop: '16px' }}>
-          <h3>Resultat calculateWoodBeamSpan</h3>
-          <pre
-            style={{
-              background: '#f6f6f6',
-              border: '1px solid #ddd',
-              padding: '10px',
-              overflowX: 'auto',
-              whiteSpace: 'pre-wrap',
-            }}
-          >
-            {woodBeamSpanResult ? JSON.stringify(woodBeamSpanResult, null, 2) : 'N/A'}
-          </pre>
+          <h3>Resistance bois</h3>
+          {woodCapacityTable ? (
+            <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#fff' }}>
+              <thead>
+                <tr style={{ backgroundColor: '#eee' }}>
+                  <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'left' }}>Verification</th>
+                  <th style={{ border: '1px solid #ccc', padding: '8px' }}>Temperature normale</th>
+                  <th style={{ border: '1px solid #ccc', padding: '8px' }}>R30</th>
+                  <th style={{ border: '1px solid #ccc', padding: '8px' }}>R60</th>
+                </tr>
+              </thead>
+              <tbody>
+                {woodCapacityTable.rows.map((row) => (
+                  <tr key={row.label}>
+                    <td style={{ border: '1px solid #ccc', padding: '8px' }}>{row.label}</td>
+                    <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>
+                      {formatCapacityCell(row.normal_temperature)}
+                    </td>
+                    <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>
+                      {formatCapacityCell(row.R30)}
+                    </td>
+                    <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>
+                      {formatCapacityCell(row.R60)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <div style={{ background: '#f6f6f6', border: '1px solid #ddd', padding: '10px' }}>
+              {woodBeamSpanResult?.error || woodStudCompressionResult?.error || 'N/A'}
+            </div>
+          )}
         </div>
         {layers.length > 0 && (
           <div style={{ marginTop: '32px', display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
