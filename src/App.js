@@ -3,6 +3,8 @@ import Filters from './page/Filters';
 import TbzResult from './page/tbz_result';
 import Element from './page/Element';
 import Custom from './page/Custom';
+import Dashboard from './page/Dashboard';
+import Building from './page/Building';
 import Material from './page/Material';
 import Product from './page/Product';
 import React, { useState } from 'react';
@@ -22,6 +24,8 @@ function App() {
               <Route path="/tbz-result" element={<TbzResult />} />
               <Route path="/element/:id" element={<Element />} />
               <Route path="/custom/:id" element={<Custom />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/building" element={<Building />} />
               <Route path="/material/:id" element={<Material />} />
               <Route path="/product/:id" element={<Product />} />
             </Routes>

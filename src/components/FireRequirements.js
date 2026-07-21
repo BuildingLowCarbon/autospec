@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import fireRequirementsDb from "../data/fire_requirements.json";
 // Mais le module utilise surtout les libellés du JSON de fire_requirements
 
 /**
@@ -30,8 +31,7 @@ export default function FireRequirementModule({
   initialSelection = null,
   initialApplied = false,
 }) {
-  const [db, setDb] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [db] = useState(fireRequirementsDb);
 
   // Sélections
   const [useVal, setUseVal] = useState(initialSelection?.use ?? "residential");
@@ -45,28 +45,6 @@ export default function FireRequirementModule({
     if (!resetApplySignal) return;
     setApplyToFilters(false);
   }, [resetApplySignal]);
-
-  // Load JSON from public
-  useEffect(() => {
-    let canceled = false;
-    async function load() {
-      try {
-        setLoading(true);
-        const res = await fetch("/fire_requirements.json");
-        const json = await res.json();
-        if (!canceled) setDb(json);
-      } catch (e) {
-        console.error("Failed to load fire_requirements.json:", e);
-        if (!canceled) setDb(null);
-      } finally {
-        if (!canceled) setLoading(false);
-      }
-    }
-    load();
-    return () => {
-      canceled = true;
-    };
-  }, []);
 
   // Helpers i18n from db
   const tr = useCallback((obj) => {
@@ -266,21 +244,12 @@ export default function FireRequirementModule({
     return [elementLabel, subtypeLabel, bearingLabel].filter(Boolean).join(" ");
   };
 
-  if (loading) {
-    return (
-      <div style={boxStyle}>
-        <div style={titleStyle}>Fire requirements</div>
-        <div style={{ opacity: 0.7 }}>Loading…</div>
-      </div>
-    );
-  }
-
   if (!db) {
     return (
       <div style={boxStyle}>
         <div style={titleStyle}>Fire requirements</div>
         <div style={{ color: "crimson" }}>
-          Impossible de charger <code>/fire_requirements.json</code>
+          Impossible de charger <code>src/data/fire_requirements.json</code>
         </div>
       </div>
     );

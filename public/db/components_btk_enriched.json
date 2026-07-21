@@ -1,6 +1,6 @@
 [
   {
-    "id": "E1182571-EB70-4372-97C3-B193873F9121",
+    "id": "A1BC0207-568F-453B-8FB8-7A17635FF4E8",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -100,15 +100,22 @@
       "typeId": null
     },
     "fire_resistance": {
-      "R": "R30",
-      "EI": "EI30",
-      "REI_min": "null",
+      "REI_min": null,
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -119,7 +126,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "A707C1D2-61A9-49A0-859D-2D475F431CF2",
+    "id": "F95CC22B-141C-487F-8258-1C0B627D2F73",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -223,9 +230,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -236,7 +252,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "201D8590-1CDC-4B21-BBCD-8237AFCE5EDF",
+    "id": "0B9900E6-5601-4B1A-B53B-ED94E82840FF",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -340,9 +356,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -353,7 +378,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "FBC9AB5A-DC76-4025-87E8-05314B09946F",
+    "id": "838F3976-968A-4A50-AA5A-C190F2CD0B36",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -457,9 +482,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -470,7 +504,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "625F2E19-40A7-4159-BBA5-BF3B98B67F27",
+    "id": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -574,9 +608,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -587,7 +630,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "C851868E-DE9E-46EF-B12D-250105380008",
+    "id": "6F9895A8-1CE9-4FE0-B217-FA41D86EBEEF",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -846,9 +889,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -859,7 +911,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "8B9F86ED-90F3-4FDE-AF3F-695EACC099F5",
+    "id": "FB10C803-69E7-4F7B-86A9-EBADCD7A2ADB",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -1118,9 +1170,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -1131,7 +1192,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "B39513E8-767F-46A8-9B29-8BC868714F56",
+    "id": "7289D95D-A883-47DD-BC5F-EC92AC89D64E",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -1390,9 +1451,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -1403,7 +1473,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "A818210B-E2B3-44CB-9775-968EDBEC62F8",
+    "id": "09556D3E-E1A9-49BF-835D-008EBC012EB8",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -1662,9 +1732,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -1675,7 +1754,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "9819E175-8460-494A-8541-E7D9DE330B7A",
+    "id": "48C6C41D-A755-4B32-A871-257BD9145306",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -1965,9 +2044,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -1978,7 +2066,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "75CFC6B2-01DA-4DF0-B108-8580AFC1D633",
+    "id": "FFBD468A-0226-41EF-91C0-529B4244D517",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -2268,9 +2356,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -2281,7 +2378,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "63B38727-94E4-4356-8AEB-43A3AA09FF5F",
+    "id": "85517E33-2A48-4EF8-AE42-5E05B79495F0",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -2571,9 +2668,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -2584,7 +2690,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "464E4CB1-B76F-4100-BF03-B5891E3D676B",
+    "id": "80802783-0941-44F0-BCB3-0BD2B4DB7B20",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -2874,9 +2980,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -2887,7 +3002,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "73842089-1FD0-4B47-9A6A-1720344C30D7",
+    "id": "89AC8B07-895C-40E5-A31B-F89C6B2174E9",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3177,9 +3292,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3190,7 +3314,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "6D7B49FC-CFBA-4923-8A60-5F31B7F0607A",
+    "id": "AB529E98-A4D2-490C-BC60-579D5F414360",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3263,9 +3387,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3276,7 +3409,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "70CFD60A-8916-4FAE-BC14-56586EDD4817",
+    "id": "C2C6E60D-FF18-44FF-94FF-DFC804C8373A",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3349,9 +3482,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3362,7 +3504,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "54AAC991-4BC0-4F51-ACCC-A2482D5EE200",
+    "id": "31297046-E692-4311-A728-3A6BDCB35398",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3435,9 +3577,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3448,7 +3599,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "E270ADAC-B30B-4335-AA5C-5688EDE3A5AF",
+    "id": "642BDFB4-8037-47EA-943A-4736C925D219",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3521,9 +3672,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3534,7 +3694,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "0E4F7CD3-8D57-4BE1-80D3-217396A936BB",
+    "id": "15C2F2EF-DA41-44EF-8A97-FEA82BAD11AA",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3731,9 +3891,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3744,7 +3913,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "A4178A34-6AF7-4AC6-B9CA-4520EF26F7E7",
+    "id": "67CB379F-B8A8-49FD-A142-73A89B9BCE7E",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3941,9 +4110,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -3954,7 +4132,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "00825699-E34F-40B0-BEE3-AE125211F0CC",
+    "id": "0D0D1253-BA08-437C-A86E-C907573128DA",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4151,9 +4329,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -4164,7 +4351,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "80B12A75-E316-4869-88D7-040E3CAE2512",
+    "id": "B028B7B4-4A89-455F-A85F-2A65ADF38257",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4361,9 +4548,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -4374,7 +4570,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "82B75733-5F78-42F4-9B6B-295EF073B20C",
+    "id": "C26AD05E-9380-4F45-8D0E-00ECC158AEF3",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4602,9 +4798,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -4615,7 +4820,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "235BA256-1D9A-4EF9-A31F-59E1F452281C",
+    "id": "27DC8822-0798-4B53-8557-8925FCD2294A",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4843,9 +5048,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -4856,7 +5070,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "04499885-81B8-4EAD-BBAC-68CE76294A7C",
+    "id": "35BA5BCE-408F-4250-822C-C2D236C345E8",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -5146,9 +5360,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -5159,7 +5382,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "1605D640-8EF2-4395-8A7C-74329B1C3AEB",
+    "id": "DA79535D-B0D4-4B4F-8648-AC5C3FD703AF",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -5449,9 +5672,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -5462,7 +5694,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "4747D3D7-DD9E-4F16-8F1C-4A2630106DE0",
+    "id": "CC8F5E3A-92B6-4CFC-A427-C2271D0A0E20",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -5752,9 +5984,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -5765,7 +6006,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "890EB36B-B383-4BED-B4C3-E5F72B7BDC76",
+    "id": "3E2E996D-20F0-4DC1-9AD6-0CF0C705C297",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -6086,9 +6327,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -6099,7 +6349,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "05B6B7FD-1CF4-4A18-911A-FDC286546FE1",
+    "id": "0CCD55A5-1988-470A-AB71-C81464F9EABC",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -6420,9 +6670,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -6433,7 +6692,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "E04B00FE-C45A-4AF1-AC31-C79A692C7688",
+    "id": "6C31C61A-17D3-49DF-831E-5A40B438F7A9",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -6785,9 +7044,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -6798,7 +7066,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "5ADD56E6-4146-4F82-B4FB-7A43FD0767E8",
+    "id": "5526B12B-6DDB-4B58-ADF1-51C40A5A23C0",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -7119,9 +7387,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -7132,7 +7409,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "7038DF81-74DF-475F-BE08-4199B17E5FA6",
+    "id": "19BB87FE-5074-404F-B78B-4AF57BA536D7",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -7453,9 +7730,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -7466,7 +7752,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "F6FB68DE-982A-4B92-B376-BD940ACB655D",
+    "id": "F030B356-D2F1-465D-8CEC-A493DA12599C",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -7787,9 +8073,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -7800,7 +8095,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "F3D5F7C4-6ADE-4A5B-8E99-B8904F051BB7",
+    "id": "36BED2EC-47F3-48A3-8A16-021E8759ABD4",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -8121,9 +8416,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -8134,7 +8438,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "63DC883E-0AF9-41BA-861E-15323B4D9C23",
+    "id": "98FABCA3-4D35-4269-A90D-4135E49F9652",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -8455,9 +8759,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -8468,7 +8781,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "58CC4E1F-223A-48F4-8946-D5D257854A43",
+    "id": "04A1572C-2F6D-45FB-9DAB-513C0E04077B",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8634,9 +8947,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -8647,7 +8969,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "6DFD8EEC-B15B-429E-8242-05983CD67DAC",
+    "id": "79259ABA-C945-40E6-9D06-AE24A77FD59D",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8844,9 +9166,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -8857,7 +9188,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "E7F8A1C2-2B81-473A-8AC1-E98A87049077",
+    "id": "90F55DD7-A06C-4384-ACAD-C82E62A17390",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9054,9 +9385,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -9067,7 +9407,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "01C296DA-8A94-4297-BDE0-3631598FF054",
+    "id": "D782208E-AC1E-4CA5-82C0-C26471FFD6AF",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9326,9 +9666,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -9339,7 +9688,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "86546276-6681-4234-85DF-FB3BF76A4DD1",
+    "id": "FB770052-4FDF-4E0C-ACC6-646BEB6414A1",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9722,9 +10071,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -9735,7 +10093,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "5C49DAEE-2F59-4C25-A3E1-5AEC3C3CEA23",
+    "id": "6E5ECB11-AA5D-475D-861B-701244CAEC9F",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9870,9 +10228,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -9883,7 +10250,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "D040A41B-10D2-4B76-B523-90E2B09B5D47",
+    "id": "9DFAB987-28AE-4ADA-ACBB-8A61BD4F4350",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -10111,9 +10478,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -10124,7 +10500,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "CB3B4529-5F88-43A2-A123-3092411DBFB3",
+    "id": "19252197-2F93-4910-A759-BFF6B83B3CA3",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -10414,9 +10790,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -10427,7 +10812,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "80EA1BCE-AB2E-4ADB-B4A0-34E29C3BCEF9",
+    "id": "939B4656-D924-41F8-80B1-020204C9B216",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -10717,9 +11102,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -10730,7 +11124,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "5BC5C482-ECE1-463F-B115-1D3EF3E3DA23",
+    "id": "E9A3A5F9-8DA1-4986-AEC5-229ED226E618",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -10927,9 +11321,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -10940,7 +11343,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "8C3670C9-09E0-4F2D-97CB-573EA4A3C184",
+    "id": "DC361553-4429-4B1F-A5C4-6209D1A1492D",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -11137,9 +11540,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11150,7 +11562,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "64CFD47F-EA95-4550-9231-6D55CF3FB031",
+    "id": "16F9D748-C2B6-4ABE-869E-D3F62C47DFE4",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -11347,9 +11759,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11360,7 +11781,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "62F28CF4-D399-4B28-8BD5-FCD46EA2C700",
+    "id": "1A84C3A6-32BB-4009-B08B-C2D4B1B07555",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -11433,9 +11854,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11446,7 +11876,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "CD96D6F5-6E06-4DAF-9800-0F2D7FFE728B",
+    "id": "16280455-22E2-4A8A-99B4-775191C5EBD6",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -11519,9 +11949,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11532,7 +11971,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "6DCED143-8495-4C46-93DD-03D77331AED9",
+    "id": "C4756832-D221-4FB4-9A97-04DFB7572254",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -11667,9 +12106,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11680,13 +12128,13 @@
     "_rawTaxo": {}
   },
   {
-    "id": "37253F47-3EDE-44B1-B50E-0EF343C282BC",
+    "id": "0B52155E-4351-426E-B1BF-65A8D7A66A13",
     "parent": null,
     "serialNo": null,
-    "categoryId": null,
+    "categoryId": "partition_wall_single_shell",
     "thickness_mm": 52.5,
     "weight_kg_m2": 11.425,
-    "uValue_W_m2K": 0.9523809523809523,
+    "uValue_W_m2K": 0.7633587786259541,
     "gwp_kgco2e_m2": 4.078125,
     "spanMax_m": null,
     "claddingId": null,
@@ -11846,9 +12294,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -11859,7 +12316,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "A7E1B429-8363-4BD5-8EEC-4DA208534874",
+    "id": "D95CBA49-A350-44AE-B4D7-A2731C89144D",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -12056,9 +12513,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -12069,7 +12535,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "0FF2BAAA-8D47-415C-A6DD-C8BD9EB45DE5",
+    "id": "1710929D-D685-43E7-9FAE-E78CDAA395B7",
     "parent": null,
     "serialNo": null,
     "categoryId": null,
@@ -12204,9 +12670,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",
@@ -12217,7 +12692,7 @@
     "_rawTaxo": {}
   },
   {
-    "id": "5B8EA49C-647F-4F86-BDBF-A7614C24DC59",
+    "id": "8069F41C-D0FD-4A73-A980-92A005DDCE38",
     "parent": null,
     "serialNo": null,
     "categoryId": null,
@@ -12352,9 +12827,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "BauTeilKatalog",

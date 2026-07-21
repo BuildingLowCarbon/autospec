@@ -7,6 +7,27 @@ import LangContext from '../context/LangContext';
 import loadComponents from '../utils/loadComponents';
 import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
+import { getAcousticInsulation } from '../utils/acoustic';
+import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
+
+const compactTableStyle = {
+  width: 'auto',
+  maxWidth: '100%',
+  borderCollapse: 'collapse',
+  marginTop: '16px',
+  backgroundColor: '#fff',
+};
+
+const tableCellStyle = {
+  border: '1px solid #ccc',
+  padding: '8px',
+  whiteSpace: 'nowrap',
+};
+
+const tableHeadCellStyle = {
+  ...tableCellStyle,
+  textAlign: 'left',
+};
 
 function Element() {
   const { id } = useParams();
@@ -15,11 +36,19 @@ function Element() {
   const [products, setProducts] = useState([]);
   const { lang, setLang } = useContext(LangContext);
   const t = translations[lang];
-  const layers = data?.structure?.layers ?? [];
   const pxPerMmY = 1;
   const pxPerMmX = DEFAULT_PX_PER_MM_X;
   const title = data?.translations?.[lang]?.name || data?.serialNo || data?.id || '';
   const description = data?.translations?.[lang]?.description || '';
+  const acoustic = getAcousticInsulation(data);
+  const componentWithFireTiming = useMemo(
+    () => (data ? applyCustomFireTimingToComponent(data, materials, products) : null),
+    [data, materials, products],
+  );
+  const layers = componentWithFireTiming?.structure?.layers ?? data?.structure?.layers ?? [];
+  const woodBeamSpanResult = componentWithFireTiming?.fire_resistance?.wood_beam_span ?? null;
+  const woodStudCompressionResult = componentWithFireTiming?.fire_resistance?.wood_stud_compression ?? null;
+  const woodCapacityTable = componentWithFireTiming?.fire_resistance?.wood_capacity_table ?? null;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,6 +93,27 @@ function Element() {
     if (Number.isNaN(num)) return 'N/A';
     return num.toFixed(decimals);
   };
+  const formatSignedNumber = (value, decimals = 0) => {
+    if (value === null || value === undefined || value === '') return 'N/A';
+    const num = Number(value);
+    if (Number.isNaN(num)) return 'N/A';
+    const formatted = num.toFixed(decimals);
+    return num > 0 ? `+${formatted}` : formatted;
+  };
+  const formatCapacityCell = (cell) => {
+    if (!cell || cell.value === null || cell.value === undefined) return 'N/A';
+    return `${formatNumber(cell.value, 2)} ${cell.unit ?? ''}`.trim();
+  };
+  const renderCorrectors = (correctors, selectedCorrector) => {
+    if (!correctors?.length) return 'N/A';
+    return correctors
+      .map((corrector) => {
+        const selectedLabel = t.acoustic_selected_corrector ?? 'retained';
+        const suffix = corrector.key === selectedCorrector?.key ? ` (${selectedLabel})` : '';
+        return `${corrector.label}: ${formatSignedNumber(corrector.value, 0)} dB${suffix}`;
+      })
+      .join(', ');
+  };
   if (!data) return <p>Chargement...</p>;
 
   return (
@@ -107,6 +157,82 @@ function Element() {
         <p>
           <strong>{t.source_reference} :</strong> {data.source?.externalId ?? 'N/A'}
         </p>
+
+        <h2>{t.acoustic_insulation}</h2>
+        <div style={{ overflowX: 'auto' }}>
+        <table style={compactTableStyle}>
+          <thead>
+            <tr style={{ backgroundColor: '#eee' }}>
+              <th style={tableHeadCellStyle}>{t.name}</th>
+              <th style={tableHeadCellStyle}>{t.acoustic_base_value ?? 'Isolation'}</th>
+              <th style={tableHeadCellStyle}>{t.acoustic_corrector ?? 'Correcteur retenu'}</th>
+              <th style={tableHeadCellStyle}>{t.acoustic_corrected_value ?? 'Valeur corrigee'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={tableCellStyle}>Rw</td>
+              <td style={tableCellStyle}>
+                {acoustic.rw != null ? `${formatNumber(acoustic.rw, 0)} dB` : 'N/A'}
+              </td>
+              <td style={tableCellStyle}>
+                {renderCorrectors(acoustic.rwCorrectors, acoustic.rwCorrector)}
+              </td>
+              <td style={tableCellStyle}>
+                {acoustic.rwCorrected != null ? `${formatNumber(acoustic.rwCorrected, 0)} dB` : 'N/A'}
+              </td>
+            </tr>
+            <tr>
+              <td style={tableCellStyle}>Ln,w</td>
+              <td style={tableCellStyle}>
+                {acoustic.lnw != null ? `${formatNumber(acoustic.lnw, 0)} dB` : 'N/A'}
+              </td>
+              <td style={tableCellStyle}>
+                {renderCorrectors(acoustic.lnwCorrectors, acoustic.lnwCorrector)}
+              </td>
+              <td style={tableCellStyle}>
+                {acoustic.lnwCorrected != null ? `${formatNumber(acoustic.lnwCorrected, 0)} dB` : 'N/A'}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h2>Portées</h2>
+        {woodCapacityTable ? (
+          <div style={{ overflowX: 'auto' }}>
+            <table style={compactTableStyle}>
+              <thead>
+                <tr style={{ backgroundColor: '#eee' }}>
+                  <th style={tableHeadCellStyle}>Verification</th>
+                  <th style={tableHeadCellStyle}>Temperature normale</th>
+                  <th style={tableHeadCellStyle}>R30</th>
+                  <th style={tableHeadCellStyle}>R60</th>
+                </tr>
+              </thead>
+              <tbody>
+                {woodCapacityTable.rows.map((row) => (
+                  <tr key={row.label}>
+                    <td style={tableCellStyle}>{row.label}</td>
+                    <td style={{ ...tableCellStyle, textAlign: 'right' }}>
+                      {formatCapacityCell(row.normal_temperature)}
+                    </td>
+                    <td style={{ ...tableCellStyle, textAlign: 'right' }}>
+                      {formatCapacityCell(row.R30)}
+                    </td>
+                    <td style={{ ...tableCellStyle, textAlign: 'right' }}>
+                      {formatCapacityCell(row.R60)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div style={{ display: 'inline-block', background: '#f6f6f6', border: '1px solid #ddd', padding: '10px' }}>
+            {woodBeamSpanResult?.error || woodStudCompressionResult?.error || 'N/A'}
+          </div>
+        )}
 
         <h2>{t.structure}</h2>
         <table

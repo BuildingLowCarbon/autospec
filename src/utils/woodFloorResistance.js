@@ -1,4 +1,6 @@
 import sia265Data from '../data/sia265.json' with { type: 'json' };
+import sia261Data from '../data/sia261.json' with { type: 'json' };
+import sia20Data from '../data/sia20.json' with { type: 'json' };
 
 /**
  * Calcul simplifié de portée pour poutre bois simplement appuyée (2 pivots)
@@ -7,9 +9,11 @@ import sia265Data from '../data/sia265.json' with { type: 'json' };
  * IMPORTANT :
  * - Ce code est un outil de prédimensionnement / automatisation.
  * - Il ne remplace pas un projet d’ingénierie complet.
- * - Déversement, vibrations, entailles, trous, assemblages, appuis locaux,
+ * - Déversement, entailles, trous, assemblages, appuis locaux,
  *   compression perpendiculaire au fil, stabilité globale, etc. ne sont pas
  *   traités ici.
+ * - Les vibrations sont traitées par une approximation de poutre simplement
+ *   appuyée, à utiliser comme contrainte de prédimensionnement.
  *
  * UNITÉS :
  * - dimensions en mm
@@ -34,105 +38,13 @@ import sia265Data from '../data/sia265.json' with { type: 'json' };
  * Les catégories E (entrepôts / fabrication) doivent être définies
  * selon le projet ; la norme ne donne pas une valeur unique générale.
  */
-const OCCUPANCY = {
-  A1_habitation: {
-    label: "Habitation",
-    qk_kN_m2: 2.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie A1"
-  },
-  A2_balcon: {
-    label: "Balcon",
-    qk_kN_m2: 3.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie A2"
-  },
-  A3_escalier: {
-    label: "Escalier habitation",
-    qk_kN_m2: 4.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie A3"
-  },
-  B_bureaux: {
-    label: "Bureaux",
-    qk_kN_m2: 3.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie B"
-  },
-  C1_reunion_tables: {
-    label: "Locaux de réunion avec tables/chaises",
-    qk_kN_m2: 3.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie C1"
-  },
-  C2_reunion_sieges_fixes: {
-    label: "Locaux de réunion à sièges fixes",
-    qk_kN_m2: 4.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie C2"
-  },
-  C3_reunion_libre: {
-    label: "Locaux de réunion librement accessibles / sport / jeu",
-    qk_kN_m2: 5.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie C3"
-  },
-  D_vente: {
-    label: "Surfaces de vente",
-    qk_kN_m2: 5.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie D"
-  },
-  F_parking_lt_3_5t: {
-    label: "Parking < 3.5 t",
-    qk_kN_m2: 2.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie F"
-  },
-  G_parking_3_5t_16t: {
-    label: "Parking / accès 3.5 t à 16 t",
-    qk_kN_m2: 5.0,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie G"
-  },
-  H_toiture_non_accessible: {
-    label: "Toiture non accessible",
-    qk_kN_m2: 0.4,
-    source: "SIA 261:2020, chap. 8, tableau 8, catégorie H"
-  },
-  CUSTOM: {
-    label: "Charge d'exploitation personnalisée",
-    qk_kN_m2: null,
-    source: "Valeur entrée par l’utilisateur"
-  }
-};
+const OCCUPANCY = sia261Data.occupancy;
 
 /**
  * Critères de flèche indicatifs
  * Source : SIA 260:2013, annexe A, tableau 3
  */
-const DEFLECTION_LIMITS = {
-  fragile_incorporated: {
-    label: "Éléments incorporés fragiles",
-    ratio: 500,
-    source: "SIA 260:2013, annexe A, tableau 3"
-  },
-  ductile_incorporated: {
-    label: "Éléments incorporés ductiles",
-    ratio: 350,
-    source: "SIA 260:2013, annexe A, tableau 3"
-  },
-  use_operation: {
-    label: "Utilisation et exploitation",
-    ratio: 350,
-    source: "SIA 260:2013, annexe A, tableau 3"
-  },
-  comfort: {
-    label: "Confort",
-    ratio: 350,
-    source: "SIA 260:2013, annexe A, tableau 3"
-  },
-  appearance: {
-    label: "Aspect",
-    ratio: 300,
-    source: "SIA 260:2013, annexe A, tableau 3"
-  },
-  CUSTOM: {
-    label: "Critère personnalisé",
-    ratio: null,
-    source: "Valeur entrée par l’utilisateur"
-  }
-};
+const DEFLECTION_LIMITS = sia20Data.deflectionLimits;
 
 /* Caracteristiques bois et vitesses de combustion centralisees dans src/data/sia265.json. */
 
@@ -291,9 +203,10 @@ function maxSpanByShearAmbient_m({ fv_d_N_mm2, A_mm2, qd_kN_m }) {
  * w = 5 q L^4 / (384 E I)
  *
  * On inverse pour obtenir Lmax à partir d’un critère w <= L / ratio :
- * 5 q L^4 / (384 E I) <= L / ratio
- * => 5 q L^3 <= 384 E I / ratio
- * => Lmax = ((384 E I) / (5 q ratio))^(1/3)
+ * w <= L / ratio
+ * => 5 q L^4 * ratio <= 384 E I * L
+ * => L^3 <= 384 E I / (5 q ratio)
+ * => Lmax = (384 E I / (5 q ratio))^(1/3)
  *
  * Source critères de ratio : SIA 260 annexe A tableau 3
  */
@@ -306,6 +219,54 @@ function maxSpanByDeflection_m({ E_N_mm2, I_mm4, qk_variableOnly_kN_m, ratio }) 
   const L_mm = Math.cbrt((384 * E_N_mm2 * I_mm4) / (5 * qk_variableOnly_kN_m * ratio));
   return L_mm / 1000;
 }
+
+/**
+ * Portée max par vibration, approximation de poutre simplement appuyée :
+ * f1 = (pi / (2 L^2)) * sqrt(EI / m)
+ * avec f1 >= f_min.
+ *
+ * Les garde-fous retournent une portée nulle plutôt que de faire échouer les
+ * vérifications résistance/flèche/feu existantes.
+ */
+function maxSpanByVibration_m({
+  E_N_m2,
+  I_m4,
+  m_line_kg_m,
+  f_min_Hz
+}) {
+  const values = [E_N_m2, I_m4, m_line_kg_m, f_min_Hz];
+  if (!values.every((value) => Number.isFinite(value) && value > 0)) {
+    return null;
+  }
+
+  return Math.sqrt(
+    (Math.PI / (2 * f_min_Hz)) * Math.sqrt((E_N_m2 * I_m4) / m_line_kg_m)
+  );
+}
+
+function governingSpan(entries) {
+  const governing = entries
+    .filter(({ value }) => Number.isFinite(value) && value > 0)
+    .reduce(
+      (current, entry) => (
+        current == null || entry.value < current.value
+          ? entry
+          : current
+      ),
+      null
+    );
+
+  return {
+    L_m: governing?.value ?? null,
+    criteria: governing?.criteria ?? null
+  };
+}
+
+const VIBRATION_MISSING_F_MIN_WARNING =
+  "Vérification vibration non effectuée : f_min_Hz non défini. La SIA 260/265 ne fixe pas ici de seuil unique ; fournir une valeur projet ou une méthode choisie.";
+
+const FIRE_MINIMUM_WIDTH_WARNING =
+  "Largeur minimale avant incendie non respectée pour action simultanée du feu sur plusieurs faces selon SIA 265 §4.5.2.4.";
 
 /* ========================================================================== */
 /* 4) CALCUL INCENDIE                                                         */
@@ -360,11 +321,15 @@ function calcBurnThroughTime_min({
  * - Eq. (50) dchar,n = beta_n_mm_min * t
  *
  * Exposition :
- * - 3 faces : côtés + dessous
+ * - 1 face : sous-face uniquement
+ *   bfi = b
+ *   hfi = h - def
+ *
+ * - 3 faces : deux côtés + sous-face
  *   bfi = b - 2*def
  *   hfi = h - def
  *
- * - 4 faces :
+ * - 4 faces : deux côtés + sous-face + face supérieure
  *   bfi = b - 2*def
  *   hfi = h - 2*def
  */
@@ -387,15 +352,20 @@ function residualSectionFire({
   const d_char_mm = beta_n_mm_min * t_exposed_min;
   const d_eff_mm = t_exposed_min > 0 ? d_char_mm + d_red_mm : 0;
 
-  let bfi_mm = b_mm - 2 * d_eff_mm;
+  let bfi_mm;
   let hfi_mm;
 
-  if (exposureFaces === 3) {
+  if (exposureFaces === 1) {
+    bfi_mm = b_mm;
+    hfi_mm = h_mm - d_eff_mm;
+  } else if (exposureFaces === 3) {
+    bfi_mm = b_mm - 2 * d_eff_mm;
     hfi_mm = h_mm - d_eff_mm;
   } else if (exposureFaces === 4) {
+    bfi_mm = b_mm - 2 * d_eff_mm;
     hfi_mm = h_mm - 2 * d_eff_mm;
   } else {
-    throw new Error("exposureFaces doit valoir 3 ou 4.");
+    throw new Error("Ce module poutre supporte actuellement uniquement les expositions feu 1, 3 ou 4 faces.");
   }
 
   if (bfi_mm <= 0 || hfi_mm <= 0) {
@@ -432,7 +402,11 @@ function residualSectionFire({
  *
  * La norme précise cela pour action simultanée du feu sur plusieurs faces.
  */
-function checkMinimumWidthForMultiFaceFire(b_mm, fireMinutes) {
+function checkMinimumWidthForMultiFaceFire(b_mm, fireMinutes, fireExposureFaces = 3) {
+  if (fireExposureFaces <= 1) {
+    return { required_b_mm: null, ok: true, notApplicable: true };
+  }
+
   if (fireMinutes <= 30) {
     return { required_b_mm: 80, ok: b_mm >= 80 };
   }
@@ -510,7 +484,7 @@ function calculateWoodBeamSpan(input) {
     woodClass = "C24",
 
     // Feu
-    fireExposureFaces = 3,  // 3 ou 4
+    fireExposureFaces = 3,  // 1, 3 ou 4
     fireRatings_min = [30, 60],
     t_protection_min = 0, // pas de protection supplémentaire,
     fireEffectFactorOverride = null,
@@ -518,7 +492,12 @@ function calculateWoodBeamSpan(input) {
 
     // Flèche
     deflectionCriterionKey = "comfort",
-    deflectionRatioOverride = null
+    deflectionRatioOverride = null,
+
+    // Vibrations
+    vibrationCheckEnabled = true,
+    f_min_Hz = null,
+    floorMass_kg_m2 = null
   } = input;
 
   // --- validations
@@ -557,12 +536,21 @@ function calculateWoodBeamSpan(input) {
 
   // --- géométrie et propriétés
   const spacing_m = spacing_mm / 1000;
+  const b_m = b_mm / 1000;
+  const h_m = h_mm / 1000;
   const A_mm2 = rectA(b_mm, h_mm);
   const I_mm4 = rectI(b_mm, h_mm);
+  const I_m4 = (b_m * h_m ** 3) / 12;
   const W_mm3 = rectW(b_mm, h_mm);
+
+  const warnings = [];
+  const ambientWarnings = [];
 
   // --- charges linéiques
   const selfWeight_kN_m = beamSelfWeight_kN_m(b_mm, h_mm, density_kN_m3);
+  const selfWeight_kN_m2_equivalent = selfWeight_kN_m / spacing_m;
+  const totalPermanentLoadForMass_kN_m2 =
+    permanentLoad_kN_m2 + selfWeight_kN_m2_equivalent;
   const gk_kN_m = areaLoadToLineLoad(permanentLoad_kN_m2, spacing_m) + selfWeight_kN_m;
   const qk_kN_m = areaLoadToLineLoad(qk_live_kN_m2, spacing_m);
 
@@ -604,12 +592,50 @@ function calculateWoodBeamSpan(input) {
     ratio: deflectionRatio
   });
 
-  // portée à froid retenue = minimum des vérifications
-  const L_ambient_governing_m = Math.min(
-    L_bending_ambient_m,
-    L_shear_ambient_m,
-    L_deflection_m
-  );
+  // Vibration : approximation de poutre simplement appuyée pour une contrainte
+  // d'aptitude au service, ajoutée comme limite de portée à froid.
+  const E_N_m2 = Number.isFinite(Em_mean_N_mm2) ? Em_mean_N_mm2 * 1e6 : null;
+  const floorMassFromPermanentLoad_kg_m2 =
+    Number.isFinite(totalPermanentLoadForMass_kN_m2) && totalPermanentLoadForMass_kN_m2 > 0
+      ? (totalPermanentLoadForMass_kN_m2 * 1000) / 9.81
+      : null;
+  const floorMass_kg_m2_used =
+    Number.isFinite(floorMass_kg_m2) && floorMass_kg_m2 > 0
+      ? floorMass_kg_m2
+      : floorMassFromPermanentLoad_kg_m2;
+  const m_line_kg_m =
+    Number.isFinite(floorMass_kg_m2_used) && Number.isFinite(spacing_m) && spacing_m > 0
+      ? floorMass_kg_m2_used * spacing_m
+      : null;
+
+  const hasValidVibrationFrequency = Number.isFinite(f_min_Hz) && f_min_Hz > 0;
+  if (vibrationCheckEnabled && !hasValidVibrationFrequency) {
+    ambientWarnings.push(VIBRATION_MISSING_F_MIN_WARNING);
+  }
+
+  const L_vibration_m = vibrationCheckEnabled && hasValidVibrationFrequency
+    ? maxSpanByVibration_m({
+        E_N_m2,
+        I_m4,
+        m_line_kg_m,
+        f_min_Hz
+      })
+    : null;
+
+  const ambientGoverningEntries = [
+    { criteria: "bending", value: L_bending_ambient_m },
+    { criteria: "shear", value: L_shear_ambient_m },
+    { criteria: "deflection", value: L_deflection_m }
+  ];
+
+  if (vibrationCheckEnabled && L_vibration_m != null) {
+    ambientGoverningEntries.push({ criteria: "vibration", value: L_vibration_m });
+  }
+
+  // portée à froid retenue = minimum des vérifications applicables
+  const ambientGoverning = governingSpan(ambientGoverningEntries);
+  const L_ambient_governing_m = ambientGoverning.L_m;
+  const governingCriteria = ambientGoverning.criteria;
 
   // --- incendie
   const beta_n_mm_min =
@@ -623,8 +649,19 @@ function calculateWoodBeamSpan(input) {
     fireEffectFactorOverride
   });
 
-  const fireResults = fireRatings_min.map((fireMinutes) => {
-    const widthCheck = checkMinimumWidthForMultiFaceFire(b_mm, fireMinutes);
+  const fireResults = fireRatings_min
+    .filter((fireMinutes) => Number.isFinite(fireMinutes) && fireMinutes > 0)
+    .map((fireMinutes) => {
+    const fireWarnings = [];
+    const widthCheck = checkMinimumWidthForMultiFaceFire(
+      b_mm,
+      fireMinutes,
+      fireExposureFaces
+    );
+
+    if (widthCheck.ok === false) {
+      fireWarnings.push(FIRE_MINIMUM_WIDTH_WARNING);
+    }
 
     const residual = residualSectionFire({
       b_mm,
@@ -641,7 +678,8 @@ function calculateWoodBeamSpan(input) {
         fireMinutes,
         ok: false,
         reason: residual.reason,
-        widthCheck
+        widthCheck,
+        warnings: fireWarnings
       };
     }
 
@@ -672,6 +710,7 @@ function calculateWoodBeamSpan(input) {
       fireMinutes,
       ok: true,
       widthCheck,
+      warnings: fireWarnings,
       beta_n_mm_min,
       d_char_mm: residual.d_char_mm,
       d_eff_mm: residual.d_eff_mm,
@@ -686,8 +725,14 @@ function calculateWoodBeamSpan(input) {
     };
   });
 
+  warnings.push(...ambientWarnings);
+  fireResults.forEach((fireResult) => {
+    warnings.push(...(fireResult.warnings ?? []));
+  });
+
   return {
     input,
+    warnings,
     references: {
       liveLoads: occ.source,
       deflection: defl.source,
@@ -725,9 +770,18 @@ function calculateWoodBeamSpan(input) {
       qdAmbient_kN_m
     },
     ambient: {
+      warnings: ambientWarnings,
       L_bending_ambient_m,
       L_shear_ambient_m,
       L_deflection_m,
+      L_vibration_m,
+      f_min_Hz,
+      selfWeight_kN_m2_equivalent,
+      totalPermanentLoadForMass_kN_m2,
+      floorMass_kg_m2_used,
+      m_line_kg_m,
+      vibrationCheckEnabled,
+      governingCriteria,
       L_ambient_governing_m
     },
     fire: fireResults,

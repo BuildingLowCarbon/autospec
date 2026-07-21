@@ -2,6 +2,7 @@ import {
   mergeById,
   readLocalCustomComponents,
   withCustomSource,
+  writeLocalCustomComponents,
 } from './customComponentsStore';
 let cachedComponents = null;
 let cachedDbSources = null;
@@ -19,6 +20,21 @@ const fetchJson = async (path) => {
   } catch (error) {
     console.error(`Erreur de chargement pour ${path}:`, error);
     return [];
+  }
+};
+
+const fetchJsonResult = async (path) => {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) {
+      console.warn(`Impossible de charger ${path} (status ${res.status})`);
+      return { ok: false, items: [] };
+    }
+    const payload = await res.json();
+    return { ok: true, items: Array.isArray(payload) ? payload : [] };
+  } catch (error) {
+    console.error(`Erreur de chargement pour ${path}:`, error);
+    return { ok: false, items: [] };
   }
 };
 
@@ -81,8 +97,11 @@ export const loadComponents = async () => {
   );
 
   if (cachedFileCustomComponents === null) {
-    const fileCustom = await fetchJson(`${base}/db/components_custom.json`);
-    cachedFileCustomComponents = fileCustom.map((item) => withCustomSource(item));
+    const fileCustom = await fetchJsonResult(`${base}/db/components_custom.json`);
+    if (fileCustom.ok) {
+      writeLocalCustomComponents(fileCustom.items);
+    }
+    cachedFileCustomComponents = fileCustom.items.map((item) => withCustomSource(item));
   }
 
   const localCustom = readLocalCustomComponents().map((item) => withCustomSource(item));

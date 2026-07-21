@@ -6,6 +6,7 @@ import translations from '../language/translations';
 import LangContext from '../context/LangContext';
 import DropDown from '../components/DropDown';
 import FireRequirementsModule from '../components/FireRequirements';
+import AcousticRequirementsModule from '../components/AcousticRequirements';
 import SelectedItemsContext from '../context/SelectedItemsContext';
 import ComponentCard from '../components/ComponentCard';
 import FireFilter, { R_OPTIONS as FIRE_R_VALUES, EI_OPTIONS as FIRE_EI_VALUES } from '../components/FireFilter';
@@ -13,6 +14,7 @@ import RangeSlider from '../components/RangeSlider';
 import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import SourceSelector from '../components/SourceSelector';
 import ENtebTool from '../components/ENteb/ENteb_tool';
+import { getAcousticInsulation } from '../utils/acoustic';
 
 const valueSatisfies = (itemValue, selectedValue, scale) => {
   const selectedIdx = scale.indexOf(selectedValue);
@@ -36,6 +38,37 @@ const pickLowestRequirementValue = (requirements, categoryId, key, scale) => {
     if (idx < bestIdx) bestIdx = idx;
   });
   return Number.isFinite(bestIdx) ? scale[bestIdx] : null;
+};
+
+const requirementAppliesToCategory = (requirement, categoryId) => {
+  const targets = requirement?.categoryTargets?.map((category) => category.categoryId) ?? [];
+  return !categoryId || targets.includes(categoryId);
+};
+
+const pickHighestNumericRequirementValue = (requirements, categoryId, key) => {
+  let best = Number.NEGATIVE_INFINITY;
+  requirements.forEach((req) => {
+    if (!requirementAppliesToCategory(req, categoryId)) return;
+    const rawValue = req?.filter?.[key];
+    if (rawValue === null || rawValue === undefined || rawValue === '') return;
+    const value = Number(rawValue);
+    if (!Number.isFinite(value)) return;
+    if (value > best) best = value;
+  });
+  return Number.isFinite(best) ? best : null;
+};
+
+const pickLowestNumericRequirementValue = (requirements, categoryId, key) => {
+  let best = Number.POSITIVE_INFINITY;
+  requirements.forEach((req) => {
+    if (!requirementAppliesToCategory(req, categoryId)) return;
+    const rawValue = req?.filter?.[key];
+    if (rawValue === null || rawValue === undefined || rawValue === '') return;
+    const value = Number(rawValue);
+    if (!Number.isFinite(value)) return;
+    if (value < best) best = value;
+  });
+  return Number.isFinite(best) ? best : null;
 };
 
 const buildHistogram = (items, accessor, min, max, buckets = 20, options = {}) => {
@@ -64,6 +97,54 @@ const buildHistogram = (items, accessor, min, max, buckets = 20, options = {}) =
 const U_VALUE_FOCUS_MAX = 0.3;
 
 const FILTERS_STORAGE_KEY = 'autospec.filters.v1';
+const FLOOR_SPAN_RATINGS = ['R0', 'R30', 'R60'];
+
+const toFiniteNumberOrNull = (value) => {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : null;
+};
+
+const getFloorSpanForRating = (item, rating) => {
+  const fire = item?.fire_resistance ?? {};
+  const capacityTable = fire.wood_capacity_table;
+  if (capacityTable?.type === 'floor_span' && Array.isArray(capacityTable.rows)) {
+    const governingRow =
+      capacityTable.rows.find((row) => String(row?.label ?? '').toLowerCase().includes('gouvernante')) ??
+      capacityTable.rows[0];
+    const column = rating === 'R0' ? 'normal_temperature' : rating;
+    const tableValue = toFiniteNumberOrNull(governingRow?.[column]?.value);
+    if (tableValue !== null) return tableValue;
+  }
+
+  const span = fire.wood_beam_span;
+  if (!span || span.error) return null;
+  if (rating === 'R0') {
+    return toFiniteNumberOrNull(span.ambient?.L_ambient_governing_m);
+  }
+  const fireMinutes = rating === 'R30' ? 30 : rating === 'R60' ? 60 : null;
+  if (!fireMinutes) return null;
+  return toFiniteNumberOrNull(span.fire?.find((entry) => Number(entry?.fireMinutes) === fireMinutes)?.Max_span);
+};
+
+const getGoverningFloorSpan = (item, ratings = FLOOR_SPAN_RATINGS) => {
+  if (item?.categoryId !== 'floor_assembly') return null;
+  const values = ratings
+    .map((rating) => getFloorSpanForRating(item, rating))
+    .filter((value) => typeof value === 'number' && !Number.isNaN(value));
+  if (!values.length) return null;
+  return Math.min(...values);
+};
+
+const getAllFloorSpanValues = (item) =>
+  FLOOR_SPAN_RATINGS
+    .map((rating) => getFloorSpanForRating(item, rating))
+    .filter((value) => typeof value === 'number' && !Number.isNaN(value));
+
+const normalizeFloorSpanRatings = (ratings) => {
+  if (!Array.isArray(ratings)) return FLOOR_SPAN_RATINGS;
+  const normalized = ratings.filter((rating) => FLOOR_SPAN_RATINGS.includes(rating));
+  return normalized.length ? normalized : FLOOR_SPAN_RATINGS;
+};
 
 const loadPersistedFilters = () => {
   if (typeof window === 'undefined') return {};
@@ -109,6 +190,13 @@ function App() {
   const [selectedGwp, setSelectedGwp] = useState(
     Array.isArray(persistedFilters.selectedGwp) ? persistedFilters.selectedGwp : [0, 100]
   );
+  const [floorSpanRange, setFloorSpanRange] = useState([0, 10]);
+  const [selectedFloorSpan, setSelectedFloorSpan] = useState(
+    Array.isArray(persistedFilters.selectedFloorSpan) ? persistedFilters.selectedFloorSpan : [0, 10]
+  );
+  const [selectedFloorSpanRatings, setSelectedFloorSpanRatings] = useState(
+    normalizeFloorSpanRatings(persistedFilters.selectedFloorSpanRatings)
+  );
   const [uValueRange, setUValueRange] = useState([0, 1]);
   const [selectedUValue, setSelectedUValue] = useState(
     Array.isArray(persistedFilters.selectedUValue) ? persistedFilters.selectedUValue : [0, 1]
@@ -141,6 +229,15 @@ function App() {
     FIRE_EI_VALUES.includes(persistedFilters.fireEIValue) ? persistedFilters.fireEIValue : FIRE_EI_VALUES[0]
   );
   const [fireApplyResetSignal, setFireApplyResetSignal] = useState(0);
+  const [acousticReqApplied, setAcousticReqApplied] = useState(Boolean(persistedFilters.acousticReqApplied));
+  const [acousticReqSelection, setAcousticReqSelection] = useState(
+    persistedFilters.acousticReqSelection ?? {
+      requirement_level: 'normal',
+      uncertainty_dB: 2,
+    }
+  );
+  const [acousticReqRequirements, setAcousticReqRequirements] = useState([]);
+  const [acousticApplyResetSignal, setAcousticApplyResetSignal] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -154,11 +251,14 @@ function App() {
         const uVals = json
           .map((item) => item.uValue_W_m2K)
           .filter((v) => typeof v === 'number' && !Number.isNaN(v));
+        const floorSpanVals = json
+          .flatMap((item) => getAllFloorSpanValues(item))
+          .filter((v) => typeof v === 'number' && !Number.isNaN(v));
         const rwVals = json
-          .map((item) => item?.acoustic?.Rw_dB)
+          .map((item) => getAcousticInsulation(item).rwCorrected)
           .filter((v) => typeof v === 'number' && !Number.isNaN(v));
         const lnwVals = json
-          .map((item) => item?.acoustic?.Lnw_dB)
+          .map((item) => getAcousticInsulation(item).lnwCorrected)
           .filter((v) => typeof v === 'number' && !Number.isNaN(v));
         const categories = Array.from(new Set(json.map((item) => item.categoryId).filter(Boolean)));
         const minThickness = Math.min(...thicknessVals);
@@ -189,6 +289,15 @@ function App() {
         setSelectedCategory((prev) => (prev && categories.includes(prev) ? prev : ''));
         setSelectedThickness(clampRange(persistedFilters.selectedThickness, minThickness, maxThickness) ?? [minThickness, maxThickness]);
         setSelectedGwp(clampRange(persistedFilters.selectedGwp, minGwp, maxGwp) ?? [minGwp, maxGwp]);
+        if (floorSpanVals.length) {
+          const spanMin = Math.min(...floorSpanVals);
+          const spanMax = Math.max(...floorSpanVals);
+          const normalizedSpanMax = spanMax === spanMin ? spanMin + 1 : spanMax;
+          setFloorSpanRange([spanMin, normalizedSpanMax]);
+          setSelectedFloorSpan(
+            clampRange(persistedFilters.selectedFloorSpan, spanMin, normalizedSpanMax) ?? [spanMin, normalizedSpanMax]
+          );
+        }
 
         const sources = dbSources.map((src) => ({
           value: src.file,
@@ -219,6 +328,8 @@ function App() {
       selectedSources,
       selectedThickness,
       selectedGwp,
+      selectedFloorSpan,
+      selectedFloorSpanRatings,
       selectedUValue,
       selectedAcousticRw,
       selectedAcousticLnw,
@@ -226,6 +337,8 @@ function App() {
       fireEIValue,
       fireReqApplied,
       fireReqSelection,
+      acousticReqApplied,
+      acousticReqSelection,
     };
     window.sessionStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(payload));
   }, [
@@ -236,6 +349,8 @@ function App() {
     selectedSources,
     selectedThickness,
     selectedGwp,
+    selectedFloorSpan,
+    selectedFloorSpanRatings,
     selectedUValue,
     selectedAcousticRw,
     selectedAcousticLnw,
@@ -243,24 +358,35 @@ function App() {
     fireEIValue,
     fireReqApplied,
     fireReqSelection,
+    acousticReqApplied,
+    acousticReqSelection,
   ]);
 
   const baseFilteredData = useMemo(() => {
     return data.filter((item) => {
       const thickness = item.thickness_mm || 0;
       const gwp = item.gwp_kgco2e_m2 || 0;
+      const category = item.categoryId || '';
+      const floorSpan = getGoverningFloorSpan(item, selectedFloorSpanRatings);
+      const hasFloorSpan = typeof floorSpan === 'number' && !Number.isNaN(floorSpan);
+      const floorSpanFilterActive =
+        selectedFloorSpan[0] > floorSpanRange[0] || selectedFloorSpan[1] < floorSpanRange[1];
+      const floorSpanAllowed =
+        category !== 'floor_assembly' ||
+        !floorSpanFilterActive ||
+        (hasFloorSpan && floorSpan >= selectedFloorSpan[0] && floorSpan <= selectedFloorSpan[1]);
       const uVal = item.uValue_W_m2K;
       const hasUVal = typeof uVal === 'number' && !Number.isNaN(uVal);
       const uValAllowed = !hasUVal || (uVal >= selectedUValue[0] && uVal <= selectedUValue[1]);
-      const rwVal = item?.acoustic?.Rw_dB;
+      const acoustic = getAcousticInsulation(item);
+      const rwVal = acoustic.rwCorrected;
       const hasRwVal = typeof rwVal === 'number' && !Number.isNaN(rwVal);
       const rwFilterActive = selectedAcousticRw[0] > acousticRwRange[0] || selectedAcousticRw[1] < acousticRwRange[1];
-      const rwAllowed = !rwFilterActive || (hasRwVal && rwVal >= selectedAcousticRw[0] && rwVal <= selectedAcousticRw[1]);
-      const lnwVal = item?.acoustic?.Lnw_dB;
+      const rwAllowed = !rwFilterActive || !hasRwVal || (rwVal >= selectedAcousticRw[0] && rwVal <= selectedAcousticRw[1]);
+      const lnwVal = acoustic.lnwCorrected;
       const hasLnwVal = typeof lnwVal === 'number' && !Number.isNaN(lnwVal);
       const lnwFilterActive = selectedAcousticLnw[0] > acousticLnwRange[0] || selectedAcousticLnw[1] < acousticLnwRange[1];
-      const lnwAllowed = !lnwFilterActive || (hasLnwVal && lnwVal >= selectedAcousticLnw[0] && lnwVal <= selectedAcousticLnw[1]);
-      const category = item.categoryId || '';
+      const lnwAllowed = !lnwFilterActive || !hasLnwVal || (lnwVal >= selectedAcousticLnw[0] && lnwVal <= selectedAcousticLnw[1]);
       const sourceFile = item.__sourceFile || '';
       const sourceAllowed = selectedSources.length > 0 && selectedSources.includes(sourceFile);
       return (
@@ -268,6 +394,7 @@ function App() {
         thickness <= selectedThickness[1] &&
         gwp >= selectedGwp[0] &&
         gwp <= selectedGwp[1] &&
+        floorSpanAllowed &&
         uValAllowed &&
         rwAllowed &&
         lnwAllowed &&
@@ -281,6 +408,9 @@ function App() {
     selectedSources,
     selectedThickness,
     selectedGwp,
+    selectedFloorSpan,
+    selectedFloorSpanRatings,
+    floorSpanRange,
     selectedUValue,
     selectedAcousticRw,
     selectedAcousticLnw,
@@ -333,6 +463,17 @@ function App() {
     () => buildHistogram(histogramSource, (item) => item.gwp_kgco2e_m2, gwpRange[0], gwpRange[1], 24),
     [histogramSource, gwpRange]
   );
+  const floorSpanBars = useMemo(
+    () =>
+      buildHistogram(
+        histogramSource,
+        (item) => getGoverningFloorSpan(item, selectedFloorSpanRatings),
+        floorSpanRange[0],
+        floorSpanRange[1],
+        24
+      ),
+    [histogramSource, selectedFloorSpanRatings, floorSpanRange]
+  );
   const uValueBars = useMemo(
     () =>
       buildHistogram(histogramSource, (item) => item.uValue_W_m2K, uValueRange[0], uValueRange[1], 24, {
@@ -341,11 +482,11 @@ function App() {
     [histogramSource, uValueRange]
   );
   const acousticRwBars = useMemo(
-    () => buildHistogram(histogramSource, (item) => item?.acoustic?.Rw_dB, acousticRwRange[0], acousticRwRange[1], 24),
+    () => buildHistogram(histogramSource, (item) => getAcousticInsulation(item).rwCorrected, acousticRwRange[0], acousticRwRange[1], 24),
     [histogramSource, acousticRwRange]
   );
   const acousticLnwBars = useMemo(
-    () => buildHistogram(histogramSource, (item) => item?.acoustic?.Lnw_dB, acousticLnwRange[0], acousticLnwRange[1], 24),
+    () => buildHistogram(histogramSource, (item) => getAcousticInsulation(item).lnwCorrected, acousticLnwRange[0], acousticLnwRange[1], 24),
     [histogramSource, acousticLnwRange]
   );
   const safeThicknessValues = useMemo(
@@ -355,6 +496,10 @@ function App() {
   const safeGwpValues = useMemo(
     () => clampRange(selectedGwp, gwpRange[0], gwpRange[1]) ?? [gwpRange[0], gwpRange[1]],
     [selectedGwp, gwpRange]
+  );
+  const safeFloorSpanValues = useMemo(
+    () => clampRange(selectedFloorSpan, floorSpanRange[0], floorSpanRange[1]) ?? [floorSpanRange[0], floorSpanRange[1]],
+    [selectedFloorSpan, floorSpanRange]
   );
   const safeUValueValues = useMemo(
     () => clampRange(selectedUValue, uValueRange[0], uValueRange[1]) ?? [uValueRange[0], uValueRange[1]],
@@ -425,6 +570,36 @@ function App() {
     if (nextEI) setFireEIValue(nextEI);
   }, [fireReqApplied, fireReqRequirements, selectedCategory]);
 
+  useEffect(() => {
+    if (!acousticReqApplied || !acousticReqRequirements.length) return;
+    const targetCategory = selectedCategory || null;
+    const uncertainty = Number(acousticReqSelection?.uncertainty_dB);
+    const safeUncertainty = Number.isFinite(uncertainty) ? uncertainty : 0;
+    const nextRwMin = pickHighestNumericRequirementValue(acousticReqRequirements, targetCategory, 'Rw_min');
+    const nextLnwMax = pickLowestNumericRequirementValue(acousticReqRequirements, targetCategory, 'Lnw_max');
+
+    if (nextRwMin !== null) {
+      setSelectedAcousticRw(() => {
+        const lower = Math.max(acousticRwRange[0], Math.min(nextRwMin + safeUncertainty, acousticRwRange[1]));
+        return [lower, acousticRwRange[1]];
+      });
+    }
+
+    if (nextLnwMax !== null) {
+      setSelectedAcousticLnw(() => {
+        const upper = Math.max(acousticLnwRange[0], Math.min(nextLnwMax - safeUncertainty, acousticLnwRange[1]));
+        return [acousticLnwRange[0], upper];
+      });
+    }
+  }, [
+    acousticReqApplied,
+    acousticReqRequirements,
+    acousticReqSelection,
+    selectedCategory,
+    acousticRwRange,
+    acousticLnwRange,
+  ]);
+
   const pagedData = useMemo(
     () => sortedData.slice(page * itemsPerPage, (page + 1) * itemsPerPage),
     [sortedData, page, itemsPerPage]
@@ -448,11 +623,43 @@ function App() {
       setFireEIValue(val);
     }
   };
+  const handleAcousticRwChange = (values) => {
+    if (acousticReqApplied) {
+      setAcousticApplyResetSignal((signal) => signal + 1);
+      setAcousticReqApplied(false);
+    }
+    setSelectedAcousticRw(values);
+  };
+  const handleAcousticLnwChange = (values) => {
+    if (acousticReqApplied) {
+      setAcousticApplyResetSignal((signal) => signal + 1);
+      setAcousticReqApplied(false);
+    }
+    setSelectedAcousticLnw(values);
+  };
+  const toggleFloorSpanRating = (rating) => {
+    setSelectedFloorSpanRatings((prev) => {
+      const current = normalizeFloorSpanRatings(prev);
+      if (current.includes(rating)) {
+        const next = current.filter((item) => item !== rating);
+        return next.length ? next : current;
+      }
+      return FLOOR_SPAN_RATINGS.filter((item) => [...current, rating].includes(item));
+    });
+  };
   const handleFireRequirementsChange = useCallback(
     ({ applied, selection, requirements }) => {
       setFireReqApplied(applied);
       setFireReqSelection(selection);
       setFireReqRequirements(requirements);
+    },
+    []
+  );
+  const handleAcousticRequirementsChange = useCallback(
+    ({ applied, selection, requirements }) => {
+      setAcousticReqApplied(applied);
+      setAcousticReqSelection(selection);
+      setAcousticReqRequirements(requirements);
     },
     []
   );
@@ -562,6 +769,34 @@ function App() {
               formatValue={(v) => `${Math.round(v)} kg CO₂-eq/m²`}
             />
 
+            <div style={{ border: '1px solid #ccc', padding: '8px', borderRadius: '6px', marginBottom: '12px', backgroundColor: '#fff' }}>
+              <div style={{ fontWeight: 700, marginBottom: '6px' }}>Portée contraignante</div>
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                {FLOOR_SPAN_RATINGS.map((rating) => (
+                  <label key={rating} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedFloorSpanRatings.includes(rating)}
+                      onChange={() => toggleFloorSpanRating(rating)}
+                    />
+                    {rating}
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <RangeSlider
+              label="Portée (plancher)"
+              min={floorSpanRange[0]}
+              max={floorSpanRange[1]}
+              step={0.1}
+              values={safeFloorSpanValues}
+              onChange={setSelectedFloorSpan}
+              bars={floorSpanBars}
+              unit="m"
+              formatValue={(v) => `${v.toFixed(2)} m`}
+            />
+
             <RangeSlider
               label={t.uValue}
               min={uValueRange[0]}
@@ -577,23 +812,23 @@ function App() {
             />
 
              <RangeSlider
-              label={t.acoustic_insulation_Rw}
+              label={t.acoustic_rw_corrected ?? t.acoustic_insulation_Rw}
               min={acousticRwRange[0]}
               max={acousticRwRange[1]}
               step={1}
               values={safeAcousticRwValues}
-              onChange={setSelectedAcousticRw}
+              onChange={handleAcousticRwChange}
               bars={acousticRwBars}
               unit="dB"
               formatValue={(v) => `${Math.round(v)} dB`}
             />
             <RangeSlider
-              label={t.acoustic_insulation_Lnw}
+              label={t.acoustic_lnw_corrected ?? t.acoustic_insulation_Lnw}
               min={acousticLnwRange[0]}
               max={acousticLnwRange[1]}
               step={1}
               values={safeAcousticLnwValues}
-              onChange={setSelectedAcousticLnw}
+              onChange={handleAcousticLnwChange}
               bars={acousticLnwBars}
               unit="dB"
               formatValue={(v) => `${Math.round(v)} dB`}
@@ -646,6 +881,14 @@ function App() {
             initialSelection={fireReqSelection}
             initialApplied={fireReqApplied}
             onApplyChange={handleFireRequirementsChange}
+          />
+
+          <AcousticRequirementsModule
+            lang={lang}
+            resetApplySignal={acousticApplyResetSignal}
+            initialSelection={acousticReqSelection}
+            initialApplied={acousticReqApplied}
+            onApplyChange={handleAcousticRequirementsChange}
           />
         </div>
 

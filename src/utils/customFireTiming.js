@@ -117,6 +117,12 @@ const buildFloorCapacityTable = (woodBeamSpanResult) => {
         R30: null,
         R60: null,
       },
+      {
+        label: 'Portee par vibration',
+        normal_temperature: formatCapacityTableValue(woodBeamSpanResult.ambient?.L_vibration_m, 'm'),
+        R30: null,
+        R60: null,
+      },
     ],
   };
 };
@@ -196,6 +202,8 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
     const h_mm = toNumberOrNull(supportLayer?.thickness_mm);
     const spacing_mm = toNumberOrNull(supportLayer?.spacing_mm);
     const t_protection_min = toNumberOrNull(supportLayer?.time_fire_start_min) ?? 0;
+    const vibration_f_min_Hz =
+      toNumberOrNull(component?.fire_resistance?.vibration_f_min_Hz) ?? 8;
 
     if (component.categoryId === 'floor_assembly' && b_mm > 0 && h_mm > 0 && spacing_mm > 0) {
       try {
@@ -212,6 +220,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
           t_protection_min,
           deflectionCriterionKey: 'comfort',
           density_kN_m3: 5.0,
+          f_min_Hz: vibration_f_min_Hz,
         });
         woodCapacityTable = buildFloorCapacityTable(woodBeamSpanResult);
       } catch (error) {

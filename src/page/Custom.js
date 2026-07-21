@@ -75,6 +75,25 @@ const formatCapacityCell = (cell) => {
   return `${formatNumber(cell.value, 2)} ${cell.unit ?? ''}`.trim();
 };
 
+const buttonStyle = {
+  border: '1px solid #777',
+  background: '#f7f7f7',
+  borderRadius: '4px',
+  padding: '7px 12px',
+  color: '#222',
+  cursor: 'pointer',
+  textDecoration: 'none',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  lineHeight: 1.2,
+};
+
+const smallButtonStyle = {
+  ...buttonStyle,
+  padding: '5px 8px',
+};
+
 const ensureLangTranslations = (layer) => ({
   ...(layer ?? {}),
   translations: {
@@ -89,11 +108,6 @@ const cloneComponent = (component) => {
   const clone = safeClone(component);
   clone.structure = clone.structure ?? {};
   clone.structure.layers = (clone.structure.layers ?? []).map((layer) => ensureLangTranslations(layer));
-  clone.source = {
-    ...(clone.source ?? {}),
-    name: 'Custom',
-    databaseId: 'custom',
-  };
   return clone;
 };
 
@@ -106,6 +120,7 @@ function Custom() {
   const [materials, setMaterials] = useState([]);
   const [products, setProducts] = useState([]);
   const [status, setStatus] = useState('');
+  const [focusedEcccIndex, setFocusedEcccIndex] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -182,6 +197,19 @@ function Custom() {
     });
   };
 
+  const handleFireResistanceFieldChange = (field, value) => {
+    setComponent((prev) => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        fire_resistance: {
+          ...(prev.fire_resistance ?? {}),
+          [field]: value,
+        },
+      };
+    });
+  };
+
   const handleTranslationChange = (locale, field, value) => {
     setComponent((prev) => {
       if (!prev) return prev;
@@ -226,7 +254,7 @@ function Custom() {
     handleLayerChange(index, (layer) => ({
       ...layer,
       ecccId: selected?.ecccId ?? '',
-      ecccDescription: selected?.description ?? '',
+      ecccDescription: selected?.name ?? '',
     }));
   };
 
@@ -293,11 +321,6 @@ function Custom() {
     const payload = {
       ...componentWithFireTiming,
       ...summary,
-      source: {
-        ...(componentWithFireTiming.source ?? {}),
-        name: 'Custom',
-        databaseId: 'custom',
-      },
     };
     try {
       await persistComponent(payload);
@@ -317,11 +340,6 @@ function Custom() {
       ...summary,
       id: newId,
       parent: component.id ?? null,
-      source: {
-        ...(componentWithFireTiming.source ?? {}),
-        name: 'Custom',
-        databaseId: 'custom',
-      },
     };
     try {
       await persistComponent(payload);
@@ -345,6 +363,11 @@ function Custom() {
   const woodBeamSpanResult = componentWithFireTiming?.fire_resistance?.wood_beam_span ?? null;
   const woodStudCompressionResult = componentWithFireTiming?.fire_resistance?.wood_stud_compression ?? null;
   const woodCapacityTable = componentWithFireTiming?.fire_resistance?.wood_capacity_table ?? null;
+  const vibrationLimitFrequencyInput = component?.fire_resistance?.vibration_f_min_Hz ?? 8;
+  const getEcccName = (layer) => {
+    const selected = ecccOptions.find((item) => item.ecccId === layer?.ecccId);
+    return selected?.name ?? layer?.ecccDescription ?? '';
+  };
   const pxPerMmY = 1;
   const pxPerMmX = DEFAULT_PX_PER_MM_X;
   const title = component?.translations?.[lang]?.name || component?.serialNo || component?.id || '';
@@ -356,7 +379,7 @@ function Custom() {
       <div style={{ padding: '20px' }}>
         <h2>Custom {t.component_details}</h2>
         <p>
-          <Link to={`/element/${component.id}`}>Retour a la page element</Link>
+          <Link to={`/element/${component.id}`} style={buttonStyle}>Retour a la page element</Link>
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '18px' }}>
@@ -420,8 +443,8 @@ function Custom() {
         </div>
 
         <div style={{ marginBottom: '16px', display: 'flex', gap: '10px' }}>
-          <button type="button" onClick={saveCurrent}>Enregistrer</button>
-          <button type="button" onClick={createNew}>Creer nouveau composant</button>
+          <button type="button" onClick={saveCurrent} style={buttonStyle}>Enregistrer</button>
+          <button type="button" onClick={createNew} style={buttonStyle}>Creer nouveau composant</button>
           {status ? <span>{status}</span> : null}
         </div>
 
@@ -444,7 +467,7 @@ function Custom() {
 
         <h2>{t.structure}</h2>
         <div style={{ marginBottom: '10px' }}>
-          <button type="button" onClick={addLayer}>Ajouter une ligne</button>
+          <button type="button" onClick={addLayer} style={buttonStyle}>Ajouter une ligne</button>
         </div>
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#fff' }}>
@@ -476,23 +499,24 @@ function Custom() {
                     <select
                       value={layer?.ecccId ?? ''}
                       onChange={(event) => handleEcccChange(index, event.target.value)}
-                      style={{ width: '120px' }}
+                      onFocus={() => setFocusedEcccIndex(index)}
+                      onBlur={() => setFocusedEcccIndex(null)}
+                      style={{ width: '150px' }}
                     >
                       <option value="">--</option>
                       {ecccOptions.map((option) => (
                         <option key={option.ecccId} value={option.ecccId}>
-                          {option.ecccId}
+                          {focusedEcccIndex === index
+                            ? `${option.ecccId} ${option.name}`
+                            : option.ecccId}
                         </option>
                       ))}
                     </select>
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <input
-                      type="text"
-                      value={layer?.ecccDescription ?? ''}
-                      onChange={(event) => handleLayerTextChange(index, 'ecccDescription', event.target.value)}
-                      style={{ width: '240px' }}
-                    />
+                    <span style={{ display: 'inline-block', minWidth: '240px' }}>
+                      {getEcccName(layer) || 'N/A'}
+                    </span>
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
@@ -613,9 +637,9 @@ function Custom() {
                     />
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px', whiteSpace: 'nowrap' }}>
-                    <button type="button" onClick={() => moveLayer(index, -1)} disabled={index === 0}>Up</button>{' '}
-                    <button type="button" onClick={() => moveLayer(index, 1)} disabled={index === layers.length - 1}>Down</button>{' '}
-                    <button type="button" onClick={() => removeLayer(index)}>Suppr.</button>
+                    <button type="button" onClick={() => moveLayer(index, -1)} disabled={index === 0} style={smallButtonStyle}>Up</button>{' '}
+                    <button type="button" onClick={() => moveLayer(index, 1)} disabled={index === layers.length - 1} style={smallButtonStyle}>Down</button>{' '}
+                    <button type="button" onClick={() => removeLayer(index)} style={smallButtonStyle}>Suppr.</button>
                   </td>
                 </tr>
               ))}
@@ -625,6 +649,23 @@ function Custom() {
         </div>
         <div style={{ marginTop: '16px' }}>
           <h3>Resistance bois</h3>
+          <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+            Frequence limite vibration
+            <input
+              type="number"
+              min="0"
+              step="0.1"
+              value={vibrationLimitFrequencyInput}
+              onChange={(event) =>
+                handleFireResistanceFieldChange(
+                  'vibration_f_min_Hz',
+                  event.target.value === '' ? '' : parseNullableNumber(event.target.value)
+                )
+              }
+              style={{ width: '90px', border: '1px solid #222',padding: '4px' }}
+            />
+            Hz
+          </label>
           {woodCapacityTable ? (
             <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#fff' }}>
               <thead>

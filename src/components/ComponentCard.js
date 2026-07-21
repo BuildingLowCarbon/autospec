@@ -1,5 +1,6 @@
 import React from "react";
 import { ViewSVG, DEFAULT_PX_PER_MM_X } from "./Graphic";
+import { getAcousticInsulation } from "../utils/acoustic";
 
 const formatNumber = (value, decimals = 1) => {
   if (value === null || value === undefined) return null;
@@ -41,8 +42,9 @@ export default function ComponentCard({
   const uValue = formatNumber(item?.uValue_W_m2K, 3);
   const gwp = formatNumber(item?.gwp_kgco2e_m2, 1);
 
-  const airborne = formatNumber(item?.acoustic?.Rw_dB, 0);
-  const impact = formatNumber(item?.acoustic?.Lnw_dB, 0);
+  const acoustic = getAcousticInsulation(item);
+  const airborne = formatNumber(acoustic.rwCorrected, 0);
+  const impact = formatNumber(acoustic.lnwCorrected, 0);
   const fire = item?.fire_resistance?.REI_min ?? null;
 
   // Scale down SVG views to fit the card without cropping
@@ -111,8 +113,8 @@ export default function ComponentCard({
             <div style={styles.sideValues}>
               <div style={styles.section}>
                 <div style={styles.sectionTitle}>{t.acoustic_insulation ?? "Acoustic insulation"}</div>
-                <ValueRow label={t.airborne_noise ?? "airborne noise"} value={airborne} unit="dB" />
-                <ValueRow label={t.impact_noise ?? "impact noise"} value={impact} unit="dB" />
+                <ValueRow label={t.acoustic_rw_corrected ?? "Rw cor."} value={airborne} unit="dB" />
+                <ValueRow label={t.acoustic_lnw_corrected ?? "Ln,w cor."} value={impact} unit="dB" />
               </div>
 
               <div style={styles.section}>

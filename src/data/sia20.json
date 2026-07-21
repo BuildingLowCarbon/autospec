@@ -1,0 +1,11 @@
+{
+  "version": "SIA 260:2013",
+  "deflectionLimits": {
+    "fragile_incorporated": { "label": "Éléments incorporés fragiles", "ratio": 500, "source": "SIA 260:2013, annexe A, tableau 3" },
+    "ductile_incorporated": { "label": "Éléments incorporés ductiles", "ratio": 350, "source": "SIA 260:2013, annexe A, tableau 3" },
+    "use_operation": { "label": "Utilisation et exploitation", "ratio": 350, "source": "SIA 260:2013, annexe A, tableau 3" },
+    "comfort": { "label": "Confort", "ratio": 350, "source": "SIA 260:2013, annexe A, tableau 3" },
+    "appearance": { "label": "Aspect", "ratio": 300, "source": "SIA 260:2013, annexe A, tableau 3" },
+    "CUSTOM": { "label": "Critère personnalisé", "ratio": null, "source": "Valeur entrée par l’utilisateur" }
+  }
+}

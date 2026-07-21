@@ -1,6 +1,6 @@
 [
   {
-    "id": "3286A4D7-CB8A-4ADE-ABF4-FC65ACBC806E",
+    "id": "8644E124-A463-49B5-9666-63C84CE1CD15",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -294,9 +294,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -306,7 +315,7 @@
     }
   },
   {
-    "id": "3FAB77C1-FD76-45E8-B5B4-2E646B8F087B",
+    "id": "E6AB21A4-DFD8-4FDC-B24D-48447A12E301",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -669,9 +678,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -681,7 +699,7 @@
     }
   },
   {
-    "id": "FA3A1E18-CF50-4333-9814-21160BBA58DD",
+    "id": "1DFA4A34-DE95-4FA9-B327-80B6186ECF50",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -860,9 +878,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -872,7 +899,7 @@
     }
   },
   {
-    "id": "C5009404-EDA9-4751-B647-52DD4B25C160",
+    "id": "D32288E4-EDFD-4D87-8291-1F8849F948D2",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -1235,9 +1262,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -1247,7 +1283,7 @@
     }
   },
   {
-    "id": "15FD4B18-318F-4E8E-84A7-513F02E05E70",
+    "id": "88651C1F-32D0-4952-BC88-A62F384C82E5",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -1610,9 +1646,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -1622,7 +1667,7 @@
     }
   },
   {
-    "id": "3B498080-4F89-4F38-8CD7-0ACB961DA295",
+    "id": "CDF253A5-BB0A-4032-8E21-A779BD940FC0",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -1893,9 +1938,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -1905,7 +1959,7 @@
     }
   },
   {
-    "id": "3318DEC6-FDF6-440D-AC58-F201D39632EA",
+    "id": "6211D363-FA29-4FCA-8CE0-3D680F0736FC",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -2153,9 +2207,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -2165,7 +2228,7 @@
     }
   },
   {
-    "id": "20C54AEB-28E7-4D2C-ACF0-790FE94D551F",
+    "id": "9DD98DA9-14F0-4252-A582-B3D360C2BD56",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -2413,9 +2476,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -2425,7 +2497,7 @@
     }
   },
   {
-    "id": "48E0FF42-EA2D-4795-B933-C56DC6748648",
+    "id": "B870CFFD-2EA6-4E26-9272-549278856F25",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -2765,9 +2837,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -2777,7 +2858,7 @@
     }
   },
   {
-    "id": "E7D0A536-A28D-46DB-8BEA-76519E0EB680",
+    "id": "CABECB94-BD21-45EF-900C-E7D6E60085B5",
     "parent": null,
     "serialNo": null,
     "categoryId": "flat_roof_shed_roof",
@@ -3071,9 +3152,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -3083,7 +3173,7 @@
     }
   },
   {
-    "id": "7EE82154-40BA-4552-85CC-B1A7E3BB2E9C",
+    "id": "B9F95287-249A-4EAA-89F0-ED23DF4C3154",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3285,9 +3375,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -3297,7 +3396,7 @@
     }
   },
   {
-    "id": "B3288E0E-A74F-45EE-873B-63F609699535",
+    "id": "76BE9F6E-921D-4800-9817-B430EB63A859",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3568,9 +3667,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -3580,7 +3688,7 @@
     }
   },
   {
-    "id": "36F8A009-C30D-4F61-B464-9462B7966E64",
+    "id": "72AE09D0-520F-43D5-A445-074586528597",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -3851,9 +3959,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -3863,7 +3980,7 @@
     }
   },
   {
-    "id": "0EB8267C-4273-4940-A5A1-D2F4C98AC39F",
+    "id": "8346AB7C-1A0E-49D7-9B83-1047EA2C17E8",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4134,9 +4251,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -4146,7 +4272,7 @@
     }
   },
   {
-    "id": "0288BFBA-F13D-4A9D-8727-9DA6DAB94F8C",
+    "id": "0ECC9339-A583-41E5-A467-307B2AE1C99D",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4417,9 +4543,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -4429,7 +4564,7 @@
     }
   },
   {
-    "id": "E2C3ECF8-EDE6-4D1E-B1A0-073EF5693D01",
+    "id": "4CBE177B-488D-44B6-B8A9-CC45B3EA1EA2",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4608,9 +4743,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -4620,7 +4764,7 @@
     }
   },
   {
-    "id": "1B50AE58-64D5-47FD-AA3F-2997DFD2DFCE",
+    "id": "CF4E5441-B616-4C09-876F-FC938B45D523",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4776,9 +4920,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -4788,7 +4941,7 @@
     }
   },
   {
-    "id": "D1D012C8-1807-41FD-94BC-701B63CAEC1A",
+    "id": "247D6CBA-CEE1-4499-9A49-7BE0B0257559",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -4944,9 +5097,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -4956,7 +5118,7 @@
     }
   },
   {
-    "id": "5ECBD93D-B2A1-45FB-A627-0DF49F7B9140",
+    "id": "17CF64C2-0F9E-424C-A692-8D9698923FAD",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -5204,9 +5366,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -5216,7 +5387,7 @@
     }
   },
   {
-    "id": "7F22FBC4-FFB5-47EB-81A2-DD3DB538E505",
+    "id": "44E977CA-E4B0-4627-9952-0EC47BB010FF",
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
@@ -5441,9 +5612,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -5453,7 +5633,7 @@
     }
   },
   {
-    "id": "E6229D76-B90A-41BD-A394-C33C9CA77DE8",
+    "id": "3B21C297-BB6B-40E1-A738-E4DC1B7674D9",
     "parent": null,
     "serialNo": null,
     "categoryId": "balcony",
@@ -5655,9 +5835,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -5667,7 +5856,7 @@
     }
   },
   {
-    "id": "13FE0AA6-ABCA-4D3B-B0FE-E248A5F3A52D",
+    "id": "80CE5CD7-CA04-4477-822D-B799F3F1177B",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -5915,9 +6104,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -5927,7 +6125,7 @@
     }
   },
   {
-    "id": "49C4FCDA-CB9D-40AC-A97A-E01ABF879973",
+    "id": "E9949B8A-13FC-4873-9EBC-749010C11EDB",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -6175,9 +6373,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -6187,7 +6394,7 @@
     }
   },
   {
-    "id": "FFF51C02-950C-461F-9E9B-9894C08B1DAB",
+    "id": "21F3B0DB-6F06-422F-89E9-6AA6BB65CA9D",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -6435,9 +6642,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -6447,7 +6663,7 @@
     }
   },
   {
-    "id": "729CF027-5B27-40C5-A91E-7313C8E34E30",
+    "id": "83605B5E-8731-4C3B-A68C-23173D57DE04",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -6672,9 +6888,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -6684,7 +6909,7 @@
     }
   },
   {
-    "id": "52FBBC3D-F4AE-4CFE-9E22-AC123C54C3B3",
+    "id": "CB2CA258-39D7-49ED-97C2-3BD023FAEDD4",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -6909,9 +7134,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -6921,7 +7155,7 @@
     }
   },
   {
-    "id": "0176B1DD-ADAD-4155-AFA4-EB0E8B9C93EA",
+    "id": "F6CEA598-28BF-4135-A523-43411885FBC9",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -7146,9 +7380,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -7158,7 +7401,7 @@
     }
   },
   {
-    "id": "1F8BD326-220A-4437-B171-D7BAF561C389",
+    "id": "697CCF0D-4F3F-43E0-BB81-5728EBD994ED",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -7383,9 +7626,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -7395,7 +7647,7 @@
     }
   },
   {
-    "id": "4ADF3EC9-4863-4BA6-B8B0-EA620E75E671",
+    "id": "3A566BD8-2F58-4CF4-BA60-462133660311",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -7597,9 +7849,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -7609,7 +7870,7 @@
     }
   },
   {
-    "id": "8C3FDE2E-85AA-48C3-B1BF-EC0C8CEAE99B",
+    "id": "8D17D433-6537-49DF-8B8B-E9D1292D63EF",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -7788,9 +8049,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -7800,7 +8070,7 @@
     }
   },
   {
-    "id": "B5260A9E-5712-4976-8748-3A49C2603E1A",
+    "id": "F6336056-DC16-43DE-BAF7-909AE5CAB65B",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8002,9 +8272,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -8014,7 +8293,7 @@
     }
   },
   {
-    "id": "9B6A4B74-BCF0-41E6-9A0C-4581D34451CB",
+    "id": "C3C3523F-50D4-4CB2-8681-0C6769A9E1B1",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8216,9 +8495,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -8228,7 +8516,7 @@
     }
   },
   {
-    "id": "814E00C8-430D-40F4-9620-BD8603714E24",
+    "id": "F11F351D-A07E-4C88-841B-5BB49E043D83",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8430,9 +8718,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -8442,7 +8739,7 @@
     }
   },
   {
-    "id": "D1A6BF27-6822-45AC-B687-956EBB8687D8",
+    "id": "4B9866B5-C0C5-47A3-919D-A75AB92AF10E",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8644,9 +8941,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -8656,7 +8962,7 @@
     }
   },
   {
-    "id": "2AE4B694-81F6-4D01-911A-6333BC6B3584",
+    "id": "A689E25D-B233-4679-872A-A04CFE036201",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -8835,9 +9141,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -8847,7 +9162,7 @@
     }
   },
   {
-    "id": "0C33EF75-B3CB-4D2D-86F7-F34873D578F2",
+    "id": "B49D10E9-2D53-4BCA-88CA-AE9EC683C0CD",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9026,9 +9341,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9038,7 +9362,7 @@
     }
   },
   {
-    "id": "44A9BE85-9804-45EA-89EE-72DBD3736554",
+    "id": "301A2190-E6FD-40AE-B563-0E6303169D2D",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9217,9 +9541,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9229,7 +9562,7 @@
     }
   },
   {
-    "id": "E2159976-CA15-4E2D-BF0C-8CA196F5D1AD",
+    "id": "23C44144-D891-4AC2-8149-914FD92E484D",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9408,9 +9741,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9420,7 +9762,7 @@
     }
   },
   {
-    "id": "527698BB-539A-438C-B028-997A97FA5294",
+    "id": "8B1B3ABE-F600-4D44-9856-6334643034DE",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9622,9 +9964,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9634,7 +9985,7 @@
     }
   },
   {
-    "id": "DBF83F4C-51D5-4F57-8EC3-DCCF2B7C59BE",
+    "id": "46DDC603-7F39-4963-86E9-514109810979",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9790,9 +10141,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9802,7 +10162,7 @@
     }
   },
   {
-    "id": "767D3C66-1649-41FC-BB56-5E5BDECBFDA8",
+    "id": "47D4765F-8754-46B6-B56D-864A8F0D6CA0",
     "parent": null,
     "serialNo": null,
     "categoryId": "outer_wall",
@@ -9912,9 +10272,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -9924,7 +10293,7 @@
     }
   },
   {
-    "id": "69FF5DAE-E5F6-4EE3-BF99-747F3554A4C8",
+    "id": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -10034,9 +10403,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10046,7 +10424,7 @@
     }
   },
   {
-    "id": "5C731E43-B45E-474E-A242-83603546B4D6",
+    "id": "78A9F6CE-1B3D-4C11-B10C-65AEE49C6BB2",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_double_shell",
@@ -10156,9 +10534,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10168,7 +10555,7 @@
     }
   },
   {
-    "id": "4594553F-5765-4BAA-AF38-ACB29C6315AA",
+    "id": "09227EB5-E741-441A-A97D-183E156822BE",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -10278,9 +10665,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10290,7 +10686,7 @@
     }
   },
   {
-    "id": "632D1A3C-75D7-4BC0-ADE9-638984E9A86F",
+    "id": "2A13415F-4237-4307-AC78-BA3F443C8390",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_single_shell",
@@ -10400,9 +10796,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10412,7 +10817,7 @@
     }
   },
   {
-    "id": "DCF70D8F-C834-4749-947B-0283ABFDFC49",
+    "id": "2DFD6629-938E-4792-B088-B59369B05C67",
     "parent": null,
     "serialNo": null,
     "categoryId": "partition_wall_double_shell",
@@ -10522,9 +10927,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10534,7 +10948,7 @@
     }
   },
   {
-    "id": "1310C039-F10F-464F-B288-4B0B8A88166D",
+    "id": "5D2BA635-9014-499B-9AD6-6F716E8127ED",
     "parent": null,
     "serialNo": null,
     "categoryId": "",
@@ -10621,9 +11035,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10633,7 +11056,7 @@
     }
   },
   {
-    "id": "10314A3F-8452-46C4-BDE9-E12F8BEC540E",
+    "id": "E43E2CA1-0890-4343-977B-9716F7654612",
     "parent": null,
     "serialNo": null,
     "categoryId": "",
@@ -10697,9 +11120,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10709,7 +11141,7 @@
     }
   },
   {
-    "id": "67072BF4-9AD3-4AD5-ADE7-A6EE481603CC",
+    "id": "FF31A2E7-D653-48E8-8994-FDA78A2F7B7D",
     "parent": null,
     "serialNo": null,
     "categoryId": "",
@@ -10773,9 +11205,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10785,7 +11226,7 @@
     }
   },
   {
-    "id": "3E321726-961A-4C32-9EDF-5DCF6D577425",
+    "id": "29708FD1-F7D5-40DE-BF65-40A1706F07ED",
     "parent": null,
     "serialNo": null,
     "categoryId": "",
@@ -10849,9 +11290,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",
@@ -10861,7 +11311,7 @@
     }
   },
   {
-    "id": "9614FBD4-8A7A-4402-9579-D30CA1CFED31",
+    "id": "F977EDC9-03AA-4336-AB90-6EAB6041BA47",
     "parent": null,
     "serialNo": null,
     "categoryId": "",
@@ -11086,9 +11536,18 @@
       "RF_internal_min": null,
       "RF_external_min": null
     },
-    "acoustic": {
-      "Rw_dB": null,
-      "Lnw_dB": null
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
     },
     "source": {
       "name": "Minergie",

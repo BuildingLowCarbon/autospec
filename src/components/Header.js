@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import LangContext from '../context/LangContext';
 
 
@@ -16,7 +17,12 @@ function Header() {
       justifyContent: 'space-between',
       alignItems: 'center'
     }}>
-      <h1 style={{ margin: 0, fontSize: '25px', fontWeight: 'bold' }}>AutoSpec</h1>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <h1 style={{ margin: 0, fontSize: '25px', fontWeight: 'bold' }}>AutoSpec</h1>
+        <Link to="/" style={{ color: '#222' }}>Filtres</Link>
+        <Link to="/building" style={{ color: '#222' }}>Building</Link>
+        <Link to="/dashboard" style={{ color: '#222' }}>Dashboard</Link>
+      </div>
 
       <div>
         <label htmlFor="lang-select" style={{ marginRight: '8px' }}>Langue :</label>
