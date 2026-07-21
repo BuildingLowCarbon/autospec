@@ -18,6 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:db": "node --test --experimental-test-isolation=none server/lignumDatabase.test.js",
+    "migrate:material-i18n": "node server/enrichMaterialTranslations.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

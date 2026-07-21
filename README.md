@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Dashboard des bases de données
+
+Le Dashboard est disponible sous `/dashboard`. Il permet d’unifier les trois sources Lignum, de sélectionner les composants publiés, de contrôler les références, de gérer les correspondances Lignum → TBZ et de créer ou modifier les matériaux, produits et composants.
+
+Les écritures passent par `src/setupProxy.js`; il faut donc utiliser `npm start` (ou reprendre ces routes API dans le serveur de production). Chaque enregistrement met à jour le JSON actif sous `public/db` et crée une copie horodatée sous `public/db/versions/<base>/`. Les correspondances sont conservées dans `public/db/mappings/lignum_product_tbz.json`.
+
+Le test de fidélité de la conversion et du versionnage se lance avec `npm run test:db`.
+
 ## Available Scripts
 
 In the project directory, you can run:

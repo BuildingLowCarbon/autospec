@@ -1,7 +1,7 @@
 [
   {
     "id": "6DEFC510-138F-4344-B357-7EFD5B284313",
-    "workingtitle": "Magerbeton (ohne Bewehrung)",
+    "workingtitle": "Test2",
     "materialTypeId": "mineralisch_kunstlich",
     "materialcategoryId": "zementgebunden",
     "functionId": "allgemein",
@@ -21,24 +21,10 @@
       "databaseId": "lignum",
       "externalId": "4844B6FF-9922-36E9-9CAF-705088E9D8FE"
     },
-    "translations": {
-      "de": {
-        "name": "Magerbeton (ohne Bewehrung)",
-        "description": null
-      },
-      "en": {
-        "name": "Magerbeton (ohne Bewehrung)",
-        "description": null
-      },
-      "fr": {
-        "name": "Magerbeton (ohne Bewehrung)",
-        "description": null
-      }
-    },
     "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
+      "created_at": "2026-07-21T15:25:11.043Z",
+      "updated_at": "2026-07-21T15:25:46.217Z",
+      "version": 2
     }
   },
   {
@@ -62,25 +48,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "E72E6ED4-670A-3DCE-BC92-90660C6965FD"
-    },
-    "translations": {
-      "de": {
-        "name": "Beton, Rohdichte 2300 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Concrete",
-        "description": null
-      },
-      "fr": {
-        "name": "Béton",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -104,25 +71,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "5911482C-FDB1-3C66-80C3-B671F2544463"
-    },
-    "translations": {
-      "de": {
-        "name": "Tiefbaubeton (ohne Bewehrung)",
-        "description": null
-      },
-      "en": {
-        "name": "Tiefbaubeton (ohne Bewehrung)",
-        "description": null
-      },
-      "fr": {
-        "name": "Tiefbaubeton (ohne Bewehrung)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -146,25 +94,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "2A40CABB-AF48-38BD-9C25-E4E72F623DA8"
-    },
-    "translations": {
-      "de": {
-        "name": "Bohrpfahlbeton (ohne Bewehrung)",
-        "description": null
-      },
-      "en": {
-        "name": "Bohrpfahlbeton (ohne Bewehrung)",
-        "description": null
-      },
-      "fr": {
-        "name": "Bohrpfahlbeton (ohne Bewehrung)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -188,25 +117,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "9A7D8350-4DEC-3178-976E-C21EFA27E0B6"
-    },
-    "translations": {
-      "de": {
-        "name": "Betonfertigteil, hochfester Beton, ab Werk",
-        "description": null
-      },
-      "en": {
-        "name": "Betonfertigteil, hochfester Beton, ab Werk",
-        "description": null
-      },
-      "fr": {
-        "name": "Betonfertigteil, hochfester Beton, ab Werk",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -230,25 +140,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "3CAF4865-80F7-39D3-95B8-A19B7A3EDB99"
-    },
-    "translations": {
-      "de": {
-        "name": "Betonfertigteil, Normalbeton, ab Werk",
-        "description": null
-      },
-      "en": {
-        "name": "Betonfertigteil, Normalbeton, ab Werk",
-        "description": null
-      },
-      "fr": {
-        "name": "Betonfertigteil, Normalbeton, ab Werk",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -272,25 +163,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "E17D8584-37AD-3DDF-9D1A-BD77B3488616"
-    },
-    "translations": {
-      "de": {
-        "name": "Hanfbeton",
-        "description": null
-      },
-      "en": {
-        "name": "Hanfbeton",
-        "description": null
-      },
-      "fr": {
-        "name": "Hanfbeton",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -314,25 +186,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "005C5453-867A-3031-B5B7-2B257CD1F85E"
-    },
-    "translations": {
-      "de": {
-        "name": "Hanfbeton, ARBIO",
-        "description": null
-      },
-      "en": {
-        "name": "Hanfbeton, ARBIO",
-        "description": null
-      },
-      "fr": {
-        "name": "Hanfbeton, ARBIO",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -356,25 +209,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F4C27962-1F82-348C-9104-38DFEA6D074B"
-    },
-    "translations": {
-      "de": {
-        "name": "Modulbackstein",
-        "description": null
-      },
-      "en": {
-        "name": "Modulbackstein",
-        "description": null
-      },
-      "fr": {
-        "name": "Modulbackstein",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -398,25 +232,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "8450D9C9-6F93-3374-A1D9-AB4554ACAB6F"
-    },
-    "translations": {
-      "de": {
-        "name": "Porotherm T7",
-        "description": null
-      },
-      "en": {
-        "name": "Porotherm T7",
-        "description": null
-      },
-      "fr": {
-        "name": "Porotherm T7",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -440,25 +255,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "B0DE8C47-D6E1-3011-A3D8-99703AF83C1F"
-    },
-    "translations": {
-      "de": {
-        "name": "Kalksandstein 1600 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Kalksandstein 1600 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Kalksandstein 1600 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -482,25 +278,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "858FE5E8-283B-3A01-B941-C8BBE114AD4B"
-    },
-    "translations": {
-      "de": {
-        "name": "Blähton",
-        "description": null
-      },
-      "en": {
-        "name": "Blowing clay",
-        "description": null
-      },
-      "fr": {
-        "name": "argile expansée",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -524,25 +301,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "7541388A-AA36-35A4-A255-D53A1224AD02"
-    },
-    "translations": {
-      "de": {
-        "name": "Gartenplatten",
-        "description": null
-      },
-      "en": {
-        "name": "Garden plates",
-        "description": null
-      },
-      "fr": {
-        "name": "Dallette de jardin",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -566,25 +324,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DEA7278A-6B6C-3922-9C1B-801A69527D9F"
-    },
-    "translations": {
-      "de": {
-        "name": "Faserzement-Wellplatte",
-        "description": null
-      },
-      "en": {
-        "name": "Faserzement-Wellplatte",
-        "description": null
-      },
-      "fr": {
-        "name": "Faserzement-Wellplatte",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -608,25 +347,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "26EDC51B-7B3B-37A6-AC68-51435B2D3AF5"
-    },
-    "translations": {
-      "de": {
-        "name": "GF-W2 Fermacell Gipsfaserplatte",
-        "description": null
-      },
-      "en": {
-        "name": "GF-W2 Fermacell gypsum fiber board",
-        "description": null
-      },
-      "fr": {
-        "name": "GF-W2 Fermacell panneau plâtre fibré",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -650,25 +370,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "26EDC51B-7B3B-37A6-AC68-51435B2D3AF5"
-    },
-    "translations": {
-      "de": {
-        "name": "GF-W2 Fermacell Gipsfaserplatte",
-        "description": null
-      },
-      "en": {
-        "name": "GF-W2 Fermacell gypsum fiber board",
-        "description": null
-      },
-      "fr": {
-        "name": "GF-W2 Fermacell panneau plâtre fibré",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -692,25 +393,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "9A6169EB-86D0-359A-ACDA-CCCF8DB3CC9B"
-    },
-    "translations": {
-      "de": {
-        "name": "Gipsplatte mit Vliesarmierung / biegsam: Glasroc F Riflex/GM-FH2",
-        "description": null
-      },
-      "en": {
-        "name": "Gipsplatte mit Vliesarmierung / biegsam: Glasroc F Riflex/GM-FH2",
-        "description": null
-      },
-      "fr": {
-        "name": "Gipsplatte mit Vliesarmierung / biegsam: Glasroc F Riflex/GM-FH2",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -734,25 +416,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "2336A356-737E-3C15-9CBC-A185B6842A59"
-    },
-    "translations": {
-      "de": {
-        "name": "Keramikplatte",
-        "description": null
-      },
-      "en": {
-        "name": "Keramikplatte",
-        "description": null
-      },
-      "fr": {
-        "name": "Keramikplatte",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -776,25 +439,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "2E982B59-7FA8-3346-934C-408DE3F312D9"
-    },
-    "translations": {
-      "de": {
-        "name": "Brechkies ungewaschen 0-30mm",
-        "description": null
-      },
-      "en": {
-        "name": "Brechkies ungewaschen 0-30mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Brechkies ungewaschen 0-30mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -818,25 +462,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DE6CB66C-5CA4-34F9-A5FA-07BD12E04170"
-    },
-    "translations": {
-      "de": {
-        "name": "Kalksplitt 3-6 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Gravel of lime 3-6 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Gravillons de chaux 3-6 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -860,25 +485,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F7CD5022-74F8-3B4B-A0DA-6679E8799FD0"
-    },
-    "translations": {
-      "de": {
-        "name": "Rundkies gewaschen 16-32 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Rundkies gewaschen 16-32 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Rundkies gewaschen 16-32 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -902,25 +508,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "42AEE1EC-D03A-3266-83F2-F233671FE2FF"
-    },
-    "translations": {
-      "de": {
-        "name": "Brechsand ungewaschen 0-4mm",
-        "description": null
-      },
-      "en": {
-        "name": "Brechsand ungewaschen 0-4mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Brechsand ungewaschen 0-4mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -944,25 +531,6 @@
       "name": null,
       "databaseId": "minergie",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Substrat",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -986,25 +554,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "B77D955E-0964-3DAC-A670-044010510C9F"
-    },
-    "translations": {
-      "de": {
-        "name": "Dachziegel",
-        "description": null
-      },
-      "en": {
-        "name": "Roof tiles",
-        "description": null
-      },
-      "fr": {
-        "name": "Tuiles (couverture)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1028,25 +577,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "6CA8842A-AAC1-3AA0-8DD7-FDF2528F6493"
-    },
-    "translations": {
-      "de": {
-        "name": "Lehmplatten",
-        "description": null
-      },
-      "en": {
-        "name": "Lehmplatten",
-        "description": null
-      },
-      "fr": {
-        "name": "Lehmplatten",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1070,25 +600,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1CE9C6B7-805A-3AF7-A255-DE212E840159"
-    },
-    "translations": {
-      "de": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1112,25 +623,6 @@
       "name": null,
       "databaseId": "kbob",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Baukleber/Einbettmörtel organisch",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1154,25 +646,6 @@
       "name": null,
       "databaseId": "kbob",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Kunststoffputz (Dispersionsputz)",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1196,25 +669,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "49F83021-EE95-30AE-826B-8547965AF45C"
-    },
-    "translations": {
-      "de": {
-        "name": "Anhydritfliessestrich",
-        "description": null
-      },
-      "en": {
-        "name": "Anhydrite",
-        "description": null
-      },
-      "fr": {
-        "name": "Chape anhydrite fluide",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1238,25 +692,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "0CA06490-CE98-3202-8643-5E1C6EDDA18B"
-    },
-    "translations": {
-      "de": {
-        "name": "Zementestrich",
-        "description": null
-      },
-      "en": {
-        "name": "Cement screed",
-        "description": null
-      },
-      "fr": {
-        "name": "Chape ciment",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1280,25 +715,6 @@
       "name": null,
       "databaseId": "kbob",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Wärmedämmputz EPS",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1322,25 +738,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "07E9F601-CA90-39FF-BBB5-37BE204CE0B5"
-    },
-    "translations": {
-      "de": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1364,25 +761,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "07E9F601-CA90-39FF-BBB5-37BE204CE0B5"
-    },
-    "translations": {
-      "de": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Leichtmörtel 1600 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1406,25 +784,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1CE9C6B7-805A-3AF7-A255-DE212E840159"
-    },
-    "translations": {
-      "de": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Gipsputz 1000 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1448,25 +807,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "D91050C3-26A4-3ED0-BA36-23650A39B4FE"
-    },
-    "translations": {
-      "de": {
-        "name": "Armierungsstahl",
-        "description": null
-      },
-      "en": {
-        "name": "Armierungsstahl",
-        "description": null
-      },
-      "fr": {
-        "name": "Armierungsstahl",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1490,25 +830,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "091C1B4B-29E3-35F4-997D-05C9CD3743A1"
-    },
-    "translations": {
-      "de": {
-        "name": "Chromnickelstahlblech 18/8 blank",
-        "description": null
-      },
-      "en": {
-        "name": "Chromnickelstahlblech 18/8 blank",
-        "description": null
-      },
-      "fr": {
-        "name": "Chromnickelstahlblech 18/8 blank",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1532,25 +853,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "BABE3C7E-B27C-32F1-A55A-E08D4C74D544"
-    },
-    "translations": {
-      "de": {
-        "name": "Chromstahlblech blank",
-        "description": null
-      },
-      "en": {
-        "name": "Chromstahlblech blank",
-        "description": null
-      },
-      "fr": {
-        "name": "Chromstahlblech blank",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1574,25 +876,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "2AAF2F2C-20A7-3ACD-8777-657428A5F625"
-    },
-    "translations": {
-      "de": {
-        "name": "Stahlblech, blank",
-        "description": null
-      },
-      "en": {
-        "name": "Stahlblech, blank",
-        "description": null
-      },
-      "fr": {
-        "name": "Stahlblech, blank",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1616,25 +899,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "D69D0592-903B-3A50-9F63-5DD9531B7C17"
-    },
-    "translations": {
-      "de": {
-        "name": "Stahlblech, verzinkt",
-        "description": null
-      },
-      "en": {
-        "name": "Stahlblech, verzinkt",
-        "description": null
-      },
-      "fr": {
-        "name": "Stahlblech, verzinkt",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1658,25 +922,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F5A4C2E2-D212-303C-B333-A94B9312C938"
-    },
-    "translations": {
-      "de": {
-        "name": "Stahlprofil, blank",
-        "description": null
-      },
-      "en": {
-        "name": "Stahlprofil, blank",
-        "description": null
-      },
-      "fr": {
-        "name": "Stahlprofil, blank",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1700,25 +945,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "7C71FDDB-486E-39A6-936E-6A9D12A96F75"
-    },
-    "translations": {
-      "de": {
-        "name": "3/5-Schicht Massivholzplatte, Fichte/Kiefer/Lärche/Douglasie",
-        "description": null
-      },
-      "en": {
-        "name": "3/5-Schicht Massivholzplatte, Fichte/Kiefer/Lärche/Douglasie",
-        "description": null
-      },
-      "fr": {
-        "name": "3/5-Schicht Massivholzplatte, Fichte/Kiefer/Lärche/Douglasie",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1742,25 +968,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DB076FE0-A694-3F35-8B4F-B6B6D513F412"
-    },
-    "translations": {
-      "de": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      },
-      "en": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      },
-      "fr": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1784,25 +991,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DB076FE0-A694-3F35-8B4F-B6B6D513F412"
-    },
-    "translations": {
-      "de": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      },
-      "en": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      },
-      "fr": {
-        "name": "BSH JPF-Ducret MUF",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1826,25 +1014,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Brettschichtholz, Produktion Schweiz",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1868,25 +1037,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "841D131E-A1FB-3072-97A1-263835C99B7C"
-    },
-    "translations": {
-      "de": {
-        "name": "Holzwolle-Dämmplatten, mineralisiert; nicht überwacht",
-        "description": null
-      },
-      "en": {
-        "name": "Holzwolle-Dämmplatten, mineralisiert; nicht überwacht",
-        "description": null
-      },
-      "fr": {
-        "name": "Holzwolle-Dämmplatten, mineralisiert; nicht überwacht",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1910,25 +1060,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "A410EFBC-0F02-3078-A114-A1A74CEB358F"
-    },
-    "translations": {
-      "de": {
-        "name": "Allgemeines: Hobelwaren aus Nadel- und Laubholz",
-        "description": null
-      },
-      "en": {
-        "name": "Allgemeines: Hobelwaren aus Nadel- und Laubholz",
-        "description": null
-      },
-      "fr": {
-        "name": "Allgemeines: Hobelwaren aus Nadel- und Laubholz",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1952,25 +1083,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Massivholz Fichte / Tanne / Lärche, luftgetrocknet, rau, Produktion Schweiz",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -1994,25 +1106,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "C4E67434-2EDB-31ED-9DFB-260F023AC490"
-    },
-    "translations": {
-      "de": {
-        "name": "Massivholz Nadelhölzer, luftgetrocknet, gehobelt",
-        "description": null
-      },
-      "en": {
-        "name": "Massivholz Nadelhölzer, luftgetrocknet, gehobelt",
-        "description": null
-      },
-      "fr": {
-        "name": "Massivholz Nadelhölzer, luftgetrocknet, gehobelt",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2036,25 +1129,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "90FA8D2E-6CDC-3D3A-BA1C-E64FBAD41114"
-    },
-    "translations": {
-      "de": {
-        "name": "Allgemeines: Keilgezinktes Vollholz",
-        "description": null
-      },
-      "en": {
-        "name": "Allgemeines: Keilgezinktes Vollholz",
-        "description": null
-      },
-      "fr": {
-        "name": "Allgemeines: Keilgezinktes Vollholz",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2078,25 +1152,6 @@
       "name": null,
       "databaseId": null,
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Massivholz Fichte / Tanne / Lärche, kammergetr., gehobelt, Produktion Schweiz",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2120,25 +1175,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "5C170A97-24D1-3F38-8DC2-D3DBA353B168"
-    },
-    "translations": {
-      "de": {
-        "name": "BRESTA",
-        "description": null
-      },
-      "en": {
-        "name": "BRESTA",
-        "description": null
-      },
-      "fr": {
-        "name": "BRESTA",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2162,25 +1198,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1BEA1B58-DD79-355F-80ED-01A8BDF49704"
-    },
-    "translations": {
-      "de": {
-        "name": "Mitteldichte Holzfaserplatte MDF 600 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Mitteldichte Holzfaserplatte MDF 600 kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Mitteldichte Holzfaserplatte MDF 600 kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2204,25 +1221,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "41D4C34B-EE4A-3DE7-A492-D2F4435D833C"
-    },
-    "translations": {
-      "de": {
-        "name": "SWISS KRONO OSB/3",
-        "description": null
-      },
-      "en": {
-        "name": "SWISS KRONO OSB/3",
-        "description": null
-      },
-      "fr": {
-        "name": "SWISS KRONO OSB/3",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2246,25 +1244,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "AB3855CB-300E-3E43-B01A-1F951BFB84BC"
-    },
-    "translations": {
-      "de": {
-        "name": "Spanplatte 600 kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Chipboard",
-        "description": null
-      },
-      "fr": {
-        "name": "Panneau de particules",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2288,25 +1267,6 @@
       "name": null,
       "databaseId": null,
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Spanplatte, PF-gebunden, Feuchtbereich",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2330,25 +1290,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "E6E592BD-8109-3C02-85F2-A40C84764243"
-    },
-    "translations": {
-      "de": {
-        "name": "Brettsperrholz BBS 5-schichtig",
-        "description": null
-      },
-      "en": {
-        "name": "Brettsperrholz BBS 5-schichtig",
-        "description": null
-      },
-      "fr": {
-        "name": "Brettsperrholz BBS 5-schichtig",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2372,25 +1313,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "54139431-D2F6-364B-84A0-7EC0FF2C9A6B"
-    },
-    "translations": {
-      "de": {
-        "name": "BauderTHERM DS 1 DUO",
-        "description": null
-      },
-      "en": {
-        "name": "BauderTHERM DS 1 DUO",
-        "description": null
-      },
-      "fr": {
-        "name": "BauderTHERM DS 1 DUO",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2414,25 +1336,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "76E6D0F1-4597-3B9D-A007-6DE2EC42AAF8"
-    },
-    "translations": {
-      "de": {
-        "name": "Vario Xtra",
-        "description": null
-      },
-      "en": {
-        "name": "Vario Xtra",
-        "description": null
-      },
-      "fr": {
-        "name": "Vario Xtra",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2456,25 +1359,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "0161F6A6-4051-3E9F-A8D3-3E05797B422A"
-    },
-    "translations": {
-      "de": {
-        "name": "Vario KM Supraplex-SKS",
-        "description": null
-      },
-      "en": {
-        "name": "Vario KM Supraplex-SKS",
-        "description": null
-      },
-      "fr": {
-        "name": "Vario KM Supraplex-SKS",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2498,25 +1382,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "63532266-694F-3464-9967-08BD48AB7A2C"
-    },
-    "translations": {
-      "de": {
-        "name": "Dampfbremse Polyethylen (PE)",
-        "description": null
-      },
-      "en": {
-        "name": "Vapor barrier polyethylene (PE)",
-        "description": null
-      },
-      "fr": {
-        "name": "Vapeur de polyéthylène formant barrière (PE)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2540,25 +1405,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "04F06E6E-307E-3C74-A490-883F0670F3B9"
-    },
-    "translations": {
-      "de": {
-        "name": "Dichtungsbahn bituminös",
-        "description": null
-      },
-      "en": {
-        "name": "Bituminous geomembrane",
-        "description": null
-      },
-      "fr": {
-        "name": "Géomembrane bitumineuse",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2582,25 +1428,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1BB03323-8775-34A3-A878-B6D04B90CAB8"
-    },
-    "translations": {
-      "de": {
-        "name": "Elastomerbitumen-Dichtungsbahn Sopravap EVA 35 flam",
-        "description": null
-      },
-      "en": {
-        "name": "Elastomerbitumen-Dichtungsbahn Sopravap EVA 35 flam",
-        "description": null
-      },
-      "fr": {
-        "name": "Elastomerbitumen-Dichtungsbahn Sopravap EVA 35 flam",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2624,25 +1451,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "15835F97-F2F1-30AC-9D07-27A0573E2B65"
-    },
-    "translations": {
-      "de": {
-        "name": "Dichtungsbahn Polyolefin (FPO)",
-        "description": null
-      },
-      "en": {
-        "name": "Dichtungsbahn Polyolefin (FPO)",
-        "description": null
-      },
-      "fr": {
-        "name": "Dichtungsbahn Polyolefin (FPO)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2666,25 +1474,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "9773F1CD-DACA-3CFC-B757-E06F88A0447E"
-    },
-    "translations": {
-      "de": {
-        "name": "Kraftpapier",
-        "description": null
-      },
-      "en": {
-        "name": "Kraft",
-        "description": null
-      },
-      "fr": {
-        "name": "Kraft",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2708,25 +1497,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1FDF66CB-E374-316F-B775-2861EF7A1597"
-    },
-    "translations": {
-      "de": {
-        "name": "Polyethylenfolie (PE)",
-        "description": null
-      },
-      "en": {
-        "name": "Polyethylenfolie (PE)",
-        "description": null
-      },
-      "fr": {
-        "name": "Polyethylenfolie (PE)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2750,25 +1520,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "C0BE546B-E65C-38FF-B20B-BA3D2CE3C91B"
-    },
-    "translations": {
-      "de": {
-        "name": "Polyethylenvlies (PE)",
-        "description": null
-      },
-      "en": {
-        "name": "Polyethylenvlies (PE)",
-        "description": null
-      },
-      "fr": {
-        "name": "Polyethylenvlies (PE)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2792,25 +1543,6 @@
       "name": null,
       "databaseId": null,
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Glaswolle, 20 kg/m3",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2834,25 +1566,6 @@
       "name": null,
       "databaseId": null,
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Glaswolle, 32 kg/m3",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2876,25 +1589,6 @@
       "name": null,
       "databaseId": null,
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Glaswolle, 100 kg/m3",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2918,25 +1612,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "7487919E-91AF-324C-AA11-0729900347AB"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER LURO 814",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER LURO 814",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER LURO 814",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -2960,25 +1635,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "3A16239F-894D-369B-8D68-3CA0A1444581"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER ISOFLAT",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER ISOFLAT",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER ISOFLAT",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3002,25 +1658,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "100C685F-94F3-35C0-B767-68AAD60A71CB"
-    },
-    "translations": {
-      "de": {
-        "name": "Isorigid",
-        "description": null
-      },
-      "en": {
-        "name": "Isorigid",
-        "description": null
-      },
-      "fr": {
-        "name": "Isorigid",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3044,25 +1681,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "6360CDD1-9FDE-32FE-8043-C28795894FF9"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER PB M 030",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER PB M 030",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER PB M 030",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3086,25 +1704,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "D74605F1-E77A-339E-B257-83514E3AEFE1"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER PB M 035",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER PB M 035",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER PB M 035",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3128,25 +1727,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "426A0558-83D3-3550-8EB1-C3BBD414BF6A"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER ISOCONFORT 032 / ISOCONFORT 032 PR",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER ISOCONFORT 032 / ISOCONFORT 032 PR",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER ISOCONFORT 032 / ISOCONFORT 032 PR",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3170,25 +1750,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DFDC783F-3000-398C-9D0B-ADCEF9CA03A9"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporEPS 15",
-        "description": null
-      },
-      "en": {
-        "name": "swissporEPS 15",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporEPS 15",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3212,25 +1773,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "171FEA49-9A23-38AD-A983-EC761E4C593E"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporEPS 30",
-        "description": null
-      },
-      "en": {
-        "name": "swissporEPS 30",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporEPS 30",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3254,25 +1796,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "B28D1B67-B202-3BA2-9B17-1905B2DC7674"
-    },
-    "translations": {
-      "de": {
-        "name": "Joma EPS 18",
-        "description": null
-      },
-      "en": {
-        "name": "Joma EPS 18",
-        "description": null
-      },
-      "fr": {
-        "name": "Joma EPS 18",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3296,25 +1819,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "4518260A-31FA-3110-805A-6C15EB14445A"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporEPS 20",
-        "description": null
-      },
-      "en": {
-        "name": "swissporEPS 20",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporEPS 20",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3338,25 +1842,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "129B7933-F47E-3BDF-B331-4F68D7EB8963"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporLAMBDA Roof",
-        "description": null
-      },
-      "en": {
-        "name": "swissporLAMBDA Roof",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporLAMBDA Roof",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3380,25 +1865,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "171FEA49-9A23-38AD-A983-EC761E4C593E"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporEPS 30",
-        "description": null
-      },
-      "en": {
-        "name": "swissporEPS 30",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporEPS 30",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3422,25 +1888,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "A54E9A28-E854-36C4-A96B-19813C2249D3"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporXPS 300 SF",
-        "description": null
-      },
-      "en": {
-        "name": "swissporXPS 300 SF",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporXPS 300 SF",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3464,25 +1911,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "436E83AD-7FF9-3541-8E00-FBA4AEFFC47A"
-    },
-    "translations": {
-      "de": {
-        "name": "X-FOAM HBT COB-WALL",
-        "description": null
-      },
-      "en": {
-        "name": "X-FOAM HBT COB-WALL",
-        "description": null
-      },
-      "fr": {
-        "name": "X-FOAM HBT COB-WALL",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3506,25 +1934,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "6E3F0343-13FF-3342-A446-A50DAEE8C40E"
-    },
-    "translations": {
-      "de": {
-        "name": "Bauder PIR diffusionsdicht 20-240mm",
-        "description": null
-      },
-      "en": {
-        "name": "Bauder PIR diffusionsdicht",
-        "description": null
-      },
-      "fr": {
-        "name": "Bauder PIR diffusionsdicht",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3548,25 +1957,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "E55F5598-6822-36F4-9B9E-D42C06F7773D"
-    },
-    "translations": {
-      "de": {
-        "name": "Polyurethan (PUR)",
-        "description": null
-      },
-      "en": {
-        "name": "Polyurethan (PUR)",
-        "description": null
-      },
-      "fr": {
-        "name": "Polyurethan (PUR)",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3590,25 +1980,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "C1DFA1EA-C0E6-31DA-89FB-13A713F5EC19"
-    },
-    "translations": {
-      "de": {
-        "name": "FOAMGLAS F",
-        "description": null
-      },
-      "en": {
-        "name": "FOAMGLAS F",
-        "description": null
-      },
-      "fr": {
-        "name": "FOAMGLAS F",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3632,25 +2003,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "0427F252-435F-3AC7-8347-E7867BA83744"
-    },
-    "translations": {
-      "de": {
-        "name": "swissporROC Bodenplatte TS",
-        "description": null
-      },
-      "en": {
-        "name": "swissporROC Bodenplatte TS",
-        "description": null
-      },
-      "fr": {
-        "name": "swissporROC Bodenplatte TS",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3674,25 +2026,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "B6D664AB-2A19-3D54-B352-CF67EC535754"
-    },
-    "translations": {
-      "de": {
-        "name": "Steinwolle mit 5≤ r ≤35 [kPa*s/m²]",
-        "description": null
-      },
-      "en": {
-        "name": "Steinwolle mit 5≤ r ≤35 [kPa*s/m²]",
-        "description": null
-      },
-      "fr": {
-        "name": "Steinwolle mit 5≤ r ≤35 [kPa*s/m²]",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3716,25 +2049,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F8497E8C-3CD3-32CA-9CAE-E2933DC58EF1"
-    },
-    "translations": {
-      "de": {
-        "name": "Trittschall-Dämmplatte TPE",
-        "description": null
-      },
-      "en": {
-        "name": "Trittschall-Dämmplatte TPE",
-        "description": null
-      },
-      "fr": {
-        "name": "Trittschall-Dämmplatte TPE",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3758,25 +2072,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "C556CB95-8D11-3FA4-B01A-1A76DFE47BB7"
-    },
-    "translations": {
-      "de": {
-        "name": "Technoroof Top 60",
-        "description": null
-      },
-      "en": {
-        "name": "Technoroof Top 60",
-        "description": null
-      },
-      "fr": {
-        "name": "Technoroof Top 60",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3800,25 +2095,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "4E76B33A-7A83-39A9-A9E9-E6E2F011EE30"
-    },
-    "translations": {
-      "de": {
-        "name": "Steinwolle ≥ 60kg/m³",
-        "description": null
-      },
-      "en": {
-        "name": "Steinwolle ≥ 60kg/m³",
-        "description": null
-      },
-      "fr": {
-        "name": "Steinwolle ≥ 60kg/m³",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3842,25 +2118,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "DAB41693-4CB4-3959-969E-C990233C421B"
-    },
-    "translations": {
-      "de": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      },
-      "en": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      },
-      "fr": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3884,25 +2141,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F7060291-D65A-31E4-B7B3-598F06742CE4"
-    },
-    "translations": {
-      "de": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      },
-      "en": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      },
-      "fr": {
-        "name": "Flumroc-Dämmplatte 1",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3926,25 +2164,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "741178BE-2257-36BE-9F07-1C3FDDD4BA99"
-    },
-    "translations": {
-      "de": {
-        "name": "Flumroc-Dämmplatte PRIMA",
-        "description": null
-      },
-      "en": {
-        "name": "Flumroc insulation board PRIMA",
-        "description": null
-      },
-      "fr": {
-        "name": "Panneau isolant Flumroc PRIMA",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -3968,25 +2187,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "9518AB5E-307E-3B13-9AB2-7E9322CFFAAB"
-    },
-    "translations": {
-      "de": {
-        "name": "GUTEX Thermoflex",
-        "description": null
-      },
-      "en": {
-        "name": "Thermoflex",
-        "description": null
-      },
-      "fr": {
-        "name": "Thermoflex",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4010,25 +2210,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "A604F00A-B38B-3FDF-A7AB-176B6E276FD8"
-    },
-    "translations": {
-      "de": {
-        "name": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
-        "description": null
-      },
-      "en": {
-        "name": "Thermal insulation material with compressive strength ≥50kPa according to EN 826",
-        "description": null
-      },
-      "fr": {
-        "name": "Matériau isolant thermique avec une résistance à la compression ≥50kPa selon EN 826",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4052,25 +2233,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "7ADB9AC3-034F-3407-A472-2BFE5FA9250B"
-    },
-    "translations": {
-      "de": {
-        "name": "Pavatherm 20-30mm",
-        "description": null
-      },
-      "en": {
-        "name": "Pavatherm 20-30mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Pavatherm 20-30mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4094,25 +2256,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "7EAED41E-27A4-3CBB-BD3A-C4AFE8A45B97"
-    },
-    "translations": {
-      "de": {
-        "name": "ISOVER ISOPROTECT 100-120mm",
-        "description": null
-      },
-      "en": {
-        "name": "ISOVER ISOPROTECT 100-120mm",
-        "description": null
-      },
-      "fr": {
-        "name": "ISOVER ISOPROTECT 100-120mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4136,25 +2279,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "11CBFC5A-CD51-3234-85F3-C3056D1E242F"
-    },
-    "translations": {
-      "de": {
-        "name": "Happy Step",
-        "description": null
-      },
-      "en": {
-        "name": "Gutex Happy Step 6mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Gutex Happy Step 6mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4178,25 +2302,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "EEB80B88-CC1A-3887-BF50-A639C33D2AE4"
-    },
-    "translations": {
-      "de": {
-        "name": "Zelluloseflocken",
-        "description": null
-      },
-      "en": {
-        "name": "Cellulose: Loose; not monitored",
-        "description": null
-      },
-      "fr": {
-        "name": "Cellulose: Loose; pas surveillé",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4220,25 +2325,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "CF9CB69A-ABD5-3B0E-934C-4175DDFD32CC"
-    },
-    "translations": {
-      "de": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      },
-      "en": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      },
-      "fr": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4262,25 +2348,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "CF9CB69A-ABD5-3B0E-934C-4175DDFD32CC"
-    },
-    "translations": {
-      "de": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      },
-      "en": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      },
-      "fr": {
-        "name": "Misapor Schaumglasschotter",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4304,25 +2371,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "84A880B4-B093-34FF-9070-6A4565CD3C2F"
-    },
-    "translations": {
-      "de": {
-        "name": "Hartbeton einschichtig, 27.5 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Hartbeton einschichtig, 27.5 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Hartbeton einschichtig, 27.5 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4346,25 +2394,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "F7B200CB-03EC-3622-AF45-0204E64ABB36"
-    },
-    "translations": {
-      "de": {
-        "name": "Hartbeton zweischichtig, 35 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Hartbeton zweischichtig, 35 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Hartbeton zweischichtig, 35 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4388,25 +2417,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "78A64E9E-24B9-3B8B-AA32-90B81DD227F1"
-    },
-    "translations": {
-      "de": {
-        "name": "Kunststeinplatte zementgebunden, 10 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Kunststeinplatte zementgebunden, 10 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Kunststeinplatte zementgebunden, 10 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4430,25 +2440,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "10DFDDC4-7CD3-3D42-AEF6-65AEFEE568F6"
-    },
-    "translations": {
-      "de": {
-        "name": "Parkett 2-Schicht werkversiegelt, 11 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Parkett 2-Schicht werkversiegelt, 11 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Parkett 2-Schicht werkversiegelt, 11 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4472,25 +2463,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1BFA0C83-CD07-3C8F-9E7D-8D99E661851E"
-    },
-    "translations": {
-      "de": {
-        "name": "Parkett 3-Schicht werkversiegelt, 15 mm",
-        "description": null
-      },
-      "en": {
-        "name": "Parkett 3-Schicht werkversiegelt, 15 mm",
-        "description": null
-      },
-      "fr": {
-        "name": "Parkett 3-Schicht werkversiegelt, 15 mm",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4514,25 +2486,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "088A89C6-41EB-33AA-8C79-3A63F26018F3"
-    },
-    "translations": {
-      "de": {
-        "name": "Anstrich, wasserverdünnbar, 2 Anstriche",
-        "description": null
-      },
-      "en": {
-        "name": "Anstrich, wasserverdünnbar, 2 Anstriche",
-        "description": null
-      },
-      "fr": {
-        "name": "Anstrich, wasserverdünnbar, 2 Anstriche",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4556,25 +2509,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "65D480EE-158D-383E-BC92-2CC15426D68E"
-    },
-    "translations": {
-      "de": {
-        "name": "Bitumenemulsion, 1 Anstrich",
-        "description": null
-      },
-      "en": {
-        "name": "Bitumenemulsion, 1 Anstrich",
-        "description": null
-      },
-      "fr": {
-        "name": "Bitumenemulsion, 1 Anstrich",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4598,25 +2532,6 @@
       "name": null,
       "databaseId": "tbz",
       "externalId": null
-    },
-    "translations": {
-      "de": {
-        "name": "Maçonnerie Ytong Thermobloc PL-07",
-        "description": null
-      },
-      "en": {
-        "name": null,
-        "description": null
-      },
-      "fr": {
-        "name": null,
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4640,25 +2555,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "32396AFB-BA79-324D-8386-2E1AF554DF72"
-    },
-    "translations": {
-      "de": {
-        "name": "Duropal Xterior Compact F",
-        "description": null
-      },
-      "en": {
-        "name": "Duropal Xterior Compact F",
-        "description": null
-      },
-      "fr": {
-        "name": "Duropal Xterior Compact F",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4682,25 +2578,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "02695B40-7BF7-32A2-A2F6-AAF302F6194F"
-    },
-    "translations": {
-      "de": {
-        "name": "Aluminiumprofil, blank",
-        "description": null
-      },
-      "en": {
-        "name": "Aluminiumprofil, blank",
-        "description": null
-      },
-      "fr": {
-        "name": "Aluminiumprofil, blank",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   },
   {
@@ -4724,25 +2601,6 @@
       "name": null,
       "databaseId": "lignum",
       "externalId": "1B3E250F-BD8D-32BE-A912-D616F75EF537"
-    },
-    "translations": {
-      "de": {
-        "name": "Silicon-Fugenmasse",
-        "description": null
-      },
-      "en": {
-        "name": "Silicon-Fugenmasse",
-        "description": null
-      },
-      "fr": {
-        "name": "Silicon-Fugenmasse",
-        "description": null
-      }
-    },
-    "metadata": {
-      "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
     }
   }
 ]

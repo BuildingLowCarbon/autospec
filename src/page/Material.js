@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
-import translations from '../language/translations';
 import LangContext from '../context/LangContext';
 import loadMaterials from '../utils/loadMaterials';
+import { dashboardFieldLabel, dashboardText } from './dashboard/dashboardI18n';
 
 function Material() {
   const { id } = useParams();
   const [material, setMaterial] = useState(null);
   const { lang, setLang } = useContext(LangContext);
-  const t = translations[lang];
+  const t = dashboardText(lang);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +21,16 @@ function Material() {
   }, [id]);
 
   if (!material) return <p>Chargement...</p>;
+
+  const materialName = material.translations?.[lang]?.name
+    || material.translations?.fr?.name
+    || material.translations?.de?.name
+    || material.translations?.en?.name
+    || material.workingtitle;
+  const materialDescription = material.translations?.[lang]?.description
+    || material.translations?.fr?.description
+    || material.translations?.de?.description
+    || material.translations?.en?.description;
 
   const {
     workingtitle,
@@ -45,54 +55,55 @@ function Material() {
     <>
       <Header lang={lang} setLang={setLang} />
       <div style={{ padding: '20px' }}>
-        <h2>Matériau</h2>
+        <h2>{t.material}</h2>
         <p>
-          <strong>{workingtitle || 'Sans nom'}</strong>
+          <strong>{materialName || workingtitle || 'Sans nom'}</strong>
+        </p>
+        {materialDescription ? <p>{materialDescription}</p> : null}
+        <p>
+          <strong>{dashboardFieldLabel('id', lang)} :</strong> {material.id}
         </p>
         <p>
-          <strong>ID :</strong> {material.id}
+          <strong>{dashboardFieldLabel('kbobId', lang)} :</strong> {kbobId ?? 'N/A'}
         </p>
         <p>
-          <strong>KBOB :</strong> {kbobId ?? 'N/A'}
+          <strong>{dashboardFieldLabel('siaId', lang)} :</strong> {siaId ?? 'N/A'}
         </p>
         <p>
-          <strong>SIA :</strong> {siaId ?? 'N/A'}
+          <strong>{dashboardFieldLabel('materialTypeId', lang)} :</strong> {materialTypeId ?? 'N/A'}
         </p>
         <p>
-          <strong>Type :</strong> {materialTypeId ?? 'N/A'}
+          <strong>{dashboardFieldLabel('materialcategoryId', lang)} :</strong> {materialcategoryId ?? 'N/A'}
         </p>
         <p>
-          <strong>Catégorie :</strong> {materialcategoryId ?? 'N/A'}
+          <strong>{dashboardFieldLabel('functionId', lang)} :</strong> {functionId ?? 'N/A'}
         </p>
         <p>
-          <strong>Fonction :</strong> {functionId ?? 'N/A'}
+          <strong>{dashboardFieldLabel('density_kg_m3', lang)} :</strong> {density_kg_m3 ?? 'N/A'} kg/m³
         </p>
         <p>
-          <strong>Densité :</strong> {density_kg_m3 ?? 'N/A'} kg/m³
+          <strong>{dashboardFieldLabel('thickness_mm', lang)} :</strong> {thickness_mm ?? 'N/A'} mm
         </p>
         <p>
-          <strong>Épaisseur :</strong> {thickness_mm ?? 'N/A'} mm
+          <strong>{dashboardFieldLabel('thermalConductivity_W_mK', lang)} :</strong> {thermalConductivity_W_mK ?? 'N/A'} W/mK
         </p>
         <p>
-          <strong>λ :</strong> {thermalConductivity_W_mK ?? 'N/A'} W/mK
+          <strong>{dashboardFieldLabel('specificHeat_Wh_kgK', lang)} :</strong> {specificHeat_Wh_kgK ?? 'N/A'}
         </p>
         <p>
-          <strong>Chaleur spé. Wh/kgK :</strong> {specificHeat_Wh_kgK ?? 'N/A'}
+          <strong>{dashboardFieldLabel('specificHeat_J_kgK', lang)} :</strong> {specificHeat_J_kgK ?? 'N/A'}
         </p>
         <p>
-          <strong>Chaleur spé. J/kgK :</strong> {specificHeat_J_kgK ?? 'N/A'}
+          <strong>{dashboardFieldLabel('waterVaporDiffusionResistanceCoefficientDry', lang)} :</strong> {waterVaporDiffusionResistanceCoefficientDry ?? 'N/A'}
         </p>
         <p>
-          <strong>μ (sec) :</strong> {waterVaporDiffusionResistanceCoefficientDry ?? 'N/A'}
+          <strong>{dashboardFieldLabel('waterVaporDiffusionResistanceCoefficientWet', lang)} :</strong> {waterVaporDiffusionResistanceCoefficientWet ?? 'N/A'}
         </p>
         <p>
-          <strong>μ (humide) :</strong> {waterVaporDiffusionResistanceCoefficientWet ?? 'N/A'}
+          <strong>{dashboardFieldLabel('fireClassification', lang)} :</strong> {fireClassification ?? 'N/A'}
         </p>
         <p>
-          <strong>Classe feu :</strong> {fireClassification ?? 'N/A'}
-        </p>
-        <p>
-          <strong>Réaction au feu :</strong> {reactionToFire ?? 'N/A'}
+          <strong>{dashboardFieldLabel('reactionToFire', lang)} :</strong> {reactionToFire ?? 'N/A'}
         </p>
         <p>
           <strong>Source :</strong> {source?.databaseId ?? 'N/A'} {source?.externalId ? `(${source.externalId})` : ''}
