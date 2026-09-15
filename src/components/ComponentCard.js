@@ -1,6 +1,8 @@
 import React from "react";
 import { ViewSVG, DEFAULT_PX_PER_MM_X } from "./Graphic";
 import { getAcousticInsulation } from "../utils/acoustic";
+import categoriesData from "../data/categories.json";
+import { getComponentSubcategoryId, getSubcategoryLabel } from "../utils/componentTaxonomy";
 
 const formatNumber = (value, decimals = 1) => {
   if (value === null || value === undefined) return null;
@@ -33,9 +35,17 @@ export default function ComponentCard({
   const layers = item?.structure?.layers ?? [];
   const title =
     item?.translations?.[lang]?.name ||
+    item?.translations?.fr?.name ||
+    item?.translations?.de?.name ||
+    item?.translations?.en?.name ||
+    item?.translations?.it?.name ||
     item?.serialNo ||
+    item?.source?.externalId ||
     item?.id ||
     "";
+  const sourceReference = item?.source?.externalId ?? null;
+  const category = categoriesData.categories.find((entry) => entry.id === item?.categoryId);
+  const subcategoryLabel = getSubcategoryLabel(category, getComponentSubcategoryId(item), lang);
 
   const thickness = formatNumber(item?.thickness_mm, 0);
   const weight = formatNumber(item?.weight_kg_m2, 0);
@@ -55,7 +65,11 @@ export default function ComponentCard({
   return (
     <div style={styles.card}>
       <div style={styles.header}>
-        <div style={styles.title}>{title}</div>
+        <div style={styles.titleBlock}>
+          <div style={styles.title}>{title}</div>
+          {sourceReference ? <div style={styles.sourceReference}>{sourceReference}</div> : null}
+          {subcategoryLabel ? <span style={styles.tag}>{subcategoryLabel}</span> : null}
+        </div>
         <div style={styles.headerActions}>
           <label style={styles.checkboxLabel}>
             <input
@@ -163,6 +177,25 @@ const styles = {
     lineHeight: 1.2,
     flex: "1 1 240px",
     wordBreak: "break-word",
+  },
+  titleBlock: {
+    flex: "1 1 240px",
+  },
+  tag: {
+    display: "inline-block",
+    marginTop: "6px",
+    padding: "3px 8px",
+    border: "1px solid #777",
+    borderRadius: "12px",
+    background: "#fff",
+    fontSize: "12px",
+    fontWeight: 600,
+  },
+  sourceReference: {
+    marginTop: "4px",
+    color: "#555",
+    fontSize: "13px",
+    fontWeight: 600,
   },
   detailsBtn: {
     border: "1px solid #666",

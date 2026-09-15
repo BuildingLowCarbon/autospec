@@ -4,9 +4,14 @@ import {
   withCustomSource,
   writeLocalCustomComponents,
 } from './customComponentsStore';
+import { normalizeSupportStructure } from './supportStructure';
+import { normalizeComponentTaxonomy } from './componentTaxonomy';
 let cachedComponents = null;
 let cachedDbSources = null;
 let cachedFileCustomComponents = null;
+
+const normalizeComponent = (component) =>
+  normalizeComponentTaxonomy(normalizeSupportStructure(component));
 
 const fetchJson = async (path) => {
   try {
@@ -92,19 +97,21 @@ export const loadComponents = async () => {
   }
   const results = await Promise.all(
     dbFiles.map((file) =>
-      fetchJson(`${base}/db/${file}`).then((items) => items.map((item) => ({ ...item, __sourceFile: file })))
+      fetchJson(`${base}/db/${file}`).then((items) => items.map((item) =>
+        normalizeComponent({ ...item, __sourceFile: file })
+      ))
     )
   );
 
   if (cachedFileCustomComponents === null) {
     const fileCustom = await fetchJsonResult(`${base}/db/components_custom.json`);
     if (fileCustom.ok) {
-      writeLocalCustomComponents(fileCustom.items);
+      writeLocalCustomComponents(fileCustom.items.map(normalizeComponent));
     }
-    cachedFileCustomComponents = fileCustom.items.map((item) => withCustomSource(item));
+    cachedFileCustomComponents = fileCustom.items.map((item) => normalizeComponent(withCustomSource(item)));
   }
 
-  const localCustom = readLocalCustomComponents().map((item) => withCustomSource(item));
+  const localCustom = readLocalCustomComponents().map((item) => normalizeComponent(withCustomSource(item)));
   cachedComponents = mergeById([...results.flat(), ...cachedFileCustomComponents, ...localCustom]);
 
   return cachedComponents;

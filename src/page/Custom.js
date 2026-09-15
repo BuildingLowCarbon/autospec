@@ -4,13 +4,15 @@ import Header from '../components/Header';
 import { ViewSVG, DEFAULT_PX_PER_MM_X } from '../components/Graphic';
 import LangContext from '../context/LangContext';
 import translations from '../language/translations';
+import dataTranslations from '../language/dataTranslations';
 import categoriesData from '../data/categories.json';
 import kbobData from '../data/KBOB_mat_db.json';
 import loadComponents, { invalidateComponentsCache } from '../utils/loadComponents';
 import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
-import { calculateComponentProperties } from '../utils/componentPropriety';
+import { calculateComponentProperties, calculateComponentThermalDetails } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
+import { DEFAULT_SUBCATEGORY_BY_CATEGORY, getSubcategoryLabel } from '../utils/componentTaxonomy';
 import {
   mergeById,
   readLocalCustomComponents,
@@ -30,6 +32,8 @@ const DEFAULT_LAYER = (order = 0) => ({
   reactionToFire: null,
   time_burning_min: null,
   time_fire_start_min: null,
+  isSupportStructure: false,
+  protectsSupportSidesFromFire: false,
   kbobId: null,
   ecccId: '',
   ecccDescription: '',
@@ -156,6 +160,28 @@ function Custom() {
     return categoriesData?.categories?.find((item) => item.id === categoryId) ?? null;
   }, [component?.categoryId]);
 
+  const categoryOptions = useMemo(
+    () => [...(categoriesData?.categories ?? [])].sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
+    [],
+  );
+  const subcategoryOptions = category?.subcategories ?? [];
+  const categoryLabel = (option) =>
+    dataTranslations.categories?.[option.id]?.[lang] ??
+    dataTranslations.categories?.[option.id]?.fr ??
+    option.id;
+
+  const handleCategoryChange = (categoryId) => {
+    const nextCategory = categoryOptions.find((item) => item.id === categoryId);
+    const defaultSubcategoryId = DEFAULT_SUBCATEGORY_BY_CATEGORY[categoryId] ?? '';
+    setComponent((prev) => prev ? ({
+      ...prev,
+      categoryId,
+      subcategoryId: nextCategory?.subcategories?.some((item) => item.id === defaultSubcategoryId)
+        ? defaultSubcategoryId
+        : '',
+    }) : prev);
+  };
+
   const ecccOptions = category?.eccc ?? [];
   const databaseSummary = useMemo(() => {
     if (!component) return null;
@@ -174,6 +200,10 @@ function Custom() {
             componentServiceLifeYears: 60,
           })
         : null,
+    [component, materials, products],
+  );
+  const thermalDetails = useMemo(
+    () => calculateComponentThermalDetails(component, materials, products),
     [component, materials, products],
   );
   const summary = useMemo(() => {
@@ -247,6 +277,22 @@ function Custom() {
 
   const handleLayerTextChange = (index, key, value) => {
     handleLayerChange(index, (layer) => ({ ...layer, [key]: getText(value, '') }));
+  };
+
+  const handleSupportStructureChange = (index, checked) => {
+    setComponent((prev) => {
+      if (!prev) return prev;
+      const layers = (prev.structure?.layers ?? []).map((layer, layerIndex) => ({
+        ...layer,
+        isSupportStructure: checked ? layerIndex === index : (
+          layerIndex === index ? false : layer?.isSupportStructure === true
+        ),
+      }));
+      return {
+        ...prev,
+        structure: { ...(prev.structure ?? {}), layers },
+      };
+    });
   };
 
   const handleEcccChange = (index, ecccId) => {
@@ -368,6 +414,11 @@ function Custom() {
     const selected = ecccOptions.find((item) => item.ecccId === layer?.ecccId);
     return selected?.name ?? layer?.ecccDescription ?? '';
   };
+  const getLayerName = (layer, index) =>
+    layer?.translations?.[lang]?.description ||
+    allComponentOptions.find((option) => option.id === String(layer?.productId ?? ''))?.label ||
+    layer?.productId ||
+    `Couche ${index + 1}`;
   const pxPerMmY = 1;
   const pxPerMmX = DEFAULT_PX_PER_MM_X;
   const title = component?.translations?.[lang]?.name || component?.serialNo || component?.id || '';
@@ -389,12 +440,32 @@ function Custom() {
           </label>
           <label>
             {t.category}
-            <input
-              type="text"
+            <select
               value={component.categoryId ?? ''}
-              onChange={(event) => handleComponentFieldChange('categoryId', event.target.value)}
+              onChange={(event) => handleCategoryChange(event.target.value)}
               style={{ width: '100%' }}
-            />
+            >
+              <option value="">—</option>
+              {categoryOptions.map((option) => (
+                <option key={option.id} value={option.id}>{categoryLabel(option)}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Sous-catégorie
+            <select
+              value={component.subcategoryId ?? ''}
+              onChange={(event) => handleComponentFieldChange('subcategoryId', event.target.value)}
+              disabled={!subcategoryOptions.length}
+              style={{ width: '100%' }}
+            >
+              <option value="">{subcategoryOptions.length ? 'À définir' : 'Aucune'}</option>
+              {subcategoryOptions.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {getSubcategoryLabel(category, option.id, lang)}
+                </option>
+              ))}
+            </select>
           </label>
           <label>
             Nom ({lang})
@@ -489,12 +560,21 @@ function Custom() {
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.reactionToFire}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_burning_min}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.time_fire_start_min}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>Structure porteuse</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>Protection latérale feu</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>Actions</th>
               </tr>
             </thead>
             <tbody>
               {layers.map((layer, index) => (
-                <tr key={`${layer.order}-${index}`}>
+                <tr
+                  key={`${layer.order}-${index}`}
+                  style={layer?.isSupportStructure ? {
+                    fontWeight: 700,
+                    outline: '3px solid #222',
+                    outlineOffset: '-3px',
+                  } : undefined}
+                >
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <select
                       value={layer?.ecccId ?? ''}
@@ -636,6 +716,27 @@ function Custom() {
                       style={{ width: '90px' }}
                     />
                   </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
+                    <input
+                      type="checkbox"
+                      checked={layer?.isSupportStructure === true}
+                      onChange={(event) => handleSupportStructureChange(index, event.target.checked)}
+                      aria-label={`Définir la couche ${index + 1} comme structure porteuse`}
+                    />
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
+                    <input
+                      type="checkbox"
+                      checked={layer?.protectsSupportSidesFromFire === true}
+                      disabled={layer?.structure !== 'in-lying'}
+                      onChange={(event) => handleLayerChange(index, (current) => ({
+                        ...current,
+                        protectsSupportSidesFromFire: event.target.checked,
+                      }))}
+                      aria-label={`La couche ${index + 1} protège les côtés de la structure au feu`}
+                      title="À cocher uniquement si la couche in-lying reste fixée et protège durablement les côtés de la structure au feu"
+                    />
+                  </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px', whiteSpace: 'nowrap' }}>
                     <button type="button" onClick={() => moveLayer(index, -1)} disabled={index === 0} style={smallButtonStyle}>Up</button>{' '}
                     <button type="button" onClick={() => moveLayer(index, 1)} disabled={index === layers.length - 1} style={smallButtonStyle}>Down</button>{' '}
@@ -649,25 +750,28 @@ function Custom() {
         </div>
         <div style={{ marginTop: '16px' }}>
           <h3>Resistance bois</h3>
-          <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-            Frequence limite vibration
-            <input
-              type="number"
-              min="0"
-              step="0.1"
-              value={vibrationLimitFrequencyInput}
-              onChange={(event) =>
-                handleFireResistanceFieldChange(
-                  'vibration_f_min_Hz',
-                  event.target.value === '' ? '' : parseNullableNumber(event.target.value)
-                )
-              }
-              style={{ width: '90px', border: '1px solid #222',padding: '4px' }}
-            />
-            Hz
-          </label>
+          {component.categoryId === 'floor_assembly' ? (
+            <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+              Fréquence limite de vibration
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                value={vibrationLimitFrequencyInput}
+                onChange={(event) =>
+                  handleFireResistanceFieldChange(
+                    'vibration_f_min_Hz',
+                    event.target.value === '' ? '' : parseNullableNumber(event.target.value)
+                  )
+                }
+                style={{ width: '90px', border: '1px solid #222',padding: '4px' }}
+              />
+              Hz
+            </label>
+          ) : null}
           {woodCapacityTable ? (
-            <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#fff' }}>
+            <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: 'auto', borderCollapse: 'collapse', backgroundColor: '#fff' }}>
               <thead>
                 <tr style={{ backgroundColor: '#eee' }}>
                   <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'left' }}>Verification</th>
@@ -693,11 +797,96 @@ function Custom() {
                 ))}
               </tbody>
             </table>
+            </div>
           ) : (
             <div style={{ background: '#f6f6f6', border: '1px solid #ddd', padding: '10px' }}>
               {woodBeamSpanResult?.error || woodStudCompressionResult?.error || 'N/A'}
             </div>
           )}
+          {woodBeamSpanResult && !woodBeamSpanResult.error ? (
+            <div style={{ marginTop: '12px', display: 'inline-block', maxWidth: '900px', padding: '12px 14px', border: '1px solid #ddd', borderRadius: '6px', background: '#fafafa' }}>
+              <strong>Hypothèses du calcul des portées</strong>
+              <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: 1.55 }}>
+                <li>Poutre simplement appuyée sur deux appuis, sous charge uniformément répartie.</li>
+                <li>
+                  Section : b = {formatNumber(woodBeamSpanResult.section?.b_mm, 0)} mm, h = {formatNumber(woodBeamSpanResult.section?.h_mm, 0)} mm,
+                  entraxe = {formatNumber(woodBeamSpanResult.section?.spacing_mm, 0)} mm.
+                  {woodBeamSpanResult.input?.isContinuousSupport ? ' Structure continue calculée comme une bande porteuse de 1 m.' : ''}
+                </li>
+                <li>
+                  Bois : {woodBeamSpanResult.material?.woodFamily} / {woodBeamSpanResult.material?.woodClass},
+                  fm,d = {formatNumber(woodBeamSpanResult.material?.fm_d_N_mm2, 2)} N/mm²,
+                  fv,d = {formatNumber(woodBeamSpanResult.material?.fv_d_N_mm2, 2)} N/mm²,
+                  Emean = {formatNumber(woodBeamSpanResult.material?.Em_mean_N_mm2, 0)} N/mm².
+                </li>
+                <li>
+                  Charges : Gk surfacique = {formatNumber(woodBeamSpanResult.loads?.permanentLoad_kN_m2, 2)} kN/m²,
+                  poids propre de la poutre = {formatNumber(woodBeamSpanResult.loads?.selfWeight_kN_m, 3)} kN/m,
+                  Qk = {formatNumber(woodBeamSpanResult.loads?.qk_live_kN_m2, 2)} kN/m².
+                </li>
+                <li>
+                  Combinaison à température normale : {woodBeamSpanResult.assumptions?.ambientLoadCombination},
+                  soit qd = {formatNumber(woodBeamSpanResult.loads?.qdAmbient_kN_m, 3)} kN/m.
+                </li>
+                <li>
+                  Flèche : critère {woodBeamSpanResult.assumptions?.deflectionCriterionKey}, limite L/{formatNumber(woodBeamSpanResult.assumptions?.deflectionRatio, 0)}.
+                  Vibration : fmin = {woodBeamSpanResult.ambient?.f_min_Hz == null ? 'N/A' : `${formatNumber(woodBeamSpanResult.ambient.f_min_Hz, 1)} Hz`},
+                  masse linéique = {woodBeamSpanResult.ambient?.m_line_kg_m == null ? 'N/A' : `${formatNumber(woodBeamSpanResult.ambient.m_line_kg_m, 1)} kg/m`}.
+                </li>
+                <li>
+                  Incendie : exposition sur {woodBeamSpanResult.input?.fireExposureFaces} faces,
+                  βn = {formatNumber(woodBeamSpanResult.material?.beta_n_mm_min, 2)} mm/min,
+                  couche résiduelle dred = {formatNumber(woodBeamSpanResult.assumptions?.residualLayer_mm, 0)} mm,
+                  protection = {formatNumber(woodBeamSpanResult.input?.t_protection_min ?? 0, 1)} min,
+                  Ed,fi = {formatNumber(woodBeamSpanResult.assumptions?.fireEffectFactor, 2)} × Ed.
+                </li>
+                <li>La portée retenue est la plus petite valeur issue des vérifications applicables : flexion, cisaillement, flèche, vibration et incendie.</li>
+              </ul>
+              <small style={{ display: 'block', marginTop: '8px', color: '#666' }}>
+                Calcul de prédimensionnement simplifié selon SIA 260 / 261 / 265 ; les assemblages, appuis locaux, entailles, trous et la stabilité globale ne sont pas vérifiés.
+              </small>
+            </div>
+          ) : null}
+          {woodStudCompressionResult && !woodStudCompressionResult.error ? (
+            <div style={{ marginTop: '12px', display: 'inline-block', maxWidth: '900px', padding: '12px 14px', border: '1px solid #ddd', borderRadius: '6px', background: '#fafafa' }}>
+              <strong>Hypothèses du calcul de résistance des parois porteuses</strong>
+              <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: 1.55 }}>
+                <li>Montant modélisé comme une barre comprimée de section rectangulaire pleine ; flambage vérifié sur l’axe faible.</li>
+                <li>
+                  Section : b = {formatNumber(woodStudCompressionResult.input?.b_mm, 0)} mm,
+                  h = {formatNumber(woodStudCompressionResult.input?.h_mm, 0)} mm,
+                  entraxe = {formatNumber(woodStudCompressionResult.input?.spacing_mm, 0)} mm.
+                  {woodStudCompressionResult.input?.isContinuousSupport ? ' Structure continue calculée comme une bande porteuse de 1 m.' : ''}
+                </li>
+                <li>
+                  Bois : {woodStudCompressionResult.input?.woodFamily} / {woodStudCompressionResult.input?.woodClass}.
+                  Longueur de flambage = {formatNumber(woodStudCompressionResult.input?.bucklingLength_mm, 0)} mm.
+                </li>
+                <li>
+                  Excentricités appliquées : {formatNumber(woodStudCompressionResult.input?.eccentricity_along_h_mm ?? 0, 0)} mm selon h et {formatNumber(woodStudCompressionResult.input?.eccentricity_along_b_mm ?? 0, 0)} mm selon b.
+                  La résistance retenue est la plus faible entre le flambage et l’interaction compression-flexion.
+                </li>
+                <li>
+                  À température normale : élancement relatif λrel = {formatNumber(woodStudCompressionResult.normalTemperature?.buckling?.lambda_rel, 2)} et facteur de réduction kc = {formatNumber(woodStudCompressionResult.normalTemperature?.buckling?.kc, 2)}.
+                </li>
+                <li>
+                  Incendie : exposition sur {woodStudCompressionResult.input?.fireExposureFaces} face{woodStudCompressionResult.input?.fireExposureFaces === 1 ? '' : 's'},
+                  protection = {formatNumber(woodStudCompressionResult.input?.t_protection_min ?? 0, 1)} min.
+                  {woodStudCompressionResult.input?.hasLateralFireProtection ? ' Les côtés de la structure sont considérés protégés.' : ''}
+                </li>
+                {(woodStudCompressionResult.fire ?? []).map((fireResult) => (
+                  <li key={fireResult.fireMinutes}>
+                    R{fireResult.fireMinutes} : profondeur fictive consommée d’eff = {formatNumber(fireResult.d_eff_mm, 1)} mm ;
+                    section résiduelle {fireResult.valid ? `${formatNumber(fireResult.bfi_mm, 0)} × ${formatNumber(fireResult.hfi_mm, 0)} mm` : 'insuffisante'}.
+                  </li>
+                ))}
+                <li>La force maximale par mètre de mur est obtenue à partir de la résistance d’un montant divisée par son entraxe.</li>
+              </ul>
+              <small style={{ display: 'block', marginTop: '8px', color: '#666' }}>
+                Prédimensionnement simplifié selon SIA 265 ; les assemblages, les appuis locaux, le cisaillement, les effets de second ordre détaillés et la stabilité globale ne sont pas vérifiés.
+              </small>
+            </div>
+          ) : null}
         </div>
         {layers.length > 0 && (
           <div style={{ marginTop: '32px', display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
@@ -716,6 +905,97 @@ function Custom() {
               pxPerMmX={pxPerMmX}
             />
           </div>
+        )}
+        {thermalDetails && (
+          <section style={{ marginTop: '28px', border: '1px solid #ccc', borderRadius: '8px', padding: '16px', background: '#fff' }}>
+            <h3 style={{ marginTop: 0 }}>Détail du calcul de la valeur U</h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px 28px', marginBottom: '14px' }}>
+              <div>
+                <strong>hi</strong> = {formatNumber(thermalDetails.surface.hi_W_m2K, 2)} W/m²K<br />
+                Rsi = 1 / hi = {formatNumber(1 / thermalDetails.surface.hi_W_m2K, 3)} m²K/W
+              </div>
+              <div>
+                <strong>he</strong> = {formatNumber(thermalDetails.surface.he_W_m2K, 2)} W/m²K<br />
+                Rse = 1 / he = {formatNumber(1 / thermalDetails.surface.he_W_m2K, 3)} m²K/W
+              </div>
+            </div>
+
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr style={{ background: '#eee' }}>
+                    <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'left' }}>Type</th>
+                    <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'left' }}>Couche / chemin</th>
+                    <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'left' }}>Calcul</th>
+                    <th style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>R [m²K/W]</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {thermalDetails.surface.terms.map((term) => (
+                    <tr key={term.label}>
+                      <td style={{ border: '1px solid #ccc', padding: '8px' }}>Surface</td>
+                      <td style={{ border: '1px solid #ccc', padding: '8px' }}>{term.label}</td>
+                      <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                        {term.coefficient} = {formatNumber(term.coefficient_W_m2K, 2)} W/m²K → R = 1 / {term.coefficient}
+                      </td>
+                      <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>{formatNumber(term.resistance_m2K_W, 3)}</td>
+                    </tr>
+                  ))}
+                  {thermalDetails.resistanceTerms.map((term, index) => {
+                    if (term.type === 'ignored') {
+                      return (
+                        <tr key={`ignored-${index}`}>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>Non incluse</td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>{getLayerName(term.layer, index)}</td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>Couche « {term.reason} »</td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>—</td>
+                        </tr>
+                      );
+                    }
+                    if (term.type === 'series') {
+                      return (
+                        <tr key={`series-${index}`}>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>Série</td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>{getLayerName(term.layer, index)}</td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                            {term.included
+                              ? `R = e / λ = ${formatNumber(term.thickness_m, 3)} / ${formatNumber(term.conductivity_W_mK, 3)}`
+                              : 'Non incluse : épaisseur ou conductivité λ manquante'}
+                          </td>
+                          <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>
+                            {term.resistance_m2K_W === null ? 'N/A' : formatNumber(term.resistance_m2K_W, 3)}
+                          </td>
+                        </tr>
+                      );
+                    }
+                    return (
+                      <tr key={`parallel-${index}`}>
+                        <td style={{ border: '1px solid #ccc', padding: '8px' }}>Parallèle</td>
+                        <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                          {term.paths.map((path, pathIndex) => (
+                            <div key={pathIndex}>
+                              {getLayerName(path.layer, pathIndex)} — f{pathIndex + 1} = {formatNumber(path.fraction, 3)}, R{pathIndex + 1} = {path.resistance_m2K_W === null ? 'N/A' : formatNumber(path.resistance_m2K_W, 3)}
+                            </div>
+                          ))}
+                        </td>
+                        <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                          {term.complete ? 'Req = 1 / (f1 / R1 + f2 / R2)' : 'Calcul parallèle incomplet : λ manquant'}
+                        </td>
+                        <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'right' }}>
+                          {term.equivalentResistance_m2K_W === null ? 'N/A' : formatNumber(term.equivalentResistance_m2K_W, 3)}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ marginTop: '14px', padding: '12px', background: '#f6f6f6', borderRadius: '6px' }}>
+              <div><strong>R total en série</strong> = résistances superficielles + Σ R couches + Σ R équivalentes parallèles = {thermalDetails.totalResistance_m2K_W === null ? 'N/A' : `${formatNumber(thermalDetails.totalResistance_m2K_W, 3)} m²K/W`}</div>
+              <div style={{ marginTop: '5px' }}><strong>U = 1 / R total</strong> = {thermalDetails.uValue_W_m2K === null ? 'N/A' : `${formatNumber(thermalDetails.uValue_W_m2K, 3)} W/m²K`}</div>
+            </div>
+          </section>
         )}
       </div>
     </>

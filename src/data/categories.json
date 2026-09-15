@@ -6,6 +6,9 @@
       "icon": "foundation",
       "order": 0,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "ground_contact", "label": { "fr": "Contre terrain", "de": "Gegen Erdreich", "en": "Ground contact", "it": "Contro terra" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Ajout de masse",
@@ -58,6 +61,10 @@
       "icon": "floor",
       "order": 1,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "standard", "label": { "fr": "Plancher standard", "de": "Standarddecke", "en": "Standard floor", "it": "Solaio standard" } },
+        { "id": "against_unheated", "label": { "fr": "Contre local non chauffé", "de": "Gegen unbeheizten Raum", "en": "Against unheated space", "it": "Contro locale non riscaldato" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Ajout de masse",
@@ -110,6 +117,10 @@
       "icon": "outer_wall",
       "order": 2,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "above_ground", "label": { "fr": "Hors terrain", "de": "Über Terrain", "en": "Above ground", "it": "Fuori terra" } },
+        { "id": "below_ground", "label": { "fr": "Sous-terrain", "de": "Unter Terrain", "en": "Below ground", "it": "Interrato" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -185,6 +196,10 @@
       "icon": "inner_wall",
       "order": 3,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
+        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -219,6 +234,10 @@
       "icon": "wall",
       "order": 4,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
+        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -236,6 +255,10 @@
       "icon": "wall",
       "order": 5,
       "properties": ["thickness", "weight", "uValue", "gwp"],
+      "subcategories": [
+        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
+        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -295,6 +318,16 @@
                 "ecccId": "F01.02",
                 "name": "Couverture (Toitures plates)",
                 "serviceLife": 30
+            },
+            {
+                "ecccId": "G04.01",
+                "name": "Supports pour faux-plafonds",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G04.02",
+                "name": "Faux-plafonds",
+                "serviceLife": 30
             }
         ]
     },
@@ -328,6 +361,16 @@
                 "ecccId": "F01.03",
                 "name": "Couverture (Toitures inclinées)",
                 "serviceLife": 40
+            },
+            {
+                "ecccId": "G04.01",
+                "name": "Supports pour faux-plafonds",
+                "serviceLife": 30
+            },
+            {
+                "ecccId": "G04.02",
+                "name": "Faux-plafonds",
+                "serviceLife": 30
             }
         ]
     },

@@ -9,6 +9,8 @@ import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
 import { getAcousticInsulation } from '../utils/acoustic';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
+import categoriesData from '../data/categories.json';
+import { getComponentSubcategoryId, getSubcategoryLabel } from '../utils/componentTaxonomy';
 
 const compactTableStyle = {
   width: 'auto',
@@ -49,6 +51,8 @@ function Element() {
   const woodBeamSpanResult = componentWithFireTiming?.fire_resistance?.wood_beam_span ?? null;
   const woodStudCompressionResult = componentWithFireTiming?.fire_resistance?.wood_stud_compression ?? null;
   const woodCapacityTable = componentWithFireTiming?.fire_resistance?.wood_capacity_table ?? null;
+  const category = categoriesData.categories.find((item) => item.id === data?.categoryId);
+  const subcategoryLabel = getSubcategoryLabel(category, getComponentSubcategoryId(data), lang);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -136,6 +140,11 @@ function Element() {
         <p>
           <strong>{t.category} :</strong> {data.categoryId}
         </p>
+        {subcategoryLabel ? (
+          <p>
+            <strong>Sous-catégorie :</strong> {subcategoryLabel}
+          </p>
+        ) : null}
         <p>
           <strong>{t.thickness} :</strong> {formatNumber(data.thickness_mm, 0)} mm
         </p>

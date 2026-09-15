@@ -164,8 +164,20 @@ module.exports = function setupProxy(app) {
   app.get('/api/lignum/diagnostics', (req, res) => {
     try {
       const scope = req.query.scope === 'unified' ? 'unified' : 'selected';
-      const components = readJson(scope === 'unified' ? unifiedPath : selectedPath, []);
-      sendJson(res, { ok: true, scope, ...validateComponents(components, readJson(materialsPath, []), readJson(productsPath, [])) });
+      const unified = readJson(unifiedPath, []);
+      const selected = readJson(selectedPath, []);
+      const selectedIds = new Set(selected.map((item) => String(item.id)));
+      const components = scope === 'unified'
+        ? unified
+        : unified.filter((item) => selectedIds.has(String(item.id)));
+      sendJson(res, {
+        ok: true,
+        scope,
+        ...validateComponents(components, readJson(materialsPath, []), readJson(productsPath, []), {
+          mappings: ensureMappings(),
+          selectedComponents: scope === 'selected' ? selected : [],
+        }),
+      });
     } catch (error) {
       withApiError(res, error);
     }
@@ -175,16 +187,32 @@ module.exports = function setupProxy(app) {
     try {
       const mappings = ensureMappings();
       const mapBySource = new Map(mappings.map((item) => [String(item.lignumId), item]));
+      const selectedIds = new Set(readJson(selectedPath, []).map((item) => String(item.id)));
       const references = new Map();
       readJson(unifiedPath, []).forEach((component) => (component.structure?.layers || []).forEach((layer) => {
-        if (layer.productId && !references.has(String(layer.productId))) references.set(String(layer.productId), layer);
+        if (!layer.productId) return;
+        const lignumId = String(layer.productId);
+        const existing = references.get(lignumId);
+        if (!existing) {
+          references.set(lignumId, {
+            layer,
+            usedBySelected: selectedIds.has(String(component.id)),
+            componentCount: 1,
+          });
+        } else {
+          existing.usedBySelected = existing.usedBySelected || selectedIds.has(String(component.id));
+          existing.componentCount += 1;
+        }
       }));
       const sourceProducts = new Map(readJson(path.join(sourceProductsDir, 'Lignum_Products_de.json'), []).map((item) => [String(item.id), item]));
       const tbzItems = [...readJson(materialsPath, []).map((item) => ({ ...item, kind: 'material' })), ...readJson(productsPath, []).map((item) => ({ ...item, kind: 'product' }))];
-      const rows = Array.from(references, ([lignumId, layer]) => {
+      const rows = Array.from(references, ([lignumId, reference]) => {
+        const { layer } = reference;
         const source = sourceProducts.get(lignumId) || {};
         return {
           lignumId,
+          usedBySelected: reference.usedBySelected,
+          componentCount: reference.componentCount,
           tbzId: mapBySource.get(lignumId)?.tbzId || '',
           workingtitle: source.workingtitle || layer.productName || layer.translations?.de?.name || '',
           translations: layer.translations || {},

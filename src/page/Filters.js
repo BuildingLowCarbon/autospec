@@ -3,8 +3,8 @@ import '../App.css';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import translations from '../language/translations';
+import dataTranslations from '../language/dataTranslations';
 import LangContext from '../context/LangContext';
-import DropDown from '../components/DropDown';
 import FireRequirementsModule from '../components/FireRequirements';
 import AcousticRequirementsModule from '../components/AcousticRequirements';
 import SelectedItemsContext from '../context/SelectedItemsContext';
@@ -19,8 +19,8 @@ import { getAcousticInsulation } from '../utils/acoustic';
 const valueSatisfies = (itemValue, selectedValue, scale) => {
   const selectedIdx = scale.indexOf(selectedValue);
   if (selectedIdx === -1) return true;
-  const normalizedItemValue = itemValue || scale[0];
-  const valueIdx = scale.indexOf(normalizedItemValue);
+  if (itemValue === null || itemValue === undefined || itemValue === '') return true;
+  const valueIdx = scale.indexOf(itemValue);
   if (valueIdx === -1) return true;
   return valueIdx >= selectedIdx;
 };
@@ -100,6 +100,7 @@ const FILTERS_STORAGE_KEY = 'autospec.filters.v1';
 const FLOOR_SPAN_RATINGS = ['R0', 'R30', 'R60'];
 
 const toFiniteNumberOrNull = (value) => {
+  if (value === null || value === undefined || value === '') return null;
   const num = Number(value);
   return Number.isFinite(num) ? num : null;
 };
@@ -212,6 +213,11 @@ function App() {
   const navigate = useNavigate();
   const { lang, setLang } = useContext(LangContext);
   const t = translations[lang];
+  const categoryLabel = useCallback((categoryId) =>
+    dataTranslations.categories?.[categoryId]?.[lang] ??
+    dataTranslations.categories?.[categoryId]?.fr ??
+    categoryId,
+  [lang]);
   const [fireReqApplied, setFireReqApplied] = useState(Boolean(persistedFilters.fireReqApplied));
   const [fireReqSelection, setFireReqSelection] = useState(
     persistedFilters.fireReqSelection ?? {
@@ -364,8 +370,8 @@ function App() {
 
   const baseFilteredData = useMemo(() => {
     return data.filter((item) => {
-      const thickness = item.thickness_mm || 0;
-      const gwp = item.gwp_kgco2e_m2 || 0;
+      const thickness = toFiniteNumberOrNull(item.thickness_mm);
+      const gwp = toFiniteNumberOrNull(item.gwp_kgco2e_m2);
       const category = item.categoryId || '';
       const floorSpan = getGoverningFloorSpan(item, selectedFloorSpanRatings);
       const hasFloorSpan = typeof floorSpan === 'number' && !Number.isNaN(floorSpan);
@@ -374,7 +380,8 @@ function App() {
       const floorSpanAllowed =
         category !== 'floor_assembly' ||
         !floorSpanFilterActive ||
-        (hasFloorSpan && floorSpan >= selectedFloorSpan[0] && floorSpan <= selectedFloorSpan[1]);
+        !hasFloorSpan ||
+        (floorSpan >= selectedFloorSpan[0] && floorSpan <= selectedFloorSpan[1]);
       const uVal = item.uValue_W_m2K;
       const hasUVal = typeof uVal === 'number' && !Number.isNaN(uVal);
       const uValAllowed = !hasUVal || (uVal >= selectedUValue[0] && uVal <= selectedUValue[1]);
@@ -390,10 +397,8 @@ function App() {
       const sourceFile = item.__sourceFile || '';
       const sourceAllowed = selectedSources.length > 0 && selectedSources.includes(sourceFile);
       return (
-        thickness >= selectedThickness[0] &&
-        thickness <= selectedThickness[1] &&
-        gwp >= selectedGwp[0] &&
-        gwp <= selectedGwp[1] &&
+        (thickness === null || (thickness >= selectedThickness[0] && thickness <= selectedThickness[1])) &&
+        (gwp === null || (gwp >= selectedGwp[0] && gwp <= selectedGwp[1])) &&
         floorSpanAllowed &&
         uValAllowed &&
         rwAllowed &&
@@ -663,6 +668,35 @@ function App() {
     },
     []
   );
+  const resetFilters = useCallback(() => {
+    setPage(0);
+    setSortBy('');
+    setSortOrder('asc');
+    setSelectedCategory('');
+    setSelectedSources(sourceOptions.map((option) => option.value));
+    setSelectedThickness([...thicknessRange]);
+    setSelectedGwp([...gwpRange]);
+    setSelectedFloorSpan([...floorSpanRange]);
+    setSelectedFloorSpanRatings(FLOOR_SPAN_RATINGS);
+    setSelectedUValue([...uValueRange]);
+    setSelectedAcousticRw([...acousticRwRange]);
+    setSelectedAcousticLnw([...acousticLnwRange]);
+    setFireRValue(FIRE_R_VALUES[0]);
+    setFireEIValue(FIRE_EI_VALUES[0]);
+    setFireReqApplied(false);
+    setFireReqRequirements([]);
+    setFireReqSelection({
+      use: 'residential',
+      building_type: '',
+      building_height: '',
+      neighbor_distance: 'gt_10',
+    });
+    setAcousticReqApplied(false);
+    setAcousticReqRequirements([]);
+    setAcousticReqSelection({ requirement_level: 'normal', uncertainty_dB: 2 });
+    setFireApplyResetSignal((signal) => signal + 1);
+    setAcousticApplyResetSignal((signal) => signal + 1);
+  }, [acousticLnwRange, acousticRwRange, floorSpanRange, gwpRange, sourceOptions, thicknessRange, uValueRange]);
   const filteredCount = filteredData.length;
 
   return (
@@ -671,6 +705,22 @@ function App() {
       <div style={{ display: 'flex', padding: '16px', gap: '16px' }}>
         {/* Filtres a gauche */}
         <div style={{ width: '25%', padding: '16px', border: '1px solid #ccc', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+          <button
+            type="button"
+            onClick={resetFilters}
+            style={{
+              width: '100%',
+              marginBottom: '16px',
+              padding: '9px 12px',
+              border: '1px solid #777',
+              borderRadius: '6px',
+              background: '#fff',
+              cursor: 'pointer',
+              fontWeight: 600,
+            }}
+          >
+            {t.reset_filters}
+          </button>
           <h2>{t.sort}</h2>
           <div
             style={{
@@ -734,7 +784,7 @@ function App() {
               <option value="">-- {t.all} --</option>
               {categoryOptions.map((category) => (
                 <option key={category} value={category}>
-                  {category}
+                  {categoryLabel(category)}
                 </option>
               ))}
             </select>

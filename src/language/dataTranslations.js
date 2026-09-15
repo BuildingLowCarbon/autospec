@@ -1,13 +1,16 @@
 const dataTranslations = {
   categories: {
-    floor_assembly: { fr: "Plancher", de: "Decke", en: "Floor assembly" },
-    wall_assembly: { fr: "Élément de mur", de: "Wand", en: "Wall assembly" },
-    outer_wall: { fr: "Paroi extérieure", de: "Aussenwand", en: "Outer wall" },
-    partition_wall_single_shell: { fr: "Cloison simple ossature", de: "Trennwand einschalig", en: "Partition wall single shell" },
-    partition_wall_double_shell: { fr: "Cloison double ossature", de: "Trennwand zweischalig", en: "Partition wall double shell" },
-    flat_roof_shed_roof: { fr: "Toit plat / en pente", de: "Flachdach", en: "Flat roof / shed roof" },
-    steep_roof: { fr: "Toit à deux pans", de: "Steildach", en: "Steep roof" },
-    balcony: { fr: "Balcon", de: "Balkon", en: "Balcony" }
+    foundation: { fr: "Radier", de: "Bodenplatte", en: "Foundation slab", it: "Platea di fondazione" },
+    floor_assembly: { fr: "Plancher", de: "Decke", en: "Floor assembly", it: "Solaio" },
+    wall_assembly: { fr: "Élément de mur", de: "Wand", en: "Wall assembly", it: "Elemento di parete" },
+    outer_wall: { fr: "Paroi extérieure", de: "Aussenwand", en: "Outer wall", it: "Parete esterna" },
+    inner_wall: { fr: "Mur intérieur", de: "Innenwand", en: "Inner wall", it: "Parete interna" },
+    partition_wall_single_shell: { fr: "Cloison simple ossature", de: "Trennwand einschalig", en: "Partition wall single shell", it: "Parete divisoria a struttura singola" },
+    partition_wall_double_shell: { fr: "Cloison double ossature", de: "Trennwand zweischalig", en: "Partition wall double shell", it: "Parete divisoria a doppia struttura" },
+    flat_roof_shed_roof: { fr: "Toit plat / en pente", de: "Flachdach", en: "Flat roof / shed roof", it: "Tetto piano / a falda unica" },
+    steep_roof: { fr: "Toit à deux pans", de: "Steildach", en: "Steep roof", it: "Tetto a falde" },
+    underground_roof: { fr: "Toiture enterrée", de: "Unterirdisches Dach", en: "Underground roof", it: "Copertura interrata" },
+    balcony: { fr: "Balcon", de: "Balkon", en: "Balcony", it: "Balcone" }
   },
   layerTypes: {
     adhesion: { fr: "Adhérence", de: "Adhäsion", en: "Adhesion" },
@@ -38,78 +41,3 @@ const dataTranslations = {
 };
 
 export default dataTranslations;
-
-
-        "Contreventement",
-        "Couche support",
-        "Dalle",
-        "Etanchéité",
-        "Isolation",
-        "Isolation porteuse",
-        "Isolement aux bruits de choc",
-        "Lattes / profils",
-        "Pare-vapeur",
-        "Parement de plafond",
-        "Revêtement de sol",
-        "Structure porteuse",
-        "Traitement de surface"
-
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche de drainage",
-        "Couche support",
-        "Etanchéité au vent",
-        "Isolation",
-        "Lattes / profils",
-        "Pare-vapeur",
-        "Parement",
-        "Revêtement extérieur",
-        "Revêtement intérieur",
-        "Treillis d'armature"
-
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche support",
-        "Enduit intérieur",
-        "Espace d'air",
-        "Isolation",
-        "Lattes / profils"
-
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche support",
-        "Enduit intérieur",
-        "Espace d'air",
-        "Isolation",
-        "Lattes / profils"
-
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche de drainage",
-        "Couche de protection",
-        "Couche support",
-        "Couverture",
-        "Etanchéité",
-        "Frein-vapeur",
-        "Isolation",
-        "Lattes / profils",
-        "Pare-vapeur",
-        "Revêtement",
-        "Structure porteuse"
-
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche de drainage",
-        "Couche support",
-        "Couverture",
-        "Etanchéité",
-        "Frein-vapeur",
-        "Isolation",
-        "Lattes / profils",
-        "Revêtement",
-        "Structure porteuse"

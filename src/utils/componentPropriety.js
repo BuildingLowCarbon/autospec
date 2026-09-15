@@ -4,10 +4,13 @@ const DEFAULT_RSE = 0.04;
 const DEFAULT_COMPONENT_SERVICE_LIFE_YEARS = 60;
 
 const SURFACE_RULE_BY_CATEGORY = {
+  foundation: 'Rsi_Rse',
   outer_wall: 'Rsi_Rse',
   steep_roof: 'Rsi_Rse',
   flat_roof_shed_roof: 'Rsi_Rse',
   floor_assembly: 'Rsi_Rse',
+  balcony: 'Rsi_Rse',
+  inner_wall: '2xRsi',
   partition_wall_single_shell: '2xRsi',
   partition_wall_double_shell: '2xRsi',
 };
@@ -145,6 +148,28 @@ const surfaceResistanceForCategory = (categoryId, rsi, rse) => {
   return 0;
 };
 
+const surfaceResistanceDetailsForCategory = (categoryId, rsi, rse) => {
+  const mode = SURFACE_RULE_BY_CATEGORY[categoryId] ?? 'none';
+  const term = (label, resistance, coefficient) => ({
+    label,
+    resistance_m2K_W: resistance,
+    coefficient_W_m2K: resistance > 0 ? 1 / resistance : null,
+    coefficient,
+  });
+  let terms = [];
+  if (mode === 'Rsi_Rse') terms = [term('Rsi', rsi, 'hi'), term('Rse', rse, 'he')];
+  if (mode === '2xRsi') terms = [term('Rsi 1', rsi, 'hi'), term('Rsi 2', rsi, 'hi')];
+  if (mode === 'Rsi_only') terms = [term('Rsi', rsi, 'hi')];
+  if (mode === 'Rse_only') terms = [term('Rse', rse, 'he')];
+  return {
+    mode,
+    terms,
+    resistance_m2K_W: surfaceResistanceForCategory(categoryId, rsi, rse),
+    hi_W_m2K: rsi > 0 ? 1 / rsi : null,
+    he_W_m2K: rse > 0 ? 1 / rse : null,
+  };
+};
+
 const computeLayerEffectiveGeometry = (layer, previousLayer) => {
   const structure = layer?.structure ?? '';
   const layerThickness_m = mmToM(layer?.thickness_mm);
@@ -228,7 +253,7 @@ const computeLayerProperties = (
   };
 };
 
-const computeComponentUValue = (
+const computeComponentThermalDetails = (
   component,
   layers,
   productsById,
@@ -239,7 +264,9 @@ const computeComponentUValue = (
     useLambdaAir = false,
   } = {},
 ) => {
-  let totalResistance = surfaceResistanceForCategory(component?.categoryId ?? '', rsi, rse);
+  const surface = surfaceResistanceDetailsForCategory(component?.categoryId ?? '', rsi, rse);
+  let totalResistance = surface.resistance_m2K_W;
+  const resistanceTerms = [];
   const sortedLayers = [...layers].sort((a, b) => Number(a?.order ?? 0) - Number(b?.order ?? 0));
 
   let index = 0;
@@ -247,6 +274,7 @@ const computeComponentUValue = (
     const layer = sortedLayers[index];
     const structure = layer?.structure ?? '';
     if (structure === 'overlaying centered') {
+      resistanceTerms.push({ type: 'ignored', layer, reason: 'overlaying centered' });
       index += 1;
       continue;
     }
@@ -258,9 +286,18 @@ const computeComponentUValue = (
 
     if (!canPair || hostFraction === null) {
       const material = resolveLayerProperties(layer, productsById, materialsById);
-      if (material.thermalConductivity_W_mK !== null && hostThickness_m > 0) {
-        totalResistance += hostThickness_m / material.thermalConductivity_W_mK;
-      }
+      const resistance = material.thermalConductivity_W_mK !== null && hostThickness_m > 0
+        ? hostThickness_m / material.thermalConductivity_W_mK
+        : null;
+      if (resistance !== null) totalResistance += resistance;
+      resistanceTerms.push({
+        type: 'series',
+        layer,
+        thickness_m: hostThickness_m,
+        conductivity_W_mK: material.thermalConductivity_W_mK,
+        resistance_m2K_W: resistance,
+        included: resistance !== null,
+      });
       index += 1;
       continue;
     }
@@ -272,9 +309,33 @@ const computeComponentUValue = (
       fillMaterial.thermalConductivity_W_mK === null ||
       hostThickness_m <= 0
     ) {
+      const hostResistance = hostMaterial.thermalConductivity_W_mK !== null && hostThickness_m > 0
+        ? hostThickness_m / hostMaterial.thermalConductivity_W_mK
+        : null;
       if (hostMaterial.thermalConductivity_W_mK !== null && hostThickness_m > 0) {
-        totalResistance += hostThickness_m / hostMaterial.thermalConductivity_W_mK;
+        totalResistance += hostResistance;
       }
+      resistanceTerms.push({
+        type: 'parallel',
+        complete: false,
+        equivalentResistance_m2K_W: hostResistance,
+        paths: [
+          {
+            layer,
+            fraction: clamp(hostFraction, 0, 1),
+            thickness_m: hostThickness_m,
+            conductivity_W_mK: hostMaterial.thermalConductivity_W_mK,
+            resistance_m2K_W: hostResistance,
+          },
+          {
+            layer: nextLayer,
+            fraction: 1 - clamp(hostFraction, 0, 1),
+            thickness_m: Math.min(mmToM(nextLayer?.thickness_mm), hostThickness_m),
+            conductivity_W_mK: fillMaterial.thermalConductivity_W_mK,
+            resistance_m2K_W: null,
+          },
+        ],
+      });
       index += 2;
       continue;
     }
@@ -291,12 +352,57 @@ const computeComponentUValue = (
     let equivalentU = 0;
     if (hostResistance > 0) equivalentU += fHost / hostResistance;
     if (fVoid > 0 && fillResistance > 0) equivalentU += fVoid / fillResistance;
-    if (equivalentU > 0) totalResistance += 1 / equivalentU;
+    const equivalentResistance = equivalentU > 0 ? 1 / equivalentU : null;
+    if (equivalentResistance !== null) totalResistance += equivalentResistance;
+    resistanceTerms.push({
+      type: 'parallel',
+      complete: equivalentResistance !== null,
+      equivalentResistance_m2K_W: equivalentResistance,
+      equivalentConductance_W_m2K: equivalentU,
+      paths: [
+        {
+          layer,
+          fraction: fHost,
+          thickness_m: hostThickness_m,
+          conductivity_W_mK: hostMaterial.thermalConductivity_W_mK,
+          resistance_m2K_W: hostResistance,
+        },
+        {
+          layer: nextLayer,
+          fraction: fVoid,
+          thickness_m: fillThickness_m,
+          conductivity_W_mK: fillMaterial.thermalConductivity_W_mK,
+          resistance_m2K_W: fillResistance,
+        },
+      ],
+    });
 
     index += 2;
   }
 
-  return totalResistance > 0 ? 1 / totalResistance : null;
+  return {
+    surface,
+    resistanceTerms,
+    totalResistance_m2K_W: totalResistance > 0 ? totalResistance : null,
+    uValue_W_m2K: totalResistance > 0 ? 1 / totalResistance : null,
+  };
+};
+
+export const calculateComponentThermalDetails = (
+  component,
+  materials = [],
+  products = [],
+  options = {},
+) => {
+  if (!component || !Array.isArray(component?.structure?.layers)) return null;
+  const { materialsById, productsById } = buildMaps(materials, products);
+  return computeComponentThermalDetails(
+    component,
+    component.structure.layers,
+    productsById,
+    materialsById,
+    options,
+  );
 };
 
 export const calculateComponentProperties = (
@@ -350,13 +456,14 @@ export const calculateComponentProperties = (
     return nextLayer;
   });
 
-  const uValue_W_m2K = computeComponentUValue(
+  const thermalDetails = computeComponentThermalDetails(
     component,
     calculatedLayers,
     productsById,
     materialsById,
     options,
   );
+  const uValue_W_m2K = thermalDetails.uValue_W_m2K;
 
   return {
     ...component,

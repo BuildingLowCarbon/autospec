@@ -234,8 +234,11 @@ const preserveCalculatedIfUnchanged = (components, previousItems) => {
   });
 };
 
-const validateComponents = (components, materials, products) => {
+const validateComponents = (components, materials, products, options = {}) => {
   const known = new Set([...materials, ...products].map((item) => String(item.id)));
+  const mappingMode = Array.isArray(options.mappings);
+  const mappings = new Map((options.mappings || []).map((item) => [String(item.lignumId), item]));
+  const selectedById = new Map((options.selectedComponents || []).map((item) => [String(item.id), item]));
   const byReference = new Map();
   const issues = [];
   const seen = new Set();
@@ -251,12 +254,39 @@ const validateComponents = (components, materials, products) => {
     layers.forEach((layer, index) => {
       if (!layer.productId) return;
       const reference = String(layer.productId);
-      if (known.has(reference)) return;
-      if (!byReference.has(reference)) byReference.set(reference, []);
-      byReference.get(reference).push({ componentId: id, serialNo: component.serialNo, name: component.translations?.fr?.name || component.translations?.de?.name, translations: component.translations || {}, layer: index, layerName: layer.translations?.fr?.name || layer.productName, layerTranslations: layer.translations || {} });
+      const mapping = mappings.get(reference);
+      const mappedId = mapping?.tbzId ? String(mapping.tbzId) : null;
+      let reason = null;
+
+      if (mappingMode) {
+        if (!mappedId && !known.has(reference)) reason = 'missing_mapping';
+        if (mappedId && !known.has(mappedId)) reason = 'invalid_mapping_target';
+      } else if (!known.has(reference)) {
+        reason = 'unknown_reference';
+      }
+
+      if (reason) {
+        if (!byReference.has(reference)) byReference.set(reference, { mappedId, reason, occurrences: [] });
+        byReference.get(reference).occurrences.push({ componentId: id, serialNo: component.serialNo, name: component.translations?.fr?.name || component.translations?.de?.name, translations: component.translations || {}, layer: index, layerName: layer.translations?.fr?.name || layer.productName, layerTranslations: layer.translations || {} });
+      }
+
+      if (mappingMode && mappedId && known.has(mappedId) && selectedById.has(id)) {
+        const actualId = selectedById.get(id)?.structure?.layers?.[index]?.productId;
+        if (String(actualId || '') !== mappedId) {
+          issues.push({
+            severity: 'error',
+            type: 'selected_mapping_out_of_sync',
+            componentId: id,
+            referenceId: reference,
+            expectedId: mappedId,
+            actualId: actualId ?? null,
+            message: `La couche ${index + 1} devrait utiliser l’id TBZ ${mappedId}.`,
+          });
+        }
+      }
     });
   });
-  const unresolved = Array.from(byReference, ([referenceId, occurrences]) => ({ referenceId, occurrences }));
+  const unresolved = Array.from(byReference, ([referenceId, details]) => ({ referenceId, ...details }));
   return {
     summary: { components: components.length, errors: issues.filter((i) => i.severity === 'error').length, warnings: issues.filter((i) => i.severity === 'warning').length, unresolvedIds: unresolved.length, unresolvedOccurrences: unresolved.reduce((sum, item) => sum + item.occurrences.length, 0) },
     issues,

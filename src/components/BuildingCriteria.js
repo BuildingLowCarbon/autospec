@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import factorsData from './ENteb/data/factors.json';
-import thermalData from './ENteb/data/data.json';
 import fireRequirements from '../data/fire_requirements.json';
 import acousticRequirements from '../data/acoustic_requirements.json';
 import sia261Data from '../data/sia261.json';
@@ -11,6 +10,7 @@ import partitionRatioImageIt from '../assets/illustrations/parameters/partition-
 
 const FIRE_R_VALUES = ['R0', 'R30', 'R60'];
 const FIRE_EI_VALUES = ['EI0', 'EI30', 'EI60'];
+const BUILDING_CRITERIA_STORAGE_KEY = 'autospec-building-criteria';
 
 const DEFAULT_FACTORS = {
   station: '5',
@@ -23,63 +23,19 @@ const DEFAULT_FACTORS = {
   window_ventilation: '0.838',
 };
 
-const FACTOR_ORDER = [
-  'building_type',
-  'station',
-  'Regelungsfaktor',
-  'heat_storage_capacity',
-  'wall_u_value',
-  'windows_u_value',
-  'windows_g_value',
-  'windows_ratio',
-  'window_ventilation',
-];
-
-const formatters = {
-  building_type: (value) => String(parseInt(value, 10)),
-  station: (value) => String(parseInt(value, 10)).padStart(2, '0'),
-  Regelungsfaktor: (value) => String(parseInt(value, 10)),
-  heat_storage_capacity: (value) => String(parseInt(value, 10)),
-  wall_u_value: (value) => Number(value).toFixed(2),
-  windows_u_value: (value) => Number(value).toFixed(2),
-  windows_g_value: (value) => Number(value).toFixed(2),
-  windows_ratio: (value) => Number(value).toFixed(2),
-  window_ventilation: (value) => Number(value).toFixed(3),
+const loadPersistedCriteria = () => {
+  if (typeof window === 'undefined') return {};
+  try {
+    const parsed = JSON.parse(window.sessionStorage.getItem(BUILDING_CRITERIA_STORAGE_KEY) ?? '{}');
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch (error) {
+    return {};
+  }
 };
 
 const tr = (value, lang) => value?.[lang] ?? value?.fr ?? value?.en ?? '';
 const optionLabel = (item, lang) => item?.[`name_${lang}`] ?? item?.name_fr ?? String(item?.id ?? item?.value ?? '');
 const optionValue = (item) => String(item?.id ?? item?.value ?? '');
-const thermalBuildingType = (buildingType) => (buildingType === 'multi_family' ? '1' : '2');
-
-const buildVariant = (variables) =>
-  FACTOR_ORDER.map((key) => formatters[key](variables[key])).join('-');
-
-const getThermalValue = (variables, envelopeFactor, key) => {
-  const row = thermalData?.[buildVariant(variables)];
-  const building = factorsData.building_type?.find((item) => Number(item.id) === Number(variables.building_type));
-  const station = factorsData.station?.find((item) => Number(item.id) === Number(variables.station));
-  if (!row || !building || !station) return null;
-  if (key === 'qh') {
-    return (Number(row.c) + Number(envelopeFactor) * Number(row.m)) * (1 + Number(building.surcharge ?? 0) / 100);
-  }
-  const correction = 1 + (9.4 - Number(station.t_mean)) * 0.06;
-  return (Number(building.Qli0) + Number(building.dQli) * Number(envelopeFactor)) * correction;
-};
-
-const getRecommendedUValue = (variables, envelopeFactor) => {
-  const values = (factorsData.wall_u_value ?? [])
-    .map((item) => Number(item.value))
-    .filter(Number.isFinite)
-    .sort((a, b) => b - a);
-  for (const value of values) {
-    const next = { ...variables, wall_u_value: value };
-    const qh = getThermalValue(next, envelopeFactor, 'qh');
-    const qhli = getThermalValue(next, envelopeFactor, 'qhli');
-    if (qh !== null && qhli !== null && qh <= qhli) return value;
-  }
-  return values.at(-1) ?? null;
-};
 
 const pickFireValue = (requirements, categoryId, key, scale) => {
   const indexes = requirements
@@ -142,25 +98,31 @@ function PartitionRatioHelp({ lang }) {
   );
 }
 
-function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChange }) {
-  const [buildingType, setBuildingType] = useState('single_family');
-  const [neighborDistance, setNeighborDistance] = useState('gt_10');
-  const [acousticLevel, setAcousticLevel] = useState('normal');
-  const [uncertainty, setUncertainty] = useState(2);
-  const [requiredSpan, setRequiredSpan] = useState(0);
-  const [floorCount, setFloorCount] = useState(2);
-  const [buildingLength, setBuildingLength] = useState(10);
-  const [buildingWidth, setBuildingWidth] = useState(10);
-  const [partitionRate, setPartitionRate] = useState('0.4');
-  const [floorHeight, setFloorHeight] = useState(2.5);
-  const [sreOverride, setSreOverride] = useState('');
-  const [factors, setFactors] = useState(DEFAULT_FACTORS);
-  const [advancedOpen, setAdvancedOpen] = useState(false);
+function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChange, onReset }) {
+  const persistedCriteria = useMemo(() => loadPersistedCriteria(), []);
+  const [buildingType, setBuildingType] = useState(persistedCriteria.buildingType ?? 'single_family');
+  const [neighborDistance, setNeighborDistance] = useState(persistedCriteria.neighborDistance ?? 'gt_10');
+  const [acousticLevel, setAcousticLevel] = useState(persistedCriteria.acousticLevel ?? 'normal');
+  const [uncertainty, setUncertainty] = useState(persistedCriteria.uncertainty ?? 2);
+  const [requiredSpan, setRequiredSpan] = useState(persistedCriteria.requiredSpan ?? 0);
+  const [spanDirection, setSpanDirection] = useState(persistedCriteria.spanDirection ?? 'width');
+  const [floorLoadDistribution, setFloorLoadDistribution] = useState(persistedCriteria.floorLoadDistribution ?? 'one_way');
+  const [interiorBearingLinesOverride, setInteriorBearingLinesOverride] = useState(
+    persistedCriteria.interiorBearingLinesOverride ?? '',
+  );
+  const [floorCount, setFloorCount] = useState(persistedCriteria.floorCount ?? 2);
+  const [buildingLength, setBuildingLength] = useState(persistedCriteria.buildingLength ?? 10);
+  const [buildingWidth, setBuildingWidth] = useState(persistedCriteria.buildingWidth ?? 10);
+  const [partitionRate, setPartitionRate] = useState(persistedCriteria.partitionRate ?? '0.4');
+  const [floorHeight, setFloorHeight] = useState(persistedCriteria.floorHeight ?? 2.9);
+  const [sreOverride, setSreOverride] = useState(persistedCriteria.sreOverride ?? '');
+  const [factors, setFactors] = useState({ ...DEFAULT_FACTORS, ...persistedCriteria.factors });
+  const [advancedOpen, setAdvancedOpen] = useState(persistedCriteria.advancedOpen ?? false);
 
   const normalizedFloorCount = Math.max(1, Math.round(Number(floorCount) || 1));
   const normalizedLength = Math.max(0, Number(buildingLength) || 0);
   const normalizedWidth = Math.max(0, Number(buildingWidth) || 0);
-  const normalizedFloorHeight = Math.max(0, Number(floorHeight) || 2.5);
+  const normalizedFloorHeight = Math.max(0, Number(floorHeight) || 2.9);
   const footprint = normalizedLength * normalizedWidth;
   const perimeter = 2 * normalizedLength + 2 * normalizedWidth;
   const totalHeight = normalizedFloorCount * normalizedFloorHeight;
@@ -170,15 +132,22 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
   const envelopeFactor = resolvedSre > 0 ? thermalEnvelopeArea / resolvedSre : 0;
   const buildingHeight = totalHeight < 11 ? 'lt_11' : totalHeight <= 30 ? 'btw_11_30' : 'gt_30';
   const buildingHeightLabel = tr(fireRequirements.i18n?.building_height?.[buildingHeight], lang) || buildingHeight;
-
-  const variables = useMemo(() => ({
-    ...factors,
-    building_type: thermalBuildingType(buildingType),
-  }), [buildingType, factors]);
+  const spanDirectionLength = spanDirection === 'length' ? normalizedLength : normalizedWidth;
+  const normalizedRequiredSpan = Math.max(0, Number(requiredSpan) || 0);
+  const automaticInteriorBearingLines = normalizedRequiredSpan > 0 && spanDirectionLength > 0
+    ? Math.max(0, Math.ceil(spanDirectionLength / normalizedRequiredSpan) - 1)
+    : 0;
+  const parsedBearingLinesOverride = Number(interiorBearingLinesOverride);
+  const interiorBearingLines = interiorBearingLinesOverride !== '' && Number.isFinite(parsedBearingLinesOverride)
+    ? Math.max(0, Math.round(parsedBearingLinesOverride))
+    : automaticInteriorBearingLines;
 
   const recommendedUValue = useMemo(
-    () => getRecommendedUValue(variables, Number(envelopeFactor)),
-    [envelopeFactor, variables],
+    () => {
+      const value = Number(factors.wall_u_value);
+      return Number.isFinite(value) ? value : null;
+    },
+    [factors.wall_u_value],
   );
 
   const matchedFireRule = useMemo(
@@ -216,7 +185,7 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
       acousticLnwLimit: lnwBase,
       acousticRwMin: rwBase === null ? null : rwBase + uncertaintyValue,
       acousticLnwMax: lnwBase === null ? null : lnwBase - uncertaintyValue,
-      requiredSpan: Math.max(0, Number(requiredSpan) || 0),
+      requiredSpan: normalizedRequiredSpan,
       building: {
         floorCount: normalizedFloorCount,
         length: normalizedLength,
@@ -230,6 +199,12 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
         occupancyKey: 'A1_habitation',
         occupancyLabel: occupancy?.label ?? 'Habitation',
         occupancyLoadKnM2: Number(occupancy?.qk_kN_m2) || 0,
+        maxBuildingSpan: normalizedRequiredSpan,
+        spanDirection,
+        floorLoadDistribution,
+        interiorBearingLines,
+        automaticInteriorBearingLines,
+        interiorBearingLinesOverridden: interiorBearingLinesOverride !== '',
       },
     };
   }, [
@@ -241,22 +216,89 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
     normalizedFloorHeight,
     normalizedLength,
     normalizedWidth,
+    normalizedRequiredSpan,
     occupancy,
     partitionRate,
     recommendedUValue,
-    requiredSpan,
     resolvedSre,
     selectedCategories,
     thermalEnvelopeArea,
     totalHeight,
     uncertainty,
+    spanDirection,
+    floorLoadDistribution,
+    interiorBearingLines,
+    automaticInteriorBearingLines,
+    interiorBearingLinesOverride,
   ]);
 
   useEffect(() => {
     if (typeof onCriteriaChange === 'function') onCriteriaChange(resolved);
   }, [onCriteriaChange, resolved]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      window.sessionStorage.setItem(BUILDING_CRITERIA_STORAGE_KEY, JSON.stringify({
+        buildingType,
+        neighborDistance,
+        acousticLevel,
+        uncertainty,
+        requiredSpan,
+        spanDirection,
+        floorLoadDistribution,
+        interiorBearingLinesOverride,
+        floorCount,
+        buildingLength,
+        buildingWidth,
+        partitionRate,
+        floorHeight,
+        sreOverride,
+        factors,
+        advancedOpen,
+      }));
+    } catch (error) {
+      // Storage can be unavailable (for example in private browsing); the form remains usable.
+    }
+  }, [
+    acousticLevel,
+    advancedOpen,
+    buildingLength,
+    buildingType,
+    buildingWidth,
+    factors,
+    floorCount,
+    floorHeight,
+    neighborDistance,
+    partitionRate,
+    requiredSpan,
+    spanDirection,
+    floorLoadDistribution,
+    interiorBearingLinesOverride,
+    sreOverride,
+    uncertainty,
+  ]);
+
   const updateFactor = (key, value) => setFactors((current) => ({ ...current, [key]: value }));
+  const resetCriteria = () => {
+    setBuildingType('single_family');
+    setNeighborDistance('gt_10');
+    setAcousticLevel('normal');
+    setUncertainty(2);
+    setRequiredSpan(0);
+    setSpanDirection('width');
+    setFloorLoadDistribution('one_way');
+    setInteriorBearingLinesOverride('');
+    setFloorCount(2);
+    setBuildingLength(10);
+    setBuildingWidth(10);
+    setPartitionRate('0.4');
+    setFloorHeight(2.9);
+    setSreOverride('');
+    setFactors(DEFAULT_FACTORS);
+    setAdvancedOpen(false);
+    if (typeof onReset === 'function') onReset();
+  };
   const factorOptions = (key) => (factorsData[key] ?? []).map((item) => ({
     value: optionValue(item),
     label: optionLabel(item, lang),
@@ -266,6 +308,9 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
   return (
     <aside className="building-criteria">
       <h2>Critères du bâtiment</h2>
+      <button type="button" className="building-reset-button" onClick={resetCriteria}>
+        Réinitialiser filtres
+      </button>
       <div className="building-fields">
         <SelectField
           label="Type de bâtiment"
@@ -303,7 +348,7 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
           options={dbOptions(acousticRequirements.dropdowns?.requirement_level ?? [], acousticRequirements.i18n?.requirement_level)}
         />
         <label className="building-field">
-          <span>Portée max.</span>
+          <span>Portée max. du bâtiment</span>
           <span className="building-input-unit"><input type="number" min="0" step="0.1" value={requiredSpan} onChange={(event) => setRequiredSpan(event.target.value)} /><b>m</b></span>
         </label>
       </div>
@@ -323,6 +368,44 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
           <label className="building-field">
             <span>Incertitude acoustique</span>
             <span className="building-input-unit"><input type="number" min="0" step="0.5" value={uncertainty} onChange={(event) => setUncertainty(event.target.value)} /><b>dB</b></span>
+          </label>
+          <SelectField
+            label="Direction de portée"
+            value={spanDirection}
+            onChange={setSpanDirection}
+            options={[
+              { value: 'width', label: 'Largeur' },
+              { value: 'length', label: 'Longueur' },
+            ]}
+          />
+          <SelectField
+            label="Répartition du plancher"
+            value={floorLoadDistribution}
+            onChange={setFloorLoadDistribution}
+            options={[
+              { value: 'one_way', label: 'Unidirectionnelle' },
+              { value: 'two_way', label: 'Bidirectionnelle' },
+            ]}
+          />
+          <label className="building-field">
+            <span>Lignes intérieures porteuses</span>
+            <input
+              type="number"
+              min="0"
+              step="1"
+              value={interiorBearingLinesOverride === '' ? automaticInteriorBearingLines : interiorBearingLinesOverride}
+              onChange={(event) => setInteriorBearingLinesOverride(event.target.value)}
+            />
+            <small>
+              {interiorBearingLinesOverride === ''
+                ? `Calcul automatique : ${automaticInteriorBearingLines}`
+                : `Valeur modifiée (automatique : ${automaticInteriorBearingLines})`}
+            </small>
+            {interiorBearingLinesOverride !== '' ? (
+              <button type="button" className="building-inline-reset" onClick={() => setInteriorBearingLinesOverride('')}>
+                Reprendre le calcul automatique
+              </button>
+            ) : null}
           </label>
           <label className="building-field">
             <span>Hauteur d’étage</span>

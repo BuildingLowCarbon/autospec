@@ -58,3 +58,20 @@ test('chaque matériau possède les trois blocs de traduction', () => {
     });
   });
 });
+
+test('le diagnostic utilise les correspondances Lignum et filtre les composants sélectionnés', () => {
+  const unified = readJson(path.join(dbDir, 'components_unified.json'));
+  const selected = readJson(path.join(dbDir, 'components_lignum_selected.json'));
+  const mappings = readJson(path.join(dbDir, 'mappings/lignum_product_tbz.json'));
+  const materials = readJson(path.join(dbDir, 'materials/tbz_materials.json'));
+  const products = readJson(path.join(dbDir, 'products/tbz_products_composites.json'));
+  const selectedIds = new Set(selected.map((item) => String(item.id)));
+  const selectedSources = unified.filter((item) => selectedIds.has(String(item.id)));
+  const report = validateComponents(selectedSources, materials, products, { mappings, selectedComponents: selected });
+
+  assert.ok(report.summary.unresolvedIds > 0);
+  assert.equal(report.unresolved.some((item) => item.referenceId === '0CA06490-CE98-3202-8643-5E1C6EDDA18B'), false);
+  report.unresolved.forEach((item) => item.occurrences.forEach((occurrence) => {
+    assert.ok(selectedIds.has(String(occurrence.componentId)));
+  }));
+});

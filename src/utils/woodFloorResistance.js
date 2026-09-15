@@ -501,8 +501,11 @@ function calculateWoodBeamSpan(input) {
   } = input;
 
   // --- validations
-  [ ["b_mm", b_mm], ["h_mm", h_mm], ["spacing_mm", spacing_mm], ["permanentLoad_kN_m2", permanentLoad_kN_m2] ]
+  [ ["b_mm", b_mm], ["h_mm", h_mm], ["spacing_mm", spacing_mm] ]
     .forEach(([name, value]) => assertPositive(name, value));
+  if (!(Number.isFinite(permanentLoad_kN_m2) && permanentLoad_kN_m2 >= 0)) {
+    throw new Error(`permanentLoad_kN_m2 doit être un nombre >= 0. Reçu: ${permanentLoad_kN_m2}`);
+  }
 
   // --- matériaux
   const woodDb = sia265Data.woodClasses?.[woodFamily];
@@ -733,6 +736,15 @@ function calculateWoodBeamSpan(input) {
   return {
     input,
     warnings,
+    assumptions: {
+      supportModel: 'simply_supported',
+      loadModel: 'uniformly_distributed',
+      ambientLoadCombination: '1.35 × Gk + 1.50 × Qk',
+      fireEffectFactor: qdAmbient_kN_m > 0 ? qdFire_kN_m / qdAmbient_kN_m : null,
+      deflectionCriterionKey,
+      deflectionRatio,
+      residualLayer_mm: 7,
+    },
     references: {
       liveLoads: occ.source,
       deflection: defl.source,

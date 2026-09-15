@@ -3,8 +3,7 @@ import {
   calcBurnThroughTime_min
 } from './woodFloorResistance';
 import { calculateStudCompressionCapacity } from './woodStudResistance';
-
-const SUPPORT_DESCRIPTION_FR = 'Structure support';
+import { isSupportStructureLayer, normalizeSupportStructure } from './supportStructure';
 
 const toNumberOrNull = (value) => {
   if (value === null || value === undefined || value === '') return null;
@@ -72,8 +71,7 @@ const buildLayerMaps = (materials = [], products = []) => ({
   productById: new Map(products.map((item) => [String(item.id), item])),
 });
 
-const findSupportLayerIndex = (layers) =>
-  layers.findIndex((layer) => layer?.translations?.fr?.description === SUPPORT_DESCRIPTION_FR);
+const findSupportLayerIndex = (layers) => layers.findIndex(isSupportStructureLayer);
 
 const getFireResult = (fireResults, fireMinutes) =>
   fireResults?.find((item) => item?.fireMinutes === fireMinutes) ?? null;
@@ -173,7 +171,8 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
   if (!component || !Array.isArray(component?.structure?.layers)) return component;
 
   const { materialById, productById } = buildLayerMaps(materials, products);
-  const layers = component.structure.layers.map((layer) => ({ ...layer }));
+  const normalizedComponent = normalizeSupportStructure(component);
+  const layers = normalizedComponent.structure.layers.map((layer) => ({ ...layer }));
   const supportIndex = findSupportLayerIndex(layers);
   const firstIndexToProcess = supportIndex >= 0 ? supportIndex : 0;
 
@@ -181,7 +180,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
   for (let index = layers.length - 1; index >= firstIndexToProcess; index -= 1) {
     const layer = layers[index];
     const materialCategory = resolveLayerMaterialCategory(layer, materialById, productById);
-    const burningMin = computeLayerBurningTimeMin(layer, materialCategory);
+    const burningMin = index === supportIndex ? 0 : computeLayerBurningTimeMin(layer, materialCategory);
 
     layer.time_fire_start_min = roundTo2(accumulatedStart);
     layer.time_burning_min = roundTo2(burningMin);
@@ -198,10 +197,22 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
   let woodCapacityTable = null;
   if (supportIndex >= 0) {
     const supportLayer = layers[supportIndex];
-    const b_mm = toNumberOrNull(supportLayer?.width_mm);
+    const declaredWidth_mm = toNumberOrNull(supportLayer?.width_mm);
     const h_mm = toNumberOrNull(supportLayer?.thickness_mm);
-    const spacing_mm = toNumberOrNull(supportLayer?.spacing_mm);
+    const declaredSpacing_mm = toNumberOrNull(supportLayer?.spacing_mm);
+    const isContinuousSupport = declaredWidth_mm === null && declaredSpacing_mm === null;
+    const b_mm = isContinuousSupport ? 1000 : declaredWidth_mm;
+    const spacing_mm = isContinuousSupport ? 1000 : declaredSpacing_mm;
     const t_protection_min = toNumberOrNull(supportLayer?.time_fire_start_min) ?? 0;
+    const hasLateralFireProtection = layers.some((layer) =>
+      layer?.structure === 'in-lying' && layer?.protectsSupportSidesFromFire === true
+    );
+    const fireExposureFaces = isContinuousSupport || hasLateralFireProtection ? 1 : 3;
+    const permanentLoad_kN_m2 = layers.reduce((total, layer, index) => {
+      if (index === supportIndex) return total;
+      const mass = toNumberOrNull(layer?.weight_kg_m2);
+      return total + (mass === null ? 0 : mass * 9.81 / 1000);
+    }, 0);
     const vibration_f_min_Hz =
       toNumberOrNull(component?.fire_resistance?.vibration_f_min_Hz) ?? 8;
 
@@ -211,11 +222,13 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
           b_mm,
           h_mm,
           spacing_mm,
-          permanentLoad_kN_m2: 1.57,
+          isContinuousSupport,
+          hasLateralFireProtection,
+          permanentLoad_kN_m2,
           occupancyKey: 'A1_habitation',
           woodFamily: 'solid_softwood',
           woodClass: 'C24',
-          fireExposureFaces: 3,
+          fireExposureFaces,
           fireRatings_min: [30, 60],
           t_protection_min,
           deflectionCriterionKey: 'comfort',
@@ -230,7 +243,11 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
       }
     }
 
-    if (component.categoryId === 'outer_wall' && b_mm > 0 && h_mm > 0) {
+    const isLoadBearingWall = component.categoryId === 'outer_wall' || (
+      ['inner_wall', 'partition_wall_single_shell', 'partition_wall_double_shell'].includes(component.categoryId) &&
+      component.subcategoryId === 'load_bearing'
+    );
+    if (isLoadBearingWall && b_mm > 0 && h_mm > 0) {
       try {
         const bucklingLength_mm =
           toNumberOrNull(component?.fire_resistance?.bucklingLength_mm) ??
@@ -241,13 +258,16 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
         woodStudCompressionResult = calculateStudCompressionCapacity({
           b_mm,
           h_mm,
+          spacing_mm,
+          isContinuousSupport,
+          hasLateralFireProtection,
           bucklingLength_mm,
           eccentricity_along_h_mm: 0,
           eccentricity_along_b_mm: 0,
           woodFamily: 'solid_softwood',
           woodClass: 'C24',
           fireRatings_min: [30, 60],
-          fireExposureFaces: 3,
+          fireExposureFaces,
           t_protection_min,
         });
         woodCapacityTable = buildStudCapacityTable(woodStudCompressionResult, spacing_mm);
@@ -260,7 +280,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
   }
 
   return {
-    ...component,
+    ...normalizedComponent,
     structure: {
       ...(component.structure ?? {}),
       layers,

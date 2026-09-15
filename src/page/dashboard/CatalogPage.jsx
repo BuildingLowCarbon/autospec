@@ -80,6 +80,17 @@ export default function CatalogPage() {
     setMessage('');
   };
 
+  const createCopy = () => {
+    if (!draft || kind !== 'materials') return;
+    const copied = withTranslationShape(clone(draft));
+    delete copied.id;
+    delete copied.metadata;
+    copied.source = { databaseId: 'tbz', externalId: null };
+    setDraft(copied);
+    setMode('create');
+    setMessage('');
+  };
+
   const save = async () => {
     setMessage('Enregistrement…');
     try {
@@ -100,7 +111,7 @@ export default function CatalogPage() {
     </section>
 
     <section className="db-card db-editor">
-      <div className="db-editor-title"><div><h3>{mode === 'create' ? (kind === 'materials' ? t.newMaterial : t.newProduct) : (draft ? localizedName(draft, lang) : `${t.select} ${noun}`)}</h3>{draft?.id && <code>{draft.id}</code>}</div><div>{draft && mode === 'view' && <button type="button" onClick={() => setMode('edit')}>{t.edit}</button>}{isEditing && mode !== 'create' && <button type="button" onClick={() => choose(items.find((item) => item.id === draft.id))}>{t.cancel}</button>}</div></div>
+      <div className="db-editor-title"><div><h3>{mode === 'create' ? (kind === 'materials' ? t.newMaterial : t.newProduct) : (draft ? localizedName(draft, lang) : `${t.select} ${noun}`)}</h3>{draft?.id && <code>{draft.id}</code>}</div><div>{draft && mode === 'view' && <><button type="button" onClick={() => setMode('edit')}>{t.edit}</button>{kind === 'materials' && <button type="button" onClick={createCopy}>{t.createCopy}</button>}</>}{isEditing && mode !== 'create' && <button type="button" onClick={() => choose(items.find((item) => item.id === draft.id))}>{t.cancel}</button>}</div></div>
       {draft ? <>
         <label>{t.id}<input value={draft.id || 'Généré automatiquement'} disabled /></label>
         {fields.map((field) => <label key={field}>{dashboardFieldLabel(field, lang)}<small>{field}</small><input disabled={!isEditing} type={typeof getValue(field) === 'number' ? 'number' : 'text'} step="any" value={getValue(field)} onChange={(event) => setValue(field, event.target.value)} /></label>)}

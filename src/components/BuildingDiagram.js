@@ -7,11 +7,12 @@ export const ROOF_TYPES = [
 
 export const BUILDING_PARTS = [
   { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
-  { id: 'outer_walls', label: 'Mur extérieur', categories: ['outer_wall'] },
-  { id: 'partitions', label: 'Mur intérieur', categories: ['partition_wall_double_shell', 'partition_wall_single_shell'] },
+  { id: 'outer_walls', label: 'Mur extérieur hors terrain', categories: ['outer_wall'], subcategories: ['above_ground'] },
+  { id: 'underground_walls', label: 'Mur extérieur sous-terrain', categories: ['outer_wall'], subcategories: ['below_ground'] },
+  { id: 'partitions', label: 'Mur intérieur', categories: ['inner_wall', 'partition_wall_double_shell', 'partition_wall_single_shell'] },
   { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
-  { id: 'foundation', label: 'Radier', categories: ['floor_assembly'] },
-  { id: 'balcony', label: 'Balcon', categories: ['floor_assembly'] },
+  { id: 'foundation', label: 'Radier', categories: ['foundation'] },
+  { id: 'balcony', label: 'Balcon', categories: ['balcony'] },
   { id: 'windows', label: 'Fenêtres', categories: [] },
 ];
 
@@ -118,13 +119,16 @@ function BuildingDiagram({
           <g {...interactiveProps('outer_walls', 'Sélectionner les murs extérieurs')} stroke={strokeFor('outer_walls')} strokeWidth="4">
             <path d="M67 76V89M67 120V138M67 174V200M67 232V301" />
             <path d="M254 76V89M254 120V144M254 174V191M254 191V249" />
+          </g>
+
+          <g {...interactiveProps('underground_walls', 'Sélectionner les murs extérieurs sous-terrain')} stroke={strokeFor('underground_walls')} strokeWidth="4">
             <path d="M2 359V301M364 359V303M364 303V288M364 255V230" />
           </g>
 
           <g {...interactiveProps('partitions', 'Sélectionner les murs intérieurs')} stroke={strokeFor('partitions')} strokeWidth="4">
             <path d="M142 301V246V193M142 193V138" />
             <path d="M67 301V359" />
-          </g>d
+          </g>
 
           <g {...interactiveProps('floors', 'Sélectionner les planchers')} stroke={strokeFor('floors')} strokeWidth="4">
             <path d="M69 136H252M69 191H252M69 247H252M69 303H362" />
