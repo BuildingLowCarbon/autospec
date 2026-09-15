@@ -325,7 +325,7 @@ function Building() {
     };
 
     const result = {};
-    ['roof', 'outer_walls', 'underground_walls', 'partitions', 'floors', 'foundation', 'balcony'].forEach((partId) => {
+    ['roof', 'outer_walls', 'underground_walls', 'interior_walls', 'partitions', 'floors', 'foundation', 'balcony'].forEach((partId) => {
       const part = getBuildingPart(partId);
       const categories = partId === 'roof' ? [getRoofCategory(roofType)] : part.categories;
       result[partId] = data.filter((item) =>

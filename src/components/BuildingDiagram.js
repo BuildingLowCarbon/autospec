@@ -9,7 +9,8 @@ export const BUILDING_PARTS = [
   { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
   { id: 'outer_walls', label: 'Mur extérieur hors terrain', categories: ['outer_wall'], subcategories: ['above_ground'] },
   { id: 'underground_walls', label: 'Mur extérieur sous-terrain', categories: ['outer_wall'], subcategories: ['below_ground'] },
-  { id: 'partitions', label: 'Mur intérieur', categories: ['inner_wall', 'partition_wall_double_shell', 'partition_wall_single_shell'] },
+  { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
+  { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
   { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
   { id: 'foundation', label: 'Radier', categories: ['foundation'] },
   { id: 'balcony', label: 'Balcon', categories: ['balcony'] },
@@ -125,9 +126,12 @@ function BuildingDiagram({
             <path d="M2 359V301M364 359V303M364 303V288M364 255V230" />
           </g>
 
-          <g {...interactiveProps('partitions', 'Sélectionner les murs intérieurs')} stroke={strokeFor('partitions')} strokeWidth="4">
+          <g {...interactiveProps('interior_walls', 'Sélectionner les parois intérieures')} stroke={strokeFor('interior_walls')} strokeWidth="4">
             <path d="M142 301V246V193M142 193V138" />
-            <path d="M67 301V359" />
+          </g>
+
+          <g {...interactiveProps('partitions', 'Sélectionner les cloisons')} stroke={strokeFor('partitions')} strokeWidth="3">
+            <path d="M105 190V140M210 245V195" />
           </g>
 
           <g {...interactiveProps('floors', 'Sélectionner les planchers')} stroke={strokeFor('floors')} strokeWidth="4">

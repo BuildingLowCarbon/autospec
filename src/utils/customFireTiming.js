@@ -243,10 +243,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
       }
     }
 
-    const isLoadBearingWall = component.categoryId === 'outer_wall' || (
-      ['inner_wall', 'partition_wall_single_shell', 'partition_wall_double_shell'].includes(component.categoryId) &&
-      component.subcategoryId === 'load_bearing'
-    );
+    const isLoadBearingWall = ['outer_wall', 'inner_wall'].includes(component.categoryId);
     if (isLoadBearingWall && b_mm > 0 && h_mm > 0) {
       try {
         const bucklingLength_mm =

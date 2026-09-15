@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import fireRequirementsDb from "../data/fire_requirements.json";
+import { getRequirementCategoryIds } from "../utils/componentTaxonomy";
 // Mais le module utilise surtout les libellés du JSON de fire_requirements
 
 /**
@@ -158,12 +159,19 @@ export default function FireRequirementModule({
 
         // Map applies_to categories to labels
         const categoryTargets =
-          (req.applies_to ?? []).map((t) => {
-            const catId = t.categoryId;
+          getRequirementCategoryIds(req).map((catId) => {
+            const sourceCategoryId = ["inner_wall", "partition_wall"].includes(catId)
+              ? req.applies_to?.[0]?.categoryId
+              : catId;
 
             // 1) libellé générique de la catégorie (ex: "Paroi porteuse")
-            const inElTargets = el?.targets?.find((x) => x.categoryId === catId);
-            const baseLabel = tr(inElTargets?.label) || catId;
+            const inElTargets = el?.targets?.find((x) => x.categoryId === sourceCategoryId);
+            const canonicalLabel = catId === "inner_wall"
+              ? { fr: "Paroi intérieure", de: "Innenwand", en: "Interior wall", it: "Parete interna" }
+              : catId === "partition_wall"
+                ? { fr: "Cloison", de: "Trennwand", en: "Partition", it: "Parete divisoria" }
+                : null;
+            const baseLabel = tr(canonicalLabel) || tr(inElTargets?.label) || catId;
 
             // 2) libellé spécifique (ex: "(même unité)" / "(entre unités)" + porteur/non-porteur)
             const subtypeLabel =

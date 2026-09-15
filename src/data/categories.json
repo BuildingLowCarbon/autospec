@@ -196,10 +196,6 @@
       "icon": "inner_wall",
       "order": 3,
       "properties": ["thickness", "weight", "uValue", "gwp"],
-      "subcategories": [
-        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
-        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
-      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -229,35 +225,14 @@
         ]
     },
     {
-      "id": "partition_wall_single_shell",
+      "id": "partition_wall",
       "type": "vertical",
       "icon": "wall",
       "order": 4,
       "properties": ["thickness", "weight", "uValue", "gwp"],
       "subcategories": [
-        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
-        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
-      ],
-      "layerTypes": [
-        "Adhérence",
-        "Amortissement de la cavité",
-        "Contreventement",
-        "Couche support",
-        "Enduit intérieur",
-        "Espace d'air",
-        "Isolation",
-        "Lattes / profils"
-      ]
-    },
-    {
-      "id": "partition_wall_double_shell",
-      "type": "vertical",
-      "icon": "wall",
-      "order": 5,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
-      "subcategories": [
-        { "id": "load_bearing", "label": { "fr": "Porteur", "de": "Tragend", "en": "Load-bearing", "it": "Portante" } },
-        { "id": "non_load_bearing", "label": { "fr": "Non-porteur", "de": "Nicht tragend", "en": "Non-load-bearing", "it": "Non portante" } }
+        { "id": "single_shell", "label": { "fr": "Simple ossature", "de": "Einschalig", "en": "Single shell", "it": "Struttura singola" } },
+        { "id": "double_shell", "label": { "fr": "Double ossature", "de": "Doppelschalig", "en": "Double shell", "it": "Doppia struttura" } }
       ],
       "layerTypes": [
         "Adhérence",

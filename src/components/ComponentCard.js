@@ -11,14 +11,72 @@ const formatNumber = (value, decimals = 1) => {
   return num.toFixed(decimals);
 };
 
+const finiteNumber = (value) => {
+  if (value === null || value === undefined || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+};
+
+const capacityCellValue = (cell) =>
+  finiteNumber(cell && typeof cell === "object" ? cell.value : cell);
+
+const findCapacityRow = (table, pattern) => {
+  if (!Array.isArray(table?.rows)) return null;
+  return table.rows.find((row) => pattern.test(String(row?.label ?? ""))) ?? null;
+};
+
+const getFloorSpan = (item, rating) => {
+  const fire = item?.fire_resistance ?? {};
+  const table = fire.wood_capacity_table?.type === "floor_span"
+    ? fire.wood_capacity_table
+    : null;
+  const row = findCapacityRow(table, /gouvernante/i) ?? table?.rows?.[0] ?? null;
+  const column = rating === "R0" ? "normal_temperature" : rating;
+  const tableValue = capacityCellValue(row?.[column]);
+  if (tableValue !== null) return tableValue;
+
+  const result = fire.wood_beam_span;
+  if (result && !result.error) {
+    if (rating === "R0") return finiteNumber(result.ambient?.L_ambient_governing_m);
+    const minutes = Number(rating.replace("R", ""));
+    return finiteNumber(result.fire?.find((entry) => Number(entry?.fireMinutes) === minutes)?.Max_span);
+  }
+
+  return rating === "R0" ? finiteNumber(item?.spanMax_m) : null;
+};
+
+const getWallLinearResistance = (item, rating) => {
+  const fire = item?.fire_resistance ?? {};
+  const table = fire.wood_capacity_table?.type === "wall_stud_force"
+    ? fire.wood_capacity_table
+    : null;
+  const row = findCapacityRow(table, /par (m[eè]tre|metre)/i);
+  const column = rating === "R0" ? "normal_temperature" : rating;
+  const tableValue = capacityCellValue(row?.[column]);
+  if (tableValue !== null) return tableValue;
+
+  const result = fire.wood_stud_compression;
+  const spacing = finiteNumber(result?.input?.spacing_mm);
+  if (!result || result.error || spacing === null || spacing <= 0) return null;
+  const spacingM = spacing / 1000;
+  if (rating === "R0") {
+    const capacity = finiteNumber(result.normalTemperature?.Nmax_NT_kN);
+    return capacity === null ? null : capacity / spacingM;
+  }
+  const minutes = Number(rating.replace("R", ""));
+  const capacity = finiteNumber(result.fire?.find((entry) => Number(entry?.fireMinutes) === minutes)?.Nmax_Rt_kN);
+  return capacity === null ? null : capacity / spacingM;
+};
+
 function ValueRow({ label, value, unit }) {
   const display = value === null || value === undefined || value === "" ? "N/A" : value;
+  const hasValue = value !== null && value !== undefined && value !== "";
   return (
     <div style={styles.row}>
       <div style={styles.rowLabel}>{label} :</div>
       <div style={styles.rowValue}>
         {display}
-        {value ? <span style={styles.rowUnit}>&nbsp;{unit}</span> : null}
+        {hasValue ? <span style={styles.rowUnit}>&nbsp;{unit}</span> : null}
       </div>
     </div>
   );
@@ -55,7 +113,9 @@ export default function ComponentCard({
   const acoustic = getAcousticInsulation(item);
   const airborne = formatNumber(acoustic.rwCorrected, 0);
   const impact = formatNumber(acoustic.lnwCorrected, 0);
-  const fire = item?.fire_resistance?.REI_min ?? null;
+  const isFloor = item?.categoryId === "floor_assembly";
+  const isLoadBearingWall = ["outer_wall", "inner_wall"].includes(item?.categoryId);
+  const ratings = ["R0", "R30", "R60"];
 
   // Scale down SVG views to fit the card without cropping
   const svgScale = 0.15;
@@ -128,13 +188,36 @@ export default function ComponentCard({
               <div style={styles.section}>
                 <div style={styles.sectionTitle}>{t.acoustic_insulation ?? "Acoustic insulation"}</div>
                 <ValueRow label={t.acoustic_rw_corrected ?? "Rw cor."} value={airborne} unit="dB" />
-                <ValueRow label={t.acoustic_lnw_corrected ?? "Ln,w cor."} value={impact} unit="dB" />
+                {isFloor ? <ValueRow label={t.acoustic_lnw_corrected ?? "Ln,w cor."} value={impact} unit="dB" /> : null}
               </div>
 
-              <div style={styles.section}>
-                <div style={styles.sectionTitle}>{t.fire_protection ?? "Fire protection"}</div>
-                <div style={styles.fireValue}>{fire ?? "N/A"}</div>
-              </div>
+              {isFloor ? (
+                <div style={styles.section}>
+                  <div style={styles.sectionTitle}>{t.floor_max_spans ?? "Maximum spans"}</div>
+                  {ratings.map((rating) => (
+                    <ValueRow
+                      key={rating}
+                      label={`${t.max_span ?? "Max. span"} ${rating}`}
+                      value={formatNumber(getFloorSpan(item, rating), 2)}
+                      unit="m"
+                    />
+                  ))}
+                </div>
+              ) : null}
+
+              {isLoadBearingWall ? (
+                <div style={styles.section}>
+                  <div style={styles.sectionTitle}>{t.wall_linear_resistance ?? "Maximum linear resistance"}</div>
+                  {ratings.map((rating) => (
+                    <ValueRow
+                      key={rating}
+                      label={rating}
+                      value={formatNumber(getWallLinearResistance(item, rating), 1)}
+                      unit="kN/m"
+                    />
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
@@ -267,11 +350,6 @@ const styles = {
     fontSize: "17px",
     fontWeight: 700,
     marginBottom: "8px",
-  },
-  fireValue: {
-    marginTop: "4px",
-    fontSize: "16px",
-    fontWeight: 600,
   },
   row: {
     display: "grid",

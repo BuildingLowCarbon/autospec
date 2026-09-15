@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import acousticRequirementsDb from "../data/acoustic_requirements.json";
+import { getRequirementCategoryIds } from "../utils/componentTaxonomy";
 
 export default function AcousticRequirementsModule({
   lang = "fr",
@@ -52,15 +53,23 @@ export default function AcousticRequirementsModule({
 
     return (matchedRule.requirements ?? []).map((req) => {
       const element = elementsById.get(req.element_id);
-      const categoryTargets = (req.applies_to ?? []).map((target) => {
-        const inElTargets = element?.targets?.find((item) => item.categoryId === target.categoryId);
-        const baseLabel = tr(inElTargets?.label) || target.categoryId;
+      const categoryTargets = getRequirementCategoryIds(req).map((categoryId) => {
+        const sourceCategoryId = ["inner_wall", "partition_wall"].includes(categoryId)
+          ? req.applies_to?.[0]?.categoryId
+          : categoryId;
+        const inElTargets = element?.targets?.find((item) => item.categoryId === sourceCategoryId);
+        const canonicalLabel = categoryId === "inner_wall"
+          ? { fr: "Paroi intérieure", de: "Innenwand", en: "Interior wall", it: "Parete interna" }
+          : categoryId === "partition_wall"
+            ? { fr: "Cloison", de: "Trennwand", en: "Partition", it: "Parete divisoria" }
+            : null;
+        const baseLabel = tr(canonicalLabel) || tr(inElTargets?.label) || categoryId;
         const subtypeLabel =
           req.subtype_id && element?.subtypes
             ? tr(element.subtypes.find((subtype) => subtype.id === req.subtype_id)?.label) || ""
             : "";
         return {
-          categoryId: target.categoryId,
+          categoryId,
           label: [baseLabel, subtypeLabel].filter(Boolean).join(" "),
         };
       });

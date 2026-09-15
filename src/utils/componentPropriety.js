@@ -11,6 +11,7 @@ const SURFACE_RULE_BY_CATEGORY = {
   floor_assembly: 'Rsi_Rse',
   balcony: 'Rsi_Rse',
   inner_wall: '2xRsi',
+  partition_wall: '2xRsi',
   partition_wall_single_shell: '2xRsi',
   partition_wall_double_shell: '2xRsi',
 };

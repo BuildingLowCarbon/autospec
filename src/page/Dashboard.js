@@ -9,6 +9,7 @@ import loadProducts from '../utils/loadProducts';
 import { fetchDbSources, invalidateComponentsCache } from '../utils/loadComponents';
 import { calculateComponentProperties } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
+import { normalizeComponentTaxonomy } from '../utils/componentTaxonomy';
 import {
   deleteFileCustomComponent,
   deleteLocalCustomComponent,
@@ -168,14 +169,14 @@ export default function Dashboard() {
 
       const recalculated = dbPayloads.flatMap(({ file, items }) =>
         items.map((item) => {
-          const sourcePreserved = {
+          const sourcePreserved = normalizeComponentTaxonomy({
             ...item,
             __sourceFile: 'components_custom.json',
             source: item.source ?? {
               databaseId: file.replace('.json', ''),
               name: file.replace('.json', '').replace(/_/g, ' '),
             },
-          };
+          });
           const calculated = calculateComponentProperties(sourcePreserved, materials, products, kbobData, {
             categories: categoriesData?.categories ?? [],
             componentServiceLifeYears: 60,

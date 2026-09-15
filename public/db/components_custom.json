@@ -2220,11 +2220,11 @@
     "id": "CE1FDBAA-B0A0-3A37-B995-AAE130D141D3",
     "parent": null,
     "serialNo": "C0075",
-    "categoryId": "partition_wall_single_shell",
+    "categoryId": "inner_wall",
     "thickness_mm": 170,
     "weight_kg_m2": 46.63552,
     "uValue_W_m2K": 0.36151566875780483,
-    "gwp_kgco2e_m2": 3.9495289600000003,
+    "gwp_kgco2e_m2": 7.299768320000001,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_both_sides",
@@ -2257,16 +2257,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Joints collés/enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche links"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -2281,10 +2281,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         },
         {
           "order": 1,
@@ -2292,16 +2295,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Contreventement à gauche 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Sheathed rightside 1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Beplankung links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed rightside 1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -2313,13 +2316,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.007",
-          "gwp_kgco2e_m2": 1.4058000000000002,
+          "gwp_kgco2e_m2": 2.8116000000000003,
           "thermalResistance_m2K_W": 0.039473684210526314,
           "baseGwp_kgco2e_m2": 1.4058000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 2,
@@ -2327,16 +2333,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -2351,10 +2357,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 3,
@@ -2362,16 +2371,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
-              "name": "Nervures/solives",
-              "description": "Support"
-            },
-            "en": {
-              "name": "Rib/bar",
               "description": "Support"
             },
             "de": {
-              "name": "Rippe/Balken",
               "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
             }
           },
           "productName": "Rippe/Balken",
@@ -2386,10 +2395,13 @@
           "gwp_kgco2e_m2": 0.5992896000000001,
           "thermalResistance_m2K_W": 1.076923076923077,
           "baseGwp_kgco2e_m2": 0.5992896000000001,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 4,
@@ -2397,16 +2409,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -2418,13 +2430,16 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.008",
-          "gwp_kgco2e_m2": 0.53863936,
+          "gwp_kgco2e_m2": 1.07727872,
           "thermalResistance_m2K_W": 2.8000000000000003,
           "baseGwp_kgco2e_m2": 0.53863936,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 5,
@@ -2432,16 +2447,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -2456,10 +2471,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 6,
@@ -2467,16 +2485,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Contreventement à gauche 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Sheathed rightside 1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Beplankung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed rightside 1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -2488,13 +2506,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.007",
-          "gwp_kgco2e_m2": 1.4058000000000002,
+          "gwp_kgco2e_m2": 2.8116000000000003,
           "thermalResistance_m2K_W": 0.039473684210526314,
           "baseGwp_kgco2e_m2": 1.4058000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 7,
@@ -2502,16 +2523,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Joints collés/enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -2526,10 +2547,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         }
       ],
       "typeId": "stud"
@@ -2539,8 +2563,194 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 60,
+          "h_mm": 140,
+          "spacing_mm": 625,
+          "isContinuousSupport": false,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 3,
+          "t_protection_min": 15
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 60,
+          "h_mm": 140,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 16.0298083196193,
+          "Nmax_interaction_kN": 104.16,
+          "Nmax_NT_kN": 16.0298083196193,
+          "buckling": {
+            "A_mm2": 8400,
+            "Iy_mm4": 13720000,
+            "Iz_mm4": 2520000,
+            "iy_mm": 40.414518843273804,
+            "iz_mm": 17.320508075688775,
+            "i_min_mm": 17.320508075688775,
+            "lambda": 144.33756729740642,
+            "lambda_rel": 2.447503356802015,
+            "kc": 0.1538960092129349,
+            "Nmax_flamb_N": 16029.808319619298,
+            "Nmax_flamb_kN": 16.0298083196193
+          },
+          "interaction": {
+            "A_mm2": 8400,
+            "Wy_mm3": 196000,
+            "Wz_mm3": 84000,
+            "alpha": 9.21717976125587e-11,
+            "beta": 0,
+            "Nmax_interaction_N": 104160,
+            "Nmax_interaction_kN": 104.16
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 22,
+            "hfi_mm": 121,
+            "d_char_mm": 12,
+            "d_eff_mm": 19,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 1.2956152111556836,
+            "Nmax_interaction_Rt_kN": 59.41584,
+            "Nmax_Rt_kN": 1.2956152111556836,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 22,
+              "hfi_mm": 121,
+              "A_fi_mm2": 2662,
+              "Nmax_flamb_Rt_N": 1295.6152111556835,
+              "Nmax_flamb_Rt_kN": 1.2956152111556836,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 2662,
+                "Iy_mm4": 3247861.8333333335,
+                "Iz_mm4": 107367.33333333333,
+                "iy_mm": 34.92969128597236,
+                "iz_mm": 6.350852961085883,
+                "i_min_mm": 6.350852961085883,
+                "lambda": 393.64791081110855,
+                "lambda_rel": 6.675009154914588,
+                "kc": 0.021805888987779746,
+                "Nmax_flamb_N": 719.7862284198242,
+                "Nmax_flamb_kN": 0.7197862284198242
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 22,
+              "hfi_mm": 121,
+              "A_fi_mm2": 2662,
+              "Wy_fi_mm3": 53683.666666666664,
+              "Wz_fi_mm3": 9760.666666666666,
+              "alpha": 2.832666961206264e-10,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 59415.840000000004,
+              "Nmax_interaction_Rt_kN": 59.41584
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": false,
+            "reason": "Section résiduelle fictive non positive",
+            "t_exposed_min": 45,
+            "d_char_mm": 36,
+            "d_eff_mm": 43,
+            "bfi_mm": -26,
+            "hfi_mm": 97
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 16.03,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1.3,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": null,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 25.65,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 2.07,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": null,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 16.03,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1.3,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": null,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 104.16,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 59.42,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": null,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -2614,11 +2824,11 @@
     "id": "FBE9DD31-6192-35A0-9EF6-D57F380B8C68",
     "parent": null,
     "serialNo": "C0076",
-    "categoryId": "partition_wall_single_shell",
+    "categoryId": "inner_wall",
     "thickness_mm": 225,
     "weight_kg_m2": 67.67424,
     "uValue_W_m2K": 0.2857888525449269,
-    "gwp_kgco2e_m2": 5.676312,
+    "gwp_kgco2e_m2": 10.21469504,
     "spanMax_m": null,
     "claddingId": "covering_on_one_side",
     "sheathingId": "sheathed_on_both_sides",
@@ -2651,16 +2861,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Joints collés/enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche links"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -2675,10 +2885,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 45,
-          "time_burning_min": 0
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         },
         {
           "order": 1,
@@ -2686,16 +2899,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Parement à droite 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Covering rightside1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Beplankung links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -2707,13 +2920,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.007",
-          "gwp_kgco2e_m2": 1.4058000000000002,
+          "gwp_kgco2e_m2": 2.8116000000000003,
           "thermalResistance_m2K_W": 0.039473684210526314,
           "baseGwp_kgco2e_m2": 1.4058000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 15
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 2,
@@ -2721,16 +2937,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -2745,10 +2961,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 3,
@@ -2756,16 +2975,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
-              "name": "Nervures/solives",
-              "description": "Support"
-            },
-            "en": {
-              "name": "Rib/bar",
               "description": "Support"
             },
             "de": {
-              "name": "Rippe/Balken",
               "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
             }
           },
           "productName": "Rippe/Balken",
@@ -2780,10 +2999,13 @@
           "gwp_kgco2e_m2": 0.5992896000000001,
           "thermalResistance_m2K_W": 1.076923076923077,
           "baseGwp_kgco2e_m2": 0.5992896000000001,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures",
+          "isSupportStructure": true
         },
         {
           "order": 4,
@@ -2791,16 +3013,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -2815,10 +3037,14 @@
           "gwp_kgco2e_m2": 0.53863936,
           "thermalResistance_m2K_W": 2.8000000000000003,
           "baseGwp_kgco2e_m2": 0.53863936,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "protectsSupportSidesFromFire": true,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 5,
@@ -2826,16 +3052,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -2850,10 +3076,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 6,
@@ -2861,16 +3090,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Parement à droite 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Covering rightside1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Beplankung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -2882,13 +3111,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.007",
-          "gwp_kgco2e_m2": 1.4058000000000002,
+          "gwp_kgco2e_m2": 2.8116000000000003,
           "thermalResistance_m2K_W": 0.039473684210526314,
           "baseGwp_kgco2e_m2": 1.4058000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 7,
@@ -2896,16 +3128,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Sous structure visée",
               "description": "Couplage"
             },
-            "en": {
-              "name": "Substructure rigid screwed",
-              "description": "Coupling"
-            },
             "de": {
-              "name": "Unterkonstruktion steif befestigt",
               "description": "Kopplung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Coupling"
             }
           },
           "productName": "Unterkonstruktion steif befestigt",
@@ -2920,10 +3152,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 8,
@@ -2931,16 +3166,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
-              "name": "Lattes transversales b=60mm",
               "description": "Lattes / profils"
             },
-            "en": {
-              "name": "Wood lath transversely b=60mm",
-              "description": "Battens / profiles"
-            },
             "de": {
-              "name": "Holzlatte quer b=60mm",
               "description": "Lattung / Profile"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Battens / profiles"
             }
           },
           "productName": "Holzlatte quer b=60mm",
@@ -2952,13 +3187,16 @@
           "colorCode": "Transparent",
           "fiberDirection": "quer",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.16708608,
+          "gwp_kgco2e_m2": 0.33417216,
           "thermalResistance_m2K_W": 0.3076923076923077,
           "baseGwp_kgco2e_m2": 0.16708608,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 9,
@@ -2966,16 +3204,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -2987,13 +3225,16 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.008",
-          "gwp_kgco2e_m2": 0.15389696000000003,
+          "gwp_kgco2e_m2": 0.30779392000000005,
           "thermalResistance_m2K_W": 0.7999999999999999,
           "baseGwp_kgco2e_m2": 0.15389696000000003,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 10,
@@ -3001,16 +3242,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Parement à droite 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Covering rightside1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Bekleidung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -3022,13 +3263,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.007",
-          "gwp_kgco2e_m2": 1.4058000000000002,
+          "gwp_kgco2e_m2": 2.8116000000000003,
           "thermalResistance_m2K_W": 0.039473684210526314,
           "baseGwp_kgco2e_m2": 1.4058000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 11,
@@ -3036,16 +3280,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Joints collés/enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -3060,10 +3304,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         }
       ],
       "typeId": "stud"
@@ -3073,8 +3320,238 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 60,
+          "h_mm": 140,
+          "spacing_mm": 625,
+          "isContinuousSupport": false,
+          "hasLateralFireProtection": true,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 30
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 60,
+          "h_mm": 140,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 16.0298083196193,
+          "Nmax_interaction_kN": 104.16,
+          "Nmax_NT_kN": 16.0298083196193,
+          "buckling": {
+            "A_mm2": 8400,
+            "Iy_mm4": 13720000,
+            "Iz_mm4": 2520000,
+            "iy_mm": 40.414518843273804,
+            "iz_mm": 17.320508075688775,
+            "i_min_mm": 17.320508075688775,
+            "lambda": 144.33756729740642,
+            "lambda_rel": 2.447503356802015,
+            "kc": 0.1538960092129349,
+            "Nmax_flamb_N": 16029.808319619298,
+            "Nmax_flamb_kN": 16.0298083196193
+          },
+          "interaction": {
+            "A_mm2": 8400,
+            "Wy_mm3": 196000,
+            "Wz_mm3": 84000,
+            "alpha": 9.21717976125587e-11,
+            "beta": 0,
+            "Nmax_interaction_N": 104160,
+            "Nmax_interaction_kN": 104.16
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 60,
+            "hfi_mm": 140,
+            "d_char_mm": 0,
+            "d_eff_mm": 0,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 28.853654975314736,
+            "Nmax_interaction_Rt_kN": 187.488,
+            "Nmax_Rt_kN": 28.853654975314736,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 60,
+              "hfi_mm": 140,
+              "A_fi_mm2": 8400,
+              "Nmax_flamb_Rt_N": 28853.654975314737,
+              "Nmax_flamb_Rt_kN": 28.853654975314736,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 8400,
+                "Iy_mm4": 13720000,
+                "Iz_mm4": 2520000,
+                "iy_mm": 40.414518843273804,
+                "iz_mm": 17.320508075688775,
+                "i_min_mm": 17.320508075688775,
+                "lambda": 144.33756729740642,
+                "lambda_rel": 2.447503356802015,
+                "kc": 0.1538960092129349,
+                "Nmax_flamb_N": 16029.808319619298,
+                "Nmax_flamb_kN": 16.0298083196193
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 60,
+              "hfi_mm": 140,
+              "A_fi_mm2": 8400,
+              "Wy_fi_mm3": 196000,
+              "Wz_fi_mm3": 84000,
+              "alpha": 2.8448085682888495e-11,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 187488,
+              "Nmax_interaction_Rt_kN": 187.488
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 60,
+            "hfi_mm": 109,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 22.4646313736379,
+            "Nmax_interaction_Rt_kN": 145.97279999999998,
+            "Nmax_Rt_kN": 22.4646313736379,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 60,
+              "hfi_mm": 109,
+              "A_fi_mm2": 6540,
+              "Nmax_flamb_Rt_N": 22464.6313736379,
+              "Nmax_flamb_Rt_kN": 22.4646313736379,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 6540,
+                "Iy_mm4": 6475145,
+                "Iz_mm4": 1962000,
+                "iy_mm": 31.465589670834603,
+                "iz_mm": 17.320508075688775,
+                "i_min_mm": 17.320508075688775,
+                "lambda": 144.33756729740642,
+                "lambda_rel": 2.447503356802015,
+                "kc": 0.1538960092129349,
+                "Nmax_flamb_N": 12480.350763132168,
+                "Nmax_flamb_kN": 12.480350763132169
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 60,
+              "hfi_mm": 109,
+              "A_fi_mm2": 6540,
+              "Wy_fi_mm3": 118810,
+              "Wz_fi_mm3": 65400,
+              "alpha": 4.693060174939942e-11,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 145972.8,
+              "Nmax_interaction_Rt_kN": 145.97279999999998
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 16.03,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 28.85,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 22.46,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 25.65,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 46.17,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 35.94,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 16.03,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 28.85,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 22.46,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 104.16,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 187.49,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 145.97,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -3142,7 +3619,8 @@
         "workingtitle": "Beplankung links & rechts"
       }
     },
-    "__sourceFile": "components_custom.json"
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": ""
   },
   {
     "id": "95CC78EC-D0E3-3690-A165-EE78F7150EB5",
@@ -5076,16 +5554,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Joints collés/enduits",
               "description": "Surface côté gauche"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface leftside"
-            },
             "de": {
-              "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche links"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface leftside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -5102,8 +5580,9 @@
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 45,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 1,
@@ -5111,16 +5590,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre ou plaque de plâtre à haute densité ≥ 1000 kg/m³",
               "description": "Contrevetement à gauche 1ère couche"
             },
-            "en": {
-              "name": "Gypsum fiber or hard gypsum board ≥ 1000kg/m³",
-              "description": "Sheathed leftside 1st layer"
-            },
             "de": {
-              "name": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
               "description": "Beplankung links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed leftside 1st layer"
             }
           },
           "productName": "Gipsfaser- oder Hartgipsplatte ≥ 1000kg/m³",
@@ -5137,8 +5616,9 @@
           "baseGwp_kgco2e_m2": 1.4058000000000002,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 15
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 2,
@@ -5146,16 +5626,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Sans interaction",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "no composite action",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -5172,8 +5652,9 @@
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 3,
@@ -5181,23 +5662,23 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
-              "name": "Panneau à base de bois travaillant, planches juxtaposées, bois lamellé croisé ≥ 450 kg/m³",
-              "description": "Support"
-            },
-            "en": {
-              "name": "Wood panel for structural purposes, Cross laminated timber, laminated timber ≥ 450 kg/m³",
               "description": "Support"
             },
             "de": {
-              "name": "Holzwerkstoffplatte für tragende Zwecke oder Brettsperrholz, Brettstapel ≥ 450 kg/m³",
               "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
             }
           },
           "productName": "Holzwerkstoffplatte für tragende Zwecke oder Brettsperrholz, Brettstapel ≥ 450 kg/m³",
           "thickness_mm": 80,
           "weight_kg_m2": 39.2,
-          "width_mm": 1000,
-          "spacing_mm": 1000,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "BCBCBC",
           "fiberDirection": null,
@@ -5208,7 +5689,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true
         },
         {
           "order": 4,
@@ -5216,16 +5698,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Sans interaction",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "no composite action",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Ohne Verbundwirkung",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -5243,7 +5725,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 5,
@@ -5251,16 +5734,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Suspension avec support en caoutchouc b=60mm",
               "description": "Couplage"
             },
-            "en": {
-              "name": "Rubber mounted direct hanger b=60mm",
-              "description": "Coupling"
-            },
             "de": {
-              "name": "Direktabhänger gummigelagert b=60mm",
               "description": "Kopplung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Coupling"
             }
           },
           "productName": "Direktabhänger gummigelagert b=60mm",
@@ -5278,7 +5761,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 6,
@@ -5286,16 +5770,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
-              "name": "Lattes transversales b=60mm",
               "description": "Lattes / profils"
             },
-            "en": {
-              "name": "Wood lath transversely b=60mm",
-              "description": "Battens / profiles"
-            },
             "de": {
-              "name": "Holzlatte quer b=60mm",
               "description": "Lattung / Profile"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Battens / profiles"
             }
           },
           "productName": "Holzlatte quer b=60mm",
@@ -5313,7 +5797,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 7,
@@ -5321,16 +5806,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -5348,7 +5833,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 8,
@@ -5356,16 +5842,16 @@
           "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre type A",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Plasterboard type A",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Gipsplatte Typ A",
               "description": "Bekleidung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Gipsplatte Typ A",
@@ -5383,7 +5869,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false
         },
         {
           "order": 9,
@@ -5391,16 +5878,16 @@
           "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
           "translations": {
             "fr": {
-              "name": "Plaque de plâtre type A",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Plasterboard type A",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Gipsplatte Typ A",
               "description": "Bekleidung rechts 2. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Gipsplatte Typ A",
@@ -5418,7 +5905,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false
         },
         {
           "order": 10,
@@ -5426,16 +5914,16 @@
           "productId": "A1F3BCF1-3041-4E44-B851-0E1A6A2E07CD",
           "translations": {
             "fr": {
-              "name": "Joints enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Smoothed joints",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verspachtelt",
               "description": "Oberfläche rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verspachtelt",
@@ -5453,7 +5941,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         }
       ],
       "typeId": "solid_wood_panel"
@@ -5463,8 +5952,238 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 80,
+          "spacing_mm": 1000,
+          "isContinuousSupport": true,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 30
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 80,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 261.95854003453695,
+          "Nmax_interaction_kN": 992.0000000000001,
+          "Nmax_NT_kN": 261.95854003453695,
+          "buckling": {
+            "A_mm2": 80000,
+            "Iy_mm4": 42666666.666666664,
+            "Iz_mm4": 6666666666.666667,
+            "iy_mm": 23.09401076758503,
+            "iz_mm": 288.6751345948129,
+            "i_min_mm": 23.09401076758503,
+            "lambda": 108.25317547305484,
+            "lambda_rel": 1.8356275176015118,
+            "kc": 0.2640711089057832,
+            "Nmax_flamb_N": 261958.54003453697,
+            "Nmax_flamb_kN": 261.95854003453695
+          },
+          "interaction": {
+            "A_mm2": 80000,
+            "Wy_mm3": 1066666.6666666667,
+            "Wz_mm3": 13333333.333333334,
+            "alpha": 1.0161940686784598e-12,
+            "beta": 0,
+            "Nmax_interaction_N": 992000.0000000001,
+            "Nmax_interaction_kN": 992.0000000000001
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 80,
+            "d_char_mm": 0,
+            "d_eff_mm": 0,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 471.5253720621666,
+            "Nmax_interaction_Rt_kN": 1785.6,
+            "Nmax_Rt_kN": 471.5253720621666,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 1000,
+              "hfi_mm": 80,
+              "A_fi_mm2": 80000,
+              "Nmax_flamb_Rt_N": 471525.37206216657,
+              "Nmax_flamb_Rt_kN": 471.5253720621666,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 80000,
+                "Iy_mm4": 42666666.666666664,
+                "Iz_mm4": 6666666666.666667,
+                "iy_mm": 23.09401076758503,
+                "iz_mm": 288.6751345948129,
+                "i_min_mm": 23.09401076758503,
+                "lambda": 108.25317547305484,
+                "lambda_rel": 1.8356275176015118,
+                "kc": 0.2640711089057832,
+                "Nmax_flamb_N": 261958.54003453697,
+                "Nmax_flamb_kN": 261.95854003453695
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 1000,
+              "hfi_mm": 80,
+              "A_fi_mm2": 80000,
+              "Wy_fi_mm3": 1066666.6666666667,
+              "Wz_fi_mm3": 13333333.333333334,
+              "alpha": 3.1364014465384567e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1785600,
+              "Nmax_interaction_Rt_kN": 1785.6
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 49,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 114.11647160302738,
+            "Nmax_interaction_Rt_kN": 1093.68,
+            "Nmax_Rt_kN": 114.11647160302738,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 49,
+              "A_fi_mm2": 49000,
+              "Nmax_flamb_Rt_N": 114116.47160302738,
+              "Nmax_flamb_Rt_kN": 114.11647160302738,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 49000,
+                "Iy_mm4": 9804083.333333334,
+                "Iz_mm4": 4083333333.3333335,
+                "iy_mm": 14.145081595145832,
+                "iz_mm": 288.6751345948129,
+                "i_min_mm": 14.145081595145832,
+                "lambda": 176.73987832335482,
+                "lambda_rel": 2.9969428858800184,
+                "kc": 0.10434173762254716,
+                "Nmax_flamb_N": 63398.03977945966,
+                "Nmax_flamb_kN": 63.39803977945966
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 49,
+              "A_fi_mm2": 49000,
+              "Wy_fi_mm3": 400166.6666666667,
+              "Wz_fi_mm3": 8166666.666666667,
+              "alpha": 8.360253751706006e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1093680,
+              "Nmax_interaction_Rt_kN": 1093.68
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 261.96,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 471.53,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 114.12,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 261.96,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 471.53,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 114.12,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 261.96,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 471.53,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 114.12,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 992,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1785.6,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 1093.68,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -5532,7 +6251,8 @@
         "workingtitle": "Beplankung links"
       }
     },
-    "__sourceFile": "components_custom.json"
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": "load_bearing"
   },
   {
     "id": "7C33A502-6548-35D4-9830-83CD4B6A78A0",
@@ -9837,11 +10557,11 @@
     "id": "F9257F73-F166-355F-AD57-B4EA9FA0FEDE",
     "parent": null,
     "serialNo": "B9394",
-    "categoryId": "partition_wall_double_shell",
+    "categoryId": "inner_wall",
     "thickness_mm": 557.5,
     "weight_kg_m2": 169.925,
     "uValue_W_m2K": 0.0965991307767026,
-    "gwp_kgco2e_m2": 15.968525000000001,
+    "gwp_kgco2e_m2": 17.978650000000002,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": "sheathed_on_one_side",
@@ -9874,16 +10594,16 @@
           "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
           "translations": {
             "fr": {
-              "name": "GKF/DF Knauf Piano",
               "description": "Contreventement côté local à gauche 2ème couche"
             },
-            "en": {
-              "name": "GKF/DF Knauf Piano",
-              "description": "Sheathed room side leftside 2nd layer"
-            },
             "de": {
-              "name": "GKF/DF Knauf Piano",
               "description": "Beplankung raumseitig links 2. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed room side leftside 2nd layer"
             }
           },
           "productName": "GKF/DF Knauf Piano",
@@ -9895,13 +10615,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.008",
-          "gwp_kgco2e_m2": 0.8266249999999999,
+          "gwp_kgco2e_m2": 1.6532499999999999,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 0.8266249999999999,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 1,
@@ -9909,16 +10632,16 @@
           "productId": "0D5DEF3B-6154-45E3-AC05-94B36022BCE7",
           "translations": {
             "fr": {
-              "name": "PhoneStar TRI",
               "description": "Contreventement côté local à gauche 1ère couche"
             },
-            "en": {
-              "name": "Phone Star TRI",
-              "description": "Sheathed room side leftside 1st layer"
-            },
             "de": {
-              "name": "PhoneStar TRI",
               "description": "Beplankung raumseitig links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed room side leftside 1st layer"
             }
           },
           "productName": "PhoneStar TRI",
@@ -9930,13 +10653,16 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "03.013",
-          "gwp_kgco2e_m2": 1.1835,
+          "gwp_kgco2e_m2": 2.367,
           "thermalResistance_m2K_W": 0.01875,
           "baseGwp_kgco2e_m2": 1.1835,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 2,
@@ -9944,23 +10670,23 @@
           "productId": "73F3B931-65E4-4248-8A3C-0C1E6CD54660",
           "translations": {
             "fr": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support rightside"
-            },
             "de": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger links"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support rightside"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
           "thickness_mm": 100,
           "weight_kg_m2": 60,
-          "width_mm": 1000,
-          "spacing_mm": 1000,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
@@ -9968,10 +10694,13 @@
           "gwp_kgco2e_m2": 5.862,
           "thermalResistance_m2K_W": 0.7692307692307693,
           "baseGwp_kgco2e_m2": 5.862,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 3,
@@ -9979,16 +10708,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -10003,10 +10732,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 4,
@@ -10014,16 +10746,16 @@
           "productId": "CFDFE69A-6DCB-486C-993D-70D7B4C68924",
           "translations": {
             "fr": {
-              "name": "Laine de roche ≥ 60kg/m³",
               "description": "Isolation intermédiaire"
             },
-            "en": {
-              "name": "Rockwool ≥ 60kg/m³",
-              "description": "Intermediate insulation"
-            },
             "de": {
-              "name": "Putzträgerlamelle aus Steinwolle",
               "description": "Zwischendämmung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Intermediate insulation"
             }
           },
           "productName": "Putzträgerlamelle aus Steinwolle",
@@ -10038,10 +10770,13 @@
           "gwp_kgco2e_m2": 1.1172000000000002,
           "thermalResistance_m2K_W": 4.242424242424242,
           "baseGwp_kgco2e_m2": 1.1172000000000002,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 5,
@@ -10049,16 +10784,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Air",
               "description": "Espace d'air"
             },
-            "en": {
-              "name": "Air",
-              "description": "Air gap"
-            },
             "de": {
-              "name": "Luft",
               "description": "Luftspalt"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Air gap"
             }
           },
           "productName": "Luft",
@@ -10073,10 +10808,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 6,
@@ -10084,16 +10822,16 @@
           "productId": "CFDFE69A-6DCB-486C-993D-70D7B4C68924",
           "translations": {
             "fr": {
-              "name": "Laine de roche ≥ 60kg/m³",
               "description": "Isolation intermédiaire"
             },
-            "en": {
-              "name": "Rockwool ≥ 60kg/m³",
-              "description": "Intermediate insulation"
-            },
             "de": {
-              "name": "Putzträgerlamelle aus Steinwolle",
               "description": "Zwischendämmung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Intermediate insulation"
             }
           },
           "productName": "Putzträgerlamelle aus Steinwolle",
@@ -10108,10 +10846,13 @@
           "gwp_kgco2e_m2": 1.1172000000000002,
           "thermalResistance_m2K_W": 4.242424242424242,
           "baseGwp_kgco2e_m2": 1.1172000000000002,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 7,
@@ -10119,16 +10860,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -10143,10 +10884,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         },
         {
           "order": 8,
@@ -10154,23 +10898,23 @@
           "productId": "73F3B931-65E4-4248-8A3C-0C1E6CD54660",
           "translations": {
             "fr": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support rightside"
-            },
             "de": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support rightside"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
           "thickness_mm": 100,
           "weight_kg_m2": 60,
-          "width_mm": 1000,
-          "spacing_mm": 1000,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
@@ -10178,10 +10922,13 @@
           "gwp_kgco2e_m2": 5.862,
           "thermalResistance_m2K_W": 0.7692307692307693,
           "baseGwp_kgco2e_m2": 5.862,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures"
         }
       ],
       "typeId": "solid_timber_derived_wood_products"
@@ -10191,8 +10938,238 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 100,
+          "spacing_mm": 1000,
+          "isContinuousSupport": true,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 0
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 100,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 487.847645269287,
+          "Nmax_interaction_kN": 1240,
+          "Nmax_NT_kN": 487.847645269287,
+          "buckling": {
+            "A_mm2": 100000,
+            "Iy_mm4": 83333333.33333333,
+            "Iz_mm4": 8333333333.333333,
+            "iy_mm": 28.867513459481287,
+            "iz_mm": 288.67513459481285,
+            "i_min_mm": 28.867513459481287,
+            "lambda": 86.60254037844386,
+            "lambda_rel": 1.468502014081209,
+            "kc": 0.39342552037845724,
+            "Nmax_flamb_N": 487847.645269287,
+            "Nmax_flamb_kN": 487.847645269287
+          },
+          "interaction": {
+            "A_mm2": 100000,
+            "Wy_mm3": 1666666.6666666667,
+            "Wz_mm3": 16666666.666666666,
+            "alpha": 6.503642039542143e-13,
+            "beta": 0,
+            "Nmax_interaction_N": 1240000,
+            "Nmax_interaction_kN": 1240
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 69,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 308.8267524792044,
+            "Nmax_interaction_Rt_kN": 1540.08,
+            "Nmax_Rt_kN": 308.8267524792044,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Nmax_flamb_Rt_N": 308826.7524792044,
+              "Nmax_flamb_Rt_kN": 308.8267524792044,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 69000,
+                "Iy_mm4": 27375750,
+                "Iz_mm4": 5750000000,
+                "iy_mm": 19.91858428704209,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 19.91858428704209,
+                "lambda": 125.51092808470125,
+                "lambda_rel": 2.1282637885234914,
+                "kc": 0.2005264353015456,
+                "Nmax_flamb_N": 171570.41804400244,
+                "Nmax_flamb_kN": 171.57041804400242
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Wy_fi_mm3": 793500,
+              "Wz_fi_mm3": 11500000,
+              "alpha": 4.216124607823172e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1540080,
+              "Nmax_interaction_Rt_kN": 1540.08
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 45,
+            "d_char_mm": 48,
+            "d_eff_mm": 55,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 88.8882274564545,
+            "Nmax_interaction_Rt_kN": 1004.3999999999999,
+            "Nmax_Rt_kN": 88.8882274564545,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Nmax_flamb_Rt_N": 88888.22745645451,
+              "Nmax_flamb_Rt_kN": 88.8882274564545,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 45000,
+                "Iy_mm4": 7593750,
+                "Iz_mm4": 3750000000,
+                "iy_mm": 12.99038105676658,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 12.99038105676658,
+                "lambda": 192.45008972987526,
+                "lambda_rel": 3.2633378090693537,
+                "kc": 0.08849883259304511,
+                "Nmax_flamb_N": 49382.34858691917,
+                "Nmax_flamb_kN": 49.38234858691917
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Wy_fi_mm3": 337500,
+              "Wz_fi_mm3": 7500000,
+              "alpha": 9.912577411282037e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1004399.9999999999,
+              "Nmax_interaction_Rt_kN": 1004.3999999999999
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 1240,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1540.08,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 1004.4,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -10260,7 +11237,8 @@
         "workingtitle": "Beplankung links"
       }
     },
-    "__sourceFile": "components_custom.json"
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": ""
   },
   {
     "id": "EDA14374-B5DC-38C1-9E3D-86F327281A75",
@@ -10837,16 +11815,16 @@
           "productId": "A1F3BCF1-3041-4E44-B851-0E1A6A2E07CD",
           "translations": {
             "fr": {
-              "name": "Joints enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Smoothed joints",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verspachtelt",
               "description": "Oberfläche links"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verspachtelt",
@@ -10863,8 +11841,9 @@
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 60,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 1,
@@ -10872,16 +11851,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Rigidur H Plaques de plâtre fibrées",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Rigidur H-Gipsfaserplatte",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
               "description": "Bekleidung links 2. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
@@ -10898,8 +11877,9 @@
           "baseGwp_kgco2e_m2": 1.1715,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 45,
-          "time_burning_min": 15
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 2,
@@ -10907,16 +11887,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Rigidur H Plaques de plâtre fibrées",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Rigidur H-Gipsfaserplatte",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
               "description": "Bekleidung links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
@@ -10933,8 +11913,9 @@
           "baseGwp_kgco2e_m2": 1.1715,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 15
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 3,
@@ -10942,16 +11923,16 @@
           "productId": "08ADBE90-0BAA-435A-949F-A3FF99D7E74B",
           "translations": {
             "fr": {
-              "name": "Rail ressort b=60mm",
               "description": "Lattes / profils"
             },
-            "en": {
-              "name": "Spring rail b=60mm",
-              "description": "Battens / profiles"
-            },
             "de": {
-              "name": "Federschiene b=60mm",
               "description": "Lattung / Profile"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Battens / profiles"
             }
           },
           "productName": "Federschiene b=60mm",
@@ -10968,8 +11949,9 @@
           "baseGwp_kgco2e_m2": 0.55344384,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 4,
@@ -10977,16 +11959,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Air",
               "description": "Couplage"
             },
-            "en": {
-              "name": "Air",
-              "description": "Coupling"
-            },
             "de": {
-              "name": "Luft",
               "description": "Kopplung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Coupling"
             }
           },
           "productName": "Luft",
@@ -11003,8 +11985,9 @@
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 5,
@@ -11012,16 +11995,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -11038,8 +12021,9 @@
           "baseGwp_kgco2e_m2": 0.004256,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 6,
@@ -11047,16 +12031,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Sans interaction",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "no composite action",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Ohne Verbundwirkung",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -11073,8 +12057,9 @@
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
         },
         {
           "order": 7,
@@ -11082,23 +12067,23 @@
           "productId": "73F3B931-65E4-4248-8A3C-0C1E6CD54660",
           "translations": {
             "fr": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support"
-            },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support"
             },
             "de": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
           "thickness_mm": 75,
           "weight_kg_m2": 45,
-          "width_mm": 1000,
-          "spacing_mm": 1000,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
@@ -11109,7 +12094,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true
         },
         {
           "order": 8,
@@ -11117,16 +12103,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Sans interaction",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "no composite action",
-              "description": "Bond"
-            },
             "de": {
-              "name": "Ohne Verbundwirkung",
               "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -11144,7 +12130,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 9,
@@ -11152,16 +12139,16 @@
           "productId": null,
           "translations": {
             "fr": {
-              "name": "Air",
               "description": "Couplage"
             },
-            "en": {
-              "name": "Air",
-              "description": "Coupling"
-            },
             "de": {
-              "name": "Luft",
               "description": "Kopplung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Coupling"
             }
           },
           "productName": "Luft",
@@ -11179,7 +12166,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 10,
@@ -11187,16 +12175,16 @@
           "productId": "08ADBE90-0BAA-435A-949F-A3FF99D7E74B",
           "translations": {
             "fr": {
-              "name": "Rail ressort b=60mm",
               "description": "Lattes / profils"
             },
-            "en": {
-              "name": "Spring rail b=60mm",
-              "description": "Battens / profiles"
-            },
             "de": {
-              "name": "Federschiene b=60mm",
               "description": "Lattung / Profile"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Battens / profiles"
             }
           },
           "productName": "Federschiene b=60mm",
@@ -11214,7 +12202,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 11,
@@ -11222,16 +12211,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
-              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
-              "description": "Cavity dampening"
-            },
             "de": {
-              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -11249,7 +12238,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         },
         {
           "order": 12,
@@ -11257,16 +12247,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Rigidur H Plaques de plâtre fibrées",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Rigidur H-Gipsfaserplatte",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
               "description": "Bekleidung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
@@ -11284,7 +12274,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false
         },
         {
           "order": 13,
@@ -11292,16 +12283,16 @@
           "productId": "968DEF29-9BFA-4019-87C2-26267D285C27",
           "translations": {
             "fr": {
-              "name": "Rigidur H Plaques de plâtre fibrées",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "Rigidur H-Gipsfaserplatte",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
-              "name": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
               "description": "Bekleidung rechts 2. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "Rigidur H-Gipsfaserplatte, Typ GF-C1-I-W2",
@@ -11319,7 +12310,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false
         },
         {
           "order": 14,
@@ -11327,16 +12319,16 @@
           "productId": "A1F3BCF1-3041-4E44-B851-0E1A6A2E07CD",
           "translations": {
             "fr": {
-              "name": "Joints enduits",
               "description": "Surface côté droit"
             },
-            "en": {
-              "name": "Smoothed joints",
-              "description": "Surface rightside"
-            },
             "de": {
-              "name": "Fugen verspachtelt",
               "description": "Oberfläche rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
             }
           },
           "productName": "Fugen verspachtelt",
@@ -11354,7 +12346,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false
         }
       ],
       "typeId": "solid_wood_panel"
@@ -11364,8 +12357,238 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 75,
+          "spacing_mm": 1000,
+          "isContinuousSupport": true,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 30
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 75,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 217.95791190632977,
+          "Nmax_interaction_kN": 930.0000000000001,
+          "Nmax_NT_kN": 217.95791190632977,
+          "buckling": {
+            "A_mm2": 75000,
+            "Iy_mm4": 35156250,
+            "Iz_mm4": 6250000000,
+            "iy_mm": 21.650635094610966,
+            "iz_mm": 288.67513459481285,
+            "i_min_mm": 21.650635094610966,
+            "lambda": 115.47005383792515,
+            "lambda_rel": 1.9580026854416124,
+            "kc": 0.23436334613583845,
+            "Nmax_flamb_N": 217957.91190632977,
+            "Nmax_flamb_kN": 217.95791190632977
+          },
+          "interaction": {
+            "A_mm2": 75000,
+            "Wy_mm3": 937500,
+            "Wz_mm3": 12500000,
+            "alpha": 1.1562030292519365e-12,
+            "beta": 0,
+            "Nmax_interaction_N": 930000.0000000001,
+            "Nmax_interaction_kN": 930.0000000000001
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 75,
+            "d_char_mm": 0,
+            "d_eff_mm": 0,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 392.3242414313936,
+            "Nmax_interaction_Rt_kN": 1674,
+            "Nmax_Rt_kN": 392.3242414313936,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 1000,
+              "hfi_mm": 75,
+              "A_fi_mm2": 75000,
+              "Nmax_flamb_Rt_N": 392324.2414313936,
+              "Nmax_flamb_Rt_kN": 392.3242414313936,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 75000,
+                "Iy_mm4": 35156250,
+                "Iz_mm4": 6250000000,
+                "iy_mm": 21.650635094610966,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 21.650635094610966,
+                "lambda": 115.47005383792515,
+                "lambda_rel": 1.9580026854416124,
+                "kc": 0.23436334613583845,
+                "Nmax_flamb_N": 217957.91190632977,
+                "Nmax_flamb_kN": 217.95791190632977
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 0,
+              "d_char_mm": 0,
+              "d_eff_mm": 0,
+              "bfi_mm": 1000,
+              "hfi_mm": 75,
+              "A_fi_mm2": 75000,
+              "Wy_fi_mm3": 937500,
+              "Wz_fi_mm3": 12500000,
+              "alpha": 3.5685278680615327e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1674000,
+              "Nmax_interaction_Rt_kN": 1674
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 44,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 83.20826363907314,
+            "Nmax_interaction_Rt_kN": 982.08,
+            "Nmax_Rt_kN": 83.20826363907314,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 44,
+              "A_fi_mm2": 44000,
+              "Nmax_flamb_Rt_N": 83208.26363907313,
+              "Nmax_flamb_Rt_kN": 83.20826363907314,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 44000,
+                "Iy_mm4": 7098666.666666667,
+                "Iz_mm4": 3666666666.6666665,
+                "iy_mm": 12.701705922171767,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 12.701705922171767,
+                "lambda": 196.82395540555424,
+                "lambda_rel": 3.3375045774572936,
+                "kc": 0.08472656365985778,
+                "Nmax_flamb_N": 46226.81313281841,
+                "Nmax_flamb_kN": 46.22681313281841
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 44,
+              "A_fi_mm2": 44000,
+              "Wy_fi_mm3": 322666.6666666667,
+              "Wz_fi_mm3": 7333333.333333333,
+              "alpha": 1.0368269244755228e-12,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 982080,
+              "Nmax_interaction_Rt_kN": 982.08
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 217.96,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 392.32,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 83.21,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 217.96,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 392.32,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 83.21,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 217.96,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 392.32,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 83.21,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 930,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1674,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 982.08,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -11433,7 +12656,8 @@
         "workingtitle": "Ohne Beplankung"
       }
     },
-    "__sourceFile": "components_custom.json"
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": "load_bearing"
   },
   {
     "id": "0A3A86FF-BAB9-373A-B688-99186CF9F1E9",
@@ -11476,23 +12700,23 @@
           "productId": "73F3B931-65E4-4248-8A3C-0C1E6CD54660",
           "translations": {
             "fr": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support"
-            },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support"
             },
             "de": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
           "thickness_mm": 100,
           "weight_kg_m2": 60,
-          "width_mm": 1000,
-          "spacing_mm": 1000,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
@@ -11503,7 +12727,8 @@
           "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true
         }
       ],
       "typeId": "solid_wood_panel"
@@ -11513,8 +12738,238 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 100,
+          "spacing_mm": 1000,
+          "isContinuousSupport": true,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 0
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 100,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 487.847645269287,
+          "Nmax_interaction_kN": 1240,
+          "Nmax_NT_kN": 487.847645269287,
+          "buckling": {
+            "A_mm2": 100000,
+            "Iy_mm4": 83333333.33333333,
+            "Iz_mm4": 8333333333.333333,
+            "iy_mm": 28.867513459481287,
+            "iz_mm": 288.67513459481285,
+            "i_min_mm": 28.867513459481287,
+            "lambda": 86.60254037844386,
+            "lambda_rel": 1.468502014081209,
+            "kc": 0.39342552037845724,
+            "Nmax_flamb_N": 487847.645269287,
+            "Nmax_flamb_kN": 487.847645269287
+          },
+          "interaction": {
+            "A_mm2": 100000,
+            "Wy_mm3": 1666666.6666666667,
+            "Wz_mm3": 16666666.666666666,
+            "alpha": 6.503642039542143e-13,
+            "beta": 0,
+            "Nmax_interaction_N": 1240000,
+            "Nmax_interaction_kN": 1240
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 69,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 308.8267524792044,
+            "Nmax_interaction_Rt_kN": 1540.08,
+            "Nmax_Rt_kN": 308.8267524792044,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Nmax_flamb_Rt_N": 308826.7524792044,
+              "Nmax_flamb_Rt_kN": 308.8267524792044,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 69000,
+                "Iy_mm4": 27375750,
+                "Iz_mm4": 5750000000,
+                "iy_mm": 19.91858428704209,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 19.91858428704209,
+                "lambda": 125.51092808470125,
+                "lambda_rel": 2.1282637885234914,
+                "kc": 0.2005264353015456,
+                "Nmax_flamb_N": 171570.41804400244,
+                "Nmax_flamb_kN": 171.57041804400242
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Wy_fi_mm3": 793500,
+              "Wz_fi_mm3": 11500000,
+              "alpha": 4.216124607823172e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1540080,
+              "Nmax_interaction_Rt_kN": 1540.08
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 45,
+            "d_char_mm": 48,
+            "d_eff_mm": 55,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 88.8882274564545,
+            "Nmax_interaction_Rt_kN": 1004.3999999999999,
+            "Nmax_Rt_kN": 88.8882274564545,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Nmax_flamb_Rt_N": 88888.22745645451,
+              "Nmax_flamb_Rt_kN": 88.8882274564545,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 45000,
+                "Iy_mm4": 7593750,
+                "Iz_mm4": 3750000000,
+                "iy_mm": 12.99038105676658,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 12.99038105676658,
+                "lambda": 192.45008972987526,
+                "lambda_rel": 3.2633378090693537,
+                "kc": 0.08849883259304511,
+                "Nmax_flamb_N": 49382.34858691917,
+                "Nmax_flamb_kN": 49.38234858691917
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Wy_fi_mm3": 337500,
+              "Wz_fi_mm3": 7500000,
+              "alpha": 9.912577411282037e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1004399.9999999999,
+              "Nmax_interaction_Rt_kN": 1004.3999999999999
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 1240,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1540.08,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 1004.4,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -11582,7 +13037,8 @@
         "workingtitle": "Ohne Beplankung"
       }
     },
-    "__sourceFile": "components_custom.json"
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": "load_bearing"
   },
   {
     "id": "9F1FC913-5DFB-3BB8-A4E5-02B6BE6A6768",
@@ -22863,5 +24319,1097 @@
     },
     "__sourceFile": "components_custom.json",
     "subcategoryId": "above_ground"
+  },
+  {
+    "id": "D95CBA49-A350-44AE-B4D7-A2731C89144D",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "partition_wall",
+    "thickness_mm": 145,
+    "weight_kg_m2": 26.58624242424242,
+    "uValue_W_m2K": 0.6196059941370616,
+    "gwp_kgco2e_m2": 4.318507563636364,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Mur à ossature légère en bois 12.5 / 80 / 12.5mm / h3.0m",
+        "description": null
+      },
+      "en": {
+        "name": null,
+        "description": null
+      },
+      "de": {
+        "name": null,
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "role": "Parement",
+          "thickness_mm": 12.5,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque de plâtre cartonnée"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 10.625,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.6532499999999999,
+          "thermalResistance_m2K_W": 0.05,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 15
+        },
+        {
+          "order": 1,
+          "productId": "78B008CE-2C50-451A-AC99-FD05A16C9ED8",
+          "role": "Montant",
+          "thickness_mm": 80,
+          "width_mm": 60,
+          "spacing_mm": 660,
+          "fiberDirection": "lengthwise",
+          "translations": {
+            "fr": {
+              "description": "Latte de bois 80/60mm [m1]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.5636363636363635,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.6329018181818182,
+          "thermalResistance_m2K_W": 0.6153846153846154,
+          "isSupportStructure": false,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 0.3164509090909091,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
+        },
+        {
+          "order": 2,
+          "productId": "51A334CE-D672-41DF-A382-5B773A529C66",
+          "role": "Isolation (espace vide)",
+          "thickness_mm": 40,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Laine de verre, ρ 22 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "in-lying",
+          "weight_kg_m2": 0.7272727272727273,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.19345454545454546,
+          "thermalResistance_m2K_W": 1,
+          "isSupportStructure": false,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 0.09672727272727273,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
+        },
+        {
+          "order": 3,
+          "productId": "74881DED-DA3E-48B6-9532-CD65A03113B0",
+          "role": "Lattage",
+          "thickness_mm": 40,
+          "width_mm": 80,
+          "spacing_mm": 1500,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Bois équarri 40/80mm [m1]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 1.0453333333333334,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.18565120000000002,
+          "thermalResistance_m2K_W": 0.3076923076923077,
+          "isSupportStructure": false,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 0.09282560000000001,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
+        },
+        {
+          "order": 4,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "role": "Parement",
+          "thickness_mm": 12.5,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque de plâtre cartonnée"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 10.625,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.6532499999999999,
+          "thermalResistance_m2K_W": 0.05,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
+        }
+      ],
+      "typeId": null
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "BauTeilKatalog",
+      "databaseId": "btk",
+      "externalId": "FLEX M1-002-001",
+      "url": null
+    },
+    "_rawTaxo": {},
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": "single_shell"
+  },
+  {
+    "id": "0B52155E-4351-426E-B1BF-65A8D7A66A13",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "partition_wall",
+    "thickness_mm": 52.5,
+    "weight_kg_m2": 11.425,
+    "uValue_W_m2K": 0.7633587786259541,
+    "gwp_kgco2e_m2": 1.86605,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Mur à ossature légère 12.5 / 75 / 12.5mm h 3.0m",
+        "description": null
+      },
+      "en": {
+        "name": null,
+        "description": null
+      },
+      "de": {
+        "name": null,
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "role": "Parement",
+          "thickness_mm": 12.5,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque de plâtre cartonnée"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 10.625,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.6532499999999999,
+          "thermalResistance_m2K_W": 0.05,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
+        },
+        {
+          "order": 1,
+          "productId": "51A334CE-D672-41DF-A382-5B773A529C66",
+          "role": "Isolation (espace vide)",
+          "thickness_mm": 40,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Laine de verre, ρ 22 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0.8,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.21280000000000002,
+          "thermalResistance_m2K_W": 1,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.10640000000000001,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0
+        },
+        {
+          "order": 2,
+          "productId": "08ADBE90-0BAA-435A-949F-A3FF99D7E74B",
+          "role": "Profilé en U",
+          "thickness_mm": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Tôle d'acier, zinguée"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": null,
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0
+        },
+        {
+          "order": 3,
+          "productId": "08ADBE90-0BAA-435A-949F-A3FF99D7E74B",
+          "role": "Profilé en C",
+          "thickness_mm": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Tôle d'acier, zinguée"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": null,
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0
+        }
+      ],
+      "typeId": null
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "BauTeilKatalog",
+      "databaseId": "btk",
+      "externalId": "FLEX M1-001-001",
+      "url": null
+    },
+    "_rawTaxo": {},
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": "single_shell"
+  },
+  {
+    "id": "2A13415F-4237-4307-AC78-BA3F443C8390",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "inner_wall",
+    "thickness_mm": 265,
+    "weight_kg_m2": 614.4777070063694,
+    "uValue_W_m2K": 2.503055958354395,
+    "gwp_kgco2e_m2": 84.38834840764332,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "de": {
+        "name": "Betonwand",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "fiberDirection": null,
+          "thickness_mm": null,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Farbe (pro m2)"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 0,
+          "gwp_kgco2e_m2": 0.0334,
+          "thermalResistance_m2K_W": null,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.0167,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": false
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "fiberDirection": null,
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Gipsputz"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 16.5,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "isSupportStructure": false
+        },
+        {
+          "order": 2,
+          "structure": "on-lying",
+          "productId": "0F6810D3-554D-462C-89DA-B5262851127D",
+          "fiberDirection": null,
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Hochbaubeton"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 597.9777070063694,
+          "gwp_kgco2e_m2": 82.62574840764331,
+          "thermalResistance_m2K_W": 0.10201164362199813,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures",
+          "baseGwp_kgco2e_m2": 82.62574840764331,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false
+        }
+      ]
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Minergie",
+      "databaseId": "minergie",
+      "externalId": null,
+      "url": null
+    },
+    "__sourceFile": "components_custom.json"
+  },
+  {
+    "id": "2DFD6629-938E-4792-B088-B59369B05C67",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "partition_wall",
+    "thickness_mm": 40,
+    "weight_kg_m2": 37.75,
+    "uValue_W_m2K": 2.515723270440252,
+    "gwp_kgco2e_m2": 5.0691,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "de": {
+        "name": "Leichtbauwand",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "fiberDirection": null,
+          "thickness_mm": null,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Farbe (pro m2)"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 0,
+          "gwp_kgco2e_m2": 0.0334,
+          "thermalResistance_m2K_W": null,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.0167,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 30,
+          "time_burning_min": 0
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "fiberDirection": null,
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Gipsputz"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 16.5,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 15
+        },
+        {
+          "order": 2,
+          "structure": "on-lying",
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "fiberDirection": null,
+          "thickness_mm": 25,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Gipskartonplatte Wandverschlag"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 21.25,
+          "gwp_kgco2e_m2": 3.3064999999999998,
+          "thermalResistance_m2K_W": 0.1,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 1.6532499999999999,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
+        }
+      ]
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Minergie",
+      "databaseId": "minergie",
+      "externalId": null,
+      "url": null
+    },
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": ""
+  },
+  {
+    "id": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "partition_wall",
+    "thickness_mm": 40,
+    "weight_kg_m2": 37.75,
+    "uValue_W_m2K": 2.515723270440252,
+    "gwp_kgco2e_m2": 5.0691,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "de": {
+        "name": "Holz-Ständer-Wand",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "fiberDirection": null,
+          "thickness_mm": null,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Farbe (pro m2)"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 0,
+          "gwp_kgco2e_m2": 0.0334,
+          "thermalResistance_m2K_W": null,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.0167,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 30,
+          "time_burning_min": 0
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "fiberDirection": null,
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Gipsputz"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 16.5,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 15
+        },
+        {
+          "order": 2,
+          "structure": "on-lying",
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "fiberDirection": null,
+          "thickness_mm": 25,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": "Gipskartonplatte (Beplankung links)"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 21.25,
+          "gwp_kgco2e_m2": 3.3064999999999998,
+          "thermalResistance_m2K_W": 0.1,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes",
+          "baseGwp_kgco2e_m2": 1.6532499999999999,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
+        }
+      ]
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Minergie",
+      "databaseId": "minergie",
+      "externalId": null,
+      "url": null
+    },
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": ""
+  },
+  {
+    "id": "1A84C3A6-32BB-4009-B08B-C2D4B1B07555",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "inner_wall",
+    "thickness_mm": 150,
+    "weight_kg_m2": 351.3630573248408,
+    "uValue_W_m2K": 2.9915594377487302,
+    "gwp_kgco2e_m2": 41.64366878980892,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Parois en béton apparente d15cm",
+        "description": null
+      },
+      "en": {
+        "name": null,
+        "description": null
+      },
+      "de": {
+        "name": null,
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "1D277C05-5268-4F66-B977-295D5F6F624E",
+          "role": "Maçonnerie",
+          "thickness_mm": 150,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Paroi en béton d=15cm (Fe 60kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 351.3630573248408,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 41.64366878980892,
+          "thermalResistance_m2K_W": 0.07427381966127353,
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures",
+          "baseGwp_kgco2e_m2": 41.64366878980892,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0
+        }
+      ],
+      "typeId": null
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "BauTeilKatalog",
+      "databaseId": "btk",
+      "externalId": "FLEX E6-001-001",
+      "url": null
+    },
+    "_rawTaxo": {},
+    "__sourceFile": "components_custom.json",
+    "subcategoryId": ""
   }
 ]

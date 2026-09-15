@@ -7,6 +7,7 @@ import partitionRatioImageDe from '../assets/illustrations/parameters/partition-
 import partitionRatioImageFr from '../assets/illustrations/parameters/partition-ratio-Minergie_FR.png';
 import partitionRatioImageEn from '../assets/illustrations/parameters/partition-ratio-Minergie_EN.png';
 import partitionRatioImageIt from '../assets/illustrations/parameters/partition-ratio-Minergie_IT.png';
+import { getRequirementCategoryIds } from '../utils/componentTaxonomy';
 
 const FIRE_R_VALUES = ['R0', 'R30', 'R60'];
 const FIRE_EI_VALUES = ['EI0', 'EI30', 'EI60'];
@@ -39,7 +40,7 @@ const optionValue = (item) => String(item?.id ?? item?.value ?? '');
 
 const pickFireValue = (requirements, categoryId, key, scale) => {
   const indexes = requirements
-    .filter((requirement) => requirement.applies_to?.some((target) => target.categoryId === categoryId))
+    .filter((requirement) => getRequirementCategoryIds(requirement).includes(categoryId))
     .map((requirement) => scale.indexOf(requirement.filter?.[key]))
     .filter((index) => index >= 0);
   return indexes.length ? scale[Math.min(...indexes)] : scale[0];
@@ -47,7 +48,7 @@ const pickFireValue = (requirements, categoryId, key, scale) => {
 
 const pickAcousticValue = (requirements, categoryId, key, mode) => {
   const values = requirements
-    .filter((requirement) => requirement.applies_to?.some((target) => target.categoryId === categoryId))
+    .filter((requirement) => getRequirementCategoryIds(requirement).includes(categoryId))
     .map((requirement) => requirement.filter?.[key])
     .filter((value) => value !== null && value !== undefined && value !== '')
     .map(Number)

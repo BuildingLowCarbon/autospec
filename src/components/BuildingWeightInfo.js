@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { getBuildingPart } from './BuildingDiagram';
-import { componentMatchesTaxonomy, getComponentSubcategoryId } from '../utils/componentTaxonomy';
+import { componentMatchesTaxonomy } from '../utils/componentTaxonomy';
 
 const GRAVITY_M_S2 = 9.81;
 
@@ -101,10 +101,9 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
     const roofMassPerArea = massRange(candidatesFor('roof'));
     const floorMassPerArea = massRange(candidatesFor('floors'));
     const outerWallMassPerArea = massRange(candidatesFor('outer_walls'));
-    const partitionCandidates = candidatesFor('partitions');
-    const bearingWallCandidates = partitionCandidates.filter((item) => getComponentSubcategoryId(item) === 'load_bearing');
-    const nonBearingWallCandidates = partitionCandidates.filter((item) => getComponentSubcategoryId(item) !== 'load_bearing');
-    const partitionWallMassPerArea = massRange(partitionCandidates);
+    const bearingWallCandidates = candidatesFor('interior_walls');
+    const nonBearingWallCandidates = candidatesFor('partitions');
+    const partitionWallMassPerArea = massRange(nonBearingWallCandidates);
     const bearingWallMassPerArea = massRange(bearingWallCandidates);
     const nonBearingWallMassPerArea = massRange(nonBearingWallCandidates);
 
@@ -113,7 +112,6 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
     const outerWalls = scaleRange(outerWallMassPerArea, perimeter * floorHeight);
     const partitions = scaleRange(partitionWallMassPerArea, partitionAreaPerFloor);
     const occupancy = { min: occupancyMassPerFloor, max: occupancyMassPerFloor };
-    const storey = addRanges(floor, outerWalls, partitions, occupancy);
 
     const spanDirection = building?.spanDirection === 'length' ? 'length' : 'width';
     const distribution = building?.floorLoadDistribution === 'two_way' ? 'two_way' : 'one_way';
@@ -123,6 +121,8 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
     const bayCount = interiorBearingLines + 1;
     const bayWidth = bayCount > 0 ? spanDimension / bayCount : spanDimension;
     const bearingWallLength = interiorBearingLines * supportLineLength;
+    const interiorWalls = scaleRange(bearingWallMassPerArea, bearingWallLength * floorHeight);
+    const storey = addRanges(floor, outerWalls, interiorWalls, partitions, occupancy);
     const nonBearingPartitionLength = totalPartitionLength;
     const declaredMaxBuildingSpan = Math.max(0, Number(building?.maxBuildingSpan) || 0);
     const loadCalculationSpan = declaredMaxBuildingSpan > 0
@@ -182,6 +182,7 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
       roof,
       floor,
       outerWalls,
+      interiorWalls,
       partitions,
       occupancy,
       storey,
@@ -225,7 +226,8 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
         <summary>Détail d’un étage</summary>
         <div><span>Plancher</span><strong>{formatRange(result.floor)}</strong></div>
         <div><span>Murs extérieurs</span><strong>{formatRange(result.outerWalls)}</strong></div>
-        <div><span>Parois intérieures</span><strong>{formatRange(result.partitions)}</strong></div>
+        <div><span>Parois intérieures</span><strong>{formatRange(result.interiorWalls)}</strong></div>
+        <div><span>Cloisons</span><strong>{formatRange(result.partitions)}</strong></div>
         <div><span>Charge d’occupation équivalente</span><strong>{formatRange(result.occupancy)}</strong></div>
       </details>
 
