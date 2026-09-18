@@ -52,6 +52,24 @@ const DEFAULT_LAYER = (order = 0) => ({
   thermalResistance_m2K_W: null,
 });
 
+const newComponent = () => ({
+  __isNew: true,
+  id: createCustomComponentId(),
+  serialNo: '',
+  categoryId: '',
+  subcategoryId: '',
+  translations: {
+    fr: { name: '', description: '' },
+    de: { name: '', description: '' },
+    it: { name: '', description: '' },
+    en: { name: '', description: '' },
+  },
+  structure: {
+    systemTypeId: null,
+    layers: [DEFAULT_LAYER(0)],
+  },
+});
+
 const getText = (value, fallback = '') => (value === null || value === undefined ? fallback : String(value));
 
 const parseNullableNumber = (value) => {
@@ -114,6 +132,7 @@ const cloneComponent = (component) => {
 
 function Custom() {
   const { id } = useParams();
+  const isCreating = id === 'new';
   const navigate = useNavigate();
   const { lang, setLang } = useContext(LangContext);
   const { user, can, request } = useAuth();
@@ -131,6 +150,7 @@ function Custom() {
   const [organizationId, setOrganizationId] = useState('');
   const canModifyComponent = useMemo(() => {
     if (!component) return false;
+    if (component.__isNew) return true;
     if (!component.__contentId) return can('dashboard');
     if (user?.role === 'admin' || component.__ownerId === user?.id) return true;
     return Boolean(component.__organizationId && organizations.some((organization) => (
@@ -151,8 +171,8 @@ function Custom() {
           request('/api/organizations').catch(() => ({ organizations: [] })),
         ]);
         if (!active) return;
-        let found = allComponents.find((item) => String(item.id) === String(id));
-        if (!found) {
+        let found = isCreating ? newComponent() : allComponents.find((item) => String(item.id) === String(id));
+        if (!found && !isCreating) {
           const directPayload = await request(`/api/content/components/item/${encodeURIComponent(id)}`)
             .catch((error) => (error.status === 404 ? null : Promise.reject(error)));
           found = directPayload?.item || null;
@@ -172,7 +192,7 @@ function Custom() {
     };
     fetchData();
     return () => { active = false; };
-  }, [id, request]);
+  }, [id, isCreating, request]);
 
   const allComponentOptions = useMemo(() => {
     const productOptions = products.map((item) => ({
@@ -430,7 +450,12 @@ function Custom() {
     };
     const sourceFile = component.__sourceFile ?? 'components_custom.json';
     try {
-      if (component.__contentId) {
+      if (component.__isNew) {
+        const saved = await persistUserComponent(payload);
+        setComponent(cloneComponent(saved));
+        navigate(`/custom/${saved.id}`, { replace: true });
+        setStatus('Nouveau composant utilisateur créé dans MongoDB.');
+      } else if (component.__contentId) {
         const saved = await persistUserComponent(payload, component.__contentId);
         setComponent(cloneComponent(saved));
         setStatus('Composant utilisateur enregistré dans MongoDB.');
@@ -506,17 +531,17 @@ function Custom() {
     `Couche ${index + 1}`;
   const pxPerMmY = 1;
   const pxPerMmX = DEFAULT_PX_PER_MM_X;
-  const title = component?.translations?.[lang]?.name || component?.serialNo || component?.id || '';
+  const title = component?.translations?.[lang]?.name || component?.serialNo || (isCreating ? '' : component?.id) || '';
   const description = component?.translations?.[lang]?.description || '';
 
   return (
     <>
       <Header lang={lang} setLang={setLang} />
       <div style={{ padding: '20px' }}>
-        <h2>Custom {t.component_details}</h2>
-        <p>
+        <h2>{isCreating ? 'Créer un composant' : `Custom ${t.component_details}`}</h2>
+        {!isCreating && <p>
           <Link to={`/element/${component.id}`} style={buttonStyle}>Retour a la page element</Link>
-        </p>
+        </p>}
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '18px' }}>
           <label>
@@ -628,8 +653,8 @@ function Custom() {
         </div>
 
         <div style={{ marginBottom: '16px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-          {canModifyComponent && <button type="button" onClick={saveCurrent} style={buttonStyle}>Enregistrer</button>}
-          <button type="button" onClick={createNew} style={buttonStyle}>Dupliquer composant</button>
+          {canModifyComponent && <button type="button" onClick={saveCurrent} style={buttonStyle}>{isCreating ? 'Créer le composant' : 'Enregistrer'}</button>}
+          {!isCreating && <button type="button" onClick={createNew} style={buttonStyle}>Dupliquer composant</button>}
           {status ? <span>{status}</span> : null}
         </div>
 
@@ -1075,7 +1100,9 @@ function Custom() {
                           <td style={{ border: '1px solid #ccc', padding: '8px' }}>Série</td>
                           <td style={{ border: '1px solid #ccc', padding: '8px' }}>{getLayerName(term.layer, index)}</td>
                           <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                            {term.included
+                            {term.isAirLayer
+                              ? 'Rair = 0,180 m²K/W (valeur conventionnelle)'
+                              : term.included
                               ? `R = e / λ = ${formatNumber(term.thickness_m, 3)} / ${formatNumber(term.conductivity_W_mK, 3)}`
                               : 'Non incluse : épaisseur ou conductivité λ manquante'}
                           </td>
@@ -1091,7 +1118,14 @@ function Custom() {
                         <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                           {term.paths.map((path, pathIndex) => (
                             <div key={pathIndex}>
-                              {getLayerName(path.layer, pathIndex)} — f{pathIndex + 1} = {formatNumber(path.fraction, 3)}, R{pathIndex + 1} = {path.resistance_m2K_W === null ? 'N/A' : formatNumber(path.resistance_m2K_W, 3)}
+                              {path.label || getLayerName(path.layer, pathIndex)} — f{pathIndex + 1} = {formatNumber(path.fraction, 3)}, λ{pathIndex + 1} = {path.conductivity_W_mK === null
+                                ? path.isAirLayer ? '— (air)' : 'N/A'
+                                : `${formatNumber(path.conductivity_W_mK, 3)} W/mK`},{' '}
+                              {path.airResistance_m2K_W > 0 && path.materialResistance_m2K_W > 0
+                                ? `R${pathIndex + 1} = Rmat + Rair = ${formatNumber(path.materialResistance_m2K_W, 3)} + ${formatNumber(path.airResistance_m2K_W, 3)} = ${formatNumber(path.resistance_m2K_W, 3)}`
+                                : path.airResistance_m2K_W > 0
+                                  ? `R${pathIndex + 1} = Rair = ${formatNumber(path.airResistance_m2K_W, 3)}`
+                                  : `R${pathIndex + 1} = ${path.resistance_m2K_W === null ? 'N/A' : formatNumber(path.resistance_m2K_W, 3)}`}
                             </div>
                           ))}
                         </td>

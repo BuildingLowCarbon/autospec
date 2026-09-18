@@ -2147,8 +2147,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 504.18,
     "weight_kg_m2": 80.784,
-    "uValue_W_m2K": 0.19526964145367212,
-    "gwp_kgco2e_m2": 10.987634040000001,
+    "uValue_W_m2K": 0.14648826973930817,
+    "gwp_kgco2e_m2": 12.118309040000002,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_one_side",
@@ -2213,8 +2213,8 @@
           "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "ecccId": "",
+          "ecccDescription": ""
         },
         {
           "order": 1,
@@ -2354,15 +2354,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 1.1306749999999999,
+          "gwp_kgco2e_m2": 2.2613499999999997,
           "thermalResistance_m2K_W": 0.19230769230769232,
           "baseGwp_kgco2e_m2": 1.1306749999999999,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "ecccId": "C04.05",
-          "ecccDescription": "Structures porteuses de toitures inclinées"
+          "ecccId": "F01.03",
+          "ecccDescription": "Couverture (Toitures inclinées)"
         },
         {
           "order": 5,
@@ -2394,12 +2394,12 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "ecccId": "C04.05",
-          "ecccDescription": "Structures porteuses de toitures inclinées"
+          "ecccId": "F01.03",
+          "ecccDescription": "Couverture (Toitures inclinées)"
         },
         {
           "order": 6,
@@ -3935,8 +3935,8 @@
     "categoryId": "flat_roof_shed_roof",
     "thickness_mm": 257,
     "weight_kg_m2": 127.406,
-    "uValue_W_m2K": 1.3123536369784043,
-    "gwp_kgco2e_m2": 25.343945000000005,
+    "uValue_W_m2K": 0.6130310435000949,
+    "gwp_kgco2e_m2": 13.781945,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "without_sheathing",
@@ -3973,16 +3973,16 @@
           "productId": "C8904527-DFF9-49E9-A2B9-6A24E2F24E96",
           "translations": {
             "fr": {
+              "name": "argile expansée",
               "description": "Couche d'utilisation et de protection 2"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 2"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Blowing clay",
               "description": "Use and protection layer 2"
+            },
+            "de": {
+              "name": "Blähton",
+              "description": "Nutz- und Schutzschicht 2"
             }
           },
           "productName": "Blähton",
@@ -3994,15 +3994,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "02.004",
-          "gwp_kgco2e_m2": 7.5744,
+          "gwp_kgco2e_m2": 3.7872,
           "thermalResistance_m2K_W": 0.08571428571428572,
           "baseGwp_kgco2e_m2": 3.7872,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -4010,16 +4008,16 @@
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "translations": {
             "fr": {
+              "name": "Couche de protection",
               "description": "Couche d'utilisation et de protection 1"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 1"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Protective layer",
               "description": "Use and protection layer 1"
+            },
+            "de": {
+              "name": "Schutzbahn",
+              "description": "Nutz- und Schutzschicht 1"
             }
           },
           "productName": "Schutzbahn",
@@ -4031,13 +4029,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.007",
-          "gwp_kgco2e_m2": 3.8456,
+          "gwp_kgco2e_m2": 1.9228,
           "thermalResistance_m2K_W": 0.030303030303030304,
           "baseGwp_kgco2e_m2": 1.9228,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4047,16 +4045,16 @@
           "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
           "translations": {
             "fr": {
+              "name": "Géomembrane bitumineuse",
               "description": "Étanchéité"
             },
-            "de": {
-              "description": "Abdichtung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Bituminous geomembrane",
               "description": "Seal"
+            },
+            "de": {
+              "name": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
+              "description": "Abdichtung"
             }
           },
           "productName": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
@@ -4068,13 +4066,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.003",
-          "gwp_kgco2e_m2": 11.704,
+          "gwp_kgco2e_m2": 5.852,
           "thermalResistance_m2K_W": 0.06060606060606061,
           "baseGwp_kgco2e_m2": 5.852,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4084,16 +4082,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "3-couche panneau épicéa",
               "description": "Contreventement au-dessus 2ème couche"
             },
-            "de": {
-              "description": "Beplankung oben 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "3-layer panels",
               "description": "Sheathed above 2nd layer"
+            },
+            "de": {
+              "name": "3-Schichtplatte",
+              "description": "Beplankung oben 2. Schicht"
             }
           },
           "productName": "3-Schichtplatte",
@@ -4108,12 +4106,12 @@
           "gwp_kgco2e_m2": 1.221129,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.221129,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates"
+          "time_fire_start_min": 0,
+          "time_burning_min": 33.75,
+          "ecccId": "F01.02",
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -4121,16 +4119,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Sans interaction",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "no composite action",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Ohne Verbundwirkung",
+              "description": "Verbund"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -4145,12 +4143,12 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates"
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "ecccId": "F01.02",
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -4158,16 +4156,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
+              "description": "Support"
+            },
+            "en": {
+              "name": "Rib/bar",
               "description": "Support"
             },
             "de": {
+              "name": "Rippe/Balken",
               "description": "Träger"
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": "Support"
             }
           },
           "productName": "Rippe/Balken",
@@ -4182,7 +4180,7 @@
           "gwp_kgco2e_m2": 0.998816,
           "thermalResistance_m2K_W": 1.076923076923077,
           "baseGwp_kgco2e_m2": 0.998816,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 0,
@@ -4276,7 +4274,7 @@
     "thickness_mm": 375,
     "weight_kg_m2": 238.36735999999996,
     "uValue_W_m2K": 0.21416254524742886,
-    "gwp_kgco2e_m2": 41.86574476,
+    "gwp_kgco2e_m2": 21.94296328,
     "spanMax_m": null,
     "claddingId": "simple_covering",
     "sheathingId": "without_sheathing",
@@ -4313,16 +4311,16 @@
           "productId": "3C67D5EC-10A1-4B65-93C2-344CE241FFEC",
           "translations": {
             "fr": {
+              "name": "Dallette de jardin",
               "description": "Couche d'utilisation et de protection 3"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 3"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Garden plates",
               "description": "Use and protection layer 3"
+            },
+            "de": {
+              "name": "Gartenplatten",
+              "description": "Nutz- und Schutzschicht 3"
             }
           },
           "productName": "Gartenplatten",
@@ -4334,15 +4332,13 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "02.007",
-          "gwp_kgco2e_m2": 10.0992,
+          "gwp_kgco2e_m2": 5.0496,
           "thermalResistance_m2K_W": 0.02,
           "baseGwp_kgco2e_m2": 5.0496,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -4350,16 +4346,16 @@
           "productId": "3C4E5F39-0AF7-4123-A625-B338EE0C8542",
           "translations": {
             "fr": {
+              "name": "Gravier 8-16mm",
               "description": "Couche d'utilisation et de protection 2"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 2"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Gravel 8-16mm",
               "description": "Use and protection layer 2"
+            },
+            "de": {
+              "name": "Kies 8-16mm",
+              "description": "Nutz- und Schutzschicht 2"
             }
           },
           "productName": "Kies 8-16mm",
@@ -4371,13 +4367,13 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.011",
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 3.0508,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4387,16 +4383,16 @@
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "translations": {
             "fr": {
+              "name": "Couche de protection",
               "description": "Couche d'utilisation et de protection 1"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 1"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Protective layer",
               "description": "Use and protection layer 1"
+            },
+            "de": {
+              "name": "Schutzbahn",
+              "description": "Nutz- und Schutzschicht 1"
             }
           },
           "productName": "Schutzbahn",
@@ -4408,13 +4404,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.007",
-          "gwp_kgco2e_m2": 3.8456,
+          "gwp_kgco2e_m2": 1.9228,
           "thermalResistance_m2K_W": 0.030303030303030304,
           "baseGwp_kgco2e_m2": 1.9228,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4424,16 +4420,16 @@
           "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
           "translations": {
             "fr": {
+              "name": "Géomembrane bitumineuse",
               "description": "Étanchéité"
             },
-            "de": {
-              "description": "Abdichtung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Bituminous geomembrane",
               "description": "Seal"
+            },
+            "de": {
+              "name": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
+              "description": "Abdichtung"
             }
           },
           "productName": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
@@ -4445,13 +4441,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.003",
-          "gwp_kgco2e_m2": 11.704,
+          "gwp_kgco2e_m2": 5.852,
           "thermalResistance_m2K_W": 0.06060606060606061,
           "baseGwp_kgco2e_m2": 5.852,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4461,16 +4457,16 @@
           "productId": "A73EF9F6-F8A9-4E9C-AA9D-1DB3B459270D",
           "translations": {
             "fr": {
+              "name": "Matériau isolant thermique avec une résistance à la compression ≥50kPa selon EN 826",
               "description": "Isolation extérieure 1ère couche"
             },
-            "de": {
-              "description": "Wärmedämmung aussen 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Thermal insulation material with compressive strength ≥50kPa according to EN 826",
               "description": "Exterior insulation layer 1"
+            },
+            "de": {
+              "name": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
+              "description": "Wärmedämmung aussen 1. Schicht"
             }
           },
           "productName": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
@@ -4482,13 +4478,13 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.009",
-          "gwp_kgco2e_m2": 1.9931999999999999,
+          "gwp_kgco2e_m2": 0.9965999999999999,
           "thermalResistance_m2K_W": 1,
           "baseGwp_kgco2e_m2": 0.9965999999999999,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4498,16 +4494,16 @@
           "productId": "D01B3610-596C-4B16-BDB1-B7426D56303E",
           "translations": {
             "fr": {
+              "name": "Barrière perméable à la vapeur",
               "description": "Couche de séparation / étanchéité de chantier"
             },
-            "de": {
-              "description": "Trennschicht/Notdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Vapor-permeable barrier",
               "description": "Separating layer / temporary roof"
+            },
+            "de": {
+              "name": "Bauzeitdichtung",
+              "description": "Trennschicht/Notdach"
             }
           },
           "productName": "Bauzeitdichtung",
@@ -4519,13 +4515,13 @@
           "colorCode": "666666",
           "fiberDirection": null,
           "kbobId": "09.006",
-          "gwp_kgco2e_m2": 2.2359999999999998,
+          "gwp_kgco2e_m2": 1.1179999999999999,
           "thermalResistance_m2K_W": 0.030303030303030304,
           "baseGwp_kgco2e_m2": 1.1179999999999999,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -4535,16 +4531,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "3-couche panneau épicéa",
               "description": "Revêtement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Beplankung oben 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "3-layer panels",
               "description": "Covering below 1st layer"
+            },
+            "de": {
+              "name": "3-Schichtplatte",
+              "description": "Beplankung oben 2. Schicht"
             }
           },
           "productName": "3-Schichtplatte",
@@ -4559,12 +4555,12 @@
           "gwp_kgco2e_m2": 1.221129,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.221129,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates"
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 33.75,
+          "ecccId": "F01.02",
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -4572,16 +4568,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Ohne Verbundwirkung",
+              "description": "Verbund"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -4596,12 +4592,12 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates"
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
+          "ecccId": "F01.02",
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 8,
@@ -4609,16 +4605,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
+              "description": "Support"
+            },
+            "en": {
+              "name": "Rib/bar",
               "description": "Support"
             },
             "de": {
+              "name": "Rippe/Balken",
               "description": "Träger"
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": "Support"
             }
           },
           "productName": "Rippe/Balken",
@@ -4633,7 +4629,7 @@
           "gwp_kgco2e_m2": 0.7990528000000001,
           "thermalResistance_m2K_W": 1.076923076923077,
           "baseGwp_kgco2e_m2": 0.7990528000000001,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
@@ -4647,16 +4643,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
+              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -4668,11 +4664,11 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.008",
-          "gwp_kgco2e_m2": 1.0391449600000002,
+          "gwp_kgco2e_m2": 0.5195724800000001,
           "thermalResistance_m2K_W": 3.8888888888888897,
           "baseGwp_kgco2e_m2": 0.5195724800000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -4684,16 +4680,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -4708,8 +4704,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -4721,16 +4717,16 @@
           "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
           "translations": {
             "fr": {
+              "name": "Pare-vapeur adaptatif à l'humidité",
               "description": "Frein-vapeur"
             },
-            "de": {
-              "description": "Dampfbremse"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Moisture-adaptive vapor barrier",
               "description": "Vapor barrier"
+            },
+            "de": {
+              "name": "Feuchteadaptive Dampfbremse",
+              "description": "Dampfbremse"
             }
           },
           "productName": "Feuchteadaptive Dampfbremse",
@@ -4742,11 +4738,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.002",
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 0.19228,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "baseGwp_kgco2e_m2": 0.19228,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -4758,16 +4754,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "3-couche panneau épicéa",
               "description": "Revêtement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Bekleidung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "3-layer panels",
               "description": "Covering below 1st layer"
+            },
+            "de": {
+              "name": "3-Schichtplatte",
+              "description": "Bekleidung unten 1. Schicht"
             }
           },
           "productName": "3-Schichtplatte",
@@ -4779,15 +4775,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 2.442258,
+          "gwp_kgco2e_m2": 1.221129,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.221129,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 33.75,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -4874,8 +4870,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 446.18,
     "weight_kg_m2": 81.18832,
-    "uValue_W_m2K": 0.14396768886136965,
-    "gwp_kgco2e_m2": 12.05440616,
+    "uValue_W_m2K": 0.13680687220041418,
+    "gwp_kgco2e_m2": 6.54087988,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_one_side",
@@ -4912,16 +4908,16 @@
           "productId": "EFFED874-FA8B-4952-B71F-5FE78F607237",
           "translations": {
             "fr": {
+              "name": "Tuiles (couverture)",
               "description": "Couverture"
             },
-            "de": {
-              "description": "Eindeckung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roof tiles",
               "description": "Roofing"
+            },
+            "de": {
+              "name": "Dachziegel",
+              "description": "Eindeckung"
             }
           },
           "productName": "Dachziegel",
@@ -4933,15 +4929,13 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.174352,
+          "gwp_kgco2e_m2": 2.087176,
           "thermalResistance_m2K_W": 0.047,
           "baseGwp_kgco2e_m2": 2.087176,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -4949,16 +4943,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Lattes 48x48 + volige 48x24mm e=350mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood laths 48x48 + roof laths 48x24mm e=350mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
@@ -4970,11 +4964,11 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 0.50125824,
+          "gwp_kgco2e_m2": 0.25062912,
           "thermalResistance_m2K_W": 0.5538461538461538,
           "baseGwp_kgco2e_m2": 0.25062912,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -4986,16 +4980,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Unterdachbahn",
+              "description": "Unterdach"
             }
           },
           "productName": "Unterdachbahn",
@@ -5007,11 +5001,11 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.0692208,
+          "gwp_kgco2e_m2": 0.0346104,
           "thermalResistance_m2K_W": 0.0005454545454545454,
           "baseGwp_kgco2e_m2": 0.0346104,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -5023,16 +5017,16 @@
           "productId": "A73EF9F6-F8A9-4E9C-AA9D-1DB3B459270D",
           "translations": {
             "fr": {
+              "name": "Matériau isolant thermique avec une résistance à la compression ≥50kPa selon EN 826",
               "description": "Isolation extérieure 1ère couche"
             },
-            "de": {
-              "description": "Wärmedämmung aussen 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Thermal insulation material with compressive strength ≥50kPa according to EN 826",
               "description": "Exterior insulation layer 1"
+            },
+            "de": {
+              "name": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
+              "description": "Wärmedämmung aussen 1. Schicht"
             }
           },
           "productName": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
@@ -5044,11 +5038,11 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.009",
-          "gwp_kgco2e_m2": 1.9931999999999999,
+          "gwp_kgco2e_m2": 0.9965999999999999,
           "thermalResistance_m2K_W": 1,
           "baseGwp_kgco2e_m2": 0.9965999999999999,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -5060,16 +5054,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Ohne Verbundwirkung",
+              "description": "Verbund"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -5084,8 +5078,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -5097,16 +5091,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippe/Balken",
@@ -5121,7 +5115,7 @@
           "gwp_kgco2e_m2": 1.0273535999999999,
           "thermalResistance_m2K_W": 1.846153846153846,
           "baseGwp_kgco2e_m2": 1.0273535999999999,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
@@ -5135,16 +5129,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
+              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -5156,11 +5150,11 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.008",
-          "gwp_kgco2e_m2": 1.8467635199999999,
+          "gwp_kgco2e_m2": 0.9233817599999999,
           "thermalResistance_m2K_W": 6.666666666666667,
           "baseGwp_kgco2e_m2": 0.9233817599999999,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -5172,16 +5166,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -5196,8 +5190,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -5209,16 +5203,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "Panneau à base de bois travaillant ≥ 450 kg/m³",
               "description": "Contreventement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Beplankung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood panel for structural purposes ≥ 450 kg/m³",
               "description": "Lower skin layer 1"
+            },
+            "de": {
+              "name": "Holzwerkstoffplatte für tragende Zwecke ≥ 450 kg/m³",
+              "description": "Beplankung unten 1. Schicht"
             }
           },
           "productName": "Holzwerkstoffplatte für tragende Zwecke ≥ 450 kg/m³",
@@ -5230,15 +5224,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 2.442258,
+          "gwp_kgco2e_m2": 1.221129,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.221129,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 33.75,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -5325,8 +5319,8 @@
     "categoryId": "flat_roof_shed_roof",
     "thickness_mm": 465,
     "weight_kg_m2": 160.04631999999998,
-    "uValue_W_m2K": 0.18849033156083775,
-    "gwp_kgco2e_m2": 34.584793520000005,
+    "uValue_W_m2K": 0.17006063540649147,
+    "gwp_kgco2e_m2": 17.80607356,
     "spanMax_m": null,
     "claddingId": "simple_covering",
     "sheathingId": "without_sheathing",
@@ -5363,16 +5357,16 @@
           "productId": "C8904527-DFF9-49E9-A2B9-6A24E2F24E96",
           "translations": {
             "fr": {
+              "name": "argile expansée",
               "description": "Couche d'utilisation et de protection 2"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 2"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Blowing clay",
               "description": "Use and protection layer 2"
+            },
+            "de": {
+              "name": "Blähton",
+              "description": "Nutz- und Schutzschicht 2"
             }
           },
           "productName": "Blähton",
@@ -5384,15 +5378,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "02.004",
-          "gwp_kgco2e_m2": 7.5744,
+          "gwp_kgco2e_m2": 3.7872,
           "thermalResistance_m2K_W": 0.08571428571428572,
           "baseGwp_kgco2e_m2": 3.7872,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -5400,16 +5392,16 @@
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "translations": {
             "fr": {
+              "name": "Couche de protection",
               "description": "Couche d'utilisation et de protection 1"
             },
-            "de": {
-              "description": "Nutz- und Schutzschicht 1"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Protective layer",
               "description": "Use and protection layer 1"
+            },
+            "de": {
+              "name": "Schutzbahn",
+              "description": "Nutz- und Schutzschicht 1"
             }
           },
           "productName": "Schutzbahn",
@@ -5421,13 +5413,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.007",
-          "gwp_kgco2e_m2": 3.8456,
+          "gwp_kgco2e_m2": 1.9228,
           "thermalResistance_m2K_W": 0.030303030303030304,
           "baseGwp_kgco2e_m2": 1.9228,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5437,16 +5429,16 @@
           "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
           "translations": {
             "fr": {
+              "name": "Géomembrane bitumineuse",
               "description": "Étanchéité"
             },
-            "de": {
-              "description": "Abdichtung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Bituminous geomembrane",
               "description": "Seal"
+            },
+            "de": {
+              "name": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
+              "description": "Abdichtung"
             }
           },
           "productName": "Dichtungsbahn 2-Lagig Polymer-Bitumen-Dichtungsbahnen (PDM)",
@@ -5458,13 +5450,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.003",
-          "gwp_kgco2e_m2": 11.704,
+          "gwp_kgco2e_m2": 5.852,
           "thermalResistance_m2K_W": 0.06060606060606061,
           "baseGwp_kgco2e_m2": 5.852,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 67.5,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5474,16 +5466,16 @@
           "productId": "78B008CE-2C50-451A-AC99-FD05A16C9ED8",
           "translations": {
             "fr": {
+              "name": "Schalung Nadelholz profiliert N+F",
               "description": "Revêtement au-dessus 1ère couche"
             },
-            "de": {
-              "description": "Bekleidung oben 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Schalung Nadelholz profiliert N+F",
               "description": "Covering upside 1st layer"
+            },
+            "de": {
+              "name": "Schalung Nadelholz profiliert N+F",
+              "description": "Bekleidung oben 1. Schicht"
             }
           },
           "productName": "Schalung Nadelholz profiliert N+F",
@@ -5495,13 +5487,13 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.009",
-          "gwp_kgco2e_m2": 2.349648,
+          "gwp_kgco2e_m2": 1.174824,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.174824,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 33.75,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5511,16 +5503,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
+              "name": "Lattes transversales b=60mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood lath transversely b=60mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Holzlatte quer b=60mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Holzlatte quer b=60mm",
@@ -5532,13 +5524,13 @@
           "colorCode": "Transparent",
           "fiberDirection": "quer",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.8354304000000001,
+          "gwp_kgco2e_m2": 0.41771520000000006,
           "thermalResistance_m2K_W": 0.7692307692307693,
           "baseGwp_kgco2e_m2": 0.41771520000000006,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5548,16 +5540,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Unterdachbahn",
+              "description": "Unterdach"
             }
           },
           "productName": "Unterdachbahn",
@@ -5569,13 +5561,13 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 1.9228,
+          "gwp_kgco2e_m2": 0.9614,
           "thermalResistance_m2K_W": 0.015151515151515152,
           "baseGwp_kgco2e_m2": 0.9614,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5585,16 +5577,16 @@
           "productId": "A73EF9F6-F8A9-4E9C-AA9D-1DB3B459270D",
           "translations": {
             "fr": {
+              "name": "Matériau isolant thermique avec une résistance à la compression ≥50kPa selon EN 826",
               "description": "Contreventement au-dessus 2ème couche"
             },
-            "de": {
-              "description": "Beplankung oben 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Thermal insulation material with compressive strength ≥50kPa according to EN 826",
               "description": "Sheathed above 2nd layer"
+            },
+            "de": {
+              "name": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
+              "description": "Beplankung oben 2. Schicht"
             }
           },
           "productName": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
@@ -5606,13 +5598,13 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.009",
-          "gwp_kgco2e_m2": 1.1627,
+          "gwp_kgco2e_m2": 0.58135,
           "thermalResistance_m2K_W": 0.5833333333333334,
           "baseGwp_kgco2e_m2": 0.58135,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5622,16 +5614,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Ohne Verbundwirkung",
+              "description": "Verbund"
             }
           },
           "productName": "Ohne Verbundwirkung",
@@ -5646,10 +5638,10 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 33.75,
+          "time_burning_min": 0,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates"
         },
@@ -5659,16 +5651,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
+              "description": "Support"
+            },
+            "en": {
+              "name": "Rib/bar",
               "description": "Support"
             },
             "de": {
+              "name": "Rippe/Balken",
               "description": "Träger"
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": "Support"
             }
           },
           "productName": "Rippe/Balken",
@@ -5683,7 +5675,7 @@
           "gwp_kgco2e_m2": 1.0273535999999999,
           "thermalResistance_m2K_W": 1.3846153846153846,
           "baseGwp_kgco2e_m2": 1.0273535999999999,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
@@ -5697,16 +5689,16 @@
           "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
           "translations": {
             "fr": {
+              "name": "Isolant fibreux avec 5≤ r ≤50 [kPa*s/m²]",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Fiber insulation with 5≤ r ≤50 [kPa * s/m]",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "Faserdämmstoff mit 5≤ r ≤50 [kPa*s/m²]",
@@ -5718,16 +5710,15 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.008",
-          "gwp_kgco2e_m2": 1.33604352,
+          "gwp_kgco2e_m2": 0.66802176,
           "thermalResistance_m2K_W": 5,
           "baseGwp_kgco2e_m2": 0.66802176,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
-          "ecccDescription": "Supports pour faux-plafonds",
-          "protectsSupportSidesFromFire": true
+          "ecccDescription": "Supports pour faux-plafonds"
         },
         {
           "order": 10,
@@ -5735,16 +5726,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -5759,8 +5750,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -5772,16 +5763,16 @@
           "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
           "translations": {
             "fr": {
+              "name": "Pare-vapeur adaptatif à l'humidité",
               "description": "Frein-vapeur"
             },
-            "de": {
-              "description": "Dampfbremse"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Moisture-adaptive vapor barrier",
               "description": "Vapor barrier"
+            },
+            "de": {
+              "name": "Feuchteadaptive Dampfbremse",
+              "description": "Dampfbremse"
             }
           },
           "productName": "Feuchteadaptive Dampfbremse",
@@ -5793,11 +5784,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.002",
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 0.19228,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "baseGwp_kgco2e_m2": 0.19228,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 33.75,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -5809,16 +5800,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "3-couche panneau épicéa",
               "description": "Revêtement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Bekleidung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "3-layer panels",
               "description": "Covering below 1st layer"
+            },
+            "de": {
+              "name": "3-Schichtplatte",
+              "description": "Bekleidung unten 1. Schicht"
             }
           },
           "productName": "3-Schichtplatte",
@@ -5830,15 +5821,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 2.442258,
+          "gwp_kgco2e_m2": 1.221129,
           "thermalResistance_m2K_W": 0.20769230769230768,
           "baseGwp_kgco2e_m2": 1.221129,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 33.75,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -7416,8 +7407,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 397.43,
     "weight_kg_m2": 105.97920000000002,
-    "uValue_W_m2K": 0.20726693052054762,
-    "gwp_kgco2e_m2": 11.767252240000001,
+    "uValue_W_m2K": 0.19274256225875838,
+    "gwp_kgco2e_m2": 8.680262720000002,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_both_sides",
@@ -7454,16 +7445,16 @@
           "productId": "EFFED874-FA8B-4952-B71F-5FE78F607237",
           "translations": {
             "fr": {
+              "name": "Tuiles (couverture)",
               "description": "Couverture"
             },
-            "de": {
-              "description": "Eindeckung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roof tiles",
               "description": "Roofing"
+            },
+            "de": {
+              "name": "Dachziegel",
+              "description": "Eindeckung"
             }
           },
           "productName": "Dachziegel",
@@ -7475,15 +7466,13 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.4408,
+          "gwp_kgco2e_m2": 2.2204,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 2.2204,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -7491,16 +7480,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Lattes 48x48 + volige 48x24mm e=350mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood laths 48x48 + roof laths 48x24mm e=350mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
@@ -7512,11 +7501,11 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 0.50125824,
+          "gwp_kgco2e_m2": 0.25062912,
           "thermalResistance_m2K_W": 0.5538461538461538,
           "baseGwp_kgco2e_m2": 0.25062912,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -7528,16 +7517,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Unterdachbahn",
+              "description": "Unterdach"
             }
           },
           "productName": "Unterdachbahn",
@@ -7549,11 +7538,11 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.0692208,
+          "gwp_kgco2e_m2": 0.0346104,
           "thermalResistance_m2K_W": 0.0005454545454545454,
           "baseGwp_kgco2e_m2": 0.0346104,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -7565,16 +7554,16 @@
           "productId": "A73EF9F6-F8A9-4E9C-AA9D-1DB3B459270D",
           "translations": {
             "fr": {
+              "name": "Matériau isolant thermique avec une résistance à la compression ≥50kPa selon EN 826",
               "description": "Couche support"
             },
-            "de": {
-              "description": "Tragschicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Thermal insulation material with compressive strength ≥50kPa according to EN 826",
               "description": "Sub-floor"
+            },
+            "de": {
+              "name": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
+              "description": "Tragschicht"
             }
           },
           "productName": "Wärmedämmstoff mit Druckfestigkeit ≥50kPa nach EN 826",
@@ -7586,11 +7575,11 @@
           "colorCode": "F5F5F5",
           "fiberDirection": null,
           "kbobId": "10.009",
-          "gwp_kgco2e_m2": 1.1627,
+          "gwp_kgco2e_m2": 0.58135,
           "thermalResistance_m2K_W": 0.5833333333333334,
           "baseGwp_kgco2e_m2": 0.58135,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -7602,16 +7591,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -7626,8 +7615,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -7639,16 +7628,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippe/Balken",
@@ -7663,7 +7652,7 @@
           "gwp_kgco2e_m2": 0.9132032000000001,
           "thermalResistance_m2K_W": 1.2307692307692308,
           "baseGwp_kgco2e_m2": 0.9132032000000001,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 100,
           "time_burning_min": 0,
@@ -7677,16 +7666,16 @@
           "productId": "7FB97B2F-37AF-45A4-B9EA-EC451EC84D17",
           "translations": {
             "fr": {
+              "name": "Cellulose: Loose; pas surveillé",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Cellulose: Loose; not monitored",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "Zelluloseflocken",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "Zelluloseflocken",
@@ -7701,12 +7690,12 @@
           "gwp_kgco2e_m2": 1.15104,
           "thermalResistance_m2K_W": 4.2105263157894735,
           "baseGwp_kgco2e_m2": 1.15104,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 100,
           "time_burning_min": 0,
-          "ecccId": "C04.05",
-          "ecccDescription": "Structures porteuses de toitures inclinées"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         },
         {
           "order": 7,
@@ -7714,16 +7703,16 @@
           "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
           "translations": {
             "fr": {
+              "name": "Vapeur de polyéthylène formant barrière (PE)",
               "description": "Contreventement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Beplankung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Vapor barrier polyethylene (PE)",
               "description": "Lower skin layer 1"
+            },
+            "de": {
+              "name": "Dampfbremse Polyethylen (PE)",
+              "description": "Beplankung unten 1. Schicht"
             }
           },
           "productName": "Dampfbremse Polyethylen (PE)",
@@ -7738,12 +7727,12 @@
           "gwp_kgco2e_m2": 0.04807,
           "thermalResistance_m2K_W": 0.0007575757575757576,
           "baseGwp_kgco2e_m2": 0.04807,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 100,
           "time_burning_min": 0,
-          "ecccId": "C04.05",
-          "ecccDescription": "Structures porteuses de toitures inclinées"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         },
         {
           "order": 8,
@@ -7751,16 +7740,16 @@
           "productId": "127DA73A-1668-40D9-AC79-82DAB7388106",
           "translations": {
             "fr": {
+              "name": "Panneau massif Bresta",
               "description": "Contreventement au-dessous 2ème couche"
             },
-            "de": {
-              "description": "Beplankung unten 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Bresta Solid timber panel",
               "description": "Lower skin 2nd layer"
+            },
+            "de": {
+              "name": "Bresta Massivholzplatte",
+              "description": "Beplankung unten 2. Schicht"
             }
           },
           "productName": "Bresta Massivholzplatte",
@@ -7775,12 +7764,12 @@
           "gwp_kgco2e_m2": 3.4809600000000005,
           "thermalResistance_m2K_W": 0.6153846153846154,
           "baseGwp_kgco2e_m2": 3.4809600000000005,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 100,
-          "ecccId": "C04.05",
-          "ecccDescription": "Structures porteuses de toitures inclinées"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "bresta_solid_timber_system_planked_on_one_side"
@@ -7868,7 +7857,7 @@
     "thickness_mm": 465.5,
     "weight_kg_m2": 174.10860696517415,
     "uValue_W_m2K": 0.1610056566430891,
-    "gwp_kgco2e_m2": 21.040868298507462,
+    "gwp_kgco2e_m2": 19.59360429850746,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_left_rightside",
@@ -8149,15 +8138,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 2.8945279999999998,
+          "gwp_kgco2e_m2": 1.4472639999999999,
           "thermalResistance_m2K_W": 0.24615384615384614,
           "baseGwp_kgco2e_m2": 1.4472639999999999,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 40,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "C04.04",
+          "ecccDescription": "Structures porteuses de toitures plates"
         }
       ],
       "systemTypeId": "ribs"
@@ -8966,8 +8955,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 345.48,
     "weight_kg_m2": 74.34040010000001,
-    "uValue_W_m2K": 0.20112741731242362,
-    "gwp_kgco2e_m2": 10.2795318818,
+    "uValue_W_m2K": 0.18582413635374737,
+    "gwp_kgco2e_m2": 5.5678299409,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_one_side",
@@ -9004,16 +8993,16 @@
           "productId": "EFFED874-FA8B-4952-B71F-5FE78F607237",
           "translations": {
             "fr": {
+              "name": "Tuiles (couverture)",
               "description": "Couverture"
             },
-            "de": {
-              "description": "Eindeckung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roof tiles",
               "description": "Roofing"
+            },
+            "de": {
+              "name": "Dachziegel",
+              "description": "Eindeckung"
             }
           },
           "productName": "Dachziegel",
@@ -9025,15 +9014,13 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.4408,
+          "gwp_kgco2e_m2": 2.2204,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 2.2204,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -9041,16 +9028,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Lattes 48x48 + volige 48x24mm e=350mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood laths 48x48 + roof laths 48x24mm e=350mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
@@ -9062,11 +9049,11 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 0.50125824,
+          "gwp_kgco2e_m2": 0.25062912,
           "thermalResistance_m2K_W": 0.5538461538461538,
           "baseGwp_kgco2e_m2": 0.25062912,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9078,16 +9065,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Integra ZUB",
+              "description": "Unterdach"
             }
           },
           "productName": "Integra ZUB",
@@ -9099,11 +9086,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.0692208,
+          "gwp_kgco2e_m2": 0.0346104,
           "thermalResistance_m2K_W": 0.0005454545454545454,
           "baseGwp_kgco2e_m2": 0.0346104,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9115,16 +9102,16 @@
           "productId": "95FBA1D6-5D43-4E4D-94D9-3C21445162E9",
           "translations": {
             "fr": {
+              "name": "Isorigid",
               "description": "Couche support"
             },
-            "de": {
-              "description": "Tragschicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Isorigid",
               "description": "Sub-floor"
+            },
+            "de": {
+              "name": "Isorigid",
+              "description": "Tragschicht"
             }
           },
           "productName": "Isorigid",
@@ -9136,11 +9123,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 1.9152,
+          "gwp_kgco2e_m2": 0.9576,
           "thermalResistance_m2K_W": 1.6666666666666667,
           "baseGwp_kgco2e_m2": 0.9576,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9152,16 +9139,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -9176,8 +9163,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9189,16 +9176,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippe/Balken",
@@ -9213,7 +9200,7 @@
           "gwp_kgco2e_m2": 0.8561279999999999,
           "thermalResistance_m2K_W": 0.923076923076923,
           "baseGwp_kgco2e_m2": 0.8561279999999999,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 16.25,
           "time_burning_min": 0,
@@ -9227,16 +9214,16 @@
           "productId": "B7EB2788-B004-4D3F-9497-D3AF4853C381",
           "translations": {
             "fr": {
+              "name": "ISOVER PB M 030",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "ISOVER PB M 030",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "ISOVER PB M 030",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "ISOVER PB M 030",
@@ -9248,11 +9235,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 1.0188864,
+          "gwp_kgco2e_m2": 0.5094432,
           "thermalResistance_m2K_W": 4,
           "baseGwp_kgco2e_m2": 0.5094432,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 16.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9264,16 +9251,16 @@
           "productId": "4AE45776-9018-466D-ACF4-9433F4948916",
           "translations": {
             "fr": {
+              "name": "Vario Xtra",
               "description": "Frein-vapeur"
             },
-            "de": {
-              "description": "Dampfbremse"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Vario Xtra",
               "description": "Vapor barrier"
+            },
+            "de": {
+              "name": "Vario Xtra",
+              "description": "Dampfbremse"
             }
           },
           "productName": "Vario Xtra",
@@ -9285,11 +9272,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.002",
-          "gwp_kgco2e_m2": 0.033440041799999994,
+          "gwp_kgco2e_m2": 0.016720020899999997,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "baseGwp_kgco2e_m2": 0.016720020899999997,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 16.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9301,16 +9288,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
+              "name": "Lattes b=60mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood lath b=60mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Holzlatte b=60mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Holzlatte b=60mm",
@@ -9322,11 +9309,11 @@
           "colorCode": "Transparent",
           "fiberDirection": "lengthwise",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.3132864,
+          "gwp_kgco2e_m2": 0.1566432,
           "thermalResistance_m2K_W": 0.23076923076923075,
           "baseGwp_kgco2e_m2": 0.1566432,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 16.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9338,16 +9325,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Arrondi, profil ASR nr. 26",
               "description": "Surface en-dessous"
             },
-            "de": {
-              "description": "Oberfläche unten"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Round profile paneling / Softline, VSH profile no. 26",
               "description": "Surface below"
+            },
+            "de": {
+              "name": "Rundprofiltäfer / Softline, VSH-Profil Nr. 26",
+              "description": "Oberfläche unten"
             }
           },
           "productName": "Rundprofiltäfer / Softline, VSH-Profil Nr. 26",
@@ -9359,15 +9346,15 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 1.131312,
+          "gwp_kgco2e_m2": 0.565656,
           "thermalResistance_m2K_W": 0.09999999999999999,
           "baseGwp_kgco2e_m2": 0.565656,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 16.25,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -9454,8 +9441,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 344.98,
     "weight_kg_m2": 78.5954001,
-    "uValue_W_m2K": 0.20317057597339394,
-    "gwp_kgco2e_m2": 10.801469881800001,
+    "uValue_W_m2K": 0.18756685883129287,
+    "gwp_kgco2e_m2": 5.8287989409000005,
     "spanMax_m": null,
     "claddingId": "simple_covering",
     "sheathingId": "sheathed_on_one_side",
@@ -9492,16 +9479,16 @@
           "productId": "EFFED874-FA8B-4952-B71F-5FE78F607237",
           "translations": {
             "fr": {
+              "name": "Tuiles (couverture)",
               "description": "Couverture"
             },
-            "de": {
-              "description": "Eindeckung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roof tiles",
               "description": "Roofing"
+            },
+            "de": {
+              "name": "Dachziegel",
+              "description": "Eindeckung"
             }
           },
           "productName": "Dachziegel",
@@ -9513,15 +9500,13 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.4408,
+          "gwp_kgco2e_m2": 2.2204,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 2.2204,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -9529,16 +9514,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Lattes 48x48 + volige 48x24mm e=350mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood laths 48x48 + roof laths 48x24mm e=350mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
@@ -9550,11 +9535,11 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 0.50125824,
+          "gwp_kgco2e_m2": 0.25062912,
           "thermalResistance_m2K_W": 0.5538461538461538,
           "baseGwp_kgco2e_m2": 0.25062912,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9566,16 +9551,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Integra ZUB",
+              "description": "Unterdach"
             }
           },
           "productName": "Integra ZUB",
@@ -9587,11 +9572,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.0692208,
+          "gwp_kgco2e_m2": 0.0346104,
           "thermalResistance_m2K_W": 0.0005454545454545454,
           "baseGwp_kgco2e_m2": 0.0346104,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9603,16 +9588,16 @@
           "productId": "95FBA1D6-5D43-4E4D-94D9-3C21445162E9",
           "translations": {
             "fr": {
+              "name": "Isorigid",
               "description": "Couche support"
             },
-            "de": {
-              "description": "Tragschicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Isorigid",
               "description": "Sub-floor"
+            },
+            "de": {
+              "name": "Isorigid",
+              "description": "Tragschicht"
             }
           },
           "productName": "Isorigid",
@@ -9624,11 +9609,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 1.9152,
+          "gwp_kgco2e_m2": 0.9576,
           "thermalResistance_m2K_W": 1.6666666666666667,
           "baseGwp_kgco2e_m2": 0.9576,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9640,16 +9625,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -9664,8 +9649,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -9677,16 +9662,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippe/Balken",
@@ -9701,7 +9686,7 @@
           "gwp_kgco2e_m2": 0.8561279999999999,
           "thermalResistance_m2K_W": 0.923076923076923,
           "baseGwp_kgco2e_m2": 0.8561279999999999,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -9715,16 +9700,16 @@
           "productId": "B7EB2788-B004-4D3F-9497-D3AF4853C381",
           "translations": {
             "fr": {
+              "name": "ISOVER PB M 030",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "ISOVER PB M 030",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "ISOVER PB M 030",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "ISOVER PB M 030",
@@ -9736,11 +9721,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 1.0188864,
+          "gwp_kgco2e_m2": 0.5094432,
           "thermalResistance_m2K_W": 4,
           "baseGwp_kgco2e_m2": 0.5094432,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9752,16 +9737,16 @@
           "productId": "4AE45776-9018-466D-ACF4-9433F4948916",
           "translations": {
             "fr": {
+              "name": "Vario Xtra",
               "description": "Frein-vapeur"
             },
-            "de": {
-              "description": "Dampfbremse"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Vario Xtra",
               "description": "Vapor barrier"
+            },
+            "de": {
+              "name": "Vario Xtra",
+              "description": "Dampfbremse"
             }
           },
           "productName": "Vario Xtra",
@@ -9773,11 +9758,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.002",
-          "gwp_kgco2e_m2": 0.033440041799999994,
+          "gwp_kgco2e_m2": 0.016720020899999997,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "baseGwp_kgco2e_m2": 0.016720020899999997,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9789,16 +9774,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
+              "name": "Lattes b=60mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood lath b=60mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Holzlatte b=60mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Holzlatte b=60mm",
@@ -9810,11 +9795,11 @@
           "colorCode": "Transparent",
           "fiberDirection": "lengthwise",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.3132864,
+          "gwp_kgco2e_m2": 0.1566432,
           "thermalResistance_m2K_W": 0.23076923076923075,
           "baseGwp_kgco2e_m2": 0.1566432,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -9826,16 +9811,16 @@
           "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
           "translations": {
             "fr": {
+              "name": "Plaque de plâtre type A",
               "description": "Revêtement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Bekleidung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Plasterboard type A",
               "description": "Covering below 1st layer"
+            },
+            "de": {
+              "name": "Gipsplatte Typ A",
+              "description": "Bekleidung unten 1. Schicht"
             }
           },
           "productName": "Gipsplatte Typ A",
@@ -9847,11 +9832,11 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.008",
-          "gwp_kgco2e_m2": 1.6532499999999999,
+          "gwp_kgco2e_m2": 0.8266249999999999,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 0.8266249999999999,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G04.02",
@@ -10687,9 +10672,9 @@
     "serialNo": "E0231",
     "categoryId": "steep_roof",
     "thickness_mm": 542.6800000000001,
-    "weight_kg_m2": 85.96276000000002,
-    "uValue_W_m2K": 0.16215295672275912,
-    "gwp_kgco2e_m2": 13.255933200000001,
+    "weight_kg_m2": 176.51476000000002,
+    "uValue_W_m2K": 0.12479930394068472,
+    "gwp_kgco2e_m2": 14.9324082,
     "spanMax_m": null,
     "claddingId": "double_covering",
     "sheathingId": "without_sheathing",
@@ -10726,16 +10711,16 @@
           "productId": "EFFED874-FA8B-4952-B71F-5FE78F607237",
           "translations": {
             "fr": {
+              "name": "Tuiles (couverture)",
               "description": "Couverture"
             },
-            "de": {
-              "description": "Eindeckung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roof tiles",
               "description": "Roofing"
+            },
+            "de": {
+              "name": "Dachziegel",
+              "description": "Eindeckung"
             }
           },
           "productName": "Dachziegel",
@@ -10747,15 +10732,13 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.4408,
+          "gwp_kgco2e_m2": 2.2204,
           "thermalResistance_m2K_W": 0.05,
           "baseGwp_kgco2e_m2": 2.2204,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -10763,16 +10746,16 @@
           "productId": "91ECFF62-7C76-4043-8029-66D2A632D892",
           "translations": {
             "fr": {
+              "name": "Lattes 48x48 + volige 48x24mm e=350mm",
               "description": "Lattes / profils"
             },
-            "de": {
-              "description": "Lattung / Profile"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood laths 48x48 + roof laths 48x24mm e=350mm",
               "description": "Battens / profiles"
+            },
+            "de": {
+              "name": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
+              "description": "Lattung / Profile"
             }
           },
           "productName": "Konterlatte 48x48mm + Dachlattung 48x24mm e=350mm",
@@ -10784,11 +10767,11 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "07.009.01",
-          "gwp_kgco2e_m2": 0.50125824,
+          "gwp_kgco2e_m2": 0.25062912,
           "thermalResistance_m2K_W": 0.5538461538461538,
           "baseGwp_kgco2e_m2": 0.25062912,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -10800,16 +10783,16 @@
           "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
           "translations": {
             "fr": {
+              "name": "Membrane de sous couverture",
               "description": "Sous-toiture"
             },
-            "de": {
-              "description": "Unterdach"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Roofing underlay",
               "description": "Under the roof"
+            },
+            "de": {
+              "name": "Integra ZUB",
+              "description": "Unterdach"
             }
           },
           "productName": "Integra ZUB",
@@ -10821,11 +10804,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.0692208,
+          "gwp_kgco2e_m2": 0.0346104,
           "thermalResistance_m2K_W": 0.0005454545454545454,
           "baseGwp_kgco2e_m2": 0.0346104,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -10837,16 +10820,16 @@
           "productId": "95FBA1D6-5D43-4E4D-94D9-3C21445162E9",
           "translations": {
             "fr": {
+              "name": "Isorigid",
               "description": "Isolation extérieure 2ème couche"
             },
-            "de": {
-              "description": "Wärmedämmung aussen 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Isorigid",
               "description": "Exterior insulation layer 2"
+            },
+            "de": {
+              "name": "Isorigid",
+              "description": "Wärmedämmung aussen 2. Schicht"
             }
           },
           "productName": "Isorigid",
@@ -10858,11 +10841,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 1.9152,
+          "gwp_kgco2e_m2": 0.9576,
           "thermalResistance_m2K_W": 1.6666666666666667,
           "baseGwp_kgco2e_m2": 0.9576,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -10874,16 +10857,16 @@
           "productId": "B7EB2788-B004-4D3F-9497-D3AF4853C381",
           "translations": {
             "fr": {
+              "name": "ISOVER PB M 030",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Wärmedämmung aussen 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "ISOVER PB M 030",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "ISOVER PB M 030",
+              "description": "Wärmedämmung aussen 1. Schicht"
             }
           },
           "productName": "ISOVER PB M 030",
@@ -10895,11 +10878,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 0.60648,
+          "gwp_kgco2e_m2": 0.30324,
           "thermalResistance_m2K_W": 2,
           "baseGwp_kgco2e_m2": 0.30324,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -10911,16 +10894,16 @@
           "productId": null,
           "translations": {
             "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "de": {
-              "description": "Verbund"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Stiff, execution of the prior art.",
               "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -10935,8 +10918,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "F01.03",
@@ -10948,16 +10931,16 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippe/Balken",
@@ -10972,9 +10955,9 @@
           "gwp_kgco2e_m2": 0.12841919999999998,
           "thermalResistance_m2K_W": 0.4615384615384615,
           "baseGwp_kgco2e_m2": 0.12841919999999998,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
-          "time_fire_start_min": 25,
+          "time_fire_start_min": 300,
           "time_burning_min": 0,
           "isSupportStructure": true,
           "ecccId": "C04.05",
@@ -10986,16 +10969,16 @@
           "productId": "B7EB2788-B004-4D3F-9497-D3AF4853C381",
           "translations": {
             "fr": {
+              "name": "ISOVER PB M 030",
               "description": "Amortissement de la cavité"
             },
-            "de": {
-              "description": "Hohlraumbedämpfung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "ISOVER PB M 030",
               "description": "Cavity dampening"
+            },
+            "de": {
+              "name": "ISOVER PB M 030",
+              "description": "Hohlraumbedämpfung"
             }
           },
           "productName": "ISOVER PB M 030",
@@ -11007,12 +10990,12 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 0.57736896,
+          "gwp_kgco2e_m2": 0.28868448,
           "thermalResistance_m2K_W": 2,
           "baseGwp_kgco2e_m2": 0.28868448,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 25,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 300,
           "time_burning_min": 0,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds"
@@ -11023,16 +11006,16 @@
           "productId": "73094705-8EBE-49C3-A3AC-904ADA19FEC5",
           "translations": {
             "fr": {
+              "name": "Vario KM Supraplex-SKS",
               "description": "Frein-vapeur"
             },
-            "de": {
-              "description": "Dampfbremse"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Vario KM Supraplex-SKS",
               "description": "Vapor barrier"
+            },
+            "de": {
+              "name": "Vario KM Supraplex-SKS",
+              "description": "Dampfbremse"
             }
           },
           "productName": "Vario KM Supraplex-SKS",
@@ -11044,12 +11027,12 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.002",
-          "gwp_kgco2e_m2": 0.06897,
+          "gwp_kgco2e_m2": 0.034485,
           "thermalResistance_m2K_W": 0.0015151515151515152,
           "baseGwp_kgco2e_m2": 0.034485,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 25,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 300,
           "time_burning_min": 0,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds"
@@ -11060,16 +11043,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "Panneau à base de bois travaillant ≥ 450 kg/m³",
               "description": "Revêtement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Bekleidung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Wood panel for structural purposes ≥ 450 kg/m³",
               "description": "Covering below 1st layer"
+            },
+            "de": {
+              "name": "Holzwerkstoffplatte für tragende Zwecke ≥ 450 kg/m³",
+              "description": "Bekleidung unten 1. Schicht"
             }
           },
           "productName": "Holzwerkstoffplatte für tragende Zwecke ≥ 450 kg/m³",
@@ -11081,12 +11064,12 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 1.80908,
+          "gwp_kgco2e_m2": 0.90454,
           "thermalResistance_m2K_W": 0.15384615384615385,
           "baseGwp_kgco2e_m2": 0.90454,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 275,
           "time_burning_min": 25,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds"
@@ -11097,34 +11080,34 @@
           "productId": "B3C5DBA6-6641-4D75-99AC-9AED033E488F",
           "translations": {
             "fr": {
+              "name": "Nervures/solives",
               "description": "Revêtement au-dessous 2ème couche"
             },
-            "de": {
-              "description": "Bekleidung unten 2. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Rib/bar",
               "description": "Covering below 2nd layer"
+            },
+            "de": {
+              "name": "Rippe/Balken",
+              "description": "Bekleidung unten 2. Schicht"
             }
           },
           "productName": "Rippe/Balken",
           "thickness_mm": 220,
-          "weight_kg_m2": 17.248,
-          "width_mm": 100,
-          "spacing_mm": 625,
+          "weight_kg_m2": 107.8,
+          "width_mm": null,
+          "spacing_mm": null,
           "reactionToFire": "RF3",
           "colorCode": "Transparent",
           "fiberDirection": "lengthwise",
           "kbobId": "07.003.01",
-          "gwp_kgco2e_m2": 3.139136,
+          "gwp_kgco2e_m2": 9.8098,
           "thermalResistance_m2K_W": 1.6923076923076923,
-          "baseGwp_kgco2e_m2": 1.569568,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "baseGwp_kgco2e_m2": 9.8098,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
-          "time_burning_min": 0,
+          "time_burning_min": 275,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds"
         }
@@ -22539,8 +22522,8 @@
     "categoryId": "floor_assembly",
     "thickness_mm": 299,
     "weight_kg_m2": 160.0963184079602,
-    "uValue_W_m2K": 0.5431521667022476,
-    "gwp_kgco2e_m2": 18.029441074626867,
+    "uValue_W_m2K": 0.35064734895191124,
+    "gwp_kgco2e_m2": 11.050963074626866,
     "spanMax_m": 4.699126190284514,
     "claddingId": "without_covering",
     "sheathingId": "single_sheathed",
@@ -22577,16 +22560,16 @@
           "productId": "D8BC6147-E915-456C-A32D-31B11DE11421",
           "translations": {
             "fr": {
+              "name": "Chape ciment",
               "description": "Couche posée dessus"
             },
-            "de": {
-              "description": "Auflage"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Cement screed",
               "description": "On-lying material"
+            },
+            "de": {
+              "name": "Zementestrich",
+              "description": "Auflage"
             }
           },
           "productName": "Zementestrich",
@@ -22598,15 +22581,13 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "04.006",
-          "gwp_kgco2e_m2": 9.731,
+          "gwp_kgco2e_m2": 4.8655,
           "thermalResistance_m2K_W": 0.03571428571428572,
           "baseGwp_kgco2e_m2": 4.8655,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -22614,16 +22595,16 @@
           "productId": "2793A0E0-D256-43D8-B6A3-481637852581",
           "translations": {
             "fr": {
+              "name": "Akustic EP1",
               "description": "Isolement aux bruits de choc"
             },
-            "de": {
-              "description": "Trittschalldämmung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Akustic EP1",
               "description": "Impact sound insulation"
+            },
+            "de": {
+              "name": "Akustic EP1",
+              "description": "Trittschalldämmung"
             }
           },
           "productName": "Akustic EP1",
@@ -22635,11 +22616,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 0.6982500000000001,
+          "gwp_kgco2e_m2": 0.3491250000000001,
           "thermalResistance_m2K_W": 1,
           "baseGwp_kgco2e_m2": 0.3491250000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "G02.01",
@@ -22651,16 +22632,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
+              "name": "Lignotrend Ligno Dalle R Q3",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Ribs Lignotrend Q3",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippen Lignotrend Q3",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippen Lignotrend Q3",
@@ -22675,7 +22656,7 @@
           "gwp_kgco2e_m2": 4.072485074626867,
           "thermalResistance_m2K_W": 1.346153846153846,
           "baseGwp_kgco2e_m2": 4.072485074626867,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 48.75,
           "time_burning_min": 0,
@@ -22689,16 +22670,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "Plaque inférieure  Ligno HBF 40mm (20+20mm)",
               "description": "Contreventement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Beplankung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Unifying panel on the underside HBF 40mm (20+20mm)",
               "description": "Lower skin layer 1"
+            },
+            "de": {
+              "name": "Gurtplatte unten zu Ligno Q3 (20+20mm)",
+              "description": "Beplankung unten 1. Schicht"
             }
           },
           "productName": "Gurtplatte unten zu Ligno Q3 (20+20mm)",
@@ -22710,11 +22691,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 3.527706,
+          "gwp_kgco2e_m2": 1.763853,
           "thermalResistance_m2K_W": 0.3,
           "baseGwp_kgco2e_m2": 1.763853,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 48.75,
           "ecccId": "G04.01",
@@ -22732,15 +22713,10 @@
           "b_mm": 71.66666666666667,
           "h_mm": 175,
           "spacing_mm": 134,
-          "isContinuousSupport": false,
-          "hasLateralFireProtection": false,
-          "permanentLoad_kN_m2": 1.12064535,
+          "permanentLoad_kN_m2": 1.57,
           "occupancyKey": "A1_habitation",
           "woodFamily": "solid_softwood",
           "woodClass": "C24",
-          "materialCategoryIds": [
-            "holz"
-          ],
           "fireExposureFaces": 3,
           "fireRatings_min": [
             30,
@@ -22755,15 +22731,6 @@
           "Largeur minimale avant incendie non respectée pour action simultanée du feu sur plusieurs faces selon SIA 265 §4.5.2.4.",
           "Largeur minimale avant incendie non respectée pour action simultanée du feu sur plusieurs faces selon SIA 265 §4.5.2.4."
         ],
-        "assumptions": {
-          "supportModel": "simply_supported",
-          "loadModel": "uniformly_distributed",
-          "ambientLoadCombination": "1.35 × Gk + 1.50 × Qk",
-          "fireEffectFactor": 0.6,
-          "deflectionCriterionKey": "comfort",
-          "deflectionRatio": 350,
-          "residualLayer_mm": 7
-        },
         "references": {
           "liveLoads": "SIA 261:2020, chap. 8, tableau 8, catégorie A1",
           "deflection": "SIA 260:2013, annexe A, tableau 3",
@@ -22789,27 +22756,27 @@
           "beta_n_mm_min": 0.8
         },
         "loads": {
-          "permanentLoad_kN_m2": 1.12064535,
+          "permanentLoad_kN_m2": 1.57,
           "qk_live_kN_m2": 2,
           "selfWeight_kN_m": 0.06270833333333334,
-          "gk_kN_m": 0.21287481023333335,
+          "gk_kN_m": 0.2730883333333334,
           "qk_kN_m": 0.268,
-          "qdAmbient_kN_m": 0.6893809938150001
+          "qdAmbient_kN_m": 0.7706692500000001
         },
         "ambient": {
           "warnings": [],
-          "L_bending_ambient_m": 7.736524817692335,
-          "L_shear_ambient_m": 36.385298635118176,
+          "L_bending_ambient_m": 7.317143301782049,
+          "L_shear_ambient_m": 32.547468753078356,
           "L_deflection_m": 6.605926298396222,
-          "L_vibration_m": 5.001057247739585,
+          "L_vibration_m": 4.699126190284514,
           "f_min_Hz": 8,
           "selfWeight_kN_m2_equivalent": 0.4679726368159204,
-          "totalPermanentLoadForMass_kN_m2": 1.5886179868159203,
-          "floorMass_kg_m2_used": 161.938632702948,
-          "m_line_kg_m": 21.699776782195034,
+          "totalPermanentLoadForMass_kN_m2": 2.0379726368159203,
+          "floorMass_kg_m2_used": 207.74440742262183,
+          "m_line_kg_m": 27.837750594631327,
           "vibrationCheckEnabled": true,
           "governingCriteria": "vibration",
-          "L_ambient_governing_m": 5.001057247739585
+          "L_ambient_governing_m": 4.699126190284514
         },
         "fire": [
           {
@@ -22828,11 +22795,11 @@
             "bfi_mm": 71.66666666666667,
             "hfi_mm": 175,
             "M_Rd_fi_kNm": 9.283968750000001,
-            "qdFire_kN_m": 0.413628596289,
-            "L_bending_fire_m": 13.40005405826067,
-            "L_shear_fire_m": 109.15589590535453,
-            "L_fire_governing_m": 13.40005405826067,
-            "Max_span": 5.001057247739585
+            "qdFire_kN_m": 0.46240155000000005,
+            "L_bending_fire_m": 12.673663964948798,
+            "L_shear_fire_m": 97.64240625923506,
+            "L_fire_governing_m": 12.673663964948798,
+            "Max_span": 4.699126190284514
           },
           {
             "fireMinutes": 60,
@@ -22850,11 +22817,11 @@
             "bfi_mm": 39.66666666666667,
             "hfi_mm": 159,
             "M_Rd_fi_kNm": 4.24189899,
-            "qdFire_kN_m": 0.413628596289,
-            "L_bending_fire_m": 9.057740553627445,
-            "L_shear_fire_m": 54.892723094357834,
-            "L_fire_governing_m": 9.057740553627445,
-            "Max_span": 5.001057247739585
+            "qdFire_kN_m": 0.46240155000000005,
+            "L_bending_fire_m": 8.566738578759429,
+            "L_shear_fire_m": 49.102776580225566,
+            "L_fire_governing_m": 8.566738578759429,
+            "Max_span": 4.699126190284514
           }
         ]
       },
@@ -22870,45 +22837,45 @@
           {
             "label": "Portee maximale gouvernante",
             "normal_temperature": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R30": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R60": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             }
           },
           {
             "label": "Portee par flexion",
             "normal_temperature": {
-              "value": 7.74,
+              "value": 7.32,
               "unit": "m"
             },
             "R30": {
-              "value": 13.4,
+              "value": 12.67,
               "unit": "m"
             },
             "R60": {
-              "value": 9.06,
+              "value": 8.57,
               "unit": "m"
             }
           },
           {
             "label": "Portee par cisaillement",
             "normal_temperature": {
-              "value": 36.39,
+              "value": 32.55,
               "unit": "m"
             },
             "R30": {
-              "value": 109.16,
+              "value": 97.64,
               "unit": "m"
             },
             "R60": {
-              "value": 54.89,
+              "value": 49.1,
               "unit": "m"
             }
           },
@@ -22924,7 +22891,7 @@
           {
             "label": "Portee par vibration",
             "normal_temperature": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R30": null,

@@ -7731,8 +7731,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 451.5,
     "weight_kg_m2": 74.75182909090908,
-    "uValue_W_m2K": 0.14289871106591856,
-    "gwp_kgco2e_m2": 11.784172046545454,
+    "uValue_W_m2K": 0.13877546028516693,
+    "gwp_kgco2e_m2": 6.683213296,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -7791,15 +7791,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 1.1990159999999999,
           "thermalResistance_m2K_W": 0.027,
           "baseGwp_kgco2e_m2": 1.1990159999999999,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -7829,13 +7827,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.200503296,
           "thermalResistance_m2K_W": 0.18461538461538463,
           "baseGwp_kgco2e_m2": 0.200503296,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -7867,13 +7865,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.19580399999999998,
           "thermalResistance_m2K_W": 0.34615384615384615,
           "baseGwp_kgco2e_m2": 0.19580399999999998,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -7905,13 +7903,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.6727,
+          "gwp_kgco2e_m2": 1.33635,
           "thermalResistance_m2K_W": 1.5789473684210527,
           "baseGwp_kgco2e_m2": 1.33635,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -7946,7 +7944,7 @@
           "gwp_kgco2e_m2": 1.5822545454545454,
           "thermalResistance_m2K_W": 1.846153846153846,
           "baseGwp_kgco2e_m2": 1.5822545454545454,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
@@ -7982,11 +7980,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7333527272727274,
+          "gwp_kgco2e_m2": 0.8666763636363637,
           "thermalResistance_m2K_W": 6,
           "baseGwp_kgco2e_m2": 0.8666763636363637,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8020,11 +8018,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 0.09614,
           "thermalResistance_m2K_W": 0.0015151515151515152,
           "baseGwp_kgco2e_m2": 0.09614,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8058,11 +8056,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.2373381818181818,
+          "gwp_kgco2e_m2": 0.1186690909090909,
           "thermalResistance_m2K_W": 0.23076923076923075,
           "baseGwp_kgco2e_m2": 0.1186690909090909,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8096,15 +8094,15 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 1.0878,
           "thermalResistance_m2K_W": 0.19230769230769232,
           "baseGwp_kgco2e_m2": 1.0878,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 31.25,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -8136,7 +8134,8 @@
       "externalId": "FLEX E1-001-001",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": ""
   },
   {
     "id": "0CCD55A5-1988-470A-AB71-C81464F9EABC",
@@ -8145,8 +8144,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 391.5,
     "weight_kg_m2": 68.53698060606061,
-    "uValue_W_m2K": 0.16439022295086111,
-    "gwp_kgco2e_m2": 10.597852652606061,
+    "uValue_W_m2K": 0.15895703777208584,
+    "gwp_kgco2e_m2": 5.958199053575758,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -8205,15 +8204,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 1.1990159999999999,
           "thermalResistance_m2K_W": 0.027,
           "baseGwp_kgco2e_m2": 1.1990159999999999,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -8243,13 +8240,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.200503296,
           "thermalResistance_m2K_W": 0.18461538461538463,
           "baseGwp_kgco2e_m2": 0.200503296,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8281,13 +8278,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.19580399999999998,
           "thermalResistance_m2K_W": 0.34615384615384615,
           "baseGwp_kgco2e_m2": 0.19580399999999998,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8319,13 +8316,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1744,
+          "gwp_kgco2e_m2": 1.0872,
           "thermalResistance_m2K_W": 0.8695652173913044,
           "baseGwp_kgco2e_m2": 1.0872,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8360,7 +8357,7 @@
           "gwp_kgco2e_m2": 1.3185454545454547,
           "thermalResistance_m2K_W": 1.5384615384615385,
           "baseGwp_kgco2e_m2": 1.3185454545454547,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
@@ -8396,11 +8393,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.3090424242424246,
+          "gwp_kgco2e_m2": 0.6545212121212123,
           "thermalResistance_m2K_W": 6.25,
           "baseGwp_kgco2e_m2": 0.6545212121212123,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8434,11 +8431,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 0.09614,
           "thermalResistance_m2K_W": 0.0015151515151515152,
           "baseGwp_kgco2e_m2": 0.09614,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8472,11 +8469,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.2373381818181818,
+          "gwp_kgco2e_m2": 0.1186690909090909,
           "thermalResistance_m2K_W": 0.23076923076923075,
           "baseGwp_kgco2e_m2": 0.1186690909090909,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8510,15 +8507,15 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 1.0878,
           "thermalResistance_m2K_W": 0.19230769230769232,
           "baseGwp_kgco2e_m2": 1.0878,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 31.25,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -8550,7 +8547,8 @@
       "externalId": "FLEX E1-001-002",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": ""
   },
   {
     "id": "6C31C61A-17D3-49DF-831E-5A40B438F7A9",
@@ -8559,8 +8557,8 @@
     "categoryId": "steep_roof",
     "thickness_mm": 401.5,
     "weight_kg_m2": 69.47492,
-    "uValue_W_m2K": 0.13121182660104502,
-    "gwp_kgco2e_m2": 11.952665791999998,
+    "uValue_W_m2K": 0.12850019003618335,
+    "gwp_kgco2e_m2": 6.324428895999999,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -8619,15 +8617,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 1.1990159999999999,
           "thermalResistance_m2K_W": 0.027,
           "baseGwp_kgco2e_m2": 1.1990159999999999,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0
         },
         {
           "order": 1,
@@ -8657,13 +8653,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.200503296,
           "thermalResistance_m2K_W": 0.18461538461538463,
           "baseGwp_kgco2e_m2": 0.200503296,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8695,13 +8691,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.19580399999999998,
           "thermalResistance_m2K_W": 0.34615384615384615,
           "baseGwp_kgco2e_m2": 0.19580399999999998,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8733,13 +8729,13 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7818,
+          "gwp_kgco2e_m2": 0.8909,
           "thermalResistance_m2K_W": 1.0526315789473684,
           "baseGwp_kgco2e_m2": 0.8909,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 31.25,
+          "time_burning_min": 0,
           "ecccId": "F01.03",
           "ecccDescription": "Toitures inclinées"
         },
@@ -8774,7 +8770,7 @@
           "gwp_kgco2e_m2": 0.696192,
           "thermalResistance_m2K_W": 1.2307692307692308,
           "baseGwp_kgco2e_m2": 0.696192,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
@@ -8810,11 +8806,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.2982400000000003,
+          "gwp_kgco2e_m2": 1.1491200000000001,
           "thermalResistance_m2K_W": 4.848484848484849,
           "baseGwp_kgco2e_m2": 1.1491200000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8848,11 +8844,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.4177152,
+          "gwp_kgco2e_m2": 0.2088576,
           "thermalResistance_m2K_W": 0.6153846153846154,
           "baseGwp_kgco2e_m2": 0.2088576,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8886,11 +8882,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2001920000000001,
+          "gwp_kgco2e_m2": 0.6000960000000001,
           "thermalResistance_m2K_W": 2.4242424242424243,
           "baseGwp_kgco2e_m2": 0.6000960000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8924,11 +8920,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 0.09614,
           "thermalResistance_m2K_W": 0.0015151515151515152,
           "baseGwp_kgco2e_m2": 0.09614,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 31.25,
           "time_burning_min": 0,
           "ecccId": "G04.01",
@@ -8962,15 +8958,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 1.0878,
           "thermalResistance_m2K_W": 0.19230769230769232,
           "baseGwp_kgco2e_m2": 1.0878,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 31.25,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds"
+          "ecccId": "G04.01",
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs_rafters"
@@ -9002,7 +8998,8 @@
       "externalId": "FLEX E1-002-001",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": ""
   },
   {
     "id": "5526B12B-6DDB-4B58-ADF1-51C40A5A23C0",
@@ -9012,7 +9009,7 @@
     "thickness_mm": 500,
     "weight_kg_m2": 575.3008917197453,
     "uValue_W_m2K": 0.14229679346757904,
-    "gwp_kgco2e_m2": 74.94499006369426,
+    "gwp_kgco2e_m2": 169.88117006369427,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9053,16 +9050,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier concassé"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9071,15 +9068,8 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
-          "thermalResistance_m2K_W": 0.024999999999999998,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.0208000000000002,
+          "thermalResistance_m2K_W": 0.024999999999999998
         },
         {
           "order": 1,
@@ -9091,16 +9081,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier rond"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9109,15 +9099,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 1.0362,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -9129,16 +9114,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9147,15 +9132,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -9167,16 +9147,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9185,15 +9165,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -9205,16 +9180,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Lé d'étanchéité polyoléfine (FPO)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9223,15 +9198,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 20.72,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -9243,16 +9213,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Polystyrène expansé (EPS), ρ 30 [kg/m3]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9261,15 +9231,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.6664,
+          "gwp_kgco2e_m2": 50.16,
           "thermalResistance_m2K_W": 6.666666666666666,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 1.3332,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -9281,16 +9246,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Barrière de vapeur bitumineuse"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9299,15 +9264,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 12.012000000000002,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -9319,16 +9279,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9341,12 +9301,7 @@
           "thermalResistance_m2K_W": 0.0840046371986564,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 52.69187006369427,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 8,
@@ -9358,16 +9313,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Enduit minéral"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9376,15 +9331,10 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 1.1627,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "ecccDescription": "Faux-plafonds"
         }
       ],
       "systemTypeId": "concrete"
@@ -9392,10 +9342,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -9426,7 +9373,7 @@
     "thickness_mm": 460,
     "weight_kg_m2": 574.1008917197453,
     "uValue_W_m2K": 0.15721049281934624,
-    "gwp_kgco2e_m2": 79.64419006369427,
+    "gwp_kgco2e_m2": 159.89717006369426,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9467,16 +9414,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier concassé"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9485,15 +9432,8 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
-          "thermalResistance_m2K_W": 0.024999999999999998,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.0208000000000002,
+          "thermalResistance_m2K_W": 0.024999999999999998
         },
         {
           "order": 1,
@@ -9505,16 +9445,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier rond"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9523,15 +9463,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 1.0362,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -9543,16 +9478,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9561,15 +9496,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -9581,16 +9511,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9599,15 +9529,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -9619,16 +9544,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Lé d'étanchéité polyoléfine (FPO)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9637,15 +9562,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 20.72,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -9657,16 +9577,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Polyuréthane (PUR/PIR), ρ 30 [kg/m3]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9675,15 +9595,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 7.3656,
+          "gwp_kgco2e_m2": 40.175999999999995,
           "thermalResistance_m2K_W": 6,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.6828,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -9695,16 +9610,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Barrière de vapeur bitumineuse"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9713,15 +9628,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 12.012000000000002,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -9733,16 +9643,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9755,12 +9665,7 @@
           "thermalResistance_m2K_W": 0.0840046371986564,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 52.69187006369427,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 8,
@@ -9772,16 +9677,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Enduit minéral"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9790,15 +9695,10 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 1.1627,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "ecccDescription": "Faux-plafonds"
         }
       ],
       "systemTypeId": "concrete"
@@ -9806,10 +9706,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -9840,7 +9737,7 @@
     "thickness_mm": 540,
     "weight_kg_m2": 611.6008917197453,
     "uValue_W_m2K": 0.17982705244963187,
-    "gwp_kgco2e_m2": 76.79167006369427,
+    "gwp_kgco2e_m2": 170.77217006369426,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9881,16 +9778,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier concassé"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9899,15 +9796,8 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
-          "thermalResistance_m2K_W": 0.024999999999999998,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.0208000000000002,
+          "thermalResistance_m2K_W": 0.024999999999999998
         },
         {
           "order": 1,
@@ -9919,16 +9809,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier rond"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9937,15 +9827,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 1.0362,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -9957,16 +9842,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -9975,15 +9860,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -9995,16 +9875,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10013,15 +9893,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -10033,16 +9908,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Lé d'étanchéité polyoléfine (FPO)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10051,15 +9926,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 20.72,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -10071,16 +9941,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Verre cellulaire, ρ 110 [kg/m3]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10089,15 +9959,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 4.5130799999999995,
+          "gwp_kgco2e_m2": 51.050999999999995,
           "thermalResistance_m2K_W": 5.2,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 2.2565399999999998,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -10109,16 +9974,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Barrière de vapeur bitumineuse"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10127,15 +9992,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 12.012000000000002,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -10147,16 +10007,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10169,12 +10029,7 @@
           "thermalResistance_m2K_W": 0.0840046371986564,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 52.69187006369427,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 8,
@@ -10186,16 +10041,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Enduit minéral"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10204,15 +10059,10 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 1.1627,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "ecccDescription": "Faux-plafonds"
         }
       ],
       "systemTypeId": "concrete"
@@ -10220,10 +10070,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -10254,7 +10101,7 @@
     "thickness_mm": 500,
     "weight_kg_m2": 595.1008917197453,
     "uValue_W_m2K": 0.16259178430110488,
-    "gwp_kgco2e_m2": 79.30099006369427,
+    "gwp_kgco2e_m2": 136.00997006369428,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -10295,16 +10142,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier concassé"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10313,15 +10160,8 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
-          "thermalResistance_m2K_W": 0.024999999999999998,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.0208000000000002,
+          "thermalResistance_m2K_W": 0.024999999999999998
         },
         {
           "order": 1,
@@ -10333,16 +10173,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier rond"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10351,15 +10191,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 1.0362,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -10371,16 +10206,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10389,15 +10224,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -10409,16 +10239,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10427,15 +10257,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -10447,16 +10272,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Lé d'étanchéité polyoléfine (FPO)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10465,15 +10290,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 20.72,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -10485,16 +10305,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Panneau isolant Flumroc PRIMA (40-400 mm), λ 0.038 (valeur déclarée contrôlée)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10503,15 +10323,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 7.0224,
+          "gwp_kgco2e_m2": 16.2888,
           "thermalResistance_m2K_W": 5.7894736842105265,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.5112,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -10523,16 +10338,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Barrière de vapeur bitumineuse"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10541,15 +10356,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 12.012000000000002,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -10561,16 +10371,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10583,12 +10393,7 @@
           "thermalResistance_m2K_W": 0.0840046371986564,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 52.69187006369427,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 8,
@@ -10600,16 +10405,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Enduit minéral"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10618,15 +10423,10 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 1.1627,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "ecccDescription": "Faux-plafonds"
         }
       ],
       "systemTypeId": "concrete"
@@ -10634,10 +10434,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -10668,7 +10465,7 @@
     "thickness_mm": 440,
     "weight_kg_m2": 572.3808917197453,
     "uValue_W_m2K": 0.17012184253894483,
-    "gwp_kgco2e_m2": 73.76531006369427,
+    "gwp_kgco2e_m2": 145.29717006369427,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -10709,16 +10506,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier concassé"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10727,15 +10524,8 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
-          "thermalResistance_m2K_W": 0.024999999999999998,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.0208000000000002,
+          "thermalResistance_m2K_W": 0.024999999999999998
         },
         {
           "order": 1,
@@ -10747,16 +10537,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Gravier rond"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10765,15 +10555,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 1.0362,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -10785,16 +10570,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10803,15 +10588,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -10823,16 +10603,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Voile de polyéthylène (PE)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10841,15 +10621,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 15.5388,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -10861,16 +10636,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Lé d'étanchéité polyoléfine (FPO)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10879,15 +10654,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 20.72,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -10899,16 +10669,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "swissporLAMBDA Roof (50-300 mm), λ 0.029 (valeur déclarée contrôlée)"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10917,15 +10687,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.4867200000000003,
+          "gwp_kgco2e_m2": 25.576,
           "thermalResistance_m2K_W": 5.517241379310344,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.7433600000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -10937,16 +10702,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Barrière de vapeur bitumineuse"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10955,15 +10720,10 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 12.012000000000002,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -10975,16 +10735,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -10997,12 +10757,7 @@
           "thermalResistance_m2K_W": 0.0840046371986564,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 52.69187006369427,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 8,
@@ -11014,16 +10769,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": null,
               "description": "Enduit minéral"
             },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
-              "description": ""
+              "name": null,
+              "description": null
+            },
+            "de": {
+              "name": null,
+              "description": null
             }
           },
           "structure": "on-lying",
@@ -11032,15 +10787,10 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 1.1627,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "ecccDescription": "Faux-plafonds"
         }
       ],
       "systemTypeId": "concrete"
@@ -11048,10 +10798,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {

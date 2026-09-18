@@ -1,4 +1,4 @@
-const LAMBDA_AIR_W_MK = 0.025;
+const AIR_LAYER_RESISTANCE_M2K_W = 0.18;
 const DEFAULT_RSI = 0.13;
 const DEFAULT_RSE = 0.04;
 const DEFAULT_COMPONENT_SERVICE_LIFE_YEARS = 60;
@@ -47,6 +47,52 @@ const getFirstPresent = (object, keys) => {
 
 const isPresentId = (value) => value !== null && value !== undefined && value !== '';
 
+const normalizeAirLabel = (value) => String(value ?? '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(/[’']/g, ' ')
+  .replace(/[^a-z0-9]+/g, ' ')
+  .trim();
+
+const AIR_LABELS = new Set([
+  'air',
+  'air gap',
+  'air layer',
+  'couche d air',
+  'espace d air',
+  'lame d air',
+  'luft',
+  'luftschicht',
+  'luftspalt',
+  'intercapedine d aria',
+]);
+
+const isAirLayer = (layer, referencedItem = null) => {
+  const identifiers = [
+    layer?.layerTypeId,
+    layer?.typeId,
+    layer?.materialTypeId,
+    referencedItem?.materialTypeId,
+    referencedItem?.materialcategoryId,
+  ].map(normalizeAirLabel);
+  if (identifiers.includes('air gap')) return true;
+
+  const labels = [
+    layer?.productName,
+    layer?.translations?.fr?.description,
+    layer?.translations?.de?.description,
+    layer?.translations?.it?.description,
+    layer?.translations?.en?.description,
+    referencedItem?.workingtitle,
+    referencedItem?.translations?.fr?.name,
+    referencedItem?.translations?.de?.name,
+    referencedItem?.translations?.it?.name,
+    referencedItem?.translations?.en?.name,
+  ].map(normalizeAirLabel);
+  return labels.some((label) => AIR_LABELS.has(label));
+};
+
 const buildMaps = (materials = [], products = [], kbob = []) => ({
   materialsById: new Map(materials.map((item) => [String(item.id), item])),
   productsById: new Map(products.map((item) => [String(item.id), item])),
@@ -66,6 +112,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
       gwp_kgco2e_m3: null,
       gwp_kgco2e_kg: null,
       kbobId: layer?.kbobId ?? null,
+      isAir: isAirLayer(layer),
     };
   }
 
@@ -82,6 +129,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
       gwp_kgco2e_m3: getFirstPresent(declared, ['gwp_kgco2e_m3']) ?? getFirstPresent(calculated, ['gwp_kgco2e_m3']),
       gwp_kgco2e_kg: getFirstPresent(declared, ['gwp_kgco2e_kg']) ?? getFirstPresent(calculated, ['gwp_kgco2e_kg']),
       kbobId: layer?.kbobId ?? product.kbobId ?? null,
+      isAir: isAirLayer(layer, product),
     };
   }
 
@@ -93,6 +141,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
       gwp_kgco2e_m3: safeFloat(material.gwp_kgco2e_m3),
       gwp_kgco2e_kg: safeFloat(material.gwp_kgco2e_kg),
       kbobId: layer?.kbobId ?? material.kbobId ?? null,
+      isAir: isAirLayer(layer, material),
     };
   }
 
@@ -102,6 +151,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
     gwp_kgco2e_m3: null,
     gwp_kgco2e_kg: null,
     kbobId: layer?.kbobId ?? null,
+    isAir: isAirLayer(layer),
   };
 };
 
@@ -262,7 +312,6 @@ const computeComponentThermalDetails = (
   {
     rsi = DEFAULT_RSI,
     rse = DEFAULT_RSE,
-    useLambdaAir = false,
   } = {},
 ) => {
   const surface = surfaceResistanceDetailsForCategory(component?.categoryId ?? '', rsi, rse);
@@ -281,15 +330,17 @@ const computeComponentThermalDetails = (
     }
 
     const nextLayer = sortedLayers[index + 1] ?? null;
-    const canPair = nextLayer && nextLayer.structure === 'in-lying' && structure !== 'in-lying';
+    const fillLayer = nextLayer?.structure === 'in-lying' && structure !== 'in-lying' ? nextLayer : null;
     const hostFraction = areaFractionFromWidthSpacing(layer?.width_mm, layer?.spacing_mm);
     const hostThickness_m = mmToM(layer?.thickness_mm);
 
-    if (!canPair || hostFraction === null) {
+    if (structure === 'in-lying' || hostFraction === null) {
       const material = resolveLayerProperties(layer, productsById, materialsById);
-      const resistance = material.thermalConductivity_W_mK !== null && hostThickness_m > 0
-        ? hostThickness_m / material.thermalConductivity_W_mK
-        : null;
+      const resistance = material.isAir && hostThickness_m > 0
+        ? AIR_LAYER_RESISTANCE_M2K_W
+        : material.thermalConductivity_W_mK !== null && hostThickness_m > 0
+          ? hostThickness_m / material.thermalConductivity_W_mK
+          : null;
       if (resistance !== null) totalResistance += resistance;
       resistanceTerms.push({
         type: 'series',
@@ -298,16 +349,18 @@ const computeComponentThermalDetails = (
         conductivity_W_mK: material.thermalConductivity_W_mK,
         resistance_m2K_W: resistance,
         included: resistance !== null,
+        isAirLayer: material.isAir,
       });
       index += 1;
       continue;
     }
 
     const hostMaterial = resolveLayerProperties(layer, productsById, materialsById);
-    const fillMaterial = resolveLayerProperties(nextLayer, productsById, materialsById);
+    const fillMaterial = fillLayer
+      ? resolveLayerProperties(fillLayer, productsById, materialsById)
+      : { thermalConductivity_W_mK: null, isAir: true };
     if (
       hostMaterial.thermalConductivity_W_mK === null ||
-      fillMaterial.thermalConductivity_W_mK === null ||
       hostThickness_m <= 0
     ) {
       const hostResistance = hostMaterial.thermalConductivity_W_mK !== null && hostThickness_m > 0
@@ -329,35 +382,42 @@ const computeComponentThermalDetails = (
             resistance_m2K_W: hostResistance,
           },
           {
-            layer: nextLayer,
+            layer: fillLayer,
+            label: fillLayer ? null : 'Lame d’air (cavité non remplie)',
             fraction: 1 - clamp(hostFraction, 0, 1),
-            thickness_m: Math.min(mmToM(nextLayer?.thickness_mm), hostThickness_m),
+            thickness_m: fillLayer ? Math.min(mmToM(fillLayer?.thickness_mm), hostThickness_m) : 0,
             conductivity_W_mK: fillMaterial.thermalConductivity_W_mK,
             resistance_m2K_W: null,
           },
         ],
       });
-      index += 2;
+      index += fillLayer ? 2 : 1;
       continue;
     }
 
     const fHost = clamp(hostFraction, 0, 1);
     const fVoid = 1 - fHost;
-    const fillThickness_m = Math.min(mmToM(nextLayer?.thickness_mm), hostThickness_m);
+    const fillThickness_m = fillLayer ? Math.min(mmToM(fillLayer?.thickness_mm), hostThickness_m) : 0;
     const hostResistance = hostThickness_m / hostMaterial.thermalConductivity_W_mK;
-    let fillResistance = fillThickness_m > 0 ? fillThickness_m / fillMaterial.thermalConductivity_W_mK : 0;
-    if (useLambdaAir && hostThickness_m > fillThickness_m) {
-      fillResistance += (hostThickness_m - fillThickness_m) / LAMBDA_AIR_W_MK;
-    }
+    const fillIsAir = !fillLayer || fillMaterial.isAir;
+    const materialResistance = !fillIsAir && fillThickness_m > 0 && fillMaterial.thermalConductivity_W_mK !== null
+      ? fillThickness_m / fillMaterial.thermalConductivity_W_mK
+      : fillIsAir ? 0 : null;
+    const airThickness_m = fillIsAir
+      ? hostThickness_m
+      : Math.max(0, hostThickness_m - fillThickness_m);
+    const airResistance = airThickness_m > 0 ? AIR_LAYER_RESISTANCE_M2K_W : 0;
+    const fillResistance = materialResistance === null ? null : materialResistance + airResistance;
 
     let equivalentU = 0;
     if (hostResistance > 0) equivalentU += fHost / hostResistance;
-    if (fVoid > 0 && fillResistance > 0) equivalentU += fVoid / fillResistance;
-    const equivalentResistance = equivalentU > 0 ? 1 / equivalentU : null;
+    if (fVoid > 0 && fillResistance !== null && fillResistance > 0) equivalentU += fVoid / fillResistance;
+    const complete = hostResistance > 0 && (fVoid === 0 || (fillResistance !== null && fillResistance > 0));
+    const equivalentResistance = complete && equivalentU > 0 ? 1 / equivalentU : null;
     if (equivalentResistance !== null) totalResistance += equivalentResistance;
     resistanceTerms.push({
       type: 'parallel',
-      complete: equivalentResistance !== null,
+      complete,
       equivalentResistance_m2K_W: equivalentResistance,
       equivalentConductance_W_m2K: equivalentU,
       paths: [
@@ -369,16 +429,21 @@ const computeComponentThermalDetails = (
           resistance_m2K_W: hostResistance,
         },
         {
-          layer: nextLayer,
+          layer: fillLayer,
+          label: fillLayer ? null : 'Lame d’air (cavité non remplie)',
           fraction: fVoid,
           thickness_m: fillThickness_m,
           conductivity_W_mK: fillMaterial.thermalConductivity_W_mK,
           resistance_m2K_W: fillResistance,
+          materialResistance_m2K_W: materialResistance,
+          airResistance_m2K_W: airResistance,
+          airThickness_m,
+          isAirLayer: fillIsAir,
         },
       ],
     });
 
-    index += 2;
+    index += fillLayer ? 2 : 1;
   }
 
   return {

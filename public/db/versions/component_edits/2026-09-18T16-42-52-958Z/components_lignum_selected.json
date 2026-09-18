@@ -2148,7 +2148,7 @@
     "thickness_mm": 504.18,
     "weight_kg_m2": 80.784,
     "uValue_W_m2K": 0.19526964145367212,
-    "gwp_kgco2e_m2": 10.987634040000001,
+    "gwp_kgco2e_m2": 8.90045804,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_one_side",
@@ -2206,15 +2206,15 @@
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "03.015",
-          "gwp_kgco2e_m2": 4.174352,
+          "gwp_kgco2e_m2": 2.087176,
           "thermalResistance_m2K_W": 0.047,
           "baseGwp_kgco2e_m2": 2.087176,
-          "serviceLife_years": 40,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "ecccId": "F01.03",
-          "ecccDescription": "Couverture (Toitures inclinées)"
+          "ecccId": "",
+          "ecccDescription": ""
         },
         {
           "order": 1,
@@ -22539,8 +22539,8 @@
     "categoryId": "floor_assembly",
     "thickness_mm": 299,
     "weight_kg_m2": 160.0963184079602,
-    "uValue_W_m2K": 0.5431521667022476,
-    "gwp_kgco2e_m2": 18.029441074626867,
+    "uValue_W_m2K": 0.35064734895191124,
+    "gwp_kgco2e_m2": 11.050963074626866,
     "spanMax_m": 4.699126190284514,
     "claddingId": "without_covering",
     "sheathingId": "single_sheathed",
@@ -22577,16 +22577,16 @@
           "productId": "D8BC6147-E915-456C-A32D-31B11DE11421",
           "translations": {
             "fr": {
+              "name": "Chape ciment",
               "description": "Couche posée dessus"
             },
-            "de": {
-              "description": "Auflage"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Cement screed",
               "description": "On-lying material"
+            },
+            "de": {
+              "name": "Zementestrich",
+              "description": "Auflage"
             }
           },
           "productName": "Zementestrich",
@@ -22598,15 +22598,13 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "04.006",
-          "gwp_kgco2e_m2": 9.731,
+          "gwp_kgco2e_m2": 4.8655,
           "thermalResistance_m2K_W": 0.03571428571428572,
           "baseGwp_kgco2e_m2": 4.8655,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols"
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -22614,16 +22612,16 @@
           "productId": "2793A0E0-D256-43D8-B6A3-481637852581",
           "translations": {
             "fr": {
+              "name": "Akustic EP1",
               "description": "Isolement aux bruits de choc"
             },
-            "de": {
-              "description": "Trittschalldämmung"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Akustic EP1",
               "description": "Impact sound insulation"
+            },
+            "de": {
+              "name": "Akustic EP1",
+              "description": "Trittschalldämmung"
             }
           },
           "productName": "Akustic EP1",
@@ -22635,11 +22633,11 @@
           "colorCode": "bFF2F2",
           "fiberDirection": null,
           "kbobId": "10.001.01",
-          "gwp_kgco2e_m2": 0.6982500000000001,
+          "gwp_kgco2e_m2": 0.3491250000000001,
           "thermalResistance_m2K_W": 1,
           "baseGwp_kgco2e_m2": 0.3491250000000001,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "G02.01",
@@ -22651,16 +22649,16 @@
           "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
           "translations": {
             "fr": {
+              "name": "Lignotrend Ligno Dalle R Q3",
               "description": "Structure support"
             },
-            "de": {
-              "description": "Tragkonstruktion"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Ribs Lignotrend Q3",
               "description": "Supporting structure"
+            },
+            "de": {
+              "name": "Rippen Lignotrend Q3",
+              "description": "Tragkonstruktion"
             }
           },
           "productName": "Rippen Lignotrend Q3",
@@ -22675,7 +22673,7 @@
           "gwp_kgco2e_m2": 4.072485074626867,
           "thermalResistance_m2K_W": 1.346153846153846,
           "baseGwp_kgco2e_m2": 4.072485074626867,
-          "serviceLife_years": 60,
+          "serviceLife_years": null,
           "replacementFactor": 1,
           "time_fire_start_min": 48.75,
           "time_burning_min": 0,
@@ -22689,16 +22687,16 @@
           "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
           "translations": {
             "fr": {
+              "name": "Plaque inférieure  Ligno HBF 40mm (20+20mm)",
               "description": "Contreventement au-dessous 1ère couche"
             },
-            "de": {
-              "description": "Beplankung unten 1. Schicht"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
+              "name": "Unifying panel on the underside HBF 40mm (20+20mm)",
               "description": "Lower skin layer 1"
+            },
+            "de": {
+              "name": "Gurtplatte unten zu Ligno Q3 (20+20mm)",
+              "description": "Beplankung unten 1. Schicht"
             }
           },
           "productName": "Gurtplatte unten zu Ligno Q3 (20+20mm)",
@@ -22710,11 +22708,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": "lengthwise",
           "kbobId": "07.001",
-          "gwp_kgco2e_m2": 3.527706,
+          "gwp_kgco2e_m2": 1.763853,
           "thermalResistance_m2K_W": 0.3,
           "baseGwp_kgco2e_m2": 1.763853,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
           "time_fire_start_min": 0,
           "time_burning_min": 48.75,
           "ecccId": "G04.01",
@@ -22732,15 +22730,10 @@
           "b_mm": 71.66666666666667,
           "h_mm": 175,
           "spacing_mm": 134,
-          "isContinuousSupport": false,
-          "hasLateralFireProtection": false,
-          "permanentLoad_kN_m2": 1.12064535,
+          "permanentLoad_kN_m2": 1.57,
           "occupancyKey": "A1_habitation",
           "woodFamily": "solid_softwood",
           "woodClass": "C24",
-          "materialCategoryIds": [
-            "holz"
-          ],
           "fireExposureFaces": 3,
           "fireRatings_min": [
             30,
@@ -22755,15 +22748,6 @@
           "Largeur minimale avant incendie non respectée pour action simultanée du feu sur plusieurs faces selon SIA 265 §4.5.2.4.",
           "Largeur minimale avant incendie non respectée pour action simultanée du feu sur plusieurs faces selon SIA 265 §4.5.2.4."
         ],
-        "assumptions": {
-          "supportModel": "simply_supported",
-          "loadModel": "uniformly_distributed",
-          "ambientLoadCombination": "1.35 × Gk + 1.50 × Qk",
-          "fireEffectFactor": 0.6,
-          "deflectionCriterionKey": "comfort",
-          "deflectionRatio": 350,
-          "residualLayer_mm": 7
-        },
         "references": {
           "liveLoads": "SIA 261:2020, chap. 8, tableau 8, catégorie A1",
           "deflection": "SIA 260:2013, annexe A, tableau 3",
@@ -22789,27 +22773,27 @@
           "beta_n_mm_min": 0.8
         },
         "loads": {
-          "permanentLoad_kN_m2": 1.12064535,
+          "permanentLoad_kN_m2": 1.57,
           "qk_live_kN_m2": 2,
           "selfWeight_kN_m": 0.06270833333333334,
-          "gk_kN_m": 0.21287481023333335,
+          "gk_kN_m": 0.2730883333333334,
           "qk_kN_m": 0.268,
-          "qdAmbient_kN_m": 0.6893809938150001
+          "qdAmbient_kN_m": 0.7706692500000001
         },
         "ambient": {
           "warnings": [],
-          "L_bending_ambient_m": 7.736524817692335,
-          "L_shear_ambient_m": 36.385298635118176,
+          "L_bending_ambient_m": 7.317143301782049,
+          "L_shear_ambient_m": 32.547468753078356,
           "L_deflection_m": 6.605926298396222,
-          "L_vibration_m": 5.001057247739585,
+          "L_vibration_m": 4.699126190284514,
           "f_min_Hz": 8,
           "selfWeight_kN_m2_equivalent": 0.4679726368159204,
-          "totalPermanentLoadForMass_kN_m2": 1.5886179868159203,
-          "floorMass_kg_m2_used": 161.938632702948,
-          "m_line_kg_m": 21.699776782195034,
+          "totalPermanentLoadForMass_kN_m2": 2.0379726368159203,
+          "floorMass_kg_m2_used": 207.74440742262183,
+          "m_line_kg_m": 27.837750594631327,
           "vibrationCheckEnabled": true,
           "governingCriteria": "vibration",
-          "L_ambient_governing_m": 5.001057247739585
+          "L_ambient_governing_m": 4.699126190284514
         },
         "fire": [
           {
@@ -22828,11 +22812,11 @@
             "bfi_mm": 71.66666666666667,
             "hfi_mm": 175,
             "M_Rd_fi_kNm": 9.283968750000001,
-            "qdFire_kN_m": 0.413628596289,
-            "L_bending_fire_m": 13.40005405826067,
-            "L_shear_fire_m": 109.15589590535453,
-            "L_fire_governing_m": 13.40005405826067,
-            "Max_span": 5.001057247739585
+            "qdFire_kN_m": 0.46240155000000005,
+            "L_bending_fire_m": 12.673663964948798,
+            "L_shear_fire_m": 97.64240625923506,
+            "L_fire_governing_m": 12.673663964948798,
+            "Max_span": 4.699126190284514
           },
           {
             "fireMinutes": 60,
@@ -22850,11 +22834,11 @@
             "bfi_mm": 39.66666666666667,
             "hfi_mm": 159,
             "M_Rd_fi_kNm": 4.24189899,
-            "qdFire_kN_m": 0.413628596289,
-            "L_bending_fire_m": 9.057740553627445,
-            "L_shear_fire_m": 54.892723094357834,
-            "L_fire_governing_m": 9.057740553627445,
-            "Max_span": 5.001057247739585
+            "qdFire_kN_m": 0.46240155000000005,
+            "L_bending_fire_m": 8.566738578759429,
+            "L_shear_fire_m": 49.102776580225566,
+            "L_fire_governing_m": 8.566738578759429,
+            "Max_span": 4.699126190284514
           }
         ]
       },
@@ -22870,45 +22854,45 @@
           {
             "label": "Portee maximale gouvernante",
             "normal_temperature": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R30": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R60": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             }
           },
           {
             "label": "Portee par flexion",
             "normal_temperature": {
-              "value": 7.74,
+              "value": 7.32,
               "unit": "m"
             },
             "R30": {
-              "value": 13.4,
+              "value": 12.67,
               "unit": "m"
             },
             "R60": {
-              "value": 9.06,
+              "value": 8.57,
               "unit": "m"
             }
           },
           {
             "label": "Portee par cisaillement",
             "normal_temperature": {
-              "value": 36.39,
+              "value": 32.55,
               "unit": "m"
             },
             "R30": {
-              "value": 109.16,
+              "value": 97.64,
               "unit": "m"
             },
             "R60": {
-              "value": 54.89,
+              "value": 49.1,
               "unit": "m"
             }
           },
@@ -22924,7 +22908,7 @@
           {
             "label": "Portee par vibration",
             "normal_temperature": {
-              "value": 5,
+              "value": 4.7,
               "unit": "m"
             },
             "R30": null,

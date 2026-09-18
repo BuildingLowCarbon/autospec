@@ -996,8 +996,8 @@
     "categoryId": "flat_roof_shed_roof",
     "thickness_mm": 206.07999999999998,
     "weight_kg_m2": 15.267983783783782,
-    "uValue_W_m2K": 0.14868161285857528,
-    "gwp_kgco2e_m2": 8.303915891891894,
+    "uValue_W_m2K": 0.15076296156268476,
+    "gwp_kgco2e_m2": 65.94312452972973,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1037,13 +1037,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Stahlblech aussen Sandwichpa- neel"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1051,16 +1048,8 @@
             }
           },
           "weight_kg_m2": 4.9455,
-          "gwp_kgco2e_m2": 0.2690352,
-          "thermalResistance_m2K_W": 0.000012600000000000001,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 0.1345176,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "isSupportStructure": false
+          "gwp_kgco2e_m2": 13.847399999999999,
+          "thermalResistance_m2K_W": 0.000012600000000000001
         },
         {
           "order": 1,
@@ -1071,13 +1060,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Dämmung PIR Sandwichpaneel"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1085,16 +1071,8 @@
             }
           },
           "weight_kg_m2": 5.55,
-          "gwp_kgco2e_m2": 7.570200000000001,
-          "thermalResistance_m2K_W": 6.166666666666667,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.7851000000000004,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "isSupportStructure": false
+          "gwp_kgco2e_m2": 41.292,
+          "thermalResistance_m2K_W": 6.166666666666667
         },
         {
           "order": 2,
@@ -1105,13 +1083,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Stahlblech innenseitig Sand- wichpaneel"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1119,16 +1094,8 @@
             }
           },
           "weight_kg_m2": 3.5324999999999993,
-          "gwp_kgco2e_m2": 0.09608399999999997,
-          "thermalResistance_m2K_W": 0.000008999999999999999,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 0.09608399999999997,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null,
-          "isSupportStructure": false
+          "gwp_kgco2e_m2": 9.890999999999998,
+          "thermalResistance_m2K_W": 0.000008999999999999999
         },
         {
           "order": 3,
@@ -1139,13 +1106,10 @@
           "width_mm": null,
           "spacing_mm": 3700,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Primärträger (Stahlprofil, blank)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1154,15 +1118,7 @@
           },
           "weight_kg_m2": 0,
           "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0,
-          "isSupportStructure": true
+          "thermalResistance_m2K_W": null
         },
         {
           "order": 4,
@@ -1173,13 +1129,10 @@
           "width_mm": 27,
           "spacing_mm": 3700,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "MDF-Dekostreifen Akustikpa- neel"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1187,16 +1140,8 @@
             }
           },
           "weight_kg_m2": 0.05998378378378379,
-          "gwp_kgco2e_m2": 0.012236691891891891,
-          "thermalResistance_m2K_W": 0.0857142857142857,
-          "ecccId": "G04.01",
-          "ecccDescription": "Supports pour faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.0061183459459459456,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0,
-          "isSupportStructure": false
+          "gwp_kgco2e_m2": 0.05722452972972973,
+          "thermalResistance_m2K_W": 0.0857142857142857
         },
         {
           "order": 5,
@@ -1207,13 +1152,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Filz-Platte Akustikpaneel"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -1221,27 +1163,16 @@
             }
           },
           "weight_kg_m2": 1.18,
-          "gwp_kgco2e_m2": 0.35635999999999995,
-          "thermalResistance_m2K_W": 0.2105263157894737,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.17817999999999998,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0,
-          "isSupportStructure": false
+          "gwp_kgco2e_m2": 0.8554999999999999,
+          "thermalResistance_m2K_W": 0.2105263157894737
         }
       ],
-      "systemTypeId": "light_gauge_steel_frame"
+      "systemTypeId": null
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -2362,8 +2293,8 @@
     "categoryId": "flat_roof_shed_roof",
     "thickness_mm": 876.65,
     "weight_kg_m2": 165.58120000000002,
-    "uValue_W_m2K": 0.16307700611396647,
-    "gwp_kgco2e_m2": 28.9534822,
+    "uValue_W_m2K": 0.09793137099639178,
+    "gwp_kgco2e_m2": 94.073812,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -2403,13 +2334,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Substrat"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2417,15 +2345,8 @@
             }
           },
           "weight_kg_m2": 70,
-          "gwp_kgco2e_m2": 7.364,
-          "thermalResistance_m2K_W": null,
-          "ecccId": "F01.02",
-          "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.682,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 1.099,
+          "thermalResistance_m2K_W": null
         },
         {
           "order": 1,
@@ -2436,13 +2357,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Kies"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2450,15 +2368,10 @@
             }
           },
           "weight_kg_m2": 49.5,
-          "gwp_kgco2e_m2": 5.2074,
+          "gwp_kgco2e_m2": 0.7771499999999999,
           "thermalResistance_m2K_W": 0.01875,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 2.6037,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 2,
@@ -2469,13 +2382,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "PP-Vlies Trenn-/Schutzvlies"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2483,15 +2393,10 @@
             }
           },
           "weight_kg_m2": 0.13799999999999998,
-          "gwp_kgco2e_m2": 0.05768399999999999,
+          "gwp_kgco2e_m2": 0.7769399999999999,
           "thermalResistance_m2K_W": 0.0004545454545454545,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.028841999999999996,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 3,
@@ -2502,13 +2407,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "1 x EP4 Polymerbitumenbahn"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2516,15 +2418,10 @@
             }
           },
           "weight_kg_m2": 5.5,
-          "gwp_kgco2e_m2": 2.926,
+          "gwp_kgco2e_m2": 18.315,
           "thermalResistance_m2K_W": 0.015151515151515152,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 1.463,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 4,
@@ -2535,13 +2432,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Bitumenemulsion (pro m2)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2549,15 +2443,10 @@
             }
           },
           "weight_kg_m2": 0,
-          "gwp_kgco2e_m2": 0.028,
+          "gwp_kgco2e_m2": 0.181,
           "thermalResistance_m2K_W": null,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.014,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 5,
@@ -2568,13 +2457,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "2 x EGV3 Polymerbitumenbahn"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2582,15 +2468,10 @@
             }
           },
           "weight_kg_m2": 7.1499999999999995,
-          "gwp_kgco2e_m2": 3.8038,
+          "gwp_kgco2e_m2": 26.026,
           "thermalResistance_m2K_W": 0.019696969696969695,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 1.9019,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 6,
@@ -2601,13 +2482,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "PUR, 30 kg/m3"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2615,15 +2493,10 @@
             }
           },
           "weight_kg_m2": 4.8,
-          "gwp_kgco2e_m2": 6.5472,
+          "gwp_kgco2e_m2": 35.712,
           "thermalResistance_m2K_W": 5.333333333333334,
           "ecccId": "F01.02",
-          "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.2736,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 7,
@@ -2634,13 +2507,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "OSB-Platte / 3-Schichtplatte"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2648,15 +2518,10 @@
             }
           },
           "weight_kg_m2": 12.25,
-          "gwp_kgco2e_m2": 1.1306749999999999,
+          "gwp_kgco2e_m2": 5.7452499999999995,
           "thermalResistance_m2K_W": 0.19230769230769232,
-          "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 1.1306749999999999,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccId": "F01.02",
+          "ecccDescription": "Toitures plates"
         },
         {
           "order": 8,
@@ -2667,13 +2532,10 @@
           "width_mm": 60,
           "spacing_mm": 625,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Vollholz/Brettschichtholz (Se- kundärträger)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2681,16 +2543,11 @@
             }
           },
           "weight_kg_m2": 11.731200000000001,
-          "gwp_kgco2e_m2": 1.0675392000000001,
+          "gwp_kgco2e_m2": 3.9299520000000006,
           "thermalResistance_m2K_W": 2,
           "isSupportStructure": true,
           "ecccId": "C04.04",
-          "ecccDescription": "Structures porteuses de toitures plates",
-          "baseGwp_kgco2e_m2": 1.0675392000000001,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "ecccDescription": "Structures porteuses de toitures plates"
         },
         {
           "order": 9,
@@ -2701,13 +2558,10 @@
           "width_mm": 120,
           "spacing_mm": 4000,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Brettschichtholz (Unterzug)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -2715,15 +2569,10 @@
             }
           },
           "weight_kg_m2": 4.512,
-          "gwp_kgco2e_m2": 0.8211839999999999,
+          "gwp_kgco2e_m2": 1.51152,
           "thermalResistance_m2K_W": 2.4615384615384617,
           "ecccId": "G04.01",
-          "ecccDescription": "Supports pour faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.41059199999999996,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "ecccDescription": "Supports pour faux-plafonds"
         }
       ],
       "systemTypeId": "ribs"
@@ -2731,10 +2580,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -5176,9 +5022,9 @@
     "serialNo": null,
     "categoryId": "floor_assembly",
     "thickness_mm": 676.41,
-    "weight_kg_m2": 656.2560887170155,
-    "uValue_W_m2K": 0.6972664894223485,
-    "gwp_kgco2e_m2": 65.35935416756143,
+    "weight_kg_m2": 651.1656428571429,
+    "uValue_W_m2K": 0.7440832858640414,
+    "gwp_kgco2e_m2": 218.61890178571429,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -5218,13 +5064,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Parkett (pro m2)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5232,16 +5075,8 @@
             }
           },
           "weight_kg_m2": 7.904999999999999,
-          "gwp_kgco2e_m2": 1.458,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "ecccId": "G02.02",
-          "ecccDescription": "Revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.729,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 8.09,
+          "thermalResistance_m2K_W": 0.11538461538461538
         },
         {
           "order": 1,
@@ -5252,13 +5087,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Zementunterlagsbo- den"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5266,16 +5098,8 @@
             }
           },
           "weight_kg_m2": 148,
-          "gwp_kgco2e_m2": 15.5696,
-          "thermalResistance_m2K_W": 0.05714285714285715,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 7.7848,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 17.759999999999998,
+          "thermalResistance_m2K_W": 0.05714285714285715
         },
         {
           "order": 2,
@@ -5286,13 +5110,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Trittschalldämmung Weichfaser"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5300,87 +5121,34 @@
             }
           },
           "weight_kg_m2": 4.425,
-          "gwp_kgco2e_m2": 1.33635,
-          "thermalResistance_m2K_W": 0.7894736842105263,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.668175,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 3.208125,
+          "thermalResistance_m2K_W": 0.7894736842105263
         },
         {
           "order": 3,
           "structure": "on-lying",
-          "productId": "1D277C05-5268-4F66-B977-295D5F6F624E",
+          "productId": "0F4C2F3F-C183-47DD-8595-8B79957EEC12",
           "fiberDirection": null,
           "thickness_mm": 120,
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Beton (Hochbau)"
             },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "weight_kg_m2": 281.0904458598726,
-          "gwp_kgco2e_m2": 33.31493503184714,
-          "thermalResistance_m2K_W": 0.05941905572901882,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 33.31493503184714,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 4,
-          "structure": "on-lying",
-          "productId": "D73BC5E0-1F04-47A9-A046-22434DBD7BF8",
-          "fiberDirection": null,
-          "thickness_mm": 0.8799999999999999,
-          "width_mm": null,
-          "spacing_mm": null,
-          "translations": {
             "fr": {
               "description": ""
             },
-            "de": {
-              "description": "Verbundblech (Stahl- blech, blank)"
-            },
-            "it": {
-              "description": ""
-            },
             "en": {
               "description": ""
             }
           },
-          "weight_kg_m2": 6.9079999999999995,
-          "gwp_kgco2e_m2": 0.18789759999999997,
-          "thermalResistance_m2K_W": 0.000017599999999999998,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.18789759999999997,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "weight_kg_m2": 276,
+          "gwp_kgco2e_m2": 27.876,
+          "thermalResistance_m2K_W": 0.07272727272727272
         },
         {
-          "order": 5,
+          "order": 4,
           "structure": "on-lying",
           "productId": "F7E5A5E5-DF07-4B5A-9FED-4DA598CA50A0",
           "fiberDirection": null,
@@ -5388,13 +5156,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Armierungsstahl"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5402,16 +5167,31 @@
             }
           },
           "weight_kg_m2": 4.1605,
-          "gwp_kgco2e_m2": 0.21010525,
-          "thermalResistance_m2K_W": 0.0000106,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.21010525,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 3.2659925,
+          "thermalResistance_m2K_W": 0.0000106
+        },
+        {
+          "order": 5,
+          "structure": "on-lying",
+          "productId": "D73BC5E0-1F04-47A9-A046-22434DBD7BF8",
+          "fiberDirection": null,
+          "thickness_mm": 0.8799999999999999,
+          "width_mm": null,
+          "spacing_mm": null,
+          "translations": {
+            "de": {
+              "description": "Verbundblech (Stahl- blech, blank)"
+            },
+            "fr": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 6.9079999999999995,
+          "gwp_kgco2e_m2": 19.342399999999998,
+          "thermalResistance_m2K_W": 0.000017599999999999998
         },
         {
           "order": 6,
@@ -5422,13 +5202,10 @@
           "width_mm": 175,
           "spacing_mm": 3500,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Sekundärträger (Stahlprofil, blank)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5436,16 +5213,8 @@
             }
           },
           "weight_kg_m2": 86.35000000000001,
-          "gwp_kgco2e_m2": 2.34872,
-          "thermalResistance_m2K_W": 0.0044,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": true,
-          "baseGwp_kgco2e_m2": 2.34872,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "gwp_kgco2e_m2": 63.639950000000006,
+          "thermalResistance_m2K_W": 0.0044
         },
         {
           "order": 7,
@@ -5456,13 +5225,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Brandschutzverklei- dung Primärträger"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5470,16 +5236,8 @@
             }
           },
           "weight_kg_m2": 30,
-          "gwp_kgco2e_m2": 4.686,
-          "thermalResistance_m2K_W": 0.06578947368421052,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 2.343,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "gwp_kgco2e_m2": 16.560000000000002,
+          "thermalResistance_m2K_W": 0.06578947368421052
         },
         {
           "order": 8,
@@ -5490,13 +5248,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Brandschutzverklei- dung Sekundärträger"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5504,16 +5259,8 @@
             }
           },
           "weight_kg_m2": 30,
-          "gwp_kgco2e_m2": 4.686,
-          "thermalResistance_m2K_W": 0.06578947368421052,
-          "ecccId": "G04.02",
-          "ecccDescription": "Faux-plafonds",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 2.343,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "gwp_kgco2e_m2": 16.560000000000002,
+          "thermalResistance_m2K_W": 0.06578947368421052
         },
         {
           "order": 9,
@@ -5524,13 +5271,10 @@
           "width_mm": 160,
           "spacing_mm": 3500,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Primärträger (Stahl- profil, blank)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -5538,29 +5282,16 @@
             }
           },
           "weight_kg_m2": 57.417142857142856,
-          "gwp_kgco2e_m2": 1.5617462857142856,
-          "thermalResistance_m2K_W": 0.0032,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 1.5617462857142856,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "gwp_kgco2e_m2": 42.31643428571429,
+          "thermalResistance_m2K_W": 0.0032
         }
       ],
-      "systemTypeId": "light_gauge_steel_frame"
+      "systemTypeId": null
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": {
-        "error": "Calcul bois non applicable à la structure (metallisch)."
-      },
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -5580,8 +5311,7 @@
       "databaseId": "minergie",
       "externalId": null,
       "url": null
-    },
-    "subcategoryId": "standard"
+    }
   },
   {
     "id": "8346AB7C-1A0E-49D7-9B83-1047EA2C17E8",
@@ -6836,8 +6566,8 @@
     "categoryId": "floor_assembly",
     "thickness_mm": 595,
     "weight_kg_m2": 236.09400000000002,
-    "uValue_W_m2K": 0.40454998904636325,
-    "gwp_kgco2e_m2": 25.258473999999996,
+    "uValue_W_m2K": 0.21064224564857467,
+    "gwp_kgco2e_m2": 54.439065,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -6877,13 +6607,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Parkett"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -6891,16 +6618,8 @@
             }
           },
           "weight_kg_m2": 7.904999999999999,
-          "gwp_kgco2e_m2": 1.458,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "isSupportStructure": false,
-          "ecccId": "G02.02",
-          "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "gwp_kgco2e_m2": 8.09,
+          "thermalResistance_m2K_W": 0.11538461538461538
         },
         {
           "order": 1,
@@ -6911,13 +6630,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Zementunterlagsboden"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -6925,16 +6641,10 @@
             }
           },
           "weight_kg_m2": 148,
-          "gwp_kgco2e_m2": 15.5696,
+          "gwp_kgco2e_m2": 17.759999999999998,
           "thermalResistance_m2K_W": 0.05714285714285715,
           "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 7.7848,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Supports pour revêtements de sols"
         },
         {
           "order": 2,
@@ -6945,13 +6655,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Trittschalldämmung Weichfaser"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -6959,16 +6666,10 @@
             }
           },
           "weight_kg_m2": 4.425,
-          "gwp_kgco2e_m2": 1.33635,
+          "gwp_kgco2e_m2": 3.208125,
           "thermalResistance_m2K_W": 0.7894736842105263,
           "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.668175,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
+          "ecccDescription": "Supports pour revêtements de sols"
         },
         {
           "order": 3,
@@ -6979,13 +6680,10 @@
           "width_mm": null,
           "spacing_mm": null,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Holzwerkstoffplatte"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -6993,16 +6691,10 @@
             }
           },
           "weight_kg_m2": 70.5,
-          "gwp_kgco2e_m2": 6.4155,
+          "gwp_kgco2e_m2": 23.6175,
           "thermalResistance_m2K_W": 1.1538461538461537,
-          "ecccId": "C04.01",
-          "ecccDescription": "Plancher",
-          "isSupportStructure": true,
-          "baseGwp_kgco2e_m2": 6.4155,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols"
         },
         {
           "order": 4,
@@ -7013,13 +6705,10 @@
           "width_mm": 140,
           "spacing_mm": 4000,
           "translations": {
-            "fr": {
-              "description": ""
-            },
             "de": {
               "description": "Brettschichtholz (Un- terzug)"
             },
-            "it": {
+            "fr": {
               "description": ""
             },
             "en": {
@@ -7027,16 +6716,11 @@
             }
           },
           "weight_kg_m2": 5.264000000000001,
-          "gwp_kgco2e_m2": 0.4790240000000001,
+          "gwp_kgco2e_m2": 1.7634400000000006,
           "thermalResistance_m2K_W": 2.4615384615384617,
-          "isSupportStructure": false,
+          "isSupportStructure": true,
           "ecccId": "C04.01",
-          "ecccDescription": "Planchers",
-          "baseGwp_kgco2e_m2": 0.4790240000000001,
-          "serviceLife_years": 60,
-          "replacementFactor": 1,
-          "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "ecccDescription": "Planchers"
         }
       ],
       "systemTypeId": "ribs_joists"
@@ -7044,207 +6728,7 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null,
-      "wood_beam_span": {
-        "input": {
-          "b_mm": 1000,
-          "h_mm": 150,
-          "spacing_mm": 1000,
-          "isContinuousSupport": true,
-          "hasLateralFireProtection": false,
-          "permanentLoad_kN_m2": 1.6244771400000002,
-          "occupancyKey": "A1_habitation",
-          "woodFamily": "solid_softwood",
-          "woodClass": "C24",
-          "materialCategoryIds": [
-            "holz"
-          ],
-          "fireExposureFaces": 1,
-          "fireRatings_min": [
-            30,
-            60
-          ],
-          "t_protection_min": 0,
-          "deflectionCriterionKey": "comfort",
-          "density_kN_m3": 5,
-          "f_min_Hz": 8
-        },
-        "warnings": [],
-        "assumptions": {
-          "supportModel": "simply_supported",
-          "loadModel": "uniformly_distributed",
-          "ambientLoadCombination": "1.35 × Gk + 1.50 × Qk",
-          "fireEffectFactor": 0.6,
-          "deflectionCriterionKey": "comfort",
-          "deflectionRatio": 350,
-          "residualLayer_mm": 7
-        },
-        "references": {
-          "liveLoads": "SIA 261:2020, chap. 8, tableau 8, catégorie A1",
-          "deflection": "SIA 260:2013, annexe A, tableau 3",
-          "wood": "SIA 265:2021, tableau 8, C24",
-          "fireSection": "SIA 265:2021, §4.5.2.2, figure 13, eq. (49)-(50)",
-          "fireResistance": "SIA 265:2021, §4.5.2.5, eq. (51)",
-          "fireLoads": "SIA 265:2021, §4.5.2.1 : Ed,fi = 0.6 Ed"
-        },
-        "section": {
-          "b_mm": 1000,
-          "h_mm": 150,
-          "spacing_mm": 1000,
-          "A_mm2": 150000,
-          "I_mm4": 281250000,
-          "W_mm3": 3750000
-        },
-        "material": {
-          "woodFamily": "solid_softwood",
-          "woodClass": "C24",
-          "fm_d_N_mm2": 14.1,
-          "fv_d_N_mm2": 1.5,
-          "Em_mean_N_mm2": 11000,
-          "beta_n_mm_min": 0.8
-        },
-        "loads": {
-          "permanentLoad_kN_m2": 1.6244771400000002,
-          "qk_live_kN_m2": 2,
-          "selfWeight_kN_m": 0.75,
-          "gk_kN_m": 2.37447714,
-          "qk_kN_m": 2,
-          "qdAmbient_kN_m": 6.205544139000001
-        },
-        "ambient": {
-          "warnings": [],
-          "L_bending_ambient_m": 8.256200842530466,
-          "L_shear_ambient_m": 48.34386691645446,
-          "L_deflection_m": 6.975619752340887,
-          "L_vibration_m": 4.711525030833781,
-          "f_min_Hz": 8,
-          "selfWeight_kN_m2_equivalent": 0.75,
-          "totalPermanentLoadForMass_kN_m2": 2.37447714,
-          "floorMass_kg_m2_used": 242.04659938837924,
-          "m_line_kg_m": 242.04659938837924,
-          "vibrationCheckEnabled": true,
-          "governingCriteria": "vibration",
-          "L_ambient_governing_m": 4.711525030833781
-        },
-        "fire": [
-          {
-            "fireMinutes": 30,
-            "ok": true,
-            "widthCheck": {
-              "required_b_mm": null,
-              "ok": true,
-              "notApplicable": true
-            },
-            "warnings": [],
-            "beta_n_mm_min": 0.8,
-            "d_char_mm": 24,
-            "d_eff_mm": 31,
-            "bfi_mm": 1000,
-            "hfi_mm": 119,
-            "M_Rd_fi_kNm": 59.90102999999999,
-            "qdFire_kN_m": 3.7233264834,
-            "L_bending_fire_m": 11.344793073826219,
-            "L_shear_fire_m": 115.05840326116162,
-            "L_fire_governing_m": 11.344793073826219,
-            "Max_span": 4.711525030833781
-          },
-          {
-            "fireMinutes": 60,
-            "ok": true,
-            "widthCheck": {
-              "required_b_mm": null,
-              "ok": true,
-              "notApplicable": true
-            },
-            "warnings": [],
-            "beta_n_mm_min": 0.8,
-            "d_char_mm": 48,
-            "d_eff_mm": 55,
-            "bfi_mm": 1000,
-            "hfi_mm": 95,
-            "M_Rd_fi_kNm": 38.17575,
-            "qdFire_kN_m": 3.7233264834,
-            "L_bending_fire_m": 9.056767579945301,
-            "L_shear_fire_m": 91.85334714126348,
-            "L_fire_governing_m": 9.056767579945301,
-            "Max_span": 4.711525030833781
-          }
-        ]
-      },
-      "wood_stud_compression": null,
-      "wood_capacity_table": {
-        "type": "floor_span",
-        "columns": [
-          "normal_temperature",
-          "R30",
-          "R60"
-        ],
-        "rows": [
-          {
-            "label": "Portee maximale gouvernante",
-            "normal_temperature": {
-              "value": 4.71,
-              "unit": "m"
-            },
-            "R30": {
-              "value": 4.71,
-              "unit": "m"
-            },
-            "R60": {
-              "value": 4.71,
-              "unit": "m"
-            }
-          },
-          {
-            "label": "Portee par flexion",
-            "normal_temperature": {
-              "value": 8.26,
-              "unit": "m"
-            },
-            "R30": {
-              "value": 11.34,
-              "unit": "m"
-            },
-            "R60": {
-              "value": 9.06,
-              "unit": "m"
-            }
-          },
-          {
-            "label": "Portee par cisaillement",
-            "normal_temperature": {
-              "value": 48.34,
-              "unit": "m"
-            },
-            "R30": {
-              "value": 115.06,
-              "unit": "m"
-            },
-            "R60": {
-              "value": 91.85,
-              "unit": "m"
-            }
-          },
-          {
-            "label": "Portee par fleche",
-            "normal_temperature": {
-              "value": 6.98,
-              "unit": "m"
-            },
-            "R30": null,
-            "R60": null
-          },
-          {
-            "label": "Portee par vibration",
-            "normal_temperature": {
-              "value": 4.71,
-              "unit": "m"
-            },
-            "R30": null,
-            "R60": null
-          }
-        ]
-      }
+      "RF_external_min": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -7264,8 +6748,7 @@
       "databaseId": "minergie",
       "externalId": null,
       "url": null
-    },
-    "subcategoryId": "standard"
+    }
   },
   {
     "id": "17CF64C2-0F9E-424C-A692-8D9698923FAD",

@@ -395,7 +395,9 @@ function Element() {
                             <td style={tableCellStyle}>Série</td>
                             <td style={tableCellStyle}>{renderLayerName(term.layer)}</td>
                             <td style={tableCellStyle}>
-                              {term.included
+                              {term.isAirLayer
+                                ? 'Rair = 0,180 m²K/W (valeur conventionnelle)'
+                                : term.included
                                 ? `R = e / λ = ${formatNumber(term.thickness_m, 3)} / ${formatNumber(term.conductivity_W_mK, 3)}`
                                 : 'Non incluse : épaisseur ou conductivité λ manquante'}
                             </td>
@@ -411,7 +413,14 @@ function Element() {
                           <td style={tableCellStyle}>
                             {term.paths.map((path, pathIndex) => (
                               <div key={pathIndex}>
-                                {renderLayerName(path.layer)} — f{pathIndex + 1} = {formatNumber(path.fraction, 3)}, R{pathIndex + 1} = {path.resistance_m2K_W === null ? 'N/A' : formatNumber(path.resistance_m2K_W, 3)}
+                                {path.label || renderLayerName(path.layer)} — f{pathIndex + 1} = {formatNumber(path.fraction, 3)}, λ{pathIndex + 1} = {path.conductivity_W_mK === null
+                                  ? path.isAirLayer ? '— (air)' : 'N/A'
+                                  : `${formatNumber(path.conductivity_W_mK, 3)} W/mK`},{' '}
+                                {path.airResistance_m2K_W > 0 && path.materialResistance_m2K_W > 0
+                                  ? `R${pathIndex + 1} = Rmat + Rair = ${formatNumber(path.materialResistance_m2K_W, 3)} + ${formatNumber(path.airResistance_m2K_W, 3)} = ${formatNumber(path.resistance_m2K_W, 3)}`
+                                  : path.airResistance_m2K_W > 0
+                                    ? `R${pathIndex + 1} = Rair = ${formatNumber(path.airResistance_m2K_W, 3)}`
+                                    : `R${pathIndex + 1} = ${path.resistance_m2K_W === null ? 'N/A' : formatNumber(path.resistance_m2K_W, 3)}`}
                               </div>
                             ))}
                           </td>

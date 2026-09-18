@@ -48,6 +48,14 @@ const editableMaterial = (material) => ({
   }), {}),
 });
 
+const newMaterial = () => editableMaterial({
+  __isNew: true,
+  workingtitle: '',
+  materialTypeId: '',
+  materialcategoryId: '',
+  functionId: '',
+});
+
 const materialPayload = (material, { duplicate = false } = {}) => {
   const payload = clone(material);
   Object.keys(payload).filter((key) => key.startsWith('__')).forEach((key) => delete payload[key]);
@@ -60,6 +68,7 @@ const materialPayload = (material, { duplicate = false } = {}) => {
 
 export default function MaterialEditor() {
   const { id } = useParams();
+  const isCreating = id === 'new';
   const navigate = useNavigate();
   const { lang } = useContext(LangContext);
   const { user, can, request } = useAuth();
@@ -76,8 +85,8 @@ export default function MaterialEditor() {
     Promise.all([loadMaterials({ forceRefresh: true }), request('/api/organizations').catch(() => ({ organizations: [] }))])
       .then(async ([materials, organizationPayload]) => {
         if (!active) return;
-        let found = materials.find((item) => String(item.id) === String(id));
-        if (!found) {
+        let found = isCreating ? newMaterial() : materials.find((item) => String(item.id) === String(id));
+        if (!found && !isCreating) {
           const directPayload = await request(`/api/content/materials/item/${encodeURIComponent(id)}`)
             .catch((error) => (error.status === 404 ? null : Promise.reject(error)));
           found = directPayload?.item || null;
@@ -91,10 +100,11 @@ export default function MaterialEditor() {
       .catch((error) => active && setMessage(error.message))
       .finally(() => active && setLoading(false));
     return () => { active = false; };
-  }, [id, request]);
+  }, [id, isCreating, request]);
 
   const canModify = useMemo(() => {
     if (!material) return false;
+    if (material.__isNew) return true;
     if (!material.__contentId) return can('dashboard');
     if (user?.role === 'admin' || material.__ownerId === user?.id) return true;
     return Boolean(material.__organizationId && organizations.some((organization) => (
@@ -131,7 +141,21 @@ export default function MaterialEditor() {
     if (!material || !canModify) return;
     setMessage('Enregistrement…');
     try {
-      if (material.__contentId) {
+      if (material.__isNew) {
+        if (!validateSharing()) return;
+        const response = await request('/api/content/materials', {
+          method: 'POST',
+          body: JSON.stringify({
+            item: materialPayload(material, { duplicate: true }),
+            visibility,
+            organizationId: visibility === 'organization' ? organizationId : null,
+          }),
+        });
+        setMaterial(editableMaterial(response.item));
+        setVisibility(response.item.__visibility || 'private');
+        setOrganizationId(response.item.__organizationId || '');
+        navigate(`/material-custom/${response.item.id}`, { replace: true });
+      } else if (material.__contentId) {
         if (canManageVisibility && !validateSharing()) return;
         const body = { item: materialPayload(material) };
         if (canManageVisibility) {
@@ -186,13 +210,13 @@ export default function MaterialEditor() {
   if (!material) return <><Header /><main className="collab-page"><p>Matériau introuvable.</p><Link to="/">Retour</Link></main></>;
 
   return <><Header /><main className="collab-page">
-    <header><span>Matériaux</span><h1>Modifier ou dupliquer un matériau</h1></header>
+    <header><span>Matériaux</span><h1>{isCreating ? 'Créer un matériau' : 'Modifier ou dupliquer un matériau'}</h1></header>
     {message && <div className="collab-message">{message}</div>}
 
     <section className="collab-card">
       <div className="collab-title">
-        <div><h2>{material.translations?.[lang]?.name || material.translations?.fr?.name || material.workingtitle || 'Sans nom'}</h2><p>Identifiant : <code>{material.id}</code></p></div>
-        <Link to={`/material/${material.id}`}>Voir la fiche</Link>
+        <div><h2>{material.translations?.[lang]?.name || material.translations?.fr?.name || material.workingtitle || 'Sans nom'}</h2><p>{isCreating ? 'L’identifiant sera créé automatiquement.' : <>Identifiant : <code>{material.id}</code></>}</p></div>
+        {!isCreating && <Link to={`/material/${material.id}`}>Voir la fiche</Link>}
       </div>
       <div className="collab-form collab-form-row">
         {FIELDS.map((field) => <label key={field}>{dashboardFieldLabel(field, lang)}<small>{field}</small><input type={NUMERIC_FIELDS.has(field) ? 'number' : 'text'} step={NUMERIC_FIELDS.has(field) ? 'any' : undefined} value={material[field] ?? ''} onChange={(event) => setField(field, event.target.value)} /></label>)}
@@ -207,7 +231,7 @@ export default function MaterialEditor() {
     </section>
 
     <section className="collab-card">
-      <h2>Partage de la copie</h2>
+      <h2>{isCreating ? 'Partage' : 'Partage de la copie'}</h2>
       <div className="collab-form collab-form-row">
         <label>Visibilité<select value={visibility} onChange={(event) => { setVisibility(event.target.value); if (event.target.value !== 'organization') setOrganizationId(''); }}><option value="private">Privé</option><option value="organization" disabled={!organizations.length}>Organisation</option><option value="public">Public</option></select></label>
         {visibility === 'organization' && <label>Organisation<select value={organizationId} onChange={(event) => setOrganizationId(event.target.value)}><option value="">Sélectionner…</option>{organizations.map((organization) => <option key={organization.id} value={organization.id}>{organization.name}</option>)}</select></label>}
@@ -215,8 +239,8 @@ export default function MaterialEditor() {
       {material.__contentId && !canManageVisibility && <p>Ce choix s’applique à la copie ; la visibilité du matériau d’origine reste inchangée.</p>}
       {!canModify && <p>Vous ne pouvez pas modifier ce matériau directement. Vous pouvez toutefois en créer une copie.</p>}
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '16px' }}>
-        {canModify && <button type="button" onClick={save}>Enregistrer</button>}
-        <button type="button" onClick={duplicate}>Dupliquer matériau</button>
+        {canModify && <button type="button" onClick={save}>{isCreating ? 'Créer le matériau' : 'Enregistrer'}</button>}
+        {!isCreating && <button type="button" onClick={duplicate}>Dupliquer matériau</button>}
       </div>
     </section>
   </main></>;

@@ -24,11 +24,15 @@
         "description": null
       },
       "en": {
-        "name": null,
+        "name": "Concrete and brick wall GrandChenes",
         "description": null
       },
       "de": {
-        "name": null,
+        "name": "Beton-Backsteinwand GrandChenes",
+        "description": null
+      },
+      "it": {
+        "name": "Parete in calcestruzzo e laterizio GrandChenes",
         "description": null
       }
     },
@@ -357,6 +361,10 @@
       "de": {
         "name": "Aussenwand D1233 Ständer",
         "description": "Aussenwand mit einer Tragkonstruktion bestehend aus Ständer mit Hohlraumdämmung in der Tragkonstruktion. Beplankung aussen & innen, aussen doppelt beplankt, innen doppelt beplankt. Ohne Bekleidung. Hinterlüftete Fassade."
+      },
+      "it": {
+        "name": "Parete esterna D1233 Montanti RE",
+        "description": "Parete esterna costituita da una struttura di base in montanti con isolamento nell’intercapedine della struttura portante. Rivestita sul lato esterno e interno, con doppia pannellatura esterna, con doppia pannellatura interna. Senza rivestimento. Facciata ventilata."
       }
     },
     "structure": {
@@ -1068,11 +1076,15 @@
         "description": null
       },
       "en": {
-        "name": null,
+        "name": "Below-ground concrete external wall, 25 cm, with 20 cm external XPS insulation, U 0.17 W/m²K",
         "description": null
       },
       "de": {
-        "name": null,
+        "name": "Betonaussenwand 25 cm unter Terrain mit 20 cm XPS-Aussendämmung, U 0,17 W/m²K",
+        "description": null
+      },
+      "it": {
+        "name": "Parete esterna interrata in calcestruzzo, 25 cm, con isolamento esterno XPS da 20 cm, U 0,17 W/m²K",
         "description": null
       }
     },
@@ -1326,11 +1338,15 @@
         "description": null
       },
       "en": {
-        "name": null,
+        "name": "Below-ground concrete external wall, 25 cm, with 20 cm external XPS insulation, U 0.17 W/m²K",
         "description": null
       },
       "de": {
-        "name": null,
+        "name": "Betonaussenwand 25 cm unter Terrain mit 20 cm XPS-Aussendämmung, U 0,17 W/m²K",
+        "description": null
+      },
+      "it": {
+        "name": "Parete esterna interrata in calcestruzzo, 25 cm, con isolamento esterno XPS da 20 cm, U 0,17 W/m²K",
         "description": null
       }
     },

@@ -564,7 +564,7 @@ function Building() {
                   <label>
                     <span>Trier par</span>
                     <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
-                      <option value="">Ordre d’origine</option>
+                      <option value="">---</option>
                       <option value="name">Nom</option>
                       <option value="thickness">Épaisseur</option>
                       <option value="weight">Masse surfacique</option>
