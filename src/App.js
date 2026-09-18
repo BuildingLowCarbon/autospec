@@ -7,8 +7,14 @@ import DashboardShell from './page/DashboardShell';
 import Building from './page/Building';
 import Material from './page/Material';
 import Product from './page/Product';
+import Login from './page/Login';
+import ProtectedRoute from './components/ProtectedRoute';
+import Profile from './page/Profile';
+import Organizations from './page/Organizations';
+import MaterialEditor from './page/MaterialEditor';
 import React, { useState } from 'react';
 import LangContext from './context/LangContext';
+import { AuthProvider } from './context/AuthContext';
 import { SelectedItemsProvider } from './context/SelectedItemsContext';
 import { SelectedFactorsProvider } from './context/SelectedFactorsContext';
 
@@ -19,16 +25,24 @@ function App() {
       <SelectedItemsProvider>
         <SelectedFactorsProvider>
           <Router>
-            <Routes>
-              <Route path="/" element={<Filters />} />
-              <Route path="/tbz-result" element={<TbzResult />} />
-              <Route path="/element/:id" element={<Element />} />
-              <Route path="/custom/:id" element={<Custom />} />
-              <Route path="/dashboard/:section?" element={<DashboardShell />} />
-              <Route path="/building" element={<Building />} />
-              <Route path="/material/:id" element={<Material />} />
-              <Route path="/product/:id" element={<Product />} />
-            </Routes>
+            <AuthProvider>
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Filters />} />
+                <Route path="/tbz-result" element={<TbzResult />} />
+                <Route path="/element/:id" element={<Element />} />
+                <Route path="/building" element={<Building />} />
+                <Route path="/material/:id" element={<Material />} />
+                <Route path="/product/:id" element={<Product />} />
+                <Route element={<ProtectedRoute permission="app" />}>
+                  <Route path="/custom/:id" element={<Custom />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/organizations" element={<Organizations />} />
+                  <Route path="/material-custom/:id" element={<MaterialEditor />} />
+                </Route>
+                <Route path="/dashboard/:section?" element={<ProtectedRoute permission="dashboard"><DashboardShell /></ProtectedRoute>} />
+              </Routes>
+            </AuthProvider>
           </Router>
         </SelectedFactorsProvider>
       </SelectedItemsProvider>

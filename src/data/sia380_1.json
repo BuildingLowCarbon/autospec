@@ -1,0 +1,117 @@
+{
+  "standard": "SIA 380/1:2016",
+  "section": "2.2.2.2",
+  "table": 2,
+  "title": "Valeurs limites des coefficients de transmission thermique pour les bâtiments à construire et une température intérieure de 20 °C",
+  "indoor_temperature_C": 20,
+  "unit": "W/(m²·K)",
+  "limit_type": "Uli_max",
+  "contexts": {
+    "exterior": {
+      "label": {
+        "fr": "Extérieur",
+        "de": "Aussenluft",
+        "en": "Exterior",
+        "it": "Esterno"
+      },
+      "source_column": "extérieur ou enterré à moins de 2 m",
+      "limits": {
+        "opaque_element": 0.17,
+        "window_or_glazed_door": 1.0,
+        "door": 1.2,
+        "door_over_6_m2": 1.7,
+        "shutter_box": 0.5
+      }
+    },
+    "buried_less_than_2m": {
+      "label": {
+        "fr": "Enterré à moins de 2 m",
+        "de": "Weniger als 2 m im Erdreich",
+        "en": "Buried less than 2 m",
+        "it": "Interrato a meno di 2 m"
+      },
+      "source_column": "extérieur ou enterré à moins de 2 m",
+      "limits": {
+        "opaque_element": 0.17,
+        "window_or_glazed_door": 1.0,
+        "door": 1.2,
+        "door_over_6_m2": 1.7,
+        "shutter_box": 0.5
+      }
+    },
+    "unheated_space": {
+      "label": {
+        "fr": "Locaux non chauffés",
+        "de": "Unbeheizte Räume",
+        "en": "Unheated spaces",
+        "it": "Locali non riscaldati"
+      },
+      "source_column": "locaux non chauffés ou enterrés à plus de 2 m",
+      "limits": {
+        "opaque_element": 0.25,
+        "window_or_glazed_door": 1.3,
+        "door": 1.5,
+        "door_over_6_m2": 2.0,
+        "shutter_box": 0.5
+      }
+    },
+    "buried_more_than_2m": {
+      "label": {
+        "fr": "Enterré à plus de 2 m",
+        "de": "Mehr als 2 m im Erdreich",
+        "en": "Buried more than 2 m",
+        "it": "Interrato a più di 2 m"
+      },
+      "source_column": "locaux non chauffés ou enterrés à plus de 2 m",
+      "limits": {
+        "opaque_element": 0.25,
+        "window_or_glazed_door": 1.3,
+        "door": 1.5,
+        "door_over_6_m2": 2.0,
+        "shutter_box": 0.5
+      }
+    }
+  },
+  "application_mapping": [
+    {
+      "building_part": "outer_walls",
+      "categoryId": "outer_wall",
+      "subcategoryId": "above_ground",
+      "context": "exterior",
+      "element_type": "opaque_element"
+    },
+    {
+      "building_part": "roof",
+      "categoryIds": ["flat_roof_shed_roof", "steep_roof", "underground_roof"],
+      "context": "exterior",
+      "element_type": "opaque_element"
+    },
+    {
+      "building_part": "windows",
+      "context": "exterior",
+      "element_type": "window_or_glazed_door"
+    },
+    {
+      "building_part": "underground_walls",
+      "categoryId": "outer_wall",
+      "subcategoryId": "below_ground",
+      "context": "unheated_space",
+      "element_type": "opaque_element"
+    },
+    {
+      "building_part": "foundation",
+      "categoryId": "foundation",
+      "context": "unheated_space",
+      "element_type": "opaque_element"
+    }
+  ],
+  "categories_without_thermal_requirement": [
+    "inner_wall",
+    "partition_wall",
+    "balcony"
+  ],
+  "source": {
+    "reference": "SIA 380/1:2016, 2.2.2.2, Tableau 2",
+    "note": "Valeurs limites Uli pour les bâtiments à construire et une température intérieure de 20 °C."
+  }
+}

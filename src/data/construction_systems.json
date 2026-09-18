@@ -1,0 +1,124 @@
+{
+  "systems": [
+    {
+      "id": "concrete",
+      "label": { "fr": "Construction en béton", "de": "Betonbau", "en": "Concrete construction", "it": "Costruzione in calcestruzzo" }
+    },
+    {
+      "id": "masonry",
+      "label": { "fr": "Maçonnerie", "de": "Mauerwerk", "en": "Masonry", "it": "Muratura" }
+    },
+    {
+      "id": "light_gauge_steel_frame",
+      "label": { "fr": "Ossature métallique légère", "de": "Leichtstahlbau", "en": "Light-gauge steel framing", "it": "Struttura leggera in acciaio" }
+    },
+    {
+      "id": "bresta_solid_timber_system",
+      "label": {
+        "fr": "Système en bois massif Bresta",
+        "de": "Bresta-Massivholzsystem",
+        "en": "Bresta solid timber system",
+        "it": "Sistema in legno massiccio Bresta"
+      }
+    },
+    {
+      "id": "bresta_solid_timber_system_planked_on_one_side",
+      "label": {
+        "fr": "Système Bresta avec planches sur une face",
+        "de": "Bresta-System einseitig beplankt",
+        "en": "Bresta system planked on one side",
+        "it": "Sistema Bresta rivestito su un lato"
+      }
+    },
+    {
+      "id": "hollow_box_element",
+      "label": {
+        "fr": "Élément en caisson",
+        "de": "Hohlkastenelement",
+        "en": "Hollow-box element",
+        "it": "Elemento scatolare"
+      }
+    },
+    {
+      "id": "ribs",
+      "label": {
+        "fr": "Nervures",
+        "de": "Rippen",
+        "en": "Ribs",
+        "it": "Nervature"
+      }
+    },
+    {
+      "id": "ribs_joists",
+      "label": {
+        "fr": "Nervures / solives",
+        "de": "Rippen / Balken",
+        "en": "Ribs / joists",
+        "it": "Nervature / travetti"
+      }
+    },
+    {
+      "id": "ribs_rafters",
+      "label": {
+        "fr": "Nervures / chevrons",
+        "de": "Rippen / Sparren",
+        "en": "Ribs / rafters",
+        "it": "Nervature / travetti di falda"
+      }
+    },
+    {
+      "id": "solid_timber_derived_wood_products",
+      "label": {
+        "fr": "Bois massif et dérivés du bois",
+        "de": "Massivholz und Holzwerkstoffe",
+        "en": "Solid timber and derived wood products",
+        "it": "Legno massiccio e derivati del legno"
+      }
+    },
+    {
+      "id": "solid_wood_panel",
+      "label": {
+        "fr": "Panneau en bois massif",
+        "de": "Massivholzplatte",
+        "en": "Solid wood panel",
+        "it": "Pannello in legno massiccio"
+      }
+    },
+    {
+      "id": "stud",
+      "label": {
+        "fr": "Ossature à montants",
+        "de": "Ständerkonstruktion",
+        "en": "Stud framing",
+        "it": "Struttura a montanti"
+      }
+    },
+    {
+      "id": "timber_concrete_composite_floor_tccf",
+      "label": {
+        "fr": "Plancher mixte bois-béton",
+        "de": "Holz-Beton-Verbunddecke",
+        "en": "Timber-concrete composite floor",
+        "it": "Solaio misto legno-calcestruzzo"
+      }
+    },
+    {
+      "id": "concrete",
+      "label": {
+        "fr": "Béton",
+        "de": "Beton",
+        "en": "Concrete",
+        "it": "Calcestruzzo"
+      }
+    },
+    {
+      "id": "masonry",
+      "label": {
+        "fr": "Maçonnerie",
+        "de": "Mauerwerk",
+        "en": "Masonry",
+        "it": "Muratura"
+      }
+    }
+  ]
+}

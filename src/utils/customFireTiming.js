@@ -4,6 +4,9 @@ import {
 } from './woodFloorResistance';
 import { calculateStudCompressionCapacity } from './woodStudResistance';
 import { isSupportStructureLayer, normalizeSupportStructure } from './supportStructure';
+import { getLayerMaterialCategoryIds } from './materialCategory';
+
+const WOOD_STRUCTURE_CATEGORIES = new Set(['holz', 'holzwerkstoff']);
 
 const toNumberOrNull = (value) => {
   if (value === null || value === undefined || value === '') return null;
@@ -197,6 +200,12 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
   let woodCapacityTable = null;
   if (supportIndex >= 0) {
     const supportLayer = layers[supportIndex];
+    const supportMaterialCategoryIds = getLayerMaterialCategoryIds(supportLayer, materialById, productById);
+    const isWoodSupport = supportMaterialCategoryIds.length > 0 &&
+      supportMaterialCategoryIds.every((categoryId) => WOOD_STRUCTURE_CATEGORIES.has(categoryId));
+    const nonWoodMessage = supportMaterialCategoryIds.length
+      ? `Calcul bois non applicable à la structure (${supportMaterialCategoryIds.join(', ')}).`
+      : 'Calcul bois non applicable : catégorie du matériau porteur inconnue.';
     const declaredWidth_mm = toNumberOrNull(supportLayer?.width_mm);
     const h_mm = toNumberOrNull(supportLayer?.thickness_mm);
     const declaredSpacing_mm = toNumberOrNull(supportLayer?.spacing_mm);
@@ -216,7 +225,9 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
     const vibration_f_min_Hz =
       toNumberOrNull(component?.fire_resistance?.vibration_f_min_Hz) ?? 8;
 
-    if (component.categoryId === 'floor_assembly' && b_mm > 0 && h_mm > 0 && spacing_mm > 0) {
+    if (component.categoryId === 'floor_assembly' && !isWoodSupport) {
+      woodBeamSpanResult = { error: nonWoodMessage };
+    } else if (component.categoryId === 'floor_assembly' && b_mm > 0 && h_mm > 0 && spacing_mm > 0) {
       try {
         woodBeamSpanResult = calculateWoodBeamSpan({
           b_mm,
@@ -228,6 +239,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
           occupancyKey: 'A1_habitation',
           woodFamily: 'solid_softwood',
           woodClass: 'C24',
+          materialCategoryIds: supportMaterialCategoryIds,
           fireExposureFaces,
           fireRatings_min: [30, 60],
           t_protection_min,
@@ -244,7 +256,9 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
     }
 
     const isLoadBearingWall = ['outer_wall', 'inner_wall'].includes(component.categoryId);
-    if (isLoadBearingWall && b_mm > 0 && h_mm > 0) {
+    if (isLoadBearingWall && !isWoodSupport) {
+      woodStudCompressionResult = { error: nonWoodMessage };
+    } else if (isLoadBearingWall && b_mm > 0 && h_mm > 0) {
       try {
         const bucklingLength_mm =
           toNumberOrNull(component?.fire_resistance?.bucklingLength_mm) ??
@@ -263,6 +277,7 @@ export const applyCustomFireTimingToComponent = (component, materials = [], prod
           eccentricity_along_b_mm: 0,
           woodFamily: 'solid_softwood',
           woodClass: 'C24',
+          materialCategoryIds: supportMaterialCategoryIds,
           fireRatings_min: [30, 60],
           fireExposureFaces,
           t_protection_min,

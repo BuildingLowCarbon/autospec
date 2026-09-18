@@ -20,7 +20,8 @@ import sia265Data from '../data/sia265.json' with { type: 'json' };
  * Hypothèses principales :
  * - section rectangulaire pleine
  * - montant modélisé comme une barre comprimée
- * - flambage sur axe faible
+ * - flambage uniquement dans le sens de l'épaisseur h du mur
+ * - stabilité dans l'autre sens assurée par un panneau de contreventement continu
  * - charge excentrée modélisée par eccentricity_along_h_mm et eccentricity_along_b_mm
  * - incendie via section résiduelle fictive SIA 265
  */
@@ -146,11 +147,14 @@ function compressionBucklingCapacity_NT({
   const iy_mm = radiusOfGyration_mm(Iy_mm4, A_mm2);
   const iz_mm = radiusOfGyration_mm(Iz_mm4, A_mm2);
 
-  const i_min_mm = Math.min(iy_mm, iz_mm);
+  // h correspond à l'épaisseur du mur. Le flambage est vérifié uniquement
+  // dans cette direction ; le montant est supposé maintenu dans l'autre sens
+  // par un panneau de contreventement continu.
+  const i_thickness_mm = iy_mm;
 
   const { lambda, lambda_rel } = relativeSlenderness({
     bucklingLength_mm,
-    i_mm: i_min_mm,
+    i_mm: i_thickness_mm,
     fc0_k_N_mm2: wood.fc0_k_N_mm2,
     E0_05_N_mm2: wood.E0_05_N_mm2
   });
@@ -168,7 +172,9 @@ function compressionBucklingCapacity_NT({
     Iz_mm4,
     iy_mm,
     iz_mm,
-    i_min_mm,
+    i_thickness_mm,
+    bucklingDirection: "wall_thickness_h",
+    bracedOtherDirection: true,
     lambda,
     lambda_rel,
     kc,

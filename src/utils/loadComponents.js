@@ -1,17 +1,15 @@
 import {
   mergeById,
-  readLocalCustomComponents,
-  withCustomSource,
-  writeLocalCustomComponents,
 } from './customComponentsStore';
 import { normalizeSupportStructure } from './supportStructure';
 import { normalizeComponentTaxonomy } from './componentTaxonomy';
+import { normalizeComponentStructureType } from './componentStructureType';
 let cachedComponents = null;
 let cachedDbSources = null;
-let cachedFileCustomComponents = null;
+let cachedUserContent = null;
 
 const normalizeComponent = (component) =>
-  normalizeComponentTaxonomy(normalizeSupportStructure(component));
+  normalizeComponentStructureType(normalizeComponentTaxonomy(normalizeSupportStructure(component)));
 
 const fetchJson = async (path) => {
   try {
@@ -28,18 +26,31 @@ const fetchJson = async (path) => {
   }
 };
 
-const fetchJsonResult = async (path) => {
+const fetchUserContent = async () => {
+  if (cachedUserContent) return cachedUserContent;
   try {
-    const res = await fetch(path);
-    if (!res.ok) {
-      console.warn(`Impossible de charger ${path} (status ${res.status})`);
-      return { ok: false, items: [] };
-    }
-    const payload = await res.json();
-    return { ok: true, items: Array.isArray(payload) ? payload : [] };
+    const read = async (url) => {
+      const response = await fetch(url, { cache: 'no-store' });
+      return response.ok ? response.json() : { items: [], sources: [] };
+    };
+    const [publicPayload, authenticatedPayload] = await Promise.all([
+      read('/api/public/content/components'),
+      read('/api/content/components'),
+    ]);
+    const itemMap = new Map();
+    [...(publicPayload.items || []), ...(authenticatedPayload.items || [])]
+      .forEach((item) => itemMap.set(String(item.__contentId || item.id), item));
+    const sourceMap = new Map();
+    [...(publicPayload.sources || []), ...(authenticatedPayload.sources || [])]
+      .forEach((source) => sourceMap.set(source.file, source));
+    cachedUserContent = {
+      items: Array.from(itemMap.values()),
+      sources: Array.from(sourceMap.values()),
+    };
+    return cachedUserContent;
   } catch (error) {
-    console.error(`Erreur de chargement pour ${path}:`, error);
-    return { ok: false, items: [] };
+    console.error('Erreur de chargement des composants MongoDB:', error);
+    return { items: [], sources: [] };
   }
 };
 
@@ -70,11 +81,13 @@ export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
         : file.replace('.json', '').replace(/_/g, ' ');
       normalized.push({ file, label });
     });
-    cachedDbSources = normalized;
+    const userContent = await fetchUserContent();
+    cachedDbSources = [...normalized, ...userContent.sources.filter((source) => !seen.has(source.file))];
     return cachedDbSources;
   }
   console.warn('Manifest db_files.json introuvable ou vide.');
-  cachedDbSources = [];
+  const userContent = await fetchUserContent();
+  cachedDbSources = userContent.sources;
   return cachedDbSources;
 };
 
@@ -86,7 +99,12 @@ export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
   return [];
 };
 
-export const loadComponents = async () => {
+export const loadComponents = async ({ forceRefresh = false } = {}) => {
+  if (forceRefresh) {
+    cachedComponents = null;
+    cachedDbSources = null;
+    cachedUserContent = null;
+  }
   if (cachedComponents) return cachedComponents;
 
   const base = process.env.PUBLIC_URL || '';
@@ -95,31 +113,25 @@ export const loadComponents = async () => {
     cachedComponents = [];
     return cachedComponents;
   }
-  const results = await Promise.all(
-    dbFiles.map((file) =>
+  const systemFiles = dbFiles.filter((file) => !file.startsWith('user:') && !file.startsWith('organization:') && !file.startsWith('community:'));
+  const [results, userContent] = await Promise.all([
+    Promise.all(systemFiles.map((file) =>
       fetchJson(`${base}/db/${file}`).then((items) => items.map((item) =>
         normalizeComponent({ ...item, __sourceFile: file })
       ))
-    )
-  );
+    )),
+    fetchUserContent(),
+  ]);
 
-  if (cachedFileCustomComponents === null) {
-    const fileCustom = await fetchJsonResult(`${base}/db/components_custom.json`);
-    if (fileCustom.ok) {
-      writeLocalCustomComponents(fileCustom.items.map(normalizeComponent));
-    }
-    cachedFileCustomComponents = fileCustom.items.map((item) => normalizeComponent(withCustomSource(item)));
-  }
-
-  const localCustom = readLocalCustomComponents().map((item) => normalizeComponent(withCustomSource(item)));
-  cachedComponents = mergeById([...results.flat(), ...cachedFileCustomComponents, ...localCustom]);
+  cachedComponents = mergeById([...results.flat(), ...userContent.items.map(normalizeComponent)]);
 
   return cachedComponents;
 };
 
 export const invalidateComponentsCache = () => {
   cachedComponents = null;
-  cachedFileCustomComponents = null;
+  cachedDbSources = null;
+  cachedUserContent = null;
 };
 
 export default loadComponents;

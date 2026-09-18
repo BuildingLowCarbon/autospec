@@ -8,6 +8,7 @@ import partitionRatioImageFr from '../assets/illustrations/parameters/partition-
 import partitionRatioImageEn from '../assets/illustrations/parameters/partition-ratio-Minergie_EN.png';
 import partitionRatioImageIt from '../assets/illustrations/parameters/partition-ratio-Minergie_IT.png';
 import { getRequirementCategoryIds } from '../utils/componentTaxonomy';
+import { matchesFireRuleConditions } from '../utils/fireRequirements';
 
 const FIRE_R_VALUES = ['R0', 'R30', 'R60'];
 const FIRE_EI_VALUES = ['EI0', 'EI30', 'EI60'];
@@ -43,7 +44,7 @@ const pickFireValue = (requirements, categoryId, key, scale) => {
     .filter((requirement) => getRequirementCategoryIds(requirement).includes(categoryId))
     .map((requirement) => scale.indexOf(requirement.filter?.[key]))
     .filter((index) => index >= 0);
-  return indexes.length ? scale[Math.min(...indexes)] : scale[0];
+  return indexes.length ? scale[Math.max(...indexes)] : scale[0];
 };
 
 const pickAcousticValue = (requirements, categoryId, key, mode) => {
@@ -105,7 +106,7 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
   const [neighborDistance, setNeighborDistance] = useState(persistedCriteria.neighborDistance ?? 'gt_10');
   const [acousticLevel, setAcousticLevel] = useState(persistedCriteria.acousticLevel ?? 'normal');
   const [uncertainty, setUncertainty] = useState(persistedCriteria.uncertainty ?? 2);
-  const [requiredSpan, setRequiredSpan] = useState(persistedCriteria.requiredSpan ?? 0);
+  const [requiredSpan, setRequiredSpan] = useState(persistedCriteria.requiredSpan ?? 4);
   const [spanDirection, setSpanDirection] = useState(persistedCriteria.spanDirection ?? 'width');
   const [floorLoadDistribution, setFloorLoadDistribution] = useState(persistedCriteria.floorLoadDistribution ?? 'one_way');
   const [interiorBearingLinesOverride, setInteriorBearingLinesOverride] = useState(
@@ -152,12 +153,13 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
   );
 
   const matchedFireRule = useMemo(
-    () => fireRequirements.rules?.find((rule) =>
-      rule.conditions?.use === 'residential' &&
-      rule.conditions?.building_type === buildingType &&
-      rule.conditions?.building_height === buildingHeight
-    ) ?? null,
-    [buildingHeight, buildingType],
+    () => fireRequirements.rules?.find((rule) => matchesFireRuleConditions(rule.conditions, {
+      use: 'residential',
+      buildingType,
+      buildingHeight,
+      aboveGroundLevels: normalizedFloorCount,
+    })) ?? null,
+    [buildingHeight, buildingType, normalizedFloorCount],
   );
 
   const acousticRule = useMemo(
@@ -286,7 +288,7 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
     setNeighborDistance('gt_10');
     setAcousticLevel('normal');
     setUncertainty(2);
-    setRequiredSpan(0);
+    setRequiredSpan(4);
     setSpanDirection('width');
     setFloorLoadDistribution('one_way');
     setInteriorBearingLinesOverride('');

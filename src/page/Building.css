@@ -388,6 +388,25 @@
   font-weight: 700;
 }
 
+.building-sort-controls .building-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  align-self: end;
+  flex-direction: row;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 5px;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.building-filter-toggle input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
 .building-sort-controls select {
   min-width: 130px;
   padding: 7px 9px;

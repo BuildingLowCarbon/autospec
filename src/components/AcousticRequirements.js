@@ -98,6 +98,9 @@ export default function AcousticRequirementsModule({
   }, [applyToFilters, requirementLevel, uncertainty, resolvedRequirements, onApplyChange]);
 
   const formatRequirementLabel = (req) => {
+    if (req.categoryTargets?.length) {
+      return req.categoryTargets.map((target) => target.label).filter(Boolean).join(" / ");
+    }
     const element = elementsById.get(req.element_id);
     const elementLabel = tr(element?.label) || req.element_id;
     const subtypeLabel =

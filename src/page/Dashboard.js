@@ -1,7 +1,5 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import LangContext from '../context/LangContext';
 import categoriesData from '../data/categories.json';
 import kbobData from '../data/KBOB_mat_db.json';
 import loadMaterials from '../utils/loadMaterials';
@@ -9,12 +7,9 @@ import loadProducts from '../utils/loadProducts';
 import { fetchDbSources, invalidateComponentsCache } from '../utils/loadComponents';
 import { calculateComponentProperties } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
-import { normalizeComponentTaxonomy } from '../utils/componentTaxonomy';
 import {
   deleteFileCustomComponent,
   deleteLocalCustomComponent,
-  mergeById,
-  withCustomSource,
   writeDbComponentsFile,
   writeLocalCustomComponents,
 } from '../utils/customComponentsStore';
@@ -88,7 +83,6 @@ const pickSelectedValues = (base, calculated, timed, selectedRecalc) => {
 };
 
 export default function Dashboard() {
-  const { lang, setLang } = useContext(LangContext);
   const [sources, setSources] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [selectedRecalc, setSelectedRecalc] = useState(
@@ -156,7 +150,7 @@ export default function Dashboard() {
     return items;
   };
 
-  const handleRecalculateToCustom = async () => {
+  const handleRecalculateSources = async () => {
     if (!selectedFiles.length || !selectedRecalcCount) return;
     setBusy(true);
     setStatus('Recalcul en cours...');
@@ -167,32 +161,24 @@ export default function Dashboard() {
         ),
       );
 
-      const recalculated = dbPayloads.flatMap(({ file, items }) =>
-        items.map((item) => {
-          const sourcePreserved = normalizeComponentTaxonomy({
-            ...item,
-            __sourceFile: 'components_custom.json',
-            source: item.source ?? {
-              databaseId: file.replace('.json', ''),
-              name: file.replace('.json', '').replace(/_/g, ' '),
-            },
-          });
+      const recalculatedDatabases = dbPayloads.map(({ file, items }) => ({
+        file,
+        items: items.map((item) => {
+          const sourcePreserved = { ...item };
           const calculated = calculateComponentProperties(sourcePreserved, materials, products, kbobData, {
             categories: categoriesData?.categories ?? [],
             componentServiceLifeYears: 60,
           });
           const timed = applyCustomFireTimingToComponent(calculated, materials, products);
-          return withCustomSource(pickSelectedValues(sourcePreserved, calculated, timed, selectedRecalc));
+          return pickSelectedValues(sourcePreserved, calculated, timed, selectedRecalc);
         }),
-      );
+      }));
 
-      const existingFileCustom = await fetchJsonArray('/db/components_custom.json');
-      const merged = mergeById([...existingFileCustom, ...recalculated]);
-      writeLocalCustomComponents(merged);
-      await writeDbComponentsFile('components_custom.json', merged);
+      await Promise.all(recalculatedDatabases.map(({ file, items }) => writeDbComponentsFile(file, items)));
       invalidateComponentsCache();
-      setCustomItems(merged);
-      setStatus(`${recalculated.length} elements recalcules et enregistres dans custom (${selectedSourceLabels}).`);
+      if (selectedFiles.includes('components_custom.json')) await refreshCustomItems();
+      const recalculatedCount = recalculatedDatabases.reduce((count, database) => count + database.items.length, 0);
+      setStatus(`${recalculatedCount} elements recalcules dans leur base d'origine (${selectedSourceLabels}).`);
     } catch (error) {
       setStatus(`Erreur: ${error.message}`);
     } finally {
@@ -218,16 +204,14 @@ export default function Dashboard() {
   };
 
   return (
-    <>
-      <Header lang={lang} setLang={setLang} />
-      <main style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h2>Dashboard bases de donnees</h2>
+      <div className="db-components-page">
+        <h2>Composants</h2>
 
         <section style={cardStyle}>
-          <h3>Recalculer vers Custom</h3>
+          <h3>Recalculer les proprietes</h3>
           <p>
-            Les elements recalcules sont ajoutes ou mis a jour dans <strong>components_custom.json</strong>.
-            La source d'origine est conservee.
+            Les valeurs selectionnees sont recalculees directement dans chaque base d'origine.
+            La composition et les identifiants des composants restent inchanges.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
@@ -262,11 +246,11 @@ export default function Dashboard() {
 
           <button
             type="button"
-            onClick={handleRecalculateToCustom}
+            onClick={handleRecalculateSources}
             disabled={busy || !selectedCount || !selectedRecalcCount}
             style={{ ...buttonStyle, marginTop: '12px' }}
           >
-            Recalculer les elements selectionnes vers custom
+            Recalculer dans les bases d'origine
           </button>
         </section>
 
@@ -328,7 +312,6 @@ export default function Dashboard() {
             {status}
           </div>
         ) : null}
-      </main>
-    </>
+      </div>
   );
 }

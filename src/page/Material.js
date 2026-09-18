@@ -4,11 +4,14 @@ import Header from '../components/Header';
 import LangContext from '../context/LangContext';
 import loadMaterials from '../utils/loadMaterials';
 import { dashboardFieldLabel, dashboardText } from './dashboard/dashboardI18n';
+import { useAuth } from '../context/AuthContext';
 
 function Material() {
   const { id } = useParams();
   const [material, setMaterial] = useState(null);
+  const [authMessage, setAuthMessage] = useState('');
   const { lang, setLang } = useContext(LangContext);
+  const { user, loading: authLoading } = useAuth();
   const t = dashboardText(lang);
 
   useEffect(() => {
@@ -60,6 +63,12 @@ function Material() {
           <strong>{materialName || workingtitle || 'Sans nom'}</strong>
         </p>
         {materialDescription ? <p>{materialDescription}</p> : null}
+        <div style={{ margin: '14px 0' }}>
+          {user
+            ? <Link to={`/material-custom/${material.id}`} style={{ display: 'inline-block', padding: '8px 12px', border: '1px solid #777', borderRadius: '5px', background: '#f7f7f7', color: '#222', textDecoration: 'none' }}>Modifier / dupliquer</Link>
+            : <button type="button" disabled={authLoading} onClick={() => setAuthMessage('Connectez-vous pour accéder à cette fonction')} style={{ padding: '8px 12px', border: '1px solid #777', borderRadius: '5px', background: '#f7f7f7', cursor: authLoading ? 'wait' : 'pointer' }}>Modifier / dupliquer</button>}
+          {authMessage && <div style={{ marginTop: '8px', color: '#9b2c2c', fontWeight: 700 }}>{authMessage}</div>}
+        </div>
         <p>
           <strong>{dashboardFieldLabel('id', lang)} :</strong> {material.id}
         </p>

@@ -48,28 +48,17 @@ const formatRange = (range) => {
   return `${formatMass(range.min)} – ${formatMass(range.max)}`;
 };
 
-const formatLineMass = (value) => {
-  if (!Number.isFinite(value)) return 'N/A';
-  if (value >= 1000) return `${(value / 1000).toLocaleString('fr-CH', { maximumFractionDigits: 2 })} t/m`;
-  return `${Math.round(value).toLocaleString('fr-CH')} kg/m`;
-};
-
 const formatLineRange = (range) => {
   if (!range) return 'N/A';
   const tolerance = Math.max(1, range.max) * 0.0001;
-  const mass = Math.abs(range.max - range.min) <= tolerance
-    ? formatLineMass(range.min)
-    : `${formatLineMass(range.min)} – ${formatLineMass(range.max)}`;
   const knMin = range.min * GRAVITY_M_S2 / 1000;
   const knMax = range.max * GRAVITY_M_S2 / 1000;
-  const force = Math.abs(knMax - knMin) <= tolerance * GRAVITY_M_S2 / 1000
+  return Math.abs(knMax - knMin) <= tolerance * GRAVITY_M_S2 / 1000
     ? `${knMin.toLocaleString('fr-CH', { maximumFractionDigits: 1 })} kN/m`
     : `${knMin.toLocaleString('fr-CH', { maximumFractionDigits: 1 })} – ${knMax.toLocaleString('fr-CH', { maximumFractionDigits: 1 })} kN/m`;
-  return `${mass} (${force})`;
 };
 
-function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {} }) {
-  const result = useMemo(() => {
+export const calculateBuildingWeightInfo = (building, selectedItems = [], candidatesByPart = {}) => {
     const floorCount = Math.max(1, Math.round(Number(building?.floorCount) || 1));
     const length = Math.max(0, Number(building?.length) || 0);
     const width = Math.max(0, Number(building?.width) || 0);
@@ -198,7 +187,13 @@ function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {
       nonBearingPartitionLength,
       levels,
     };
-  }, [building, candidatesByPart, selectedItems]);
+};
+
+function BuildingWeightInfo({ building, selectedItems = [], candidatesByPart = {} }) {
+  const result = useMemo(
+    () => calculateBuildingWeightInfo(building, selectedItems, candidatesByPart),
+    [building, candidatesByPart, selectedItems],
+  );
 
   return (
     <section className="building-panel building-weight-info">

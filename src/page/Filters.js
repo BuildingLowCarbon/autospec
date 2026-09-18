@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import translations from '../language/translations';
 import dataTranslations from '../language/dataTranslations';
+import categoriesData from '../data/categories.json';
 import LangContext from '../context/LangContext';
 import FireRequirementsModule from '../components/FireRequirements';
 import AcousticRequirementsModule from '../components/AcousticRequirements';
@@ -15,6 +16,10 @@ import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import SourceSelector from '../components/SourceSelector';
 import ENtebTool from '../components/ENteb/ENteb_tool';
 import { getAcousticInsulation } from '../utils/acoustic';
+import {
+  getComponentStructureTypeId,
+  getComponentStructureTypeOptions,
+} from '../utils/componentStructureType';
 
 const valueSatisfies = (itemValue, selectedValue, scale) => {
   const selectedIdx = scale.indexOf(selectedValue);
@@ -25,8 +30,8 @@ const valueSatisfies = (itemValue, selectedValue, scale) => {
   return valueIdx >= selectedIdx;
 };
 
-const pickLowestRequirementValue = (requirements, categoryId, key, scale) => {
-  let bestIdx = Number.POSITIVE_INFINITY;
+const pickHighestRequirementValue = (requirements, categoryId, key, scale) => {
+  let bestIdx = Number.NEGATIVE_INFINITY;
   requirements.forEach((req) => {
     const reqVal = req?.filter?.[key];
     if (!reqVal) return;
@@ -35,7 +40,7 @@ const pickLowestRequirementValue = (requirements, categoryId, key, scale) => {
     if (!applies) return;
     const idx = scale.indexOf(reqVal);
     if (idx === -1) return;
-    if (idx < bestIdx) bestIdx = idx;
+    if (idx > bestIdx) bestIdx = idx;
   });
   return Number.isFinite(bestIdx) ? scale[bestIdx] : null;
 };
@@ -178,6 +183,9 @@ function App() {
   const [gwpRange, setGwpRange] = useState([0, 100]);
   const [categoryOptions, setCategoryOptions] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(persistedFilters.selectedCategory ?? '');
+  const [selectedStructureTypes, setSelectedStructureTypes] = useState(
+    Array.isArray(persistedFilters.selectedStructureTypes) ? persistedFilters.selectedStructureTypes : []
+  );
   const [sourceOptions, setSourceOptions] = useState([]);
   const [selectedSources, setSelectedSources] = useState(
     Array.isArray(persistedFilters.selectedSources) ? persistedFilters.selectedSources : []
@@ -214,6 +222,8 @@ function App() {
   const { lang, setLang } = useContext(LangContext);
   const t = translations[lang];
   const categoryLabel = useCallback((categoryId) =>
+    categoriesData.categories?.find((category) => category.id === categoryId)?.label?.[lang] ??
+    categoriesData.categories?.find((category) => category.id === categoryId)?.label?.fr ??
     dataTranslations.categories?.[categoryId]?.[lang] ??
     dataTranslations.categories?.[categoryId]?.fr ??
     categoryId,
@@ -224,6 +234,7 @@ function App() {
       use: 'residential',
       building_type: '',
       building_height: '',
+      above_ground_levels: 2,
       neighbor_distance: 'gt_10',
     }
   );
@@ -324,6 +335,20 @@ function App() {
     fetchData();
   }, [persistedFilters]);
 
+  const structureTypeOptions = useMemo(() => getComponentStructureTypeOptions(
+    data.filter((item) => !selectedCategory || item.categoryId === selectedCategory),
+    lang,
+  ), [data, lang, selectedCategory]);
+
+  useEffect(() => {
+    if (!data.length) return;
+    const available = structureTypeOptions.map((option) => option.value);
+    setSelectedStructureTypes((current) => {
+      const valid = current.filter((typeId) => available.includes(typeId));
+      return valid.length ? valid : available;
+    });
+  }, [data.length, structureTypeOptions]);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const payload = {
@@ -331,6 +356,7 @@ function App() {
       sortBy,
       sortOrder,
       selectedCategory,
+      selectedStructureTypes,
       selectedSources,
       selectedThickness,
       selectedGwp,
@@ -352,6 +378,7 @@ function App() {
     sortBy,
     sortOrder,
     selectedCategory,
+    selectedStructureTypes,
     selectedSources,
     selectedThickness,
     selectedGwp,
@@ -396,6 +423,8 @@ function App() {
       const lnwAllowed = !lnwFilterActive || !hasLnwVal || (lnwVal >= selectedAcousticLnw[0] && lnwVal <= selectedAcousticLnw[1]);
       const sourceFile = item.__sourceFile || '';
       const sourceAllowed = selectedSources.length > 0 && selectedSources.includes(sourceFile);
+      const structureTypeId = getComponentStructureTypeId(item);
+      const structureTypeAllowed = !structureTypeId || selectedStructureTypes.includes(structureTypeId);
       return (
         (thickness === null || (thickness >= selectedThickness[0] && thickness <= selectedThickness[1])) &&
         (gwp === null || (gwp >= selectedGwp[0] && gwp <= selectedGwp[1])) &&
@@ -404,12 +433,14 @@ function App() {
         rwAllowed &&
         lnwAllowed &&
         (selectedCategory === '' || category === selectedCategory) &&
+        structureTypeAllowed &&
         sourceAllowed
       );
     });
   }, [
     data,
     selectedCategory,
+    selectedStructureTypes,
     selectedSources,
     selectedThickness,
     selectedGwp,
@@ -428,9 +459,11 @@ function App() {
       const inCategory = selectedCategory ? item.categoryId === selectedCategory : true;
       const src = item.__sourceFile || '';
       const inSource = selectedSources.length > 0 && selectedSources.includes(src);
-      return inCategory && inSource;
+      const structureTypeId = getComponentStructureTypeId(item);
+      const inStructureType = !structureTypeId || selectedStructureTypes.includes(structureTypeId);
+      return inCategory && inSource && inStructureType;
     });
-  }, [data, selectedCategory, selectedSources]);
+  }, [data, selectedCategory, selectedSources, selectedStructureTypes]);
 
   const matchesFireFilters = useCallback(
     (item) => {
@@ -569,8 +602,8 @@ function App() {
   useEffect(() => {
     if (!fireReqApplied || !fireReqRequirements.length) return;
     const targetCategory = selectedCategory || null;
-    const nextR = pickLowestRequirementValue(fireReqRequirements, targetCategory, 'R', FIRE_R_VALUES);
-    const nextEI = pickLowestRequirementValue(fireReqRequirements, targetCategory, 'EI', FIRE_EI_VALUES);
+    const nextR = pickHighestRequirementValue(fireReqRequirements, targetCategory, 'R', FIRE_R_VALUES);
+    const nextEI = pickHighestRequirementValue(fireReqRequirements, targetCategory, 'EI', FIRE_EI_VALUES);
     if (nextR) setFireRValue(nextR);
     if (nextEI) setFireEIValue(nextEI);
   }, [fireReqApplied, fireReqRequirements, selectedCategory]);
@@ -673,6 +706,7 @@ function App() {
     setSortBy('');
     setSortOrder('asc');
     setSelectedCategory('');
+    setSelectedStructureTypes(getComponentStructureTypeOptions(data, lang).map((option) => option.value));
     setSelectedSources(sourceOptions.map((option) => option.value));
     setSelectedThickness([...thicknessRange]);
     setSelectedGwp([...gwpRange]);
@@ -689,6 +723,7 @@ function App() {
       use: 'residential',
       building_type: '',
       building_height: '',
+      above_ground_levels: 2,
       neighbor_distance: 'gt_10',
     });
     setAcousticReqApplied(false);
@@ -696,7 +731,7 @@ function App() {
     setAcousticReqSelection({ requirement_level: 'normal', uncertainty_dB: 2 });
     setFireApplyResetSignal((signal) => signal + 1);
     setAcousticApplyResetSignal((signal) => signal + 1);
-  }, [acousticLnwRange, acousticRwRange, floorSpanRange, gwpRange, sourceOptions, thicknessRange, uValueRange]);
+  }, [acousticLnwRange, acousticRwRange, data, floorSpanRange, gwpRange, lang, sourceOptions, thicknessRange, uValueRange]);
   const filteredCount = filteredData.length;
 
   return (
@@ -778,7 +813,10 @@ function App() {
             <label>{t.category}</label>
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setSelectedStructureTypes([]);
+              }}
               style={{ width: '100%', marginBottom: '12px' }}
             >
               <option value="">-- {t.all} --</option>
@@ -788,6 +826,15 @@ function App() {
                 </option>
               ))}
             </select>
+            {structureTypeOptions.length > 0 && (
+              <SourceSelector
+                label="Système constructif"
+                options={structureTypeOptions}
+                selected={selectedStructureTypes}
+                onChange={setSelectedStructureTypes}
+                allLabel={t.all}
+              />
+            )}
             <SourceSelector
               label={t.sources}
               options={sourceOptions}

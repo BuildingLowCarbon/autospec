@@ -3,21 +3,33 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import BuildingCriteria from '../components/BuildingCriteria';
 import BuildingDiagram, { getBuildingPart, getRoofCategory } from '../components/BuildingDiagram';
-import BuildingWeightInfo from '../components/BuildingWeightInfo';
-import ComponentCard from '../components/ComponentCard';
+import BuildingWeightInfo, { calculateBuildingWeightInfo } from '../components/BuildingWeightInfo';
+import ComponentCard, { getWallLinearResistance } from '../components/ComponentCard';
 import { R_OPTIONS, EI_OPTIONS } from '../components/FireFilter';
 import RangeSlider from '../components/RangeSlider';
 import SourceSelector from '../components/SourceSelector';
 import LangContext from '../context/LangContext';
 import SelectedItemsContext from '../context/SelectedItemsContext';
 import translations from '../language/translations';
+import sia3801 from '../data/sia380_1.json';
 import { getAcousticInsulation } from '../utils/acoustic';
 import { componentMatchesTaxonomy } from '../utils/componentTaxonomy';
+import {
+  getComponentStructureTypeId,
+  getComponentStructureTypeOptions,
+} from '../utils/componentStructureType';
 import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import './Building.css';
 
 const PAGE_SIZE = 50;
 const BUILDING_STATE_STORAGE_KEY = 'autospec-building-state';
+const GRAVITY_M_S2 = 9.81;
+
+const getThermalLimitForPart = (partId) => {
+  const mapping = sia3801.application_mapping?.find((entry) => entry.building_part === partId);
+  if (!mapping) return null;
+  return finiteNumber(sia3801.contexts?.[mapping.context]?.limits?.[mapping.element_type]);
+};
 
 const loadPersistedBuildingState = () => {
   if (typeof window === 'undefined') return {};
@@ -133,7 +145,7 @@ function Building() {
     acousticLnwLimit: null,
     acousticRwMin: null,
     acousticLnwMax: null,
-    requiredSpan: 0,
+      requiredSpan: 4,
     building: {
       floorCount: 2,
       length: 10,
@@ -147,7 +159,7 @@ function Building() {
       occupancyKey: 'A1_habitation',
       occupancyLabel: 'Habitation',
       occupancyLoadKnM2: 2,
-      maxBuildingSpan: 0,
+      maxBuildingSpan: 4,
     },
   });
   const [advancedOpen, setAdvancedOpen] = useState(persistedState.advancedOpen ?? false);
@@ -159,6 +171,10 @@ function Building() {
   const [advancedRanges, setAdvancedRanges] = useState(persistedState.advancedRanges ?? null);
   const [sortBy, setSortBy] = useState(persistedState.sortBy ?? '');
   const [sortOrder, setSortOrder] = useState(persistedState.sortOrder ?? 'asc');
+  const [filtersEnabled, setFiltersEnabled] = useState(persistedState.filtersEnabled ?? true);
+  const [selectedStructureTypes, setSelectedStructureTypes] = useState(
+    Array.isArray(persistedState.selectedStructureTypes) ? persistedState.selectedStructureTypes : [],
+  );
 
   const activePart = getBuildingPart(selectedPart);
   const activeCategories = useMemo(
@@ -169,6 +185,16 @@ function Building() {
     () => activePart.subcategories ?? [],
     [activePart],
   );
+  const thermalUValueLimit = getThermalLimitForPart(selectedPart);
+  const recommendedUValue = ['roof', 'outer_walls'].includes(selectedPart)
+    ? criteria.recommendedUValue
+    : null;
+  const applicableThermalValues = [thermalUValueLimit, recommendedUValue]
+    .map(finiteNumber)
+    .filter((value) => value !== null);
+  const appliedThermalUValue = applicableThermalValues.length
+    ? Math.min(...applicableThermalValues)
+    : null;
   const floorFireRating = criteria.fireR || R_OPTIONS[0];
   const getActiveFloorSpan = useCallback(
     (item) => getFloorSpanForRating(item, floorFireRating) ?? (
@@ -210,11 +236,13 @@ function Building() {
         advancedRanges,
         sortBy,
         sortOrder,
+        filtersEnabled,
+        selectedStructureTypes,
       }));
     } catch (error) {
       // Storage can be unavailable (for example in private browsing); the page remains usable.
     }
-  }, [advancedOpen, advancedRanges, roofType, selectedPart, selectedSources, sortBy, sortOrder]);
+  }, [advancedOpen, advancedRanges, filtersEnabled, roofType, selectedPart, selectedSources, selectedStructureTypes, sortBy, sortOrder]);
 
   const bounds = useMemo(() => ({
     thickness: extent(data, (item) => item.thickness_mm, [0, 1000]),
@@ -254,7 +282,9 @@ function Building() {
     setAdvancedOpen(false);
     setSortBy('');
     setSortOrder('asc');
+    setFiltersEnabled(true);
     setSelectedSources(sourceOptions.map((option) => option.value));
+    setSelectedStructureTypes(getComponentStructureTypeOptions(data, lang).map((option) => option.value));
     setAdvancedRanges({
       thickness: bounds.thickness,
       gwp: bounds.gwp,
@@ -264,53 +294,40 @@ function Building() {
       lnw: bounds.lnw,
     });
     setPage(0);
-  }, [bounds, sourceOptions]);
+  }, [bounds, data, lang, sourceOptions]);
 
   const categoryData = useMemo(
     () => data.filter((item) => componentMatchesTaxonomy(item, activeCategories, activeSubcategories)),
     [activeCategories, activeSubcategories, data],
   );
 
+  const structureTypeOptions = useMemo(
+    () => getComponentStructureTypeOptions(categoryData, lang),
+    [categoryData, lang],
+  );
+
+  useEffect(() => {
+    if (!data.length) return;
+    const available = structureTypeOptions.map((option) => option.value);
+    setSelectedStructureTypes((current) => {
+      const valid = current.filter((typeId) => available.includes(typeId));
+      return valid.length ? valid : available;
+    });
+  }, [data.length, structureTypeOptions]);
+
   const fireThresholdR = criteria.fireR;
   const fireThresholdEI = criteria.fireEI;
 
-  const filteredData = useMemo(() => categoryData.filter((item) => {
-    if (sourceOptions.length && selectedSources.length && !selectedSources.includes(item.__sourceFile || '')) return false;
-    const thickness = finiteNumber(item.thickness_mm);
-    const gwp = finiteNumber(item.gwp_kgco2e_m2);
-    const uValue = finiteNumber(item.uValue_W_m2K);
-    const span = getActiveFloorSpan(item);
-    const acoustic = getAcousticInsulation(item);
-    const passesThermal = !['outer_walls', 'underground_walls'].includes(selectedPart) || criteria.recommendedUValue === null || uValue === null || uValue <= criteria.recommendedUValue;
-    const declaredFireR = fireRating(item, 'R');
-    const declaredFireEI = fireRating(item, 'EI');
-    const calculatedFloorFireR = item.categoryId === 'floor_assembly'
-      ? getFloorSpanForRating(item, fireThresholdR)
-      : null;
-    const fireRPasses = calculatedFloorFireR !== null
-      ? calculatedFloorFireR > 0
-      : declaredFireR === null || ratingIndex(declaredFireR, R_OPTIONS) >= ratingIndex(fireThresholdR, R_OPTIONS);
-    const fireEIPasses = declaredFireEI === null ||
-      ratingIndex(declaredFireEI, EI_OPTIONS) >= ratingIndex(fireThresholdEI, EI_OPTIONS);
-    const passesFire = selectedPart === 'roof' || (
-      fireRPasses && fireEIPasses
-    );
-    const passesAcoustic =
-      (criteria.acousticRwMin === null || acoustic.rwCorrected === null || acoustic.rwCorrected >= criteria.acousticRwMin) &&
-      (selectedPart !== 'floors' || criteria.acousticLnwMax === null || acoustic.lnwCorrected === null || acoustic.lnwCorrected <= criteria.acousticLnwMax);
-    const passesRequiredSpan = criteria.requiredSpan <= 0 || item.categoryId !== 'floor_assembly' || span === null || span >= criteria.requiredSpan;
-    const passesAdvancedSpan = item.categoryId !== 'floor_assembly' || passesRange(span, ranges.span);
-    return passesThermal && passesFire && passesAcoustic && passesRequiredSpan && passesAdvancedSpan &&
-      passesRange(thickness, ranges.thickness) &&
-      passesRange(gwp, ranges.gwp) &&
-      passesRange(uValue, ranges.uValue) &&
-      passesRange(acoustic.rwCorrected, ranges.rw) &&
-      (selectedPart !== 'floors' || passesRange(acoustic.lnwCorrected, ranges.lnw));
-  }), [categoryData, criteria, fireThresholdEI, fireThresholdR, getActiveFloorSpan, ranges, selectedPart, selectedSources, sourceOptions.length]);
+  const availableCategoryData = useMemo(() => categoryData.filter((item) =>
+    (!sourceOptions.length || !selectedSources.length || selectedSources.includes(item.__sourceFile || '')) &&
+    (!getComponentStructureTypeId(item) || selectedStructureTypes.includes(getComponentStructureTypeId(item)))
+  ), [categoryData, selectedSources, selectedStructureTypes, sourceOptions.length]);
 
   const weightCandidatesByPart = useMemo(() => {
     const matchesCommonFilters = (item, partId) => {
       if (sourceOptions.length && selectedSources.length && !selectedSources.includes(item.__sourceFile || '')) return false;
+      const structureTypeId = getComponentStructureTypeId(item);
+      if (partId === selectedPart && structureTypeId && !selectedStructureTypes.includes(structureTypeId)) return false;
       const thickness = finiteNumber(item.thickness_mm);
       const gwp = finiteNumber(item.gwp_kgco2e_m2);
       const uValue = finiteNumber(item.uValue_W_m2K);
@@ -332,9 +349,85 @@ function Building() {
         componentMatchesTaxonomy(item, categories, part.subcategories) && matchesCommonFilters(item, partId)
       );
     });
-    result[selectedPart] = filteredData;
     return result;
-  }, [data, filteredData, getActiveFloorSpan, ranges, roofType, selectedPart, selectedSources, sourceOptions.length]);
+  }, [data, getActiveFloorSpan, ranges, roofType, selectedPart, selectedSources, selectedStructureTypes, sourceOptions.length]);
+
+  const buildingWeightResult = useMemo(
+    () => calculateBuildingWeightInfo(criteria.building, selectedItems, weightCandidatesByPart),
+    [criteria.building, selectedItems, weightCandidatesByPart],
+  );
+  const wallLinearLoads = useMemo(() => {
+    const lowestLevel = buildingWeightResult.levels.find((level) => level.level === 1)
+      ?? buildingWeightResult.levels[buildingWeightResult.levels.length - 1];
+    const toForce = (range) => {
+      const maximumMass = finiteNumber(range?.max);
+      return maximumMass === null ? null : maximumMass * GRAVITY_M_S2 / 1000;
+    };
+    return {
+      outer_walls: toForce(lowestLevel?.exterior),
+      interior_walls: toForce(lowestLevel?.interior),
+    };
+  }, [buildingWeightResult]);
+  const requiredWallLinearLoad = wallLinearLoads[selectedPart] ?? null;
+
+  const getItemFilterFailures = useCallback((item) => {
+    const failures = new Set();
+    const thickness = finiteNumber(item.thickness_mm);
+    const gwp = finiteNumber(item.gwp_kgco2e_m2);
+    const uValue = finiteNumber(item.uValue_W_m2K);
+    const span = getActiveFloorSpan(item);
+    const acoustic = getAcousticInsulation(item);
+    const passesThermal = appliedThermalUValue === null || uValue === null || uValue <= appliedThermalUValue;
+    const declaredFireR = fireRating(item, 'R');
+    const declaredFireEI = fireRating(item, 'EI');
+    const calculatedFloorFireR = item.categoryId === 'floor_assembly'
+      ? getFloorSpanForRating(item, fireThresholdR)
+      : null;
+    const fireRPasses = calculatedFloorFireR !== null
+      ? calculatedFloorFireR > 0
+      : declaredFireR === null || ratingIndex(declaredFireR, R_OPTIONS) >= ratingIndex(fireThresholdR, R_OPTIONS);
+    const fireEIPasses = declaredFireEI === null ||
+      ratingIndex(declaredFireEI, EI_OPTIONS) >= ratingIndex(fireThresholdEI, EI_OPTIONS);
+    const passesFire = selectedPart === 'roof' || (
+      fireRPasses && fireEIPasses
+    );
+    const passesRequiredSpan = criteria.requiredSpan <= 0 || item.categoryId !== 'floor_assembly' || span === null || span >= criteria.requiredSpan;
+    const passesAdvancedSpan = item.categoryId !== 'floor_assembly' || passesRange(span, ranges.span);
+    const isLoadBearingWallPart = ['outer_walls', 'interior_walls'].includes(selectedPart);
+    const wallLinearResistance = isLoadBearingWallPart
+      ? getWallLinearResistance(item, fireThresholdR)
+      : null;
+    const passesWallLinearResistance = !isLoadBearingWallPart ||
+      requiredWallLinearLoad === null ||
+      wallLinearResistance === null ||
+      wallLinearResistance >= requiredWallLinearLoad;
+    if (!passesThermal || !passesRange(uValue, ranges.uValue)) failures.add('uValue');
+    if (!passesRange(thickness, ranges.thickness)) failures.add('thickness');
+    if (!passesRange(gwp, ranges.gwp)) failures.add('gwp');
+    if (criteria.acousticRwMin !== null && acoustic.rwCorrected !== null && acoustic.rwCorrected < criteria.acousticRwMin) failures.add('rw');
+    if (!passesRange(acoustic.rwCorrected, ranges.rw)) failures.add('rw');
+    if (selectedPart === 'floors') {
+      if (criteria.acousticLnwMax !== null && acoustic.lnwCorrected !== null && acoustic.lnwCorrected > criteria.acousticLnwMax) failures.add('lnw');
+      if (!passesRange(acoustic.lnwCorrected, ranges.lnw)) failures.add('lnw');
+      if (!passesRequiredSpan || !passesAdvancedSpan) failures.add(`span:${fireThresholdR}`);
+    }
+    if (!passesWallLinearResistance) failures.add(`linearResistance:${fireThresholdR}`);
+    if (!passesFire) {
+      if (!fireRPasses) {
+        failures.add('fireR');
+        if (item.categoryId === 'floor_assembly') failures.add(`span:${fireThresholdR}`);
+      }
+      if (!fireEIPasses) failures.add('fireEI');
+    }
+    return failures;
+  }, [appliedThermalUValue, criteria, fireThresholdEI, fireThresholdR, getActiveFloorSpan, ranges, requiredWallLinearLoad, selectedPart]);
+
+  const filteredData = useMemo(
+    () => availableCategoryData.filter((item) => getItemFilterFailures(item).size === 0),
+    [availableCategoryData, getItemFilterFailures],
+  );
+
+  const displayedData = filtersEnabled ? filteredData : availableCategoryData;
 
   const bars = useMemo(() => ({
     thickness: histogram(categoryData, (item) => item.thickness_mm, ...bounds.thickness),
@@ -346,10 +439,10 @@ function Building() {
   }), [bounds, categoryData, getActiveFloorSpan]);
 
   const sortedData = useMemo(() => {
-    if (!sortBy) return filteredData;
+    if (!sortBy) return displayedData;
     const direction = sortOrder === 'desc' ? -1 : 1;
     const collator = new Intl.Collator(lang, { sensitivity: 'base', numeric: true });
-    return [...filteredData].sort((a, b) => {
+    return [...displayedData].sort((a, b) => {
       if (sortBy === 'name') return direction * collator.compare(displayName(a, lang), displayName(b, lang));
       const accessor = {
         thickness: (item) => item.thickness_mm,
@@ -366,14 +459,14 @@ function Building() {
       if (bValue === null) return -1;
       return direction * (aValue - bValue);
     });
-  }, [filteredData, getActiveFloorSpan, lang, sortBy, sortOrder]);
+  }, [displayedData, getActiveFloorSpan, lang, sortBy, sortOrder]);
 
   useEffect(() => {
     if (sortBy === 'span' && selectedPart !== 'floors') setSortBy('');
   }, [selectedPart, sortBy]);
 
-  useEffect(() => setPage(0), [criteria, ranges, selectedPart, selectedSources, sortBy, sortOrder]);
-  const totalPages = Math.max(1, Math.ceil(filteredData.length / PAGE_SIZE));
+  useEffect(() => setPage(0), [criteria, filtersEnabled, ranges, selectedPart, selectedSources, sortBy, sortOrder]);
+  const totalPages = Math.max(1, Math.ceil(displayedData.length / PAGE_SIZE));
   const visibleData = sortedData.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   const toggleSelectedItem = (item) => setSelectedItems((current) =>
@@ -392,9 +485,15 @@ function Building() {
           <div className="building-content">
             <BuildingDiagram
               selectedPart={selectedPart}
-              onSelectPart={setSelectedPart}
+              onSelectPart={(partId) => {
+                setSelectedPart(partId);
+                setSelectedStructureTypes([]);
+              }}
               roofType={roofType}
-              onRoofTypeChange={setRoofType}
+              onRoofTypeChange={(type) => {
+                setRoofType(type);
+                setSelectedStructureTypes([]);
+              }}
             />
 
             <BuildingWeightInfo
@@ -422,7 +521,9 @@ function Building() {
             <section className="building-panel">
               <h3>Informations — {activePart.label}</h3>
               <div className="building-requirement-values">
-                {['outer_walls', 'underground_walls'].includes(selectedPart) && <div><span>Valeur U max.</span><strong>{criteria.recommendedUValue === null ? 'N/A' : `${criteria.recommendedUValue.toFixed(3)} W/m²K`}</strong></div>}
+                {thermalUValueLimit !== null && <div><span>Valeur U limite</span><strong>{thermalUValueLimit.toFixed(3)} W/m²K</strong></div>}
+                {recommendedUValue !== null && <div><span>Valeur U recommandée</span><strong>{recommendedUValue.toFixed(3)} W/m²K</strong></div>}
+                {['outer_walls', 'interior_walls'].includes(selectedPart) && <div><span>Charge linéique requise</span><strong>{requiredWallLinearLoad === null ? 'N/A' : `${requiredWallLinearLoad.toFixed(1)} kN/m`}</strong></div>}
                 {selectedPart !== 'roof' && <div><span>Feu</span><strong>{fireThresholdR} / {fireThresholdEI}</strong></div>}
                 <div><span>Rw min.</span><strong>{criteria.acousticRwLimit === null ? 'N/A' : `${criteria.acousticRwLimit} dB`}</strong></div>
                 {selectedPart === 'floors' && <div><span>Ln,w max.</span><strong>{criteria.acousticLnwLimit === null ? 'N/A' : `${criteria.acousticLnwLimit} dB`}</strong></div>}
@@ -449,9 +550,17 @@ function Building() {
           <section className="building-results">
               <div className="building-results-header">
                 <h2>
-                  {activePart.label} — {filteredData.length} / {categoryData.length} résultat{categoryData.length > 1 ? 's' : ''}
+                  {activePart.label} — {displayedData.length} / {availableCategoryData.length} résultat{availableCategoryData.length > 1 ? 's' : ''}
                 </h2>
                 <div className="building-sort-controls">
+                  <label className="building-filter-toggle">
+                    <input
+                      type="checkbox"
+                      checked={filtersEnabled}
+                      onChange={(event) => setFiltersEnabled(event.target.checked)}
+                    />
+                    <span>{t.filter_results ?? 'Filtrer'}</span>
+                  </label>
                   <label>
                     <span>Trier par</span>
                     <select value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
@@ -473,8 +582,19 @@ function Building() {
                   </label>
                 </div>
               </div>
+              {structureTypeOptions.length > 0 && (
+                <div style={{ maxWidth: '420px', marginBottom: '12px' }}>
+                  <SourceSelector
+                    label="Système constructif"
+                    options={structureTypeOptions}
+                    selected={selectedStructureTypes}
+                    onChange={setSelectedStructureTypes}
+                    allLabel={t.all}
+                  />
+                </div>
+              )}
               {loading ? <p>Chargement…</p> : null}
-              {!loading && filteredData.length === 0 ? <p>Aucun composant ne correspond aux critères actuels.</p> : null}
+              {!loading && displayedData.length === 0 ? <p>Aucun composant disponible dans cette catégorie et ces sources.</p> : null}
               <div className="building-results-grid">
                 {visibleData.map((item) => (
                   <ComponentCard
@@ -485,6 +605,7 @@ function Building() {
                     onDetails={() => navigate(`/element/${item.id}`)}
                     lang={lang}
                     t={t}
+                    failedFilters={filtersEnabled ? [] : [...getItemFilterFailures(item)]}
                   />
                 ))}
               </div>

@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import { ViewSVG, DEFAULT_PX_PER_MM_X } from '../components/Graphic';
 import LangContext from '../context/LangContext';
+import { useAuth } from '../context/AuthContext';
 import translations from '../language/translations';
 import dataTranslations from '../language/dataTranslations';
 import categoriesData from '../data/categories.json';
@@ -13,10 +14,13 @@ import loadProducts from '../utils/loadProducts';
 import { calculateComponentProperties, calculateComponentThermalDetails } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
 import { DEFAULT_SUBCATEGORY_BY_CATEGORY, getSubcategoryLabel } from '../utils/componentTaxonomy';
+import { getAllComponentStructureTypeOptions } from '../utils/componentStructureType';
 import {
+  createCustomComponentId,
   mergeById,
   readLocalCustomComponents,
   writeFileCustomComponent,
+  writeFileSourceComponent,
   withCustomSource,
   writeLocalCustomComponents,
 } from '../utils/customComponentsStore';
@@ -54,13 +58,6 @@ const parseNullableNumber = (value) => {
   if (value === null || value === undefined || value === '') return null;
   const parsed = Number(value);
   return Number.isNaN(parsed) ? null : parsed;
-};
-
-const makeUuid = () => {
-  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
-    return crypto.randomUUID();
-  }
-  return `custom-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 };
 
 const safeClone = (value) => {
@@ -117,29 +114,65 @@ const cloneComponent = (component) => {
 
 function Custom() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { lang, setLang } = useContext(LangContext);
+  const { user, can, request } = useAuth();
   const t = translations[lang];
 
   const [component, setComponent] = useState(null);
+  const [loadingComponent, setLoadingComponent] = useState(true);
+  const [loadError, setLoadError] = useState('');
   const [materials, setMaterials] = useState([]);
   const [products, setProducts] = useState([]);
   const [status, setStatus] = useState('');
   const [focusedEcccIndex, setFocusedEcccIndex] = useState(null);
+  const [organizations, setOrganizations] = useState([]);
+  const [visibility, setVisibility] = useState('private');
+  const [organizationId, setOrganizationId] = useState('');
+  const canModifyComponent = useMemo(() => {
+    if (!component) return false;
+    if (!component.__contentId) return can('dashboard');
+    if (user?.role === 'admin' || component.__ownerId === user?.id) return true;
+    return Boolean(component.__organizationId && organizations.some((organization) => (
+      organization.id === component.__organizationId && organization.membershipRole === 'organization_admin'
+    )));
+  }, [can, component, organizations, user]);
 
   useEffect(() => {
+    let active = true;
     const fetchData = async () => {
-      const [allComponents, materialsJson, productsJson] = await Promise.all([
-        loadComponents(),
-        loadMaterials(),
-        loadProducts(),
-      ]);
-      const found = allComponents.find((item) => String(item.id) === String(id));
-      setComponent(found ? cloneComponent(found) : null);
-      setMaterials(materialsJson);
-      setProducts(productsJson);
+      setLoadingComponent(true);
+      setLoadError('');
+      try {
+        const [allComponents, materialsJson, productsJson, organizationPayload] = await Promise.all([
+          loadComponents({ forceRefresh: true }),
+          loadMaterials({ forceRefresh: true }),
+          loadProducts(),
+          request('/api/organizations').catch(() => ({ organizations: [] })),
+        ]);
+        if (!active) return;
+        let found = allComponents.find((item) => String(item.id) === String(id));
+        if (!found) {
+          const directPayload = await request(`/api/content/components/item/${encodeURIComponent(id)}`)
+            .catch((error) => (error.status === 404 ? null : Promise.reject(error)));
+          found = directPayload?.item || null;
+        }
+        setComponent(found ? cloneComponent(found) : null);
+        setVisibility(found?.__visibility || 'private');
+        setOrganizationId(found?.__organizationId || '');
+        setOrganizations(organizationPayload.organizations || []);
+        setMaterials(materialsJson);
+        setProducts(productsJson);
+        if (!found) setLoadError('Composant introuvable ou non accessible avec ce compte.');
+      } catch (error) {
+        if (active) setLoadError(`Chargement impossible : ${error.message}`);
+      } finally {
+        if (active) setLoadingComponent(false);
+      }
     };
     fetchData();
-  }, [id]);
+    return () => { active = false; };
+  }, [id, request]);
 
   const allComponentOptions = useMemo(() => {
     const productOptions = products.map((item) => ({
@@ -165,7 +198,10 @@ function Custom() {
     [],
   );
   const subcategoryOptions = category?.subcategories ?? [];
+  const systemTypeOptions = useMemo(() => getAllComponentStructureTypeOptions(lang), [lang]);
   const categoryLabel = (option) =>
+    option?.label?.[lang] ??
+    option?.label?.fr ??
     dataTranslations.categories?.[option.id]?.[lang] ??
     dataTranslations.categories?.[option.id]?.fr ??
     option.id;
@@ -179,6 +215,16 @@ function Custom() {
       subcategoryId: nextCategory?.subcategories?.some((item) => item.id === defaultSubcategoryId)
         ? defaultSubcategoryId
         : '',
+    }) : prev);
+  };
+
+  const handleSystemTypeChange = (systemTypeId) => {
+    setComponent((prev) => prev ? ({
+      ...prev,
+      structure: {
+        ...(prev.structure ?? {}),
+        systemTypeId: systemTypeId || null,
+      },
     }) : prev);
   };
 
@@ -359,6 +405,20 @@ function Custom() {
     } finally {
       invalidateComponentsCache();
     }
+    return customPayload;
+  };
+
+  const persistUserComponent = async (payload, contentId = null) => {
+    if (visibility === 'organization' && !organizationId) throw new Error('Sélectionnez une organisation.');
+    const response = await request(
+      contentId ? `/api/content/components/${encodeURIComponent(contentId)}` : '/api/content/components',
+      {
+        method: contentId ? 'PATCH' : 'POST',
+        body: JSON.stringify({ item: payload, visibility, organizationId: visibility === 'organization' ? organizationId : null }),
+      },
+    );
+    invalidateComponentsCache();
+    return response.item;
   };
 
   const saveCurrent = async () => {
@@ -368,19 +428,31 @@ function Custom() {
       ...componentWithFireTiming,
       ...summary,
     };
+    const sourceFile = component.__sourceFile ?? 'components_custom.json';
     try {
-      await persistComponent(payload);
-      setComponent(cloneComponent(payload));
-      setStatus('Modifications enregistrees dans components_custom.json.');
+      if (component.__contentId) {
+        const saved = await persistUserComponent(payload, component.__contentId);
+        setComponent(cloneComponent(saved));
+        setStatus('Composant utilisateur enregistré dans MongoDB.');
+      } else if (sourceFile === 'components_custom.json') {
+        const saved = await persistComponent(payload);
+        setComponent(cloneComponent(saved));
+        setStatus('Modifications enregistrees dans components_custom.json.');
+      } else {
+        await writeFileSourceComponent(sourceFile, payload);
+        invalidateComponentsCache();
+        setComponent(cloneComponent({ ...payload, __sourceFile: sourceFile }));
+        setStatus(`Modifications enregistrees dans ${sourceFile}.`);
+      }
     } catch (error) {
-      setStatus(`Sauvegarde fichier impossible. Copie locale conservee. ${error.message}`);
+      setStatus(`Sauvegarde impossible. ${error.message}`);
     }
   };
 
   const createNew = async () => {
     if (!component || !componentWithFireTiming) return;
     setStatus('Enregistrement...');
-    const newId = makeUuid();
+    const newId = createCustomComponentId();
     const payload = {
       ...componentWithFireTiming,
       ...summary,
@@ -388,19 +460,32 @@ function Custom() {
       parent: component.id ?? null,
     };
     try {
-      await persistComponent(payload);
-      setComponent(cloneComponent(payload));
-      setStatus(`Nouveau composant cree dans components_custom.json (${newId}).`);
+      const saved = await persistUserComponent(payload);
+      setComponent(cloneComponent(saved));
+      navigate(`/custom/${newId}`, { replace: true });
+      setStatus(`Nouveau composant utilisateur créé dans MongoDB (${newId}).`);
     } catch (error) {
-      setStatus(`Sauvegarde fichier impossible. Copie locale conservee (${newId}). ${error.message}`);
+      setStatus(`Sauvegarde MongoDB impossible. ${error.message}`);
     }
   };
+
+  if (loadingComponent) {
+    return (
+      <>
+        <Header lang={lang} setLang={setLang} />
+        <div style={{ padding: '20px' }}>Chargement...</div>
+      </>
+    );
+  }
 
   if (!component) {
     return (
       <>
         <Header lang={lang} setLang={setLang} />
-        <div style={{ padding: '20px' }}>Chargement...</div>
+        <div style={{ padding: '20px' }}>
+          <p style={{ color: '#9b2c2c', fontWeight: 700 }}>{loadError || 'Composant introuvable.'}</p>
+          <Link to="/organizations">Retour aux organisations</Link>
+        </div>
       </>
     );
   }
@@ -468,6 +553,19 @@ function Custom() {
             </select>
           </label>
           <label>
+            Système constructif
+            <select
+              value={component.structure?.systemTypeId ?? ''}
+              onChange={(event) => handleSystemTypeChange(event.target.value)}
+              style={{ width: '100%' }}
+            >
+              <option value="">À définir</option>
+              {systemTypeOptions.map((option) => (
+                <option key={option.value} value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </label>
+          <label>
             Nom ({lang})
             <input
               type="text"
@@ -513,9 +611,25 @@ function Custom() {
           </label>
         </div>
 
-        <div style={{ marginBottom: '16px', display: 'flex', gap: '10px' }}>
-          <button type="button" onClick={saveCurrent} style={buttonStyle}>Enregistrer</button>
-          <button type="button" onClick={createNew} style={buttonStyle}>Creer nouveau composant</button>
+        <div style={{ marginBottom: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'end' }}>
+          <label>Visibilité
+            <select value={visibility} onChange={(event) => setVisibility(event.target.value)} style={{ display: 'block', minWidth: '170px', padding: '6px' }}>
+              <option value="private">Privé</option>
+              <option value="organization" disabled={!organizations.length}>Organisation</option>
+              <option value="public">Public</option>
+            </select>
+          </label>
+          {visibility === 'organization' && <label>Organisation
+            <select value={organizationId} onChange={(event) => setOrganizationId(event.target.value)} style={{ display: 'block', minWidth: '200px', padding: '6px' }}>
+              <option value="">Sélectionner…</option>
+              {organizations.map((organization) => <option key={organization.id} value={organization.id}>{organization.name}</option>)}
+            </select>
+          </label>}
+        </div>
+
+        <div style={{ marginBottom: '16px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          {canModifyComponent && <button type="button" onClick={saveCurrent} style={buttonStyle}>Enregistrer</button>}
+          <button type="button" onClick={createNew} style={buttonStyle}>Dupliquer composant</button>
           {status ? <span>{status}</span> : null}
         </div>
 
@@ -807,6 +921,7 @@ function Custom() {
             <div style={{ marginTop: '12px', display: 'inline-block', maxWidth: '900px', padding: '12px 14px', border: '1px solid #ddd', borderRadius: '6px', background: '#fafafa' }}>
               <strong>Hypothèses du calcul des portées</strong>
               <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: 1.55 }}>
+                <li>Calcul appliqué uniquement à une structure en bois (`holz` ou `holzwerkstoff`). Catégorie détectée : {(woodBeamSpanResult.input?.materialCategoryIds ?? []).join(', ') || 'N/A'}.</li>
                 <li>Poutre simplement appuyée sur deux appuis, sous charge uniformément répartie.</li>
                 <li>
                   Section : b = {formatNumber(woodBeamSpanResult.section?.b_mm, 0)} mm, h = {formatNumber(woodBeamSpanResult.section?.h_mm, 0)} mm,
@@ -851,7 +966,9 @@ function Custom() {
             <div style={{ marginTop: '12px', display: 'inline-block', maxWidth: '900px', padding: '12px 14px', border: '1px solid #ddd', borderRadius: '6px', background: '#fafafa' }}>
               <strong>Hypothèses du calcul de résistance des parois porteuses</strong>
               <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: 1.55 }}>
-                <li>Montant modélisé comme une barre comprimée de section rectangulaire pleine ; flambage vérifié sur l’axe faible.</li>
+                <li>Calcul appliqué uniquement à une structure en bois (`holz` ou `holzwerkstoff`). Catégorie détectée : {(woodStudCompressionResult.input?.materialCategoryIds ?? []).join(', ') || 'N/A'}.</li>
+                <li>Montant modélisé comme une barre comprimée de section rectangulaire pleine ; flambage vérifié uniquement dans le sens de l’épaisseur du mur (dimension h).</li>
+                <li>Dans l’autre sens, le montant est supposé maintenu par un panneau de contreventement continu ; le flambage dans cette direction n’est donc pas vérifié.</li>
                 <li>
                   Section : b = {formatNumber(woodStudCompressionResult.input?.b_mm, 0)} mm,
                   h = {formatNumber(woodStudCompressionResult.input?.h_mm, 0)} mm,

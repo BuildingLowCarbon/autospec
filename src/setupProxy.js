@@ -11,9 +11,12 @@ const {
   validateComponents,
   writeJson,
 } = require('../server/lignumDatabase');
+const { registerAuthRoutes, requireAuth } = require('../server/authRoutes');
+const { registerCollaborationRoutes } = require('../server/collaborationRoutes');
 
 const customComponentsPath = path.resolve(__dirname, '../public/db/components_custom.json');
 const dbDir = path.resolve(__dirname, '../public/db');
+const dbManifestPath = path.join(dbDir, 'db_files.json');
 const versionsDir = path.join(dbDir, 'versions');
 const sourceComponentsDir = path.join(dbDir, 'source_database', 'lignum', 'components');
 const sourceProductsDir = path.join(dbDir, 'source_database', 'lignum', 'products');
@@ -22,6 +25,37 @@ const selectedPath = path.join(dbDir, 'components_lignum_selected.json');
 const materialsPath = path.join(dbDir, 'materials', 'tbz_materials.json');
 const productsPath = path.join(dbDir, 'products', 'tbz_products_composites.json');
 const mappingsPath = path.join(dbDir, 'mappings', 'lignum_product_tbz.json');
+const categoriesPath = path.resolve(__dirname, 'data/categories.json');
+const constructionSystemsPath = path.resolve(__dirname, 'data/construction_systems.json');
+
+const validateTaxonomyId = (value, label) => {
+  const id = String(value ?? '').trim();
+  if (!/^[a-z0-9][a-z0-9_-]*$/.test(id)) {
+    throw new Error(`${label}: identifiant obligatoire, en minuscules, sans espace.`);
+  }
+  return id;
+};
+
+const validateTaxonomies = (categories, systems) => {
+  const categoryIds = new Set();
+  categories.forEach((category) => {
+    const categoryId = validateTaxonomyId(category?.id, 'Catégorie');
+    if (categoryIds.has(categoryId)) throw new Error(`Catégorie dupliquée: ${categoryId}`);
+    categoryIds.add(categoryId);
+    const subcategoryIds = new Set();
+    (category?.subcategories ?? []).forEach((subcategory) => {
+      const subcategoryId = validateTaxonomyId(subcategory?.id, `Sous-catégorie de ${categoryId}`);
+      if (subcategoryIds.has(subcategoryId)) throw new Error(`Sous-catégorie dupliquée dans ${categoryId}: ${subcategoryId}`);
+      subcategoryIds.add(subcategoryId);
+    });
+  });
+  const systemIds = new Set();
+  systems.forEach((system) => {
+    const systemId = validateTaxonomyId(system?.id, 'Système constructif');
+    if (systemIds.has(systemId)) throw new Error(`Système constructif dupliqué: ${systemId}`);
+    systemIds.add(systemId);
+  });
+};
 
 const resolveDbFilePath = (file) => {
   const normalizedFile = String(file ?? '').trim();
@@ -57,6 +91,27 @@ const mergeById = (items) => {
   return Array.from(map.values());
 };
 
+const componentSourceFiles = () => readJson(dbManifestPath, [])
+  .map((entry) => (typeof entry === 'string' ? entry : entry?.file))
+  .filter((file) => file && file !== 'components_custom.json');
+
+const sourceComponentIds = () => {
+  const ids = new Map();
+  componentSourceFiles().forEach((file) => {
+    readJsonArray(resolveDbFilePath(file)).forEach((component) => {
+      if (component?.id !== undefined && component?.id !== null) ids.set(String(component.id), file);
+    });
+  });
+  return ids;
+};
+
+const customSourceCollisions = (components) => {
+  const sourceIds = sourceComponentIds();
+  return components
+    .filter((component) => sourceIds.has(String(component?.id)))
+    .map((component) => ({ id: component.id, sourceFile: sourceIds.get(String(component.id)) }));
+};
+
 const readRequestBody = (req) =>
   new Promise((resolve, reject) => {
     let body = '';
@@ -74,6 +129,11 @@ const readRequestBody = (req) =>
   });
 
 module.exports = function setupProxy(app) {
+  registerAuthRoutes(app);
+  registerCollaborationRoutes(app);
+  app.use(['/api/taxonomies', '/api/lignum', '/api/catalog', '/api/db', '/api/components-source'], requireAuth('dashboard'));
+  app.use('/api', requireAuth('app'));
+
   const sendJson = (res, payload, statusCode = 200) => {
     res.statusCode = statusCode;
     res.setHeader('Content-Type', 'application/json');
@@ -88,6 +148,35 @@ module.exports = function setupProxy(app) {
     writeJson(mappingsPath, derived);
     return derived;
   };
+
+  app.get('/api/taxonomies', (req, res) => {
+    try {
+      sendJson(res, {
+        ok: true,
+        categories: readJson(categoriesPath, { categories: [] }).categories ?? [],
+        systems: readJson(constructionSystemsPath, { systems: [] }).systems ?? [],
+      });
+    } catch (error) {
+      withApiError(res, error);
+    }
+  });
+
+  app.put('/api/taxonomies', async (req, res) => {
+    try {
+      const payload = await readRequestBody(req);
+      const categories = payload.categories;
+      const systems = payload.systems;
+      if (!Array.isArray(categories) || !Array.isArray(systems)) {
+        throw new Error('Payload invalide: categories[] et systems[] attendus.');
+      }
+      validateTaxonomies(categories, systems);
+      writeJson(categoriesPath, { categories });
+      writeJson(constructionSystemsPath, { systems });
+      sendJson(res, { ok: true, categoryCount: categories.length, systemCount: systems.length });
+    } catch (error) {
+      withApiError(res, error);
+    }
+  });
 
   app.get('/api/lignum/status', (req, res) => {
     try {
@@ -302,6 +391,18 @@ module.exports = function setupProxy(app) {
           ? payload.components
           : [payload.component ?? payload];
 
+      if (incoming.some((component) => !component?.id)) {
+        return sendJson(res, { ok: false, error: 'Chaque composant Custom doit avoir un nouvel ID.' }, 400);
+      }
+      const collisions = customSourceCollisions(incoming);
+      if (collisions.length) {
+        return sendJson(res, {
+          ok: false,
+          error: `ID deja utilise dans une base source: ${collisions.map(({ id, sourceFile }) => `${id} (${sourceFile})`).join(', ')}`,
+          collisions,
+        }, 409);
+      }
+
       const merged = mergeById([...readJsonArray(), ...incoming]);
       fs.mkdirSync(path.dirname(customComponentsPath), { recursive: true });
       fs.writeFileSync(customComponentsPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
@@ -312,6 +413,41 @@ module.exports = function setupProxy(app) {
       res.statusCode = 500;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ ok: false, error: error.message }));
+    }
+  });
+
+  app.put('/api/components-source/:file/:id', async (req, res) => {
+    try {
+      const file = req.params.file;
+      if (!componentSourceFiles().includes(file)) {
+        return sendJson(res, { ok: false, error: 'Base source inconnue ou non modifiable.' }, 400);
+      }
+      const targetPath = resolveDbFilePath(file);
+      const current = readJsonArray(targetPath);
+      const index = current.findIndex((item) => String(item?.id) === String(req.params.id));
+      if (index < 0) return sendJson(res, { ok: false, error: 'Composant introuvable dans sa base source.' }, 404);
+
+      const payload = await readRequestBody(req);
+      const incoming = payload.component ?? payload;
+      if (!incoming || String(incoming.id) !== String(req.params.id)) {
+        return sendJson(res, { ok: false, error: "L'ID d'un composant existant ne peut pas etre change." }, 400);
+      }
+      if (readJsonArray(customComponentsPath).some((item) => String(item?.id) === String(incoming.id))) {
+        return sendJson(res, { ok: false, error: 'Cet ID existe encore dans components_custom.json.' }, 409);
+      }
+
+      const nextComponent = { ...incoming, source: current[index]?.source ?? incoming.source };
+      delete nextComponent.__sourceFile;
+      const next = [...current];
+      next[index] = nextComponent;
+
+      const backupDirectory = path.join(versionsDir, 'component_edits', new Date().toISOString().replace(/[:.]/g, '-'));
+      fs.mkdirSync(backupDirectory, { recursive: true });
+      fs.copyFileSync(targetPath, path.join(backupDirectory, file));
+      fs.writeFileSync(targetPath, `${JSON.stringify(next, null, 2)}\n`, 'utf8');
+      return sendJson(res, { ok: true, file, id: incoming.id, backupDirectory: path.relative(dbDir, backupDirectory) });
+    } catch (error) {
+      return withApiError(res, error);
     }
   });
 
@@ -343,6 +479,12 @@ module.exports = function setupProxy(app) {
 
       if (!components) {
         throw new Error('Payload invalide: components[] attendu.');
+      }
+      if (req.params.file === 'components_custom.json') {
+        const collisions = customSourceCollisions(components);
+        if (collisions.length) {
+          return sendJson(res, { ok: false, error: 'components_custom.json contient des IDs de bases sources.', collisions }, 409);
+        }
       }
 
       fs.mkdirSync(path.dirname(targetPath), { recursive: true });

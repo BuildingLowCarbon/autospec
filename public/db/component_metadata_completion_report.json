@@ -1,0 +1,213 @@
+{
+  "write": true,
+  "backupDirectory": "public\\db\\versions\\component_metadata_completion\\2026-09-17T14-30-13-742Z",
+  "files": {
+    "components_custom.json": {
+      "components": 106,
+      "processed": 0,
+      "supportAdded": 0,
+      "systemAdded": 0,
+      "ecccAdded": 0,
+      "valuesRemoved": 0,
+      "markerOnly": 0,
+      "ambiguous": 2,
+      "unresolved": 2
+    },
+    "components_btk_enriched.json": {
+      "components": 54,
+      "processed": 0,
+      "supportAdded": 0,
+      "systemAdded": 0,
+      "ecccAdded": 0,
+      "valuesRemoved": 0,
+      "markerOnly": 0,
+      "ambiguous": 0,
+      "unresolved": 0
+    },
+    "components_minergie_enriched.json": {
+      "components": 51,
+      "processed": 7,
+      "supportAdded": 1,
+      "systemAdded": 4,
+      "ecccAdded": 28,
+      "valuesRemoved": 0,
+      "markerOnly": 5,
+      "ambiguous": 2,
+      "unresolved": 7
+    },
+    "components_lignum_selected.json": {
+      "components": 1,
+      "processed": 0,
+      "supportAdded": 0,
+      "systemAdded": 0,
+      "ecccAdded": 0,
+      "valuesRemoved": 0,
+      "markerOnly": 0,
+      "ambiguous": 0,
+      "unresolved": 0
+    }
+  },
+  "assignments": [
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "8D17D433-6537-49DF-8B8B-E9D1292D63EF",
+      "title": "",
+      "categoryId": "outer_wall",
+      "systemTypeId": "concrete",
+      "supportIndex": 4,
+      "supportProductId": "D7630CA8-50FF-4C72-BE19-897AE5E9EC72",
+      "supportText": "hochbaubeton beton pour batiment, armature 110 kg/m3"
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "47D4765F-8754-46B6-B56D-864A8F0D6CA0",
+      "title": "",
+      "categoryId": "outer_wall",
+      "systemTypeId": "light_gauge_steel_frame",
+      "supportIndex": 3,
+      "supportProductId": "37CF0E2B-7BD1-4E16-8A73-ED7697F180AD",
+      "supportText": "stahlprofil stahlprofil, blank"
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "title": "",
+      "categoryId": "partition_wall",
+      "systemTypeId": "stud",
+      "supportIndex": -1,
+      "supportProductId": null,
+      "supportText": ""
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "78A9F6CE-1B3D-4C11-B10C-65AEE49C6BB2",
+      "title": "",
+      "categoryId": "partition_wall",
+      "systemTypeId": "solid_wood_panel",
+      "supportIndex": -1,
+      "supportProductId": null,
+      "supportText": ""
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "09227EB5-E741-441A-A97D-183E156822BE",
+      "title": "",
+      "categoryId": "partition_wall",
+      "systemTypeId": "masonry",
+      "supportIndex": -1,
+      "supportProductId": null,
+      "supportText": ""
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "2A13415F-4237-4307-AC78-BA3F443C8390",
+      "title": "",
+      "categoryId": "partition_wall",
+      "systemTypeId": "concrete",
+      "supportIndex": -1,
+      "supportProductId": null,
+      "supportText": ""
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "title": "",
+      "categoryId": "partition_wall",
+      "systemTypeId": "light_gauge_steel_frame",
+      "supportIndex": -1,
+      "supportProductId": null,
+      "supportText": ""
+    }
+  ],
+  "correctedExisting": [],
+  "unresolved": [
+    {
+      "file": "components_custom.json",
+      "componentId": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "categoryId": "partition_wall",
+      "systemTypeId": null,
+      "supportIndex": -1,
+      "missingEcccIndexes": []
+    },
+    {
+      "file": "components_custom.json",
+      "componentId": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "categoryId": "partition_wall",
+      "systemTypeId": null,
+      "supportIndex": -1,
+      "missingEcccIndexes": []
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "8D17D433-6537-49DF-8B8B-E9D1292D63EF",
+      "categoryId": "outer_wall",
+      "systemTypeId": "concrete",
+      "supportIndex": 4,
+      "missingEcccIndexes": [
+        0,
+        3
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "47D4765F-8754-46B6-B56D-864A8F0D6CA0",
+      "categoryId": "outer_wall",
+      "systemTypeId": "light_gauge_steel_frame",
+      "supportIndex": 3,
+      "missingEcccIndexes": [
+        0,
+        2
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "categoryId": "partition_wall",
+      "systemTypeId": "stud",
+      "supportIndex": -1,
+      "missingEcccIndexes": [
+        0
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "78A9F6CE-1B3D-4C11-B10C-65AEE49C6BB2",
+      "categoryId": "partition_wall",
+      "systemTypeId": "solid_wood_panel",
+      "supportIndex": -1,
+      "missingEcccIndexes": [
+        0
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "09227EB5-E741-441A-A97D-183E156822BE",
+      "categoryId": "partition_wall",
+      "systemTypeId": "masonry",
+      "supportIndex": -1,
+      "missingEcccIndexes": [
+        0
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "2A13415F-4237-4307-AC78-BA3F443C8390",
+      "categoryId": "partition_wall",
+      "systemTypeId": "concrete",
+      "supportIndex": -1,
+      "missingEcccIndexes": [
+        0
+      ]
+    },
+    {
+      "file": "components_minergie_enriched.json",
+      "componentId": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "categoryId": "partition_wall",
+      "systemTypeId": "light_gauge_steel_frame",
+      "supportIndex": -1,
+      "missingEcccIndexes": [
+        0
+      ]
+    }
+  ]
+}

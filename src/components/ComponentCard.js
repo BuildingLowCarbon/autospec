@@ -3,6 +3,7 @@ import { ViewSVG, DEFAULT_PX_PER_MM_X } from "./Graphic";
 import { getAcousticInsulation } from "../utils/acoustic";
 import categoriesData from "../data/categories.json";
 import { getComponentSubcategoryId, getSubcategoryLabel } from "../utils/componentTaxonomy";
+import { calculateStudCompressionCapacity } from "../utils/woodStudResistance";
 
 const formatNumber = (value, decimals = 1) => {
   if (value === null || value === undefined) return null;
@@ -45,8 +46,35 @@ const getFloorSpan = (item, rating) => {
   return rating === "R0" ? finiteNumber(item?.spanMax_m) : null;
 };
 
-const getWallLinearResistance = (item, rating) => {
+export const getWallLinearResistance = (item, rating) => {
   const fire = item?.fire_resistance ?? {};
+  const storedResult = fire.wood_stud_compression;
+  const materialCategoryIds = storedResult?.input?.materialCategoryIds;
+  if (Array.isArray(materialCategoryIds) && (
+    materialCategoryIds.length === 0 ||
+    materialCategoryIds.some((categoryId) => !["holz", "holzwerkstoff"].includes(categoryId))
+  )) return null;
+  let result = storedResult;
+  if (storedResult?.input && !storedResult.error) {
+    try {
+      result = calculateStudCompressionCapacity(storedResult.input);
+    } catch (error) {
+      result = storedResult;
+    }
+  }
+  const spacing = finiteNumber(result?.input?.spacing_mm);
+  if (result && !result.error && spacing !== null && spacing > 0) {
+    const spacingM = spacing / 1000;
+    if (rating === "R0") {
+      const capacity = finiteNumber(result.normalTemperature?.Nmax_NT_kN);
+      if (capacity !== null) return capacity / spacingM;
+    } else {
+      const minutes = Number(rating.replace("R", ""));
+      const capacity = finiteNumber(result.fire?.find((entry) => Number(entry?.fireMinutes) === minutes)?.Nmax_Rt_kN);
+      if (capacity !== null) return capacity / spacingM;
+    }
+  }
+
   const table = fire.wood_capacity_table?.type === "wall_stud_force"
     ? fire.wood_capacity_table
     : null;
@@ -55,8 +83,6 @@ const getWallLinearResistance = (item, rating) => {
   const tableValue = capacityCellValue(row?.[column]);
   if (tableValue !== null) return tableValue;
 
-  const result = fire.wood_stud_compression;
-  const spacing = finiteNumber(result?.input?.spacing_mm);
   if (!result || result.error || spacing === null || spacing <= 0) return null;
   const spacingM = spacing / 1000;
   if (rating === "R0") {
@@ -68,13 +94,13 @@ const getWallLinearResistance = (item, rating) => {
   return capacity === null ? null : capacity / spacingM;
 };
 
-function ValueRow({ label, value, unit }) {
+function ValueRow({ label, value, unit, invalid = false }) {
   const display = value === null || value === undefined || value === "" ? "N/A" : value;
   const hasValue = value !== null && value !== undefined && value !== "";
   return (
     <div style={styles.row}>
       <div style={styles.rowLabel}>{label} :</div>
-      <div style={styles.rowValue}>
+      <div style={{ ...styles.rowValue, ...(invalid ? styles.invalidValue : {}) }}>
         {display}
         {hasValue ? <span style={styles.rowUnit}>&nbsp;{unit}</span> : null}
       </div>
@@ -89,6 +115,7 @@ export default function ComponentCard({
   onToggle,
   onDetails,
   t = {},
+  failedFilters = [],
 }) {
   const layers = item?.structure?.layers ?? [];
   const title =
@@ -116,6 +143,11 @@ export default function ComponentCard({
   const isFloor = item?.categoryId === "floor_assembly";
   const isLoadBearingWall = ["outer_wall", "inner_wall"].includes(item?.categoryId);
   const ratings = ["R0", "R30", "R60"];
+  const failed = new Set(failedFilters);
+  const fire = item?.fire_resistance ?? {};
+  const fireMinutes = String(fire.REI_min ?? "").match(/\d+/)?.[0] ?? null;
+  const declaredFireR = fire.R ?? (fireMinutes ? `R${fireMinutes}` : null);
+  const declaredFireEI = fire.EI ?? (fireMinutes ? `EI${fireMinutes}` : null);
 
   // Scale down SVG views to fit the card without cropping
   const svgScale = 0.15;
@@ -178,18 +210,26 @@ export default function ComponentCard({
         <div style={styles.right}>
           <div style={styles.infoBox}>
             <div style={styles.mainValues}>
-              <ValueRow label={t.thickness ?? "Thickness"} value={thickness} unit="mm" />
+              <ValueRow label={t.thickness ?? "Thickness"} value={thickness} unit="mm" invalid={failed.has("thickness")} />
               <ValueRow label={t.weight ?? "Weight"} value={weight} unit="kg/m2" />
-              <ValueRow label={t.uValue ?? "U value"} value={uValue} unit="W/m2K" />
-              <ValueRow label={t.gwp ?? "GWP"} value={gwp} unit="kgCO2e/m2" />
+              <ValueRow label={t.uValue ?? "U value"} value={uValue} unit="W/m2K" invalid={failed.has("uValue")} />
+              <ValueRow label={t.gwp ?? "GWP"} value={gwp} unit="kgCO2e/m2" invalid={failed.has("gwp")} />
             </div>
 
             <div style={styles.sideValues}>
               <div style={styles.section}>
                 <div style={styles.sectionTitle}>{t.acoustic_insulation ?? "Acoustic insulation"}</div>
-                <ValueRow label={t.acoustic_rw_corrected ?? "Rw cor."} value={airborne} unit="dB" />
-                {isFloor ? <ValueRow label={t.acoustic_lnw_corrected ?? "Ln,w cor."} value={impact} unit="dB" /> : null}
+                <ValueRow label={t.acoustic_rw_corrected ?? "Rw cor."} value={airborne} unit="dB" invalid={failed.has("rw")} />
+                {isFloor ? <ValueRow label={t.acoustic_lnw_corrected ?? "Ln,w cor."} value={impact} unit="dB" invalid={failed.has("lnw")} /> : null}
               </div>
+
+              {failed.has("fireR") || failed.has("fireEI") ? (
+                <div style={styles.section}>
+                  <div style={styles.sectionTitle}>{t.fire_protection ?? "Fire protection"}</div>
+                  {failed.has("fireR") ? <ValueRow label="R" value={declaredFireR} unit="" invalid /> : null}
+                  {failed.has("fireEI") ? <ValueRow label="EI" value={declaredFireEI} unit="" invalid /> : null}
+                </div>
+              ) : null}
 
               {isFloor ? (
                 <div style={styles.section}>
@@ -200,6 +240,7 @@ export default function ComponentCard({
                       label={`${t.max_span ?? "Max. span"} ${rating}`}
                       value={formatNumber(getFloorSpan(item, rating), 2)}
                       unit="m"
+                      invalid={failed.has(`span:${rating}`)}
                     />
                   ))}
                 </div>
@@ -214,6 +255,7 @@ export default function ComponentCard({
                       label={rating}
                       value={formatNumber(getWallLinearResistance(item, rating), 1)}
                       unit="kN/m"
+                      invalid={failed.has(`linearResistance:${rating}`)}
                     />
                   ))}
                 </div>
@@ -373,5 +415,9 @@ const styles = {
   rowUnit: {
     opacity: 0.9,
     whiteSpace: "nowrap",
+  },
+  invalidValue: {
+    color: "#c1121f",
+    fontWeight: 800,
   },
 };

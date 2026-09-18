@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Authentification locale et MongoDB
+
+L'API locale charge `MONGODB_URI` depuis `atlas-credentials.env` ou `.env.local`. Ces fichiers restent locaux et ne doivent jamais être suivis par Git. Si le nom de la base n'est pas inclus dans l'URI, l'API utilise `MONGODB_DB`, puis `autospec` par défaut.
+
+Lancer l'application et l'API avec :
+
+```bash
+npm start
+```
+
+La connexion est disponible sous `/login`. La gestion des comptes et des accès se trouve sous `/dashboard/utilisateurs` pour les administrateurs. Pour créer le tout premier administrateur d'une base vide :
+
+```bash
+npm run auth:create-admin -- admin "Administrateur Autospec"
+```
+
+Le mot de passe temporaire généré n'est affiché qu'une fois. Les mots de passe sont hachés côté serveur et les sessions sont conservées dans MongoDB avec expiration automatique.
+
+Les profils sont disponibles sous `/profile` et la gestion des organisations sous `/organizations`. Les nouveaux composants dupliqués dans Custom et les matériaux créés depuis le profil sont enregistrés dans MongoDB avec une visibilité `private`, `organization` ou `public`. La base système `components_custom.json` reste séparée et globale.
+
 ## Dashboard des bases de données
 
 Le Dashboard est disponible sous `/dashboard`. Il permet d’unifier les trois sources Lignum, de sélectionner les composants publiés, de contrôler les références, de gérer les correspondances Lignum → TBZ et de créer ou modifier les matériaux, produits et composants.

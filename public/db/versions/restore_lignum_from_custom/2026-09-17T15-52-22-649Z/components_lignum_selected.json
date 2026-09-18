@@ -1,0 +1,614 @@
+[
+  {
+    "id": "A6D0F6A9-BEFB-3A70-9021-06E35F021D60",
+    "parent": null,
+    "serialNo": "D1027",
+    "categoryId": "outer_wall",
+    "thickness_mm": 362.5,
+    "weight_kg_m2": 86.105,
+    "uValue_W_m2K": 0.13031962603015818,
+    "gwp_kgco2e_m2": 10.017570000000001,
+    "spanMax_m": null,
+    "claddingId": "without_covering",
+    "sheathingId": "sheathed_on_both_sides",
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": "without_cavity_insulation_in_the_supporting_structure",
+    "facadeTypeId": "bresta_solid_timber_system_planked_on_both_sides",
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": "compact_facade",
+    "translations": {
+      "fr": {
+        "name": "Paroi extérieure D1027 Bresta Systeme Bois massif, planches juxtaposées",
+        "description": "Paroi extérieure composée d'une construction de base de Bresta Systeme Bois massif, planches juxtaposées sans isolation dans la cavité de la structure support. Contreventement côté extérieur et côté intérieur, contreventement  simple côté extérieur, contreventement simple côté intérieur. Sans parement. façade compacte."
+      },
+      "en": {
+        "name": "Outer wall D1027 BRESTA Solid Timber System",
+        "description": "Outer wall consisting of a basic construction of BRESTA Solid Timber System without cavity insulation in the supporting structure. Sheathed outside & interior, on the outside single sheathed, roomside single sheathed. Without covering. Compact facade."
+      },
+      "de": {
+        "name": "Aussenwand D1027 BRESTA Massivholzsystem",
+        "description": "Aussenwand mit einer Tragkonstruktion bestehend aus BRESTA Massivholzsystem ohne Hohlraumdämmung in der Tragkonstruktion. Beplankung aussen & innen, aussen einfach beplankt, innen einfach beplankt. Ohne Bekleidung. Kompaktfassade."
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "993A21A3-FD0C-47AB-BD2D-5B5E5D08244E",
+          "translations": {
+            "fr": {
+              "description": "Surface 1"
+            },
+            "de": {
+              "description": "Oberfläche 1"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface 1"
+            }
+          },
+          "productName": "Aussenputzsystem passend zur Trägerplatte. Bestehend aus Grundbeschichtung, Gewebearmierung und Deckputz",
+          "thickness_mm": 10,
+          "weight_kg_m2": 18.8,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "04.011",
+          "isSupportStructure": false,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d'isolation thermique extérieure",
+          "gwp_kgco2e_m2": 1.9702400000000002,
+          "baseGwp_kgco2e_m2": 0.9851200000000001,
+          "thermalResistance_m2K_W": 0.01754385964912281,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "translations": {
+            "fr": {
+              "description": "Contrevetement extérieur à gauche 1ère couche"
+            },
+            "de": {
+              "description": "Beplankung aussen links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed outside leftside 1st layer"
+            }
+          },
+          "productName": "Mineralwolle",
+          "thickness_mm": 240,
+          "weight_kg_m2": 7.68,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3",
+          "colorCode": "F5F5F5",
+          "fiberDirection": null,
+          "kbobId": "10.008",
+          "isSupportStructure": false,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d'isolation thermique extérieure",
+          "gwp_kgco2e_m2": 2.0428800000000003,
+          "baseGwp_kgco2e_m2": 1.0214400000000001,
+          "thermalResistance_m2K_W": 6.666666666666667,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
+        },
+        {
+          "order": 2,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "description": "Adhérence"
+            },
+            "de": {
+              "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
+            }
+          },
+          "productName": "Steif, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d'isolation thermique extérieure",
+          "gwp_kgco2e_m2": 0,
+          "baseGwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
+        },
+        {
+          "order": 3,
+          "structure": "on-lying",
+          "productId": "127DA73A-1668-40D9-AC79-82DAB7388106",
+          "translations": {
+            "fr": {
+              "description": "Support"
+            },
+            "de": {
+              "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
+            }
+          },
+          "productName": "Bresta Massivholzplatte",
+          "thickness_mm": 100,
+          "weight_kg_m2": 49,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3",
+          "colorCode": "BCBCBC",
+          "fiberDirection": null,
+          "kbobId": "07.011.02",
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures",
+          "isSupportStructure": true,
+          "gwp_kgco2e_m2": 4.3512,
+          "baseGwp_kgco2e_m2": 4.3512,
+          "thermalResistance_m2K_W": 0.7692307692307693,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
+        },
+        {
+          "order": 4,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "description": "Adhérence"
+            },
+            "de": {
+              "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
+            }
+          },
+          "productName": "Steif, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "gwp_kgco2e_m2": 0,
+          "baseGwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
+        },
+        {
+          "order": 5,
+          "structure": "on-lying",
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "translations": {
+            "fr": {
+              "description": "Contreventement à gauche 1ère couche"
+            },
+            "de": {
+              "description": "Beplankung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed rightside 1st layer"
+            }
+          },
+          "productName": "Gipsplatte Typ A",
+          "thickness_mm": 12.5,
+          "weight_kg_m2": 10.625,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "03.008",
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "gwp_kgco2e_m2": 1.6532499999999999,
+          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "thermalResistance_m2K_W": 0.05,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
+        },
+        {
+          "order": 6,
+          "structure": "on-lying",
+          "productId": "A1F3BCF1-3041-4E44-B851-0E1A6A2E07CD",
+          "translations": {
+            "fr": {
+              "description": "Surface côté droit"
+            },
+            "de": {
+              "description": "Oberfläche rechts"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Surface rightside"
+            }
+          },
+          "productName": "Fugen verspachtelt",
+          "thickness_mm": 0,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "04.017",
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "gwp_kgco2e_m2": 0,
+          "baseGwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0
+        }
+      ],
+      "systemTypeId": "bresta_solid_timber_system"
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 100,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 15
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 100,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 487.847645269287,
+          "Nmax_interaction_kN": 1240,
+          "Nmax_NT_kN": 487.847645269287,
+          "buckling": {
+            "A_mm2": 100000,
+            "Iy_mm4": 83333333.33333333,
+            "Iz_mm4": 8333333333.333333,
+            "iy_mm": 28.867513459481287,
+            "iz_mm": 288.67513459481285,
+            "i_min_mm": 28.867513459481287,
+            "lambda": 86.60254037844386,
+            "lambda_rel": 1.468502014081209,
+            "kc": 0.39342552037845724,
+            "Nmax_flamb_N": 487847.645269287,
+            "Nmax_flamb_kN": 487.847645269287
+          },
+          "interaction": {
+            "A_mm2": 100000,
+            "Wy_mm3": 1666666.6666666667,
+            "Wz_mm3": 16666666.666666666,
+            "alpha": 6.503642039542143e-13,
+            "beta": 0,
+            "Nmax_interaction_N": 1240000,
+            "Nmax_interaction_kN": 1240
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 81,
+            "d_char_mm": 12,
+            "d_eff_mm": 19,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 488.43584475673094,
+            "Nmax_interaction_Rt_kN": 1807.92,
+            "Nmax_Rt_kN": 488.43584475673094,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 1000,
+              "hfi_mm": 81,
+              "A_fi_mm2": 81000,
+              "Nmax_flamb_Rt_N": 488435.84475673095,
+              "Nmax_flamb_Rt_kN": 488.43584475673094,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 81000,
+                "Iy_mm4": 44286750,
+                "Iz_mm4": 6750000000,
+                "iy_mm": 23.382685902179844,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 23.382685902179844,
+                "lambda": 106.91671651659736,
+                "lambda_rel": 1.8129654494829743,
+                "kc": 0.2701645231850585,
+                "Nmax_flamb_N": 271353.24708707276,
+                "Nmax_flamb_kN": 271.35324708707276
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 1000,
+              "hfi_mm": 81,
+              "A_fi_mm2": 81000,
+              "Wy_fi_mm3": 1093500,
+              "Wz_fi_mm3": 13500000,
+              "alpha": 3.0594374726179125e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1807920,
+              "Nmax_interaction_Rt_kN": 1807.92
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 57,
+            "d_char_mm": 36,
+            "d_eff_mm": 43,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 177.5256539536609,
+            "Nmax_interaction_Rt_kN": 1272.24,
+            "Nmax_Rt_kN": 177.5256539536609,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 45,
+              "d_char_mm": 36,
+              "d_eff_mm": 43,
+              "bfi_mm": 1000,
+              "hfi_mm": 57,
+              "A_fi_mm2": 57000,
+              "Nmax_flamb_Rt_N": 177525.65395366092,
+              "Nmax_flamb_Rt_kN": 177.5256539536609,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 57000,
+                "Iy_mm4": 15432750,
+                "Iz_mm4": 4750000000,
+                "iy_mm": 16.454482671904334,
+                "iz_mm": 288.67513459481285,
+                "i_min_mm": 16.454482671904334,
+                "lambda": 151.934281365691,
+                "lambda_rel": 2.57631932294949,
+                "kc": 0.1395378654606528,
+                "Nmax_flamb_N": 98625.3633075894,
+                "Nmax_flamb_kN": 98.62536330758941
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 45,
+              "d_char_mm": 36,
+              "d_eff_mm": 43,
+              "bfi_mm": 1000,
+              "hfi_mm": 57,
+              "A_fi_mm2": 57000,
+              "Wy_fi_mm3": 541500,
+              "Wz_fi_mm3": 9500000,
+              "alpha": 6.178199217558056e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1272240,
+              "Nmax_interaction_Rt_kN": 1272.24
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 488.44,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 177.53,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 488.44,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 177.53,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 488.44,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 177.53,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 1240,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1807.92,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 1272.24,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": 40,
+        "c100_3150_dB": 0,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": -3
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Lignum",
+      "databaseId": "lignum",
+      "externalId": "A6D0F6A9-BEFB-3A70-9021-06E35F021D60",
+      "url": "https://lignumdata.ch/system/bauteile/A6D0F6A9-BEFB-3A70-9021-06E35F021D60?locale=de"
+    },
+    "_rawTaxo": {
+      "bauteilgruppe": {
+        "ifcorientation": "IfcWall",
+        "name": "Aussenwand",
+        "workingtitle": "Aussenwand"
+      },
+      "bauteiltyp": {
+        "name": "BRESTA Massivholzsystem",
+        "workingtitle": "BRESTA Massivholzsystem"
+      },
+      "bekleidung": {
+        "name": "Ohne Bekleidung",
+        "workingtitle": "Ohne Bekleidung"
+      },
+      "beplankung": {
+        "name": "Beplankung beidseitig",
+        "workingtitle": "Beplankung beidseitig"
+      },
+      "beschwerungkonstruktion": {
+        "name": null,
+        "workingtitle": null
+      },
+      "beschwerungtragschicht": {
+        "name": null,
+        "workingtitle": null
+      },
+      "daemmungkonstruktion": {
+        "name": "ohne Hohlraumdämmung in der Tragkonstruktion",
+        "workingtitle": "ohne Hohlraumdämmung in der Tragkonstruktion"
+      },
+      "fassadentyp": {
+        "name": "BRESTA Massivholzsystem beidseitig beplankt",
+        "workingtitle": "BRESTA Massivholzsystem beidseitig beplankt"
+      },
+      "bauteilvariante": {
+        "name": "Kompaktfassade",
+        "workingtitle": "Kompaktfassade"
+      },
+      "wandbekleidung": {
+        "name": null,
+        "workingtitle": null
+      },
+      "estrich": {
+        "name": null,
+        "workingtitle": null
+      }
+    },
+    "metadata": {
+      "created_at": "2026-09-15T12:42:36.067Z",
+      "updated_at": "2026-09-15T13:01:20.293Z",
+      "version": 2
+    },
+    "subcategoryId": "above_ground"
+  }
+]

@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import fireRequirementsDb from "../data/fire_requirements.json";
 import { getRequirementCategoryIds } from "../utils/componentTaxonomy";
+import { matchesFireRuleConditions } from "../utils/fireRequirements";
 // Mais le module utilise surtout les libellés du JSON de fire_requirements
 
 /**
  * Props:
  * - lang: "fr" | "en" | "de" | "it"
  * - onApplyChange: (payload) => void
- * - initialSelection?: { use, building_type, building_height, neighbor_distance }
+ * - initialSelection?: { use, building_type, building_height, above_ground_levels, neighbor_distance }
  * - initialApplied?: boolean
  *    payload = {
  *      applied: boolean,
@@ -38,6 +39,7 @@ export default function FireRequirementModule({
   const [useVal, setUseVal] = useState(initialSelection?.use ?? "residential");
   const [buildingType, setBuildingType] = useState(initialSelection?.building_type ?? "");
   const [buildingHeight, setBuildingHeight] = useState(initialSelection?.building_height ?? "");
+  const [aboveGroundLevels, setAboveGroundLevels] = useState(initialSelection?.above_ground_levels ?? 2);
   const [neighborDistance, setNeighborDistance] = useState(initialSelection?.neighbor_distance ?? "gt_10");
 
   const [applyToFilters, setApplyToFilters] = useState(Boolean(initialApplied));
@@ -126,15 +128,15 @@ export default function FireRequirementModule({
     const rules = db.rules ?? [];
     return (
       rules.find((r) => {
-        const c = r.conditions ?? {};
-        return (
-          c.use === useVal &&
-          c.building_type === buildingType &&
-          c.building_height === buildingHeight
-        );
+        return matchesFireRuleConditions(r.conditions, {
+          use: useVal,
+          buildingType,
+          buildingHeight,
+          aboveGroundLevels,
+        });
       }) ?? null
     );
-  }, [db, useVal, buildingType, buildingHeight]);
+  }, [aboveGroundLevels, db, useVal, buildingType, buildingHeight]);
 
   // Resolve requirements considering neighbor distance (for outer walls)
   const resolvedRequirements = useMemo(() => {
@@ -153,7 +155,7 @@ export default function FireRequirementModule({
         }
         return true;
       })
-      .map((req) => {
+      .flatMap((req) => {
         const el = elementsById.get(req.element_id);
         const displayText = tr(req.display);
 
@@ -198,7 +200,7 @@ export default function FireRequirementModule({
             };
           }) ?? [];
 
-        return {
+        const resolvedRequirement = {
           element_id: req.element_id,
           subtype_id: req.subtype_id,
           bearing_id: req.bearing_id ?? null,
@@ -206,9 +208,39 @@ export default function FireRequirementModule({
           categoryTargets,
           filter: req.filter ?? null,
         };
+
+        if (req.element_id !== "partition" || categoryTargets.length <= 1) {
+          return [resolvedRequirement];
+        }
+
+        return categoryTargets.map((target) => ({
+          ...resolvedRequirement,
+          categoryTargets: [target],
+        }));
       });
 
-    return resolved;
+    const firstWallIndex = resolved.findIndex((requirement) => requirement.element_id === "partition");
+    if (firstWallIndex < 0) return resolved;
+    let afterWallIndex = firstWallIndex;
+    while (afterWallIndex < resolved.length && resolved[afterWallIndex].element_id === "partition") {
+      afterWallIndex += 1;
+    }
+
+    const wallOrder = (requirement) => {
+      const categoryId = requirement.categoryTargets?.[0]?.categoryId;
+      const categoryRank = categoryId === "inner_wall" ? 0 : 2;
+      const subtypeRank = requirement.subtype_id === "same_unit" ? 0 : 1;
+      return categoryRank + subtypeRank;
+    };
+    const orderedWalls = resolved
+      .slice(firstWallIndex, afterWallIndex)
+      .sort((a, b) => wallOrder(a) - wallOrder(b));
+
+    return [
+      ...resolved.slice(0, firstWallIndex),
+      ...orderedWalls,
+      ...resolved.slice(afterWallIndex),
+    ];
   }, [db, matchedRule, neighborDistance, elementsById, tr]);
 
   // Notify parent when apply toggle or resolved requirements change
@@ -221,6 +253,7 @@ export default function FireRequirementModule({
         use: useVal,
         building_type: buildingType,
         building_height: buildingHeight,
+        above_ground_levels: Math.max(1, Math.round(Number(aboveGroundLevels) || 1)),
         neighbor_distance: neighborDistance,
       },
       requirements: resolvedRequirements,
@@ -230,12 +263,16 @@ export default function FireRequirementModule({
     useVal,
     buildingType,
     buildingHeight,
+    aboveGroundLevels,
     neighborDistance,
     resolvedRequirements,
     onApplyChange,
   ]);
 
   const formatRequirementLabel = (req) => {
+    if (req.categoryTargets?.length) {
+      return req.categoryTargets.map((target) => target.label).filter(Boolean).join(" / ");
+    }
     const element = elementsById.get(req.element_id);
     const elementLabel = tr(element?.label) || req.element_id;
 
@@ -311,6 +348,20 @@ export default function FireRequirementModule({
             options={buildingHeightOptions}
             disabled={buildingHeightOptions.length <= 1}
           />
+
+          <label>
+            <span style={{ display: "block", fontWeight: 700, marginBottom: "6px" }}>
+              {tr(db.i18n?.above_ground_levels) || "Above-ground levels"}
+            </span>
+            <input
+              type="number"
+              min="1"
+              step="1"
+              value={aboveGroundLevels}
+              onChange={(event) => setAboveGroundLevels(event.target.value)}
+              style={{ width: "100%", boxSizing: "border-box", padding: "10px", borderRadius: "10px", border: "1px solid #bbb", background: "#fff" }}
+            />
+          </label>
 
           {/* Neighbor facade distance */}
           <SelectField

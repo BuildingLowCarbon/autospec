@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('protège la page Custom sans session', async () => {
+  global.fetch = jest.fn().mockResolvedValue({
+    ok: false,
+    status: 401,
+    json: async () => ({ ok: false, error: 'Authentification requise.' }),
+  });
+  window.history.pushState({}, '', '/custom/test');
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { name: 'Connexion' })).toBeInTheDocument();
 });

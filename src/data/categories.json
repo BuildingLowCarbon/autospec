@@ -5,9 +5,22 @@
       "type": "horizontal",
       "icon": "foundation",
       "order": 0,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "subcategories": [
-        { "id": "ground_contact", "label": { "fr": "Contre terrain", "de": "Gegen Erdreich", "en": "Ground contact", "it": "Contro terra" } }
+        {
+          "id": "ground_contact",
+          "label": {
+            "fr": "Contre terrain",
+            "de": "Gegen Erdreich",
+            "en": "Ground contact",
+            "it": "Contro terra"
+          }
+        }
       ],
       "layerTypes": [
         "Adhérence",
@@ -28,42 +41,79 @@
         "Traitement de surface"
       ],
       "eccc": [
-            {
-                "ecccId": "C01.01",
-                "name": "Supports de fondations, radiers, dalles de sol",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "C01.02",
-                "name": "Fondations",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "C01.03",
-                "name": "Dalles de sol, radiers",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "C01.04",
-                "name": "Escaliers ou rampes en contact avec le sol",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "C01.05",
-                "name": "Paliers en contact avec le sol",
-                "serviceLife": 60
-            }
-      ]
+        {
+          "ecccId": "C01.01",
+          "name": "Supports de fondations, radiers, dalles de sol",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "C01.02",
+          "name": "Fondations",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "C01.03",
+          "name": "Dalles de sol, radiers",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "C01.04",
+          "name": "Escaliers ou rampes en contact avec le sol",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "C01.05",
+          "name": "Paliers en contact avec le sol",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "G02.01",
+          "name": "Supports pour revêtements de sols",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G02.02",
+          "name": "Revêtements de sols",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Radier",
+        "de": "Bodenplatte",
+        "en": "Foundation slab",
+        "it": "Platea di fondazione"
+      }
     },
     {
       "id": "floor_assembly",
       "type": "horizontal",
       "icon": "floor",
       "order": 1,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "subcategories": [
-        { "id": "standard", "label": { "fr": "Plancher standard", "de": "Standarddecke", "en": "Standard floor", "it": "Solaio standard" } },
-        { "id": "against_unheated", "label": { "fr": "Contre local non chauffé", "de": "Gegen unbeheizten Raum", "en": "Against unheated space", "it": "Contro locale non riscaldato" } }
+        {
+          "id": "standard",
+          "label": {
+            "fr": "Plancher standard",
+            "de": "Standarddecke",
+            "en": "Standard floor",
+            "it": "Solaio standard"
+          }
+        },
+        {
+          "id": "against_unheated",
+          "label": {
+            "fr": "Contre local non chauffé",
+            "de": "Gegen unbeheizten Raum",
+            "en": "Against unheated space",
+            "it": "Contro locale non riscaldato"
+          }
+        }
       ],
       "layerTypes": [
         "Adhérence",
@@ -83,43 +133,70 @@
         "Structure porteuse",
         "Traitement de surface"
       ],
-        "eccc": [
-            {
-                "ecccId": "C04.01",
-                "name": "Plancher",
-                "serviceLife": 60
-            },
-             {
-                "ecccId": "G02.01",
-                "name": "Supports pour revêtements de sols",
-                "serviceLife": 30
-            },
-             {
-                "ecccId": "G02.02",
-                "name": "Revêtements de sols",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G04.01",
-                "name": "Supports pour faux-plafonds",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G04.02",
-                "name": "Faux-plafonds",
-                "serviceLife": 30
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "C04.01",
+          "name": "Plancher",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "G02.01",
+          "name": "Supports pour revêtements de sols",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G02.02",
+          "name": "Revêtements de sols",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G04.01",
+          "name": "Supports pour faux-plafonds",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G04.02",
+          "name": "Faux-plafonds",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Plancher",
+        "de": "Decke",
+        "en": "Floor assembly",
+        "it": "Solaio"
+      }
     },
     {
       "id": "outer_wall",
       "type": "vertical",
       "icon": "outer_wall",
       "order": 2,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "subcategories": [
-        { "id": "above_ground", "label": { "fr": "Hors terrain", "de": "Über Terrain", "en": "Above ground", "it": "Fuori terra" } },
-        { "id": "below_ground", "label": { "fr": "Sous-terrain", "de": "Unter Terrain", "en": "Below ground", "it": "Interrato" } }
+        {
+          "id": "above_ground",
+          "label": {
+            "fr": "Hors terrain",
+            "de": "Über Terrain",
+            "en": "Above ground",
+            "it": "Fuori terra"
+          }
+        },
+        {
+          "id": "below_ground",
+          "label": {
+            "fr": "Sous-terrain",
+            "de": "Unter Terrain",
+            "en": "Below ground",
+            "it": "Interrato"
+          }
+        }
       ],
       "layerTypes": [
         "Adhérence",
@@ -136,66 +213,76 @@
         "Revêtement intérieur",
         "Treillis d'armature"
       ],
-        "eccc": [
-            {
-                "ecccId": "C02.01",
-                "name": "Parois porteuses extérieures",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "E01.01",
-                "name": "Etanchéités contre terre",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "E01.02",
-                "name": "Isolations thermiques contre terre",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "E01.03",
-                "name": "Couches de protection contre terre",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "E02.01",
-                "name": "Crépis",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "E02.02",
-                "name": "Systèmes d'isolation thermique extérieure",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "E02.03",
-                "name": "Bardages",
-                "serviceLife": 40
-            },
-            {
-                "ecccId": "E02.04",
-                "name": "Systèmes de façade, façades légères",
-                "serviceLife": 40
-            },
-            {
-                "ecccId": "G03.01",
-                "name": "Supports pour revêtements de parois",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G03.02",
-                "name": "Revêtements de parois",
-                "serviceLife": 30
-            }
-
-        ]
+      "eccc": [
+        {
+          "ecccId": "C02.01",
+          "name": "Parois porteuses extérieures",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "E01.01",
+          "name": "Etanchéités contre terre",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "E01.02",
+          "name": "Isolations thermiques contre terre",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "E01.03",
+          "name": "Couches de protection contre terre",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "E02.01",
+          "name": "Crépis",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "E02.02",
+          "name": "Systèmes d'isolation thermique extérieure",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "E02.03",
+          "name": "Bardages",
+          "serviceLife": 40
+        },
+        {
+          "ecccId": "E02.04",
+          "name": "Systèmes de façade, façades légères",
+          "serviceLife": 40
+        },
+        {
+          "ecccId": "G03.01",
+          "name": "Supports pour revêtements de parois",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G03.02",
+          "name": "Revêtements de parois",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Paroi extérieure",
+        "de": "Aussenwand",
+        "en": "Outer wall",
+        "it": "Parete esterna"
+      }
     },
     {
       "id": "inner_wall",
       "type": "vertical",
       "icon": "inner_wall",
       "order": 3,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -206,33 +293,60 @@
         "Isolation",
         "Lattes / profils"
       ],
-        "eccc": [
-            {
-                "ecccId": "C02.02",
-                "name": "Parois porteuses intérieures",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "G03.01",
-                "name": "Supports pour revêtements de parois",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G03.02",
-                "name": "Revêtements de parois",
-                "serviceLife": 30
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "C02.02",
+          "name": "Parois porteuses intérieures",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "G03.01",
+          "name": "Supports pour revêtements de parois",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G03.02",
+          "name": "Revêtements de parois",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Parois intérieures",
+        "de": "Innenwände",
+        "en": "Interior walls",
+        "it": "Pareti interne"
+      }
     },
     {
       "id": "partition_wall",
       "type": "vertical",
       "icon": "wall",
       "order": 4,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "subcategories": [
-        { "id": "single_shell", "label": { "fr": "Simple ossature", "de": "Einschalig", "en": "Single shell", "it": "Struttura singola" } },
-        { "id": "double_shell", "label": { "fr": "Double ossature", "de": "Doppelschalig", "en": "Double shell", "it": "Doppia struttura" } }
+        {
+          "id": "single_shell",
+          "label": {
+            "fr": "Simple ossature",
+            "de": "Einschalig",
+            "en": "Single shell",
+            "it": "Struttura singola"
+          }
+        },
+        {
+          "id": "double_shell",
+          "label": {
+            "fr": "Double ossature",
+            "de": "Doppelschalig",
+            "en": "Double shell",
+            "it": "Doppia struttura"
+          }
+        }
       ],
       "layerTypes": [
         "Adhérence",
@@ -244,30 +358,41 @@
         "Isolation",
         "Lattes / profils"
       ],
-        "eccc": [
-            {
-                "ecccId": "G01.01",
-                "name": "Cloisons fixes",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G03.01",
-                "name": "Supports pour revêtements de parois",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G03.02",
-                "name": "Revêtements de parois",
-                "serviceLife": 30
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "G01.01",
+          "name": "Cloisons fixes",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G03.01",
+          "name": "Supports pour revêtements de parois",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G03.02",
+          "name": "Revêtements de parois",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Cloisons",
+        "de": "Trennwände",
+        "en": "Partitions",
+        "it": "Pareti divisorie"
+      }
     },
     {
       "id": "flat_roof_shed_roof",
       "type": "horizontal",
       "icon": "roof",
       "order": 6,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -283,35 +408,46 @@
         "Revêtement",
         "Structure porteuse"
       ],
-        "eccc": [
-            {
-                "ecccId": "C04.04",
-                "name": "Structures porteuses de toitures plates",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "F01.02",
-                "name": "Couverture (Toitures plates)",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G04.01",
-                "name": "Supports pour faux-plafonds",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G04.02",
-                "name": "Faux-plafonds",
-                "serviceLife": 30
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "C04.04",
+          "name": "Structures porteuses de toitures plates",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "F01.02",
+          "name": "Couverture (Toitures plates)",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G04.01",
+          "name": "Supports pour faux-plafonds",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G04.02",
+          "name": "Faux-plafonds",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Toit plat / en pente",
+        "de": "Flachdach",
+        "en": "Flat roof / shed roof",
+        "it": "Tetto piano / a falda unica"
+      }
     },
     {
       "id": "steep_roof",
       "type": "horizontal",
       "icon": "roof",
       "order": 7,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -326,35 +462,46 @@
         "Revêtement",
         "Structure porteuse"
       ],
-        "eccc": [
-            {
-                "ecccId": "C04.05",
-                "name": "Structures porteuses de toitures inclinées",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "F01.03",
-                "name": "Couverture (Toitures inclinées)",
-                "serviceLife": 40
-            },
-            {
-                "ecccId": "G04.01",
-                "name": "Supports pour faux-plafonds",
-                "serviceLife": 30
-            },
-            {
-                "ecccId": "G04.02",
-                "name": "Faux-plafonds",
-                "serviceLife": 30
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "C04.05",
+          "name": "Structures porteuses de toitures inclinées",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "F01.03",
+          "name": "Couverture (Toitures inclinées)",
+          "serviceLife": 40
+        },
+        {
+          "ecccId": "G04.01",
+          "name": "Supports pour faux-plafonds",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "G04.02",
+          "name": "Faux-plafonds",
+          "serviceLife": 30
+        }
+      ],
+      "label": {
+        "fr": "Toit à deux pans",
+        "de": "Steildach",
+        "en": "Steep roof",
+        "it": "Tetto a falde"
+      }
     },
     {
       "id": "underground_roof",
       "type": "horizontal",
       "icon": "underground_roof",
       "order": 7,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
+      ],
       "layerTypes": [
         "Adhérence",
         "Amortissement de la cavité",
@@ -369,45 +516,65 @@
         "Revêtement",
         "Structure porteuse"
       ],
-        "eccc": [
-            {
-                "ecccId": "C04.04",
-                "name": "Structures porteuses de toitures plates",
-                "serviceLife": 60
-            },
-            {
-                "ecccId": "F01.01",
-                "name": "Etanchéités enterrées",
-                "serviceLife": 60
-            }
-        ]
+      "eccc": [
+        {
+          "ecccId": "C04.04",
+          "name": "Structures porteuses de toitures plates",
+          "serviceLife": 60
+        },
+        {
+          "ecccId": "F01.01",
+          "name": "Etanchéités enterrées",
+          "serviceLife": 60
+        }
+      ],
+      "label": {
+        "fr": "Toiture enterrée",
+        "de": "Unterirdisches Dach",
+        "en": "Underground roof",
+        "it": "Copertura interrata"
+      }
     },
     {
       "id": "balcony",
       "type": "horizontal",
       "icon": "balcony",
       "order": 8,
-      "properties": ["thickness", "weight", "uValue", "gwp"],
-      "layerTypes": [
-
+      "properties": [
+        "thickness",
+        "weight",
+        "uValue",
+        "gwp"
       ],
-        "eccc": [
-            {
-                "ecccId": "C04.08",
-                "name": "Structures porteuses extérieures, avant-toits",
-                "serviceLife": 40
-            },
-            {
-                "ecccId": "E02.05",
-                "name": "Revêtements de plafonds extérieurs",
-                "serviceLife": 40
-            },
-            {
-                "ecccId": "E02.06",
-                "name": "Dispositifs antichute extérieurs",
-                "serviceLife": 40
-            }
-        ]
+      "layerTypes": [],
+      "eccc": [
+        {
+          "ecccId": "C04.08",
+          "name": "Structures porteuses extérieures, avant-toits",
+          "serviceLife": 40
+        },
+        {
+          "ecccId": "F01.02",
+          "name": "Couverture (Toitures plates)",
+          "serviceLife": 30
+        },
+        {
+          "ecccId": "E02.05",
+          "name": "Revêtements de plafonds extérieurs",
+          "serviceLife": 40
+        },
+        {
+          "ecccId": "E02.06",
+          "name": "Dispositifs antichute extérieurs",
+          "serviceLife": 40
+        }
+      ],
+      "label": {
+        "fr": "Balcon",
+        "de": "Balkon",
+        "en": "Balcony",
+        "it": "Balcone"
+      }
     }
   ]
 }

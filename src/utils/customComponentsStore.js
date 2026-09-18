@@ -1,5 +1,5 @@
 const CUSTOM_COMPONENTS_STORAGE_KEY = 'autospec.components_custom.v1';
-const randomId = () => {
+export const createCustomComponentId = () => {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID();
   }
@@ -69,7 +69,29 @@ export const writeFileCustomComponent = async (component) => {
   });
 
   if (!response.ok) {
-    throw new Error(`Ecriture components_custom.json impossible (${response.status})`);
+    const payload = await response.json().catch(() => ({}));
+    throw new Error(payload.error ?? `Ecriture components_custom.json impossible (${response.status})`);
+  }
+
+  return response.json();
+};
+
+export const writeFileSourceComponent = async (sourceFile, component) => {
+  const normalizedComponent = normalizeSoundInsulation(component);
+  const response = await fetch(
+    `/api/components-source/${encodeURIComponent(sourceFile)}/${encodeURIComponent(component.id)}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ component: normalizedComponent }),
+    },
+  );
+
+  if (!response.ok) {
+    const payload = await response.json().catch(() => ({}));
+    throw new Error(payload.error ?? `Ecriture ${sourceFile} impossible (${response.status})`);
   }
 
   return response.json();
@@ -114,7 +136,7 @@ export const mergeById = (items) => {
   normalizeArray(items).forEach((item) => {
     if (!item || typeof item !== 'object') return;
     const normalizedItem = normalizeSoundInsulation(item);
-    const key = normalizedItem.id ?? normalizedItem.serialNo ?? randomId();
+    const key = normalizedItem.id ?? normalizedItem.serialNo ?? createCustomComponentId();
     map.set(String(key), normalizedItem);
   });
   return Array.from(map.values());
@@ -123,9 +145,8 @@ export const mergeById = (items) => {
 export const withCustomSource = (item) => ({
   ...normalizeSoundInsulation(item),
   source: {
-    ...(item?.source ?? {}),
-    name: item?.source?.name ?? 'Custom',
-    databaseId: item?.source?.databaseId ?? 'custom',
+    name: 'Custom',
+    databaseId: 'custom',
   },
   __sourceFile: 'components_custom.json',
 });

@@ -4,7 +4,7 @@ const path = require('path');
 
 const TAXONOMIES = {
   bauteilgruppe: 'categoryId',
-  bauteiltyp: 'typeId',
+  bauteiltyp: 'systemTypeId',
   bekleidung: 'claddingId',
   beplankung: 'sheathingId',
   beschwerungkonstruktion: 'ballastInConstructionId',
@@ -118,7 +118,7 @@ const buildUnifiedComponents = (deItems, enItems, frItems) => {
       screedId: taxonomyId(de, 'estrich'),
       variantId: taxonomyId(de, 'bauteilvariante'),
       translations: localized(de, en, fr, 'bauteilname'),
-      structure: { layers, typeId: taxonomyId(de, 'bauteiltyp') },
+      structure: { layers, systemTypeId: taxonomyId(de, 'bauteiltyp') },
       fire_resistance: { REI_min: null, RF_internal_min: null, RF_external_min: null },
       sound_insulation: {
         airborneSound: {

@@ -7,11 +7,11 @@ export const ROOF_TYPES = [
 
 export const BUILDING_PARTS = [
   { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
+  { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
+  { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
+  { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
   { id: 'outer_walls', label: 'Mur extérieur hors terrain', categories: ['outer_wall'], subcategories: ['above_ground'] },
   { id: 'underground_walls', label: 'Mur extérieur sous-terrain', categories: ['outer_wall'], subcategories: ['below_ground'] },
-  { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
-  { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
-  { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
   { id: 'foundation', label: 'Radier', categories: ['foundation'] },
   { id: 'balcony', label: 'Balcon', categories: ['balcony'] },
   { id: 'windows', label: 'Fenêtres', categories: [] },
