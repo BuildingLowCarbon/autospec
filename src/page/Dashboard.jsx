@@ -7,6 +7,7 @@ import loadProducts from '../utils/loadProducts';
 import { fetchDbSources, invalidateComponentsCache } from '../utils/loadComponents';
 import { calculateComponentProperties } from '../utils/componentPropriety';
 import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
+import publicBase from '../utils/publicBase';
 import {
   deleteFileCustomComponent,
   deleteLocalCustomComponent,
@@ -101,7 +102,7 @@ export default function Dashboard() {
   useEffect(() => {
     const load = async () => {
       const [dbSources, materialsJson, productsJson] = await Promise.all([
-        fetchDbSources(process.env.PUBLIC_URL || ''),
+        fetchDbSources(publicBase),
         loadMaterials(),
         loadProducts(),
       ]);

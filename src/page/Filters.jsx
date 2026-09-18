@@ -16,6 +16,7 @@ import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import SourceSelector from '../components/SourceSelector';
 import ENtebTool from '../components/ENteb/ENteb_tool';
 import { getAcousticInsulation } from '../utils/acoustic';
+import publicBase from '../utils/publicBase';
 import {
   getComponentStructureTypeId,
   getComponentStructureTypeOptions,
@@ -259,7 +260,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const base = process.env.PUBLIC_URL || '';
+        const base = publicBase;
         const [json, dbSources] = await Promise.all([loadComponents(), fetchDbSources(base)]);
         setData(json);
 

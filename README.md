@@ -1,98 +1,82 @@
-# Getting Started with Create React App
+# AutoSpec
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application React construite avec Vite. En développement, Vite sert le frontend sur le port 3000 et un serveur Express local expose l’API sur le port 3001. Le proxy Vite conserve des URL identiques à la production sous `/api`.
 
-## Authentification locale et MongoDB
+## Installation
 
-L'API locale charge `MONGODB_URI` depuis `atlas-credentials.env` ou `.env.local`. Ces fichiers restent locaux et ne doivent jamais être suivis par Git. Si le nom de la base n'est pas inclus dans l'URI, l'API utilise `MONGODB_DB`, puis `autospec` par défaut.
+```bash
+npm install
+```
 
-Lancer l'application et l'API avec :
+L’API charge `MONGODB_URI` depuis `atlas-credentials.env` ou `.env.local`. Ces fichiers restent locaux et ne doivent jamais être suivis par Git. Si le nom de la base n’est pas inclus dans l’URI, l’API utilise `MONGODB_DB`, puis `autospec` par défaut.
+
+## Développement local
 
 ```bash
 npm start
 ```
 
-La connexion est disponible sous `/login`. La gestion des comptes et des accès se trouve sous `/dashboard/utilisateurs` pour les administrateurs. Pour créer le tout premier administrateur d'une base vide :
+Cette commande lance simultanément :
+
+- le frontend Vite sur `http://localhost:3000` ;
+- l’API Express locale sur `http://127.0.0.1:3001` ;
+- le proxy `/api` de Vite vers l’API.
+
+Les commandes séparées sont également disponibles :
 
 ```bash
-npm run auth:create-admin -- admin "Administrateur Autospec"
+npm run dev:web
+npm run dev:api
 ```
 
-Le mot de passe temporaire généré n'est affiché qu'une fois. Les mots de passe sont hachés côté serveur et les sessions sont conservées dans MongoDB avec expiration automatique.
+La connexion est disponible sous `/login`. La gestion des comptes et des accès se trouve sous `/dashboard/utilisateurs` pour les administrateurs. Pour créer le premier administrateur d’une base vide :
 
-Les profils sont disponibles sous `/profile` et la gestion des organisations sous `/organizations`. Les nouveaux composants dupliqués dans Custom et les matériaux créés depuis le profil sont enregistrés dans MongoDB avec une visibilité `private`, `organization` ou `public`. La base système `components_custom.json` reste séparée et globale.
+```bash
+npm run auth:create-admin -- admin "Administrateur AutoSpec"
+```
+
+Les mots de passe sont hachés côté serveur et les sessions sont conservées dans MongoDB avec expiration automatique. Les profils sont disponibles sous `/profile` et les organisations sous `/organizations`.
+
+## Production
+
+```bash
+npm run build
+```
+
+Le frontend de production est généré dans `dist/`. La commande suivante permet de contrôler localement ce frontend compilé :
+
+```bash
+npm run preview
+```
+
+Le serveur Vite de développement et `server/devServer.js` ne sont pas utilisés en production. Sur Vercel, `api/index.mjs` expose la même application Express sous `/api` sous la forme d’une fonction Node.js. Les routes restent définies une seule fois dans `server/apiRoutes.js`.
+
+Configurer les variables suivantes dans **Vercel > Project Settings > Environment Variables** pour les environnements Production et Preview :
+
+- `MONGODB_URI` : URI complète du cluster Atlas, avec l’utilisateur et le mot de passe ;
+- `MONGODB_DB` : `autospec` (facultatif si ce nom figure déjà dans l’URI).
+
+Ne jamais ajouter `atlas-credentials.env` au dépôt Git. Les composants et matériaux personnels, d’organisation et publics sont lus et écrits dans MongoDB. Les bases système JSON sont en lecture seule sur Vercel : elles doivent être modifiées localement, puis publiées par un commit et un push Git. Les routes de maintenance correspondantes du dashboard sont donc disponibles uniquement en local ; la gestion MongoDB des utilisateurs, organisations et contenus partagés reste disponible sur Vercel.
+
+Les sources Lignum, anciennes bases et versions de sauvegarde (`public/db/source_database`, `public/db/old` et `public/db/versions`) sont volontairement exclues du déploiement par `.vercelignore`. Elles servent uniquement à la maintenance locale et représentent plusieurs centaines de mégaoctets. Les JSON système actifs référencés par `public/db/db_files.json` restent déployés.
+
+Le routage Vercel traite `/api/*` avant le repli SPA vers `index.html`. Le point de contrôle public suivant permet de confirmer que la fonction est en ligne :
+
+```text
+https://<domaine>/api/health
+```
+
+## Tests
+
+```bash
+npm test
+npm run test:db
+```
+
+`npm test` exécute les tests React avec Vitest. `npm run test:db` exécute séparément les contrôles Node des bases Lignum.
 
 ## Dashboard des bases de données
 
-Le Dashboard est disponible sous `/dashboard`. Il permet d’unifier les trois sources Lignum, de sélectionner les composants publiés, de contrôler les références, de gérer les correspondances Lignum → TBZ et de créer ou modifier les matériaux, produits et composants.
+Le Dashboard est disponible sous `/dashboard`. Il permet notamment d’unifier les sources Lignum, contrôler les références, gérer les correspondances et corriger les composants, matériaux et produits.
 
-Les écritures passent par `src/setupProxy.js`; il faut donc utiliser `npm start` (ou reprendre ces routes API dans le serveur de production). Chaque enregistrement met à jour le JSON actif sous `public/db` et crée une copie horodatée sous `public/db/versions/<base>/`. Les correspondances sont conservées dans `public/db/mappings/lignum_product_tbz.json`.
-
-Le test de fidélité de la conversion et du versionnage se lance avec `npm run test:db`.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En local, les écritures système passent par les routes enregistrées dans `server/apiRoutes.js` et exécutées par `server/devServer.js`. Elles mettent à jour les JSON actifs sous `public/db` et créent leurs versions sous `public/db/versions`.

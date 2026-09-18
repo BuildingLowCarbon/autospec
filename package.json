@@ -2,56 +2,42 @@
   "name": "autospec",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.22.3",
     "mongodb": "^7.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-range": "^1.10.0",
-    "react-router-dom": "^7.6.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-router-dom": "^7.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "concurrently --kill-others --success first --names api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev": "npm start",
+    "dev:web": "vite",
+    "dev:api": "node server/devServer.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:db": "node --test --experimental-test-isolation=none server/lignumDatabase.test.js",
     "auth:create-admin": "node server/createInitialAdmin.js",
-    "migrate:material-i18n": "node server/enrichMaterialTranslations.js",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
-      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js",
-      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js"
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "migrate:material-i18n": "node server/enrichMaterialTranslations.js"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^10.0.5",
+    "jsdom": "^29.1.1",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
   }
 }

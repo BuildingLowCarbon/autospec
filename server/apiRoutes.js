@@ -10,9 +10,9 @@ const {
   saveVersioned,
   validateComponents,
   writeJson,
-} = require('../server/lignumDatabase');
-const { registerAuthRoutes, requireAuth } = require('../server/authRoutes');
-const { registerCollaborationRoutes } = require('../server/collaborationRoutes');
+} = require('./lignumDatabase');
+const { registerAuthRoutes, requireAuth } = require('./authRoutes');
+const { registerCollaborationRoutes } = require('./collaborationRoutes');
 
 const customComponentsPath = path.resolve(__dirname, '../public/db/components_custom.json');
 const dbDir = path.resolve(__dirname, '../public/db');
@@ -25,8 +25,24 @@ const selectedPath = path.join(dbDir, 'components_lignum_selected.json');
 const materialsPath = path.join(dbDir, 'materials', 'tbz_materials.json');
 const productsPath = path.join(dbDir, 'products', 'tbz_products_composites.json');
 const mappingsPath = path.join(dbDir, 'mappings', 'lignum_product_tbz.json');
-const categoriesPath = path.resolve(__dirname, 'data/categories.json');
-const constructionSystemsPath = path.resolve(__dirname, 'data/construction_systems.json');
+const categoriesPath = path.resolve(__dirname, '../src/data/categories.json');
+const constructionSystemsPath = path.resolve(__dirname, '../src/data/construction_systems.json');
+const systemDatabaseRoutes = [
+  '/api/taxonomies',
+  '/api/lignum',
+  '/api/catalog',
+  '/api/db',
+  '/api/components-source',
+  '/api/components-custom',
+];
+
+const requireLocalSystemDatabase = (req, res, next) => {
+  if (process.env.VERCEL !== '1') return next();
+  return res.status(403).json({
+    ok: false,
+    error: 'Les outils des bases de donnees systeme sont disponibles uniquement en local. Publiez ensuite les modifications avec Git.',
+  });
+};
 
 const validateTaxonomyId = (value, label) => {
   const id = String(value ?? '').trim();
@@ -128,10 +144,10 @@ const readRequestBody = (req) =>
     req.on('error', reject);
   });
 
-module.exports = function setupProxy(app) {
+module.exports = function registerApiRoutes(app) {
   registerAuthRoutes(app);
   registerCollaborationRoutes(app);
-  app.use(['/api/taxonomies', '/api/lignum', '/api/catalog', '/api/db', '/api/components-source'], requireAuth('dashboard'));
+  app.use(systemDatabaseRoutes, requireAuth('dashboard'), requireLocalSystemDatabase);
   app.use('/api', requireAuth('app'));
 
   const sendJson = (res, payload, statusCode = 200) => {

@@ -1,3 +1,5 @@
+import publicBase from './publicBase';
+
 const MATERIAL_FILES = ['materials/tbz_materials.json'];
 
 let cachedMaterials = null;
@@ -21,7 +23,7 @@ const loadMaterials = async ({ forceRefresh = false } = {}) => {
   if (forceRefresh) cachedMaterials = null;
   if (cachedMaterials) return cachedMaterials;
 
-  const base = process.env.PUBLIC_URL || '';
+  const base = publicBase;
   const readContent = async (url) => fetch(url, { cache: 'no-store' })
     .then((response) => response.ok ? response.json() : { items: [] })
     .catch(() => ({ items: [] }));

@@ -6,6 +6,7 @@ import RangeSlider from '../components/RangeSlider';
 import SourceSelector from '../components/SourceSelector';
 import loadComponents, { fetchDbSources } from '../utils/loadComponents';
 import FireFilter, { R_OPTIONS as FIRE_R_VALUES, EI_OPTIONS as FIRE_EI_VALUES } from '../components/FireFilter';
+import publicBase from '../utils/publicBase';
 
 const formatCategoryLabel = (value) => {
   if (!value) return 'Unknown';
@@ -193,7 +194,7 @@ export default function TbzResult() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const base = process.env.PUBLIC_URL || '';
+      const base = publicBase;
       const [components, dbSources] = await Promise.all([loadComponents(), fetchDbSources(base)]);
       setData(components);
 

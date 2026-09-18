@@ -4,6 +4,7 @@ import {
 import { normalizeSupportStructure } from './supportStructure';
 import { normalizeComponentTaxonomy } from './componentTaxonomy';
 import { normalizeComponentStructureType } from './componentStructureType';
+import publicBase from './publicBase';
 let cachedComponents = null;
 let cachedDbSources = null;
 let cachedUserContent = null;
@@ -54,7 +55,7 @@ const fetchUserContent = async () => {
   }
 };
 
-export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
+export const fetchDbSources = async (base = publicBase) => {
   if (cachedDbSources) return cachedDbSources;
   const manifestUrl = `${base}/db/db_files.json`;
   const entries = await fetchJson(manifestUrl);
@@ -91,7 +92,7 @@ export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
   return cachedDbSources;
 };
 
-export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
+export const fetchDbFilesList = async (base = publicBase) => {
   const sources = await fetchDbSources(base);
   if (Array.isArray(sources) && sources.length) {
     return sources.map((source) => source.file);
@@ -107,7 +108,7 @@ export const loadComponents = async ({ forceRefresh = false } = {}) => {
   }
   if (cachedComponents) return cachedComponents;
 
-  const base = process.env.PUBLIC_URL || '';
+  const base = publicBase;
   const dbFiles = await fetchDbFilesList(base);
   if (!dbFiles.length) {
     cachedComponents = [];

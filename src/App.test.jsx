@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import App from './App';
 
 test('protège la page Custom sans session', async () => {
-  global.fetch = jest.fn().mockResolvedValue({
+  global.fetch = vi.fn().mockResolvedValue({
     ok: false,
     status: 401,
     json: async () => ({ ok: false, error: 'Authentification requise.' }),
