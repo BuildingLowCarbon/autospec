@@ -1,3 +1,5 @@
+import publicBase from './publicBase';
+
 const PRODUCT_FILES = ['products/tbz_products_composites.json'];
 
 let cachedProducts = null;
@@ -20,7 +22,7 @@ const fetchJson = async (path) => {
 const loadProducts = async () => {
   if (cachedProducts) return cachedProducts;
 
-  const base = process.env.PUBLIC_URL || '';
+  const base = publicBase;
   const results = await Promise.all(PRODUCT_FILES.map((file) => fetchJson(`${base}/db/${file}`)));
   cachedProducts = results.flat();
   return cachedProducts;

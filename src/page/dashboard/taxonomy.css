@@ -1,0 +1,20 @@
+.db-taxonomy-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0; border-bottom: 1px solid #d7ddd9; }
+.db-taxonomy-tabs button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: transparent; }
+.db-taxonomy-tabs button.active { border-bottom-color: #246b4b; color: #1f6245; font-weight: 700; }
+.db-taxonomy-parent { display: grid; gap: 5px; max-width: 420px; margin: 0 0 16px; }
+.db-taxonomy-parent select, .db-taxonomy-editor input, .db-taxonomy-editor select { box-sizing: border-box; width: 100%; padding: 9px; border: 1px solid #abb6b0; border-radius: 5px; }
+.db-taxonomy-layout { display: grid; grid-template-columns: minmax(280px, .75fr) minmax(420px, 1.25fr); gap: 18px; }
+.db-taxonomy-list { display: grid; align-content: start; gap: 6px; max-height: 65vh; overflow: auto; padding-right: 4px; }
+.db-taxonomy-list > button:not(.db-primary) { display: grid; gap: 3px; text-align: left; background: #fff; }
+.db-taxonomy-list > button.active { border-color: #286e4e; background: #eaf6ef; }
+.db-taxonomy-list small { color: #68756e; }
+.db-taxonomy-editor { padding: 18px; border: 1px solid #d7ddd9; border-radius: 8px; background: #fafcfb; }
+.db-taxonomy-editor > label, .db-taxonomy-editor fieldset label { display: grid; gap: 4px; margin-bottom: 10px; }
+.db-taxonomy-editor fieldset { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; margin: 16px 0; border: 1px solid #d7ddd9; border-radius: 7px; }
+.db-taxonomy-editor fieldset legend { padding: 0 6px; font-weight: 700; }
+.db-taxonomy-category-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.db-taxonomy-category-fields label { display: grid; gap: 4px; }
+.db-taxonomy-hint { display: block; margin-top: -6px; color: #68756e; }
+.db-taxonomy-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.db-taxonomy-actions .db-danger { margin-left: auto; border-color: #b84141; color: #9b2828; background: #fff4f4; }
+@media (max-width: 900px) { .db-taxonomy-layout { grid-template-columns: 1fr; } .db-taxonomy-editor fieldset, .db-taxonomy-category-fields { grid-template-columns: 1fr; } }

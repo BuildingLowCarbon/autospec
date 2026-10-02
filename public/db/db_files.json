@@ -1,4 +1,5 @@
 [
+  { "file": "components_custom.json", "label": "Custom" },
   { "file": "components_btk_enriched.json", "label": "BauTeilKatalog" },
   { "file": "components_minergie_enriched.json", "label": "Minergie" },
   { "file": "components_lignum_selected.json", "label": "Lignum" }

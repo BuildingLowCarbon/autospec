@@ -1,0 +1,286 @@
+{
+  "write": true,
+  "customBefore": 45,
+  "restoredCustomEntries": 43,
+  "restoredLignumComponents": 42,
+  "lignumBefore": 1,
+  "lignumAfter": 43,
+  "customAfter": 2,
+  "differentNames": [
+    {
+      "customId": "6DFD8EEC-B15B-429E-8242-05983CD67DAC",
+      "customName": "Mur béton-brique GrandChenes",
+      "lignumId": null,
+      "lignumName": null
+    },
+    {
+      "customId": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+      "customName": "Paroi extérieure D1233 Montants RE",
+      "lignumId": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+      "lignumName": "Paroi extérieure D1233 Montants"
+    }
+  ],
+  "reassignedCustomIds": [
+    {
+      "previousId": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+      "newId": "b1e6b220-d6bb-4f49-bdb5-5a530ef1f7fc",
+      "name": "Paroi extérieure D1233 Montants RE"
+    }
+  ],
+  "collisionsAfterRestore": 0,
+  "restored": [
+    {
+      "customId": "BD458C8C-F6EF-3D1E-8D64-8CE31BC07283",
+      "lignumId": "BD458C8C-F6EF-3D1E-8D64-8CE31BC07283",
+      "name": "Plancher A0105 Raidisseurs / solives",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "7A6A5188-097E-39E8-A88E-3DB220F51C6B",
+      "lignumId": "7A6A5188-097E-39E8-A88E-3DB220F51C6B",
+      "name": "Toit plat / en pente F0029 Bresta Systeme Bois massif, planches juxtaposées",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "55A86292-C665-3B29-90CA-D3516E0634C3",
+      "lignumId": "55A86292-C665-3B29-90CA-D3516E0634C3",
+      "name": "Toit plat / en pente F0038 Bresta Systeme Bois massif, planches juxtaposées",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "A884C398-1202-3F52-95D0-C9E2274DB7B0",
+      "lignumId": "A884C398-1202-3F52-95D0-C9E2274DB7B0",
+      "name": "Toit à deux pans E0055 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "CE1FDBAA-B0A0-3A37-B995-AAE130D141D3",
+      "lignumId": "CE1FDBAA-B0A0-3A37-B995-AAE130D141D3",
+      "name": "Cloison simple ossature C0075 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "FBE9DD31-6192-35A0-9EF6-D57F380B8C68",
+      "lignumId": "FBE9DD31-6192-35A0-9EF6-D57F380B8C68",
+      "name": "Cloison simple ossature C0076 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "95CC78EC-D0E3-3690-A165-EE78F7150EB5",
+      "lignumId": "95CC78EC-D0E3-3690-A165-EE78F7150EB5",
+      "name": "Toit plat / en pente F0093 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "0A11E95D-D712-39CE-8D88-FEC70DE9644A",
+      "lignumId": "0A11E95D-D712-39CE-8D88-FEC70DE9644A",
+      "name": "Toit plat / en pente F0101 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "C9778B60-5AC9-306B-9AC6-59585A0E2093",
+      "lignumId": "C9778B60-5AC9-306B-9AC6-59585A0E2093",
+      "name": "Toit à deux pans E0105 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "289E81DE-4B01-3674-81CF-C29E40CECB1A",
+      "lignumId": "289E81DE-4B01-3674-81CF-C29E40CECB1A",
+      "name": "Toit plat / en pente F0106 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "90E9C9E3-ACB7-386A-A763-06FAB6C3AD50",
+      "lignumId": "90E9C9E3-ACB7-386A-A763-06FAB6C3AD50",
+      "name": "Cloison simple ossature C0114 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "7C33A502-6548-35D4-9830-83CD4B6A78A0",
+      "lignumId": "7C33A502-6548-35D4-9830-83CD4B6A78A0",
+      "name": "Toit plat / en pente F0124 Caisson",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "15129370-7E5F-3271-95D5-A0AAA8B5FCC5",
+      "lignumId": "15129370-7E5F-3271-95D5-A0AAA8B5FCC5",
+      "name": "Toit à deux pans E0135 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "37A920D6-B400-357F-A85F-23481059EC53",
+      "lignumId": "37A920D6-B400-357F-A85F-23481059EC53",
+      "name": "Toit à deux pans E0147 BRESTA Solid Timber System, planked on one side",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "918B809B-F2E6-3B03-80E7-EFDE35091169",
+      "lignumId": "918B809B-F2E6-3B03-80E7-EFDE35091169",
+      "name": "Toit plat / en pente F0151 Raidisseurs",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "3A385A32-FC90-3980-839F-490BA1C6DA57",
+      "lignumId": "3A385A32-FC90-3980-839F-490BA1C6DA57",
+      "name": "Plancher A0247 Raidisseurs / solives",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "39B6B59E-C1DA-3725-A8E7-73B0B799AEF4",
+      "lignumId": "39B6B59E-C1DA-3725-A8E7-73B0B799AEF4",
+      "name": "Toit à deux pans E0192 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "60569567-B02F-3F6F-A293-20AAD0AF4B31",
+      "lignumId": "60569567-B02F-3F6F-A293-20AAD0AF4B31",
+      "name": "Toit à deux pans E0198 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "AAB67D91-BFA6-3CD8-A3AD-CB7B81D7D662",
+      "lignumId": "AAB67D91-BFA6-3CD8-A3AD-CB7B81D7D662",
+      "name": "Plancher A0303 Caisson",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "99B24771-F61D-3834-BEB9-7C36E7D43878",
+      "lignumId": "99B24771-F61D-3834-BEB9-7C36E7D43878",
+      "name": "Toit à deux pans E0231 Raiidisseurs / chevrons",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "F9257F73-F166-355F-AD57-B4EA9FA0FEDE",
+      "lignumId": "F9257F73-F166-355F-AD57-B4EA9FA0FEDE",
+      "name": "Cloison double ossature B9394 Bois massif, dérivés du bois",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "EDA14374-B5DC-38C1-9E3D-86F327281A75",
+      "lignumId": "EDA14374-B5DC-38C1-9E3D-86F327281A75",
+      "name": "Cloison double ossature B9403 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "9C3CC41E-B45D-33F5-9F3C-39EE3D4898CC",
+      "lignumId": "9C3CC41E-B45D-33F5-9F3C-39EE3D4898CC",
+      "name": "Cloison simple ossature C0475 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "0A3A86FF-BAB9-373A-B688-99186CF9F1E9",
+      "lignumId": "0A3A86FF-BAB9-373A-B688-99186CF9F1E9",
+      "name": "Cloison simple ossature C0493 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "9F1FC913-5DFB-3BB8-A4E5-02B6BE6A6768",
+      "lignumId": "9F1FC913-5DFB-3BB8-A4E5-02B6BE6A6768",
+      "name": "Plancher A0708 Caisson",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+      "lignumId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+      "name": "Paroi extérieure D0737 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "59ADC9C4-FB5B-318E-AF4D-D92C2969C21A",
+      "lignumId": "59ADC9C4-FB5B-318E-AF4D-D92C2969C21A",
+      "name": "Plancher A0847 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "4E6A442F-A956-3F7E-ADEC-2F929626D93E",
+      "lignumId": "4E6A442F-A956-3F7E-ADEC-2F929626D93E",
+      "name": "Plancher A1087 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "9CBB623D-9BA1-3E19-BC36-757B772B5FF1",
+      "lignumId": "9CBB623D-9BA1-3E19-BC36-757B772B5FF1",
+      "name": "Plancher A1108 Bois massif",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "3F69C977-50AB-3E0B-B249-9B1FE3A4A6CF",
+      "lignumId": "3F69C977-50AB-3E0B-B249-9B1FE3A4A6CF",
+      "name": "Paroi extérieure D1192 Bresta Systeme Bois massif, planches juxtaposées",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "213B972A-CB7F-3968-ABCE-6300E44FAAC1",
+      "lignumId": "213B972A-CB7F-3968-ABCE-6300E44FAAC1",
+      "name": "Paroi extérieure D1197 Bois massif, dérivés du bois",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "F83126AD-CD58-3D43-AA67-B7FCB3ADC36A",
+      "lignumId": "F83126AD-CD58-3D43-AA67-B7FCB3ADC36A",
+      "name": "Paroi extérieure D1199 Bois massif, dérivés du bois",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "24550426-31A7-36C8-B163-8E880069157D",
+      "lignumId": "24550426-31A7-36C8-B163-8E880069157D",
+      "name": "Paroi extérieure D1235 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "9D4E51E1-A3DB-3DEB-A12B-ADCB6C5B42D6",
+      "lignumId": "9D4E51E1-A3DB-3DEB-A12B-ADCB6C5B42D6",
+      "name": "Paroi extérieure D1247 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "7346b76a-01c5-4b5f-ade6-cfbbbb0ef3e6",
+      "lignumId": "616FF859-B980-359B-A778-A14C2C62D932",
+      "name": "Plancher A1462 Caisson",
+      "reusedOriginalId": false
+    },
+    {
+      "customId": "99519FEC-8C0F-3490-9094-35A3B855FBBD",
+      "lignumId": "99519FEC-8C0F-3490-9094-35A3B855FBBD",
+      "name": "Plancher A0022 Caisson",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "467E3AD1-4AF1-3697-9A69-12BB42F07494",
+      "lignumId": "467E3AD1-4AF1-3697-9A69-12BB42F07494",
+      "name": "Plancher A2709 Bois massif, dérivés du bois",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "BBA51BB5-8740-3EE7-B46E-F09C45963760",
+      "lignumId": "BBA51BB5-8740-3EE7-B46E-F09C45963760",
+      "name": "Plancher A2725 Mixte bois -béton",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "28BB6936-8545-3CA5-B08D-CF23EDC32B13",
+      "lignumId": "28BB6936-8545-3CA5-B08D-CF23EDC32B13",
+      "name": "Plancher A2731 Raidisseurs / solives",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "4FE68A74-610E-3ECF-BE0D-D9A66190F023",
+      "lignumId": "4FE68A74-610E-3ECF-BE0D-D9A66190F023",
+      "name": "Plancher A2734 Raidisseurs / solives",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "8E4779B7-9BEC-3D14-B209-01F3F47D7094",
+      "lignumId": "8E4779B7-9BEC-3D14-B209-01F3F47D7094",
+      "name": "Paroi extérieure D1237 Montants",
+      "reusedOriginalId": true
+    },
+    {
+      "customId": "b64401f9-91a5-49da-86c1-1fbc0dcc7021",
+      "lignumId": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+      "name": "Paroi extérieure D1233 Montants",
+      "reusedOriginalId": false
+    }
+  ],
+  "backupDirectory": "public\\db\\versions\\restore_lignum_from_custom\\2026-09-17T15-52-22-649Z"
+}

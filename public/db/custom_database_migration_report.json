@@ -1,0 +1,264 @@
+{
+  "write": true,
+  "customBefore": 106,
+  "movedToSource": 61,
+  "customAfter": 45,
+  "touchedSourceFiles": [
+    "components_btk_enriched.json",
+    "components_lignum_selected.json",
+    "components_minergie_enriched.json"
+  ],
+  "mergedRecentUpdates": [
+    "2A13415F-4237-4307-AC78-BA3F443C8390",
+    "2DFD6629-938E-4792-B088-B59369B05C67",
+    "A2995D8C-206F-4D3E-8289-1795D6BE8828"
+  ],
+  "collisionsAfterMigration": 0,
+  "moved": [
+    {
+      "id": "A1BC0207-568F-453B-8FB8-7A17635FF4E8",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "A6D0F6A9-BEFB-3A70-9021-06E35F021D60",
+      "sourceFile": "components_lignum_selected.json"
+    },
+    {
+      "id": "D95CBA49-A350-44AE-B4D7-A2731C89144D",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "0B52155E-4351-426E-B1BF-65A8D7A66A13",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "2A13415F-4237-4307-AC78-BA3F443C8390",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "1A84C3A6-32BB-4009-B08B-C2D4B1B07555",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "79259ABA-C945-40E6-9D06-AE24A77FD59D",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "D782208E-AC1E-4CA5-82C0-C26471FFD6AF",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "90F55DD7-A06C-4384-ACAD-C82E62A17390",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "FB770052-4FDF-4E0C-ACC6-646BEB6414A1",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "04A1572C-2F6D-45FB-9DAB-513C0E04077B",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "19252197-2F93-4910-A759-BFF6B83B3CA3",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "6C31C61A-17D3-49DF-831E-5A40B438F7A9",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "0CCD55A5-1988-470A-AB71-C81464F9EABC",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "3E2E996D-20F0-4DC1-9AD6-0CF0C705C297",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "E9949B8A-13FC-4873-9EBC-749010C11EDB",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "CF4E5441-B616-4C09-876F-FC938B45D523",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "3B21C297-BB6B-40E1-A738-E4DC1B7674D9",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "8644E124-A463-49B5-9666-63C84CE1CD15",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "F977EDC9-03AA-4336-AB90-6EAB6041BA47",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "B9F95287-249A-4EAA-89F0-ED23DF4C3154",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "E6AB21A4-DFD8-4FDC-B24D-48447A12E301",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "76BE9F6E-921D-4800-9817-B430EB63A859",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "5D2BA635-9014-499B-9AD6-6F716E8127ED",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "6211D363-FA29-4FCA-8CE0-3D680F0736FC",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "7289D95D-A883-47DD-BC5F-EC92AC89D64E",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "FB10C803-69E7-4F7B-86A9-EBADCD7A2ADB",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "6F9895A8-1CE9-4FE0-B217-FA41D86EBEEF",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "09556D3E-E1A9-49BF-835D-008EBC012EB8",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "C26AD05E-9380-4F45-8D0E-00ECC158AEF3",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "AB529E98-A4D2-490C-BC60-579D5F414360",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "642BDFB4-8037-47EA-943A-4736C925D219",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "C2C6E60D-FF18-44FF-94FF-DFC804C8373A",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "31297046-E692-4311-A728-3A6BDCB35398",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "15C2F2EF-DA41-44EF-8A97-FEA82BAD11AA",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "67CB379F-B8A8-49FD-A142-73A89B9BCE7E",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "DA79535D-B0D4-4B4F-8648-AC5C3FD703AF",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "35BA5BCE-408F-4250-822C-C2D236C345E8",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "CC8F5E3A-92B6-4CFC-A427-C2271D0A0E20",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "0D0D1253-BA08-437C-A86E-C907573128DA",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "B028B7B4-4A89-455F-A85F-2A65ADF38257",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "27DC8822-0798-4B53-8557-8925FCD2294A",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "FF31A2E7-D653-48E8-8994-FDA78A2F7B7D",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "46DDC603-7F39-4963-86E9-514109810979",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "0B9900E6-5601-4B1A-B53B-ED94E82840FF",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "838F3976-968A-4A50-AA5A-C190F2CD0B36",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "48C6C41D-A755-4B32-A871-257BD9145306",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "FFBD468A-0226-41EF-91C0-529B4244D517",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "89AC8B07-895C-40E5-A31B-F89C6B2174E9",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "80802783-0941-44F0-BCB3-0BD2B4DB7B20",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "85517E33-2A48-4EF8-AE42-5E05B79495F0",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "F95CC22B-141C-487F-8258-1C0B627D2F73",
+      "sourceFile": "components_btk_enriched.json"
+    },
+    {
+      "id": "B870CFFD-2EA6-4E26-9272-549278856F25",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "17CF64C2-0F9E-424C-A692-8D9698923FAD",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "CABECB94-BD21-45EF-900C-E7D6E60085B5",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "44E977CA-E4B0-4627-9952-0EC47BB010FF",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "21F3B0DB-6F06-422F-89E9-6AA6BB65CA9D",
+      "sourceFile": "components_minergie_enriched.json"
+    },
+    {
+      "id": "80CE5CD7-CA04-4477-822D-B799F3F1177B",
+      "sourceFile": "components_minergie_enriched.json"
+    }
+  ],
+  "backupDirectory": "public\\db\\versions\\custom_to_sources\\2026-09-17T14-58-24-701Z"
+}

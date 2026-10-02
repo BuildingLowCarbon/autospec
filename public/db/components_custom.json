@@ -1,0 +1,1578 @@
+[
+  {
+    "id": "6DFD8EEC-B15B-429E-8242-05983CD67DAC",
+    "parent": null,
+    "serialNo": null,
+    "categoryId": "outer_wall",
+    "thickness_mm": 528.5,
+    "weight_kg_m2": 622.5949681528663,
+    "uValue_W_m2K": 0.14698536179194763,
+    "gwp_kgco2e_m2": 79.8435817834395,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Mur béton-brique GrandChenes",
+        "description": null
+      },
+      "en": {
+        "name": "Concrete and brick wall GrandChenes",
+        "description": null
+      },
+      "de": {
+        "name": "Beton-Backsteinwand GrandChenes",
+        "description": null
+      },
+      "it": {
+        "name": "Parete in calcestruzzo e laterizio GrandChenes",
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "24FDAE1F-EE69-4556-AF71-9DF208E217B3",
+          "role": "Couche d'infiltration",
+          "thickness_mm": 140,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque d'infiltration 60mm (EPS) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 4.2,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.6968,
+          "thermalResistance_m2K_W": 4.242424242424242,
+          "baseGwp_kgco2e_m2": 0.8484,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "ecccId": "E02.01",
+          "ecccDescription": ""
+        },
+        {
+          "order": 1,
+          "productId": "23341508-26B2-4527-9620-B8F8B54CAA6D",
+          "role": "Isolation périmétrique collée",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 1.38,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.55752,
+          "thermalResistance_m2K_W": 2.068965517241379,
+          "baseGwp_kgco2e_m2": 0.27876,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "ecccId": "E02.01",
+          "ecccDescription": ""
+        },
+        {
+          "order": 2,
+          "productId": "995EF503-2AF1-4EF2-9F25-E92581AC54D9",
+          "role": "Mur en béton coulé sur place",
+          "thickness_mm": 220,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Paroi en béton d=25cm (Fe 60kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 524.6649681528662,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 71.0487617834395,
+          "thermalResistance_m2K_W": 0.0920845663707377,
+          "baseGwp_kgco2e_m2": 71.0487617834395,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "ecccId": "C02.01",
+          "ecccDescription": ""
+        },
+        {
+          "order": 3,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Revêtement sous terrain",
+          "thickness_mm": 3.5,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.85,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.0241,
+          "thermalResistance_m2K_W": 0.010606060606060605,
+          "baseGwp_kgco2e_m2": 1.0241,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "ecccId": "E01.01",
+          "ecccDescription": ""
+        },
+        {
+          "order": 4,
+          "productId": "",
+          "structure": "on-lying",
+          "thickness_mm": 10,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "reactionToFire": null,
+          "time_burning_min": 0,
+          "time_fire_start_min": 15,
+          "kbobId": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "",
+          "translations": {
+            "fr": {
+              "description": "Vide"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 0,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 60,
+          "replacementFactor": 1
+        },
+        {
+          "order": 5,
+          "productId": "679EAE13-0A75-488E-9989-FB2DB236E9E1",
+          "structure": "on-lying",
+          "thickness_mm": 80,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "reactionToFire": null,
+          "time_burning_min": 0,
+          "time_fire_start_min": 15,
+          "kbobId": null,
+          "ecccId": "C02.01",
+          "ecccDescription": "",
+          "translations": {
+            "fr": {
+              "description": ""
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "weight_kg_m2": 72,
+          "gwp_kgco2e_m2": 3.7872,
+          "thermalResistance_m2K_W": 0.18181818181818182,
+          "baseGwp_kgco2e_m2": 3.7872,
+          "serviceLife_years": 60,
+          "replacementFactor": 1
+        },
+        {
+          "order": 6,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "role": "Enduit intérieur",
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Enduit minéral"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 16.5,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
+        }
+      ],
+      "systemTypeId": null
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "source": {
+      "name": "Custom",
+      "databaseId": "custom"
+    },
+    "_rawTaxo": {},
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "subcategoryId": "above_ground",
+    "__sourceFile": "components_custom.json"
+  },
+  {
+    "id": "b1e6b220-d6bb-4f49-bdb5-5a530ef1f7fc",
+    "parent": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+    "serialNo": "D1233",
+    "categoryId": "outer_wall",
+    "thickness_mm": 308.9,
+    "weight_kg_m2": 46.40795194244605,
+    "uValue_W_m2K": 0.15577240943428483,
+    "gwp_kgco2e_m2": 4.514966908489209,
+    "spanMax_m": null,
+    "claddingId": "without_covering",
+    "sheathingId": "sheathed_on_both_sides",
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": "with_cavity_insulation_in_the_supporting_structure",
+    "facadeTypeId": "stud_sheathed_on_both_sides",
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": "ventilated_facade",
+    "translations": {
+      "fr": {
+        "name": "Paroi extérieure D1233 Montants RE",
+        "description": "Paroi extérieure composée d'une construction de base de montants avec isolation de la cavité de la structure support. Contreventement côté extérieur et côté intérieur, contreventement double côté extérieur, contreventement double côté intérieur. Sans parement. façade ventilée."
+      },
+      "en": {
+        "name": "Outer wall D1233 Stud",
+        "description": "Outer wall consisting of a basic construction of stud with cavity insulation in the supporting structure. Sheathed outside & interior, on the outside twice sheathed, roomside double sheathed. Without covering. Ventilated facade."
+      },
+      "de": {
+        "name": "Aussenwand D1233 Ständer",
+        "description": "Aussenwand mit einer Tragkonstruktion bestehend aus Ständer mit Hohlraumdämmung in der Tragkonstruktion. Beplankung aussen & innen, aussen doppelt beplankt, innen doppelt beplankt. Ohne Bekleidung. Hinterlüftete Fassade."
+      },
+      "it": {
+        "name": "Parete esterna D1233 Montanti RE",
+        "description": "Parete esterna costituita da una struttura di base in montanti con isolamento nell’intercapedine della struttura portante. Rivestita sul lato esterno e interno, con doppia pannellatura esterna, con doppia pannellatura interna. Senza rivestimento. Facciata ventilata."
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "78B008CE-2C50-451A-AC99-FD05A16C9ED8",
+          "translations": {
+            "fr": {
+              "description": "Parement à gauche 1ère couche"
+            },
+            "de": {
+              "description": "Bekleidung links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cover leftside 1st layer"
+            }
+          },
+          "productName": "Duropal Xterior Compact F",
+          "thickness_mm": 21,
+          "weight_kg_m2": 10.290000000000001,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": "FFFFFF",
+          "fiberDirection": null,
+          "kbobId": null,
+          "gwp_kgco2e_m2": 0.9137520000000001,
+          "thermalResistance_m2K_W": 0.16153846153846155,
+          "baseGwp_kgco2e_m2": 0.9137520000000001,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
+          "translations": {
+            "fr": {
+              "description": "Lattes / profils (ventilation)"
+            },
+            "de": {
+              "description": "Lattung / Profile (Hinterlüftung)"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Battens / profiles (ventilation)"
+            }
+          },
+          "productName": "Holzlatte b=60mm",
+          "thickness_mm": 20,
+          "weight_kg_m2": 1.4100719424460433,
+          "width_mm": 60,
+          "spacing_mm": 417,
+          "reactionToFire": "RF3",
+          "colorCode": "Transparent",
+          "fiberDirection": "lengthwise",
+          "kbobId": "07.011",
+          "gwp_kgco2e_m2": 0.12521438848920866,
+          "thermalResistance_m2K_W": 0.15384615384615385,
+          "baseGwp_kgco2e_m2": 0.12521438848920866,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
+        },
+        {
+          "order": 2,
+          "structure": "on-lying",
+          "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
+          "translations": {
+            "fr": {
+              "description": "Couplage"
+            },
+            "de": {
+              "description": "Kopplung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Coupling"
+            }
+          },
+          "productName": "Fassadenbahn",
+          "thickness_mm": 0.4,
+          "weight_kg_m2": 0.368,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3 cr",
+          "colorCode": "BCBCBC",
+          "fiberDirection": null,
+          "kbobId": "09.008",
+          "gwp_kgco2e_m2": 0.076912,
+          "thermalResistance_m2K_W": 0.0012121212121212121,
+          "baseGwp_kgco2e_m2": 0.076912,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
+        },
+        {
+          "order": 3,
+          "structure": "on-lying",
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "translations": {
+            "fr": {
+              "description": "Contrevetement extérieur à gauche 1ère couche"
+            },
+            "de": {
+              "description": "Beplankung aussen links 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed outside leftside 1st layer"
+            }
+          },
+          "productName": "StyleBoard MDF.RWH",
+          "thickness_mm": 80,
+          "weight_kg_m2": 2.56,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3",
+          "colorCode": "BCBCBC",
+          "fiberDirection": null,
+          "kbobId": "07.012",
+          "gwp_kgco2e_m2": 0.26111999999999996,
+          "thermalResistance_m2K_W": 2.2222222222222223,
+          "baseGwp_kgco2e_m2": 0.26111999999999996,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d ' isolation thermique extérieure"
+        },
+        {
+          "order": 4,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "description": "Adhérence"
+            },
+            "de": {
+              "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
+            }
+          },
+          "productName": "Steif, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false
+        },
+        {
+          "order": 5,
+          "structure": "on-lying",
+          "productId": "1123258E-5468-491C-9432-A824FB0DA4D1",
+          "translations": {
+            "fr": {
+              "description": "Support"
+            },
+            "de": {
+              "description": "Träger"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Support"
+            }
+          },
+          "productName": "Keilgezinktes Vollholz",
+          "thickness_mm": 160,
+          "weight_kg_m2": 7.5264,
+          "width_mm": 60,
+          "spacing_mm": 625,
+          "reactionToFire": "RF3",
+          "colorCode": "Transparent",
+          "fiberDirection": "lengthwise",
+          "kbobId": "07.011",
+          "gwp_kgco2e_m2": 0.66834432,
+          "thermalResistance_m2K_W": 1.2307692307692308,
+          "baseGwp_kgco2e_m2": 0.66834432,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
+        },
+        {
+          "order": 6,
+          "structure": "in-lying",
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "translations": {
+            "fr": {
+              "description": "Amortissement de la cavité"
+            },
+            "de": {
+              "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Cavity dampening"
+            }
+          },
+          "productName": "Zellulosedämmung climacell",
+          "thickness_mm": 160,
+          "weight_kg_m2": 4.628480000000001,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": "FFFFFF",
+          "fiberDirection": null,
+          "kbobId": "10.010",
+          "gwp_kgco2e_m2": 0.7636992000000001,
+          "thermalResistance_m2K_W": 4.444444444444445,
+          "baseGwp_kgco2e_m2": 0.7636992000000001,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "protectsSupportSidesFromFire": true,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
+        },
+        {
+          "order": 7,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "description": "Adhérence"
+            },
+            "de": {
+              "description": "Verbund"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Bond"
+            }
+          },
+          "productName": "Starr, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
+        },
+        {
+          "order": 8,
+          "structure": "on-lying",
+          "productId": "57ACF198-5FBF-4DAE-9DF3-627F3241AB46",
+          "translations": {
+            "fr": {
+              "description": "Contreventement à gauche 1ère couche"
+            },
+            "de": {
+              "description": "Beplankung rechts 1. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed rightside 1st layer"
+            }
+          },
+          "productName": "LivingBoard P5",
+          "thickness_mm": 15,
+          "weight_kg_m2": 9,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3",
+          "colorCode": "BCBCBC",
+          "fiberDirection": null,
+          "kbobId": "07.015",
+          "gwp_kgco2e_m2": 0.8793,
+          "thermalResistance_m2K_W": 0.10714285714285712,
+          "baseGwp_kgco2e_m2": 0.8793,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
+        },
+        {
+          "order": 9,
+          "structure": "on-lying",
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "translations": {
+            "fr": {
+              "description": "Contreventement à gauche 2ème couche"
+            },
+            "de": {
+              "description": "Beplankung rechts 2. Schicht"
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": "Sheathed rightside 2nd layer"
+            }
+          },
+          "productName": "Gipsplatte Typ A",
+          "thickness_mm": 12.5,
+          "weight_kg_m2": 10.625,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "03.008",
+          "gwp_kgco2e_m2": 0.8266249999999999,
+          "thermalResistance_m2K_W": 0.05,
+          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
+        }
+      ],
+      "systemTypeId": "stud"
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 60,
+          "h_mm": 160,
+          "spacing_mm": 625,
+          "isContinuousSupport": false,
+          "hasLateralFireProtection": true,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 15
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 60,
+          "h_mm": 160,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 18.31978093670777,
+          "Nmax_interaction_kN": 119.04000000000002,
+          "Nmax_NT_kN": 18.31978093670777,
+          "buckling": {
+            "A_mm2": 9600,
+            "Iy_mm4": 20480000,
+            "Iz_mm4": 2880000,
+            "iy_mm": 46.188021535170066,
+            "iz_mm": 17.320508075688775,
+            "i_min_mm": 17.320508075688775,
+            "lambda": 144.33756729740642,
+            "lambda_rel": 2.447503356802015,
+            "kc": 0.1538960092129349,
+            "Nmax_flamb_N": 18319.780936707768,
+            "Nmax_flamb_kN": 18.31978093670777
+          },
+          "interaction": {
+            "A_mm2": 9600,
+            "Wy_mm3": 256000,
+            "Wz_mm3": 96000,
+            "alpha": 7.056903254711527e-11,
+            "beta": 0,
+            "Nmax_interaction_N": 119040.00000000001,
+            "Nmax_interaction_kN": 119.04000000000002
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 60,
+            "hfi_mm": 141,
+            "d_char_mm": 12,
+            "d_eff_mm": 19,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 29.0597525108527,
+            "Nmax_interaction_Rt_kN": 188.8272,
+            "Nmax_Rt_kN": 29.0597525108527,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 60,
+              "hfi_mm": 141,
+              "A_fi_mm2": 8460,
+              "Nmax_flamb_Rt_N": 29059.7525108527,
+              "Nmax_flamb_Rt_kN": 29.0597525108527,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 8460,
+                "Iy_mm4": 14016105,
+                "Iz_mm4": 2538000,
+                "iy_mm": 40.703193977868615,
+                "iz_mm": 17.320508075688775,
+                "i_min_mm": 17.320508075688775,
+                "lambda": 144.33756729740642,
+                "lambda_rel": 2.447503356802015,
+                "kc": 0.1538960092129349,
+                "Nmax_flamb_N": 16144.306950473721,
+                "Nmax_flamb_kN": 16.144306950473723
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 15,
+              "d_char_mm": 12,
+              "d_eff_mm": 19,
+              "bfi_mm": 60,
+              "hfi_mm": 141,
+              "A_fi_mm2": 8460,
+              "Wy_fi_mm3": 198810,
+              "Wz_fi_mm3": 84600,
+              "alpha": 2.8045997655279636e-11,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 188827.2,
+              "Nmax_interaction_Rt_kN": 188.8272
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 60,
+            "hfi_mm": 117,
+            "d_char_mm": 36,
+            "d_eff_mm": 43,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 24.1134116579416,
+            "Nmax_interaction_Rt_kN": 156.6864,
+            "Nmax_Rt_kN": 24.1134116579416,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 45,
+              "d_char_mm": 36,
+              "d_eff_mm": 43,
+              "bfi_mm": 60,
+              "hfi_mm": 117,
+              "A_fi_mm2": 7020,
+              "Nmax_flamb_Rt_N": 24113.4116579416,
+              "Nmax_flamb_Rt_kN": 24.1134116579416,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 7020,
+                "Iy_mm4": 8008065,
+                "Iz_mm4": 2106000,
+                "iy_mm": 33.77499074759311,
+                "iz_mm": 17.320508075688775,
+                "i_min_mm": 17.320508075688775,
+                "lambda": 144.33756729740642,
+                "lambda_rel": 2.447503356802015,
+                "kc": 0.1538960092129349,
+                "Nmax_flamb_N": 13396.339809967556,
+                "Nmax_flamb_kN": 13.396339809967555
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 45,
+              "d_char_mm": 36,
+              "d_eff_mm": 43,
+              "bfi_mm": 60,
+              "hfi_mm": 117,
+              "A_fi_mm2": 7020,
+              "Wy_fi_mm3": 136890,
+              "Wz_fi_mm3": 70200,
+              "alpha": 4.073215570053433e-11,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 156686.4,
+              "Nmax_interaction_Rt_kN": 156.6864
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 18.32,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 29.06,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 24.11,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 29.31,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 46.5,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 38.58,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 18.32,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 29.06,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 24.11,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 119.04,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 188.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 156.69,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": 46,
+        "c100_3150_dB": -2,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": -7
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Custom",
+      "databaseId": "custom"
+    },
+    "_rawTaxo": {
+      "bauteilgruppe": {
+        "ifcorientation": "IfcWall",
+        "name": "Aussenwand",
+        "workingtitle": "Aussenwand"
+      },
+      "bauteiltyp": {
+        "name": "Ständer",
+        "workingtitle": "Ständer"
+      },
+      "bekleidung": {
+        "name": "Ohne Bekleidung",
+        "workingtitle": "Ohne Bekleidung"
+      },
+      "beplankung": {
+        "name": "Beplankung beidseitig",
+        "workingtitle": "Beplankung beidseitig"
+      },
+      "beschwerungkonstruktion": {
+        "name": null,
+        "workingtitle": null
+      },
+      "beschwerungtragschicht": {
+        "name": null,
+        "workingtitle": null
+      },
+      "daemmungkonstruktion": {
+        "name": "mit Hohlraumdämmung in der Tragkonstruktion",
+        "workingtitle": "mit Hohlraumdämmung in der Tragkonstruktion"
+      },
+      "fassadentyp": {
+        "name": "Ständer beidseitig beplankt",
+        "workingtitle": "Ständer beidseitig beplankt"
+      },
+      "bauteilvariante": {
+        "name": "Hinterlüftete Fassade",
+        "workingtitle": "Hinterlüftete Fassade"
+      },
+      "wandbekleidung": {
+        "name": null,
+        "workingtitle": null
+      },
+      "estrich": {
+        "name": null,
+        "workingtitle": null
+      }
+    },
+    "subcategoryId": "above_ground"
+  },
+  {
+    "id": "b3890457-c12a-46b7-93b7-8efa1f8c437a",
+    "parent": "79259ABA-C945-40E6-9D06-AE24A77FD59D",
+    "serialNo": null,
+    "categoryId": "outer_wall",
+    "thickness_mm": 527,
+    "weight_kg_m2": 611.3850955414013,
+    "uValue_W_m2K": 0.12536192403477409,
+    "gwp_kgco2e_m2": 73.15067464968155,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Mur extérieur eb béton 25cm sous terrain avec isolation extérieure XPS 20cm U 0.17 W/m²K",
+        "description": null
+      },
+      "en": {
+        "name": "Below-ground concrete external wall, 25 cm, with 20 cm external XPS insulation, U 0.17 W/m²K",
+        "description": null
+      },
+      "de": {
+        "name": "Betonaussenwand 25 cm unter Terrain mit 20 cm XPS-Aussendämmung, U 0,17 W/m²K",
+        "description": null
+      },
+      "it": {
+        "name": "Parete esterna interrata in calcestruzzo, 25 cm, con isolamento esterno XPS da 20 cm, U 0,17 W/m²K",
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "57F2A42B-1D4D-4299-9B49-BF210531F0AB",
+          "role": "Couche d'infiltration",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque d'infiltration 60mm (EPS) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 1.08,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.21816000000000002,
+          "thermalResistance_m2K_W": 1.5789473684210527,
+          "baseGwp_kgco2e_m2": 0.21816000000000002,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null
+        },
+        {
+          "order": 1,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation périmétrique collée",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.2120000000000002,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.02",
+          "ecccDescription": "Isolations thermiques contre terre"
+        },
+        {
+          "order": 2,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Revêtement sous terrain",
+          "thickness_mm": 2,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 2.2,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.5852,
+          "thermalResistance_m2K_W": 0.006060606060606061,
+          "baseGwp_kgco2e_m2": 0.5852,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
+        },
+        {
+          "order": 3,
+          "productId": "1D277C05-5268-4F66-B977-295D5F6F624E",
+          "role": "Mur en béton coulé sur place",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Paroi en béton d=25cm (Fe 60kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 585.6050955414013,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 69.40611464968154,
+          "thermalResistance_m2K_W": 0.12378969943545588,
+          "baseGwp_kgco2e_m2": 69.40611464968154,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
+        },
+        {
+          "order": 4,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "role": "Enduit intérieur",
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Enduit minéral"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 16.5,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Custom",
+      "databaseId": "custom"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "below_ground",
+    "__sourceFile": "components_custom.json"
+  },
+  {
+    "id": "bd50a249-290d-440b-80d8-51a7be938b51",
+    "parent": "b3890457-c12a-46b7-93b7-8efa1f8c437a",
+    "serialNo": null,
+    "categoryId": "outer_wall",
+    "thickness_mm": 527,
+    "weight_kg_m2": 611.3850955414013,
+    "uValue_W_m2K": 0.12536192403477409,
+    "gwp_kgco2e_m2": 73.15067464968155,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Mur extérieur eb béton 25cm sous terrain avec isolation extérieure XPS 20cm U 0.17 W/m²K",
+        "description": null
+      },
+      "en": {
+        "name": "Below-ground concrete external wall, 25 cm, with 20 cm external XPS insulation, U 0.17 W/m²K",
+        "description": null
+      },
+      "de": {
+        "name": "Betonaussenwand 25 cm unter Terrain mit 20 cm XPS-Aussendämmung, U 0,17 W/m²K",
+        "description": null
+      },
+      "it": {
+        "name": "Parete esterna interrata in calcestruzzo, 25 cm, con isolamento esterno XPS da 20 cm, U 0,17 W/m²K",
+        "description": null
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "57F2A42B-1D4D-4299-9B49-BF210531F0AB",
+          "role": "Couche d'infiltration",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Plaque d'infiltration 60mm (EPS) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 1.08,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.21816000000000002,
+          "thermalResistance_m2K_W": 1.5789473684210527,
+          "baseGwp_kgco2e_m2": 0.21816000000000002,
+          "serviceLife_years": null,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null
+        },
+        {
+          "order": 1,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation périmétrique collée",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.2120000000000002,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.02",
+          "ecccDescription": "Isolations thermiques contre terre"
+        },
+        {
+          "order": 2,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Revêtement sous terrain",
+          "thickness_mm": 2,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 2.2,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0.5852,
+          "thermalResistance_m2K_W": 0.006060606060606061,
+          "baseGwp_kgco2e_m2": 0.5852,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
+        },
+        {
+          "order": 3,
+          "productId": "1D277C05-5268-4F66-B977-295D5F6F624E",
+          "role": "Mur en béton coulé sur place",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Paroi en béton d=25cm (Fe 60kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 585.6050955414013,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 69.40611464968154,
+          "thermalResistance_m2K_W": 0.12378969943545588,
+          "baseGwp_kgco2e_m2": 69.40611464968154,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
+        },
+        {
+          "order": 4,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "role": "Enduit intérieur",
+          "thickness_mm": 15,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Enduit minéral"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 16.5,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 1.7292,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 0.8646,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Custom",
+      "databaseId": "custom"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "below_ground",
+    "__sourceFile": "components_custom.json"
+  }
+]

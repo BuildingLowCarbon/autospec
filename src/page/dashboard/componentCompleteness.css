@@ -1,0 +1,27 @@
+.db-check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid #d7ddd9;
+  border-radius: 7px;
+}
+
+.db-check-grid legend { padding: 0 6px; font-weight: 700; }
+.db-check-grid label { display: flex; align-items: center; gap: 8px; }
+.db-check-grid .db-check-all { grid-column: 1 / -1; padding-bottom: 10px; border-bottom: 1px solid #e1e6e3; }
+.db-completeness-search { width: min(100%, 480px); box-sizing: border-box; margin-bottom: 16px; padding: 9px; border: 1px solid #abb6b0; border-radius: 5px; }
+.db-incomplete-list { display: grid; gap: 8px; }
+.db-incomplete-component { display: grid; grid-template-columns: minmax(220px, .9fr) minmax(300px, 1.4fr) auto; gap: 18px; align-items: center; padding: 13px; border: 1px solid #d6ddd9; border-left: 5px solid #c87632; border-radius: 7px; color: #26322d; text-decoration: none; }
+.db-incomplete-component:hover, .db-incomplete-component:focus { border-color: #327554; background: #f5faf7; }
+.db-incomplete-component > span:first-child { display: grid; gap: 3px; }
+.db-incomplete-component small { color: #68756e; }
+.db-missing-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.db-missing-tags em { padding: 4px 7px; border-radius: 999px; background: #fff0e4; color: #8b431e; font-size: .76rem; font-style: normal; font-weight: 700; }
+.db-incomplete-component > b { color: #246b4b; white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .db-incomplete-component { grid-template-columns: 1fr; }
+  .db-incomplete-component > b { white-space: normal; }
+}

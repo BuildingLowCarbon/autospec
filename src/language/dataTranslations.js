@@ -1,0 +1,44 @@
+const dataTranslations = {
+  categories: {
+    foundation: { fr: "Radier", de: "Bodenplatte", en: "Foundation slab", it: "Platea di fondazione" },
+    floor_assembly: { fr: "Plancher", de: "Decke", en: "Floor assembly", it: "Solaio" },
+    wall_assembly: { fr: "Élément de mur", de: "Wand", en: "Wall assembly", it: "Elemento di parete" },
+    outer_wall: { fr: "Paroi extérieure", de: "Aussenwand", en: "Outer wall", it: "Parete esterna" },
+    inner_wall: { fr: "Parois intérieures", de: "Innenwände", en: "Interior walls", it: "Pareti interne" },
+    partition_wall: { fr: "Cloisons", de: "Trennwände", en: "Partitions", it: "Pareti divisorie" },
+    partition_wall_single_shell: { fr: "Cloison simple ossature", de: "Trennwand einschalig", en: "Partition wall single shell", it: "Parete divisoria a struttura singola" },
+    partition_wall_double_shell: { fr: "Cloison double ossature", de: "Trennwand zweischalig", en: "Partition wall double shell", it: "Parete divisoria a doppia struttura" },
+    flat_roof_shed_roof: { fr: "Toit plat / en pente", de: "Flachdach", en: "Flat roof / shed roof", it: "Tetto piano / a falda unica" },
+    steep_roof: { fr: "Toit à deux pans", de: "Steildach", en: "Steep roof", it: "Tetto a falde" },
+    underground_roof: { fr: "Toiture enterrée", de: "Unterirdisches Dach", en: "Underground roof", it: "Copertura interrata" },
+    balcony: { fr: "Balcon", de: "Balkon", en: "Balcony", it: "Balcone" }
+  },
+  layerTypes: {
+    adhesion: { fr: "Adhérence", de: "Adhäsion", en: "Adhesion" },
+    mass_addition: { fr: "Ajout de masse", de: "Masseaddition", en: "Mass addition" },
+    cavity_damping: { fr: "Amortissement de la cavité", de: "Hohlraumdämpfung", en: "Cavity damping" },
+    bracing: { fr: "Contreventement", de: "Aussteifung", en: "Bracing" },
+    drainage_layer: { fr: "Couche de drainage", de: "Entwässerungsschicht", en: "Drainage layer" },
+    covering: { fr: "Couverture", de: "Eindeckung", en: "Covering" },
+    slab: { fr: "Dalle", de: "Platte", en: "Slab" },
+    wind_barrier: { fr: "Etanchéité au vent", de: "Winddichtung", en: "Wind barrier" },
+    waterproofing: { fr: "Etanchéité", de: "Abdichtung", en: "Waterproofing" },
+    air_gap: { fr: "Espace d'air", de: "Luftschicht", en: "Air gap" },
+    vapor_retarder: { fr: "Frein-vapeur", de: "Dampfbremse", en: "Vapor retarder" },
+    insulation: { fr: "Isolation", de: "Dämmung", en: "Insulation" },
+    load_bearing_insulation: { fr: "Isolation porteuse", de: "Tragende Dämmung", en: "Load-bearing insulation" },
+    impact_noise_isolation: { fr: "Isolement aux bruits de choc", de: "Trittschalldämmung", en: "Impact noise isolation" },
+    battens_profiles: { fr: "Lattes / profils", de: "Latten / Profile", en: "Battens / profiles" },
+    vapor_barrier: { fr: "Pare-vapeur", de: "Dampfsperre", en: "Vapor barrier" },
+    cladding_ceiling: { fr: "Parement de plafond", de: "Deckenverkleidung", en: "Cladding / ceiling" },
+    interior_cladding: { fr: "Revêtement intérieur", de: "Innenverkleidung", en: "Interior cladding" },
+    exterior_cladding: { fr: "Revêtement extérieur", de: "Aussenverkleidung", en: "Exterior cladding" },
+    flooring: { fr: "Revêtement de sol", de: "Bodenbelag", en: "Flooring" },
+    load_bearing_structure: { fr: "Structure porteuse", de: "Tragende Konstruktion", en: "Load-bearing structure" },
+    surface_treatment: { fr: "Traitement de surface", de: "Oberflächenbehandlung", en: "Surface treatment" },
+
+
+  }
+};
+
+export default dataTranslations;

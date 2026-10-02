@@ -1,0 +1,230 @@
+{
+  "woodClasses": {
+    "solid_softwood": {
+      "C16": {
+        "fm_d_N_mm2": 9.4,
+        "fv_d_N_mm2": 1.5,
+        "Em_mean_N_mm2": 8000,
+        "fc0_d_N_mm2": 10.0,
+        "fc0_k_N_mm2": 17.0,
+        "E0_05_N_mm2": 5400,
+        "beta_c": 0.2,
+        "beta_n_mm_min": 0.8,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 8, C16",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 8, C16",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 8, C16",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 8, C16",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 47, C16",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 47, C16",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "C24": {
+        "fm_d_N_mm2": 14.1,
+        "fv_d_N_mm2": 1.5,
+        "Em_mean_N_mm2": 11000,
+        "fc0_d_N_mm2": 12.4,
+        "fc0_k_N_mm2": 21.0,
+        "E0_05_N_mm2": 7400,
+        "beta_c": 0.2,
+        "beta_n_mm_min": 0.8,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 8, C24",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 8, C24",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 8, C24",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 8, C24",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 47, C24",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 47, C24",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "C30": {
+        "fm_d_N_mm2": 17.6,
+        "fv_d_N_mm2": 1.5,
+        "Em_mean_N_mm2": 12000,
+        "fc0_d_N_mm2": 14.1,
+        "fc0_k_N_mm2": 24.0,
+        "E0_05_N_mm2": 8000,
+        "beta_c": 0.2,
+        "beta_n_mm_min": 0.8,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 8, C30",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 8, C30",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 8, C30",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 8, C30",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 47, C30",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 47, C30",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      }
+    },
+    "solid_hardwood": {
+      "D30": {
+        "fm_d_N_mm2": 17.6,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 11000,
+        "fc0_d_N_mm2": 14.1,
+        "fc0_k_N_mm2": 24.0,
+        "E0_05_N_mm2": 9200,
+        "beta_c": 0.2,
+        "beta_n_mm_min": 0.8,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 8, D30",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 8, D30",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 8, D30",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 8, D30",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 47, D30",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 47, D30",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "Valeur projet: 0.8 mm/min pour solid_hardwood"
+        }
+      }
+    },
+    "glulam": {
+      "GL20h": {
+        "fm_d_N_mm2": 13.3,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 8400,
+        "fc0_d_N_mm2": 13.3,
+        "fc0_k_N_mm2": 20.0,
+        "E0_05_N_mm2": 7000,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL20h",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL20h",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL20h",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL20h",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL20h",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL20h",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL24c": {
+        "fm_d_N_mm2": 16.0,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 11000,
+        "fc0_d_N_mm2": 14.3,
+        "fc0_k_N_mm2": 21.5,
+        "E0_05_N_mm2": 9100,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL24c",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL24c",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL24c",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL24c",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL24c",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL24c",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL24h": {
+        "fm_d_N_mm2": 16.0,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 11500,
+        "fc0_d_N_mm2": 16.0,
+        "fc0_k_N_mm2": 24.0,
+        "E0_05_N_mm2": 9600,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL24h",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL24h",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL24h",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL24h",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL24h",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL24h",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL28c": {
+        "fm_d_N_mm2": 18.7,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 12500,
+        "fc0_d_N_mm2": 16.0,
+        "fc0_k_N_mm2": 24.0,
+        "E0_05_N_mm2": 10400,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL28c",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL28c",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL28c",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL28c",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL28c",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL28c",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL28h": {
+        "fm_d_N_mm2": 18.7,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 12600,
+        "fc0_d_N_mm2": 18.7,
+        "fc0_k_N_mm2": 28.0,
+        "E0_05_N_mm2": 10500,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL28h",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL28h",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL28h",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL28h",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL28h",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL28h",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL32c": {
+        "fm_d_N_mm2": 21.3,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 13500,
+        "fc0_d_N_mm2": 16.3,
+        "fc0_k_N_mm2": 24.5,
+        "E0_05_N_mm2": 11200,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL32c",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL32c",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL32c",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL32c",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL32c",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL32c",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      },
+      "GL32h": {
+        "fm_d_N_mm2": 21.3,
+        "fv_d_N_mm2": 1.8,
+        "Em_mean_N_mm2": 14200,
+        "fc0_d_N_mm2": 21.3,
+        "fc0_k_N_mm2": 32.0,
+        "E0_05_N_mm2": 11800,
+        "beta_c": 0.1,
+        "beta_n_mm_min": 0.7,
+        "sources": {
+          "fm_d_N_mm2": "SIA 265:2021, tableau 9, GL32h",
+          "fv_d_N_mm2": "SIA 265:2021, tableau 9, GL32h",
+          "Em_mean_N_mm2": "SIA 265:2021, tableau 9, GL32h",
+          "fc0_d_N_mm2": "SIA 265:2021, tableau 9, GL32h",
+          "fc0_k_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL32h",
+          "E0_05_N_mm2": "SIA 265:2021, annexe B, tableau 48, GL32h",
+          "beta_c": "SIA 265:2021, paragraphe 4.2.8.3",
+          "beta_n_mm_min": "SIA 265:2021, tableau 13"
+        }
+      }
+    }
+  }
+}

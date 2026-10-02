@@ -1,0 +1,313 @@
+[
+  {
+    "id": "A6D0F6A9-BEFB-3A70-9021-06E35F021D60",
+    "parent": null,
+    "serialNo": "D1027",
+    "categoryId": "outer_wall",
+    "thickness_mm": 362.5,
+    "weight_kg_m2": 76,
+    "uValue_W_m2K": 0.11308424132835504,
+    "gwp_kgco2e_m2": 27.6,
+    "spanMax_m": null,
+    "claddingId": "without_covering",
+    "sheathingId": "sheathed_on_both_sides",
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": "without_cavity_insulation_in_the_supporting_structure",
+    "facadeTypeId": "bresta_solid_timber_system_planked_on_both_sides",
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": "compact_facade",
+    "translations": {
+      "fr": {
+        "name": "Paroi extérieure D1027 Bresta Systeme Bois massif, planches juxtaposées",
+        "description": "Paroi extérieure composée d'une construction de base de Bresta Systeme Bois massif, planches juxtaposées sans isolation dans la cavité de la structure support. Contreventement côté extérieur et côté intérieur, contreventement  simple côté extérieur, contreventement simple côté intérieur. Sans parement. façade compacte."
+      },
+      "en": {
+        "name": "Outer wall D1027 BRESTA Solid Timber System",
+        "description": "Outer wall consisting of a basic construction of BRESTA Solid Timber System without cavity insulation in the supporting structure. Sheathed outside & interior, on the outside single sheathed, roomside single sheathed. Without covering. Compact facade."
+      },
+      "de": {
+        "name": "Aussenwand D1027 BRESTA Massivholzsystem",
+        "description": "Aussenwand mit einer Tragkonstruktion bestehend aus BRESTA Massivholzsystem ohne Hohlraumdämmung in der Tragkonstruktion. Beplankung aussen & innen, aussen einfach beplankt, innen einfach beplankt. Ohne Bekleidung. Kompaktfassade."
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "structure": "on-lying",
+          "productId": "993A21A3-FD0C-47AB-BD2D-5B5E5D08244E",
+          "translations": {
+            "fr": {
+              "name": "Système de crépis extérieur adapté au panneau support. Composé d'une couche de base, d'une armature et d'un crépis de finition.",
+              "description": "Surface 1"
+            },
+            "en": {
+              "name": "Exterior finish system suitable for supporting panel. Consisting of basic coating, fabric reinforcement and finish",
+              "description": "Surface 1"
+            },
+            "de": {
+              "name": "Aussenputzsystem passend zur Trägerplatte. Bestehend aus Grundbeschichtung, Gewebearmierung und Deckputz",
+              "description": "Oberfläche 1"
+            }
+          },
+          "productName": "Aussenputzsystem passend zur Trägerplatte. Bestehend aus Grundbeschichtung, Gewebearmierung und Deckputz",
+          "thickness_mm": 10,
+          "weight_kg_m2": 13.33,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "04.011"
+        },
+        {
+          "order": 1,
+          "structure": "on-lying",
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "translations": {
+            "fr": {
+              "name": "Laine minérale",
+              "description": "Contrevetement extérieur à gauche 1ère couche"
+            },
+            "en": {
+              "name": "Mineral wool",
+              "description": "Sheathed outside leftside 1st layer"
+            },
+            "de": {
+              "name": "Mineralwolle",
+              "description": "Beplankung aussen links 1. Schicht"
+            }
+          },
+          "productName": "Mineralwolle",
+          "thickness_mm": 240,
+          "weight_kg_m2": 4.8,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF3",
+          "colorCode": "F5F5F5",
+          "fiberDirection": null,
+          "kbobId": "10.008"
+        },
+        {
+          "order": 2,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
+              "description": "Adhérence"
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
+            }
+          },
+          "productName": "Steif, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": null,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null
+        },
+        {
+          "order": 3,
+          "structure": "on-lying",
+          "productId": "127DA73A-1668-40D9-AC79-82DAB7388106",
+          "translations": {
+            "fr": {
+              "name": "Panneau massif Bresta",
+              "description": "Support"
+            },
+            "en": {
+              "name": "Bresta Solid timber panel",
+              "description": "Support"
+            },
+            "de": {
+              "name": "Bresta Massivholzplatte",
+              "description": "Träger"
+            }
+          },
+          "productName": "Bresta Massivholzplatte",
+          "thickness_mm": 100,
+          "weight_kg_m2": 49,
+          "width_mm": 1000,
+          "spacing_mm": 1000,
+          "reactionToFire": "RF3",
+          "colorCode": "BCBCBC",
+          "fiberDirection": null,
+          "kbobId": "07.011.02"
+        },
+        {
+          "order": 4,
+          "structure": "overlaying centered",
+          "productId": null,
+          "translations": {
+            "fr": {
+              "name": "Raide, exécution selon des règles reconnues",
+              "description": "Adhérence"
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
+            },
+            "de": {
+              "name": "Steif, Ausführung nach den Regeln der Baukunde",
+              "description": "Verbund"
+            }
+          },
+          "productName": "Steif, Ausführung nach den Regeln der Baukunde",
+          "thickness_mm": null,
+          "weight_kg_m2": null,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": null,
+          "colorCode": null,
+          "fiberDirection": null,
+          "kbobId": null
+        },
+        {
+          "order": 5,
+          "structure": "on-lying",
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "translations": {
+            "fr": {
+              "name": "Plaque de plâtre type A",
+              "description": "Contreventement à gauche 1ère couche"
+            },
+            "en": {
+              "name": "Plasterboard type A",
+              "description": "Sheathed rightside 1st layer"
+            },
+            "de": {
+              "name": "Gipsplatte Typ A",
+              "description": "Beplankung rechts 1. Schicht"
+            }
+          },
+          "productName": "Gipsplatte Typ A",
+          "thickness_mm": 12.5,
+          "weight_kg_m2": 9.175,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "03.008"
+        },
+        {
+          "order": 6,
+          "structure": "on-lying",
+          "productId": "A1F3BCF1-3041-4E44-B851-0E1A6A2E07CD",
+          "translations": {
+            "fr": {
+              "name": "Joints enduits",
+              "description": "Surface côté droit"
+            },
+            "en": {
+              "name": "Smoothed joints",
+              "description": "Surface rightside"
+            },
+            "de": {
+              "name": "Fugen verspachtelt",
+              "description": "Oberfläche rechts"
+            }
+          },
+          "productName": "Fugen verspachtelt",
+          "thickness_mm": 0,
+          "weight_kg_m2": 0,
+          "width_mm": null,
+          "spacing_mm": null,
+          "reactionToFire": "RF1",
+          "colorCode": "80E6F2",
+          "fiberDirection": null,
+          "kbobId": "04.017"
+        }
+      ],
+      "typeId": "bresta_solid_timber_system"
+    },
+    "fire_resistance": {
+      "REI_min": null,
+      "RF_internal_min": null,
+      "RF_external_min": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": 40,
+        "c100_3150_dB": 0,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": -3
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "Lignum",
+      "databaseId": "lignum",
+      "externalId": "A6D0F6A9-BEFB-3A70-9021-06E35F021D60",
+      "url": "https://lignumdata.ch/system/bauteile/A6D0F6A9-BEFB-3A70-9021-06E35F021D60?locale=de"
+    },
+    "_rawTaxo": {
+      "bauteilgruppe": {
+        "ifcorientation": "IfcWall",
+        "name": "Aussenwand",
+        "workingtitle": "Aussenwand"
+      },
+      "bauteiltyp": {
+        "name": "BRESTA Massivholzsystem",
+        "workingtitle": "BRESTA Massivholzsystem"
+      },
+      "bekleidung": {
+        "name": "Ohne Bekleidung",
+        "workingtitle": "Ohne Bekleidung"
+      },
+      "beplankung": {
+        "name": "Beplankung beidseitig",
+        "workingtitle": "Beplankung beidseitig"
+      },
+      "beschwerungkonstruktion": {
+        "name": null,
+        "workingtitle": null
+      },
+      "beschwerungtragschicht": {
+        "name": null,
+        "workingtitle": null
+      },
+      "daemmungkonstruktion": {
+        "name": "ohne Hohlraumdämmung in der Tragkonstruktion",
+        "workingtitle": "ohne Hohlraumdämmung in der Tragkonstruktion"
+      },
+      "fassadentyp": {
+        "name": "BRESTA Massivholzsystem beidseitig beplankt",
+        "workingtitle": "BRESTA Massivholzsystem beidseitig beplankt"
+      },
+      "bauteilvariante": {
+        "name": "Kompaktfassade",
+        "workingtitle": "Kompaktfassade"
+      },
+      "wandbekleidung": {
+        "name": null,
+        "workingtitle": null
+      },
+      "estrich": {
+        "name": null,
+        "workingtitle": null
+      }
+    },
+    "metadata": {
+      "created_at": "2026-09-15T12:42:36.067Z",
+      "updated_at": "2026-09-15T13:01:20.293Z",
+      "version": 2
+    }
+  }
+]

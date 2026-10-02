@@ -1,5 +1,16 @@
+import {
+  mergeById,
+} from './customComponentsStore';
+import { normalizeSupportStructure } from './supportStructure';
+import { normalizeComponentTaxonomy } from './componentTaxonomy';
+import { normalizeComponentStructureType } from './componentStructureType';
+import publicBase from './publicBase';
 let cachedComponents = null;
 let cachedDbSources = null;
+let cachedUserContent = null;
+
+const normalizeComponent = (component) =>
+  normalizeComponentStructureType(normalizeComponentTaxonomy(normalizeSupportStructure(component)));
 
 const fetchJson = async (path) => {
   try {
@@ -16,7 +27,35 @@ const fetchJson = async (path) => {
   }
 };
 
-export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
+const fetchUserContent = async () => {
+  if (cachedUserContent) return cachedUserContent;
+  try {
+    const read = async (url) => {
+      const response = await fetch(url, { cache: 'no-store' });
+      return response.ok ? response.json() : { items: [], sources: [] };
+    };
+    const [publicPayload, authenticatedPayload] = await Promise.all([
+      read('/api/public/content/components'),
+      read('/api/content/components'),
+    ]);
+    const itemMap = new Map();
+    [...(publicPayload.items || []), ...(authenticatedPayload.items || [])]
+      .forEach((item) => itemMap.set(String(item.__contentId || item.id), item));
+    const sourceMap = new Map();
+    [...(publicPayload.sources || []), ...(authenticatedPayload.sources || [])]
+      .forEach((source) => sourceMap.set(source.file, source));
+    cachedUserContent = {
+      items: Array.from(itemMap.values()),
+      sources: Array.from(sourceMap.values()),
+    };
+    return cachedUserContent;
+  } catch (error) {
+    console.error('Erreur de chargement des composants MongoDB:', error);
+    return { items: [], sources: [] };
+  }
+};
+
+export const fetchDbSources = async (base = publicBase) => {
   if (cachedDbSources) return cachedDbSources;
   const manifestUrl = `${base}/db/db_files.json`;
   const entries = await fetchJson(manifestUrl);
@@ -43,15 +82,17 @@ export const fetchDbSources = async (base = process.env.PUBLIC_URL || '') => {
         : file.replace('.json', '').replace(/_/g, ' ');
       normalized.push({ file, label });
     });
-    cachedDbSources = normalized;
+    const userContent = await fetchUserContent();
+    cachedDbSources = [...normalized, ...userContent.sources.filter((source) => !seen.has(source.file))];
     return cachedDbSources;
   }
   console.warn('Manifest db_files.json introuvable ou vide.');
-  cachedDbSources = [];
+  const userContent = await fetchUserContent();
+  cachedDbSources = userContent.sources;
   return cachedDbSources;
 };
 
-export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
+export const fetchDbFilesList = async (base = publicBase) => {
   const sources = await fetchDbSources(base);
   if (Array.isArray(sources) && sources.length) {
     return sources.map((source) => source.file);
@@ -59,33 +100,39 @@ export const fetchDbFilesList = async (base = process.env.PUBLIC_URL || '') => {
   return [];
 };
 
-export const loadComponents = async () => {
+export const loadComponents = async ({ forceRefresh = false } = {}) => {
+  if (forceRefresh) {
+    cachedComponents = null;
+    cachedDbSources = null;
+    cachedUserContent = null;
+  }
   if (cachedComponents) return cachedComponents;
 
-  const base = process.env.PUBLIC_URL || '';
+  const base = publicBase;
   const dbFiles = await fetchDbFilesList(base);
   if (!dbFiles.length) {
     cachedComponents = [];
     return cachedComponents;
   }
-  const results = await Promise.all(
-    dbFiles.map((file) =>
-      fetchJson(`${base}/db/${file}`).then((items) => items.map((item) => ({ ...item, __sourceFile: file })))
-    )
-  );
+  const systemFiles = dbFiles.filter((file) => !file.startsWith('user:') && !file.startsWith('organization:') && !file.startsWith('community:'));
+  const [results, userContent] = await Promise.all([
+    Promise.all(systemFiles.map((file) =>
+      fetchJson(`${base}/db/${file}`).then((items) => items.map((item) =>
+        normalizeComponent({ ...item, __sourceFile: file })
+      ))
+    )),
+    fetchUserContent(),
+  ]);
 
-  const seen = new Set();
-  cachedComponents = results
-    .flat()
-    .filter((item) => {
-      const key = item?.id ?? item?.serialNo;
-      if (!key) return true;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+  cachedComponents = mergeById([...results.flat(), ...userContent.items.map(normalizeComponent)]);
 
   return cachedComponents;
+};
+
+export const invalidateComponentsCache = () => {
+  cachedComponents = null;
+  cachedDbSources = null;
+  cachedUserContent = null;
 };
 
 export default loadComponents;

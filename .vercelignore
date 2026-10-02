@@ -1,0 +1,11 @@
+# Local secrets and generated output
+atlas-credentials.env
+.env.local
+build
+dist
+
+# These files are only used by local dashboard maintenance tools. The active
+# system databases in public/db remain part of the Vercel deployment.
+public/db/source_database
+public/db/versions
+public/db/old

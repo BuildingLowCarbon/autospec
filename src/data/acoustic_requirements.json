@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "module": "acoustic_requirements",
+  "i18n": {
+    "requirement_level": {
+      "normal": { "fr": "Exigences normales", "en": "Normal requirements", "de": "Normale Anforderungen", "it": "Requisiti normali" },
+      "increased": { "fr": "Exigences accrues", "en": "Increased requirements", "de": "Erhoehte Anforderungen", "it": "Requisiti accresciuti" }
+    }
+  },
+  "dropdowns": {
+    "requirement_level": ["normal", "increased"]
+  },
+  "filter_categories": {
+    "roof_flat_shed": "flat_roof_shed_roof",
+    "roof_steep": "steep_roof",
+    "floor": "floor_assembly",
+    "partition_double": "partition_wall_double_shell",
+    "partition_single": "partition_wall_single_shell",
+    "outer_wall": "outer_wall"
+  },
+  "elements": [
+    {
+      "id": "roof",
+      "label": { "fr": "Toiture", "en": "Roof", "de": "Dach", "it": "Tetto" },
+      "targets": [
+        { "categoryId": "flat_roof_shed_roof", "label": { "fr": "Toiture plate / a un pan", "en": "Flat / shed roof", "de": "Flachdach / Pultdach", "it": "Tetto piano / a falda unica" } },
+        { "categoryId": "steep_roof", "label": { "fr": "Toiture inclinee", "en": "Steep roof", "de": "Steildach", "it": "Tetto inclinato" } }
+      ],
+      "subtypes": [
+        { "id": "generic", "label": { "fr": "", "en": "", "de": "", "it": "" } }
+      ]
+    },
+    {
+      "id": "floor",
+      "label": { "fr": "Plancher", "en": "Floor assembly", "de": "Decke/Boden", "it": "Solaio" },
+      "targets": [
+        { "categoryId": "floor_assembly", "label": { "fr": "Plancher", "en": "Floor assembly", "de": "Deckenaufbau", "it": "Solaio" } }
+      ],
+      "subtypes": [
+        { "id": "same_unit", "label": { "fr": "(meme unite)", "en": "(same unit)", "de": "(gleiche Nutzungseinheit)", "it": "(stessa unita)" } },
+        { "id": "between_units", "label": { "fr": "(entre unites)", "en": "(between units)", "de": "(zwischen Nutzungseinheiten)", "it": "(tra unita)" } },
+        { "id": "to_unheated_outside", "label": { "fr": "(contre exterieur / non chauffe)", "en": "(against exterior / unheated)", "de": "(gegen aussen / unbeheizt)", "it": "(verso esterno / non riscaldato)" } },
+        { "id": "to_ground", "label": { "fr": "(contre terre)", "en": "(against ground)", "de": "(gegen Erdreich)", "it": "(contro terra)" } }
+      ]
+    },
+    {
+      "id": "partition",
+      "label": { "fr": "Paroi interieure", "en": "Internal partition", "de": "Innenwand", "it": "Parete interna" },
+      "targets": [
+        { "categoryId": "partition_wall_double_shell", "label": { "fr": "Double coque", "en": "Double shell", "de": "Doppelschalig", "it": "Doppia parete" } },
+        { "categoryId": "partition_wall_single_shell", "label": { "fr": "Simple coque", "en": "Single shell", "de": "Einschalig", "it": "Parete semplice" } }
+      ],
+      "subtypes": [
+        { "id": "same_unit", "label": { "fr": "(meme unite)", "en": "(same unit)", "de": "(gleiche Nutzungseinheit)", "it": "(stessa unita)" } },
+        { "id": "between_units", "label": { "fr": "(entre unites)", "en": "(between units)", "de": "(zwischen Nutzungseinheiten)", "it": "(tra unita)" } }
+      ]
+    },
+    {
+      "id": "outer_wall",
+      "label": { "fr": "Facade exterieure", "en": "External facade/wall", "de": "Aussenwand/Fassade", "it": "Parete/facciata esterna" },
+      "targets": [
+        { "categoryId": "outer_wall", "label": { "fr": "Mur exterieur", "en": "Outer wall", "de": "Aussenwand", "it": "Parete esterna" } }
+      ],
+      "subtypes": [
+        { "id": "generic", "label": { "fr": "", "en": "", "de": "", "it": "" } }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "normal",
+      "requirement_level": "normal",
+      "requirements": [
+        { "element_id": "roof", "subtype_id": "generic", "applies_to": [{ "categoryId": "flat_roof_shed_roof" }, { "categoryId": "steep_roof" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 27 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 27 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 27 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 27 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 27, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "same_unit", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 27 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 27 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 27 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 27 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 27, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "between_units", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 52 dB. Bruits de choc: Ln,w cor. <= 53 dB.", "en": "Airborne sound: Rw cor. >= 52 dB. Impact sound: Ln,w cor. <= 53 dB.", "de": "Luftschall: Rw korr. >= 52 dB. Trittschall: Ln,w korr. <= 53 dB.", "it": "Rumore aereo: Rw corr. >= 52 dB. Rumore da impatto: Ln,w corr. <= 53 dB." }, "filter": { "Rw_min": 52, "Lnw_max": 53 } },
+        { "element_id": "floor", "subtype_id": "to_unheated_outside", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 27 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 27 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 27 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 27 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 27, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "to_ground", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: N/A. Bruits de choc: N/A.", "en": "Airborne sound: N/A. Impact sound: N/A.", "de": "Luftschall: N/A. Trittschall: N/A.", "it": "Rumore aereo: N/A. Rumore da impatto: N/A." }, "filter": { "Rw_min": null, "Lnw_max": null } },
+        { "element_id": "partition", "subtype_id": "same_unit", "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 27 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 27 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 27 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 27 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 27, "Lnw_max": null } },
+        { "element_id": "partition", "subtype_id": "between_units", "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 52 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 52 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 52 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 52 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 52, "Lnw_max": null } },
+        { "element_id": "outer_wall", "subtype_id": "generic", "applies_to": [{ "categoryId": "outer_wall" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 27 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 27 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 27 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 27 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 27, "Lnw_max": null } }
+      ]
+    },
+    {
+      "id": "increased",
+      "requirement_level": "increased",
+      "requirements": [
+        { "element_id": "roof", "subtype_id": "generic", "applies_to": [{ "categoryId": "flat_roof_shed_roof" }, { "categoryId": "steep_roof" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 30 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 30 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 30 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 30 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 30, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "same_unit", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 30 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 30 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 30 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 30 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 30, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "between_units", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 56 dB. Bruits de choc: Ln,w cor. <= 49 dB.", "en": "Airborne sound: Rw cor. >= 56 dB. Impact sound: Ln,w cor. <= 49 dB.", "de": "Luftschall: Rw korr. >= 56 dB. Trittschall: Ln,w korr. <= 49 dB.", "it": "Rumore aereo: Rw corr. >= 56 dB. Rumore da impatto: Ln,w corr. <= 49 dB." }, "filter": { "Rw_min": 56, "Lnw_max": 49 } },
+        { "element_id": "floor", "subtype_id": "to_unheated_outside", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 30 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 30 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 30 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 30 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 30, "Lnw_max": null } },
+        { "element_id": "floor", "subtype_id": "to_ground", "applies_to": [{ "categoryId": "floor_assembly" }], "display": { "fr": "Bruits aeriens: N/A. Bruits de choc: N/A.", "en": "Airborne sound: N/A. Impact sound: N/A.", "de": "Luftschall: N/A. Trittschall: N/A.", "it": "Rumore aereo: N/A. Rumore da impatto: N/A." }, "filter": { "Rw_min": null, "Lnw_max": null } },
+        { "element_id": "partition", "subtype_id": "same_unit", "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 30 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 30 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 30 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 30 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 30, "Lnw_max": null } },
+        { "element_id": "partition", "subtype_id": "between_units", "applies_to": [{ "categoryId": "partition_wall_double_shell" }, { "categoryId": "partition_wall_single_shell" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 56 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 56 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 56 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 56 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 56, "Lnw_max": null } },
+        { "element_id": "outer_wall", "subtype_id": "generic", "applies_to": [{ "categoryId": "outer_wall" }], "display": { "fr": "Bruits aeriens: Rw cor. >= 30 dB. Bruits de choc: N/A.", "en": "Airborne sound: Rw cor. >= 30 dB. Impact sound: N/A.", "de": "Luftschall: Rw korr. >= 30 dB. Trittschall: N/A.", "it": "Rumore aereo: Rw corr. >= 30 dB. Rumore da impatto: N/A." }, "filter": { "Rw_min": 30, "Lnw_max": null } }
+      ]
+    }
+  ]
+}

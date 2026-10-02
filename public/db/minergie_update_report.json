@@ -1,0 +1,422 @@
+{
+  "sourceFile": "C:\\Users\\sandro.trevisan\\OneDrive - HESSO\\Bureau\\22_TypoBuildZero\\02.WP1a\\Bases de données\\Minergie\\components_minergie.json",
+  "activeFile": "C:\\Users\\sandro.trevisan\\autospec\\public\\db\\components_minergie_enriched.json",
+  "oldCount": 51,
+  "newCount": 51,
+  "matched": 51,
+  "unchanged": 44,
+  "modified": [
+    {
+      "id": "8D17D433-6537-49DF-8B8B-E9D1292D63EF",
+      "ignoredNewId": "637CA1C0-67AD-4902-801D-4929CF0BDE7C",
+      "name": "Stahlbetonfassade mit Aussendämmung, hinterlüftet mit metallischer Fassadenverkleidung",
+      "oldLayerCount": 6,
+      "newLayerCount": 7,
+      "addedLayerIndexes": [
+        1
+      ],
+      "addedLayers": [
+        {
+          "index": 1,
+          "productId": "37CF0E2B-7BD1-4E16-8A73-ED7697F180AD",
+          "description": "Verankerung und Unterkonstruktion (Edelstahlprofile)"
+        }
+      ]
+    },
+    {
+      "id": "47D4765F-8754-46B6-B56D-864A8F0D6CA0",
+      "ignoredNewId": "FF35673A-E812-4D3F-8CD5-F2A6094F9F53",
+      "name": "Stahlleichtbaufassade mit Sandwichelement",
+      "oldLayerCount": 3,
+      "newLayerCount": 4,
+      "addedLayerIndexes": [
+        3
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "37CF0E2B-7BD1-4E16-8A73-ED7697F180AD",
+          "description": "Stahlprofil"
+        }
+      ]
+    },
+    {
+      "id": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "ignoredNewId": "2CA667B3-C9B9-4B2C-86F8-4C5C27A412F1",
+      "name": "Holz-Ständer-Wand",
+      "oldLayerCount": 3,
+      "newLayerCount": 7,
+      "addedLayerIndexes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "14B0CD93-220F-473B-AD30-B700564F22A5",
+          "description": "Mehrlagige Massivholzplatte (ver- setzte Ständer)"
+        },
+        {
+          "index": 4,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "description": "Gipskartonplatte (Beplankung rechts)"
+        },
+        {
+          "index": 5,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "description": "Gipsputz"
+        },
+        {
+          "index": 6,
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "description": "Farbe (pro m2)"
+        }
+      ]
+    },
+    {
+      "id": "78A9F6CE-1B3D-4C11-B10C-65AEE49C6BB2",
+      "ignoredNewId": "6D3B5742-19CA-4378-9B9C-BC61D2447B52",
+      "name": "Massivholzbauwand",
+      "oldLayerCount": 3,
+      "newLayerCount": 9,
+      "addedLayerIndexes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "E6A832B8-E094-4B0C-958D-4925D6709C8C",
+          "description": "Träger Holzwerkstoffplatte"
+        },
+        {
+          "index": 4,
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "description": "Hohlraumbedämpfung Steinwolle"
+        },
+        {
+          "index": 5,
+          "productId": "E6A832B8-E094-4B0C-958D-4925D6709C8C",
+          "description": "Träger Holzwerkstoffplatte"
+        },
+        {
+          "index": 6,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "description": "Gipskartonplatte (Beplankung rechts)"
+        },
+        {
+          "index": 7,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "description": "Gipsputz"
+        },
+        {
+          "index": 8,
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "description": "Farbe (pro m2)"
+        }
+      ]
+    },
+    {
+      "id": "09227EB5-E741-441A-A97D-183E156822BE",
+      "ignoredNewId": "CE635BF9-F431-4054-9AB5-419F8AC5598A",
+      "name": "Mauerwerkwand",
+      "oldLayerCount": 3,
+      "newLayerCount": 5,
+      "addedLayerIndexes": [
+        3,
+        4
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "description": "Gipsputz"
+        },
+        {
+          "index": 4,
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "description": "Farbe (pro m2)"
+        }
+      ]
+    },
+    {
+      "id": "2A13415F-4237-4307-AC78-BA3F443C8390",
+      "ignoredNewId": "AB1E3C05-631F-4184-ADD4-145DAAB3D833",
+      "name": "Betonwand",
+      "oldLayerCount": 3,
+      "newLayerCount": 5,
+      "addedLayerIndexes": [
+        3,
+        4
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "description": "Gipsputz"
+        },
+        {
+          "index": 4,
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "description": "Farbe (pro m2)"
+        }
+      ]
+    },
+    {
+      "id": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "ignoredNewId": "DC95129E-CC77-4984-B388-7A31378C2BFA",
+      "name": "Leichtbauwand",
+      "oldLayerCount": 3,
+      "newLayerCount": 8,
+      "addedLayerIndexes": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "addedLayers": [
+        {
+          "index": 3,
+          "productId": "37CF0E2B-7BD1-4E16-8A73-ED7697F180AD",
+          "description": "Stahlprofil"
+        },
+        {
+          "index": 4,
+          "productId": "5C110ED4-BEC5-4156-86EC-9AAB61DD6237",
+          "description": "Dämmung Steinwolle"
+        },
+        {
+          "index": 5,
+          "productId": "F88C43AE-C54E-4EB1-AC8C-CB268B9D49C4",
+          "description": "Gipskartonplatte Wandverschlag"
+        },
+        {
+          "index": 6,
+          "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
+          "description": "Gipsputz"
+        },
+        {
+          "index": 7,
+          "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
+          "description": "Farbe (pro m2)"
+        }
+      ]
+    }
+  ],
+  "unmatchedNew": [],
+  "unmatchedOld": [],
+  "preservedIds": [
+    {
+      "oldId": "8644E124-A463-49B5-9666-63C84CE1CD15",
+      "ignoredNewId": "D03F05D6-41CB-4525-9189-A7339323CEEA"
+    },
+    {
+      "oldId": "E6AB21A4-DFD8-4FDC-B24D-48447A12E301",
+      "ignoredNewId": "F41B9C58-77B5-4C53-92D3-C8B7932B9904"
+    },
+    {
+      "oldId": "1DFA4A34-DE95-4FA9-B327-80B6186ECF50",
+      "ignoredNewId": "D0EA7E33-6246-4B87-B5F5-FB9FF3678FBC"
+    },
+    {
+      "oldId": "D32288E4-EDFD-4D87-8291-1F8849F948D2",
+      "ignoredNewId": "1E0D4FE5-6669-400D-9AB6-985FBCD2DA2A"
+    },
+    {
+      "oldId": "88651C1F-32D0-4952-BC88-A62F384C82E5",
+      "ignoredNewId": "84A99F28-7F42-4D20-86D8-C7FC93FEBEFB"
+    },
+    {
+      "oldId": "CDF253A5-BB0A-4032-8E21-A779BD940FC0",
+      "ignoredNewId": "103B154C-E4CE-4841-A6BA-9524C48A6ADF"
+    },
+    {
+      "oldId": "6211D363-FA29-4FCA-8CE0-3D680F0736FC",
+      "ignoredNewId": "BCD18015-1A2D-4F03-9396-5524F98DB4DF"
+    },
+    {
+      "oldId": "9DD98DA9-14F0-4252-A582-B3D360C2BD56",
+      "ignoredNewId": "43678CB6-CFFF-4DD4-A36F-7FD072AC6514"
+    },
+    {
+      "oldId": "B870CFFD-2EA6-4E26-9272-549278856F25",
+      "ignoredNewId": "DBD2FF62-FA9B-4BEE-92F9-134F1882367F"
+    },
+    {
+      "oldId": "CABECB94-BD21-45EF-900C-E7D6E60085B5",
+      "ignoredNewId": "58A0DD5B-DB32-4116-B94C-F77BFF7D88C6"
+    },
+    {
+      "oldId": "B9F95287-249A-4EAA-89F0-ED23DF4C3154",
+      "ignoredNewId": "1E351FE0-564E-4BA8-9472-11923C7AF295"
+    },
+    {
+      "oldId": "76BE9F6E-921D-4800-9817-B430EB63A859",
+      "ignoredNewId": "2272F890-6E03-42A8-8D39-597291FF894F"
+    },
+    {
+      "oldId": "72AE09D0-520F-43D5-A445-074586528597",
+      "ignoredNewId": "BE5EBA3F-0BAF-4EDA-BD62-708751C0B8C0"
+    },
+    {
+      "oldId": "8346AB7C-1A0E-49D7-9B83-1047EA2C17E8",
+      "ignoredNewId": "21382220-72F0-49C3-94E7-4322C0AA8E95"
+    },
+    {
+      "oldId": "0ECC9339-A583-41E5-A467-307B2AE1C99D",
+      "ignoredNewId": "7758F328-111D-46D5-8B8A-9BB61250E5B6"
+    },
+    {
+      "oldId": "4CBE177B-488D-44B6-B8A9-CC45B3EA1EA2",
+      "ignoredNewId": "95A0508A-6E43-423F-ABAC-741664C51E68"
+    },
+    {
+      "oldId": "CF4E5441-B616-4C09-876F-FC938B45D523",
+      "ignoredNewId": "AABFF46C-5043-49D3-B797-F18DE0304949"
+    },
+    {
+      "oldId": "247D6CBA-CEE1-4499-9A49-7BE0B0257559",
+      "ignoredNewId": "ED1FCD87-725B-4BA4-A47A-D718D964AD2A"
+    },
+    {
+      "oldId": "17CF64C2-0F9E-424C-A692-8D9698923FAD",
+      "ignoredNewId": "BED53F40-1DF5-40C4-93DB-5A638A5B72F6"
+    },
+    {
+      "oldId": "44E977CA-E4B0-4627-9952-0EC47BB010FF",
+      "ignoredNewId": "0D8142DD-9C32-4BE2-BAFA-43EB9F819CA7"
+    },
+    {
+      "oldId": "3B21C297-BB6B-40E1-A738-E4DC1B7674D9",
+      "ignoredNewId": "30C77A0E-5258-4764-A1FE-747179A3B82B"
+    },
+    {
+      "oldId": "80CE5CD7-CA04-4477-822D-B799F3F1177B",
+      "ignoredNewId": "14A2F879-4C59-46BD-8464-DE35C84B3CF4"
+    },
+    {
+      "oldId": "E9949B8A-13FC-4873-9EBC-749010C11EDB",
+      "ignoredNewId": "6502490A-345A-45DF-A4C6-495DEA4031FE"
+    },
+    {
+      "oldId": "21F3B0DB-6F06-422F-89E9-6AA6BB65CA9D",
+      "ignoredNewId": "57B04A82-FEC9-4F39-B6AF-367F1DAD6FA8"
+    },
+    {
+      "oldId": "83605B5E-8731-4C3B-A68C-23173D57DE04",
+      "ignoredNewId": "4A49CAD4-C991-4C86-B282-8B9B47F5C80A"
+    },
+    {
+      "oldId": "CB2CA258-39D7-49ED-97C2-3BD023FAEDD4",
+      "ignoredNewId": "96CB2D00-67BE-4384-BBA8-63195C55AE8A"
+    },
+    {
+      "oldId": "F6CEA598-28BF-4135-A523-43411885FBC9",
+      "ignoredNewId": "99E8B67E-EA95-463D-9F7B-0D538FB18757"
+    },
+    {
+      "oldId": "697CCF0D-4F3F-43E0-BB81-5728EBD994ED",
+      "ignoredNewId": "598B0D73-9738-48F9-9B01-6BD7E6B13178"
+    },
+    {
+      "oldId": "3A566BD8-2F58-4CF4-BA60-462133660311",
+      "ignoredNewId": "2FF52402-77CA-4237-9265-7E24DE5308FE"
+    },
+    {
+      "oldId": "8D17D433-6537-49DF-8B8B-E9D1292D63EF",
+      "ignoredNewId": "637CA1C0-67AD-4902-801D-4929CF0BDE7C"
+    },
+    {
+      "oldId": "F6336056-DC16-43DE-BAF7-909AE5CAB65B",
+      "ignoredNewId": "490979A3-CF48-4BE9-B4BF-73694B4B5E3E"
+    },
+    {
+      "oldId": "C3C3523F-50D4-4CB2-8681-0C6769A9E1B1",
+      "ignoredNewId": "61A81A0E-B5CF-4EA1-941F-38A3F159204B"
+    },
+    {
+      "oldId": "F11F351D-A07E-4C88-841B-5BB49E043D83",
+      "ignoredNewId": "7EC3A66A-8893-4FD3-802A-E4B5ABB8C40F"
+    },
+    {
+      "oldId": "4B9866B5-C0C5-47A3-919D-A75AB92AF10E",
+      "ignoredNewId": "0F616DF3-278F-4729-8DA9-1A08F081E4BB"
+    },
+    {
+      "oldId": "A689E25D-B233-4679-872A-A04CFE036201",
+      "ignoredNewId": "03E3D613-4DC4-40AB-91F2-12FE17A99033"
+    },
+    {
+      "oldId": "B49D10E9-2D53-4BCA-88CA-AE9EC683C0CD",
+      "ignoredNewId": "3BD00F51-B244-4DBD-9311-74A50635033F"
+    },
+    {
+      "oldId": "301A2190-E6FD-40AE-B563-0E6303169D2D",
+      "ignoredNewId": "54241589-3486-4683-B853-1DEA9C445E63"
+    },
+    {
+      "oldId": "23C44144-D891-4AC2-8149-914FD92E484D",
+      "ignoredNewId": "A580D0B7-BBB2-47EA-8553-26E910A0CB70"
+    },
+    {
+      "oldId": "8B1B3ABE-F600-4D44-9856-6334643034DE",
+      "ignoredNewId": "49B6249F-1EB6-4B12-99C7-7BD853400BBC"
+    },
+    {
+      "oldId": "46DDC603-7F39-4963-86E9-514109810979",
+      "ignoredNewId": "8E0104E0-EC37-4F65-BAE5-3C6547BFF0AF"
+    },
+    {
+      "oldId": "47D4765F-8754-46B6-B56D-864A8F0D6CA0",
+      "ignoredNewId": "FF35673A-E812-4D3F-8CD5-F2A6094F9F53"
+    },
+    {
+      "oldId": "A2995D8C-206F-4D3E-8289-1795D6BE8828",
+      "ignoredNewId": "2CA667B3-C9B9-4B2C-86F8-4C5C27A412F1"
+    },
+    {
+      "oldId": "78A9F6CE-1B3D-4C11-B10C-65AEE49C6BB2",
+      "ignoredNewId": "6D3B5742-19CA-4378-9B9C-BC61D2447B52"
+    },
+    {
+      "oldId": "09227EB5-E741-441A-A97D-183E156822BE",
+      "ignoredNewId": "CE635BF9-F431-4054-9AB5-419F8AC5598A"
+    },
+    {
+      "oldId": "2A13415F-4237-4307-AC78-BA3F443C8390",
+      "ignoredNewId": "AB1E3C05-631F-4184-ADD4-145DAAB3D833"
+    },
+    {
+      "oldId": "2DFD6629-938E-4792-B088-B59369B05C67",
+      "ignoredNewId": "DC95129E-CC77-4984-B388-7A31378C2BFA"
+    },
+    {
+      "oldId": "5D2BA635-9014-499B-9AD6-6F716E8127ED",
+      "ignoredNewId": "995D9479-8F04-49D2-AABF-AC6EBED0F7C1"
+    },
+    {
+      "oldId": "E43E2CA1-0890-4343-977B-9716F7654612",
+      "ignoredNewId": "A4B22072-5C32-459F-B9B0-150529D7D16E"
+    },
+    {
+      "oldId": "FF31A2E7-D653-48E8-8994-FDA78A2F7B7D",
+      "ignoredNewId": "90A1D8CB-9F6D-410C-8A88-B3B4F22DE91D"
+    },
+    {
+      "oldId": "29708FD1-F7D5-40DE-BF65-40A1706F07ED",
+      "ignoredNewId": "1878D29F-1B07-4890-A03E-027E87A07038"
+    },
+    {
+      "oldId": "F977EDC9-03AA-4336-AB90-6EAB6041BA47",
+      "ignoredNewId": "6C8D5BE8-9BFA-4DCE-ACA4-82423C1A168F"
+    }
+  ],
+  "backupDirectory": "public\\db\\versions\\minergie_update\\2026-09-17T14-30-07-052Z"
+}

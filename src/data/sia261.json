@@ -1,0 +1,17 @@
+{
+  "version": "SIA 261:2020",
+  "occupancy": {
+    "A1_habitation": { "label": "Habitation", "qk_kN_m2": 2.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie A1" },
+    "A2_balcon": { "label": "Balcon", "qk_kN_m2": 3.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie A2" },
+    "A3_escalier": { "label": "Escalier habitation", "qk_kN_m2": 4.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie A3" },
+    "B_bureaux": { "label": "Bureaux", "qk_kN_m2": 3.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie B" },
+    "C1_reunion_tables": { "label": "Locaux de réunion avec tables/chaises", "qk_kN_m2": 3.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie C1" },
+    "C2_reunion_sieges_fixes": { "label": "Locaux de réunion à sièges fixes", "qk_kN_m2": 4.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie C2" },
+    "C3_reunion_libre": { "label": "Locaux de réunion librement accessibles / sport / jeu", "qk_kN_m2": 5.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie C3" },
+    "D_vente": { "label": "Surfaces de vente", "qk_kN_m2": 5.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie D" },
+    "F_parking_lt_3_5t": { "label": "Parking < 3.5 t", "qk_kN_m2": 2.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie F" },
+    "G_parking_3_5t_16t": { "label": "Parking / accès 3.5 t à 16 t", "qk_kN_m2": 5.0, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie G" },
+    "H_toiture_non_accessible": { "label": "Toiture non accessible", "qk_kN_m2": 0.4, "source": "SIA 261:2020, chap. 8, tableau 8, catégorie H" },
+    "CUSTOM": { "label": "Charge d'exploitation personnalisée", "qk_kN_m2": null, "source": "Valeur entrée par l’utilisateur" }
+  }
+}
