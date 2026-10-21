@@ -4,7 +4,9 @@ import Header from '../components/Header';
 import BuildingCriteria from '../components/BuildingCriteria';
 import BuildingDiagram, { getBuildingPart, getRoofCategory } from '../components/BuildingDiagram';
 import BuildingWeightInfo, { calculateBuildingWeightInfo } from '../components/BuildingWeightInfo';
+import BuildingCarbonSummary, { partForComponent } from '../components/BuildingCarbonSummary';
 import ComponentCard, { getWallLinearResistance } from '../components/ComponentCard';
+import ComponentGroupCard from '../components/ComponentGroupCard';
 import { R_OPTIONS, EI_OPTIONS } from '../components/FireFilter';
 import RangeSlider from '../components/RangeSlider';
 import SourceSelector from '../components/SourceSelector';
@@ -19,7 +21,22 @@ import {
   getComponentStructureTypeOptions,
 } from '../utils/componentStructureType';
 import loadComponents, { fetchDbSources } from '../utils/loadComponents';
+import loadMaterials from '../utils/loadMaterials';
+import loadProducts from '../utils/loadProducts';
+import {
+  getInsulationMaterialOptions,
+  getScreedMaterialOptions,
+  getStructureMaterialOptions,
+  groupBuildingComponents,
+  matchesMaterialFilters,
+  selectableItemIdentity,
+} from '../utils/buildingComponentGroups';
+import {
+  serializeGroupSelection, restoreGroupSelection, makeGroupCollection,
+  hasSelectedGroup, setGroupSelected, setGroupIgnored,
+} from '../utils/buildingGroupSelections';
 import './Building.css';
+import { separateUndergroundRoofState } from '../utils/buildingRoofState';
 
 const PAGE_SIZE = 50;
 const BUILDING_STATE_STORAGE_KEY = 'autospec-building-state';
@@ -127,14 +144,39 @@ const displayName = (item, lang) =>
   item?.id ||
   'Composant';
 
-function Building() {
+const selectedLabels = (options, selected, allLabel = 'Tous') => {
+  if (!Array.isArray(selected) || !selected.length || selected.length === options.length) return allLabel;
+  return options.filter((option) => selected.includes(option.value)).map((option) => option.label).join(', ') || allLabel;
+};
+
+function Building({
+  showHeader = true,
+  initialProjectState = null,
+  onProjectStateChange = null,
+  projectToolbar = null,
+  projectSessionKey = null,
+  projectId = null,
+}) {
   const { lang, setLang } = useContext(LangContext);
-  const { selectedItems, setSelectedItems } = useContext(SelectedItemsContext);
+  const selectionContext = useContext(SelectedItemsContext);
   const navigate = useNavigate();
   const t = translations[lang];
-  const persistedState = useMemo(() => loadPersistedBuildingState(), []);
+  const projectMode = typeof onProjectStateChange === 'function';
+  const persistedState = useMemo(
+    () => separateUndergroundRoofState(initialProjectState && typeof initialProjectState === 'object' ? initialProjectState : loadPersistedBuildingState()),
+    [],
+  );
   const [data, setData] = useState([]);
+  const [materials, setMaterials] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [projectSelectedItems, setProjectSelectedItems] = useState([]);
+  const [selectionHydrated, setSelectionHydrated] = useState(!projectMode);
+  const [surfaces, setSurfaces] = useState(persistedState.surfaces ?? {});
+  const [ignoredGroupIds, setIgnoredGroupIds] = useState(persistedState.ignoredGroupIds || []);
+  const [criteriaState, setCriteriaState] = useState(persistedState.criteriaState ?? null);
+  const selectedItems = projectMode ? projectSelectedItems : selectionContext.selectedItems;
+  const setSelectedItems = projectMode ? setProjectSelectedItems : selectionContext.setSelectedItems;
   const [selectedPart, setSelectedPart] = useState(persistedState.selectedPart ?? 'roof');
   const [roofType, setRoofType] = useState(persistedState.roofType ?? 'pitched');
   const [criteria, setCriteria] = useState({
@@ -173,7 +215,34 @@ function Building() {
   const [sortOrder, setSortOrder] = useState(persistedState.sortOrder ?? 'asc');
   const [filtersEnabled, setFiltersEnabled] = useState(persistedState.filtersEnabled ?? true);
   const [selectedStructureTypes, setSelectedStructureTypes] = useState(
-    Array.isArray(persistedState.selectedStructureTypes) ? persistedState.selectedStructureTypes : [],
+    Array.isArray(persistedState.structureTypesByPart?.[persistedState.selectedPart ?? 'roof'])
+      ? persistedState.structureTypesByPart[persistedState.selectedPart ?? 'roof']
+      : Array.isArray(persistedState.selectedStructureTypes) ? persistedState.selectedStructureTypes : [],
+  );
+  const [structureTypesByPart, setStructureTypesByPart] = useState(
+    persistedState.structureTypesByPart && typeof persistedState.structureTypesByPart === 'object'
+      ? persistedState.structureTypesByPart
+      : {},
+  );
+  const [selectedStructureMaterials, setSelectedStructureMaterials] = useState(
+    persistedState.structureMaterialsByPart?.[persistedState.selectedPart ?? 'roof'] ?? [],
+  );
+  const [structureMaterialsByPart, setStructureMaterialsByPart] = useState(
+    persistedState.structureMaterialsByPart && typeof persistedState.structureMaterialsByPart === 'object'
+      ? persistedState.structureMaterialsByPart
+      : {},
+  );
+  const [selectedInsulationMaterials, setSelectedInsulationMaterials] = useState(
+    persistedState.insulationMaterialsByPart?.[persistedState.selectedPart ?? 'roof'] ?? [],
+  );
+  const [insulationMaterialsByPart, setInsulationMaterialsByPart] = useState(
+    persistedState.insulationMaterialsByPart && typeof persistedState.insulationMaterialsByPart === 'object'
+      ? persistedState.insulationMaterialsByPart
+      : {},
+  );
+
+  const [selectedScreedMaterials, setSelectedScreedMaterials] = useState(
+    persistedState.selectedScreedMaterials ?? [],
   );
 
   const activePart = getBuildingPart(selectedPart);
@@ -207,9 +276,25 @@ function Building() {
     let cancelled = false;
     const fetchData = async () => {
       try {
-        const [components, sources] = await Promise.all([loadComponents(), fetchDbSources()]);
+        const [components, sources, loadedMaterials, loadedProducts] = await Promise.all([
+          loadComponents(),
+          fetchDbSources(),
+          loadMaterials(),
+          loadProducts(),
+        ]);
         if (cancelled) return;
         setData(components);
+        setMaterials(loadedMaterials);
+        setProducts(loadedProducts);
+        if (projectMode) {
+          const selectedIds = new Set(Array.isArray(persistedState.selectedItemIds) ? persistedState.selectedItemIds : []);
+          const exactItems = components.filter((component) => selectedIds.has(component.id));
+          const savedGroups = (Array.isArray(persistedState.selectedGroups) ? persistedState.selectedGroups : [])
+            .map((savedGroup) => restoreGroupSelection(savedGroup, components))
+            .filter(Boolean);
+          setProjectSelectedItems([...exactItems, ...savedGroups]);
+          setSelectionHydrated(true);
+        }
         const options = sources.map((source) => ({ value: source.file, label: source.label }));
         setSourceOptions(options);
         setSelectedSources((current) => (
@@ -223,10 +308,10 @@ function Building() {
     };
     fetchData();
     return () => { cancelled = true; };
-  }, [persistedState]);
+  }, [persistedState, projectMode]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (projectMode || typeof window === 'undefined') return;
     try {
       window.sessionStorage.setItem(BUILDING_STATE_STORAGE_KEY, JSON.stringify({
         selectedPart,
@@ -242,7 +327,7 @@ function Building() {
     } catch (error) {
       // Storage can be unavailable (for example in private browsing); the page remains usable.
     }
-  }, [advancedOpen, advancedRanges, filtersEnabled, roofType, selectedPart, selectedSources, selectedStructureTypes, sortBy, sortOrder]);
+  }, [advancedOpen, advancedRanges, filtersEnabled, projectMode, roofType, selectedPart, selectedSources, selectedStructureTypes, sortBy, sortOrder]);
 
   const bounds = useMemo(() => ({
     thickness: extent(data, (item) => item.thickness_mm, [0, 1000]),
@@ -285,6 +370,14 @@ function Building() {
     setFiltersEnabled(true);
     setSelectedSources(sourceOptions.map((option) => option.value));
     setSelectedStructureTypes(getComponentStructureTypeOptions(data, lang).map((option) => option.value));
+    if (projectMode) {
+      setStructureTypesByPart({});
+      setSelectedStructureMaterials([]);
+      setStructureMaterialsByPart({});
+      setSelectedInsulationMaterials([]);
+      setInsulationMaterialsByPart({});
+      setSelectedScreedMaterials([]);
+    }
     setAdvancedRanges({
       thickness: bounds.thickness,
       gwp: bounds.gwp,
@@ -294,7 +387,7 @@ function Building() {
       lnw: bounds.lnw,
     });
     setPage(0);
-  }, [bounds, data, lang, sourceOptions]);
+  }, [bounds, data, lang, projectMode, sourceOptions]);
 
   const categoryData = useMemo(
     () => data.filter((item) => componentMatchesTaxonomy(item, activeCategories, activeSubcategories)),
@@ -315,6 +408,63 @@ function Building() {
     });
   }, [data.length, structureTypeOptions]);
 
+  useEffect(() => {
+    if (!projectMode || !data.length || !structureTypeOptions.length) return;
+    setStructureTypesByPart((current) => {
+      const next = { ...current, [selectedPart]: selectedStructureTypes };
+      return JSON.stringify(next) === JSON.stringify(current) ? current : next;
+    });
+  }, [data.length, projectMode, selectedPart, selectedStructureTypes, structureTypeOptions.length]);
+
+  useEffect(() => {
+    if (!projectMode || !selectionHydrated || !criteriaState) return;
+    onProjectStateChange({
+      selectedPart,
+      roofType,
+      criteriaState,
+      advancedOpen,
+      selectedSources,
+      advancedRanges,
+      sortBy,
+      sortOrder,
+      filtersEnabled,
+      selectedStructureTypes,
+      structureTypesByPart,
+      selectedStructureMaterials,
+      structureMaterialsByPart,
+      selectedInsulationMaterials,
+      insulationMaterialsByPart,
+      selectedScreedMaterials,
+      selectedItemIds: selectedItems.map((item) => item.id),
+      selectedGroups: selectedItems.filter((item) => item.__isComponentGroup).map(serializeGroupSelection),
+      ignoredGroupIds,
+      surfaces,
+    });
+  }, [
+    advancedOpen,
+    advancedRanges,
+    criteriaState,
+    filtersEnabled,
+    onProjectStateChange,
+    projectMode,
+    roofType,
+    selectedItems,
+    ignoredGroupIds,
+    selectedPart,
+    selectedSources,
+    selectedStructureMaterials,
+    selectedStructureTypes,
+    selectedInsulationMaterials,
+    structureMaterialsByPart,
+    structureTypesByPart,
+    insulationMaterialsByPart,
+    selectedScreedMaterials,
+    selectionHydrated,
+    sortBy,
+    sortOrder,
+    surfaces,
+  ]);
+
   const fireThresholdR = criteria.fireR;
   const fireThresholdEI = criteria.fireEI;
 
@@ -323,11 +473,79 @@ function Building() {
     (!getComponentStructureTypeId(item) || selectedStructureTypes.includes(getComponentStructureTypeId(item)))
   ), [categoryData, selectedSources, selectedStructureTypes, sourceOptions.length]);
 
+  const materialCatalog = useMemo(() => ({
+    materialById: new Map(materials.map((material) => [String(material.id), material])),
+    productById: new Map(products.map((product) => [String(product.id), product])),
+  }), [materials, products]);
+
+  const structureMaterialOptions = useMemo(
+    () => projectMode ? getStructureMaterialOptions(availableCategoryData, lang, materialCatalog) : [],
+    [availableCategoryData, lang, materialCatalog, projectMode],
+  );
+  const insulationMaterialOptions = useMemo(
+    () => projectMode ? getInsulationMaterialOptions(availableCategoryData, lang, materialCatalog) : [],
+    [availableCategoryData, lang, materialCatalog, projectMode],
+  );
+  const screedMaterialOptions = useMemo(
+    () => projectMode && selectedPart === 'floors'
+      ? getScreedMaterialOptions(availableCategoryData, lang, materialCatalog) : [],
+    [availableCategoryData, lang, materialCatalog, projectMode, selectedPart],
+  );
+
+  useEffect(() => {
+    if (!projectMode || !data.length || selectedPart !== 'floors') return;
+    const available = screedMaterialOptions.map((option) => option.value);
+    setSelectedScreedMaterials((current) => {
+      const valid = current.filter((value) => available.includes(value));
+      return valid.length ? valid : available;
+    });
+  }, [data.length, projectMode, screedMaterialOptions, selectedPart]);
+
+  useEffect(() => {
+    if (!projectMode || !data.length) return;
+    const available = structureMaterialOptions.map((option) => option.value);
+    setSelectedStructureMaterials((current) => {
+      const valid = current.filter((value) => available.includes(value));
+      return valid.length ? valid : available;
+    });
+  }, [data.length, projectMode, structureMaterialOptions]);
+
+  useEffect(() => {
+    if (!projectMode || !data.length) return;
+    const available = insulationMaterialOptions.map((option) => option.value);
+    setSelectedInsulationMaterials((current) => {
+      const valid = current.filter((value) => available.includes(value));
+      return valid.length ? valid : available;
+    });
+  }, [data.length, insulationMaterialOptions, projectMode]);
+
+  useEffect(() => {
+    if (!projectMode || !data.length) return;
+    setStructureMaterialsByPart((current) => ({ ...current, [selectedPart]: selectedStructureMaterials }));
+    setInsulationMaterialsByPart((current) => ({ ...current, [selectedPart]: selectedInsulationMaterials }));
+  }, [data.length, projectMode, selectedInsulationMaterials, selectedPart, selectedStructureMaterials]);
+
+  const materialFilteredCategoryData = useMemo(
+    () => projectMode
+      ? availableCategoryData.filter((item) => matchesMaterialFilters(item, selectedStructureMaterials, selectedInsulationMaterials, selectedScreedMaterials))
+      : availableCategoryData,
+    [availableCategoryData, projectMode, selectedInsulationMaterials, selectedStructureMaterials, selectedScreedMaterials],
+  );
+
   const weightCandidatesByPart = useMemo(() => {
     const matchesCommonFilters = (item, partId) => {
       if (sourceOptions.length && selectedSources.length && !selectedSources.includes(item.__sourceFile || '')) return false;
       const structureTypeId = getComponentStructureTypeId(item);
-      if (partId === selectedPart && structureTypeId && !selectedStructureTypes.includes(structureTypeId)) return false;
+      const partStructureTypes = partId === selectedPart
+        ? selectedStructureTypes
+        : structureTypesByPart[partId];
+      if (structureTypeId && Array.isArray(partStructureTypes) && partStructureTypes.length && !partStructureTypes.includes(structureTypeId)) return false;
+      if (projectMode) {
+        const partStructureMaterials = partId === selectedPart ? selectedStructureMaterials : structureMaterialsByPart[partId];
+        const partInsulationMaterials = partId === selectedPart ? selectedInsulationMaterials : insulationMaterialsByPart[partId];
+        if (!matchesMaterialFilters(item, partStructureMaterials, partInsulationMaterials, selectedScreedMaterials)) return false;
+      }
+      if (!filtersEnabled) return true;
       const thickness = finiteNumber(item.thickness_mm);
       const gwp = finiteNumber(item.gwp_kgco2e_m2);
       const uValue = finiteNumber(item.uValue_W_m2K);
@@ -342,7 +560,7 @@ function Building() {
     };
 
     const result = {};
-    ['roof', 'outer_walls', 'underground_walls', 'interior_walls', 'partitions', 'floors', 'foundation', 'balcony'].forEach((partId) => {
+    ['roof', 'underground_roofs', 'outer_walls', 'underground_walls', 'interior_walls', 'partitions', 'floors', 'foundation', 'balcony'].forEach((partId) => {
       const part = getBuildingPart(partId);
       const categories = partId === 'roof' ? [getRoofCategory(roofType)] : part.categories;
       result[partId] = data.filter((item) =>
@@ -350,7 +568,7 @@ function Building() {
       );
     });
     return result;
-  }, [data, getActiveFloorSpan, ranges, roofType, selectedPart, selectedSources, selectedStructureTypes, sourceOptions.length]);
+  }, [data, filtersEnabled, getActiveFloorSpan, insulationMaterialsByPart, projectMode, ranges, roofType, selectedInsulationMaterials, selectedPart, selectedSources, selectedStructureMaterials, selectedStructureTypes, sourceOptions.length, structureMaterialsByPart, structureTypesByPart, selectedScreedMaterials]);
 
   const buildingWeightResult = useMemo(
     () => calculateBuildingWeightInfo(criteria.building, selectedItems, weightCandidatesByPart),
@@ -388,7 +606,7 @@ function Building() {
       : declaredFireR === null || ratingIndex(declaredFireR, R_OPTIONS) >= ratingIndex(fireThresholdR, R_OPTIONS);
     const fireEIPasses = declaredFireEI === null ||
       ratingIndex(declaredFireEI, EI_OPTIONS) >= ratingIndex(fireThresholdEI, EI_OPTIONS);
-    const passesFire = selectedPart === 'roof' || (
+    const passesFire = ['roof', 'underground_roofs'].includes(selectedPart) || (
       fireRPasses && fireEIPasses
     );
     const passesRequiredSpan = criteria.requiredSpan <= 0 || item.categoryId !== 'floor_assembly' || span === null || span >= criteria.requiredSpan;
@@ -423,11 +641,34 @@ function Building() {
   }, [appliedThermalUValue, criteria, fireThresholdEI, fireThresholdR, getActiveFloorSpan, ranges, requiredWallLinearLoad, selectedPart]);
 
   const filteredData = useMemo(
-    () => availableCategoryData.filter((item) => getItemFilterFailures(item).size === 0),
-    [availableCategoryData, getItemFilterFailures],
+    () => materialFilteredCategoryData.filter((item) => getItemFilterFailures(item).size === 0),
+    [getItemFilterFailures, materialFilteredCategoryData],
   );
 
-  const displayedData = filtersEnabled ? filteredData : availableCategoryData;
+  const displayedData = filtersEnabled ? filteredData : materialFilteredCategoryData;
+
+  const carbonCandidatesByPart = useMemo(() => {
+    const result = { ...weightCandidatesByPart };
+    result[selectedPart] = displayedData;
+    if (projectMode && ignoredGroupIds.length) {
+      const ignored = new Set(ignoredGroupIds);
+      Object.keys(result).forEach((partId) => {
+        result[partId] = groupBuildingComponents(result[partId] || [])
+          .filter((group) => !ignored.has(selectableItemIdentity(group)))
+          .flatMap((group) => group.__groupMembers);
+      });
+    }
+    return result;
+  }, [displayedData, ignoredGroupIds, projectMode, selectedPart, weightCandidatesByPart]);
+
+  const analysisSelectedItems = useMemo(() => selectedItems.map((item) => {
+    // A selected group is the set of variants chosen at selection time.
+    // Later filters apply to the catalogue, not to this saved selection.
+    if (item.__isComponentGroup) return item;
+    const partId = partForComponent(item, roofType);
+    const availableIds = new Set((carbonCandidatesByPart[partId] || []).map((candidate) => candidate.id));
+    return availableIds.has(item.id) ? item : { ...item, __excludedByFilters: true };
+  }), [carbonCandidatesByPart, roofType, selectedItems]);
 
   const bars = useMemo(() => ({
     thickness: histogram(categoryData, (item) => item.thickness_mm, ...bounds.thickness),
@@ -461,46 +702,177 @@ function Building() {
     });
   }, [displayedData, getActiveFloorSpan, lang, sortBy, sortOrder]);
 
+  const groupedData = useMemo(
+    () => projectMode ? groupBuildingComponents(sortedData, lang) : [],
+    [lang, projectMode, sortedData],
+  );
+
+  useEffect(() => {
+    if (!projectMode || !selectionHydrated) return;
+    const currentGroups = new Map(groupedData.map((group) => [selectableItemIdentity(group), group]));
+    setProjectSelectedItems((current) => {
+      let changed = false;
+      const next = current.map((item) => {
+        const identity = selectableItemIdentity(item);
+        if (!item.__isComponentGroup || item.__isGroupCollection || !currentGroups.has(identity)) return item;
+        const replacement = currentGroups.get(identity);
+        const oldIds = (item.__groupMembers || []).map((member) => member.id).join('|');
+        const newIds = (replacement.__groupMembers || []).map((member) => member.id).join('|');
+        if (oldIds === newIds && item.__groupTitle === replacement.__groupTitle) return item;
+        changed = true;
+        return { ...replacement, id: item.id, __groupSelectionNumber: item.__groupSelectionNumber || 1, __filterSummary: item.__filterSummary || [] };
+      });
+      return changed ? next : current;
+    });
+  }, [groupedData, projectMode, selectionHydrated]);
+
   useEffect(() => {
     if (sortBy === 'span' && selectedPart !== 'floors') setSortBy('');
   }, [selectedPart, sortBy]);
 
-  useEffect(() => setPage(0), [criteria, filtersEnabled, ranges, selectedPart, selectedSources, sortBy, sortOrder]);
-  const totalPages = Math.max(1, Math.ceil(displayedData.length / PAGE_SIZE));
-  const visibleData = sortedData.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  useEffect(() => setPage(0), [criteria, filtersEnabled, ranges, selectedInsulationMaterials, selectedPart, selectedSources, selectedStructureMaterials, selectedScreedMaterials, sortBy, sortOrder]);
+  const cardData = projectMode ? groupedData : sortedData;
+  const totalPages = Math.max(1, Math.ceil(cardData.length / PAGE_SIZE));
+  const visibleData = cardData.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
-  const toggleSelectedItem = (item) => setSelectedItems((current) =>
-    current.some((selected) => selected.id === item.id)
-      ? current.filter((selected) => selected.id !== item.id)
-      : [...current, item]
+  const selectionState = {
+    selectedGroups: selectedItems.filter((item) => item.__isComponentGroup).map(serializeGroupSelection),
+    ignoredGroupIds,
+  };
+  const updateGroupSelection = (group, action, checked) => {
+    const descriptor = { ...serializeGroupSelection(group), filterSummary: group.__filterSummary || currentFilterSummary() };
+    const next = action === 'ignore'
+      ? setGroupIgnored(selectionState, descriptor, checked)
+      : setGroupSelected(selectionState, descriptor, checked);
+    setIgnoredGroupIds(next.ignoredGroupIds);
+    const restored = next.selectedGroups.map((saved) => restoreGroupSelection(saved, data, lang)).filter(Boolean);
+    setSelectedItems((current) => [...current.filter((item) => !item.__isComponentGroup), ...restored]);
+  };
+  const eligibleGroups = groupedData.filter((group) => !ignoredGroupIds.includes(selectableItemIdentity(group)));
+  const eligibleIdentities = eligibleGroups.map(selectableItemIdentity).sort().join('|');
+  const selectedCollection = selectedItems.find((item) => item.__isGroupCollection
+    && item.__childGroups.map(selectableItemIdentity).sort().join('|') === eligibleIdentities);
+  const toggleFilteredGroups = (checked) => {
+    if (!checked) {
+      if (selectedCollection) setSelectedItems((current) => current.filter((item) => item.id !== selectedCollection.id));
+      return;
+    }
+    if (!eligibleGroups.length) return;
+    const collection = makeGroupCollection(eligibleGroups.map((group) => ({ ...group, __filterSummary: currentFilterSummary() })));
+    const identities = new Set(eligibleGroups.map(selectableItemIdentity));
+    setSelectedItems((current) => [...current.filter((item) => !identities.has(selectableItemIdentity(item))), collection]);
+  };
+
+  const toggleSelectedItem = (item) => item.__isComponentGroup
+    ? updateGroupSelection(item, 'select', !hasSelectedGroup(selectionState, serializeGroupSelection(item)))
+    : setSelectedItems((current) =>
+    current.some((selected) => selectableItemIdentity(selected) === selectableItemIdentity(item))
+      ? current.filter((selected) => selectableItemIdentity(selected) !== selectableItemIdentity(item))
+      : [...current, item.__isComponentGroup ? {
+        ...item,
+        __groupSelectionNumber: 1 + Math.max(0, ...current
+          .filter((selected) => selected.__isComponentGroup && selected.__groupKey === item.__groupKey)
+          .map((selected) => selected.__groupSelectionNumber || 1)),
+      } : item]
   );
+
+  const currentFilterSummary = () => {
+    const summary = [
+      { label: 'Filtrer', value: filtersEnabled ? 'Activé' : 'Désactivé' },
+      { label: 'Sources', value: selectedLabels(sourceOptions, selectedSources, t.all) },
+      { label: 'Système constructif', value: selectedLabels(structureTypeOptions, selectedStructureTypes, t.all) },
+      { label: 'Matériau de la structure', value: selectedLabels(structureMaterialOptions, selectedStructureMaterials, t.all) },
+      { label: 'Matériau isolant', value: selectedLabels(insulationMaterialOptions, selectedInsulationMaterials, t.all) },
+    ];
+    if (selectedPart === 'floors') summary.push({ label: 'Matériau de la chape', value: selectedLabels(screedMaterialOptions, selectedScreedMaterials, t.all) });
+    if (filtersEnabled) {
+      summary.push(
+        { label: 'Épaisseur', value: `${ranges.thickness[0]}–${ranges.thickness[1]} mm` },
+        { label: 'GWP', value: `${ranges.gwp[0]}–${ranges.gwp[1]} kg CO₂-eq/m²` },
+        { label: 'Valeur U', value: `${ranges.uValue[0]}–${ranges.uValue[1]} W/m²K` },
+        { label: 'Rw', value: `${ranges.rw[0]}–${ranges.rw[1]} dB` },
+      );
+      if (selectedPart === 'floors') summary.push({ label: 'Portée', value: `${ranges.span[0]}–${ranges.span[1]} m` });
+    }
+    return summary;
+  };
+
+  const openGroupDetails = (group) => {
+    navigate(`/my-buildings/group/${encodeURIComponent(group.__groupKey)}`, {
+      state: {
+        matchingIds: (group.__groupMembers || []).map((member) => member.id),
+        filterSummary: group.__filterSummary?.length ? group.__filterSummary : currentFilterSummary(),
+        filtersEnabled,
+        projectSessionKey,
+        projectId,
+        descriptor: serializeGroupSelection(group),
+        selectionState,
+      },
+    });
+  };
 
   return (
     <>
-      <Header lang={lang} setLang={setLang} />
+      {showHeader ? <Header lang={lang} setLang={setLang} /> : null}
       <main className="building-page">
+        {projectToolbar}
         <div className="building-layout">
-          <BuildingCriteria lang={lang} selectedCategories={activeCategories} onCriteriaChange={handleCriteriaChange} onReset={resetFilters} />
+          <BuildingCriteria
+            lang={lang}
+            selectedCategories={activeCategories}
+            onCriteriaChange={handleCriteriaChange}
+            onStateChange={projectMode ? setCriteriaState : null}
+            onReset={resetFilters}
+            initialState={projectMode ? persistedState.criteriaState : null}
+            storageKey={projectMode ? null : undefined}
+          />
 
           <div className="building-content">
             <BuildingDiagram
               selectedPart={selectedPart}
               onSelectPart={(partId) => {
                 setSelectedPart(partId);
-                setSelectedStructureTypes([]);
+                setSelectedStructureTypes(projectMode && Array.isArray(structureTypesByPart[partId])
+                  ? structureTypesByPart[partId]
+                  : []);
+                setSelectedStructureMaterials(projectMode && Array.isArray(structureMaterialsByPart[partId])
+                  ? structureMaterialsByPart[partId]
+                  : []);
+                setSelectedInsulationMaterials(projectMode && Array.isArray(insulationMaterialsByPart[partId])
+                  ? insulationMaterialsByPart[partId]
+                  : []);
               }}
               roofType={roofType}
               onRoofTypeChange={(type) => {
                 setRoofType(type);
+                if (selectedPart !== 'roof') return;
                 setSelectedStructureTypes([]);
+                setSelectedStructureMaterials([]);
+                setSelectedInsulationMaterials([]);
               }}
             />
 
-            <BuildingWeightInfo
-              building={criteria.building}
-              selectedItems={selectedItems}
-              candidatesByPart={weightCandidatesByPart}
-            />
+            {!projectMode ? (
+              <BuildingWeightInfo
+                building={criteria.building}
+                selectedItems={selectedItems}
+                candidatesByPart={carbonCandidatesByPart}
+              />
+            ) : null}
+
+            {projectMode ? (
+              <BuildingCarbonSummary
+                building={criteria.building}
+                selectedItems={analysisSelectedItems}
+                selectionReady={selectionHydrated}
+                candidatesByPart={carbonCandidatesByPart}
+                surfaces={surfaces}
+                onSurfacesChange={setSurfaces}
+                roofType={roofType}
+                lang={lang}
+                onOpenGroup={openGroupDetails}
+              />
+            ) : null}
 
             <section className="building-panel">
               <h3>Macro-composants sélectionnés</h3>
@@ -510,7 +882,12 @@ function Building() {
                 <ul className="building-selected-list">
                   {selectedItems.map((item) => (
                     <li key={item.id}>
-                      <Link to={`/element/${item.id}`}>{displayName(item, lang)}</Link>
+                      {partForComponent(item, roofType) ? <span className="building-selected-part">{getBuildingPart(partForComponent(item, roofType)).label} — </span> : null}
+                      {item.__isComponentGroup
+                        ? item.__isGroupCollection
+                          ? <details><summary>{displayName(item, lang)}</summary><ul>{item.__childGroups.map((child) => <li key={child.id}><button type="button" className="building-group-link" onClick={() => openGroupDetails(child)}>{displayName(child, lang)} · {child.__groupMembers.length} variantes</button></li>)}</ul></details>
+                          : <button type="button" className="building-group-link" title={(item.__groupMembers || []).map((member) => displayName(member, lang)).join('\n')} onClick={() => openGroupDetails(item)}>{displayName(item, lang)} · sélection {item.__groupSelectionNumber || 1} · {item.__groupMembers?.length || 0} variante(s)</button>
+                        : <Link to={`/element/${item.id}`}>{displayName(item, lang)}</Link>}
                       <button type="button" onClick={() => setSelectedItems((current) => current.filter((selected) => selected.id !== item.id))} aria-label={`Retirer ${displayName(item, lang)}`}>×</button>
                     </li>
                   ))}
@@ -524,7 +901,7 @@ function Building() {
                 {thermalUValueLimit !== null && <div><span>Valeur U limite</span><strong>{thermalUValueLimit.toFixed(3)} W/m²K</strong></div>}
                 {recommendedUValue !== null && <div><span>Valeur U recommandée</span><strong>{recommendedUValue.toFixed(3)} W/m²K</strong></div>}
                 {['outer_walls', 'interior_walls'].includes(selectedPart) && <div><span>Charge linéique requise</span><strong>{requiredWallLinearLoad === null ? 'N/A' : `${requiredWallLinearLoad.toFixed(1)} kN/m`}</strong></div>}
-                {selectedPart !== 'roof' && <div><span>Feu</span><strong>{fireThresholdR} / {fireThresholdEI}</strong></div>}
+                {!['roof', 'underground_roofs'].includes(selectedPart) && <div><span>Feu</span><strong>{fireThresholdR} / {fireThresholdEI}</strong></div>}
                 <div><span>Rw min.</span><strong>{criteria.acousticRwLimit === null ? 'N/A' : `${criteria.acousticRwLimit} dB`}</strong></div>
                 {selectedPart === 'floors' && <div><span>Ln,w max.</span><strong>{criteria.acousticLnwLimit === null ? 'N/A' : `${criteria.acousticLnwLimit} dB`}</strong></div>}
               </div>
@@ -550,7 +927,7 @@ function Building() {
           <section className="building-results">
               <div className="building-results-header">
                 <h2>
-                  {activePart.label} — {displayedData.length} / {availableCategoryData.length} résultat{availableCategoryData.length > 1 ? 's' : ''}
+                  {activePart.label} — {projectMode ? `${groupedData.length} groupe${groupedData.length > 1 ? 's' : ''} · ` : ''}{displayedData.length} / {availableCategoryData.length} résultat{availableCategoryData.length > 1 ? 's' : ''}
                 </h2>
                 <div className="building-sort-controls">
                   <label className="building-filter-toggle">
@@ -582,8 +959,9 @@ function Building() {
                   </label>
                 </div>
               </div>
-              {structureTypeOptions.length > 0 && (
-                <div style={{ maxWidth: '420px', marginBottom: '12px' }}>
+              {(structureTypeOptions.length > 0 || (projectMode && (structureMaterialOptions.length > 0 || insulationMaterialOptions.length > 0 || screedMaterialOptions.length > 0))) && (
+                <div className="building-group-selectors">
+                  {structureTypeOptions.length > 0 ? (
                   <SourceSelector
                     label="Système constructif"
                     options={structureTypeOptions}
@@ -591,12 +969,52 @@ function Building() {
                     onChange={setSelectedStructureTypes}
                     allLabel={t.all}
                   />
+                  ) : null}
+                  {projectMode && structureMaterialOptions.length > 0 ? (
+                    <SourceSelector
+                      label="Matériau de la structure"
+                      options={structureMaterialOptions}
+                      selected={selectedStructureMaterials}
+                      onChange={setSelectedStructureMaterials}
+                      allLabel={t.all}
+                    />
+                  ) : null}
+                  {projectMode && insulationMaterialOptions.length > 0 ? (
+                    <SourceSelector
+                      label="Matériau isolant"
+                      options={insulationMaterialOptions}
+                      selected={selectedInsulationMaterials}
+                      onChange={setSelectedInsulationMaterials}
+                      allLabel={t.all}
+                    />
+                  ) : null}
+                  {projectMode && selectedPart === 'floors' && screedMaterialOptions.length > 0 ? (
+                    <SourceSelector
+                      label="Matériau de la chape"
+                      options={screedMaterialOptions}
+                      selected={selectedScreedMaterials}
+                      onChange={setSelectedScreedMaterials}
+                      allLabel={t.all}
+                    />
+                  ) : null}
                 </div>
               )}
               {loading ? <p>Chargement…</p> : null}
               {!loading && displayedData.length === 0 ? <p>Aucun composant disponible dans cette catégorie et ces sources.</p> : null}
+              {projectMode ? <div><label className="building-select-filtered"><input type="checkbox" checked={Boolean(selectedCollection)} disabled={!eligibleGroups.length} onChange={(event) => toggleFilteredGroups(event.target.checked)} /> Sélectionner les groupes filtrés ({eligibleGroups.length})</label><p className="building-muted">Une surface commune et une plage d’impact pour tous les groupes retenus. Les groupes ignorés sont exclus.</p></div> : null}
               <div className="building-results-grid">
-                {visibleData.map((item) => (
+                {visibleData.map((item) => projectMode ? (
+                  <ComponentGroupCard
+                    key={item.id}
+                    group={item}
+                    selected={hasSelectedGroup(selectionState, serializeGroupSelection(item))}
+                    ignored={ignoredGroupIds.includes(selectableItemIdentity(item))}
+                    onIgnore={(checked) => updateGroupSelection(item, 'ignore', checked)}
+                    onToggle={() => toggleSelectedItem(item)}
+                    onDetails={() => openGroupDetails(item)}
+                    t={t}
+                  />
+                ) : (
                   <ComponentCard
                     key={item.id}
                     item={item}

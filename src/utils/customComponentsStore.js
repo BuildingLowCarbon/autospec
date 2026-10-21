@@ -125,6 +125,17 @@ export const deleteFileCustomComponent = async (componentId) => {
   return response.json();
 };
 
+export const deleteFileSourceComponent = async (sourceFile, componentId) => {
+  const response = await fetch(`/api/components-source/${encodeURIComponent(sourceFile)}/${encodeURIComponent(componentId)}`, {
+    method: 'DELETE',
+  });
+  if (!response.ok) {
+    const payload = await response.json().catch(() => ({}));
+    throw new Error(payload.error ?? `Suppression ${sourceFile} impossible (${response.status})`);
+  }
+  return response.json();
+};
+
 export const deleteLocalCustomComponent = (componentId) => {
   const next = readLocalCustomComponents().filter((item) => String(item?.id) !== String(componentId));
   writeLocalCustomComponents(next);

@@ -28,6 +28,7 @@ function Header() {
         <h1 style={{ margin: 0, fontSize: '25px', fontWeight: 'bold' }}>AutoSpec</h1>
         <Link to="/" style={{ color: '#222' }}>Filtres</Link>
         <Link to="/building" style={{ color: '#222' }}>Building</Link>
+        {user && <Link to="/my-buildings" style={{ color: '#222' }}>My Buildings</Link>}
         {can('dashboard') && <Link to="/dashboard" style={{ color: '#222' }}>Dashboard</Link>}
       </div>
 

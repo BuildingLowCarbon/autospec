@@ -36,10 +36,13 @@ Object.assign(UI.en, { taxonomyManagement: 'Categories' });
 Object.assign(UI.fr, { userManagement: 'Utilisateurs' });
 Object.assign(UI.de, { userManagement: 'Benutzer' });
 Object.assign(UI.en, { userManagement: 'Users' });
+Object.assign(UI.fr, { structures: 'Structures' });
+Object.assign(UI.de, { structures: 'Strukturen' });
+Object.assign(UI.en, { structures: 'Structures' });
 
 UI.it = {
   ...UI.en,
-  administration: 'Amministrazione', databases: 'Banche dati', selection: 'Selezione', errors: 'Errori', mappings: 'Corrispondenze', materialsProducts: 'Materiali / prodotti', incompleteComponents: 'Componenti incompleti', taxonomyManagement: 'Categorie', userManagement: 'Utenti', search: 'Cercare', edit: 'Modificare', newMaterial: 'Nuovo materiale', newProduct: 'Nuovo prodotto', saveChanges: 'Salva modifiche', translations: 'Traduzioni', unmapped: 'Da associare',
+  administration: 'Amministrazione', databases: 'Banche dati', selection: 'Selezione', structures: 'Strutture', errors: 'Errori', mappings: 'Corrispondenze', materialsProducts: 'Materiali / prodotti', incompleteComponents: 'Componenti incompleti', taxonomyManagement: 'Categorie', userManagement: 'Utenti', search: 'Cercare', edit: 'Modificare', newMaterial: 'Nuovo materiale', newProduct: 'Nuovo prodotto', saveChanges: 'Salva modifiche', translations: 'Traduzioni', unmapped: 'Da associare',
 };
 
 export const dashboardText = (lang) => UI[lang] || UI.fr;

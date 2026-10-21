@@ -28,7 +28,9 @@
     "test:watch": "vitest",
     "test:db": "node --test --experimental-test-isolation=none server/lignumDatabase.test.js",
     "auth:create-admin": "node server/createInitialAdmin.js",
-    "migrate:material-i18n": "node server/enrichMaterialTranslations.js"
+    "migrate:material-i18n": "node server/enrichMaterialTranslations.js",
+    "repair:generated": "node server/repairGeneratedComponents.js",
+    "test:generated": "node --test server/generatedComponentsService.test.js"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",

@@ -1,0 +1,1808 @@
+[
+  {
+    "id": "DB57DCAC-EA50-4339-B943-6B1B30F13137",
+    "parent": null,
+    "serialNo": "",
+    "categoryId": "foundation",
+    "thickness_mm": 627.3,
+    "weight_kg_m2": 826.0887388535032,
+    "uValue_W_m2K": 0.15703857074314212,
+    "gwp_kgco2e_m2": 290.3567285350319,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Barrière de vapeur PE + Polystyrène extrudé (XPS), ρ 30 [kg/m3] + Lé d'étanchéité bitumineux — variantes · configuration 1/3 — h 250 mm — Béton maigre (sans armature) — variantes · configuration 1/2",
+        "description": "Variante générée"
+      },
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": null,
+          "role": "Revêtement de sol",
+          "thickness_mm": 11,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Parquet, 2 plis, vitrifié d'usine, 11 mm [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.02",
+          "ecccDescription": "Revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 1,
+          "productId": null,
+          "role": "Colle",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Colle de construction/mortier d'enrobage biologique"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 2,
+          "productId": null,
+          "role": "Sous-couche",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Chape d'anhydrite, 60 mm"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "screed"
+        },
+        {
+          "order": 3,
+          "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
+          "role": "Pare-vapeur",
+          "thickness_mm": 0.3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Barrière de vapeur PE"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0.27599999999999997,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 2.9918399999999994,
+          "thermalResistance_m2K_W": 0.000909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 4,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation porteuse posée librement",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 172.8,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 5,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 21.978,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 6,
+          "productId": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+          "role": "Dalle de sol porteuse",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Dalle de fond en béton 25 cm (Fe 80kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 601.5127388535032,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 79.08488853503184,
+          "thermalResistance_m2K_W": 0.08377801494130203,
+          "isSupportStructure": true,
+          "ecccId": "C01.03",
+          "ecccDescription": "Dalles de sol, radiers",
+          "baseGwp_kgco2e_m2": 79.08488853503184,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "layerFunctionId": "structure",
+          "insulationTypeId": null
+        },
+        {
+          "order": 7,
+          "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+          "role": "Couche de propreté",
+          "thickness_mm": 100,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Béton maigre (sans armature)"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 215,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 13.501999999999999,
+          "thermalResistance_m2K_W": 0.04347826086956522,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "isSupportStructure": false,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "AutoSpec – variantes générées",
+      "databaseId": "generated",
+      "externalId": "DB57DCAC-EA50-4339-B943-6B1B30F13137"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "ground_contact",
+    "generated": true,
+    "generatedFrom": {
+      "structureSignature": "[{\"thickness_mm\":250,\"width_mm\":null,\"spacing_mm\":null}]",
+      "structureComponentId": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "upperGroupId": "manual-4eed7ce0-f497-42df-aa3e-ce4e9745a88a::configuration-1",
+      "lowerGroupId": "manual-cf4825c4-5fd6-42f7-a219-18962ac4c55f::configuration-1"
+    },
+    "generationSignature": "{\"categoryId\":\"foundation\",\"layers\":[\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":11,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":60,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":0.3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"03CE34FE-5087-4699-91D7-35D095686595\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":200,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"7DF7D7B4-F775-47AD-9B4C-088AB25B4F75\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":250,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6DEFC510-138F-4344-B357-7EFD5B284313\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":100,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\"]}",
+    "generatedAt": "2026-10-19T13:02:59.873Z",
+    "metadata": {
+      "created_at": "2026-10-19T13:02:59.873Z",
+      "updated_at": "2026-10-19T13:02:59.873Z",
+      "version": 1
+    }
+  },
+  {
+    "id": "C625F995-EB27-4BB5-9DC0-088C791D8FC5",
+    "parent": null,
+    "serialNo": "",
+    "categoryId": "foundation",
+    "thickness_mm": 577.3,
+    "weight_kg_m2": 718.5887388535032,
+    "uValue_W_m2K": 0.15757651837855188,
+    "gwp_kgco2e_m2": 283.60572853503186,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Barrière de vapeur PE + Polystyrène extrudé (XPS), ρ 30 [kg/m3] + Lé d'étanchéité bitumineux — variantes · configuration 1/3 — h 250 mm — Béton maigre (sans armature) — variantes · configuration 2/2",
+        "description": "Variante générée"
+      },
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": null,
+          "role": "Revêtement de sol",
+          "thickness_mm": 11,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Parquet, 2 plis, vitrifié d'usine, 11 mm [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.02",
+          "ecccDescription": "Revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 1,
+          "productId": null,
+          "role": "Colle",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Colle de construction/mortier d'enrobage biologique"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 2,
+          "productId": null,
+          "role": "Sous-couche",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Chape d'anhydrite, 60 mm"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "screed"
+        },
+        {
+          "order": 3,
+          "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
+          "role": "Pare-vapeur",
+          "thickness_mm": 0.3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Barrière de vapeur PE"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0.27599999999999997,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 2.9918399999999994,
+          "thermalResistance_m2K_W": 0.000909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 4,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation porteuse posée librement",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 172.8,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 5,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 21.978,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 6,
+          "productId": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+          "role": "Dalle de sol porteuse",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Dalle de fond en béton 25 cm (Fe 80kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 601.5127388535032,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 79.08488853503184,
+          "thermalResistance_m2K_W": 0.08377801494130203,
+          "isSupportStructure": true,
+          "ecccId": "C01.03",
+          "ecccDescription": "Dalles de sol, radiers",
+          "baseGwp_kgco2e_m2": 79.08488853503184,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "layerFunctionId": "structure",
+          "insulationTypeId": null
+        },
+        {
+          "order": 7,
+          "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+          "role": "Couche de propreté",
+          "thickness_mm": 50,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Béton maigre (sans armature)"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 107.5,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 6.7509999999999994,
+          "thermalResistance_m2K_W": 0.02173913043478261,
+          "baseGwp_kgco2e_m2": 6.7509999999999994,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "isSupportStructure": false,
+          "layerFunctionId": "other",
+          "insulationTypeId": null,
+          "materialId": null
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "AutoSpec – variantes générées",
+      "databaseId": "generated",
+      "externalId": "C625F995-EB27-4BB5-9DC0-088C791D8FC5"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "ground_contact",
+    "generated": true,
+    "generatedFrom": {
+      "structureSignature": "[{\"thickness_mm\":250,\"width_mm\":null,\"spacing_mm\":null}]",
+      "structureComponentId": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "upperGroupId": "manual-4eed7ce0-f497-42df-aa3e-ce4e9745a88a::configuration-1",
+      "lowerGroupId": "manual-cf4825c4-5fd6-42f7-a219-18962ac4c55f::configuration-2"
+    },
+    "generationSignature": "{\"categoryId\":\"foundation\",\"layers\":[\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":11,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":60,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":0.3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"03CE34FE-5087-4699-91D7-35D095686595\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":200,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"7DF7D7B4-F775-47AD-9B4C-088AB25B4F75\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":250,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6DEFC510-138F-4344-B357-7EFD5B284313\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":50,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\"]}",
+    "generatedAt": "2026-10-19T13:02:59.873Z",
+    "metadata": {
+      "created_at": "2026-10-19T13:02:59.873Z",
+      "updated_at": "2026-10-19T13:02:59.873Z",
+      "version": 1
+    }
+  },
+  {
+    "id": "2FA19281-BBEF-4D19-84E9-62E9188E250D",
+    "parent": null,
+    "serialNo": "",
+    "categoryId": "foundation",
+    "thickness_mm": 810.3,
+    "weight_kg_m2": 834.7887388535031,
+    "uValue_W_m2K": 0.08079532823337972,
+    "gwp_kgco2e_m2": 341.52172853503185,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Barrière de vapeur PE + Polystyrène extrudé (XPS), ρ 30 [kg/m3] + Lé d'étanchéité bitumineux — variantes · configuration 1/3 — h 250 mm — Lé d'étanchéité bitumineux + Polyuréthane (PUR/PIR), ρ 30 [kg/m3] + Béton maigre (sans armature) — variantes · configuration 1/3",
+        "description": "Variante générée"
+      },
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": null,
+          "role": "Revêtement de sol",
+          "thickness_mm": 11,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Parquet, 2 plis, vitrifié d'usine, 11 mm [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.02",
+          "ecccDescription": "Revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 1,
+          "productId": null,
+          "role": "Colle",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Colle de construction/mortier d'enrobage biologique"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 2,
+          "productId": null,
+          "role": "Sous-couche",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Chape d'anhydrite, 60 mm"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "screed"
+        },
+        {
+          "order": 3,
+          "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
+          "role": "Pare-vapeur",
+          "thickness_mm": 0.3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Barrière de vapeur PE"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0.27599999999999997,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 2.9918399999999994,
+          "thermalResistance_m2K_W": 0.000909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 4,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation porteuse posée librement",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 172.8,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 5,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 21.978,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 6,
+          "productId": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+          "role": "Dalle de sol porteuse",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Dalle de fond en béton 25 cm (Fe 80kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 601.5127388535032,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 79.08488853503184,
+          "thermalResistance_m2K_W": 0.08377801494130203,
+          "isSupportStructure": true,
+          "ecccId": "C01.03",
+          "ecccDescription": "Dalles de sol, radiers",
+          "baseGwp_kgco2e_m2": 79.08488853503184,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "layerFunctionId": "structure",
+          "insulationTypeId": null
+        },
+        {
+          "order": 7,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 10.989,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 8,
+          "productId": "AB6E9E2C-2E1B-4076-A6A3-ECB051AEC8E2",
+          "role": "Isolation périmétrique supportant la charge",
+          "thickness_mm": 180,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polyuréthane (PUR/PIR), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 5.3999999999999995,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 40.175999999999995,
+          "thermalResistance_m2K_W": 6,
+          "baseGwp_kgco2e_m2": 40.175999999999995,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 9,
+          "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+          "role": "Couche de propreté",
+          "thickness_mm": 100,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Béton maigre (sans armature)"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 215,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 13.501999999999999,
+          "thermalResistance_m2K_W": 0.04347826086956522,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "AutoSpec – variantes générées",
+      "databaseId": "generated",
+      "externalId": "2FA19281-BBEF-4D19-84E9-62E9188E250D"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "ground_contact",
+    "generated": true,
+    "generatedFrom": {
+      "structureSignature": "[{\"thickness_mm\":250,\"width_mm\":null,\"spacing_mm\":null}]",
+      "structureComponentId": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "upperGroupId": "manual-4eed7ce0-f497-42df-aa3e-ce4e9745a88a::configuration-1",
+      "lowerGroupId": "manual-f0031311-ba8f-4abf-bd1b-9b1d42ac6397::configuration-1"
+    },
+    "generationSignature": "{\"categoryId\":\"foundation\",\"layers\":[\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":11,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":60,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":0.3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"03CE34FE-5087-4699-91D7-35D095686595\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":200,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"7DF7D7B4-F775-47AD-9B4C-088AB25B4F75\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":250,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"AB6E9E2C-2E1B-4076-A6A3-ECB051AEC8E2\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":180,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6DEFC510-138F-4344-B357-7EFD5B284313\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":100,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\"]}",
+    "generatedAt": "2026-10-19T13:02:59.873Z",
+    "metadata": {
+      "created_at": "2026-10-19T13:02:59.873Z",
+      "updated_at": "2026-10-19T13:02:59.873Z",
+      "version": 1
+    }
+  },
+  {
+    "id": "B51BE581-9531-4AE6-879D-33C229A53A96",
+    "parent": null,
+    "serialNo": "",
+    "categoryId": "foundation",
+    "thickness_mm": 870.3,
+    "weight_kg_m2": 853.3887388535031,
+    "uValue_W_m2K": 0.08079532823337972,
+    "gwp_kgco2e_m2": 327.74572853503184,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Barrière de vapeur PE + Polystyrène extrudé (XPS), ρ 30 [kg/m3] + Lé d'étanchéité bitumineux — variantes · configuration 1/3 — h 250 mm — Lé d'étanchéité bitumineux + Polyuréthane (PUR/PIR), ρ 30 [kg/m3] + Béton maigre (sans armature) — variantes · configuration 2/3",
+        "description": "Variante générée"
+      },
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": null,
+          "role": "Revêtement de sol",
+          "thickness_mm": 11,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Parquet, 2 plis, vitrifié d'usine, 11 mm [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.02",
+          "ecccDescription": "Revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 1,
+          "productId": null,
+          "role": "Colle",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Colle de construction/mortier d'enrobage biologique"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "other"
+        },
+        {
+          "order": 2,
+          "productId": null,
+          "role": "Sous-couche",
+          "thickness_mm": 60,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Chape d'anhydrite, 60 mm"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0,
+          "reactionToFire": null,
+          "lifetime": 40,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 0,
+          "thermalResistance_m2K_W": null,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "insulationTypeId": null,
+          "layerFunctionId": "screed"
+        },
+        {
+          "order": 3,
+          "productId": "389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82",
+          "role": "Pare-vapeur",
+          "thickness_mm": 0.3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Barrière de vapeur PE"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 0.27599999999999997,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 2.9918399999999994,
+          "thermalResistance_m2K_W": 0.000909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 4,
+          "productId": "03CE34FE-5087-4699-91D7-35D095686595",
+          "role": "Isolation porteuse posée librement",
+          "thickness_mm": 200,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polystyrène extrudé (XPS), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 6,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 172.8,
+          "thermalResistance_m2K_W": 6.0606060606060606,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        },
+        {
+          "order": 5,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 21.978,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "isSupportStructure": false,
+          "ecccId": "G02.01",
+          "ecccDescription": "Supports pour revêtements de sols",
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 6,
+          "productId": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+          "role": "Dalle de sol porteuse",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Dalle de fond en béton 25 cm (Fe 80kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 601.5127388535032,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 79.08488853503184,
+          "thermalResistance_m2K_W": 0.08377801494130203,
+          "isSupportStructure": true,
+          "ecccId": "C01.03",
+          "ecccDescription": "Dalles de sol, radiers",
+          "baseGwp_kgco2e_m2": 79.08488853503184,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "layerFunctionId": "structure",
+          "insulationTypeId": null
+        },
+        {
+          "order": 7,
+          "productId": "8F9AA548-F687-4E86-A184-5F71961A64A3",
+          "role": "Etanchéité",
+          "thickness_mm": 3,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Lé d'étanchéité bitumineux"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 3.3000000000000003,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 10.989,
+          "thermalResistance_m2K_W": 0.00909090909090909,
+          "baseGwp_kgco2e_m2": 10.989,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "sealing",
+          "insulationTypeId": null
+        },
+        {
+          "order": 8,
+          "productId": "6ACDE853-5F6D-4291-B390-B3B7555CD6ED",
+          "role": "Isolation périmétrique supportant la charge",
+          "thickness_mm": 240,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Polyuréthane (PUR/PIR), ρ 30 [kg/m3]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 24,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 26.400000000000002,
+          "thermalResistance_m2K_W": 6,
+          "baseGwp_kgco2e_m2": 26.400000000000002,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "other",
+          "insulationTypeId": null,
+          "materialId": null
+        },
+        {
+          "order": 9,
+          "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+          "role": "Couche de propreté",
+          "thickness_mm": 100,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Béton maigre (sans armature)"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 215,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 13.501999999999999,
+          "thermalResistance_m2K_W": 0.04347826086956522,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "layerFunctionId": "other",
+          "insulationTypeId": null
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "AutoSpec – variantes générées",
+      "databaseId": "generated",
+      "externalId": "B51BE581-9531-4AE6-879D-33C229A53A96"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "ground_contact",
+    "generated": true,
+    "generatedFrom": {
+      "structureSignature": "[{\"thickness_mm\":250,\"width_mm\":null,\"spacing_mm\":null}]",
+      "structureComponentId": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "upperGroupId": "manual-4eed7ce0-f497-42df-aa3e-ce4e9745a88a::configuration-1",
+      "lowerGroupId": "manual-f0031311-ba8f-4abf-bd1b-9b1d42ac6397::configuration-2"
+    },
+    "generationSignature": "{\"categoryId\":\"foundation\",\"layers\":[\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":11,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":null,\\\"materialId\\\":null,\\\"thickness_mm\\\":60,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"389D5551-6A30-4D3E-8EE6-8CFE7AF3CF82\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":0.3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"03CE34FE-5087-4699-91D7-35D095686595\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":200,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"7DF7D7B4-F775-47AD-9B4C-088AB25B4F75\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":250,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"8F9AA548-F687-4E86-A184-5F71961A64A3\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":3,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6ACDE853-5F6D-4291-B390-B3B7555CD6ED\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":240,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6DEFC510-138F-4344-B357-7EFD5B284313\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":100,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\"]}",
+    "generatedAt": "2026-10-19T13:02:59.873Z",
+    "metadata": {
+      "created_at": "2026-10-19T13:02:59.873Z",
+      "updated_at": "2026-10-19T13:02:59.873Z",
+      "version": 1
+    }
+  }
+]

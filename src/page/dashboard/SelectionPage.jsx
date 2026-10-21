@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { apiJson, fetchArray, labelOf, normalize } from './dashboardApi';
 import LangContext from '../../context/LangContext';
 import { dashboardText } from './dashboardI18n';
+import { invalidateComponentsCache } from '../../utils/loadComponents';
 
 export default function SelectionPage() {
   const { lang } = useContext(LangContext);
@@ -49,6 +50,7 @@ export default function SelectionPage() {
     setBusy(true); setMessage('Enregistrement…');
     try {
       const result = await apiJson('/api/lignum/selection', { method: 'POST', body: JSON.stringify({ selectedIds: Array.from(selected) }) });
+      invalidateComponentsCache();
       setMessage(`${result.count} composants enregistrés. Version : ${result.versionFile}`);
     } catch (error) { setMessage(`Erreur : ${error.message}`); } finally { setBusy(false); }
   };

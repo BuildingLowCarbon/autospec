@@ -12,3 +12,14 @@ test('protège la page Custom sans session', async () => {
   render(<App />);
   expect(await screen.findByRole('heading', { name: 'Connexion' })).toBeInTheDocument();
 });
+
+test('redirige My Buildings vers la connexion sans session', async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: false,
+    status: 401,
+    json: async () => ({ ok: false, error: 'Authentification requise.' }),
+  });
+  window.history.pushState({}, '', '/my-buildings');
+  render(<App />);
+  expect(await screen.findByRole('heading', { name: 'Connexion' })).toBeInTheDocument();
+});

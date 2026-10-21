@@ -37,6 +37,8 @@ npm run auth:create-admin -- admin "Administrateur AutoSpec"
 
 Les mots de passe sont hachés côté serveur et les sessions sont conservées dans MongoDB avec expiration automatique. Les profils sont disponibles sous `/profile` et les organisations sous `/organizations`.
 
+La page protégée `/my-buildings` enregistre les bâtiments de chaque utilisateur dans la collection MongoDB `userBuildings` : critères, filtres, composants sélectionnés et surfaces utilisées pour le bilan carbone.
+
 ## Production
 
 ```bash
@@ -80,3 +82,11 @@ npm run test:db
 Le Dashboard est disponible sous `/dashboard`. Il permet notamment d’unifier les sources Lignum, contrôler les références, gérer les correspondances et corriger les composants, matériaux et produits.
 
 En local, les écritures système passent par les routes enregistrées dans `server/apiRoutes.js` et exécutées par `server/devServer.js`. Elles mettent à jour les JSON actifs sous `public/db` et créent leurs versions sous `public/db/versions`.
+
+Dans **Structures → Générer des variantes → Historique des générations**, chaque lot reprend les trois colonnes de la nouvelle génération : structure et couches intégrées, couches au-dessus, couches au-dessous. On peut modifier un groupe avec les mêmes champs que dans Custom, puis prévisualiser les composants concernés. Les identifiants sont conservés ; les propriétés sont recalculées et les révisions sont enregistrées dans `public/db/structure_generation_history.json`, avec des versions sous `public/db/versions`. La suppression d’un lot demande confirmation ; elle supprime ses composants propres et conserve les composants réutilisés ou partagés avec d’autres lots. Les lots manquants sont récupérés depuis les composants générés, y compris lorsqu’un ancien serveur n’avait pas enregistré leur historique.
+
+Les matériaux se recherchent par nom, densité ou KBOB. Une couche en parallèle est classée avec son hôte : une isolation entre lattes de façade reste dans le groupe de façade, tandis qu’une isolation entre montants porteurs fait partie des variantes de structure.
+
+Les références Lignum sont converties avec `public/db/mappings/lignum_product_tbz.json` avant les calculs et l’enregistrement. Une référence inconnue bloque la génération au lieu de produire silencieusement un poids nul. Pour auditer les anciens composants générés : `npm run repair:generated`. Pour appliquer la réparation et importer leurs lots historiques : `npm run repair:generated -- --write` (sauvegarde préalable automatique). Les regroupements historiques déduits des dates sont signalés comme reconstitués dans l’interface.
+
+`npm run test:generated` vérifie la réparation des références et les mises à jour des générations sans modifier les bases actives.

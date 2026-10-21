@@ -1,10 +1,10 @@
 import {
   calculateWoodBeamSpan,
   calcBurnThroughTime_min
-} from './woodFloorResistance';
-import { calculateStudCompressionCapacity } from './woodStudResistance';
-import { isSupportStructureLayer, normalizeSupportStructure } from './supportStructure';
-import { getLayerMaterialCategoryIds } from './materialCategory';
+} from './woodFloorResistance.js';
+import { calculateStudCompressionCapacity } from './woodStudResistance.js';
+import { isSupportStructureLayer, normalizeSupportStructure } from './supportStructure.js';
+import { getLayerMaterialCategoryIds } from './materialCategory.js';
 
 const WOOD_STRUCTURE_CATEGORIES = new Set(['holz', 'holzwerkstoff']);
 

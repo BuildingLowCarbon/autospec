@@ -60,6 +60,8 @@ const ensureAuthIndexes = async () => {
         db.collection('userComponents').createIndex({ ownerId: 1, organizationId: 1, visibility: 1 }, { name: 'user_components_access' }),
         db.collection('userMaterials').createIndex({ itemId: 1 }, { unique: true, name: 'user_material_id_unique' }),
         db.collection('userMaterials').createIndex({ ownerId: 1, organizationId: 1, visibility: 1 }, { name: 'user_materials_access' }),
+        db.collection('userBuildings').createIndex({ ownerId: 1, updatedAt: -1 }, { name: 'user_buildings_by_owner' }),
+        db.collection('userBuildings').createIndex({ id: 1 }, { unique: true, name: 'user_building_id_unique' }),
       ]);
       return db;
     }).catch((error) => {

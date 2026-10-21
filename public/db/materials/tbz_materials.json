@@ -3845,22 +3845,22 @@
     },
     "translations": {
       "de": {
-        "name": "Flumroc-Dämmplatte 1",
+        "name": "Flumroc-Dämmplatte MEGA",
         "description": null
       },
       "en": {
-        "name": "Flumroc-Dämmplatte 1",
+        "name": "Flumroc-Dämmplatte MEGA",
         "description": null
       },
       "fr": {
-        "name": "Flumroc-Dämmplatte 1",
+        "name": "Flumroc-Dämmplatte MEGA",
         "description": null
       }
     },
     "metadata": {
       "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
+      "updated_at": "2026-10-19T13:01:27.797Z",
+      "version": 2
     }
   },
   {

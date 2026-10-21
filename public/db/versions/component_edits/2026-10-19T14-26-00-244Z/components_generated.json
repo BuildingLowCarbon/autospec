@@ -1,0 +1,167 @@
+[
+  {
+    "id": "56C38F61-036C-49B9-8163-C237E1DC41C6",
+    "parent": null,
+    "serialNo": "",
+    "categoryId": "foundation",
+    "thickness_mm": 300,
+    "weight_kg_m2": 709.0127388535032,
+    "uValue_W_m2K": 3.6295381858540474,
+    "gwp_kgco2e_m2": 85.83588853503184,
+    "spanMax_m": null,
+    "claddingId": null,
+    "sheathingId": null,
+    "ballastInConstructionId": null,
+    "ballastOnStructuralLayerId": null,
+    "cavityInsulationInStructureId": null,
+    "facadeTypeId": null,
+    "wallFinishId": null,
+    "screedId": null,
+    "variantId": null,
+    "translations": {
+      "fr": {
+        "name": "Aucune couche au-dessus — h 250 mm · structure 1/2 — Béton maigre (sans armature) — variantes · configuration 2/2",
+        "description": "Variante générée"
+      },
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "structure": {
+      "layers": [
+        {
+          "order": 0,
+          "productId": "7DF7D7B4-F775-47AD-9B4C-088AB25B4F75",
+          "role": "Dalle de sol porteuse",
+          "thickness_mm": 250,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Dalle de fond en béton 25 cm (Fe 80kg/m3) [m2]"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 601.5127388535032,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 79.08488853503184,
+          "thermalResistance_m2K_W": 0.08377801494130203,
+          "isSupportStructure": true,
+          "ecccId": "C01.03",
+          "ecccDescription": "Dalles de sol, radiers",
+          "baseGwp_kgco2e_m2": 79.08488853503184,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "layerFunctionId": "structure",
+          "insulationTypeId": null
+        },
+        {
+          "order": 1,
+          "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+          "role": "Couche de propreté",
+          "thickness_mm": 50,
+          "width_mm": null,
+          "spacing_mm": null,
+          "fiberDirection": null,
+          "translations": {
+            "fr": {
+              "description": "Béton maigre (sans armature)"
+            },
+            "de": {
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
+            }
+          },
+          "structure": "on-lying",
+          "weight_kg_m2": 107.5,
+          "reactionToFire": null,
+          "lifetime": 60,
+          "eccc": null,
+          "colorCode": null,
+          "gwp_kgco2e_m2": 6.7509999999999994,
+          "thermalResistance_m2K_W": 0.02173913043478261,
+          "baseGwp_kgco2e_m2": 6.7509999999999994,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "ecccId": "C01.01",
+          "ecccDescription": "Supports de fondations, radiers, dalles de sol",
+          "isSupportStructure": false,
+          "layerFunctionId": "other",
+          "insulationTypeId": null,
+          "materialId": null
+        }
+      ],
+      "systemTypeId": "concrete"
+    },
+    "fire_resistance": {
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
+    },
+    "sound_insulation": {
+      "airborneSound": {
+        "Rw_dB": null,
+        "c100_3150_dB": null,
+        "c50_3150_dB": null,
+        "ctr100_3150_dB": null
+      },
+      "impactSound": {
+        "Lnw_dB": null,
+        "ci100_2500_dB": null,
+        "ci50_2500_dB": null
+      }
+    },
+    "source": {
+      "name": "AutoSpec – variantes générées",
+      "databaseId": "generated",
+      "externalId": "56C38F61-036C-49B9-8163-C237E1DC41C6"
+    },
+    "_rawTaxo": {},
+    "subcategoryId": "ground_contact",
+    "generated": true,
+    "generatedFrom": {
+      "structureSignature": "[{\"thickness_mm\":250,\"width_mm\":null,\"spacing_mm\":null}]",
+      "structureComponentId": "2D9F1DA3-A6BF-481A-8AF3-D732A66B2E34",
+      "upperGroupId": "none-above",
+      "lowerGroupId": "manual-cf4825c4-5fd6-42f7-a219-18962ac4c55f::configuration-2"
+    },
+    "generationSignature": "{\"categoryId\":\"foundation\",\"layers\":[\"{\\\"productId\\\":\\\"7DF7D7B4-F775-47AD-9B4C-088AB25B4F75\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":250,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\",\"{\\\"productId\\\":\\\"6DEFC510-138F-4344-B357-7EFD5B284313\\\",\\\"materialId\\\":null,\\\"thickness_mm\\\":50,\\\"width_mm\\\":null,\\\"spacing_mm\\\":null,\\\"structure\\\":\\\"on-lying\\\"}\"]}",
+    "generatedAt": "2026-10-19T13:25:07.495Z",
+    "metadata": {
+      "created_at": "2026-10-19T13:25:07.496Z",
+      "updated_at": "2026-10-19T13:25:07.496Z",
+      "version": 1
+    }
+  }
+]

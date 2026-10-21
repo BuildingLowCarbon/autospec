@@ -3,10 +3,11 @@ const { asyncRoute, jsonBody, requireAuth, requireCsrf, sendJson } = require('./
 const {
   createOrganization, deleteOrganization, listOrganizations, organizationDetails, removeMember, upsertMember,
 } = require('./organizationService');
+const { createBuilding, deleteBuilding, listBuildings, updateBuilding } = require('./buildingService');
 const { createContent, deleteContent, getProfile, getVisibleContentByItemId, listPublicContent, listVisibleContent, updateContent } = require('./userContentService');
 
 const registerCollaborationRoutes = (app) => {
-  app.use(['/api/profile', '/api/organizations', '/api/content'], jsonBody);
+  app.use(['/api/profile', '/api/organizations', '/api/content', '/api/buildings'], jsonBody);
 
   app.get('/api/public/content/:kind', asyncRoute(async (req, res) => {
     if (!['components', 'materials'].includes(req.params.kind)) throw new AuthError('Type de contenu inconnu.', 404);
@@ -49,6 +50,26 @@ const registerCollaborationRoutes = (app) => {
   app.delete('/api/organizations/:id', requireAuth('manageUsers'), asyncRoute(async (req, res) => {
     requireCsrf(req);
     await deleteOrganization(req.params.id, req.auth.rawUser);
+    sendJson(res, { ok: true });
+  }));
+
+  app.get('/api/buildings', requireAuth('app'), asyncRoute(async (req, res) => {
+    sendJson(res, { ok: true, buildings: await listBuildings(req.auth.rawUser) });
+  }));
+
+  app.post('/api/buildings', requireAuth('app'), asyncRoute(async (req, res) => {
+    requireCsrf(req);
+    sendJson(res, { ok: true, building: await createBuilding(req.body, req.auth.rawUser) }, 201);
+  }));
+
+  app.patch('/api/buildings/:id', requireAuth('app'), asyncRoute(async (req, res) => {
+    requireCsrf(req);
+    sendJson(res, { ok: true, building: await updateBuilding(req.params.id, req.body, req.auth.rawUser) });
+  }));
+
+  app.delete('/api/buildings/:id', requireAuth('app'), asyncRoute(async (req, res) => {
+    requireCsrf(req);
+    await deleteBuilding(req.params.id, req.auth.rawUser);
     sendJson(res, { ok: true });
   }));
 

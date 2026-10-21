@@ -7,7 +7,7 @@
     "thickness_mm": 400,
     "weight_kg_m2": 941.0191082802547,
     "uValue_W_m2K": 3.2248322871502832,
-    "gwp_kgco2e_m2": 110.51008280254777,
+    "gwp_kgco2e_m2": 112.91808280254777,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -105,9 +105,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -156,7 +156,7 @@
     "thickness_mm": 500,
     "weight_kg_m2": 1183.0254777070063,
     "uValue_W_m2K": 2.921424430533933,
-    "gwp_kgco2e_m2": 143.64877707006372,
+    "gwp_kgco2e_m2": 146.05677707006373,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -254,11 +254,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -305,7 +305,7 @@
     "thickness_mm": 600,
     "weight_kg_m2": 1400.3503184713377,
     "uValue_W_m2K": 2.30341060164277,
-    "gwp_kgco2e_m2": 165.01438216560513,
+    "gwp_kgco2e_m2": 167.42238216560514,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -403,12 +403,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -455,7 +455,7 @@
     "thickness_mm": 900,
     "weight_kg_m2": 2125.7006369426754,
     "uValue_W_m2K": 1.8379993781329653,
-    "gwp_kgco2e_m2": 272.4747643312102,
+    "gwp_kgco2e_m2": 274.88276433121024,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -553,10 +553,10 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -605,7 +605,7 @@
     "thickness_mm": 350,
     "weight_kg_m2": 816.5127388535032,
     "uValue_W_m2K": 3.364100546816584,
-    "gwp_kgco2e_m2": 90.17888853503183,
+    "gwp_kgco2e_m2": 92.58688853503183,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -703,11 +703,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -754,7 +754,7 @@
     "thickness_mm": 631,
     "weight_kg_m2": 953.7177388535031,
     "uValue_W_m2K": 0.1529781016036095,
-    "gwp_kgco2e_m2": 106.35068853503182,
+    "gwp_kgco2e_m2": 228.01988853503184,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -813,12 +813,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -891,12 +891,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -969,12 +969,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8778000000000001,
+          "gwp_kgco2e_m2": 10.989,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1008,12 +1008,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2120000000000002,
+          "gwp_kgco2e_m2": 86.4,
           "thermalResistance_m2K_W": 6.0606060606060606,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "baseGwp_kgco2e_m2": 86.4,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1047,12 +1047,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1099,7 +1099,7 @@
     "thickness_mm": 881,
     "weight_kg_m2": 1015.2177388535031,
     "uValue_W_m2K": 0.16578708850780857,
-    "gwp_kgco2e_m2": 108.68918853503182,
+    "gwp_kgco2e_m2": 159.57488853503185,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1158,12 +1158,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1236,12 +1236,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1314,12 +1314,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8778000000000001,
+          "gwp_kgco2e_m2": 10.989,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1353,12 +1353,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.5505,
+          "gwp_kgco2e_m2": 17.955000000000002,
           "thermalResistance_m2K_W": 5.555555555555555,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 3.5505,
+          "baseGwp_kgco2e_m2": 17.955000000000002,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1392,12 +1392,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1444,7 +1444,7 @@
     "thickness_mm": 671,
     "weight_kg_m2": 987.3177388535031,
     "uValue_W_m2K": 0.18952756871982643,
-    "gwp_kgco2e_m2": 107.22164853503182,
+    "gwp_kgco2e_m2": 188.74388853503183,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1503,12 +1503,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1581,12 +1581,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1659,12 +1659,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8778000000000001,
+          "gwp_kgco2e_m2": 10.989,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1698,12 +1698,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.08296,
+          "gwp_kgco2e_m2": 47.124,
           "thermalResistance_m2K_W": 4.8,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 2.08296,
+          "baseGwp_kgco2e_m2": 47.124,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1737,12 +1737,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -1789,7 +1789,7 @@
     "thickness_mm": 611,
     "weight_kg_m2": 953.117738853503,
     "uValue_W_m2K": 0.15440969567106103,
-    "gwp_kgco2e_m2": 108.82148853503182,
+    "gwp_kgco2e_m2": 181.79588853503182,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1848,9 +1848,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1926,9 +1926,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2004,9 +2004,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8778000000000001,
+          "gwp_kgco2e_m2": 10.989,
           "thermalResistance_m2K_W": 0.00909090909090909,
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -2043,9 +2043,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.6828,
+          "gwp_kgco2e_m2": 40.175999999999995,
           "thermalResistance_m2K_W": 6,
-          "baseGwp_kgco2e_m2": 3.6828,
+          "baseGwp_kgco2e_m2": 40.175999999999995,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -2082,9 +2082,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -2134,7 +2134,7 @@
     "thickness_mm": 647.3,
     "weight_kg_m2": 968.1937388535032,
     "uValue_W_m2K": 0.16816849216349636,
-    "gwp_kgco2e_m2": 111.65185653503184,
+    "gwp_kgco2e_m2": 203.42072853503186,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -2193,12 +2193,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.126,
+          "gwp_kgco2e_m2": 15.6,
           "thermalResistance_m2K_W": 0.0846153846153846,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.563,
+          "baseGwp_kgco2e_m2": 7.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2271,12 +2271,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2310,12 +2310,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2349,12 +2349,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 5.852,
+          "gwp_kgco2e_m2": 48.400000000000006,
           "thermalResistance_m2K_W": 5.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 2.926,
+          "baseGwp_kgco2e_m2": 24.200000000000003,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2388,12 +2388,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 21.978,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2466,12 +2466,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -2518,7 +2518,7 @@
     "thickness_mm": 607.3,
     "weight_kg_m2": 951.5937388535032,
     "uValue_W_m2K": 0.1551249294243643,
-    "gwp_kgco2e_m2": 113.16545653503184,
+    "gwp_kgco2e_m2": 235.37272853503183,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -2577,12 +2577,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.126,
+          "gwp_kgco2e_m2": 15.6,
           "thermalResistance_m2K_W": 0.0846153846153846,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.563,
+          "baseGwp_kgco2e_m2": 7.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2655,12 +2655,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2694,12 +2694,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2733,12 +2733,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 7.3656,
+          "gwp_kgco2e_m2": 80.35199999999999,
           "thermalResistance_m2K_W": 6,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 3.6828,
+          "baseGwp_kgco2e_m2": 40.175999999999995,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2772,12 +2772,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 21.978,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -2850,12 +2850,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -2902,7 +2902,7 @@
     "thickness_mm": 667.3,
     "weight_kg_m2": 986.9937388535031,
     "uValue_W_m2K": 0.17301785067437617,
-    "gwp_kgco2e_m2": 116.65265653503184,
+    "gwp_kgco2e_m2": 205.36792853503184,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -2961,11 +2961,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.126,
+          "gwp_kgco2e_m2": 15.6,
           "thermalResistance_m2K_W": 0.0846153846153846,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.563,
+          "baseGwp_kgco2e_m2": 7.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3037,11 +3037,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3075,11 +3075,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3113,11 +3113,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 10.8528,
+          "gwp_kgco2e_m2": 50.347199999999994,
           "thermalResistance_m2K_W": 5.333333333333333,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 5.4264,
+          "baseGwp_kgco2e_m2": 25.173599999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3151,11 +3151,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 21.978,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3228,11 +3228,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -3279,7 +3279,7 @@
     "thickness_mm": 627.3,
     "weight_kg_m2": 961.1937388535032,
     "uValue_W_m2K": 0.1623191424281919,
-    "gwp_kgco2e_m2": 109.78985653503183,
+    "gwp_kgco2e_m2": 185.92072853503186,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -3338,11 +3338,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.126,
+          "gwp_kgco2e_m2": 15.6,
           "thermalResistance_m2K_W": 0.0846153846153846,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.563,
+          "baseGwp_kgco2e_m2": 7.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3414,11 +3414,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3452,11 +3452,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3490,11 +3490,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.99,
+          "gwp_kgco2e_m2": 30.900000000000002,
           "thermalResistance_m2K_W": 5.714285714285714,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 1.995,
+          "baseGwp_kgco2e_m2": 15.450000000000001,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3528,11 +3528,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 21.978,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3605,11 +3605,11 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -3656,7 +3656,7 @@
     "thickness_mm": 627.3,
     "weight_kg_m2": 952.1937388535032,
     "uValue_W_m2K": 0.15368010425308018,
-    "gwp_kgco2e_m2": 108.22385653503183,
+    "gwp_kgco2e_m2": 327.82072853503183,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -3715,12 +3715,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.126,
+          "gwp_kgco2e_m2": 15.6,
           "thermalResistance_m2K_W": 0.0846153846153846,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.563,
+          "baseGwp_kgco2e_m2": 7.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3793,12 +3793,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3832,12 +3832,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3871,12 +3871,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4240000000000004,
+          "gwp_kgco2e_m2": 172.8,
           "thermalResistance_m2K_W": 6.0606060606060606,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "baseGwp_kgco2e_m2": 86.4,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3910,12 +3910,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 21.978,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 10.989,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -3988,12 +3988,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 11.094,
+          "gwp_kgco2e_m2": 13.501999999999999,
           "thermalResistance_m2K_W": 0.04347826086956522,
           "isSupportStructure": false,
           "ecccId": "C01.01",
           "ecccDescription": "Supports de fondations, radiers, dalles de sol",
-          "baseGwp_kgco2e_m2": 11.094,
+          "baseGwp_kgco2e_m2": 13.501999999999999,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -4492,7 +4492,7 @@
     "thickness_mm": 276,
     "weight_kg_m2": 548.2196815286624,
     "uValue_W_m2K": 1.1998818682239205,
-    "gwp_kgco2e_m2": 65.4492778343949,
+    "gwp_kgco2e_m2": 102.27201783439492,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -4551,11 +4551,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 16.5427,
+          "gwp_kgco2e_m2": 37.74,
           "thermalResistance_m2K_W": 0.06071428571428572,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.27135,
+          "baseGwp_kgco2e_m2": 18.87,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4590,11 +4590,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 9.9728,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.19228,
+          "baseGwp_kgco2e_m2": 4.9864,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4629,11 +4629,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4707,11 +4707,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.1528,
+          "gwp_kgco2e_m2": 3.322,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.5764,
+          "baseGwp_kgco2e_m2": 1.661,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -4761,7 +4761,7 @@
     "thickness_mm": 316,
     "weight_kg_m2": 642.482101910828,
     "uValue_W_m2K": 1.1735944884978498,
-    "gwp_kgco2e_m2": 77.15858229299364,
+    "gwp_kgco2e_m2": 113.98132229299364,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -4820,12 +4820,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 16.5427,
+          "gwp_kgco2e_m2": 37.74,
           "thermalResistance_m2K_W": 0.06071428571428572,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.27135,
+          "baseGwp_kgco2e_m2": 18.87,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4859,12 +4859,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 9.9728,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.19228,
+          "baseGwp_kgco2e_m2": 4.9864,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4898,12 +4898,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -4976,12 +4976,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.1528,
+          "gwp_kgco2e_m2": 3.322,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.5764,
+          "baseGwp_kgco2e_m2": 1.661,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -5030,7 +5030,7 @@
     "thickness_mm": 376,
     "weight_kg_m2": 783.8757324840764,
     "uValue_W_m2K": 1.136254374848256,
-    "gwp_kgco2e_m2": 94.72253898089173,
+    "gwp_kgco2e_m2": 131.54527898089174,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -5089,12 +5089,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 16.5427,
+          "gwp_kgco2e_m2": 37.74,
           "thermalResistance_m2K_W": 0.06071428571428572,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.27135,
+          "baseGwp_kgco2e_m2": 18.87,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5128,12 +5128,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 9.9728,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.19228,
+          "baseGwp_kgco2e_m2": 4.9864,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5167,12 +5167,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5245,12 +5245,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.1528,
+          "gwp_kgco2e_m2": 3.322,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.5764,
+          "baseGwp_kgco2e_m2": 1.661,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -5299,8 +5299,8 @@
     "thickness_mm": 276,
     "weight_kg_m2": 240.27,
     "uValue_W_m2K": 0.4898510464591827,
-    "gwp_kgco2e_m2": 25.1727,
-    "spanMax_m": null,
+    "gwp_kgco2e_m2": 78.8336,
+    "spanMax_m": 4.922106034509694,
     "claddingId": null,
     "sheathingId": null,
     "ballastInConstructionId": null,
@@ -5358,12 +5358,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 16.5427,
+          "gwp_kgco2e_m2": 37.74,
           "thermalResistance_m2K_W": 0.06071428571428572,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.27135,
+          "baseGwp_kgco2e_m2": 18.87,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5397,12 +5397,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.38456,
+          "gwp_kgco2e_m2": 9.9728,
           "thermalResistance_m2K_W": 0.0030303030303030303,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.19228,
+          "baseGwp_kgco2e_m2": 4.9864,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5436,12 +5436,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5475,12 +5475,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.8432,
+          "gwp_kgco2e_m2": 25.192000000000004,
           "thermalResistance_m2K_W": 1.2307692307692308,
           "isSupportStructure": true,
           "ecccId": "C04.01",
           "ecccDescription": "Plancher",
-          "baseGwp_kgco2e_m2": 6.8432,
+          "baseGwp_kgco2e_m2": 25.192000000000004,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 12.5,
@@ -5514,12 +5514,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8702400000000001,
+          "gwp_kgco2e_m2": 1.5288000000000002,
           "thermalResistance_m2K_W": 0.07692307692307693,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.43512000000000006,
+          "baseGwp_kgco2e_m2": 0.7644000000000001,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -5763,7 +5763,7 @@
     "thickness_mm": 395.8,
     "weight_kg_m2": 555.0768917197452,
     "uValue_W_m2K": 0.24359155041411726,
-    "gwp_kgco2e_m2": 69.06815806369428,
+    "gwp_kgco2e_m2": 126.17411006369427,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -5822,12 +5822,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5861,12 +5861,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.307648,
+          "gwp_kgco2e_m2": 7.9782399999999996,
           "thermalResistance_m2K_W": 0.0024242424242424242,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.153824,
+          "baseGwp_kgco2e_m2": 3.9891199999999998,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5900,12 +5900,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5978,12 +5978,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8726400000000001,
+          "gwp_kgco2e_m2": 32.832,
           "thermalResistance_m2K_W": 3.1578947368421053,
           "isSupportStructure": false,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.43632000000000004,
+          "baseGwp_kgco2e_m2": 16.416,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -6017,12 +6017,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.04,
+          "gwp_kgco2e_m2": 6.408,
           "thermalResistance_m2K_W": 0.13636363636363635,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 1.02,
+          "baseGwp_kgco2e_m2": 3.204,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -6071,8 +6071,8 @@
     "thickness_mm": 335.8,
     "weight_kg_m2": 208.73600000000002,
     "uValue_W_m2K": 0.22131997503056688,
-    "gwp_kgco2e_m2": 23.623648000000003,
-    "spanMax_m": null,
+    "gwp_kgco2e_m2": 73.67584000000001,
+    "spanMax_m": 5.0933678078642854,
     "claddingId": null,
     "sheathingId": null,
     "ballastInConstructionId": null,
@@ -6130,12 +6130,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6169,12 +6169,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.307648,
+          "gwp_kgco2e_m2": 7.9782399999999996,
           "thermalResistance_m2K_W": 0.0024242424242424242,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.153824,
+          "baseGwp_kgco2e_m2": 3.9891199999999998,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6208,12 +6208,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6247,12 +6247,12 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.8432,
+          "gwp_kgco2e_m2": 25.192000000000004,
           "thermalResistance_m2K_W": 1.2307692307692308,
           "ecccId": "C04.01",
           "ecccDescription": "Plancher",
           "isSupportStructure": true,
-          "baseGwp_kgco2e_m2": 6.8432,
+          "baseGwp_kgco2e_m2": 25.192000000000004,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 0,
@@ -6286,12 +6286,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2768,
+          "gwp_kgco2e_m2": 7.833599999999999,
           "thermalResistance_m2K_W": 2.4242424242424243,
           "isSupportStructure": false,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.6384,
+          "baseGwp_kgco2e_m2": 3.9167999999999994,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -6325,12 +6325,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.04,
+          "gwp_kgco2e_m2": 6.408,
           "thermalResistance_m2K_W": 0.13636363636363635,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 1.02,
+          "baseGwp_kgco2e_m2": 3.204,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -6574,7 +6574,7 @@
     "thickness_mm": 463.3,
     "weight_kg_m2": 714.2305222929937,
     "uValue_W_m2K": 0.251867259247097,
-    "gwp_kgco2e_m2": 88.85577475159235,
+    "gwp_kgco2e_m2": 144.13776675159235,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -6633,12 +6633,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6711,12 +6711,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6750,12 +6750,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6789,12 +6789,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 4.4,
           "thermalResistance_m2K_W": 0.5,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 2.2,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6828,12 +6828,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.192,
+          "gwp_kgco2e_m2": 26.400000000000002,
           "thermalResistance_m2K_W": 3,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 1.596,
+          "baseGwp_kgco2e_m2": 13.200000000000001,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -6906,12 +6906,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.6785800000000001,
+          "gwp_kgco2e_m2": 2.0461,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.33929000000000004,
+          "baseGwp_kgco2e_m2": 1.02305,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -6960,7 +6960,7 @@
     "thickness_mm": 463.3,
     "weight_kg_m2": 714.2305222929937,
     "uValue_W_m2K": 0.2350657373145738,
-    "gwp_kgco2e_m2": 88.85577475159235,
+    "gwp_kgco2e_m2": 136.18576675159235,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -7019,12 +7019,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7097,12 +7097,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7136,12 +7136,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7175,12 +7175,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 3.264,
           "thermalResistance_m2K_W": 0.5405405405405406,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 1.632,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7214,12 +7214,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.192,
+          "gwp_kgco2e_m2": 19.584,
           "thermalResistance_m2K_W": 3.2432432432432434,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 1.596,
+          "baseGwp_kgco2e_m2": 9.792,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7292,12 +7292,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.6785800000000001,
+          "gwp_kgco2e_m2": 2.0461,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.33929000000000004,
+          "baseGwp_kgco2e_m2": 1.02305,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -7346,7 +7346,7 @@
     "thickness_mm": 463.3,
     "weight_kg_m2": 705.8305222929936,
     "uValue_W_m2K": 0.2151810432280767,
-    "gwp_kgco2e_m2": 87.11817475159235,
+    "gwp_kgco2e_m2": 171.32176675159232,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -7405,12 +7405,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.458,
+          "gwp_kgco2e_m2": 16.18,
           "thermalResistance_m2K_W": 0.11538461538461538,
           "isSupportStructure": false,
           "ecccId": "G02.02",
           "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.729,
+          "baseGwp_kgco2e_m2": 8.09,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7483,12 +7483,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 12.624,
+          "gwp_kgco2e_m2": 21.864,
           "thermalResistance_m2K_W": 0.054545454545454536,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 6.312,
+          "baseGwp_kgco2e_m2": 10.932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7522,12 +7522,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.11536799999999998,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7561,12 +7561,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.532,
+          "gwp_kgco2e_m2": 3.264,
           "thermalResistance_m2K_W": 0.5405405405405406,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.266,
+          "baseGwp_kgco2e_m2": 1.632,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7600,12 +7600,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.4544,
+          "gwp_kgco2e_m2": 54.71999999999999,
           "thermalResistance_m2K_W": 3.6363636363636362,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0.7272,
+          "baseGwp_kgco2e_m2": 27.359999999999996,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7678,12 +7678,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.6785800000000001,
+          "gwp_kgco2e_m2": 2.0461,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "isSupportStructure": false,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.33929000000000004,
+          "baseGwp_kgco2e_m2": 1.02305,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -7732,7 +7732,7 @@
     "thickness_mm": 451.5,
     "weight_kg_m2": 74.75182909090908,
     "uValue_W_m2K": 0.14289871106591856,
-    "gwp_kgco2e_m2": 11.784172046545454,
+    "gwp_kgco2e_m2": 57.52632063272728,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -7791,9 +7791,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 17.75466,
           "thermalResistance_m2K_W": 0.027,
-          "baseGwp_kgco2e_m2": 1.1990159999999999,
+          "baseGwp_kgco2e_m2": 8.87733,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7829,9 +7829,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.58254336,
           "thermalResistance_m2K_W": 0.18461538461538463,
-          "baseGwp_kgco2e_m2": 0.200503296,
+          "baseGwp_kgco2e_m2": 0.29127168,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7867,9 +7867,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.5688899999999999,
           "thermalResistance_m2K_W": 0.34615384615384615,
-          "baseGwp_kgco2e_m2": 0.19580399999999998,
+          "baseGwp_kgco2e_m2": 0.28444499999999995,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7905,9 +7905,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.6727,
+          "gwp_kgco2e_m2": 12.8325,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 1.33635,
+          "baseGwp_kgco2e_m2": 6.41625,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -7943,9 +7943,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.5822545454545454,
+          "gwp_kgco2e_m2": 2.2985454545454544,
           "thermalResistance_m2K_W": 1.846153846153846,
-          "baseGwp_kgco2e_m2": 1.5822545454545454,
+          "baseGwp_kgco2e_m2": 2.2985454545454544,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
@@ -7982,9 +7982,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7333527272727274,
+          "gwp_kgco2e_m2": 14.336000000000002,
           "thermalResistance_m2K_W": 6,
-          "baseGwp_kgco2e_m2": 0.8666763636363637,
+          "baseGwp_kgco2e_m2": 7.168000000000001,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8020,9 +8020,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 4.9864,
           "thermalResistance_m2K_W": 0.0015151515151515152,
-          "baseGwp_kgco2e_m2": 0.09614,
+          "baseGwp_kgco2e_m2": 2.4932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8058,9 +8058,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.2373381818181818,
+          "gwp_kgco2e_m2": 0.34478181818181813,
           "thermalResistance_m2K_W": 0.23076923076923075,
-          "baseGwp_kgco2e_m2": 0.1186690909090909,
+          "baseGwp_kgco2e_m2": 0.17239090909090907,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8096,9 +8096,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 3.822,
           "thermalResistance_m2K_W": 0.19230769230769232,
-          "baseGwp_kgco2e_m2": 1.0878,
+          "baseGwp_kgco2e_m2": 1.911,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -8146,7 +8146,7 @@
     "thickness_mm": 391.5,
     "weight_kg_m2": 68.53698060606061,
     "uValue_W_m2K": 0.16439022295086111,
-    "gwp_kgco2e_m2": 10.597852652606061,
+    "gwp_kgco2e_m2": 50.55242669333333,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -8205,9 +8205,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 17.75466,
           "thermalResistance_m2K_W": 0.027,
-          "baseGwp_kgco2e_m2": 1.1990159999999999,
+          "baseGwp_kgco2e_m2": 8.87733,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8243,9 +8243,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.58254336,
           "thermalResistance_m2K_W": 0.18461538461538463,
-          "baseGwp_kgco2e_m2": 0.200503296,
+          "baseGwp_kgco2e_m2": 0.29127168,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8281,9 +8281,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.5688899999999999,
           "thermalResistance_m2K_W": 0.34615384615384615,
-          "baseGwp_kgco2e_m2": 0.19580399999999998,
+          "baseGwp_kgco2e_m2": 0.28444499999999995,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8319,9 +8319,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1744,
+          "gwp_kgco2e_m2": 10.44,
           "thermalResistance_m2K_W": 0.8695652173913044,
-          "baseGwp_kgco2e_m2": 1.0872,
+          "baseGwp_kgco2e_m2": 5.22,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8357,9 +8357,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.3185454545454547,
+          "gwp_kgco2e_m2": 1.9154545454545457,
           "thermalResistance_m2K_W": 1.5384615384615385,
-          "baseGwp_kgco2e_m2": 1.3185454545454547,
+          "baseGwp_kgco2e_m2": 1.9154545454545457,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
@@ -8396,9 +8396,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.3090424242424246,
+          "gwp_kgco2e_m2": 10.137696969696972,
           "thermalResistance_m2K_W": 6.25,
-          "baseGwp_kgco2e_m2": 0.6545212121212123,
+          "baseGwp_kgco2e_m2": 5.068848484848486,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8434,9 +8434,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 4.9864,
           "thermalResistance_m2K_W": 0.0015151515151515152,
-          "baseGwp_kgco2e_m2": 0.09614,
+          "baseGwp_kgco2e_m2": 2.4932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8472,9 +8472,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.2373381818181818,
+          "gwp_kgco2e_m2": 0.34478181818181813,
           "thermalResistance_m2K_W": 0.23076923076923075,
-          "baseGwp_kgco2e_m2": 0.1186690909090909,
+          "baseGwp_kgco2e_m2": 0.17239090909090907,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8510,9 +8510,9 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 3.822,
           "thermalResistance_m2K_W": 0.19230769230769232,
-          "baseGwp_kgco2e_m2": 1.0878,
+          "baseGwp_kgco2e_m2": 1.911,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -8560,7 +8560,7 @@
     "thickness_mm": 401.5,
     "weight_kg_m2": 69.47492,
     "uValue_W_m2K": 0.13121182660104502,
-    "gwp_kgco2e_m2": 11.952665791999998,
+    "gwp_kgco2e_m2": 59.35173336000001,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -8619,9 +8619,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.3980319999999997,
+          "gwp_kgco2e_m2": 17.75466,
           "thermalResistance_m2K_W": 0.027,
-          "baseGwp_kgco2e_m2": 1.1990159999999999,
+          "baseGwp_kgco2e_m2": 8.87733,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8657,9 +8657,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.401006592,
+          "gwp_kgco2e_m2": 0.58254336,
           "thermalResistance_m2K_W": 0.18461538461538463,
-          "baseGwp_kgco2e_m2": 0.200503296,
+          "baseGwp_kgco2e_m2": 0.29127168,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8695,9 +8695,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39160799999999996,
+          "gwp_kgco2e_m2": 0.5688899999999999,
           "thermalResistance_m2K_W": 0.34615384615384615,
-          "baseGwp_kgco2e_m2": 0.19580399999999998,
+          "baseGwp_kgco2e_m2": 0.28444499999999995,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8733,9 +8733,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7818,
+          "gwp_kgco2e_m2": 8.555,
           "thermalResistance_m2K_W": 1.0526315789473684,
-          "baseGwp_kgco2e_m2": 0.8909,
+          "baseGwp_kgco2e_m2": 4.2775,
           "serviceLife_years": 40,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -8771,9 +8771,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.696192,
+          "gwp_kgco2e_m2": 1.01136,
           "thermalResistance_m2K_W": 1.2307692307692308,
-          "baseGwp_kgco2e_m2": 0.696192,
+          "baseGwp_kgco2e_m2": 1.01136,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 31.25,
@@ -8810,9 +8810,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.2982400000000003,
+          "gwp_kgco2e_m2": 14.10048,
           "thermalResistance_m2K_W": 4.848484848484849,
-          "baseGwp_kgco2e_m2": 1.1491200000000001,
+          "baseGwp_kgco2e_m2": 7.05024,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8848,9 +8848,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.4177152,
+          "gwp_kgco2e_m2": 0.606816,
           "thermalResistance_m2K_W": 0.6153846153846154,
-          "baseGwp_kgco2e_m2": 0.2088576,
+          "baseGwp_kgco2e_m2": 0.303408,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8886,9 +8886,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2001920000000001,
+          "gwp_kgco2e_m2": 7.363584,
           "thermalResistance_m2K_W": 2.4242424242424243,
-          "baseGwp_kgco2e_m2": 0.6000960000000001,
+          "baseGwp_kgco2e_m2": 3.681792,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8924,9 +8924,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19228,
+          "gwp_kgco2e_m2": 4.9864,
           "thermalResistance_m2K_W": 0.0015151515151515152,
-          "baseGwp_kgco2e_m2": 0.09614,
+          "baseGwp_kgco2e_m2": 2.4932,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 31.25,
@@ -8962,9 +8962,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.1756,
+          "gwp_kgco2e_m2": 3.822,
           "thermalResistance_m2K_W": 0.19230769230769232,
-          "baseGwp_kgco2e_m2": 1.0878,
+          "baseGwp_kgco2e_m2": 1.911,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -9012,7 +9012,7 @@
     "thickness_mm": 500,
     "weight_kg_m2": 575.3008917197453,
     "uValue_W_m2K": 0.14229679346757904,
-    "gwp_kgco2e_m2": 74.94499006369426,
+    "gwp_kgco2e_m2": 287.07047006369424,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9071,11 +9071,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 2.0416000000000003,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
+          "baseGwp_kgco2e_m2": 1.0208000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9109,11 +9109,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 2.0724,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
+          "baseGwp_kgco2e_m2": 1.0362,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9147,11 +9147,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9185,11 +9185,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9223,11 +9223,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 41.44,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
+          "baseGwp_kgco2e_m2": 20.72,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9261,11 +9261,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.6664,
+          "gwp_kgco2e_m2": 100.32,
           "thermalResistance_m2K_W": 6.666666666666666,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 1.3332,
+          "baseGwp_kgco2e_m2": 50.16,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9299,11 +9299,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 24.024000000000004,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 12.012000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9376,11 +9376,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
+          "baseGwp_kgco2e_m2": 1.1627,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -9426,7 +9426,7 @@
     "thickness_mm": 460,
     "weight_kg_m2": 574.1008917197453,
     "uValue_W_m2K": 0.15721049281934624,
-    "gwp_kgco2e_m2": 79.64419006369427,
+    "gwp_kgco2e_m2": 267.1024700636943,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9485,11 +9485,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 2.0416000000000003,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
+          "baseGwp_kgco2e_m2": 1.0208000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9523,11 +9523,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 2.0724,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
+          "baseGwp_kgco2e_m2": 1.0362,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9561,11 +9561,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9599,11 +9599,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9637,11 +9637,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 41.44,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
+          "baseGwp_kgco2e_m2": 20.72,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9675,11 +9675,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 7.3656,
+          "gwp_kgco2e_m2": 80.35199999999999,
           "thermalResistance_m2K_W": 6,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.6828,
+          "baseGwp_kgco2e_m2": 40.175999999999995,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9713,11 +9713,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 24.024000000000004,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 12.012000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9790,11 +9790,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
+          "baseGwp_kgco2e_m2": 1.1627,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -9840,7 +9840,7 @@
     "thickness_mm": 540,
     "weight_kg_m2": 611.6008917197453,
     "uValue_W_m2K": 0.17982705244963187,
-    "gwp_kgco2e_m2": 76.79167006369427,
+    "gwp_kgco2e_m2": 288.8524700636943,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -9899,11 +9899,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 2.0416000000000003,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
+          "baseGwp_kgco2e_m2": 1.0208000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9937,11 +9937,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 2.0724,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
+          "baseGwp_kgco2e_m2": 1.0362,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -9975,11 +9975,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10013,11 +10013,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10051,11 +10051,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 41.44,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
+          "baseGwp_kgco2e_m2": 20.72,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10089,11 +10089,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 4.5130799999999995,
+          "gwp_kgco2e_m2": 102.10199999999999,
           "thermalResistance_m2K_W": 5.2,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 2.2565399999999998,
+          "baseGwp_kgco2e_m2": 51.050999999999995,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10127,11 +10127,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 24.024000000000004,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 12.012000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10204,11 +10204,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
+          "baseGwp_kgco2e_m2": 1.1627,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -10254,7 +10254,7 @@
     "thickness_mm": 500,
     "weight_kg_m2": 595.1008917197453,
     "uValue_W_m2K": 0.16259178430110488,
-    "gwp_kgco2e_m2": 79.30099006369427,
+    "gwp_kgco2e_m2": 219.32807006369427,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -10313,11 +10313,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 2.0416000000000003,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
+          "baseGwp_kgco2e_m2": 1.0208000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10351,11 +10351,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 2.0724,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
+          "baseGwp_kgco2e_m2": 1.0362,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10389,11 +10389,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10427,11 +10427,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10465,11 +10465,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 41.44,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
+          "baseGwp_kgco2e_m2": 20.72,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10503,11 +10503,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 7.0224,
+          "gwp_kgco2e_m2": 32.5776,
           "thermalResistance_m2K_W": 5.7894736842105265,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.5112,
+          "baseGwp_kgco2e_m2": 16.2888,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10541,11 +10541,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 24.024000000000004,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 12.012000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10618,11 +10618,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
+          "baseGwp_kgco2e_m2": 1.1627,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -10668,7 +10668,7 @@
     "thickness_mm": 440,
     "weight_kg_m2": 572.3808917197453,
     "uValue_W_m2K": 0.17012184253894483,
-    "gwp_kgco2e_m2": 73.76531006369427,
+    "gwp_kgco2e_m2": 186.75047006369428,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -10727,11 +10727,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.1016,
+          "gwp_kgco2e_m2": 2.0416000000000003,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 3.0508,
+          "baseGwp_kgco2e_m2": 1.0208000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10765,11 +10765,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 6.9432,
+          "gwp_kgco2e_m2": 2.0724,
           "thermalResistance_m2K_W": 0.024999999999999998,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 3.4716,
+          "baseGwp_kgco2e_m2": 1.0362,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10803,11 +10803,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10841,11 +10841,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.15368,
+          "gwp_kgco2e_m2": 31.0776,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.57684,
+          "baseGwp_kgco2e_m2": 15.5388,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10879,11 +10879,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.672,
+          "gwp_kgco2e_m2": 41.44,
           "thermalResistance_m2K_W": 0.012121212121212121,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.836,
+          "baseGwp_kgco2e_m2": 20.72,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10917,11 +10917,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.4867200000000003,
+          "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": 5.517241379310344,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.7433600000000001,
+          "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -10955,11 +10955,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7556000000000003,
+          "gwp_kgco2e_m2": 24.024000000000004,
           "thermalResistance_m2K_W": 0.00909090909090909,
           "ecccId": "F01.02",
           "ecccDescription": "Toitures plates",
-          "baseGwp_kgco2e_m2": 0.8778000000000001,
+          "baseGwp_kgco2e_m2": 12.012000000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -11032,11 +11032,11 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.80696,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
-          "baseGwp_kgco2e_m2": 0.40348,
+          "baseGwp_kgco2e_m2": 1.1627,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -11082,7 +11082,7 @@
     "thickness_mm": 322,
     "weight_kg_m2": 599.8850955414013,
     "uValue_W_m2K": 0.5252659007311808,
-    "gwp_kgco2e_m2": 70.78587464968155,
+    "gwp_kgco2e_m2": 88.26211464968155,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -11141,13 +11141,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -11177,13 +11179,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.01",
           "ecccDescription": "Etanchéités contre terre"
         },
@@ -11218,7 +11220,7 @@
           "gwp_kgco2e_m2": 69.40611464968154,
           "thermalResistance_m2K_W": 0.12378969943545588,
           "baseGwp_kgco2e_m2": 69.40611464968154,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -11254,11 +11256,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5764,
+          "gwp_kgco2e_m2": 3.322,
           "thermalResistance_m2K_W": 0.024999999999999998,
-          "baseGwp_kgco2e_m2": 0.5764,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 1.661,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G03.02",
@@ -11272,7 +11274,9 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -11305,7 +11309,7 @@
     "thickness_mm": 527,
     "weight_kg_m2": 611.3850955414013,
     "uValue_W_m2K": 0.12536192403477409,
-    "gwp_kgco2e_m2": 72.28607464968154,
+    "gwp_kgco2e_m2": 176.32311464968154,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -11364,13 +11368,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -11400,13 +11406,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2120000000000002,
+          "gwp_kgco2e_m2": 86.4,
           "thermalResistance_m2K_W": 6.0606060606060606,
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.02",
           "ecccDescription": "Isolations thermiques contre terre"
         },
@@ -11438,13 +11444,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.01",
           "ecccDescription": "Etanchéités contre terre"
         },
@@ -11479,7 +11485,7 @@
           "gwp_kgco2e_m2": 69.40611464968154,
           "thermalResistance_m2K_W": 0.12378969943545588,
           "baseGwp_kgco2e_m2": 69.40611464968154,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -11515,11 +11521,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8646,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
-          "baseGwp_kgco2e_m2": 0.8646,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G03.02",
@@ -11533,7 +11539,9 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -11566,7 +11574,7 @@
     "thickness_mm": 507,
     "weight_kg_m2": 610.7850955414012,
     "uValue_W_m2K": 0.126321677277856,
-    "gwp_kgco2e_m2": 74.75687464968154,
+    "gwp_kgco2e_m2": 130.09911464968152,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -11625,13 +11633,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -11661,13 +11671,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.6828,
+          "gwp_kgco2e_m2": 40.175999999999995,
           "thermalResistance_m2K_W": 6,
-          "baseGwp_kgco2e_m2": 3.6828,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 40.175999999999995,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.02",
           "ecccDescription": "Isolations thermiques contre terre"
         },
@@ -11699,13 +11709,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.01",
           "ecccDescription": "Etanchéités contre terre"
         },
@@ -11740,7 +11750,7 @@
           "gwp_kgco2e_m2": 69.40611464968154,
           "thermalResistance_m2K_W": 0.12378969943545588,
           "baseGwp_kgco2e_m2": 69.40611464968154,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -11776,11 +11786,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.8646,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
-          "baseGwp_kgco2e_m2": 0.8646,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G03.02",
@@ -11794,7 +11804,9 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -11827,7 +11839,7 @@
     "thickness_mm": 525,
     "weight_kg_m2": 602.5850955414013,
     "uValue_W_m2K": 0.1256770263112811,
-    "gwp_kgco2e_m2": 71.82495464968154,
+    "gwp_kgco2e_m2": 260.0655146496816,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -11886,13 +11898,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -11922,13 +11936,13 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E01.01",
           "ecccDescription": "Etanchéités contre terre"
         },
@@ -11963,7 +11977,7 @@
           "gwp_kgco2e_m2": 69.40611464968154,
           "thermalResistance_m2K_W": 0.12378969943545588,
           "baseGwp_kgco2e_m2": 69.40611464968154,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -12002,8 +12016,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G03.01",
@@ -12037,11 +12051,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2120000000000002,
+          "gwp_kgco2e_m2": 172.8,
           "thermalResistance_m2K_W": 6.0606060606060606,
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 86.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G03.01",
@@ -12078,8 +12092,8 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G03.01",
@@ -12113,11 +12127,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.40348,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
-          "baseGwp_kgco2e_m2": 0.40348,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 1.1627,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G03.02",
@@ -12131,7 +12145,9 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -12163,8 +12179,8 @@
     "categoryId": "outer_wall",
     "thickness_mm": 627.3,
     "weight_kg_m2": 670.3041864504922,
-    "uValue_W_m2K": 0.1425695698537318,
-    "gwp_kgco2e_m2": 75.51049395877244,
+    "uValue_W_m2K": 0.1435333131527523,
+    "gwp_kgco2e_m2": 123.58493319513609,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -12223,13 +12239,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -12259,13 +12278,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
-          "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 2,
@@ -12298,10 +12320,13 @@
           "gwp_kgco2e_m2": 69.40611464968154,
           "thermalResistance_m2K_W": 0.12378969943545588,
           "baseGwp_kgco2e_m2": 69.40611464968154,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 3,
@@ -12331,13 +12356,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.3132864,
+          "gwp_kgco2e_m2": 0.910224,
           "thermalResistance_m2K_W": 0.923076923076923,
-          "baseGwp_kgco2e_m2": 0.3132864,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 0.455112,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 4,
@@ -12367,13 +12395,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.300048,
+          "gwp_kgco2e_m2": 4.9632,
           "thermalResistance_m2K_W": 3,
-          "baseGwp_kgco2e_m2": 0.300048,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.4816,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 5,
@@ -12403,13 +12434,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.39556363636363645,
+          "gwp_kgco2e_m2": 1.1492727272727274,
           "thermalResistance_m2K_W": 0.7692307692307693,
-          "baseGwp_kgco2e_m2": 0.39556363636363645,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 0.5746363636363637,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 6,
@@ -12439,13 +12473,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.24181818181818185,
+          "gwp_kgco2e_m2": 4.000000000000001,
           "thermalResistance_m2K_W": 2.5,
-          "baseGwp_kgco2e_m2": 0.24181818181818185,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.0000000000000004,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 7,
@@ -12475,13 +12512,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.05768399999999999,
+          "gwp_kgco2e_m2": 2.9918399999999994,
           "thermalResistance_m2K_W": 0.000909090909090909,
-          "baseGwp_kgco2e_m2": 0.05768399999999999,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 1.4959199999999997,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 8,
@@ -12511,13 +12551,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.1186690909090909,
+          "gwp_kgco2e_m2": 0.34478181818181813,
           "thermalResistance_m2K_W": 0.23076923076923075,
-          "baseGwp_kgco2e_m2": 0.1186690909090909,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 0.17239090909090907,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 30,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 9,
@@ -12547,13 +12590,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.9919499999999999,
+          "gwp_kgco2e_m2": 7.6754999999999995,
           "thermalResistance_m2K_W": 0.06,
-          "baseGwp_kgco2e_m2": 0.9919499999999999,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 3.8377499999999998,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         },
         {
           "order": 10,
@@ -12583,23 +12629,28 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.882,
+          "gwp_kgco2e_m2": 16.61,
           "thermalResistance_m2K_W": 0.125,
-          "baseGwp_kgco2e_m2": 2.882,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 8.305,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         }
       ],
-      "systemTypeId": null
+      "systemTypeId": "concrete"
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -12632,7 +12683,7 @@
     "thickness_mm": 427,
     "weight_kg_m2": 139.5,
     "uValue_W_m2K": 0.16551398002009812,
-    "gwp_kgco2e_m2": 55.7925,
+    "gwp_kgco2e_m2": 60.464999999999996,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -12673,16 +12724,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit d'isolation thermique EPS"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12691,8 +12742,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.181,
-          "thermalResistance_m2K_W": 0.12
+          "gwp_kgco2e_m2": 4.362,
+          "thermalResistance_m2K_W": 0.12,
+          "baseGwp_kgco2e_m2": 2.181,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d'isolation thermique extérieure"
         },
         {
           "order": 1,
@@ -12704,16 +12762,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie Ytong Thermobloc PL-07, 40 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12726,7 +12784,12 @@
           "thermalResistance_m2K_W": 5.714285714285714,
           "isSupportStructure": true,
           "ecccId": "C02.01",
-          "ecccDescription": "Parois porteuses extérieures"
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 51.12,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 2,
@@ -12738,16 +12801,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12756,10 +12819,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
       "systemTypeId": "masonry"
@@ -12767,7 +12835,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable : catégorie du matériau porteur inconnue."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -12788,7 +12861,8 @@
       "externalId": "FLEX E4-001-001",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "9DFAB987-28AE-4ADA-ACBB-8A61BD4F4350",
@@ -12798,7 +12872,7 @@
     "thickness_mm": 400,
     "weight_kg_m2": 179.2,
     "uValue_W_m2K": 0.16221530394887756,
-    "gwp_kgco2e_m2": 75.48519999999999,
+    "gwp_kgco2e_m2": 107.8784,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -12839,16 +12913,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Crépi synthétique (enduit de dispersion)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12858,7 +12932,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.01",
+          "ecccDescription": "Crépis"
         },
         {
           "order": 1,
@@ -12870,16 +12951,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Treillis d’armature 3mm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12889,7 +12970,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.01",
+          "ecccDescription": "Crépis"
         },
         {
           "order": 2,
@@ -12901,16 +12989,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Polystyrène expansé (EPS), ρ 20 [kg/m3]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12919,10 +13007,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 30.4,
+          "gwp_kgco2e_m2": 60.8,
           "thermalResistance_m2K_W": 5.555555555555556,
           "ecccId": "E02.02",
-          "ecccDescription": "Systèmes d ' isolation thermique extérieure"
+          "ecccDescription": "Systèmes d ' isolation thermique extérieure",
+          "baseGwp_kgco2e_m2": 30.4,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 3,
@@ -12934,16 +13027,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Colle de construction/mortier d'enrobage biologique"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12953,7 +13046,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null
+          "thermalResistance_m2K_W": null,
+          "baseGwp_kgco2e_m2": 0,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.02",
+          "ecccDescription": "Systèmes d'isolation thermique extérieure"
         },
         {
           "order": 4,
@@ -12965,16 +13065,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en briques de terre cuite 18 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -12987,7 +13087,12 @@
           "thermalResistance_m2K_W": 0.40909090909090906,
           "isSupportStructure": true,
           "ecccId": "C02.01",
-          "ecccDescription": "Parois porteuses extérieures"
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 43.092,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 5,
@@ -12999,16 +13104,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13017,10 +13122,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.9932,
+          "gwp_kgco2e_m2": 3.9864,
           "thermalResistance_m2K_W": 0.03,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 1.9932,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
       "systemTypeId": "masonry"
@@ -13028,7 +13138,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -13049,7 +13164,8 @@
       "externalId": "FLEX E4-002-001",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "19252197-2F93-4910-A759-BFF6B83B3CA3",
@@ -13058,8 +13174,8 @@
     "categoryId": "outer_wall",
     "thickness_mm": 514.5,
     "weight_kg_m2": 221.3308181818182,
-    "uValue_W_m2K": 0.12418277562581087,
-    "gwp_kgco2e_m2": 13.388567054545454,
+    "uValue_W_m2K": 0.12607142746631023,
+    "gwp_kgco2e_m2": 80.0539290909091,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -13118,13 +13234,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.044288,
+          "gwp_kgco2e_m2": 3.66912,
           "thermalResistance_m2K_W": 0.18461538461538463,
-          "baseGwp_kgco2e_m2": 1.044288,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 30
+          "baseGwp_kgco2e_m2": 1.83456,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 1,
@@ -13154,13 +13273,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.15822545454545456,
+          "gwp_kgco2e_m2": 0.4597090909090909,
           "thermalResistance_m2K_W": 0.3076923076923077,
-          "baseGwp_kgco2e_m2": 0.15822545454545456,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "baseGwp_kgco2e_m2": 0.22985454545454545,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 2,
@@ -13190,13 +13312,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.0559,
+          "gwp_kgco2e_m2": 1.0855,
           "thermalResistance_m2K_W": 0.0015151515151515152,
-          "baseGwp_kgco2e_m2": 0.0559,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "baseGwp_kgco2e_m2": 0.54275,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 3,
@@ -13226,13 +13351,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.2088576,
+          "gwp_kgco2e_m2": 0.606816,
           "thermalResistance_m2K_W": 0.6153846153846154,
-          "baseGwp_kgco2e_m2": 0.2088576,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "baseGwp_kgco2e_m2": 0.303408,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 4,
@@ -13262,13 +13390,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.6000960000000001,
+          "gwp_kgco2e_m2": 7.363584,
           "thermalResistance_m2K_W": 2.4242424242424243,
-          "baseGwp_kgco2e_m2": 0.6000960000000001,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "baseGwp_kgco2e_m2": 3.681792,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 5,
@@ -13298,13 +13429,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2768,
+          "gwp_kgco2e_m2": 15.667199999999998,
           "thermalResistance_m2K_W": 4.848484848484849,
-          "baseGwp_kgco2e_m2": 1.2768,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "baseGwp_kgco2e_m2": 7.833599999999999,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 6,
@@ -13334,13 +13468,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 9.468,
+          "gwp_kgco2e_m2": 47.88,
           "thermalResistance_m2K_W": 0.4545454545454546,
-          "baseGwp_kgco2e_m2": 9.468,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 47.88,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "isSupportStructure": true,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 7,
@@ -13370,23 +13507,28 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5764,
+          "gwp_kgco2e_m2": 3.322,
           "thermalResistance_m2K_W": 0.024999999999999998,
-          "baseGwp_kgco2e_m2": 0.5764,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 1.661,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois"
         }
       ],
-      "systemTypeId": null
+      "systemTypeId": "masonry"
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -13418,8 +13560,8 @@
     "categoryId": "outer_wall",
     "thickness_mm": 454.5,
     "weight_kg_m2": 213.87641818181817,
-    "uValue_W_m2K": 0.1492777081522215,
-    "gwp_kgco2e_m2": 59.30890054545455,
+    "uValue_W_m2K": 0.1520152193391967,
+    "gwp_kgco2e_m2": 70.7378010909091,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -13460,16 +13602,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Lambris façade [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13478,8 +13620,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.83456,
-          "thermalResistance_m2K_W": 0.18461538461538463
+          "gwp_kgco2e_m2": 3.66912,
+          "thermalResistance_m2K_W": 0.18461538461538463,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 1.83456,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 1,
@@ -13491,16 +13641,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Latte de bois 40/60mm [m1]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13509,8 +13659,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.22985454545454545,
-          "thermalResistance_m2K_W": 0.3076923076923077
+          "gwp_kgco2e_m2": 0.4597090909090909,
+          "thermalResistance_m2K_W": 0.3076923076923077,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 0.22985454545454545,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 2,
@@ -13522,16 +13680,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Papier Kraft"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13540,8 +13698,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.54275,
-          "thermalResistance_m2K_W": 0.0015151515151515152
+          "gwp_kgco2e_m2": 1.0855,
+          "thermalResistance_m2K_W": 0.0015151515151515152,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 0.54275,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 3,
@@ -13553,16 +13719,16 @@
           "fiberDirection": "lengthwise",
           "translations": {
             "fr": {
-              "name": null,
               "description": "Latte de bois 80/60mm [m1]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13571,8 +13737,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.303408,
-          "thermalResistance_m2K_W": 0.6153846153846154
+          "gwp_kgco2e_m2": 0.606816,
+          "thermalResistance_m2K_W": 0.6153846153846154,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 0.303408,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 4,
@@ -13584,16 +13758,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "ISOVER PB F 030 / PB F MARMOR 030 (30-300 mm), λ 0.03 (valeur déclarée contrôlée)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "in-lying",
@@ -13602,8 +13776,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.943328,
-          "thermalResistance_m2K_W": 2.666666666666667
+          "gwp_kgco2e_m2": 5.886656,
+          "thermalResistance_m2K_W": 2.666666666666667,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 2.943328,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 5,
@@ -13615,16 +13797,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "ISOVER PB F 030 / PB F MARMOR 030 (30-300 mm), λ 0.03 (valeur déclarée contrôlée)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13633,8 +13815,16 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 3.9140000000000006,
-          "thermalResistance_m2K_W": 3.3333333333333335
+          "gwp_kgco2e_m2": 7.828000000000001,
+          "thermalResistance_m2K_W": 3.3333333333333335,
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages",
+          "baseGwp_kgco2e_m2": 3.9140000000000006,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 6,
@@ -13646,16 +13836,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en briques de terre cuite 20 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13665,7 +13855,15 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 47.88,
-          "thermalResistance_m2K_W": 0.4545454545454546
+          "thermalResistance_m2K_W": 0.4545454545454546,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures",
+          "isSupportStructure": true,
+          "baseGwp_kgco2e_m2": 47.88,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 7,
@@ -13677,16 +13875,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13695,16 +13893,29 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.661,
-          "thermalResistance_m2K_W": 0.024999999999999998
+          "gwp_kgco2e_m2": 3.322,
+          "thermalResistance_m2K_W": 0.024999999999999998,
+          "isSupportStructure": false,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 1.661,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
-      "systemTypeId": null
+      "systemTypeId": "masonry"
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -13725,7 +13936,8 @@
       "externalId": "FLEX E4-003-002",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "E9A3A5F9-8DA1-4986-AEC5-229ED226E618",
@@ -13735,7 +13947,7 @@
     "thickness_mm": 480,
     "weight_kg_m2": 366.84000000000003,
     "uValue_W_m2K": 0.17010371908585822,
-    "gwp_kgco2e_m2": 76.21728000000002,
+    "gwp_kgco2e_m2": 81.20028,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -13776,16 +13988,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit extérieur"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13794,8 +14006,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
-          "thermalResistance_m2K_W": 0.0375
+          "gwp_kgco2e_m2": 4.983,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.01",
+          "ecccDescription": "Crépis"
         },
         {
           "order": 1,
@@ -13807,16 +14026,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en grès 12 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13826,7 +14045,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 31.104,
-          "thermalResistance_m2K_W": 0.15
+          "thermalResistance_m2K_W": 0.15,
+          "baseGwp_kgco2e_m2": 31.104,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 2,
@@ -13838,16 +14064,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Panneau isolant Flumroc 1 (10-480 mm), λ 0.035 (valeur déclarée contrôlée)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13858,8 +14084,13 @@
           "colorCode": null,
           "gwp_kgco2e_m2": 4.22028,
           "thermalResistance_m2K_W": 5.142857142857142,
-          "ecccId": "E02.02",
-          "ecccDescription": "Systèmes d ' isolation thermique extérieure"
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 4.22028,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 3,
@@ -13871,16 +14102,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en briques de terre cuite 15 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13893,7 +14124,12 @@
           "thermalResistance_m2K_W": 0.3409090909090909,
           "isSupportStructure": true,
           "ecccId": "C02.01",
-          "ecccDescription": "Parois porteuses extérieures"
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 35.910000000000004,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 4,
@@ -13905,16 +14141,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -13923,10 +14159,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
       "systemTypeId": "masonry"
@@ -13934,7 +14175,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -13955,7 +14201,8 @@
       "externalId": "FLEX E4-004-001",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "DC361553-4429-4B1F-A5C4-6209D1A1492D",
@@ -13965,7 +14212,7 @@
     "thickness_mm": 460,
     "weight_kg_m2": 366.08000000000004,
     "uValue_W_m2K": 0.16476520957635368,
-    "gwp_kgco2e_m2": 78.2594,
+    "gwp_kgco2e_m2": 83.2424,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -14006,16 +14253,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit extérieur"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14024,8 +14271,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
-          "thermalResistance_m2K_W": 0.0375
+          "gwp_kgco2e_m2": 4.983,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.01",
+          "ecccDescription": "Crépis"
         },
         {
           "order": 1,
@@ -14037,16 +14291,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en grès 12 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14056,7 +14310,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 31.104,
-          "thermalResistance_m2K_W": 0.15
+          "thermalResistance_m2K_W": 0.15,
+          "baseGwp_kgco2e_m2": 31.104,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 2,
@@ -14068,16 +14329,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "ISOVER PB F 030 / PB F MARMOR 030 (30-300 mm), λ 0.03 (valeur déclarée contrôlée)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14087,7 +14348,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 6.2624,
-          "thermalResistance_m2K_W": 5.333333333333334
+          "thermalResistance_m2K_W": 5.333333333333334,
+          "baseGwp_kgco2e_m2": 6.2624,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 3,
@@ -14099,16 +14367,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en briques de terre cuite 15 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14121,7 +14389,12 @@
           "thermalResistance_m2K_W": 0.3409090909090909,
           "isSupportStructure": true,
           "ecccId": "C02.01",
-          "ecccDescription": "Parois porteuses extérieures"
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 35.910000000000004,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 4,
@@ -14133,16 +14406,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14151,10 +14424,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
       "systemTypeId": "masonry"
@@ -14162,7 +14440,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -14183,7 +14466,8 @@
       "externalId": "FLEX E4-004-002",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "16F9D748-C2B6-4ABE-869E-D3F62C47DFE4",
@@ -14193,7 +14477,7 @@
     "thickness_mm": 480,
     "weight_kg_m2": 365.4,
     "uValue_W_m2K": 0.16153902636023204,
-    "gwp_kgco2e_m2": 113.037,
+    "gwp_kgco2e_m2": 118.01999999999998,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -14234,16 +14518,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit extérieur"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14252,8 +14536,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
-          "thermalResistance_m2K_W": 0.0375
+          "gwp_kgco2e_m2": 4.983,
+          "thermalResistance_m2K_W": 0.0375,
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "E02.01",
+          "ecccDescription": "Crépis"
         },
         {
           "order": 1,
@@ -14265,16 +14556,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en grès 12 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14284,7 +14575,14 @@
           "eccc": null,
           "colorCode": null,
           "gwp_kgco2e_m2": 31.104,
-          "thermalResistance_m2K_W": 0.15
+          "thermalResistance_m2K_W": 0.15,
+          "baseGwp_kgco2e_m2": 31.104,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 2,
@@ -14296,16 +14594,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "swissporEPS 30 (10-500 mm), λ 0.033 (valeur déclarée contrôlée)"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14316,8 +14614,13 @@
           "colorCode": null,
           "gwp_kgco2e_m2": 41.03999999999999,
           "thermalResistance_m2K_W": 5.454545454545454,
-          "ecccId": "E02.02",
-          "ecccDescription": "Systèmes d ' isolation thermique extérieure"
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 41.03999999999999,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": null,
+          "time_burning_min": null
         },
         {
           "order": 3,
@@ -14329,16 +14632,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Maçonnerie en briques de terre cuite 15 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14351,7 +14654,12 @@
           "thermalResistance_m2K_W": 0.3409090909090909,
           "isSupportStructure": true,
           "ecccId": "C02.01",
-          "ecccDescription": "Parois porteuses extérieures"
+          "ecccDescription": "Parois porteuses extérieures",
+          "baseGwp_kgco2e_m2": 35.910000000000004,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0
         },
         {
           "order": 4,
@@ -14363,16 +14671,16 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "description": ""
+            },
+            "it": {
+              "description": ""
+            },
+            "en": {
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14381,10 +14689,15 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 2.4915,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 2.4915,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15
         }
       ],
       "systemTypeId": "masonry"
@@ -14392,7 +14705,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -14413,7 +14731,8 @@
       "externalId": "FLEX E4-004-003",
       "url": null
     },
-    "_rawTaxo": {}
+    "_rawTaxo": {},
+    "subcategoryId": "above_ground"
   },
   {
     "id": "1A84C3A6-32BB-4009-B08B-C2D4B1B07555",
@@ -14484,8 +14803,8 @@
           "colorCode": null,
           "gwp_kgco2e_m2": 41.64366878980892,
           "thermalResistance_m2K_W": 0.07427381966127353,
-          "ecccId": "",
-          "ecccDescription": "",
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures",
           "baseGwp_kgco2e_m2": 41.64366878980892,
           "serviceLife_years": 60,
           "replacementFactor": 1,
@@ -14501,7 +14820,9 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "sound_insulation": {
@@ -14533,7 +14854,7 @@
     "thickness_mm": 150,
     "weight_kg_m2": 240,
     "uValue_W_m2K": 2.2346368715083798,
-    "gwp_kgco2e_m2": 38.88,
+    "gwp_kgco2e_m2": 77.76,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -14574,16 +14895,20 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
+              "name": "",
               "description": "Maçonnerie en grès 15 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "name": "",
+              "description": ""
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "",
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14592,8 +14917,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 38.88,
-          "thermalResistance_m2K_W": 0.18749999999999997
+          "gwp_kgco2e_m2": 77.76,
+          "thermalResistance_m2K_W": 0.18749999999999997,
+          "baseGwp_kgco2e_m2": 38.88,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 0,
+          "ecccId": "G01.01",
+          "ecccDescription": "Cloisons fixes"
         }
       ],
       "systemTypeId": "masonry"
@@ -14601,7 +14933,10 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": null,
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -14629,11 +14964,11 @@
     "id": "C4756832-D221-4FB4-9A97-04DFB7572254",
     "parent": null,
     "serialNo": null,
-    "categoryId": "partition_wall",
+    "categoryId": "inner_wall",
     "thickness_mm": 164,
     "weight_kg_m2": 150.39999999999998,
     "uValue_W_m2K": 1.572551822730522,
-    "gwp_kgco2e_m2": 38.235400000000006,
+    "gwp_kgco2e_m2": 40.56080000000001,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -14674,16 +15009,20 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
+              "name": "",
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "name": "",
+              "description": ""
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "",
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14692,8 +15031,16 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.1627,
-          "thermalResistance_m2K_W": 0.017499999999999998
+          "gwp_kgco2e_m2": 2.3254,
+          "thermalResistance_m2K_W": 0.017499999999999998,
+          "baseGwp_kgco2e_m2": 1.1627,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
+          "ecccId": "G03.02",
+          "ecccDescription": "Revêtements de parois",
+          "isSupportStructure": false
         },
         {
           "order": 1,
@@ -14705,16 +15052,20 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
+              "name": "",
               "description": "Maçonnerie en briques de terre cuite 15 cm [m2]"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "name": "",
+              "description": ""
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "",
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14725,8 +15076,14 @@
           "colorCode": null,
           "gwp_kgco2e_m2": 35.910000000000004,
           "thermalResistance_m2K_W": 0.3409090909090909,
-          "ecccId": "G01.01",
-          "ecccDescription": "Cloisons fixes"
+          "ecccId": "C02.02",
+          "ecccDescription": "Parois porteuses intérieures",
+          "baseGwp_kgco2e_m2": 35.910000000000004,
+          "serviceLife_years": 60,
+          "replacementFactor": 1,
+          "time_fire_start_min": 15,
+          "time_burning_min": 0,
+          "isSupportStructure": true
         },
         {
           "order": 2,
@@ -14738,16 +15095,20 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
-              "name": null,
+              "name": "",
               "description": "Enduit minéral"
             },
-            "en": {
-              "name": null,
-              "description": null
-            },
             "de": {
-              "name": null,
-              "description": null
+              "name": "",
+              "description": ""
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "",
+              "description": ""
             }
           },
           "structure": "on-lying",
@@ -14756,10 +15117,16 @@
           "lifetime": 30,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.1627,
+          "gwp_kgco2e_m2": 2.3254,
           "thermalResistance_m2K_W": 0.017499999999999998,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "baseGwp_kgco2e_m2": 1.1627,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
+          "time_fire_start_min": 0,
+          "time_burning_min": 15,
+          "isSupportStructure": false
         }
       ],
       "systemTypeId": "masonry"
@@ -14767,7 +15134,12 @@
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
-      "RF_external_min": null
+      "RF_external_min": null,
+      "wood_beam_span": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (backstein)."
+      },
+      "wood_capacity_table": null
     },
     "sound_insulation": {
       "airborneSound": {
@@ -14788,8 +15160,7 @@
       "externalId": "FLEX E6-003-001",
       "url": null
     },
-    "_rawTaxo": {},
-    "subcategoryId": "single_shell"
+    "_rawTaxo": {}
   },
   {
     "id": "0B52155E-4351-426E-B1BF-65A8D7A66A13",
@@ -14799,7 +15170,7 @@
     "thickness_mm": 52.5,
     "weight_kg_m2": 11.425,
     "uValue_W_m2K": 0.7633587786259541,
-    "gwp_kgco2e_m2": 1.86605,
+    "gwp_kgco2e_m2": 8.15625,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -14858,11 +15229,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.6532499999999999,
+          "gwp_kgco2e_m2": 6.39625,
           "thermalResistance_m2K_W": 0.05,
           "ecccId": "G03.01",
           "ecccDescription": "Supports pour revêtements de parois",
-          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "baseGwp_kgco2e_m2": 3.198125,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -14896,11 +15267,11 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21280000000000002,
+          "gwp_kgco2e_m2": 1.7600000000000002,
           "thermalResistance_m2K_W": 1,
           "ecccId": "G03.01",
           "ecccDescription": "Supports pour revêtements de parois",
-          "baseGwp_kgco2e_m2": 0.10640000000000001,
+          "baseGwp_kgco2e_m2": 0.8800000000000001,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -14983,7 +15354,7 @@
           "time_burning_min": 0
         }
       ],
-      "systemTypeId": null
+      "systemTypeId": "light_gauge_steel_frame"
     },
     "fire_resistance": {
       "REI_min": null,
@@ -15022,8 +15393,8 @@
     "categoryId": "partition_wall",
     "thickness_mm": 145,
     "weight_kg_m2": 26.58624242424242,
-    "uValue_W_m2K": 0.6196059941370616,
-    "gwp_kgco2e_m2": 4.318507563636364,
+    "uValue_W_m2K": 0.612284091770329,
+    "gwp_kgco2e_m2": 15.638062181818182,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -15082,12 +15453,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.6532499999999999,
+          "gwp_kgco2e_m2": 6.39625,
           "thermalResistance_m2K_W": 0.05,
           "isSupportStructure": false,
-          "ecccId": "",
-          "ecccDescription": "",
-          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 3.198125,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -15121,12 +15492,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.6329018181818182,
+          "gwp_kgco2e_m2": 0.9194181818181818,
           "thermalResistance_m2K_W": 0.6153846153846154,
           "isSupportStructure": false,
-          "ecccId": "G01.01",
-          "ecccDescription": "Cloisons fixes",
-          "baseGwp_kgco2e_m2": 0.3164509090909091,
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois",
+          "baseGwp_kgco2e_m2": 0.4597090909090909,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -15160,12 +15531,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.19345454545454546,
+          "gwp_kgco2e_m2": 1.6,
           "thermalResistance_m2K_W": 1,
           "isSupportStructure": false,
           "ecccId": "G01.01",
           "ecccDescription": "Cloisons fixes",
-          "baseGwp_kgco2e_m2": 0.09672727272727273,
+          "baseGwp_kgco2e_m2": 0.8,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -15199,12 +15570,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.18565120000000002,
+          "gwp_kgco2e_m2": 0.32614400000000004,
           "thermalResistance_m2K_W": 0.3076923076923077,
           "isSupportStructure": false,
           "ecccId": "G01.01",
           "ecccDescription": "Cloisons fixes",
-          "baseGwp_kgco2e_m2": 0.09282560000000001,
+          "baseGwp_kgco2e_m2": 0.16307200000000002,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -15238,12 +15609,12 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.6532499999999999,
+          "gwp_kgco2e_m2": 6.39625,
           "thermalResistance_m2K_W": 0.05,
           "isSupportStructure": false,
           "ecccId": "G03.01",
           "ecccDescription": "Supports pour revêtements de parois",
-          "baseGwp_kgco2e_m2": 0.8266249999999999,
+          "baseGwp_kgco2e_m2": 3.198125,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -15281,327 +15652,5 @@
     },
     "_rawTaxo": {},
     "subcategoryId": "single_shell"
-  },
-  {
-    "id": "1710929D-D685-43E7-9FAE-E78CDAA395B7",
-    "parent": null,
-    "serialNo": null,
-    "categoryId": null,
-    "thickness_mm": 73,
-    "weight_kg_m2": 145.7,
-    "uValue_W_m2K": 17.153996101364523,
-    "gwp_kgco2e_m2": 23.0372,
-    "spanMax_m": null,
-    "claddingId": null,
-    "sheathingId": null,
-    "ballastInConstructionId": null,
-    "ballastOnStructuralLayerId": null,
-    "cavityInsulationInStructureId": null,
-    "facadeTypeId": null,
-    "wallFinishId": null,
-    "screedId": null,
-    "variantId": null,
-    "translations": {
-      "fr": {
-        "name": "Revêtement de sol en pierre artificielle incl. chape d'anhydrite 6cm",
-        "description": null
-      },
-      "en": {
-        "name": "Artificial-stone flooring incl. anhydrite screed 6cm",
-        "description": null
-      },
-      "de": {
-        "name": "Kunststeinboden inkl. Anhydritestrich 6cm",
-        "description": null
-      },
-      "it": {
-        "name": "Pavimento in pietra artificiale incl. massetto in anidrite 6cm",
-        "description": null
-      }
-    },
-    "structure": {
-      "layers": [
-        {
-          "order": 0,
-          "productId": "A0DB9CEA-8E67-4A59-9CCB-58AE830CCF65",
-          "role": "Revêtement de sol",
-          "thickness_mm": 10,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Dalle en pierre artificielle, liée au ciment, 10 mm [m2]"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 21.5,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 10.4,
-          "thermalResistance_m2K_W": null
-        },
-        {
-          "order": 1,
-          "productId": "95FF1ED3-5ABE-43C6-908B-493195FBE746",
-          "role": "Masse de collage",
-          "thickness_mm": 3,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Colle de construction/mortier d'enrobage minéral(e)"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 4.2,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 1.7052000000000003,
-          "thermalResistance_m2K_W": 0.00375
-        },
-        {
-          "order": 2,
-          "productId": "49068C8B-14F0-4E8A-A523-334E3333FBB5",
-          "role": "Sous-couche",
-          "thickness_mm": 60,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Chape d'anhydrite, 60 mm"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 120,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 10.932,
-          "thermalResistance_m2K_W": 0.054545454545454536
-        }
-      ],
-      "systemTypeId": null
-    },
-    "fire_resistance": {
-      "REI_min": null,
-      "RF_internal_min": null,
-      "RF_external_min": null
-    },
-    "sound_insulation": {
-      "airborneSound": {
-        "Rw_dB": null,
-        "c100_3150_dB": null,
-        "c50_3150_dB": null,
-        "ctr100_3150_dB": null
-      },
-      "impactSound": {
-        "Lnw_dB": null,
-        "ci100_2500_dB": null,
-        "ci50_2500_dB": null
-      }
-    },
-    "source": {
-      "name": "BauTeilKatalog",
-      "databaseId": "btk",
-      "externalId": "FLEX M3-001-001",
-      "url": null
-    },
-    "_rawTaxo": {}
-  },
-  {
-    "id": "8069F41C-D0FD-4A73-A980-92A005DDCE38",
-    "parent": null,
-    "serialNo": null,
-    "categoryId": null,
-    "thickness_mm": 76,
-    "weight_kg_m2": 128.825,
-    "uValue_W_m2K": 5.78167115902965,
-    "gwp_kgco2e_m2": 24.2016,
-    "spanMax_m": null,
-    "claddingId": null,
-    "sheathingId": null,
-    "ballastInConstructionId": null,
-    "ballastOnStructuralLayerId": null,
-    "cavityInsulationInStructureId": null,
-    "facadeTypeId": null,
-    "wallFinishId": null,
-    "screedId": null,
-    "variantId": null,
-    "translations": {
-      "fr": {
-        "name": "Revêtement de sol en Parquet, 3 plis 15mm incl. chape d'anhydrite 6cm",
-        "description": null
-      },
-      "en": {
-        "name": "Three-layer parquet flooring, 15 mm, incl. anhydrite screed 6cm",
-        "description": null
-      },
-      "de": {
-        "name": "Dreischichtparkett 15 mm inkl. Anhydritestrich 6cm",
-        "description": null
-      },
-      "it": {
-        "name": "Parquet a tre strati 15 mm incl. massetto in anidrite 6cm",
-        "description": null
-      }
-    },
-    "structure": {
-      "layers": [
-        {
-          "order": 0,
-          "productId": "8BEDBE96-CDE0-4130-919E-AD6D16929C47",
-          "role": "Revêtement de sol",
-          "thickness_mm": 15,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Parquet, 3 plis, vitrifié d'usine, 15 mm [m2]"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 7.904999999999999,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 8.09,
-          "thermalResistance_m2K_W": 0.11538461538461538
-        },
-        {
-          "order": 1,
-          "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
-          "role": "Couche de séparation",
-          "thickness_mm": 1,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Voile de polyéthylène (PE)"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 0.92,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 5.1796,
-          "thermalResistance_m2K_W": 0.0030303030303030303
-        },
-        {
-          "order": 2,
-          "productId": "49068C8B-14F0-4E8A-A523-334E3333FBB5",
-          "role": "Sous-couche",
-          "thickness_mm": 60,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "name": null,
-              "description": "Chape d'anhydrite, 60 mm"
-            },
-            "en": {
-              "name": null,
-              "description": null
-            },
-            "de": {
-              "name": null,
-              "description": null
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 120,
-          "reactionToFire": null,
-          "lifetime": 30,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 10.932,
-          "thermalResistance_m2K_W": 0.054545454545454536
-        }
-      ],
-      "systemTypeId": null
-    },
-    "fire_resistance": {
-      "REI_min": null,
-      "RF_internal_min": null,
-      "RF_external_min": null
-    },
-    "sound_insulation": {
-      "airborneSound": {
-        "Rw_dB": null,
-        "c100_3150_dB": null,
-        "c50_3150_dB": null,
-        "ctr100_3150_dB": null
-      },
-      "impactSound": {
-        "Lnw_dB": null,
-        "ci100_2500_dB": null,
-        "ci50_2500_dB": null
-      }
-    },
-    "source": {
-      "name": "BauTeilKatalog",
-      "databaseId": "btk",
-      "externalId": "FLEX M3-002-001",
-      "url": null
-    },
-    "_rawTaxo": {}
   }
 ]

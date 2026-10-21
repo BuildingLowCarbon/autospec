@@ -5,6 +5,7 @@ import LangContext from '../context/LangContext';
 import loadMaterials from '../utils/loadMaterials';
 import { dashboardFieldLabel, dashboardText } from './dashboard/dashboardI18n';
 import { useAuth } from '../context/AuthContext';
+import { getKbobIndicators } from '../utils/kbobIndicators';
 
 function Material() {
   const { id } = useParams();
@@ -34,6 +35,10 @@ function Material() {
     || material.translations?.fr?.description
     || material.translations?.de?.description
     || material.translations?.en?.description;
+  const kbobIndicators = getKbobIndicators(material.kbobId);
+  const formatGwp = (value) => value === null
+    ? 'N/A'
+    : `${Number(value).toLocaleString('fr-CH', { maximumFractionDigits: 4 })} kg CO₂-eq/${kbobIndicators.ref || 'unité'}`;
 
   const {
     workingtitle,
@@ -75,6 +80,9 @@ function Material() {
         <p>
           <strong>{dashboardFieldLabel('kbobId', lang)} :</strong> {kbobId ?? 'N/A'}
         </p>
+        <p><strong>GWP :</strong> {formatGwp(kbobIndicators.gwp)}</p>
+        <p><strong>GWP-pro :</strong> {formatGwp(kbobIndicators.gwpPro)}</p>
+        <p><strong>GWP-dis :</strong> {formatGwp(kbobIndicators.gwpDis)}</p>
         <p>
           <strong>{dashboardFieldLabel('siaId', lang)} :</strong> {siaId ?? 'N/A'}
         </p>

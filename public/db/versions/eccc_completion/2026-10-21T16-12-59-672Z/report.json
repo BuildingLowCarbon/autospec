@@ -1,0 +1,351 @@
+{
+  "dryRun": false,
+  "completedLayers": 10,
+  "affectedComponents": 3,
+  "remainingLayers": 10,
+  "changes": [
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 0,
+      "ecccId": "E02.03",
+      "evidence": [
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 1,
+      "ecccId": "E02.03",
+      "evidence": [
+        {
+          "componentId": "b1e6b220-d6bb-4f49-bdb5-5a530ef1f7fc",
+          "serialNo": "D1233",
+          "sourceFile": "components_custom.json",
+          "order": 1
+        },
+        {
+          "componentId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+          "serialNo": "D0737",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        },
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        },
+        {
+          "componentId": "3F69C977-50AB-3E0B-B249-9B1FE3A4A6CF",
+          "serialNo": "D1192",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        },
+        {
+          "componentId": "FCEACFB5-6877-3339-B48F-8F6DD6522E02",
+          "serialNo": "D1233",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        },
+        {
+          "componentId": "8E4779B7-9BEC-3D14-B209-01F3F47D7094",
+          "serialNo": "D1237",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        },
+        {
+          "componentId": "1199C111-3F8A-4F76-A56A-2BB6DD8C9146",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 1
+        },
+        {
+          "componentId": "471F807F-1FBB-4E27-899A-024F7150D737",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 1
+        },
+        {
+          "componentId": "B423A113-B2FC-4A91-99FD-A8B8176EAF3D",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 1
+        },
+        {
+          "componentId": "416B1E50-1ACC-4310-AAAD-0C41C1AF50E9",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 1
+        },
+        {
+          "componentId": "9A69FD8E-D846-4795-BC2B-F509D62F1E8E",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 2,
+      "ecccId": "E02.03",
+      "evidence": [
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 4,
+      "ecccId": "C02.01",
+      "evidence": [
+        {
+          "componentId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+          "serialNo": "D0737",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 4
+        },
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 4
+        },
+        {
+          "componentId": "9D4E51E1-A3DB-3DEB-A12B-ADCB6C5B42D6",
+          "serialNo": "D1247",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 3
+        },
+        {
+          "componentId": "1199C111-3F8A-4F76-A56A-2BB6DD8C9146",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 4
+        },
+        {
+          "componentId": "471F807F-1FBB-4E27-899A-024F7150D737",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 4
+        },
+        {
+          "componentId": "B423A113-B2FC-4A91-99FD-A8B8176EAF3D",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 4
+        },
+        {
+          "componentId": "416B1E50-1ACC-4310-AAAD-0C41C1AF50E9",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 4
+        },
+        {
+          "componentId": "9A69FD8E-D846-4795-BC2B-F509D62F1E8E",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 5,
+      "ecccId": "C02.01",
+      "evidence": [
+        {
+          "componentId": "b1e6b220-d6bb-4f49-bdb5-5a530ef1f7fc",
+          "serialNo": "D1233",
+          "sourceFile": "components_custom.json",
+          "order": 6
+        },
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 5
+        },
+        {
+          "componentId": "1199C111-3F8A-4F76-A56A-2BB6DD8C9146",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 5
+        },
+        {
+          "componentId": "471F807F-1FBB-4E27-899A-024F7150D737",
+          "serialNo": "",
+          "sourceFile": "components_generated.json",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 7,
+      "ecccId": "C02.01",
+      "evidence": [
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 7
+        }
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 8,
+      "ecccId": "G03.01",
+      "evidence": [
+        {
+          "componentId": "1E06F363-F932-3AAE-B911-E4E9C66492C1",
+          "serialNo": "D1003",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "componentId": "616FF859-B980-359B-A778-A14C2C62D932",
+      "serialNo": "A1462",
+      "order": 3,
+      "ecccId": "C04.01",
+      "evidence": [
+        {
+          "componentId": "99519FEC-8C0F-3490-9094-35A3B855FBBD",
+          "serialNo": "A0022",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "componentId": "467E3AD1-4AF1-3697-9A69-12BB42F07494",
+      "serialNo": "A2709",
+      "order": 0,
+      "ecccId": "G02.01",
+      "evidence": [
+        {
+          "componentId": "3A385A32-FC90-3980-839F-490BA1C6DA57",
+          "serialNo": "A0247",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "componentId": "467E3AD1-4AF1-3697-9A69-12BB42F07494",
+      "serialNo": "A2709",
+      "order": 3,
+      "ecccId": "C04.01",
+      "evidence": [
+        {
+          "componentId": "BBA51BB5-8740-3EE7-B46E-F09C45963760",
+          "serialNo": "A2725",
+          "sourceFile": "components_lignum_selected.json",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "componentId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+      "serialNo": "D0737",
+      "order": 2,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "66439D92-2593-31C3-97D2-C26FC739C2E3",
+      "serialNo": "D0737",
+      "order": 6,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 3,
+      "reason": "conflicting_codes",
+      "codes": [
+        "C02.01",
+        "E02.02",
+        "E02.03"
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 6,
+      "reason": "conflicting_codes",
+      "codes": [
+        "C02.01",
+        "G03.01"
+      ]
+    },
+    {
+      "componentId": "09EDF92B-4FE8-3DFC-A6F9-5EFBCB402A43",
+      "serialNo": "D0999",
+      "order": 9,
+      "reason": "conflicting_codes",
+      "codes": [
+        "G03.02",
+        "G03.01"
+      ]
+    },
+    {
+      "componentId": "3F69C977-50AB-3E0B-B249-9B1FE3A4A6CF",
+      "serialNo": "D1192",
+      "order": 2,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "24550426-31A7-36C8-B163-8E880069157D",
+      "serialNo": "D1235",
+      "order": 2,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "24550426-31A7-36C8-B163-8E880069157D",
+      "serialNo": "D1235",
+      "order": 3,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "24550426-31A7-36C8-B163-8E880069157D",
+      "serialNo": "D1235",
+      "order": 12,
+      "reason": "no_exact_match",
+      "codes": []
+    },
+    {
+      "componentId": "8E4779B7-9BEC-3D14-B209-01F3F47D7094",
+      "serialNo": "D1237",
+      "order": 11,
+      "reason": "no_exact_match",
+      "codes": []
+    }
+  ],
+  "backupDirectory": "versions\\eccc_completion\\2026-10-21T16-12-59-672Z"
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "manual-9a5391fa-ef1c-4dcd-9b6d-e3d5f8072da0",
+    "categoryId": "foundation",
+    "position": "below",
+    "name": "Béton maigre 5 cm",
+    "layers": [
+      {
+        "order": 0,
+        "productId": "6DEFC510-138F-4344-B357-7EFD5B284313",
+        "structure": "on-lying",
+        "thickness_mm": 50,
+        "width_mm": null,
+        "spacing_mm": null,
+        "isSupportStructure": false,
+        "layerFunctionId": "other",
+        "insulationTypeId": null,
+        "translations": {
+          "fr": {
+            "name": "",
+            "description": ""
+          },
+          "de": {
+            "name": "",
+            "description": ""
+          },
+          "en": {
+            "name": "",
+            "description": ""
+          },
+          "it": {
+            "name": "",
+            "description": ""
+          }
+        }
+      }
+    ],
+    "manual": true,
+    "metadata": {
+      "created_at": "2026-10-19T09:33:34.832Z",
+      "updated_at": "2026-10-19T09:34:00.584Z",
+      "version": 2
+    }
+  }
+]

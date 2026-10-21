@@ -45,25 +45,35 @@ const localized = (de, en, fr, key) => ({
   de: { name: de?.[key] ?? null, description: de?.beschreibung ?? null },
 });
 
-const buildLayer = (layer, enLayer, frLayer, order) => ({
-  order,
-  structure: layer?.aufbau ?? null,
-  productId: layer?.produktid ?? null,
-  translations: {
-    fr: { name: frLayer?.produktname ?? null, description: frLayer?.schicht ?? null },
-    en: { name: enLayer?.produktname ?? null, description: enLayer?.schicht ?? null },
-    de: { name: layer?.produktname ?? null, description: layer?.schicht ?? null },
-  },
-  productName: layer?.produktname ?? null,
-  thickness_mm: numberOrNull(layer?.dicke),
-  weight_kg_m2: numberOrNull(layer?.gewicht),
-  width_mm: numberOrNull(layer?.breite),
-  spacing_mm: numberOrNull(layer?.achsabstand),
-  reactionToFire: layer?.brandverhaltensgruppe ?? null,
-  colorCode: layer?.grafikfarbcode ?? null,
-  fiberDirection: layer?.faserrichtung === 'längs' ? 'lengthwise' : (layer?.faserrichtung ?? null),
-  kbobId: layer?.kbob_id ?? null,
-});
+const normalizeContinuousDimensions = (width, spacing) => {
+  const width_mm = numberOrNull(width);
+  const spacing_mm = numberOrNull(spacing);
+  return width_mm === 1000 && spacing_mm === 1000
+    ? { width_mm: null, spacing_mm: null }
+    : { width_mm, spacing_mm };
+};
+
+const buildLayer = (layer, enLayer, frLayer, order) => {
+  const dimensions = normalizeContinuousDimensions(layer?.breite, layer?.achsabstand);
+  return {
+    order,
+    structure: layer?.aufbau ?? null,
+    productId: layer?.produktid ?? null,
+    translations: {
+      fr: { name: frLayer?.produktname ?? null, description: frLayer?.schicht ?? null },
+      en: { name: enLayer?.produktname ?? null, description: enLayer?.schicht ?? null },
+      de: { name: layer?.produktname ?? null, description: layer?.schicht ?? null },
+    },
+    productName: layer?.produktname ?? null,
+    thickness_mm: numberOrNull(layer?.dicke),
+    weight_kg_m2: numberOrNull(layer?.gewicht),
+    ...dimensions,
+    reactionToFire: layer?.brandverhaltensgruppe ?? null,
+    colorCode: layer?.grafikfarbcode ?? null,
+    fiberDirection: layer?.faserrichtung === 'längs' ? 'lengthwise' : (layer?.faserrichtung ?? null),
+    kbobId: layer?.kbob_id ?? null,
+  };
+};
 
 const buildUnifiedComponents = (deItems, enItems, frItems) => {
   const enById = new Map(enItems.map((item) => [String(item.id), item]));
@@ -216,21 +226,14 @@ const applyMappings = (components, mappingItems, nullUnmapped = false) => {
   }));
 };
 
-const calculationNeutral = (component) => {
-  const clone = JSON.parse(JSON.stringify(component));
-  delete clone.metadata;
-  ['thickness_mm', 'weight_kg_m2', 'uValue_W_m2K', 'gwp_kgco2e_m2'].forEach((key) => delete clone[key]);
-  (clone.structure?.layers || []).forEach((layer) => {
-    ['weight_kg_m2', 'gwp_kgco2e_m2', 'baseGwp_kgco2e_m2', 'thermalResistance_m2K_W', 'serviceLife_years', 'replacementFactor'].forEach((key) => delete layer[key]);
-  });
-  return clone;
-};
-
-const preserveCalculatedIfUnchanged = (components, previousItems) => {
+// Saving a selection changes membership, not the content of existing components.
+// In particular, computed fire data or local layer edits must never cause a
+// recalculated component to be replaced by its original source values.
+const preserveSelectedComponents = (components, previousItems, recalculateNew) => {
   const previous = new Map(previousItems.map((item) => [String(item.id), item]));
   return components.map((component) => {
     const old = previous.get(String(component.id));
-    return old && JSON.stringify(calculationNeutral(old)) === JSON.stringify(calculationNeutral(component)) ? old : component;
+    return old || recalculateNew(component);
   });
 };
 
@@ -302,7 +305,8 @@ module.exports = {
   buildUnifiedComponents,
   deriveMappings,
   newId,
-  preserveCalculatedIfUnchanged,
+  normalizeContinuousDimensions,
+  preserveSelectedComponents,
   readJson,
   saveVersioned,
   validateComponents,

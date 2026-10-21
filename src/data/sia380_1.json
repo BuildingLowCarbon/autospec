@@ -82,7 +82,13 @@
     },
     {
       "building_part": "roof",
-      "categoryIds": ["flat_roof_shed_roof", "steep_roof", "underground_roof"],
+      "categoryIds": ["flat_roof_shed_roof", "steep_roof"],
+      "context": "exterior",
+      "element_type": "opaque_element"
+    },
+    {
+      "building_part": "underground_roofs",
+      "categoryId": "underground_roof",
       "context": "exterior",
       "element_type": "opaque_element"
     },

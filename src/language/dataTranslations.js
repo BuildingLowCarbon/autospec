@@ -10,7 +10,7 @@ const dataTranslations = {
     partition_wall_double_shell: { fr: "Cloison double ossature", de: "Trennwand zweischalig", en: "Partition wall double shell", it: "Parete divisoria a doppia struttura" },
     flat_roof_shed_roof: { fr: "Toit plat / en pente", de: "Flachdach", en: "Flat roof / shed roof", it: "Tetto piano / a falda unica" },
     steep_roof: { fr: "Toit à deux pans", de: "Steildach", en: "Steep roof", it: "Tetto a falde" },
-    underground_roof: { fr: "Toiture enterrée", de: "Unterirdisches Dach", en: "Underground roof", it: "Copertura interrata" },
+    underground_roof: { fr: "Toiture souterraine", de: "Unterirdisches Dach", en: "Underground roof", it: "Copertura interrata" },
     balcony: { fr: "Balcon", de: "Balkon", en: "Balcony", it: "Balcone" }
   },
   layerTypes: {

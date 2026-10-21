@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/Header';
+import MaterialSelect from '../components/MaterialSelect';
 import { ViewSVG, DEFAULT_PX_PER_MM_X } from '../components/Graphic';
 import LangContext from '../context/LangContext';
 import { useAuth } from '../context/AuthContext';
@@ -8,7 +9,7 @@ import translations from '../language/translations';
 import dataTranslations from '../language/dataTranslations';
 import categoriesData from '../data/categories.json';
 import kbobData from '../data/KBOB_mat_db.json';
-import loadComponents, { invalidateComponentsCache } from '../utils/loadComponents';
+import loadComponents, { fetchDbSources, invalidateComponentsCache } from '../utils/loadComponents';
 import loadMaterials from '../utils/loadMaterials';
 import loadProducts from '../utils/loadProducts';
 import { calculateComponentProperties, calculateComponentThermalDetails } from '../utils/componentPropriety';
@@ -42,10 +43,10 @@ const DEFAULT_LAYER = (order = 0) => ({
   ecccId: '',
   ecccDescription: '',
   translations: {
-    fr: { description: '' },
-    de: { description: '' },
-    it: { description: '' },
-    en: { description: '' },
+    fr: { name: '', description: '' },
+    de: { name: '', description: '' },
+    it: { name: '', description: '' },
+    en: { name: '', description: '' },
   },
   weight_kg_m2: null,
   gwp_kgco2e_m2: null,
@@ -116,10 +117,10 @@ const smallButtonStyle = {
 const ensureLangTranslations = (layer) => ({
   ...(layer ?? {}),
   translations: {
-    fr: { description: layer?.translations?.fr?.description ?? '' },
-    de: { description: layer?.translations?.de?.description ?? '' },
-    it: { description: layer?.translations?.it?.description ?? '' },
-    en: { description: layer?.translations?.en?.description ?? '' },
+    fr: { name: layer?.translations?.fr?.name ?? '', description: layer?.translations?.fr?.description ?? '' },
+    de: { name: layer?.translations?.de?.name ?? '', description: layer?.translations?.de?.description ?? '' },
+    it: { name: layer?.translations?.it?.name ?? '', description: layer?.translations?.it?.description ?? '' },
+    en: { name: layer?.translations?.en?.name ?? '', description: layer?.translations?.en?.description ?? '' },
   },
 });
 
@@ -148,6 +149,18 @@ function Custom() {
   const [organizations, setOrganizations] = useState([]);
   const [visibility, setVisibility] = useState('private');
   const [organizationId, setOrganizationId] = useState('');
+  const [destinationDatabase, setDestinationDatabase] = useState('personal');
+  const [destinationOptions, setDestinationOptions] = useState([]);
+  const isAdmin = user?.role === 'admin';
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    let active = true;
+    fetchDbSources().then((sources) => {
+      if (active) setDestinationOptions(sources.filter((source) => source.file.endsWith('.json') && !source.file.includes(':')));
+    }).catch((error) => { if (active) setStatus(`Chargement des bases impossible : ${error.message}`); });
+    return () => { active = false; };
+  }, [isAdmin]);
   const canModifyComponent = useMemo(() => {
     if (!component) return false;
     if (component.__isNew) return true;
@@ -441,6 +454,18 @@ function Custom() {
     return response.item;
   };
 
+  const persistNewComponent = async (payload) => {
+    if (!isAdmin || destinationDatabase === 'personal') return persistUserComponent(payload);
+    const response = await request(`/api/components-source/${encodeURIComponent(destinationDatabase)}`, {
+      method: 'POST', body: JSON.stringify({ component: payload }),
+    });
+    invalidateComponentsCache();
+    if (destinationDatabase === 'components_custom.json') {
+      writeLocalCustomComponents(mergeById([...readLocalCustomComponents(), response.component]));
+    }
+    return response.component;
+  };
+
   const saveCurrent = async () => {
     if (!componentWithFireTiming) return;
     setStatus('Enregistrement...');
@@ -451,10 +476,10 @@ function Custom() {
     const sourceFile = component.__sourceFile ?? 'components_custom.json';
     try {
       if (component.__isNew) {
-        const saved = await persistUserComponent(payload);
+        const saved = await persistNewComponent(payload);
         setComponent(cloneComponent(saved));
         navigate(`/custom/${saved.id}`, { replace: true });
-        setStatus('Nouveau composant utilisateur créé dans MongoDB.');
+        setStatus(saved.__contentId ? 'Nouveau composant utilisateur créé dans MongoDB.' : `Composant créé dans ${saved.__sourceFile}.`);
       } else if (component.__contentId) {
         const saved = await persistUserComponent(payload, component.__contentId);
         setComponent(cloneComponent(saved));
@@ -485,12 +510,12 @@ function Custom() {
       parent: component.id ?? null,
     };
     try {
-      const saved = await persistUserComponent(payload);
+      const saved = await persistNewComponent(payload);
       setComponent(cloneComponent(saved));
       navigate(`/custom/${newId}`, { replace: true });
-      setStatus(`Nouveau composant utilisateur créé dans MongoDB (${newId}).`);
+      setStatus(saved.__contentId ? `Nouveau composant utilisateur créé dans MongoDB (${newId}).` : `Composant dupliqué dans ${saved.__sourceFile} (${newId}).`);
     } catch (error) {
-      setStatus(`Sauvegarde MongoDB impossible. ${error.message}`);
+      setStatus(`Duplication impossible. ${error.message}`);
     }
   };
 
@@ -637,6 +662,13 @@ function Custom() {
         </div>
 
         <div style={{ marginBottom: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'end' }}>
+          {isAdmin && <label>Base de destination — création / duplication
+            <select value={destinationDatabase} onChange={(event) => setDestinationDatabase(event.target.value)} style={{ display: 'block', minWidth: '240px', padding: '6px' }}>
+              <option value="personal">Composants utilisateur (selon visibilité)</option>
+              {destinationOptions.map((source) => <option key={source.file} value={source.file}>{source.label}</option>)}
+            </select>
+            <small style={{ display: 'block', maxWidth: '340px' }}>Bases système : en local uniquement. « Enregistrer » un composant existant conserve sa base d’origine.</small>
+          </label>}
           <label>Visibilité
             <select value={visibility} onChange={(event) => setVisibility(event.target.value)} style={{ display: 'block', minWidth: '170px', padding: '6px' }}>
               <option value="private">Privé</option>
@@ -685,6 +717,7 @@ function Custom() {
               <tr style={{ backgroundColor: '#eee' }}>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>ecccId</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer_type}</th>
+                <th style={{ border: '1px solid #ccc', padding: '8px' }}>Nom de la couche</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.layer}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.name}</th>
                 <th style={{ border: '1px solid #ccc', padding: '8px' }}>{t.thickness}</th>
@@ -740,6 +773,25 @@ function Custom() {
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input
                       type="text"
+                      value={layer?.translations?.[lang]?.name ?? ''}
+                      onChange={(event) =>
+                        handleLayerChange(index, (current) => ({
+                          ...current,
+                          translations: {
+                            ...(current.translations ?? {}),
+                            [lang]: {
+                              ...(current.translations?.[lang] ?? {}),
+                              name: event.target.value,
+                            },
+                          },
+                        }))
+                      }
+                      style={{ width: '180px' }}
+                    />
+                  </td>
+                  <td style={{ border: '1px solid #ccc', padding: '8px' }}>
+                    <input
+                      type="text"
                       value={layer?.translations?.[lang]?.description ?? ''}
                       onChange={(event) =>
                         handleLayerChange(index, (current) => ({
@@ -757,18 +809,7 @@ function Custom() {
                     />
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                    <select
-                      value={layer?.productId ?? ''}
-                      onChange={(event) => handleLayerTextChange(index, 'productId', event.target.value)}
-                      style={{ width: '220px' }}
-                    >
-                      <option value="">--</option>
-                      {allComponentOptions.map((option) => (
-                        <option key={`${option.type}-${option.id}`} value={option.id}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
+                    <MaterialSelect catalog={[...materials, ...products]} lang={lang} value={layer?.productId ?? ''} onChange={(value) => handleLayerTextChange(index, 'productId', value)} />
                   </td>
                   <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                     <input

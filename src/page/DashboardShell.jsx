@@ -9,6 +9,7 @@ import ComponentCompletenessPage from './dashboard/ComponentCompletenessPage';
 import DiagnosticsPage from './dashboard/DiagnosticsPage';
 import MappingsPage from './dashboard/MappingsPage';
 import SelectionPage from './dashboard/SelectionPage';
+import StructurePage from './dashboard/StructurePage';
 import TaxonomyPage from './dashboard/TaxonomyPage';
 import UnifyPage from './dashboard/UnifyPage';
 import UsersPage from './dashboard/UsersPage';
@@ -16,8 +17,8 @@ import './dashboard/dashboard.css';
 import { dashboardText } from './dashboard/dashboardI18n';
 import { useAuth } from '../context/AuthContext';
 
-const pages = { unifier: UnifyPage, selection: SelectionPage, erreurs: DiagnosticsPage, correspondances: MappingsPage, catalogue: CatalogPage, composants: ComponentEditorPage, incomplets: ComponentCompletenessPage, taxonomies: TaxonomyPage, custom: Dashboard, utilisateurs: UsersPage };
-const linkKeys = [['unifier', 'unification'], ['selection', 'selection'], ['erreurs', 'errors'], ['correspondances', 'mappings'], ['catalogue', 'materialsProducts'], ['composants', 'componentEditing'], ['incomplets', 'incompleteComponents'], ['taxonomies', 'taxonomyManagement'], ['custom', 'customTools']];
+const pages = { unifier: UnifyPage, selection: SelectionPage, structures: StructurePage, erreurs: DiagnosticsPage, correspondances: MappingsPage, catalogue: CatalogPage, composants: ComponentEditorPage, incomplets: ComponentCompletenessPage, taxonomies: TaxonomyPage, custom: Dashboard, utilisateurs: UsersPage };
+const linkKeys = [['unifier', 'unification'], ['selection', 'selection'], ['structures', 'structures'], ['erreurs', 'errors'], ['correspondances', 'mappings'], ['catalogue', 'materialsProducts'], ['composants', 'componentEditing'], ['incomplets', 'incompleteComponents'], ['taxonomies', 'taxonomyManagement'], ['custom', 'customTools']];
 
 export default function DashboardShell() {
   const { section } = useParams();

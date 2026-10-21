@@ -12,6 +12,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './page/Profile';
 import Organizations from './page/Organizations';
 import MaterialEditor from './page/MaterialEditor';
+import MyBuildings from './page/MyBuildings';
+import ComponentGroup from './page/ComponentGroup';
 import React, { useState } from 'react';
 import LangContext from './context/LangContext';
 import { AuthProvider } from './context/AuthContext';
@@ -38,6 +40,8 @@ function App() {
                   <Route path="/custom/:id" element={<Custom />} />
                   <Route path="/profile" element={<Profile />} />
                   <Route path="/organizations" element={<Organizations />} />
+                  <Route path="/my-buildings" element={<MyBuildings />} />
+                  <Route path="/my-buildings/group/:groupKey" element={<ComponentGroup />} />
                   <Route path="/material-custom/:id" element={<MaterialEditor />} />
                 </Route>
                 <Route path="/dashboard/:section?" element={<ProtectedRoute permission="dashboard"><DashboardShell /></ProtectedRoute>} />

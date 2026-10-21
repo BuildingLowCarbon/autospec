@@ -7,7 +7,7 @@
     "thickness_mm": 528.5,
     "weight_kg_m2": 622.5949681528663,
     "uValue_W_m2K": 0.14698536179194763,
-    "gwp_kgco2e_m2": 79.8435817834395,
+    "gwp_kgco2e_m2": 171.8442617834395,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -66,15 +66,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.6968,
+          "gwp_kgco2e_m2": 63.839999999999996,
           "thermalResistance_m2K_W": 4.242424242424242,
-          "baseGwp_kgco2e_m2": 0.8484,
+          "baseGwp_kgco2e_m2": 31.919999999999998,
           "serviceLife_years": 30,
           "replacementFactor": 2,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E02.01",
-          "ecccDescription": ""
+          "ecccDescription": "",
+          "isSupportStructure": false
         },
         {
           "order": 1,
@@ -104,15 +105,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.55752,
+          "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": 2.068965517241379,
-          "baseGwp_kgco2e_m2": 0.27876,
+          "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": 30,
           "replacementFactor": 2,
-          "time_fire_start_min": 15,
-          "time_burning_min": 0,
+          "time_fire_start_min": null,
+          "time_burning_min": null,
           "ecccId": "E02.01",
-          "ecccDescription": ""
+          "ecccDescription": "",
+          "isSupportStructure": false
         },
         {
           "order": 2,
@@ -150,7 +152,8 @@
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "C02.01",
-          "ecccDescription": ""
+          "ecccDescription": "",
+          "isSupportStructure": true
         },
         {
           "order": 3,
@@ -180,15 +183,16 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.0241,
+          "gwp_kgco2e_m2": 12.820500000000001,
           "thermalResistance_m2K_W": 0.010606060606060605,
-          "baseGwp_kgco2e_m2": 1.0241,
+          "baseGwp_kgco2e_m2": 12.820500000000001,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "E01.01",
-          "ecccDescription": ""
+          "ecccDescription": "",
+          "isSupportStructure": false
         },
         {
           "order": 4,
@@ -223,7 +227,8 @@
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
           "serviceLife_years": 60,
-          "replacementFactor": 1
+          "replacementFactor": 1,
+          "isSupportStructure": false
         },
         {
           "order": 5,
@@ -254,11 +259,12 @@
             }
           },
           "weight_kg_m2": 72,
-          "gwp_kgco2e_m2": 3.7872,
+          "gwp_kgco2e_m2": 19.152,
           "thermalResistance_m2K_W": 0.18181818181818182,
-          "baseGwp_kgco2e_m2": 3.7872,
+          "baseGwp_kgco2e_m2": 19.152,
           "serviceLife_years": 60,
-          "replacementFactor": 1
+          "replacementFactor": 1,
+          "isSupportStructure": false
         },
         {
           "order": 6,
@@ -288,25 +294,28 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7292,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
-          "baseGwp_kgco2e_m2": 0.8646,
+          "baseGwp_kgco2e_m2": 2.4915,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccDescription": "Revêtements de parois",
+          "isSupportStructure": false
         }
       ],
-      "systemTypeId": null
+      "systemTypeId": "concrete"
     },
     "fire_resistance": {
       "REI_min": null,
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
+      "wood_stud_compression": {
+        "error": "Calcul bois non applicable à la structure (zementgebunden, metallisch)."
+      },
       "wood_capacity_table": null
     },
     "source": {
@@ -337,8 +346,8 @@
     "categoryId": "outer_wall",
     "thickness_mm": 308.9,
     "weight_kg_m2": 46.40795194244605,
-    "uValue_W_m2K": 0.15577240943428483,
-    "gwp_kgco2e_m2": 4.514966908489209,
+    "uValue_W_m2K": 0.15524386983105448,
+    "gwp_kgco2e_m2": 25.926156492086335,
     "spanMax_m": null,
     "claddingId": "without_covering",
     "sheathingId": "sheathed_on_both_sides",
@@ -396,14 +405,16 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": null,
-          "gwp_kgco2e_m2": 0.9137520000000001,
+          "gwp_kgco2e_m2": 2.6548200000000004,
           "thermalResistance_m2K_W": 0.16153846153846155,
-          "baseGwp_kgco2e_m2": 0.9137520000000001,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 1.3274100000000002,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "isSupportStructure": false
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 1,
@@ -432,14 +443,16 @@
           "colorCode": "Transparent",
           "fiberDirection": "lengthwise",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.12521438848920866,
+          "gwp_kgco2e_m2": 0.48788489208633096,
           "thermalResistance_m2K_W": 0.15384615384615385,
-          "baseGwp_kgco2e_m2": 0.12521438848920866,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 0.24394244604316548,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "isSupportStructure": false
+          "isSupportStructure": false,
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 2,
@@ -468,11 +481,11 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "09.008",
-          "gwp_kgco2e_m2": 0.076912,
+          "gwp_kgco2e_m2": 4.14368,
           "thermalResistance_m2K_W": 0.0012121212121212121,
-          "baseGwp_kgco2e_m2": 0.076912,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.07184,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "isSupportStructure": false,
@@ -506,16 +519,16 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.012",
-          "gwp_kgco2e_m2": 0.26111999999999996,
+          "gwp_kgco2e_m2": 4.88448,
           "thermalResistance_m2K_W": 2.2222222222222223,
-          "baseGwp_kgco2e_m2": 0.26111999999999996,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 2.44224,
+          "serviceLife_years": 40,
+          "replacementFactor": 2,
           "time_fire_start_min": null,
           "time_burning_min": null,
           "isSupportStructure": false,
-          "ecccId": "E02.02",
-          "ecccDescription": "Systèmes d ' isolation thermique extérieure"
+          "ecccId": "E02.03",
+          "ecccDescription": "Bardages"
         },
         {
           "order": 4,
@@ -547,11 +560,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
           "time_burning_min": null,
-          "isSupportStructure": false
+          "isSupportStructure": false,
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 5,
@@ -580,10 +595,10 @@
           "colorCode": "Transparent",
           "fiberDirection": "lengthwise",
           "kbobId": "07.011",
-          "gwp_kgco2e_m2": 0.66834432,
+          "gwp_kgco2e_m2": 1.3020671999999998,
           "thermalResistance_m2K_W": 1.2307692307692308,
-          "baseGwp_kgco2e_m2": 0.66834432,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 1.3020671999999998,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
@@ -618,17 +633,17 @@
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "10.010",
-          "gwp_kgco2e_m2": 0.7636992000000001,
+          "gwp_kgco2e_m2": 1.2959744000000002,
           "thermalResistance_m2K_W": 4.444444444444445,
-          "baseGwp_kgco2e_m2": 0.7636992000000001,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 1.2959744000000002,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "isSupportStructure": false,
           "protectsSupportSidesFromFire": true,
-          "ecccId": "G03.01",
-          "ecccDescription": "Supports pour revêtements de parois"
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 7,
@@ -660,13 +675,13 @@
           "gwp_kgco2e_m2": 0,
           "thermalResistance_m2K_W": null,
           "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": null,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "isSupportStructure": false,
-          "ecccId": "G03.01",
-          "ecccDescription": "Supports pour revêtements de parois"
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 8,
@@ -695,16 +710,16 @@
           "colorCode": "BCBCBC",
           "fiberDirection": null,
           "kbobId": "07.015",
-          "gwp_kgco2e_m2": 0.8793,
+          "gwp_kgco2e_m2": 4.761,
           "thermalResistance_m2K_W": 0.10714285714285712,
-          "baseGwp_kgco2e_m2": 0.8793,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 4.761,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "isSupportStructure": false,
-          "ecccId": "G03.01",
-          "ecccDescription": "Supports pour revêtements de parois"
+          "ecccId": "C02.01",
+          "ecccDescription": "Parois porteuses extérieures"
         },
         {
           "order": 9,
@@ -733,16 +748,16 @@
           "colorCode": "80E6F2",
           "fiberDirection": null,
           "kbobId": "03.008",
-          "gwp_kgco2e_m2": 0.8266249999999999,
+          "gwp_kgco2e_m2": 6.39625,
           "thermalResistance_m2K_W": 0.05,
-          "baseGwp_kgco2e_m2": 0.8266249999999999,
-          "serviceLife_years": null,
-          "replacementFactor": 1,
+          "baseGwp_kgco2e_m2": 3.198125,
+          "serviceLife_years": 30,
+          "replacementFactor": 2,
           "time_fire_start_min": 0,
           "time_burning_min": 15,
           "isSupportStructure": false,
-          "ecccId": "G03.02",
-          "ecccDescription": "Revêtements de parois"
+          "ecccId": "G03.01",
+          "ecccDescription": "Supports pour revêtements de parois"
         }
       ],
       "systemTypeId": "stud"
@@ -764,6 +779,9 @@
           "eccentricity_along_b_mm": 0,
           "woodFamily": "solid_softwood",
           "woodClass": "C24",
+          "materialCategoryIds": [
+            "holz"
+          ],
           "fireRatings_min": [
             30,
             60
@@ -777,21 +795,23 @@
           "h_mm": 160,
           "eccentricity_along_h_mm": 0,
           "eccentricity_along_b_mm": 0,
-          "Nmax_flamb_kN": 18.31978093670777,
+          "Nmax_flamb_kN": 89.1752503218285,
           "Nmax_interaction_kN": 119.04000000000002,
-          "Nmax_NT_kN": 18.31978093670777,
+          "Nmax_NT_kN": 89.1752503218285,
           "buckling": {
             "A_mm2": 9600,
             "Iy_mm4": 20480000,
             "Iz_mm4": 2880000,
             "iy_mm": 46.188021535170066,
             "iz_mm": 17.320508075688775,
-            "i_min_mm": 17.320508075688775,
-            "lambda": 144.33756729740642,
-            "lambda_rel": 2.447503356802015,
-            "kc": 0.1538960092129349,
-            "Nmax_flamb_N": 18319.780936707768,
-            "Nmax_flamb_kN": 18.31978093670777
+            "i_thickness_mm": 46.188021535170066,
+            "bucklingDirection": "wall_thickness_h",
+            "bracedOtherDirection": true,
+            "lambda": 54.12658773652741,
+            "lambda_rel": 0.9178137588007557,
+            "kc": 0.7491200463863281,
+            "Nmax_flamb_N": 89175.2503218285,
+            "Nmax_flamb_kN": 89.1752503218285
           },
           "interaction": {
             "A_mm2": 9600,
@@ -813,9 +833,9 @@
             "d_eff_mm": 19,
             "eccentricity_along_h_mm": 0,
             "eccentricity_along_b_mm": 0,
-            "Nmax_flamb_Rt_kN": 29.0597525108527,
+            "Nmax_flamb_Rt_kN": 124.32395370553418,
             "Nmax_interaction_Rt_kN": 188.8272,
-            "Nmax_Rt_kN": 29.0597525108527,
+            "Nmax_Rt_kN": 124.32395370553418,
             "bucklingFire": {
               "fireMinutes": 30,
               "valid": true,
@@ -825,20 +845,22 @@
               "bfi_mm": 60,
               "hfi_mm": 141,
               "A_fi_mm2": 8460,
-              "Nmax_flamb_Rt_N": 29059.7525108527,
-              "Nmax_flamb_Rt_kN": 29.0597525108527,
+              "Nmax_flamb_Rt_N": 124323.95370553418,
+              "Nmax_flamb_Rt_kN": 124.32395370553418,
               "bucklingResidualAtNormalTemperature": {
                 "A_mm2": 8460,
                 "Iy_mm4": 14016105,
                 "Iz_mm4": 2538000,
                 "iy_mm": 40.703193977868615,
                 "iz_mm": 17.320508075688775,
-                "i_min_mm": 17.320508075688775,
-                "lambda": 144.33756729740642,
-                "lambda_rel": 2.447503356802015,
-                "kc": 0.1538960092129349,
-                "Nmax_flamb_N": 16144.306950473721,
-                "Nmax_flamb_kN": 16.144306950473723
+                "i_thickness_mm": 40.703193977868615,
+                "bucklingDirection": "wall_thickness_h",
+                "bracedOtherDirection": true,
+                "lambda": 61.42024140315168,
+                "lambda_rel": 1.041490790128517,
+                "kc": 0.6584006631752956,
+                "Nmax_flamb_N": 69068.8631697412,
+                "Nmax_flamb_kN": 69.0688631697412
               }
             },
             "interactionFire": {
@@ -867,9 +889,9 @@
             "d_eff_mm": 43,
             "eccentricity_along_h_mm": 0,
             "eccentricity_along_b_mm": 0,
-            "Nmax_flamb_Rt_kN": 24.1134116579416,
+            "Nmax_flamb_Rt_kN": 79.76113970793706,
             "Nmax_interaction_Rt_kN": 156.6864,
-            "Nmax_Rt_kN": 24.1134116579416,
+            "Nmax_Rt_kN": 79.76113970793706,
             "bucklingFire": {
               "fireMinutes": 60,
               "valid": true,
@@ -879,20 +901,22 @@
               "bfi_mm": 60,
               "hfi_mm": 117,
               "A_fi_mm2": 7020,
-              "Nmax_flamb_Rt_N": 24113.4116579416,
-              "Nmax_flamb_Rt_kN": 24.1134116579416,
+              "Nmax_flamb_Rt_N": 79761.13970793707,
+              "Nmax_flamb_Rt_kN": 79.76113970793706,
               "bucklingResidualAtNormalTemperature": {
                 "A_mm2": 7020,
                 "Iy_mm4": 8008065,
                 "Iz_mm4": 2106000,
                 "iy_mm": 33.77499074759311,
                 "iz_mm": 17.320508075688775,
-                "i_min_mm": 17.320508075688775,
-                "lambda": 144.33756729740642,
-                "lambda_rel": 2.447503356802015,
-                "kc": 0.1538960092129349,
-                "Nmax_flamb_N": 13396.339809967556,
-                "Nmax_flamb_kN": 13.396339809967555
+                "i_thickness_mm": 33.77499074759311,
+                "bucklingDirection": "wall_thickness_h",
+                "bracedOtherDirection": true,
+                "lambda": 74.01926528072126,
+                "lambda_rel": 1.2551299265651361,
+                "kc": 0.5090495391299887,
+                "Nmax_flamb_N": 44311.74428218726,
+                "Nmax_flamb_kN": 44.31174428218726
               }
             },
             "interactionFire": {
@@ -925,45 +949,45 @@
           {
             "label": "Force maximale par montant",
             "normal_temperature": {
-              "value": 18.32,
+              "value": 89.18,
               "unit": "kN"
             },
             "R30": {
-              "value": 29.06,
+              "value": 124.32,
               "unit": "kN"
             },
             "R60": {
-              "value": 24.11,
+              "value": 79.76,
               "unit": "kN"
             }
           },
           {
             "label": "Force maximale par metre",
             "normal_temperature": {
-              "value": 29.31,
+              "value": 142.68,
               "unit": "kN/m"
             },
             "R30": {
-              "value": 46.5,
+              "value": 198.92,
               "unit": "kN/m"
             },
             "R60": {
-              "value": 38.58,
+              "value": 127.62,
               "unit": "kN/m"
             }
           },
           {
             "label": "Force par flambage",
             "normal_temperature": {
-              "value": 18.32,
+              "value": 89.18,
               "unit": "kN"
             },
             "R30": {
-              "value": 29.06,
+              "value": 124.32,
               "unit": "kN"
             },
             "R60": {
-              "value": 24.11,
+              "value": 79.76,
               "unit": "kN"
             }
           },
@@ -1049,7 +1073,8 @@
         "workingtitle": null
       }
     },
-    "subcategoryId": "above_ground"
+    "subcategoryId": "above_ground",
+    "__sourceFile": "components_custom.json"
   },
   {
     "id": "b3890457-c12a-46b7-93b7-8efa1f8c437a",
@@ -1059,7 +1084,7 @@
     "thickness_mm": 527,
     "weight_kg_m2": 611.3850955414013,
     "uValue_W_m2K": 0.12536192403477409,
-    "gwp_kgco2e_m2": 73.15067464968155,
+    "gwp_kgco2e_m2": 176.32311464968154,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1118,13 +1143,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -1154,9 +1181,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2120000000000002,
+          "gwp_kgco2e_m2": 86.4,
           "thermalResistance_m2K_W": 6.0606060606060606,
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "baseGwp_kgco2e_m2": 86.4,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
@@ -1192,9 +1219,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
@@ -1269,9 +1296,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7292,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
-          "baseGwp_kgco2e_m2": 0.8646,
+          "baseGwp_kgco2e_m2": 2.4915,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -1321,7 +1348,7 @@
     "thickness_mm": 527,
     "weight_kg_m2": 611.3850955414013,
     "uValue_W_m2K": 0.12536192403477409,
-    "gwp_kgco2e_m2": 73.15067464968155,
+    "gwp_kgco2e_m2": 176.32311464968154,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1380,13 +1407,15 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.21816000000000002,
+          "gwp_kgco2e_m2": 8.208,
           "thermalResistance_m2K_W": 1.5789473684210527,
-          "baseGwp_kgco2e_m2": 0.21816000000000002,
-          "serviceLife_years": null,
+          "baseGwp_kgco2e_m2": 8.208,
+          "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "ecccId": "E01.01",
+          "ecccDescription": "Etanchéités contre terre"
         },
         {
           "order": 1,
@@ -1416,9 +1445,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.2120000000000002,
+          "gwp_kgco2e_m2": 86.4,
           "thermalResistance_m2K_W": 6.0606060606060606,
-          "baseGwp_kgco2e_m2": 1.2120000000000002,
+          "baseGwp_kgco2e_m2": 86.4,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
@@ -1454,9 +1483,9 @@
           "lifetime": 60,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 0.5852,
+          "gwp_kgco2e_m2": 7.3260000000000005,
           "thermalResistance_m2K_W": 0.006060606060606061,
-          "baseGwp_kgco2e_m2": 0.5852,
+          "baseGwp_kgco2e_m2": 7.3260000000000005,
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": null,
@@ -1531,9 +1560,9 @@
           "lifetime": 40,
           "eccc": null,
           "colorCode": null,
-          "gwp_kgco2e_m2": 1.7292,
+          "gwp_kgco2e_m2": 4.983,
           "thermalResistance_m2K_W": 0.0375,
-          "baseGwp_kgco2e_m2": 0.8646,
+          "baseGwp_kgco2e_m2": 2.4915,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,

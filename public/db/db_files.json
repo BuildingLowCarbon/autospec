@@ -3,4 +3,5 @@
   { "file": "components_btk_enriched.json", "label": "BauTeilKatalog" },
   { "file": "components_minergie_enriched.json", "label": "Minergie" },
   { "file": "components_lignum_selected.json", "label": "Lignum" }
+  ,{ "file": "components_generated.json", "label": "Variantes générées" }
 ]

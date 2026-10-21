@@ -25,10 +25,11 @@ const DEFAULT_FACTORS = {
   window_ventilation: '0.838',
 };
 
-const loadPersistedCriteria = () => {
+const loadPersistedCriteria = (storageKey = BUILDING_CRITERIA_STORAGE_KEY) => {
+  if (!storageKey) return {};
   if (typeof window === 'undefined') return {};
   try {
-    const parsed = JSON.parse(window.sessionStorage.getItem(BUILDING_CRITERIA_STORAGE_KEY) ?? '{}');
+    const parsed = JSON.parse(window.sessionStorage.getItem(storageKey) ?? '{}');
     return parsed && typeof parsed === 'object' ? parsed : {};
   } catch (error) {
     return {};
@@ -100,8 +101,19 @@ function PartitionRatioHelp({ lang }) {
   );
 }
 
-function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChange, onReset }) {
-  const persistedCriteria = useMemo(() => loadPersistedCriteria(), []);
+function BuildingCriteria({
+  lang = 'fr',
+  selectedCategories = [],
+  onCriteriaChange,
+  onStateChange,
+  onReset,
+  initialState = null,
+  storageKey = BUILDING_CRITERIA_STORAGE_KEY,
+}) {
+  const persistedCriteria = useMemo(
+    () => (initialState && typeof initialState === 'object' ? initialState : loadPersistedCriteria(storageKey)),
+    [],
+  );
   const [buildingType, setBuildingType] = useState(persistedCriteria.buildingType ?? 'single_family');
   const [neighborDistance, setNeighborDistance] = useState(persistedCriteria.neighborDistance ?? 'gt_10');
   const [acousticLevel, setAcousticLevel] = useState(persistedCriteria.acousticLevel ?? 'normal');
@@ -199,6 +211,7 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
         sre: resolvedSre,
         thermalEnvelopeArea,
         envelopeFactor,
+        windowsRatio: Math.max(0, Math.min(1, Number(factors.windows_ratio) || 0)),
         occupancyKey: 'A1_habitation',
         occupancyLabel: occupancy?.label ?? 'Habitation',
         occupancyLoadKnM2: Number(occupancy?.qk_kN_m2) || 0,
@@ -240,26 +253,28 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
   }, [onCriteriaChange, resolved]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    const state = {
+      buildingType,
+      neighborDistance,
+      acousticLevel,
+      uncertainty,
+      requiredSpan,
+      spanDirection,
+      floorLoadDistribution,
+      interiorBearingLinesOverride,
+      floorCount,
+      buildingLength,
+      buildingWidth,
+      partitionRate,
+      floorHeight,
+      sreOverride,
+      factors,
+      advancedOpen,
+    };
+    if (typeof onStateChange === 'function') onStateChange(state);
+    if (!storageKey || typeof window === 'undefined') return;
     try {
-      window.sessionStorage.setItem(BUILDING_CRITERIA_STORAGE_KEY, JSON.stringify({
-        buildingType,
-        neighborDistance,
-        acousticLevel,
-        uncertainty,
-        requiredSpan,
-        spanDirection,
-        floorLoadDistribution,
-        interiorBearingLinesOverride,
-        floorCount,
-        buildingLength,
-        buildingWidth,
-        partitionRate,
-        floorHeight,
-        sreOverride,
-        factors,
-        advancedOpen,
-      }));
+      window.sessionStorage.setItem(storageKey, JSON.stringify(state));
     } catch (error) {
       // Storage can be unavailable (for example in private browsing); the form remains usable.
     }
@@ -280,6 +295,8 @@ function BuildingCriteria({ lang = 'fr', selectedCategories = [], onCriteriaChan
     interiorBearingLinesOverride,
     sreOverride,
     uncertainty,
+    onStateChange,
+    storageKey,
   ]);
 
   const updateFactor = (key, value) => setFactors((current) => ({ ...current, [key]: value }));

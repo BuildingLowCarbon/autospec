@@ -7,6 +7,7 @@ export const ROOF_TYPES = [
 
 export const BUILDING_PARTS = [
   { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
+  { id: 'underground_roofs', label: 'Toiture souterraine', categories: ['underground_roof'] },
   { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
   { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
   { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
@@ -112,9 +113,12 @@ function BuildingDiagram({
             ) : (
               <>
               <path d="M69 78L252 78" />
-              <path d="M4 303H65M256 247H295M362 247H323" />
               </>
             )}
+          </g>
+
+          <g {...interactiveProps('underground_roofs', 'Sélectionner la toiture souterraine')} stroke={strokeFor('underground_roofs')} strokeWidth="4">
+            <path d="M4 303H65M256 247H295M362 247H323" />
           </g>
 
           <g {...interactiveProps('outer_walls', 'Sélectionner les murs extérieurs')} stroke={strokeFor('outer_walls')} strokeWidth="4">

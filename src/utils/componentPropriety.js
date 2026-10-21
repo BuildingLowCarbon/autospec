@@ -8,6 +8,7 @@ const SURFACE_RULE_BY_CATEGORY = {
   outer_wall: 'Rsi_Rse',
   steep_roof: 'Rsi_Rse',
   flat_roof_shed_roof: 'Rsi_Rse',
+  underground_roof: 'Rsi_Rse',
   floor_assembly: 'Rsi_Rse',
   balcony: 'Rsi_Rse',
   inner_wall: '2xRsi',

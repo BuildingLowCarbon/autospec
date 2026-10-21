@@ -5,6 +5,7 @@ import translations from '../language/translations';
 import LangContext from '../context/LangContext';
 import loadProducts from '../utils/loadProducts';
 import loadMaterials from '../utils/loadMaterials';
+import { calculateProductKbobIndicators } from '../utils/kbobIndicators';
 
 function Product() {
   const { id } = useParams();
@@ -24,6 +25,7 @@ function Product() {
   }, [id]);
 
   const materialById = useMemo(() => new Map(materials.map((m) => [String(m.id), m])), [materials]);
+  const kbobIndicators = useMemo(() => calculateProductKbobIndicators(product, materials), [product, materials]);
 
   if (!product) return <p>Chargement...</p>;
 
@@ -36,6 +38,9 @@ function Product() {
     if (Number.isNaN(num)) return 'N/A';
     return num.toFixed(decimals);
   };
+  const formatGwp = (value) => value === null
+    ? 'N/A'
+    : `${Number(value).toLocaleString('fr-CH', { maximumFractionDigits: 4 })} kg CO₂-eq/${kbobIndicators.ref || unit || 'unité'}`;
 
   const renderMaterialLink = (materialRef) => {
     const mat = materialById.get(String(materialRef?.id));
@@ -66,6 +71,9 @@ function Product() {
         <p>
           <strong>KBOB ID :</strong> {kbobId ?? 'N/A'}
         </p>
+        <p><strong>GWP :</strong> {formatGwp(kbobIndicators.gwp)}</p>
+        <p><strong>GWP-pro :</strong> {formatGwp(kbobIndicators.gwpPro)}</p>
+        <p><strong>GWP-dis :</strong> {formatGwp(kbobIndicators.gwpDis)}</p>
         <p>
           <strong>SIA ID :</strong> {siaId ?? 'N/A'}
         </p>

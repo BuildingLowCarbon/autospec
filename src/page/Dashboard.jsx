@@ -10,6 +10,7 @@ import { applyCustomFireTimingToComponent } from '../utils/customFireTiming';
 import publicBase from '../utils/publicBase';
 import {
   deleteFileCustomComponent,
+  deleteFileSourceComponent,
   deleteLocalCustomComponent,
   writeDbComponentsFile,
   writeLocalCustomComponents,
@@ -41,7 +42,7 @@ const cardStyle = {
 };
 
 const fetchJsonArray = async (path) => {
-  const res = await fetch(path);
+  const res = await fetch(path, { cache: 'no-store' });
   if (!res.ok) throw new Error(`Chargement impossible: ${path} (${res.status})`);
   const payload = await res.json();
   return Array.isArray(payload) ? payload : [];
@@ -86,12 +87,14 @@ const pickSelectedValues = (base, calculated, timed, selectedRecalc) => {
 export default function Dashboard() {
   const [sources, setSources] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
+  const [listedFiles, setListedFiles] = useState([]);
   const [selectedRecalc, setSelectedRecalc] = useState(
     RECALC_OPTIONS.reduce((acc, option) => ({ ...acc, [option.key]: true }), {}),
   );
   const [materials, setMaterials] = useState([]);
   const [products, setProducts] = useState([]);
   const [customItems, setCustomItems] = useState([]);
+  const [databaseItems, setDatabaseItems] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
@@ -106,11 +109,16 @@ export default function Dashboard() {
         loadMaterials(),
         loadProducts(),
       ]);
-      setSources(dbSources);
-      setSelectedFiles(dbSources.map((source) => source.file));
+      const systemSources = dbSources.filter((source) => source.file?.endsWith('.json') && !source.file.includes(':'));
+      setSources(systemSources);
+      setSelectedFiles(systemSources.map((source) => source.file));
+      setListedFiles(systemSources.map((source) => source.file));
       setMaterials(materialsJson);
       setProducts(productsJson);
-      const fileCustomItems = await fetchJsonArray('/db/components_custom.json');
+      const loadedDatabases = await Promise.all(systemSources.map(async (source) => [source.file, await fetchJsonArray(`/db/${source.file}`)]));
+      const itemsByFile = Object.fromEntries(loadedDatabases);
+      setDatabaseItems(itemsByFile);
+      const fileCustomItems = itemsByFile['components_custom.json'] || [];
       writeLocalCustomComponents(fileCustomItems);
       invalidateComponentsCache();
       setCustomItems(fileCustomItems);
@@ -123,20 +131,30 @@ export default function Dashboard() {
     [sources, selectedFiles],
   );
 
-  const filteredCustomItems = useMemo(() => {
+  const selectedComponents = useMemo(() => listedFiles.flatMap((file) => {
+    const items = file === 'components_custom.json' ? customItems : (databaseItems[file] || []);
+    return items.map((item) => ({ ...item, __dashboardSourceFile: file }));
+  }), [customItems, databaseItems, listedFiles]);
+
+  const filteredComponents = useMemo(() => {
     const query = normalizeSearch(searchTerm);
-    if (!query) return customItems;
-    return customItems.filter((item) => {
+    if (!query) return selectedComponents;
+    return selectedComponents.filter((item) => {
       const title = normalizeSearch(getComponentTitle(item));
       const id = normalizeSearch(item?.id);
-      return title.includes(query) || id.includes(query);
+      const source = normalizeSearch(item.__dashboardSourceFile);
+      return title.includes(query) || id.includes(query) || source.includes(query);
     });
-  }, [customItems, searchTerm]);
+  }, [searchTerm, selectedComponents]);
 
   const toggleFile = (file) => {
     setSelectedFiles((prev) =>
       prev.includes(file) ? prev.filter((item) => item !== file) : [...prev, file],
     );
+  };
+
+  const toggleListedFile = (file) => {
+    setListedFiles((current) => current.includes(file) ? current.filter((item) => item !== file) : [...current, file]);
   };
 
   const toggleRecalc = (key) => {
@@ -148,6 +166,7 @@ export default function Dashboard() {
     writeLocalCustomComponents(items);
     invalidateComponentsCache();
     setCustomItems(items);
+    setDatabaseItems((current) => ({ ...current, 'components_custom.json': items }));
     return items;
   };
 
@@ -176,6 +195,7 @@ export default function Dashboard() {
       }));
 
       await Promise.all(recalculatedDatabases.map(({ file, items }) => writeDbComponentsFile(file, items)));
+      setDatabaseItems((current) => ({ ...current, ...Object.fromEntries(recalculatedDatabases.map(({ file, items }) => [file, items])) }));
       invalidateComponentsCache();
       if (selectedFiles.includes('components_custom.json')) await refreshCustomItems();
       const recalculatedCount = recalculatedDatabases.reduce((count, database) => count + database.items.length, 0);
@@ -197,6 +217,30 @@ export default function Dashboard() {
       invalidateComponentsCache();
       await refreshCustomItems();
       setStatus('Element custom supprime.');
+    } catch (error) {
+      setStatus(`Erreur suppression: ${error.message}`);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const handleDeleteComponent = async (sourceFile, componentId) => {
+    if (!sourceFile || !componentId) return;
+    const component = (sourceFile === 'components_custom.json' ? customItems : databaseItems[sourceFile] || [])
+      .find((item) => String(item.id) === String(componentId));
+    const title = getComponentTitle(component);
+    if (typeof window !== 'undefined' && !window.confirm(`Supprimer définitivement « ${title} » de ${sourceFile} ? Une sauvegarde de la base sera créée.`)) return;
+    if (sourceFile === 'components_custom.json') return handleDeleteCustom(componentId);
+    setBusy(true);
+    setStatus('Suppression en cours...');
+    try {
+      const result = await deleteFileSourceComponent(sourceFile, componentId);
+      setDatabaseItems((current) => ({
+        ...current,
+        [sourceFile]: (current[sourceFile] || []).filter((item) => String(item.id) !== String(componentId)),
+      }));
+      invalidateComponentsCache();
+      setStatus(`Composant supprimé de ${sourceFile}. Sauvegarde : ${result.backupDirectory}`);
     } catch (error) {
       setStatus(`Erreur suppression: ${error.message}`);
     } finally {
@@ -256,7 +300,11 @@ export default function Dashboard() {
         </section>
 
         <section style={cardStyle}>
-          <h3>Elements Custom ({filteredCustomItems.length}/{customItems.length})</h3>
+          <h3>Composants des bases sélectionnées ({filteredComponents.length}/{selectedComponents.length})</h3>
+          <p>Les composants sont supprimés de leur base d’origine. Une sauvegarde est créée avant chaque suppression d’une base système.</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', marginBottom: '12px' }}>
+            {sources.map((source) => <label key={source.file}><input type="checkbox" checked={listedFiles.includes(source.file)} onChange={() => toggleListedFile(source.file)} /> {source.label}</label>)}
+          </div>
           <input
             type="search"
             value={searchTerm}
@@ -282,19 +330,19 @@ export default function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {filteredCustomItems.map((item) => (
-                  <tr key={item.id}>
+                {filteredComponents.map((item) => (
+                  <tr key={`${item.__dashboardSourceFile}:${item.id}`}>
                     <td style={{ border: '1px solid #ccc', padding: '8px' }}>{getComponentTitle(item)}</td>
                     <td style={{ border: '1px solid #ccc', padding: '8px' }}>
                       <Link to={`/element/${item.id}`}>{item.id}</Link>
                     </td>
                     <td style={{ border: '1px solid #ccc', padding: '8px' }}>
-                      {item.source?.databaseId || item.source?.name || 'N/A'}
+                      {sources.find((source) => source.file === item.__dashboardSourceFile)?.label || item.__dashboardSourceFile}
                     </td>
                     <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
                       <button
                         type="button"
-                        onClick={() => handleDeleteCustom(item.id)}
+                        onClick={() => handleDeleteComponent(item.__dashboardSourceFile, item.id)}
                         disabled={busy}
                         style={buttonStyle}
                       >
