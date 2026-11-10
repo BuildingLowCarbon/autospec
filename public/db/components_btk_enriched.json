@@ -6571,10 +6571,10 @@
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
-    "thickness_mm": 463.3,
-    "weight_kg_m2": 714.2305222929937,
-    "uValue_W_m2K": 0.251867259247097,
-    "gwp_kgco2e_m2": 144.13776675159235,
+    "thickness_mm": 447.3,
+    "weight_kg_m2": 706.3255222929937,
+    "uValue_W_m2K": 0.2594060148619617,
+    "gwp_kgco2e_m2": 127.95776675159235,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -6607,84 +6607,6 @@
       "layers": [
         {
           "order": 0,
-          "productId": "8BEDBE96-CDE0-4130-919E-AD6D16929C47",
-          "role": "Revêtement de sol",
-          "thickness_mm": 15,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Parquet, 3 plis, vitrifié d'usine, 15 mm [m2]"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 7.904999999999999,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 16.18,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "isSupportStructure": false,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.09,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 1,
-          "productId": "23645A0C-290A-4316-B9BC-1F2B16708D76",
-          "role": "Colle",
-          "thickness_mm": 1,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Colle de construction/mortier d'enrobage biologique"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 0,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null,
-          "isSupportStructure": false,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 2,
           "productId": "49068C8B-14F0-4E8A-A523-334E3333FBB5",
           "role": "Sous-couche",
           "thickness_mm": 60,
@@ -6693,15 +6615,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Chape d'anhydrite, 60 mm"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6720,10 +6646,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "04.005"
         },
         {
-          "order": 3,
+          "order": 1,
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "role": "Couche de séparation",
           "thickness_mm": 0.3,
@@ -6732,15 +6659,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Feuille de polyéthylène (PE)"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6759,10 +6690,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "09.007"
         },
         {
-          "order": 4,
+          "order": 2,
           "productId": "6ACDE853-5F6D-4291-B390-B3B7555CD6ED",
           "role": "Isolation contre les bruits d'impact",
           "thickness_mm": 20,
@@ -6771,15 +6703,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Laine de verre, ρ 100 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6798,10 +6734,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.001"
         },
         {
-          "order": 5,
+          "order": 3,
           "productId": "6ACDE853-5F6D-4291-B390-B3B7555CD6ED",
           "role": "Isolation porteuse posée librement",
           "thickness_mm": 120,
@@ -6810,15 +6747,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Laine de verre, ρ 100 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6837,10 +6778,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.001"
         },
         {
-          "order": 6,
+          "order": 4,
           "productId": "59344C7A-9F39-4EDC-B4DE-5F126504D7D9",
           "role": "Dalle",
           "thickness_mm": 240,
@@ -6849,15 +6791,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6876,10 +6822,11 @@
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": null
         },
         {
-          "order": 7,
+          "order": 5,
           "productId": "3EEB6386-8BDD-48FB-A0A2-4979459D3888",
           "role": "Revêtement intérieur",
           "thickness_mm": 7,
@@ -6888,15 +6835,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Enduit en plâtre et chaux"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -6915,7 +6866,8 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "kbobId": "04.017"
         }
       ],
       "systemTypeId": "concrete"
@@ -6957,10 +6909,10 @@
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
-    "thickness_mm": 463.3,
-    "weight_kg_m2": 714.2305222929937,
-    "uValue_W_m2K": 0.2350657373145738,
-    "gwp_kgco2e_m2": 136.18576675159235,
+    "thickness_mm": 447.3,
+    "weight_kg_m2": 706.3255222929937,
+    "uValue_W_m2K": 0.2416191666481286,
+    "gwp_kgco2e_m2": 120.00576675159235,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -6993,84 +6945,6 @@
       "layers": [
         {
           "order": 0,
-          "productId": "8BEDBE96-CDE0-4130-919E-AD6D16929C47",
-          "role": "Revêtement de sol",
-          "thickness_mm": 15,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Parquet, 3 plis, vitrifié d'usine, 15 mm [m2]"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 7.904999999999999,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 16.18,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "ecccId": "G02.02",
-          "ecccDescription": "Revêtements de sols",
-          "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 8.09,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 1,
-          "productId": "23645A0C-290A-4316-B9BC-1F2B16708D76",
-          "role": "Colle",
-          "thickness_mm": 1,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Colle de construction/mortier d'enrobage biologique"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 0,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null,
-          "isSupportStructure": false,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 2,
           "productId": "49068C8B-14F0-4E8A-A523-334E3333FBB5",
           "role": "Sous-couche",
           "thickness_mm": 60,
@@ -7079,15 +6953,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Chape d'anhydrite, 60 mm"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7106,10 +6984,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "04.005"
         },
         {
-          "order": 3,
+          "order": 1,
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "role": "Couche de séparation",
           "thickness_mm": 0.3,
@@ -7118,15 +6997,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Feuille de polyéthylène (PE)"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7145,10 +7028,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "09.007"
         },
         {
-          "order": 4,
+          "order": 2,
           "productId": "10F845B0-0E0B-48AE-A7E7-F820F71DF115",
           "role": "Isolation contre les bruits d'impact",
           "thickness_mm": 20,
@@ -7157,15 +7041,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Laine de roche, ρ 100 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7184,10 +7072,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.008"
         },
         {
-          "order": 5,
+          "order": 3,
           "productId": "10F845B0-0E0B-48AE-A7E7-F820F71DF115",
           "role": "Isolation porteuse posée librement",
           "thickness_mm": 120,
@@ -7196,15 +7085,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Laine de roche, ρ 100 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7223,10 +7116,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.008"
         },
         {
-          "order": 6,
+          "order": 4,
           "productId": "59344C7A-9F39-4EDC-B4DE-5F126504D7D9",
           "role": "Dalle",
           "thickness_mm": 240,
@@ -7235,15 +7129,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7262,10 +7160,11 @@
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": null
         },
         {
-          "order": 7,
+          "order": 5,
           "productId": "3EEB6386-8BDD-48FB-A0A2-4979459D3888",
           "role": "Revêtement intérieur",
           "thickness_mm": 7,
@@ -7274,15 +7173,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Enduit en plâtre et chaux"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7301,7 +7204,8 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "kbobId": "04.017"
         }
       ],
       "systemTypeId": "concrete"
@@ -7343,10 +7247,10 @@
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
-    "thickness_mm": 463.3,
-    "weight_kg_m2": 705.8305222929936,
-    "uValue_W_m2K": 0.2151810432280767,
-    "gwp_kgco2e_m2": 171.32176675159232,
+    "thickness_mm": 447.3,
+    "weight_kg_m2": 697.9255222929936,
+    "uValue_W_m2K": 0.22065971093548084,
+    "gwp_kgco2e_m2": 155.14176675159234,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -7379,84 +7283,6 @@
       "layers": [
         {
           "order": 0,
-          "productId": "8BEDBE96-CDE0-4130-919E-AD6D16929C47",
-          "role": "Revêtement de sol",
-          "thickness_mm": 15,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Parquet, 3 plis, vitrifié d'usine, 15 mm [m2]"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 7.904999999999999,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 16.18,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "isSupportStructure": false,
-          "ecccId": "G02.02",
-          "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.09,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 1,
-          "productId": "23645A0C-290A-4316-B9BC-1F2B16708D76",
-          "role": "Colle",
-          "thickness_mm": 1,
-          "width_mm": null,
-          "spacing_mm": null,
-          "fiberDirection": null,
-          "translations": {
-            "fr": {
-              "description": "Colle de construction/mortier d'enrobage biologique"
-            },
-            "de": {
-              "description": ""
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "structure": "on-lying",
-          "weight_kg_m2": 0,
-          "reactionToFire": null,
-          "lifetime": 40,
-          "eccc": null,
-          "colorCode": null,
-          "gwp_kgco2e_m2": 0,
-          "thermalResistance_m2K_W": null,
-          "isSupportStructure": false,
-          "ecccId": "G02.01",
-          "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 0,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 2,
           "productId": "49068C8B-14F0-4E8A-A523-334E3333FBB5",
           "role": "Sous-couche",
           "thickness_mm": 60,
@@ -7465,15 +7291,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Chape d'anhydrite, 60 mm"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7492,10 +7322,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "04.005"
         },
         {
-          "order": 3,
+          "order": 1,
           "productId": "CA411C5E-F65F-41CD-B703-770DDE60754B",
           "role": "Couche de séparation",
           "thickness_mm": 0.3,
@@ -7504,15 +7335,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Feuille de polyéthylène (PE)"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7531,10 +7366,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "09.007"
         },
         {
-          "order": 4,
+          "order": 2,
           "productId": "10F845B0-0E0B-48AE-A7E7-F820F71DF115",
           "role": "Isolation contre les bruits d'impact",
           "thickness_mm": 20,
@@ -7543,15 +7379,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Laine de roche, ρ 100 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7570,10 +7410,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.008"
         },
         {
-          "order": 5,
+          "order": 3,
           "productId": "24FDAE1F-EE69-4556-AF71-9DF208E217B3",
           "role": "Isolation porteuse posée librement",
           "thickness_mm": 120,
@@ -7582,15 +7423,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Polystyrène expansé (EPS), ρ 30 [kg/m3]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7609,10 +7454,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.004"
         },
         {
-          "order": 6,
+          "order": 4,
           "productId": "59344C7A-9F39-4EDC-B4DE-5F126504D7D9",
           "role": "Dalle",
           "thickness_mm": 240,
@@ -7621,15 +7467,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Dalle en béton d=18cm (Fe 80kg/m3) [m2]"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7648,10 +7498,11 @@
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": null
         },
         {
-          "order": 7,
+          "order": 5,
           "productId": "3EEB6386-8BDD-48FB-A0A2-4979459D3888",
           "role": "Revêtement intérieur",
           "thickness_mm": 7,
@@ -7660,15 +7511,19 @@
           "fiberDirection": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": "Enduit en plâtre et chaux"
             },
             "de": {
+              "name": "",
               "description": ""
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -7687,7 +7542,8 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "kbobId": "04.017"
         }
       ],
       "systemTypeId": "concrete"
@@ -11414,7 +11270,8 @@
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "E01.02",
-          "ecccDescription": "Isolations thermiques contre terre"
+          "ecccDescription": "Isolations thermiques contre terre",
+          "layerFunctionId": "insulation"
         },
         {
           "order": 2,
@@ -11679,7 +11536,8 @@
           "time_fire_start_min": null,
           "time_burning_min": null,
           "ecccId": "E01.02",
-          "ecccDescription": "Isolations thermiques contre terre"
+          "ecccDescription": "Isolations thermiques contre terre",
+          "layerFunctionId": "insulation"
         },
         {
           "order": 2,
@@ -12059,7 +11917,8 @@
           "time_fire_start_min": 15,
           "time_burning_min": 0,
           "ecccId": "G03.01",
-          "ecccDescription": "Supports pour revêtements de parois"
+          "ecccDescription": "Supports pour revêtements de parois",
+          "layerFunctionId": "insulation"
         },
         {
           "order": 5,

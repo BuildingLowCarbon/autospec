@@ -252,7 +252,7 @@ export const buildVariantCandidates = ({
           airborneSound: { Rw_dB: null, c100_3150_dB: null, c50_3150_dB: null, ctr100_3150_dB: null },
           impactSound: { Lnw_dB: null, ci100_2500_dB: null, ci50_2500_dB: null },
         },
-        source: { name: 'AutoSpec – variantes générées', databaseId: 'generated', externalId: null },
+        source: { name: 'TypoBuildZero', databaseId: 'generated', externalId: null },
         generated: true,
         generatedFrom: {
           structureSignature: structureSignature(template),

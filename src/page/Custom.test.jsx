@@ -4,23 +4,25 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import Custom from './Custom';
 
-const mocks = vi.hoisted(() => ({ request: vi.fn(), navigate: vi.fn(), role: 'admin' }));
+const mocks = vi.hoisted(() => ({ request: vi.fn(), navigate: vi.fn(), role: 'admin', materials: [], components: [] }));
 vi.mock('react-router-dom', async (original) => ({ ...(await original()), useNavigate: () => mocks.navigate }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => ({
   user: { id: 'user', role: mocks.role }, can: () => mocks.role === 'admin', request: mocks.request,
 }) }));
 vi.mock('../components/Header', () => ({ default: () => null }));
 vi.mock('../components/Graphic', () => ({ ViewSVG: () => null, DEFAULT_PX_PER_MM_X: 1 }));
-vi.mock('../utils/loadMaterials', () => ({ default: async () => [] }));
+vi.mock('../utils/loadMaterials', () => ({ default: async () => mocks.materials }));
 vi.mock('../utils/loadProducts', () => ({ default: async () => [] }));
 vi.mock('../utils/loadComponents', () => ({
-  default: async () => [{ id: 'original', categoryId: 'floor_assembly', __sourceFile: 'components_lignum_selected.json', structure: { layers: [] } }],
+  default: async () => mocks.components,
   invalidateComponentsCache: vi.fn(),
   fetchDbSources: async () => [{ file: 'components_custom.json', label: 'Custom' }, { file: 'components_minergie_enriched.json', label: 'Minergie' }],
 }));
 
 beforeEach(() => {
   mocks.role = 'admin';
+  mocks.materials = [];
+  mocks.components = [{ id: 'original', categoryId: 'floor_assembly', __sourceFile: 'components_lignum_selected.json', structure: { layers: [] } }];
   mocks.navigate.mockClear();
   mocks.request.mockReset().mockImplementation(async (url, options) => {
     if (url === '/api/organizations') return { organizations: [] };
@@ -35,6 +37,39 @@ afterEach(cleanup);
 const open = (id = 'new') => render(<MemoryRouter initialEntries={[`/custom/${id}`]}><Routes><Route path="/custom/:id" element={<Custom />} /></Routes></MemoryRouter>);
 
 describe('destination des nouveaux composants', () => {
+  it('remplace une ancienne référence KBOB lors du changement de matériau', async () => {
+    mocks.materials = [
+      { id: 'old', kbobId: '03.007', density_kg_m3: 1200, workingtitle: 'Ancien matériau' },
+      { id: 'replacement', kbobId: '03.007.01', density_kg_m3: 1200, workingtitle: 'Nouveau matériau' },
+    ];
+    mocks.components[0].structure.layers = [{
+      order: 0, productId: 'old', kbobId: '03.007', thickness_mm: 15, structure: 'on-lying', ecccId: 'G03.01',
+    }];
+    open('original');
+    const material = await screen.findByRole('combobox', { name: 'Matériau / produit' });
+    fireEvent.change(material, { target: { value: 'replacement' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Dupliquer composant' }));
+    await waitFor(() => expect(mocks.request).toHaveBeenCalledWith('/api/content/components', expect.objectContaining({ method: 'POST' })));
+    const payload = JSON.parse(mocks.request.mock.calls.find(([url]) => url === '/api/content/components')[1].body);
+    const layer = payload.item.structure.layers[0];
+    expect(layer.productId).toBe('replacement');
+    expect(layer.kbobId).toBe('03.007.01');
+    expect(layer.gwp_kgco2e_m2).toBeCloseTo(12.06);
+    expect(mocks.components[0].structure.layers[0].kbobId).toBe('03.007');
+  });
+
+  it('efface l’ancienne référence KBOB quand le matériau est retiré', async () => {
+    mocks.materials = [{ id: 'old', kbobId: '03.007', density_kg_m3: 1200 }];
+    mocks.components[0].structure.layers = [{ order: 0, productId: 'old', kbobId: '03.007', thickness_mm: 15, structure: 'on-lying' }];
+    open('original');
+    fireEvent.change(await screen.findByRole('combobox', { name: 'Matériau / produit' }), { target: { value: '' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Dupliquer composant' }));
+    await waitFor(() => expect(mocks.request).toHaveBeenCalledWith('/api/content/components', expect.objectContaining({ method: 'POST' })));
+    const payload = JSON.parse(mocks.request.mock.calls.find(([url]) => url === '/api/content/components')[1].body);
+    expect(payload.item.structure.layers[0].kbobId).toBeNull();
+    expect(payload.item.structure.layers[0].gwp_kgco2e_m2).toBe(0);
+  });
+
   it('permet à l’administrateur de créer une toiture souterraine dans la base choisie', async () => {
     open();
     const destination = await screen.findByRole('combobox', { name: /Base de destination/ });

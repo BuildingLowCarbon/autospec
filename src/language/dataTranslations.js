@@ -11,7 +11,9 @@ const dataTranslations = {
     flat_roof_shed_roof: { fr: "Toit plat / en pente", de: "Flachdach", en: "Flat roof / shed roof", it: "Tetto piano / a falda unica" },
     steep_roof: { fr: "Toit à deux pans", de: "Steildach", en: "Steep roof", it: "Tetto a falde" },
     underground_roof: { fr: "Toiture souterraine", de: "Unterirdisches Dach", en: "Underground roof", it: "Copertura interrata" },
-    balcony: { fr: "Balcon", de: "Balkon", en: "Balcony", it: "Balcone" }
+    balcony: { fr: "Balcon", de: "Balkon", en: "Balcony", it: "Balcone" },
+    floor_screed: { fr: "Chape supplémentaire", de: "Zusätzlicher Estrich", en: "Additional screed", it: "Massetto aggiuntivo" },
+    floor_covering: { fr: "Revêtement de sol", de: "Bodenbelag", en: "Floor covering", it: "Rivestimento del pavimento" }
   },
   layerTypes: {
     adhesion: { fr: "Adhérence", de: "Adhäsion", en: "Adhesion" },

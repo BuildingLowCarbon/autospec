@@ -69,7 +69,7 @@ export const getInsulationMaterialReferences = (component, lang = 'fr', catalog 
 };
 
 export const getScreedMaterialReferences = (component, lang = 'fr', catalog = null) => {
-  if (component?.categoryId !== 'floor_assembly') return [];
+  if (!['floor_assembly', 'floor_screed'].includes(component?.categoryId)) return [];
   const references = (component?.structure?.layers || [])
     .filter((layer) => layerRole(layer) === 'screed')
     .map((layer) => ({
@@ -102,7 +102,7 @@ const matchesReferences = (component, selected, getter) => {
 export const matchesMaterialFilters = (component, structureMaterials, insulationMaterials, screedMaterials) =>
   matchesReferences(component, structureMaterials, getStructureMaterialReferences)
   && matchesReferences(component, insulationMaterials, getInsulationMaterialReferences)
-  && (component?.categoryId !== 'floor_assembly' || matchesReferences(component, screedMaterials, getScreedMaterialReferences));
+  && (!['floor_assembly', 'floor_screed'].includes(component?.categoryId) || matchesReferences(component, screedMaterials, getScreedMaterialReferences));
 
 const componentName = (component, lang) => component?.translations?.[lang]?.name
   || component?.translations?.fr?.name

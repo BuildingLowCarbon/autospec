@@ -451,7 +451,7 @@
     "thickness_mm": 974.15,
     "weight_kg_m2": 593.2005923566879,
     "uValue_W_m2K": 0.16741885326465475,
-    "gwp_kgco2e_m2": 302.0709311210191,
+    "gwp_kgco2e_m2": 293.7381311210191,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -811,11 +811,11 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
           "ecccId": "F01.02",
           "ecccDescription": "Couverture (Toitures plates)",
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -1271,7 +1271,7 @@
     "thickness_mm": 814.15,
     "weight_kg_m2": 370.48303821656054,
     "uValue_W_m2K": 0.1654692204528433,
-    "gwp_kgco2e_m2": 222.76057585987263,
+    "gwp_kgco2e_m2": 214.42777585987264,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -1665,12 +1665,12 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds",
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -1817,7 +1817,7 @@
     "thickness_mm": 744.15,
     "weight_kg_m2": 386.92768789808923,
     "uValue_W_m2K": 0.1512819341895084,
-    "gwp_kgco2e_m2": 233.625605477707,
+    "gwp_kgco2e_m2": 225.29280547770702,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -2211,11 +2211,11 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
           "ecccId": "G04.01",
           "ecccDescription": "Supports pour faux-plafonds",
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -4451,10 +4451,10 @@
     "parent": null,
     "serialNo": null,
     "categoryId": "floor_assembly",
-    "thickness_mm": 349,
-    "weight_kg_m2": 657.6198089171975,
-    "uValue_W_m2K": 0.7854255798950187,
-    "gwp_kgco2e_m2": 139.46192070063694,
+    "thickness_mm": 334,
+    "weight_kg_m2": 649.7148089171975,
+    "uValue_W_m2K": 0.863699208979765,
+    "gwp_kgco2e_m2": 123.28192070063695,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -4488,40 +4488,6 @@
         {
           "order": 0,
           "structure": "on-lying",
-          "productId": "8BEDBE96-CDE0-4130-919E-AD6D16929C47",
-          "fiberDirection": null,
-          "thickness_mm": 15,
-          "width_mm": null,
-          "spacing_mm": null,
-          "translations": {
-            "fr": {
-              "description": ""
-            },
-            "de": {
-              "description": "Parkett"
-            },
-            "it": {
-              "description": ""
-            },
-            "en": {
-              "description": ""
-            }
-          },
-          "weight_kg_m2": 7.904999999999999,
-          "gwp_kgco2e_m2": 16.18,
-          "thermalResistance_m2K_W": 0.11538461538461538,
-          "isSupportStructure": false,
-          "ecccId": "G02.02",
-          "ecccDescription": "Revêtements de sols",
-          "baseGwp_kgco2e_m2": 8.09,
-          "serviceLife_years": 30,
-          "replacementFactor": 2,
-          "time_fire_start_min": null,
-          "time_burning_min": null
-        },
-        {
-          "order": 1,
-          "structure": "on-lying",
           "productId": "D8BC6147-E915-456C-A32D-31B11DE11421",
           "fiberDirection": null,
           "thickness_mm": 80,
@@ -4529,15 +4495,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Zementunterlagsboden"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4551,10 +4521,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "04.006"
         },
         {
-          "order": 2,
+          "order": 1,
           "structure": "on-lying",
           "productId": "9CD2F15E-EAAE-4544-8061-1B84BA006D0F",
           "fiberDirection": null,
@@ -4563,15 +4534,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Trittschalldämmung Weichfaser"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4585,10 +4560,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
-          "time_burning_min": null
+          "time_burning_min": null,
+          "kbobId": "10.009"
         },
         {
-          "order": 3,
+          "order": 2,
           "structure": "on-lying",
           "productId": "A7C4412A-07E0-49AA-9EEC-0913D2D8E132",
           "fiberDirection": null,
@@ -4597,15 +4573,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Beton (Hochbau)"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4619,10 +4599,11 @@
           "serviceLife_years": 60,
           "replacementFactor": 1,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": null
         },
         {
-          "order": 4,
+          "order": 3,
           "structure": "on-lying",
           "productId": "2B8E788D-6651-4D39-8903-2BCE7958F77F",
           "fiberDirection": null,
@@ -4631,15 +4612,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Kalk-Zementgrundputz"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4653,10 +4638,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": "04.013"
         },
         {
-          "order": 5,
+          "order": 4,
           "structure": "on-lying",
           "productId": "7CDAAF75-B648-4A6B-A010-D09D89F8C213",
           "fiberDirection": null,
@@ -4665,15 +4651,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Innenputz"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4687,10 +4677,11 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 15
+          "time_burning_min": 15,
+          "kbobId": "04.001"
         },
         {
-          "order": 6,
+          "order": 5,
           "structure": "on-lying",
           "productId": "AC9444F0-8D5A-4CCA-9F7B-CFDD307FCA12",
           "fiberDirection": null,
@@ -4699,15 +4690,19 @@
           "spacing_mm": null,
           "translations": {
             "fr": {
+              "name": "",
               "description": ""
             },
             "de": {
+              "name": "",
               "description": "Farbe (pro m2)"
             },
             "it": {
+              "name": "",
               "description": ""
             },
             "en": {
+              "name": "",
               "description": ""
             }
           },
@@ -4721,7 +4716,8 @@
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
-          "time_burning_min": 0
+          "time_burning_min": 0,
+          "kbobId": "14.001"
         }
       ],
       "systemTypeId": "concrete"
@@ -4765,7 +4761,7 @@
     "thickness_mm": 827.4000000000001,
     "weight_kg_m2": 616.535092356688,
     "uValue_W_m2K": 0.6460333369651494,
-    "gwp_kgco2e_m2": 194.4422311210191,
+    "gwp_kgco2e_m2": 186.1094311210191,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -4989,12 +4985,12 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
           "isSupportStructure": false,
           "ecccId": "G02.01",
           "ecccDescription": "Supports pour revêtements de sols",
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": null,
@@ -5178,7 +5174,7 @@
     "thickness_mm": 676.41,
     "weight_kg_m2": 656.2560887170155,
     "uValue_W_m2K": 0.6972664894223485,
-    "gwp_kgco2e_m2": 286.2359618175614,
+    "gwp_kgco2e_m2": 260.1959618175614,
     "spanMax_m": null,
     "claddingId": null,
     "sheathingId": null,
@@ -5470,12 +5466,12 @@
             }
           },
           "weight_kg_m2": 30,
-          "gwp_kgco2e_m2": 33.120000000000005,
+          "gwp_kgco2e_m2": 20.1,
           "thermalResistance_m2K_W": 0.06578947368421052,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 16.560000000000002,
+          "baseGwp_kgco2e_m2": 10.05,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -5504,12 +5500,12 @@
             }
           },
           "weight_kg_m2": 30,
-          "gwp_kgco2e_m2": 33.120000000000005,
+          "gwp_kgco2e_m2": 20.1,
           "thermalResistance_m2K_W": 0.06578947368421052,
           "ecccId": "G04.02",
           "ecccDescription": "Faux-plafonds",
           "isSupportStructure": false,
-          "baseGwp_kgco2e_m2": 16.560000000000002,
+          "baseGwp_kgco2e_m2": 10.05,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 0,
@@ -5591,7 +5587,7 @@
     "thickness_mm": 747.4000000000001,
     "weight_kg_m2": 405.84953821656046,
     "uValue_W_m2K": 0.611507134270851,
-    "gwp_kgco2e_m2": 119.16259585987261,
+    "gwp_kgco2e_m2": 110.82979585987262,
     "spanMax_m": 3.832617149044943,
     "claddingId": null,
     "sheathingId": null,
@@ -5815,9 +5811,9 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -6197,7 +6193,7 @@
     "thickness_mm": 627.4,
     "weight_kg_m2": 441.94553821656046,
     "uValue_W_m2K": 0.426717958755954,
-    "gwp_kgco2e_m2": 131.2547558598726,
+    "gwp_kgco2e_m2": 122.92195585987263,
     "spanMax_m": 3.41938419272732,
     "claddingId": null,
     "sheathingId": null,
@@ -6455,9 +6451,9 @@
             }
           },
           "weight_kg_m2": 19.2,
-          "gwp_kgco2e_m2": 21.1968,
+          "gwp_kgco2e_m2": 12.864,
           "thermalResistance_m2K_W": 0.042105263157894736,
-          "baseGwp_kgco2e_m2": 10.5984,
+          "baseGwp_kgco2e_m2": 6.432,
           "serviceLife_years": 30,
           "replacementFactor": 2,
           "time_fire_start_min": 15,
@@ -10304,7 +10300,7 @@
           "time_burning_min": 0,
           "time_fire_start_min": 30,
           "isSupportStructure": false,
-          "protectsSupportSidesFromFire": false,
+          "protectsSupportSidesFromFire": true,
           "kbobId": null,
           "ecccId": "C02.01",
           "ecccDescription": "Parois porteuses extérieures",
@@ -10537,7 +10533,7 @@
           "h_mm": 200,
           "spacing_mm": 500,
           "isContinuousSupport": false,
-          "hasLateralFireProtection": false,
+          "hasLateralFireProtection": true,
           "bucklingLength_mm": 2500,
           "eccentricity_along_h_mm": 0,
           "eccentricity_along_b_mm": 0,
@@ -10550,7 +10546,7 @@
             30,
             60
           ],
-          "fireExposureFaces": 3,
+          "fireExposureFaces": 1,
           "t_protection_min": 30
         },
         "normalTemperature": {
@@ -10647,40 +10643,40 @@
           {
             "fireMinutes": 60,
             "valid": true,
-            "bfi_mm": 18,
+            "bfi_mm": 80,
             "hfi_mm": 169,
             "d_char_mm": 24,
             "d_eff_mm": 31,
             "eccentricity_along_h_mm": 0,
             "eccentricity_along_b_mm": 0,
-            "Nmax_flamb_Rt_kN": 53.12547053092031,
-            "Nmax_interaction_Rt_kN": 67.89744,
-            "Nmax_Rt_kN": 53.12547053092031,
+            "Nmax_flamb_Rt_kN": 236.11320235964584,
+            "Nmax_interaction_Rt_kN": 301.76640000000003,
+            "Nmax_Rt_kN": 236.11320235964584,
             "bucklingFire": {
               "fireMinutes": 60,
               "valid": true,
               "t_exposed_min": 30,
               "d_char_mm": 24,
               "d_eff_mm": 31,
-              "bfi_mm": 18,
+              "bfi_mm": 80,
               "hfi_mm": 169,
-              "A_fi_mm2": 3042,
-              "Nmax_flamb_Rt_N": 53125.47053092031,
-              "Nmax_flamb_Rt_kN": 53.12547053092031,
+              "A_fi_mm2": 13520,
+              "Nmax_flamb_Rt_N": 236113.20235964583,
+              "Nmax_flamb_Rt_kN": 236.11320235964584,
               "bucklingResidualAtNormalTemperature": {
-                "A_mm2": 3042,
-                "Iy_mm4": 7240213.5,
-                "Iz_mm4": 82134,
+                "A_mm2": 13520,
+                "Iy_mm4": 32178726.666666668,
+                "Iz_mm4": 7210666.666666667,
                 "iy_mm": 48.78609774652338,
-                "iz_mm": 5.196152422706632,
+                "iz_mm": 23.094010767585033,
                 "i_thickness_mm": 48.78609774652338,
                 "bucklingDirection": "wall_thickness_h",
                 "bracedOtherDirection": true,
                 "lambda": 51.24410673280702,
                 "lambda_rel": 0.8689361030066325,
                 "kc": 0.7824370186993841,
-                "Nmax_flamb_N": 29514.15029495573,
-                "Nmax_flamb_kN": 29.51415029495573
+                "Nmax_flamb_N": 131174.00131091435,
+                "Nmax_flamb_kN": 131.17400131091435
               }
             },
             "interactionFire": {
@@ -10689,15 +10685,15 @@
               "t_exposed_min": 30,
               "d_char_mm": 24,
               "d_eff_mm": 31,
-              "bfi_mm": 18,
+              "bfi_mm": 80,
               "hfi_mm": 169,
-              "A_fi_mm2": 3042,
-              "Wy_fi_mm3": 85683,
-              "Wz_fi_mm3": 9126,
-              "alpha": 2.1691680550580414e-10,
+              "A_fi_mm2": 13520,
+              "Wy_fi_mm3": 380813.3333333333,
+              "Wz_fi_mm3": 180266.66666666666,
+              "alpha": 1.0981413278731334e-11,
               "beta": 0,
-              "Nmax_interaction_Rt_N": 67897.44,
-              "Nmax_interaction_Rt_kN": 67.89744
+              "Nmax_interaction_Rt_N": 301766.4,
+              "Nmax_interaction_Rt_kN": 301.76640000000003
             }
           }
         ]
@@ -10721,7 +10717,7 @@
               "unit": "kN"
             },
             "R60": {
-              "value": 53.13,
+              "value": 236.11,
               "unit": "kN"
             }
           },
@@ -10736,7 +10732,7 @@
               "unit": "kN/m"
             },
             "R60": {
-              "value": 106.25,
+              "value": 472.23,
               "unit": "kN/m"
             }
           },
@@ -10751,7 +10747,7 @@
               "unit": "kN"
             },
             "R60": {
-              "value": 53.13,
+              "value": 236.11,
               "unit": "kN"
             }
           },
@@ -10766,7 +10762,7 @@
               "unit": "kN"
             },
             "R60": {
-              "value": 67.9,
+              "value": 301.77,
               "unit": "kN"
             }
           }

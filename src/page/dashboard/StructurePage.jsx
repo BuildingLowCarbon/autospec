@@ -47,7 +47,7 @@ const dimensionText = (layer) => {
 };
 
 const sourceId = (item) => String(item?.source?.databaseId || '').toLowerCase() || 'unknown';
-const SOURCE_LABELS = { lignum: 'Lignum', minergie: 'Minergie', btk: 'Bauteilkatalog', generated: 'Variantes générées' };
+const SOURCE_LABELS = { lignum: 'Lignum', minergie: 'Minergie', btk: 'Bauteilkatalog', generated: 'TypoBuildZero' };
 const INSULATION_LABELS = { mineral_wool: 'Laine minérale', wood_fibre: 'Fibre de bois', cellulose: 'Cellulose', eps: 'EPS', xps: 'XPS', pur_pir: 'PUR / PIR', foam_glass: 'Verre cellulaire', plant_fibre: 'Fibre végétale', other: 'Autre' };
 
 function LayerList({ layers, lang }) {

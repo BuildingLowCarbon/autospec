@@ -11227,7 +11227,7 @@
     "id": "F9257F73-F166-355F-AD57-B4EA9FA0FEDE",
     "parent": null,
     "serialNo": "B9394",
-    "categoryId": "partition_wall_double_shell",
+    "categoryId": "inner_wall",
     "thickness_mm": 557.5,
     "weight_kg_m2": 169.925,
     "uValue_W_m2K": 0.09494818656433361,
@@ -11267,13 +11267,17 @@
               "name": "GKF/DF Knauf Piano",
               "description": "Contreventement côté local à gauche 2ème couche"
             },
-            "en": {
-              "name": "GKF/DF Knauf Piano",
-              "description": "Sheathed room side leftside 2nd layer"
-            },
             "de": {
               "name": "GKF/DF Knauf Piano",
               "description": "Beplankung raumseitig links 2. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "GKF/DF Knauf Piano",
+              "description": "Sheathed room side leftside 2nd layer"
             }
           },
           "productName": "GKF/DF Knauf Piano",
@@ -11305,13 +11309,17 @@
               "name": "PhoneStar TRI",
               "description": "Contreventement côté local à gauche 1ère couche"
             },
-            "en": {
-              "name": "Phone Star TRI",
-              "description": "Sheathed room side leftside 1st layer"
-            },
             "de": {
               "name": "PhoneStar TRI",
               "description": "Beplankung raumseitig links 1. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Phone Star TRI",
+              "description": "Sheathed room side leftside 1st layer"
             }
           },
           "productName": "PhoneStar TRI",
@@ -11343,13 +11351,17 @@
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support rightside"
-            },
             "de": {
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger links"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "SWISS KRONO MAGNUMBOARD OSB",
+              "description": "Support rightside"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
@@ -11381,13 +11393,17 @@
               "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
               "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -11419,13 +11435,17 @@
               "name": "Laine de roche ≥ 60kg/m³",
               "description": "Isolation intermédiaire"
             },
-            "en": {
-              "name": "Rockwool ≥ 60kg/m³",
-              "description": "Intermediate insulation"
-            },
             "de": {
               "name": "Putzträgerlamelle aus Steinwolle",
               "description": "Zwischendämmung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Rockwool ≥ 60kg/m³",
+              "description": "Intermediate insulation"
             }
           },
           "productName": "Putzträgerlamelle aus Steinwolle",
@@ -11457,13 +11477,17 @@
               "name": "Air",
               "description": "Espace d'air"
             },
-            "en": {
-              "name": "Air",
-              "description": "Air gap"
-            },
             "de": {
               "name": "Luft",
               "description": "Luftspalt"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Air",
+              "description": "Air gap"
             }
           },
           "productName": "Luft",
@@ -11495,13 +11519,17 @@
               "name": "Laine de roche ≥ 60kg/m³",
               "description": "Isolation intermédiaire"
             },
-            "en": {
-              "name": "Rockwool ≥ 60kg/m³",
-              "description": "Intermediate insulation"
-            },
             "de": {
               "name": "Putzträgerlamelle aus Steinwolle",
               "description": "Zwischendämmung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Rockwool ≥ 60kg/m³",
+              "description": "Intermediate insulation"
             }
           },
           "productName": "Putzträgerlamelle aus Steinwolle",
@@ -11533,13 +11561,17 @@
               "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
               "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -11571,13 +11603,17 @@
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support rightside"
-            },
             "de": {
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger rechts"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "SWISS KRONO MAGNUMBOARD OSB",
+              "description": "Support rightside"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
@@ -11608,8 +11644,247 @@
       "RF_internal_min": null,
       "RF_external_min": null,
       "wood_beam_span": null,
-      "wood_stud_compression": null,
-      "wood_capacity_table": null
+      "wood_stud_compression": {
+        "input": {
+          "b_mm": 1000,
+          "h_mm": 100,
+          "spacing_mm": 1000,
+          "isContinuousSupport": true,
+          "hasLateralFireProtection": false,
+          "bucklingLength_mm": 2500,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "woodFamily": "solid_softwood",
+          "woodClass": "C24",
+          "materialCategoryIds": [
+            "holzwerkstoff"
+          ],
+          "fireRatings_min": [
+            30,
+            60
+          ],
+          "fireExposureFaces": 1,
+          "t_protection_min": 0
+        },
+        "normalTemperature": {
+          "temperatureCondition": "normal_temperature",
+          "b_mm": 1000,
+          "h_mm": 100,
+          "eccentricity_along_h_mm": 0,
+          "eccentricity_along_b_mm": 0,
+          "Nmax_flamb_kN": 487.847645269287,
+          "Nmax_interaction_kN": 1240,
+          "Nmax_NT_kN": 487.847645269287,
+          "buckling": {
+            "A_mm2": 100000,
+            "Iy_mm4": 83333333.33333333,
+            "Iz_mm4": 8333333333.333333,
+            "iy_mm": 28.867513459481287,
+            "iz_mm": 288.67513459481285,
+            "i_thickness_mm": 28.867513459481287,
+            "bucklingDirection": "wall_thickness_h",
+            "bracedOtherDirection": true,
+            "lambda": 86.60254037844386,
+            "lambda_rel": 1.468502014081209,
+            "kc": 0.39342552037845724,
+            "Nmax_flamb_N": 487847.645269287,
+            "Nmax_flamb_kN": 487.847645269287
+          },
+          "interaction": {
+            "A_mm2": 100000,
+            "Wy_mm3": 1666666.6666666667,
+            "Wz_mm3": 16666666.666666666,
+            "alpha": 6.503642039542143e-13,
+            "beta": 0,
+            "Nmax_interaction_N": 1240000,
+            "Nmax_interaction_kN": 1240
+          }
+        },
+        "fire": [
+          {
+            "fireMinutes": 30,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 69,
+            "d_char_mm": 24,
+            "d_eff_mm": 31,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 308.8267524792044,
+            "Nmax_interaction_Rt_kN": 1540.08,
+            "Nmax_Rt_kN": 308.8267524792044,
+            "bucklingFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Nmax_flamb_Rt_N": 308826.7524792044,
+              "Nmax_flamb_Rt_kN": 308.8267524792044,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 69000,
+                "Iy_mm4": 27375750,
+                "Iz_mm4": 5750000000,
+                "iy_mm": 19.91858428704209,
+                "iz_mm": 288.67513459481285,
+                "i_thickness_mm": 19.91858428704209,
+                "bucklingDirection": "wall_thickness_h",
+                "bracedOtherDirection": true,
+                "lambda": 125.51092808470125,
+                "lambda_rel": 2.1282637885234914,
+                "kc": 0.2005264353015456,
+                "Nmax_flamb_N": 171570.41804400244,
+                "Nmax_flamb_kN": 171.57041804400242
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 30,
+              "valid": true,
+              "t_exposed_min": 30,
+              "d_char_mm": 24,
+              "d_eff_mm": 31,
+              "bfi_mm": 1000,
+              "hfi_mm": 69,
+              "A_fi_mm2": 69000,
+              "Wy_fi_mm3": 793500,
+              "Wz_fi_mm3": 11500000,
+              "alpha": 4.216124607823172e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1540080,
+              "Nmax_interaction_Rt_kN": 1540.08
+            }
+          },
+          {
+            "fireMinutes": 60,
+            "valid": true,
+            "bfi_mm": 1000,
+            "hfi_mm": 45,
+            "d_char_mm": 48,
+            "d_eff_mm": 55,
+            "eccentricity_along_h_mm": 0,
+            "eccentricity_along_b_mm": 0,
+            "Nmax_flamb_Rt_kN": 88.8882274564545,
+            "Nmax_interaction_Rt_kN": 1004.3999999999999,
+            "Nmax_Rt_kN": 88.8882274564545,
+            "bucklingFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Nmax_flamb_Rt_N": 88888.22745645451,
+              "Nmax_flamb_Rt_kN": 88.8882274564545,
+              "bucklingResidualAtNormalTemperature": {
+                "A_mm2": 45000,
+                "Iy_mm4": 7593750,
+                "Iz_mm4": 3750000000,
+                "iy_mm": 12.99038105676658,
+                "iz_mm": 288.67513459481285,
+                "i_thickness_mm": 12.99038105676658,
+                "bucklingDirection": "wall_thickness_h",
+                "bracedOtherDirection": true,
+                "lambda": 192.45008972987526,
+                "lambda_rel": 3.2633378090693537,
+                "kc": 0.08849883259304511,
+                "Nmax_flamb_N": 49382.34858691917,
+                "Nmax_flamb_kN": 49.38234858691917
+              }
+            },
+            "interactionFire": {
+              "fireMinutes": 60,
+              "valid": true,
+              "t_exposed_min": 60,
+              "d_char_mm": 48,
+              "d_eff_mm": 55,
+              "bfi_mm": 1000,
+              "hfi_mm": 45,
+              "A_fi_mm2": 45000,
+              "Wy_fi_mm3": 337500,
+              "Wz_fi_mm3": 7500000,
+              "alpha": 9.912577411282037e-13,
+              "beta": 0,
+              "Nmax_interaction_Rt_N": 1004399.9999999999,
+              "Nmax_interaction_Rt_kN": 1004.3999999999999
+            }
+          }
+        ]
+      },
+      "wood_capacity_table": {
+        "type": "wall_stud_force",
+        "columns": [
+          "normal_temperature",
+          "R30",
+          "R60"
+        ],
+        "rows": [
+          {
+            "label": "Force maximale par montant",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force maximale par metre",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN/m"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN/m"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN/m"
+            }
+          },
+          {
+            "label": "Force par flambage",
+            "normal_temperature": {
+              "value": 487.85,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 308.83,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 88.89,
+              "unit": "kN"
+            }
+          },
+          {
+            "label": "Force par interaction (compression + flexion)",
+            "normal_temperature": {
+              "value": 1240,
+              "unit": "kN"
+            },
+            "R30": {
+              "value": 1540.08,
+              "unit": "kN"
+            },
+            "R60": {
+              "value": 1004.4,
+              "unit": "kN"
+            }
+          }
+        ]
+      }
     },
     "sound_insulation": {
       "airborneSound": {
@@ -11681,13 +11956,14 @@
       "created_at": "2026-10-16T14:15:34.378Z",
       "updated_at": "2026-10-21T14:28:29.345Z",
       "version": 4
-    }
+    },
+    "subcategoryId": ""
   },
   {
     "id": "EDA14374-B5DC-38C1-9E3D-86F327281A75",
     "parent": null,
     "serialNo": "B9403",
-    "categoryId": "partition_wall_double_shell",
+    "categoryId": "inner_wall",
     "thickness_mm": 235,
     "weight_kg_m2": 54.64754816112084,
     "uValue_W_m2K": 0.23574669215142424,
@@ -11727,13 +12003,17 @@
               "name": "Joints collés/enduits",
               "description": "Surface côté gauche"
             },
-            "en": {
-              "name": "Glued joints/smoothed",
-              "description": "Surface leftside"
-            },
             "de": {
               "name": "Fugen verleimt / verspachtelt",
               "description": "Oberfläche links"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Glued joints/smoothed",
+              "description": "Surface leftside"
             }
           },
           "productName": "Fugen verleimt / verspachtelt",
@@ -11764,13 +12044,17 @@
               "name": "Panneau de plâtre GK A",
               "description": "Contreventement côté local à droite 2ème couche"
             },
-            "en": {
-              "name": "Plasterboard GK A",
-              "description": "Sheathed room side rightside 2nd layer"
-            },
             "de": {
               "name": "Gipsplatten GK A",
               "description": "Beplankung raumseitig links 2. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Plasterboard GK A",
+              "description": "Sheathed room side rightside 2nd layer"
             }
           },
           "productName": "Gipsplatten GK A",
@@ -11801,13 +12085,17 @@
               "name": "LivingBoard P5",
               "description": "Contreventement côté local à droite 1ère couche"
             },
-            "en": {
-              "name": "LivingBoard P5",
-              "description": "Sheathed room side rightside 1st layer"
-            },
             "de": {
               "name": "LivingBoard P5",
               "description": "Beplankung raumseitig links 1. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "LivingBoard P5",
+              "description": "Sheathed room side rightside 1st layer"
             }
           },
           "productName": "LivingBoard P5",
@@ -11838,13 +12126,17 @@
               "name": "Nervures/solives",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "Rib/bar",
-              "description": "Support rightside"
-            },
             "de": {
               "name": "Rippe/Balken",
               "description": "Träger links"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Rib/bar",
+              "description": "Support rightside"
             }
           },
           "productName": "Rippe/Balken",
@@ -11875,13 +12167,17 @@
               "name": "Thermoflex",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Thermoflex",
-              "description": "Cavity dampening"
-            },
             "de": {
               "name": "GUTEX Thermoflex",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Thermoflex",
+              "description": "Cavity dampening"
             }
           },
           "productName": "GUTEX Thermoflex",
@@ -11912,13 +12208,17 @@
               "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
               "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -11949,13 +12249,17 @@
               "name": "Air",
               "description": "Espace d'air"
             },
-            "en": {
-              "name": "Air",
-              "description": "Air gap"
-            },
             "de": {
               "name": "Luft",
               "description": "Luftspalt"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Air",
+              "description": "Air gap"
             }
           },
           "productName": "Luft",
@@ -11986,13 +12290,17 @@
               "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
               "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -12023,13 +12331,17 @@
               "name": "Nervures/solives",
               "description": "Support côté droit"
             },
-            "en": {
-              "name": "Rib/bar",
-              "description": "Support rightside"
-            },
             "de": {
               "name": "Rippe/Balken",
               "description": "Träger rechts"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Rib/bar",
+              "description": "Support rightside"
             }
           },
           "productName": "Rippe/Balken",
@@ -12060,13 +12372,17 @@
               "name": "Thermoflex",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Thermoflex",
-              "description": "Cavity dampening"
-            },
             "de": {
               "name": "GUTEX Thermoflex",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Thermoflex",
+              "description": "Cavity dampening"
             }
           },
           "productName": "GUTEX Thermoflex",
@@ -12097,13 +12413,17 @@
               "name": "LivingBoard P5",
               "description": "Contreventement côté local à droite 1ère couche"
             },
-            "en": {
-              "name": "LivingBoard P5",
-              "description": "Sheathed room side rightside 1st layer"
-            },
             "de": {
               "name": "LivingBoard P5",
               "description": "Beplankung raumseitig rechts 1. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "LivingBoard P5",
+              "description": "Sheathed room side rightside 1st layer"
             }
           },
           "productName": "LivingBoard P5",
@@ -12134,13 +12454,17 @@
               "name": "Panneau de plâtre GK A",
               "description": "Contreventement côté local à droite 2ème couche"
             },
-            "en": {
-              "name": "Plasterboard GK A",
-              "description": "Sheathed room side rightside 2nd layer"
-            },
             "de": {
               "name": "Gipsplatten GK A",
               "description": "Beplankung raumseitig rechts 2. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Plasterboard GK A",
+              "description": "Sheathed room side rightside 2nd layer"
             }
           },
           "productName": "Gipsplatten GK A",
@@ -19122,9 +19446,9 @@
     "serialNo": "D1197",
     "categoryId": "outer_wall",
     "thickness_mm": 325,
-    "weight_kg_m2": 128.0532,
-    "uValue_W_m2K": 0.18271053139981078,
-    "gwp_kgco2e_m2": 336.1827400000001,
+    "weight_kg_m2": 91.9290592,
+    "uValue_W_m2K": 0.17536067888489534,
+    "gwp_kgco2e_m2": 72.82419664,
     "spanMax_m": null,
     "claddingId": "air",
     "sheathingId": "sheathed_on_one_side",
@@ -19160,13 +19484,17 @@
               "name": "Laine de roche ≥ 60kg/m³",
               "description": "Contrevetement extérieur à gauche 1ère couche"
             },
-            "en": {
-              "name": "Rockwool ≥ 60kg/m³",
-              "description": "Sheathed outside leftside 1st layer"
-            },
             "de": {
               "name": "Putzträgerlamelle aus Steinwolle",
               "description": "Beplankung aussen links 1. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Rockwool ≥ 60kg/m³",
+              "description": "Sheathed outside leftside 1st layer"
             }
           },
           "productName": "Putzträgerlamelle aus Steinwolle",
@@ -19198,13 +19526,17 @@
               "name": "Raide, exécution selon des règles reconnues",
               "description": "Adhérence"
             },
-            "en": {
-              "name": "Stiff, execution of the prior art.",
-              "description": "Bond"
-            },
             "de": {
               "name": "Steif, Ausführung nach den Regeln der Baukunde",
               "description": "Verbund"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Stiff, execution of the prior art.",
+              "description": "Bond"
             }
           },
           "productName": "Steif, Ausführung nach den Regeln der Baukunde",
@@ -19236,13 +19568,17 @@
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Support"
             },
-            "en": {
-              "name": "SWISS KRONO MAGNUMBOARD OSB",
-              "description": "Support"
-            },
             "de": {
               "name": "SWISS KRONO MAGNUMBOARD OSB",
               "description": "Träger"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "SWISS KRONO MAGNUMBOARD OSB",
+              "description": "Support"
             }
           },
           "productName": "SWISS KRONO MAGNUMBOARD OSB",
@@ -19274,13 +19610,17 @@
               "name": "Air",
               "description": "Couplage"
             },
-            "en": {
-              "name": "Air",
-              "description": "Coupling"
-            },
             "de": {
               "name": "Luft",
               "description": "Kopplung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Air",
+              "description": "Coupling"
             }
           },
           "productName": "Luft",
@@ -19312,26 +19652,30 @@
               "name": "CD-profil de plafond b=60mm",
               "description": "Lattes / profils"
             },
-            "en": {
-              "name": "CD-ceiling profile b=60mm",
-              "description": "Battens / profiles"
-            },
             "de": {
               "name": "CD-Deckenprofil b=60mm",
               "description": "Lattung / Profile"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "CD-ceiling profile b=60mm",
+              "description": "Battens / profiles"
             }
           },
           "productName": "CD-Deckenprofil b=60mm",
           "thickness_mm": 50,
-          "weight_kg_m2": 37.68000000000001,
-          "width_mm": 60,
+          "weight_kg_m2": 1.48208,
+          "width_mm": 2.36,
           "spacing_mm": 625,
           "reactionToFire": "RF1",
           "colorCode": "Transparent",
           "fiberDirection": null,
           "kbobId": "06.011",
-          "gwp_kgco2e_m2": 274.3104000000001,
-          "baseGwp_kgco2e_m2": 137.15520000000004,
+          "gwp_kgco2e_m2": 10.7895424,
+          "baseGwp_kgco2e_m2": 5.3947712,
           "thermalResistance_m2K_W": 0.0011111111111111111,
           "serviceLife_years": 30,
           "replacementFactor": 2,
@@ -19350,26 +19694,30 @@
               "name": "Mineral Plus KP 034",
               "description": "Amortissement de la cavité"
             },
-            "en": {
-              "name": "Mineral Plus KP 034",
-              "description": "Cavity dampening"
-            },
             "de": {
               "name": "Mineral Plus KP 034",
               "description": "Hohlraumbedämpfung"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "Mineral Plus KP 034",
+              "description": "Cavity dampening"
             }
           },
           "productName": "Mineral Plus KP 034",
           "thickness_mm": 40,
-          "weight_kg_m2": 0.7232000000000001,
+          "weight_kg_m2": 0.7969792,
           "width_mm": null,
           "spacing_mm": null,
           "reactionToFire": null,
           "colorCode": "FFFFFF",
           "fiberDirection": null,
           "kbobId": "10.001",
-          "gwp_kgco2e_m2": 1.5910400000000002,
-          "baseGwp_kgco2e_m2": 0.7955200000000001,
+          "gwp_kgco2e_m2": 1.7533542400000002,
+          "baseGwp_kgco2e_m2": 0.8766771200000001,
           "thermalResistance_m2K_W": 1.1428571428571428,
           "serviceLife_years": 30,
           "replacementFactor": 2,
@@ -19388,13 +19736,17 @@
               "name": "GKF/DF Knauf Piano",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "GKF/DF Knauf Piano",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
               "name": "GKF/DF Knauf Piano",
               "description": "Bekleidung rechts 1. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "GKF/DF Knauf Piano",
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "GKF/DF Knauf Piano",
@@ -19426,13 +19778,17 @@
               "name": "GKF/DF Knauf Piano",
               "description": "Parement à droite 2ème couche"
             },
-            "en": {
-              "name": "GKF/DF Knauf Piano",
-              "description": "Covering rightside 2nd layer"
-            },
             "de": {
               "name": "GKF/DF Knauf Piano",
               "description": "Bekleidung rechts 2. Schicht"
+            },
+            "it": {
+              "name": "",
+              "description": ""
+            },
+            "en": {
+              "name": "GKF/DF Knauf Piano",
+              "description": "Covering rightside 2nd layer"
             }
           },
           "productName": "GKF/DF Knauf Piano",
@@ -19775,7 +20131,8 @@
       "created_at": "2026-10-16T14:15:34.378Z",
       "updated_at": "2026-10-21T14:28:29.345Z",
       "version": 4
-    }
+    },
+    "subcategoryId": "above_ground"
   },
   {
     "id": "F83126AD-CD58-3D43-AA67-B7FCB3ADC36A",

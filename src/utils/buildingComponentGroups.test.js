@@ -80,17 +80,33 @@ describe('groupes de composants My Buildings', () => {
     expect(getInsulationMaterialOptions([item], 'fr', catalog)[0].label).toBe('Laine minérale');
   });
 
-  it('propose les matériaux de chape uniquement pour les planchers, avec les noms du catalogue', () => {
+  it('propose les matériaux de chape pour les planchers et les chapes supplémentaires, avec les noms du catalogue', () => {
     const floor = component('floor', 'bois', 'laine', 300);
     floor.structure.layers.push({ materialId: 'cement', layerFunctionId: 'screed', name: 'Chape' });
     const wall = { ...floor, id: 'wall', categoryId: 'outer_wall' };
+    const extraScreed = { ...floor, id: 'extra-screed', categoryId: 'floor_screed' };
     const catalog = { materialById: new Map([['cement', { name: 'Mortier de ciment' }]]) };
     expect(getScreedMaterialOptions([floor, wall], 'fr', catalog))
       .toEqual([{ value: 'cement', label: 'Mortier de ciment' }]);
     expect(getScreedMaterialOptions([wall])).toEqual([]);
+    expect(getScreedMaterialOptions([extraScreed], 'fr', catalog))
+      .toEqual([{ value: 'cement', label: 'Mortier de ciment' }]);
     expect(matchesMaterialFilters(floor, [], [], ['cement'])).toBe(true);
     expect(matchesMaterialFilters(floor, [], [], ['gypsum'])).toBe(false);
     expect(matchesMaterialFilters(wall, [], [], ['gypsum'])).toBe(true);
+    expect(matchesMaterialFilters(extraScreed, [], [], ['cement'])).toBe(true);
+    expect(matchesMaterialFilters(extraScreed, [], [], ['gypsum'])).toBe(false);
+    expect(matchesMaterialFilters({ ...extraScreed, categoryId: 'floor_covering' }, [], [], ['gypsum'])).toBe(true);
+  });
+
+  it('filtre les chapes supplémentaires sans modifier la sélection des matériaux des planchers', () => {
+    const screed = (id, material) => ({ id, categoryId: 'floor_screed', structure: { layers: [{ productId: material, layerFunctionId: 'screed' }] } });
+    const cement = screed('cement-screed', 'cement');
+    const gypsum = screed('gypsum-screed', 'gypsum');
+    const byPart = { floors: ['cement'], floor_screed: ['gypsum'] };
+    expect([cement, gypsum].filter((item) => matchesMaterialFilters(item, [], [], byPart.floor_screed)).map((item) => item.id)).toEqual(['gypsum-screed']);
+    expect(matchesMaterialFilters({ ...cement, categoryId: 'floor_assembly' }, [], [], byPart.floors)).toBe(true);
+    expect(getScreedMaterialOptions([{ ...cement, structure: { layers: [] } }])[0].value).toBe(NO_SCREED_MATERIAL);
   });
 
   it('permet de sélectionner les planchers sans chape et ajuste les plages du groupe', () => {

@@ -129,7 +129,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
         getFirstPresent(calculated, ['thermalConductivity_W_mK']),
       gwp_kgco2e_m3: getFirstPresent(declared, ['gwp_kgco2e_m3']) ?? getFirstPresent(calculated, ['gwp_kgco2e_m3']),
       gwp_kgco2e_kg: getFirstPresent(declared, ['gwp_kgco2e_kg']) ?? getFirstPresent(calculated, ['gwp_kgco2e_kg']),
-      kbobId: layer?.kbobId ?? product.kbobId ?? null,
+      kbobId: product.kbobId || null,
       isAir: isAirLayer(layer, product),
     };
   }
@@ -141,7 +141,7 @@ const resolveLayerProperties = (layer, productsById, materialsById) => {
       thermalConductivity_W_mK: safeFloat(material.thermalConductivity_W_mK),
       gwp_kgco2e_m3: safeFloat(material.gwp_kgco2e_m3),
       gwp_kgco2e_kg: safeFloat(material.gwp_kgco2e_kg),
-      kbobId: layer?.kbobId ?? material.kbobId ?? null,
+      kbobId: material.kbobId || null,
       isAir: isAirLayer(layer, material),
     };
   }
@@ -285,7 +285,7 @@ const computeLayerProperties = (
     } else if (kbob.gwp !== null && kbob.ref === 'kg') {
       baseGwp_kgco2e_m2 = weight_kg_m2 * kbob.gwp;
     } else if (kbob.gwp !== null && kbob.ref === 'm2') {
-      baseGwp_kgco2e_m2 = kbob.gwp;
+      baseGwp_kgco2e_m2 = f_eff * kbob.gwp;
     }
   }
 
@@ -302,6 +302,7 @@ const computeLayerProperties = (
     baseGwp_kgco2e_m2,
     serviceLife_years,
     replacementFactor,
+    kbobId: material.kbobId,
   };
 };
 
@@ -506,6 +507,7 @@ export const calculateComponentProperties = (
     );
     const nextLayer = {
       ...layer,
+      kbobId: calc.kbobId,
       weight_kg_m2: calc.weight_kg_m2,
       gwp_kgco2e_m2: calc.gwp_kgco2e_m2,
       baseGwp_kgco2e_m2: calc.baseGwp_kgco2e_m2,

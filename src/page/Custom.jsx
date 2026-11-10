@@ -355,7 +355,11 @@ function Custom() {
   };
 
   const handleLayerTextChange = (index, key, value) => {
-    handleLayerChange(index, (layer) => ({ ...layer, [key]: getText(value, '') }));
+    handleLayerChange(index, (layer) => ({
+      ...layer,
+      [key]: getText(value, ''),
+      ...(key === 'productId' ? { kbobId: null } : {}),
+    }));
   };
 
   const handleSupportStructureChange = (index, checked) => {

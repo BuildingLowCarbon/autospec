@@ -625,8 +625,8 @@
     },
     "metadata": {
       "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-22T15:24:05.103Z",
-      "version": 2
+      "updated_at": "2026-11-04T14:25:17.756Z",
+      "version": 4
     }
   },
   {
@@ -3425,22 +3425,22 @@
     },
     "translations": {
       "de": {
-        "name": "swissporXPS 300 SF",
+        "name": "Polystyrol extrudiert (XPS), 30 kg/m3",
         "description": null
       },
       "en": {
-        "name": "swissporXPS 300 SF",
+        "name": "Polystyrol extrudiert (XPS), 30 kg/m3",
         "description": null
       },
       "fr": {
-        "name": "swissporXPS 300 SF",
+        "name": "Polystyrol extrudiert (XPS), 30 kg/m3",
         "description": null
       }
     },
     "metadata": {
       "created_at": "2026-07-21T15:37:09.814Z",
-      "updated_at": "2026-07-21T15:37:09.814Z",
-      "version": 1
+      "updated_at": "2026-10-27T13:01:33.110Z",
+      "version": 2
     }
   },
   {
@@ -5191,6 +5191,47 @@
     "metadata": {
       "created_at": "2026-09-15T12:55:14.072Z",
       "updated_at": "2026-09-15T12:55:14.072Z",
+      "version": 1
+    }
+  },
+  {
+    "workingtitle": "Keramik-/Steinzeugplatte, 9 mm",
+    "materialTypeId": "mineralisch_kunstlich",
+    "materialcategoryId": "keramik",
+    "functionId": "bodentechnik",
+    "kbobId": "11.008",
+    "siaId": null,
+    "density_kg_m3": 2000,
+    "thickness_mm": null,
+    "thermalConductivity_W_mK": null,
+    "specificHeat_Wh_kgK": null,
+    "specificHeat_J_kgK": null,
+    "waterVaporDiffusionResistanceCoefficientDry": null,
+    "waterVaporDiffusionResistanceCoefficientWet": null,
+    "fireClassification": "A1",
+    "reactionToFire": "RF1",
+    "source": {
+      "databaseId": "tbz",
+      "externalId": null
+    },
+    "translations": {
+      "de": {
+        "name": "Keramik-/Steinzeugplatte, 9 mm",
+        "description": null
+      },
+      "en": {
+        "name": "",
+        "description": null
+      },
+      "fr": {
+        "name": "Dalle en céramique/grès, 9 mm",
+        "description": null
+      }
+    },
+    "id": "05FC4E66-6FF5-467C-956B-AEAEC3366F28",
+    "metadata": {
+      "created_at": "2026-11-02T09:55:45.664Z",
+      "updated_at": "2026-11-02T09:55:45.664Z",
       "version": 1
     }
   }

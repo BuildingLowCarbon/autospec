@@ -26,11 +26,12 @@ function SourceSelector({ label, options, selected, onChange, allLabel }) {
   };
 
   return (
-    <div style={{ marginBottom: '12px', position: 'relative' }}>
+    <div className="source-selector" style={{ marginBottom: '12px', position: 'relative' }}>
       <label style={{ display: 'block', marginBottom: '6px' }}>{label}</label>
       <div>
         <button
           type="button"
+          title={selectedLabels}
           onClick={() => setOpen((o) => !o)}
           style={{
             width: '100%',
@@ -45,6 +46,7 @@ function SourceSelector({ label, options, selected, onChange, allLabel }) {
         </button>
         {open && (
           <div
+            className="source-selector-options"
             style={{
               position: 'absolute',
               zIndex: 10,

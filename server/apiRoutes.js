@@ -499,7 +499,7 @@ module.exports = function registerApiRoutes(app) {
         created.push({
           ...candidate,
           id,
-          source: { name: 'AutoSpec – variantes générées', databaseId: 'generated', externalId: id },
+          source: { name: 'TypoBuildZero', databaseId: 'generated', externalId: id },
           generated: true,
           generationRunId: runId,
           generationSignature: signature,

@@ -6,23 +6,25 @@ export const ROOF_TYPES = [
 ];
 
 export const BUILDING_PARTS = [
-  { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
-  { id: 'underground_roofs', label: 'Toiture souterraine', categories: ['underground_roof'] },
-  { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
-  { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
-  { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
-  { id: 'outer_walls', label: 'Mur extérieur hors terrain', categories: ['outer_wall'], subcategories: ['above_ground'] },
-  { id: 'underground_walls', label: 'Mur extérieur sous-terrain', categories: ['outer_wall'], subcategories: ['below_ground'] },
   { id: 'foundation', label: 'Radier', categories: ['foundation'] },
-  { id: 'balcony', label: 'Balcon', categories: ['balcony'] },
+  { id: 'underground_walls', label: 'Mur extérieur sous-terrain', categories: ['outer_wall'], subcategories: ['below_ground'] },
+  { id: 'underground_roofs', label: 'Toiture souterraine', categories: ['underground_roof'] },
+  { id: 'outer_walls', label: 'Mur extérieur hors terrain', categories: ['outer_wall'], subcategories: ['above_ground'] },
   { id: 'windows', label: 'Fenêtres', categories: [] },
+  { id: 'roof', label: 'Toit', categories: ROOF_TYPES.map((type) => type.category) },
+  { id: 'interior_walls', label: 'Parois intérieures', categories: ['inner_wall'] },
+  { id: 'partitions', label: 'Cloisons', categories: ['partition_wall'] },
+  { id: 'floors', label: 'Plancher', categories: ['floor_assembly'] },
+  { id: 'balcony', label: 'Balcon', categories: ['balcony'] },
+  { id: 'floor_screed', label: 'Chape supplémentaire', categories: ['floor_screed'], parentPart: 'floors' },
+  { id: 'floor_covering', label: 'Revêtement de sol', categories: ['floor_covering'], parentPart: 'floors' },
 ];
 
 const DEFAULT_STROKE = '#8b8785';
 const SELECTED_STROKE = '#e23d3d';
 
 export const getBuildingPart = (partId) =>
-  BUILDING_PARTS.find((part) => part.id === partId) ?? BUILDING_PARTS[0];
+  BUILDING_PARTS.find((part) => part.id === partId) ?? BUILDING_PARTS.find((part) => part.id === 'roof');
 
 export const getRoofCategory = (roofType) =>
   ROOF_TYPES.find((type) => type.id === roofType)?.category ?? ROOF_TYPES[0].category;
@@ -34,7 +36,9 @@ function BuildingDiagram({
   onRoofTypeChange,
 }) {
   const activePart = getBuildingPart(selectedPart);
-  const strokeFor = (partId) => selectedPart === partId ? SELECTED_STROKE : DEFAULT_STROKE;
+  const strokeFor = (partId) => selectedPart === partId || (
+    ['floor_screed', 'floor_covering'].includes(selectedPart) && ['foundation', 'floors'].includes(partId)
+  ) ? SELECTED_STROKE : DEFAULT_STROKE;
   const selectPart = (partId) => {
     if (typeof onSelectPart === 'function') onSelectPart(partId);
   };

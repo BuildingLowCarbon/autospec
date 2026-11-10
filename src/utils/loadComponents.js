@@ -118,7 +118,7 @@ export const loadComponents = async ({ forceRefresh = false } = {}) => {
   const [results, userContent] = await Promise.all([
     Promise.all(systemFiles.map((file) =>
       fetchJson(`${base}/db/${file}`).then((items) => items.map((item) =>
-        normalizeComponent({ ...item, __sourceFile: file })
+        normalizeComponent({ ...item, ...(file === 'components_generated.json' ? { source: { ...item.source, name: 'TypoBuildZero' } } : {}), __sourceFile: file })
       ))
     )),
     fetchUserContent(),

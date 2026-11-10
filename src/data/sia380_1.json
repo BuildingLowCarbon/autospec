@@ -114,7 +114,9 @@
   "categories_without_thermal_requirement": [
     "inner_wall",
     "partition_wall",
-    "balcony"
+    "balcony",
+    "floor_screed",
+    "floor_covering"
   ],
   "source": {
     "reference": "SIA 380/1:2016, 2.2.2.2, Tableau 2",

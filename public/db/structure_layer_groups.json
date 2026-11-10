@@ -2022,362 +2022,6 @@
     }
   },
   {
-    "id": "manual-2f6065c0-25d5-400f-a424-b69b2430b67c",
-    "categoryId": "flat_roof_shed_roof",
-    "position": "above",
-    "name": "Gravier concassé + Gravier rond + Voile de polyéthylène (PE) + Voile de polyéthylène (PE) + Lé d'étanchéité polyoléfine (FPO) + swissporLAMBDA Roof (50-300 mm), λ 0.029 (valeur déclarée contrôlée) + Barrière de vapeur bitumineuse — variantes",
-    "layers": [
-      {
-        "order": 0,
-        "productId": "3C4E5F39-0AF7-4123-A625-B338EE0C8542",
-        "role": "Couche de végétation",
-        "thickness_mm": 40,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Gravier concassé"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 58,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 2.0416000000000003,
-        "thermalResistance_m2K_W": 0.024999999999999998,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 1.0208000000000002,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "03.011",
-        "variants": [],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 1,
-        "productId": "E672CAC1-625C-48B0-A3FE-B95FA40C2279",
-        "role": "Couche de drainage",
-        "thickness_mm": 40,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Gravier rond"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 66,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 2.0724,
-        "thermalResistance_m2K_W": 0.024999999999999998,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 1.0362,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "03.012",
-        "variants": [],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 2,
-        "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
-        "role": "Couche de protection",
-        "thickness_mm": 0.2,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Voile de polyéthylène (PE)"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 2.7600000000000002,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 31.0776,
-        "thermalResistance_m2K_W": 0.00909090909090909,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 15.5388,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "09.008",
-        "variants": [],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 3,
-        "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
-        "role": "Protection des racines",
-        "thickness_mm": 0.2,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Voile de polyéthylène (PE)"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 2.7600000000000002,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 31.0776,
-        "thermalResistance_m2K_W": 0.00909090909090909,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 15.5388,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "09.008",
-        "variants": [],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 4,
-        "productId": "3432BCC8-37CC-452F-8E27-F734B7859607",
-        "role": "Etanchéité",
-        "thickness_mm": 1,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Lé d'étanchéité polyoléfine (FPO)"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 4,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 41.44,
-        "thermalResistance_m2K_W": 0.012121212121212121,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 20.72,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "09.005",
-        "variants": [],
-        "layerFunctionId": "sealing",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 5,
-        "productId": "23341508-26B2-4527-9620-B8F8B54CAA6D",
-        "role": "Isolation porteuse posée librement",
-        "thickness_mm": 160,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "swissporLAMBDA Roof (50-300 mm), λ 0.029 (valeur déclarée contrôlée)"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 3.68,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 0,
-        "thermalResistance_m2K_W": 5.517241379310344,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 0,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "10.004.01",
-        "variants": [
-          {
-            "id": "f526bba3-aeee-4099-be93-99bed517c12d",
-            "productId": "1363965C-299A-4F09-AB8B-133E06BA1B9B",
-            "layerFunctionId": null,
-            "overrides": [
-              "productId",
-              "thickness_mm"
-            ],
-            "thickness_mm": 160,
-            "order": 0,
-            "width_mm": null,
-            "spacing_mm": null,
-            "time_burning_min": null,
-            "time_fire_start_min": null,
-            "isSupportStructure": false,
-            "ecccId": null,
-            "ecccDescription": null,
-            "insulationTypeId": null
-          },
-          {
-            "id": "141da3d9-d5eb-4d48-9467-4856fe4d5709",
-            "productId": "BAC572FF-B8B3-4BC5-BDD9-F08BFEB9E8EF",
-            "layerFunctionId": null,
-            "overrides": [
-              "productId",
-              "thickness_mm"
-            ],
-            "thickness_mm": 280,
-            "order": 0,
-            "width_mm": null,
-            "spacing_mm": null,
-            "time_burning_min": null,
-            "time_fire_start_min": null,
-            "isSupportStructure": false,
-            "ecccId": null,
-            "ecccDescription": null,
-            "insulationTypeId": null
-          }
-        ],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      },
-      {
-        "order": 6,
-        "productId": "898EDF68-74AE-4C69-BF50-2D704F125FAF",
-        "role": "Pare-vapeur",
-        "thickness_mm": 3,
-        "width_mm": null,
-        "spacing_mm": null,
-        "fiberDirection": null,
-        "translations": {
-          "fr": {
-            "description": "Barrière de vapeur bitumineuse"
-          },
-          "de": {
-            "description": ""
-          },
-          "it": {
-            "description": ""
-          },
-          "en": {
-            "description": ""
-          }
-        },
-        "structure": "on-lying",
-        "weight_kg_m2": 3.3000000000000003,
-        "reactionToFire": null,
-        "lifetime": 40,
-        "eccc": null,
-        "colorCode": null,
-        "gwp_kgco2e_m2": 24.024000000000004,
-        "thermalResistance_m2K_W": 0.00909090909090909,
-        "ecccId": "F01.02",
-        "ecccDescription": "Toitures plates",
-        "baseGwp_kgco2e_m2": 12.012000000000002,
-        "serviceLife_years": 30,
-        "replacementFactor": 2,
-        "time_fire_start_min": null,
-        "time_burning_min": null,
-        "kbobId": "09.001",
-        "variants": [],
-        "layerFunctionId": "other",
-        "isSupportStructure": false,
-        "insulationTypeId": null
-      }
-    ],
-    "signature": "{\"productId\":\"3C4E5F39-0AF7-4123-A625-B338EE0C8542\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"E672CAC1-625C-48B0-A3FE-B95FA40C2279\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"3432BCC8-37CC-452F-8E27-F734B7859607\",\"materialId\":null,\"thickness_mm\":4,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"23341508-26B2-4527-9620-B8F8B54CAA6D\",\"materialId\":null,\"thickness_mm\":160,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"898EDF68-74AE-4C69-BF50-2D704F125FAF\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}",
-    "manual": true,
-    "sourceGroupId": "flat_roof_shed_roof::above::{\"productId\":\"3C4E5F39-0AF7-4123-A625-B338EE0C8542\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"E672CAC1-625C-48B0-A3FE-B95FA40C2279\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"3432BCC8-37CC-452F-8E27-F734B7859607\",\"materialId\":null,\"thickness_mm\":4,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"23341508-26B2-4527-9620-B8F8B54CAA6D\",\"materialId\":null,\"thickness_mm\":160,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"898EDF68-74AE-4C69-BF50-2D704F125FAF\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}",
-    "metadata": {
-      "created_at": "2026-10-21T08:54:01.511Z",
-      "updated_at": "2026-10-21T08:54:01.511Z",
-      "version": 1
-    }
-  },
-  {
     "id": "manual-3ea4d8a4-f637-4ae4-859a-92d43832d0e4",
     "categoryId": "flat_roof_shed_roof",
     "position": "structure",
@@ -3496,6 +3140,364 @@
       "created_at": "2026-10-21T17:30:28.364Z",
       "updated_at": "2026-10-21T17:30:28.364Z",
       "version": 1
+    }
+  },
+  {
+    "id": "manual-2f6065c0-25d5-400f-a424-b69b2430b67c",
+    "categoryId": "flat_roof_shed_roof",
+    "position": "above",
+    "name": "Gravier concassé + Gravier rond + Voile de polyéthylène (PE) + Voile de polyéthylène (PE) + Lé d'étanchéité polyoléfine (FPO) + swissporLAMBDA Roof (50-300 mm), λ 0.029 (valeur déclarée contrôlée) + Barrière de vapeur bitumineuse — variantes",
+    "layers": [
+      {
+        "order": 0,
+        "productId": "3C4E5F39-0AF7-4123-A625-B338EE0C8542",
+        "role": "Couche de végétation",
+        "thickness_mm": 40,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Gravier concassé"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 58,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 2.0416000000000003,
+        "thermalResistance_m2K_W": 0.024999999999999998,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 1.0208000000000002,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "03.011",
+        "variants": [],
+        "layerFunctionId": "other",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 1,
+        "productId": "E672CAC1-625C-48B0-A3FE-B95FA40C2279",
+        "role": "Couche de drainage",
+        "thickness_mm": 40,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Gravier rond"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 66,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 2.0724,
+        "thermalResistance_m2K_W": 0.024999999999999998,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 1.0362,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "03.012",
+        "variants": [],
+        "layerFunctionId": "other",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 2,
+        "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
+        "role": "Couche de protection",
+        "thickness_mm": 0.2,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Voile de polyéthylène (PE)"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 2.7600000000000002,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 31.0776,
+        "thermalResistance_m2K_W": 0.00909090909090909,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 15.5388,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "09.008",
+        "variants": [],
+        "layerFunctionId": "sealing",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 3,
+        "productId": "D6F02FE8-A315-4B12-87DA-90823A75C4F2",
+        "role": "Protection des racines",
+        "thickness_mm": 0.2,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Voile de polyéthylène (PE)"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 2.7600000000000002,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 31.0776,
+        "thermalResistance_m2K_W": 0.00909090909090909,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 15.5388,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "09.008",
+        "variants": [],
+        "layerFunctionId": "sealing",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 4,
+        "productId": "3432BCC8-37CC-452F-8E27-F734B7859607",
+        "role": "Etanchéité",
+        "thickness_mm": 1,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Lé d'étanchéité polyoléfine (FPO)"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 4,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 41.44,
+        "thermalResistance_m2K_W": 0.012121212121212121,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 20.72,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "09.005",
+        "variants": [],
+        "layerFunctionId": "sealing",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 5,
+        "productId": "23341508-26B2-4527-9620-B8F8B54CAA6D",
+        "role": "Isolation porteuse posée librement",
+        "thickness_mm": 160,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "swissporLAMBDA Roof (50-300 mm), λ 0.029 (valeur déclarée contrôlée)"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 3.68,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 0,
+        "thermalResistance_m2K_W": 5.517241379310344,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 0,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "10.004.01",
+        "variants": [
+          {
+            "id": "f526bba3-aeee-4099-be93-99bed517c12d",
+            "productId": "1363965C-299A-4F09-AB8B-133E06BA1B9B",
+            "layerFunctionId": null,
+            "overrides": [
+              "productId",
+              "thickness_mm"
+            ],
+            "thickness_mm": 160,
+            "order": 0,
+            "width_mm": null,
+            "spacing_mm": null,
+            "time_burning_min": null,
+            "time_fire_start_min": null,
+            "isSupportStructure": false,
+            "ecccId": null,
+            "ecccDescription": null,
+            "insulationTypeId": null,
+            "kbobId": "10.006"
+          },
+          {
+            "id": "141da3d9-d5eb-4d48-9467-4856fe4d5709",
+            "productId": "BAC572FF-B8B3-4BC5-BDD9-F08BFEB9E8EF",
+            "layerFunctionId": null,
+            "overrides": [
+              "productId",
+              "thickness_mm"
+            ],
+            "thickness_mm": 280,
+            "order": 0,
+            "width_mm": null,
+            "spacing_mm": null,
+            "time_burning_min": null,
+            "time_fire_start_min": null,
+            "isSupportStructure": false,
+            "ecccId": null,
+            "ecccDescription": null,
+            "insulationTypeId": null,
+            "kbobId": "10.008"
+          }
+        ],
+        "layerFunctionId": "other",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      },
+      {
+        "order": 6,
+        "productId": "898EDF68-74AE-4C69-BF50-2D704F125FAF",
+        "role": "Pare-vapeur",
+        "thickness_mm": 3,
+        "width_mm": null,
+        "spacing_mm": null,
+        "fiberDirection": null,
+        "translations": {
+          "fr": {
+            "description": "Barrière de vapeur bitumineuse"
+          },
+          "de": {
+            "description": ""
+          },
+          "it": {
+            "description": ""
+          },
+          "en": {
+            "description": ""
+          }
+        },
+        "structure": "on-lying",
+        "weight_kg_m2": 3.3000000000000003,
+        "reactionToFire": null,
+        "lifetime": 40,
+        "eccc": null,
+        "colorCode": null,
+        "gwp_kgco2e_m2": 24.024000000000004,
+        "thermalResistance_m2K_W": 0.00909090909090909,
+        "ecccId": "F01.02",
+        "ecccDescription": "Toitures plates",
+        "baseGwp_kgco2e_m2": 12.012000000000002,
+        "serviceLife_years": 30,
+        "replacementFactor": 2,
+        "time_fire_start_min": null,
+        "time_burning_min": null,
+        "kbobId": "09.001",
+        "variants": [],
+        "layerFunctionId": "sealing",
+        "isSupportStructure": false,
+        "insulationTypeId": null
+      }
+    ],
+    "signature": "{\"productId\":\"3C4E5F39-0AF7-4123-A625-B338EE0C8542\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"E672CAC1-625C-48B0-A3FE-B95FA40C2279\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"3432BCC8-37CC-452F-8E27-F734B7859607\",\"materialId\":null,\"thickness_mm\":4,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"23341508-26B2-4527-9620-B8F8B54CAA6D\",\"materialId\":null,\"thickness_mm\":160,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"898EDF68-74AE-4C69-BF50-2D704F125FAF\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}",
+    "manual": true,
+    "sourceGroupId": "flat_roof_shed_roof::above::{\"productId\":\"3C4E5F39-0AF7-4123-A625-B338EE0C8542\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"E672CAC1-625C-48B0-A3FE-B95FA40C2279\",\"materialId\":null,\"thickness_mm\":40,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"D6F02FE8-A315-4B12-87DA-90823A75C4F2\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"3432BCC8-37CC-452F-8E27-F734B7859607\",\"materialId\":null,\"thickness_mm\":4,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"23341508-26B2-4527-9620-B8F8B54CAA6D\",\"materialId\":null,\"thickness_mm\":160,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}|{\"productId\":\"898EDF68-74AE-4C69-BF50-2D704F125FAF\",\"materialId\":null,\"thickness_mm\":3,\"width_mm\":null,\"spacing_mm\":null,\"structure\":\"on-lying\",\"fiberDirection\":null,\"protectsSupportSidesFromFire\":false}",
+    "metadata": {
+      "created_at": "2026-10-21T08:54:01.511Z",
+      "updated_at": "2026-11-03T10:53:12.154Z",
+      "version": 2
     }
   }
 ]

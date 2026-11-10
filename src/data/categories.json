@@ -575,6 +575,26 @@
         "en": "Balcony",
         "it": "Balcone"
       }
+    },
+    {
+      "id": "floor_screed",
+      "type": "horizontal",
+      "icon": "floor_assembly",
+      "order": 9,
+      "properties": ["thickness", "weight", "gwp"],
+      "layerTypes": ["Chape", "Isolation", "Isolement aux bruits de choc", "Couche support", "Adhérence"],
+      "eccc": [{ "ecccId": "G02.01", "name": "Supports pour revêtements de sols", "serviceLife": 30 }],
+      "label": { "fr": "Chape supplémentaire", "de": "Zusätzlicher Estrich", "en": "Additional screed", "it": "Massetto aggiuntivo" }
+    },
+    {
+      "id": "floor_covering",
+      "type": "horizontal",
+      "icon": "floor_assembly",
+      "order": 10,
+      "properties": ["thickness", "weight", "gwp"],
+      "layerTypes": ["Revêtement de sol", "Couche support", "Adhérence", "Traitement de surface"],
+      "eccc": [{ "ecccId": "G02.02", "name": "Revêtements de sols", "serviceLife": 30 }],
+      "label": { "fr": "Revêtement de sol", "de": "Bodenbelag", "en": "Floor covering", "it": "Rivestimento del pavimento" }
     }
   ]
 }
